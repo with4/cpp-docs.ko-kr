@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130773"
 ---
 # <a name="how-to-detect-clr-compilation"></a>방법: /clr 컴파일 감지
 사용 하 여는 `_MANAGED` 또는 `_M_CEE` 모듈 컴파일 되었는지 확인 하는 매크로 **/clr**합니다. 자세한 내용은 [/clr(공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)을 참조하세요.  

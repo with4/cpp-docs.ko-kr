@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342061"
 ---
 # <a name="deprecated-ansi-apis"></a>사용되지 않는 ANSI API
 Microsoft Foundation 클래스 (MFC) 라이브러리는 클래스 및 유니코드 문자 집합을 기반으로 하는 방법에 대 마이그레이션 중입니다. 따라서, ANSI 버전 일부 MFC 메서드의 사용 되지 않습니다. 이후 응용 프로그램에서 이러한 메서드의 유니코드 버전을 사용 합니다.  

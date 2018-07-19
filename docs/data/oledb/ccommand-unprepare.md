@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094360"
 ---
 # <a name="ccommandunprepare"></a>CCommand::Unprepare
 현재 명령 실행 계획을 삭제 합니다.  

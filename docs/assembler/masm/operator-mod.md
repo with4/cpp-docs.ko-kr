@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054460"
 ---
 # <a name="operator-mod"></a>연산자 MOD
 나눌 때 나머지 (모듈로)의 정수 값을 반환 *expression1* 여 *expression2*합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880709"
 ---
 # <a name="implements-c"></a>implements(C++)
 IDL coclass의 구성원이 될 해야 하는 디스패치 인터페이스를 지정 합니다.  

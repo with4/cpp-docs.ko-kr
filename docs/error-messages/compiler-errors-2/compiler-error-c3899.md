@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275998"
 ---
 # <a name="compiler-error-c3899"></a>컴파일러 오류 C3899
 'var': 'class' 클래스에서 병렬 영역 내부에서는 직접 initonly 데이터 멤버의 l 값 사용은 사용할 수 없습니다  

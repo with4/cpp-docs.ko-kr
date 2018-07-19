@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325304"
 ---
 # <a name="resource-compiler-fatal-error-rc1017"></a>리소스 컴파일러 심각한 오류 RC1017
 정수 계열 상수 식이 잘못되었습니다.  

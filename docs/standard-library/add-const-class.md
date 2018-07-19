@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e79c06c49c8245da4911e8b72020537aa2e7bb45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eff64a70b2a666a6df081601c0e2a24f04563317
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954069"
 ---
 # <a name="addconst-class"></a>add_const 클래스
 
@@ -36,13 +37,13 @@ struct add_const;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 수정할 형식입니다.
+*Ty* 수정할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-`Ty`가 참조, 함수 또는 const 한정 형식인 경우 형식 한정자 인스턴스는 수정된 형식인 `Ty`이고, 그렇지 않은 경우 `const Ty`입니다.
+형식 수정자의 인스턴스는 수정 된 형식인 됩니다 *Ty* 하는 경우 *Ty* 라인인 대 한 참조, 함수 또는 const 한정 된 형식 `const Ty`합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__add_const.cpp

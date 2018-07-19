@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412402"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Visual C++의 클라우드 및 웹 프로그래밍
 

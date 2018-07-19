@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689482"
 ---
 # <a name="252-parallel-sections-construct"></a>2.5.2 parallel sections 구문
 **섹션 병렬** 지시어를 지정 하기 위한 바로 가기 형식을 제공는 **병렬** 하나만 포함 된 영역 **섹션** 지시문입니다. 의미 체계는 명시적으로 지정 하는 **병렬** 지시문 바로 뒤에 **섹션** 지시문입니다. 구문은 **섹션 병렬** 지시문은 다음과 같습니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055380"
 ---
 # <a name="operator-ptr"></a>연산자 PTR
 첫 번째 연산자 강제로 *식* 지정 된 것으로 간주 `type`합니다. 에 대 한 포인터를 지정 하는 두 번째 연산자 `type`합니다.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343777"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>대화 상자 데이터 교환 및 유효성 검사
 대화 상자 데이터 교환 (DDX)에 대화 상자 컨트롤을 초기화 하 고 사용자가 데이터 입력을 수집 하기 위해 쉬운 방법입니다. 대화 상자 데이터 유효성 검사 (DDV) 대화 상자에서 데이터 항목을 확인할 쉽습니다. 활용 하기 위해 DDX 및 DDV 대화 상자에서를 사용 하 여는 [멤버 변수 추가 마법사](../ide/add-member-variable-wizard.md) 에 데이터 멤버를 만들고 데이터 형식으로 설정 하 고 유효성 검사 규칙을 지정 합니다.  

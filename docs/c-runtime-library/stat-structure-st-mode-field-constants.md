@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410137"
 ---
 # <a name="stat-structure-stmode-field-constants"></a>_stat 구조체 st_mode 필드 상수
 ## <a name="syntax"></a>구문  

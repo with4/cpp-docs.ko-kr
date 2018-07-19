@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370949"
 ---
 # <a name="heapsize"></a>HEAPSIZE
 동일한 기능을 노출 된 [힙/](../../build/reference/heap-set-heap-size.md) 링커 옵션입니다.  

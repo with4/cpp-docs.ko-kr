@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132780"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>방법: C++ Interop를 사용하여 콜백 및 대리자 마샬링
 이 항목 마샬링하는 방법을 보여 줍니다 하 고 Visual c + +를 사용 하 여 관리 코드와 비관리 코드 (콜백의 관리 되는 버전)을 위임 합니다.  

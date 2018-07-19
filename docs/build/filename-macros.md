@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458864"
 ---
 # <a name="filename-macros"></a>파일 이름 매크로
 파일 이름 매크로 종속성 (디스크에 하지 전체 파일 이름 지정)에 지정 된 파일 이름으로 미리 정의 합니다. 이러한 매크로; 호출 될 때 괄호로 묶이 필요가 없습니다. 표시 된 것 처럼 $만 지정 합니다.  

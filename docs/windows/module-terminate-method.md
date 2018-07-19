@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874722"
 ---
 # <a name="moduleterminate-method"></a>Module::Terminate 메서드
 모듈에 의해 인스턴스화되는 모든 팩터리가 종료됩니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861794"
 ---
 # <a name="changing-the-properties-of-a-resource"></a>리소스 속성 변경
 ### <a name="to-edit-the-properties-of-a-resource"></a>리소스 속성을 편집하려면  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131116"
 ---
 # <a name="lock"></a>lock
 정의 `lock` 자동화 개체에 대 한 액세스를 동기화 하는 클래스입니다.  

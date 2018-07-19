@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382148"
 ---
 # <a name="declarators-maximum-number"></a>선언자: 최대 수
 **ANSI 3.5.4** 산술, 구조체 또는 공용 구조체 형식을 수정할 수 있는 선언자의 최대 수  

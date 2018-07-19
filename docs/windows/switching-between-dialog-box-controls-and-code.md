@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891924"
 ---
 # <a name="switching-between-dialog-box-controls-and-code"></a>대화 상자 컨트롤과 코드 사이의 전환
 MFC 응용 프로그램에서 대화 상자 컨트롤 처리기 코드로 이동 하려면 하거나 신속 하 게 만들 스텁 처리기 함수에 두 번 클릭 수 있습니다.  

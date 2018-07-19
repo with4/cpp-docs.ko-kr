@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094766"
 ---
 # <a name="snapshot"></a>스냅숏
 스냅숏은은 스냅숏이 만들어진 때의 상태로 데이터의 정적 뷰를 반영 하는 레코드 집합입니다. 스냅숏 열고 모든 레코드를 이동 하면 포함 된 여러 레코드 집합 및 호출 하 여 스냅숏을 다시 만들 때까지 해당 값이 변경 되지 않는 **Requery**합니다.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098448"
 ---
 # <a name="crowsetinsert"></a>CRowset::Insert
 만들고는 접근자의 데이터를에서 사용 하 여 새 행을 초기화 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890704"
 ---
 # <a name="weakrefas-method"></a>WeakRef::As 메서드
 지정된 인터페이스를 나타내도록 지정된 ComPtr 포인터 매개 변수를 설정합니다.  

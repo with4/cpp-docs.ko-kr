@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386360"
 ---
 # <a name="strerror-function"></a>strerror 함수
 **ANSI 4.11.6.2** `strerror` 함수에서 반환한 오류 메시지 문자열 내용입니다.  

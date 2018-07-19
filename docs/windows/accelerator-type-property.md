@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856503"
 ---
 # <a name="accelerator-type-property"></a>액셀러레이터 키 형식 속성
 액셀러레이터 키 **형식** 속성은 액셀러레이터 키 ID와 연결 된 바로 가기 키 조합을 가상 키 조합 또는 ASCII/ANSI 키 값을 확인 합니다.  

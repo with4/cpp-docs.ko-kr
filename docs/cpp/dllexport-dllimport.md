@@ -20,16 +20,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d57287723da1bb7fbe7f75dece05674142bd417
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a330ecf221d210134425c4bf39c17bac0f5006dc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940536"
 ---
 # <a name="dllexport-dllimport"></a>dllexport, dllimport
 **Microsoft 전용**  
   
- `dllexport` 및 **dllimport** 저장소 클래스 특성은 C 및 c + + 언어에 대 한 Microsoft 고유의 확장입니다. 이러한 특성을 사용하여 함수, 데이터 및 개체를 DLL에 내보내거나 DLL에서 가져올 수 있습니다.  
+ 합니다 **dllexport** 하 고 **dllimport** 저장소 클래스 특성은 C 및 c + + 언어에 대 한 Microsoft 전용 확장 합니다. 이러한 특성을 사용하여 함수, 데이터 및 개체를 DLL에 내보내거나 DLL에서 가져올 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,17 +41,17 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="remarks"></a>설명  
- 이러한 특성은 실행 파일이나 다른 DLL일 수 있는 클라이언트에 대한 DLL 인터페이스를 명시적으로 정의합니다. 함수를 `dllexport`로 선언하면 적어도 내보낸 함수의 지정과 관련하여 모듈 정의(.def) 파일이 필요하지 않게 됩니다. `dllexport` 특성은 `__export` 키워드를 대체합니다.  
+ 이러한 특성은 실행 파일이나 다른 DLL일 수 있는 클라이언트에 대한 DLL 인터페이스를 명시적으로 정의합니다. 함수 선언 **dllexport** 내보낸 함수의 사양 기준 이상 모듈 정의 (.def) 파일의 경우 필요 하지 않습니다. 합니다 **dllexport** 대체 특성을 **__export** 키워드입니다.  
   
  클래스가 declspec(dllexport)로 표시된 경우 클래스 계층 구조에 있는 클래스 템플릿의 특수화는 암시적으로 declspec(dllexport)로 표시됩니다. 이는 클래스 템플릿이 명시적으로 인스턴스화되었으며 클래스의 멤버가 정의되어야 함을 의미합니다.  
   
- 함수의 `dllexport`는 데코레이트된 이름을 사용하여 함수를 노출합니다. C++ 함수의 경우 여기에 이름 변환이 포함됩니다. C 함수 또는 `extern "C"`로 선언된 함수의 경우 여기에 호출 규칙을 기반으로 하는 플랫폼별 데코레이션이 포함됩니다. C/c + + 코드의 이름 데코레이션에 대 한 자세한 내용은 참조 하십시오. [데코 레이트 된 이름](../build/reference/decorated-names.md)합니다. `__cdecl` 호출 규칙을 사용하여 내보낸 C 함수 또는 C++ `extern "C"` 함수에는 이름 데코레이션이 적용되지 않습니다.  
+ **dllexport** 함수의 해당 트 데코 레이 된 이름의 함수를 노출 합니다. C++ 함수의 경우 여기에 이름 변환이 포함됩니다. C 함수 또는 `extern "C"`로 선언된 함수의 경우 여기에 호출 규칙을 기반으로 하는 플랫폼별 데코레이션이 포함됩니다. C/c + + 코드의 이름 데코레이션에 대 한 자세한 내용은 [데코 레이트 된 이름](../build/reference/decorated-names.md)합니다. `__cdecl` 호출 규칙을 사용하여 내보낸 C 함수 또는 C++ `extern "C"` 함수에는 이름 데코레이션이 적용되지 않습니다.  
   
- 데코레이트되지 않은 이름을 내보내려면 EXPORTS 섹션에서 데코레이트되지 않은 이름을 정의하는 모듈 정의(.def) 파일을 사용하여 연결할 수 있습니다. 자세한 내용은 참조 [내보내기](../build/reference/exports.md)합니다. 데코레이팅되지 않은 이름을 내보내는 또 다른 방법은 사용 하는 것을 `#pragma comment(linker, "/export:alias=decorated_name")` 소스 코드에 지시문입니다.  
+ 데코레이트되지 않은 이름을 내보내려면 EXPORTS 섹션에서 데코레이트되지 않은 이름을 정의하는 모듈 정의(.def) 파일을 사용하여 연결할 수 있습니다. 자세한 내용은 [내보내기를](../build/reference/exports.md)합니다. 데코레이팅되지 않은 이름을 내보내는 또 다른 방법은 사용 하는 것을 `#pragma comment(linker, "/export:alias=decorated_name")` 소스 코드에 지시문입니다.  
   
- 선언 하는 경우 `dllexport` 또는 **dllimport**를 사용 해야 [확장 특성 구문](../cpp/declspec.md) 및 `__declspec` 키워드입니다.  
+ 선언 하는 경우 **dllexport** 또는 **dllimport**를 사용 해야 [확장 된 특성 구문은](../cpp/declspec.md) 하며 **__declspec** 키워드.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // Example of the dllimport and dllexport class attributes  

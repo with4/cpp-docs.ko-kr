@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382317"
 ---
 # <a name="filenames"></a>파일 이름
 **ANSI 4.9.3** 유효한 파일 이름을 작성하는 규칙  

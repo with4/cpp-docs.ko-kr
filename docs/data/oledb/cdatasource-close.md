@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093856"
 ---
 # <a name="cdatasourceclose"></a>CDataSource::Close
 연결을 해제 하 여 닫습니다는 **m_spInit** 포인터입니다.  

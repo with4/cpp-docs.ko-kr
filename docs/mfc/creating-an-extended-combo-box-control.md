@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341214"
 ---
 # <a name="creating-an-extended-combo-box-control"></a>확장된 콤보 상자 컨트롤 만들기
 확장 된 콤보 상자 컨트롤을 만들 방법을 대화 상자에서 컨트롤 사용 또는 비 모달 창에서 만드는 인지에 따라 달라 집니다.  

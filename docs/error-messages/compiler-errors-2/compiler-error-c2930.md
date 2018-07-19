@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247874"
 ---
 # <a name="compiler-error-c2930"></a>컴파일러 오류 C2930
 'class': type-class-id가 'enum identifier' 열거자로 재정의되었습니다.  

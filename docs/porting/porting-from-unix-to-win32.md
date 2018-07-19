@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843290"
 ---
 # <a name="porting-from-unix-to-win32"></a>UNIX에서 Win32로 이식
 UNIX에서 Windows로 응용 프로그램을 마이그레이션하는 경우 다음과 같은 여러 옵션이 있습니다.  

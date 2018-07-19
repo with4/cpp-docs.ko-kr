@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc34a0a176e39a30e6cdb5d4c2cdeeebc94b5b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46e5b0b0c55c5a5dd0a48d2437fc83fa43226f5a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956145"
 ---
 # <a name="enablesharedfromthis-class"></a>enable_shared_from_this 클래스
 
@@ -45,13 +46,13 @@ protected:
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 공유 포인터에 의해 제어 되는 형식입니다.
+*Ty* 공유 포인터에 의해 제어 되는 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-`enable_shared_from_this`에서 파생된 개체는 멤버 함수에서 `shared_from_this` 메서드를 사용하여 기존 `shared_ptr` 소유자와 소유권을 공유하는 인스턴스의 [shared_ptr](../standard-library/shared-ptr-class.md) 소유자를 만듭니다. 그렇지 않으면 `this`를 사용하여 새 `shared_ptr`를 만들 경우 기존 `shared_ptr` 소유자와 완전히 다르므로 잘못된 참조가 발생하거나 개체가 두 번 이상 삭제될 수 있습니다.
+`enable_shared_from_this`에서 파생된 개체는 멤버 함수에서 `shared_from_this` 메서드를 사용하여 기존 `shared_ptr` 소유자와 소유권을 공유하는 인스턴스의 [shared_ptr](../standard-library/shared-ptr-class.md) 소유자를 만듭니다. 그렇지 않으면 새 `shared_ptr` 를 사용 하 여 **이**, 기존 다르므로 `shared_ptr` 소유자의 잘못 된 참조가 발생 하거나 개체가 두 번 이상 삭제 될 수 있습니다.
 
-실수로 잘못 사용하는 것을 방지할 수 있도록 생성자, 소멸자 및 대입 연산자가 보호됩니다. 템플릿 인수 형식 `Ty`는 파생된 클래스의 형식이어야 합니다.
+실수로 잘못 사용하는 것을 방지할 수 있도록 생성자, 소멸자 및 대입 연산자가 보호됩니다. 템플릿 인수 형식 *Ty* 파생된 클래스의 형식 이어야 합니다.
 
 사용법에 대한 예제는 [enable_shared_from_this::shared_from_this](#shared_from_this)를 참조하세요.
 
@@ -72,9 +73,9 @@ shared_ptr<const T> shared_from_this() const;
 
 ### <a name="remarks"></a>설명
 
-개체가 `enable_shared_from_this` 기본 클래스에서 파생될 경우 `shared_from_this` 템플릿 멤버 함수는 이 인스턴스의 소유권을 기존 `shared_ptr` 소유자와 공유하는 [shared_ptr 클래스](../standard-library/shared-ptr-class.md) 개체를 반환합니다. 그렇지 않으면 `this`에서 새 `shared_ptr`를 만들 경우 기존 `shared_ptr` 소유자와 완전히 다르므로 잘못된 참조가 발생하거나 개체가 두 번 이상 삭제될 수 있습니다. `shared_ptr` 개체가 아직 소유하지 않은 인스턴스에서 `shared_from_this`를 호출하면 동작이 정의 해제됩니다.
+개체가 `enable_shared_from_this` 기본 클래스에서 파생될 경우 `shared_from_this` 템플릿 멤버 함수는 이 인스턴스의 소유권을 기존 `shared_ptr` 소유자와 공유하는 [shared_ptr 클래스](../standard-library/shared-ptr-class.md) 개체를 반환합니다. 그렇지 않으면 새 `shared_ptr` 에서 **이**, 기존 다르므로 `shared_ptr` 소유자의 잘못 된 참조가 발생 하거나 개체가 두 번 이상 삭제 될 수 있습니다. `shared_ptr` 개체가 아직 소유하지 않은 인스턴스에서 `shared_from_this`를 호출하면 동작이 정의 해제됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std_memory_shared_from_this.cpp
@@ -110,5 +111,5 @@ sp2->val == 3
 
 ## <a name="see-also"></a>참고자료
 
-[enable_shared_from_this::shared_from_this](#shared_from_this)<br/>
+[enable_shared_from_this:: shared_from_this](#shared_from_this)<br/>
 [shared_ptr 클래스](../standard-library/shared-ptr-class.md)<br/>

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881213"
 ---
 # <a name="event--c-component-extensions"></a>event(C++ 구성 요소 확장)
 `event` 키워드로 선언 된는 *이벤트*, 등록 된 구독자에 게 알리는 (*이벤트 처리기*) 특정 상황이 발생 합니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847974"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>방법: 유니버설 Windows 플랫폼 앱에서 기존 C++ 코드 사용
 데스크톱 프로그램을 UWP 환경에서 실행되게 하는 가장 쉬운 방법은 데스크톱 브리지 기술을 사용하는 것입니다. 여기에는 코드를 변경할 필요 없이 기존 응용 프로그램을 UWP 앱으로 패키징하는 데스크톱 앱 변환기가 포함됩니다. 자세한 내용은 [데스크톱 브리지를 사용하여 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)로 가져오기](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)를 참조하세요.

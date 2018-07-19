@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099565"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 클래스
 에 사용 되는 행 핸들에 대 한 기본 구현을 제공는 [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) 클래스입니다.  

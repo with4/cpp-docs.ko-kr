@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368537"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>__declspec(dllimport)을 사용하여 함수 호출 가져오기
 다음 코드 예제를 사용 하는 방법을 보여 줍니다 **_declspec(dllimport)** DLL에서 함수 호출을 응용 프로그램에 가져오려는 합니다. 가정 `func1` 포함 하는.exe 파일에서 별도 DLL에 상주 하는 함수는 **주** 함수입니다.  

@@ -14,17 +14,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3238ffcbd03f40c6eac0423d0212a65719fb33d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f569b064d2ee5de5bd1aa39c9d443c8a49ca2677
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961853"
 ---
 # <a name="output-stream-manipulators-with-one-argument-int-or-long"></a>하나의 인수를 포함하는 출력 스트림 조작자(int 또는 long)
 
-iostream 클래스 라이브러리는 매개 변수가 있는 조작자를 만들기 위한 매크로 집합을 제공합니다. 단일 `int` 또는 `long` 인수가 포함된 조작자는 특수한 경우입니다. `setw`와 같이 단일 `int` 또는 `long` 인수를 허용하는 출력 스트림 조작자를 만들려면 \<iomanip>에서 정의되는 _Smanip 매크로를 사용해야 합니다. 이 예제에서는 지정된 수의 공백을 스트림에 삽입하는 `fillblank` 조작자를 정의합니다.
+iostream 클래스 라이브러리는 매개 변수가 있는 조작자를 만들기 위한 매크로 집합을 제공합니다. 단일 조작자 **int** 하거나 **긴** 인수는 특별 한 경우. 단일을 허용 하는 출력 스트림 조작자를 만들려면 **int** 또는 **긴** 인수 (같은 `setw`)에서 정의 되는 _Smanip 매크로 사용 해야 \<iomanip >. 이 예제에서는 지정된 수의 공백을 스트림에 삽입하는 `fillblank` 조작자를 정의합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // output_stream_manip.cpp

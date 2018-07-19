@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343391"
 ---
 # <a name="mfc-technical-notes"></a>MFC 기술 참고 사항
 기술 노트는 프로그래머가 프로그래머 용으로 작성 된 문서입니다.  

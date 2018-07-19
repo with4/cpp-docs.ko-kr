@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19615aabce489049d38539b48300311504fbbbfe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1df0d00aa6356fa1741e7f4fc34d8063782da859
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930676"
 ---
 # <a name="mapi"></a>MAPI
-이 문서에서는 클라이언트 메시지 응용 프로그램 개발자를 위한 Microsoft MAPI(메시징 응용 프로그래밍 인터페이스)에 대해 설명합니다. MFC 클래스에서 MAPI 하위 집합에 대 한 지원을 제공 **CDocument** 하지만 전체 API를 캡슐화 하지 않습니다. 자세한 내용은 참조 [MFC의 MAPI 지원](../mfc/mapi-support-in-mfc.md)합니다.  
+이 문서에서는 클라이언트 메시지 응용 프로그램 개발자를 위한 Microsoft MAPI(메시징 응용 프로그래밍 인터페이스)에 대해 설명합니다. MFC 클래스에서 MAPI 하위 집합에 대 한 지원을 제공 `CDocument` 하지만 전체 API를 캡슐화 하지 않습니다. 자세한 내용은 참조 [MFC의 MAPI 지원](../mfc/mapi-support-in-mfc.md)합니다.  
   
  MAPI는 메일 지원 및 메일 인식 응용 프로그램이 메일 메시지를 생성, 조작, 전송 및 저장할 수 있게 해주는 일련의 함수입니다. MAPI는 응용 프로그램 개발자가 메일 메시지의 목적 및 내용을 정의하고 저장된 메일 메시지를 유연한 방식으로 관리할 수 있게 해주는 도구를 제공합니다. MAPI는 또한 응용 프로그램 개발자가 기본 메시징 시스템과 독립적으로 메일 지원 및 메일 인식 응용 프로그램을 만드는 데 사용할 수 있는 공통 인터페이스를 제공합니다.  
   

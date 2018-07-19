@@ -8,11 +8,12 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: 68f95407fe22c7e8b70426e555f46eb0a4c80338
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1c32311109ee19056c0a73d922ab1a965e3fbbb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954127"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt; 형식 정의
 
@@ -36,7 +37,7 @@ typedef unspecified exception_ptr;
 
 `exception_ptr` 변수를 선언할 때 변수는 예외와 관련되지 않습니다. 즉, 해당 예외 참조 필드는 NULL입니다. 이러한 `exception_ptr` 개체를 *null exception_ptr*라고 합니다.
 
-`current_exception` 또는 `make_exception_ptr` 함수를 사용하여 `exception_ptr` 개체에 예외를 지정합니다. `exception_ptr` 변수에 예외를 할당하면, 변수 예외 참조 필드는 예외 복사본을 가리킵니다. 메모리가 부족하여 예외를 복사할 수 없는 경우 예외 참조 필드는 [std::bad_alloc](../standard-library/bad-alloc-class.md) 예외의 복사본을 가리킵니다. `current_exception` 또는 `make_exception_ptr` 함수가 다른 이유로 예외를 복사할 수 없는 경우 **terminate** CRT 함수를 호출하여 현재 프로세스를 종료합니다.
+`current_exception` 또는 `make_exception_ptr` 함수를 사용하여 `exception_ptr` 개체에 예외를 지정합니다. `exception_ptr` 변수에 예외를 할당하면, 변수 예외 참조 필드는 예외 복사본을 가리킵니다. 메모리가 부족하여 예외를 복사할 수 없는 경우 예외 참조 필드는 [std::bad_alloc](../standard-library/bad-alloc-class.md) 예외의 복사본을 가리킵니다. 경우는 `current_exception` 또는 `make_exception_ptr` 함수가 다른 이유로, 함수 호출에 대 한 예외를 복사할 수 없습니다는 `terminate` CRT 함수를 현재 프로세스를 종료 합니다.
 
 그 이름에도 불구하고 `exception_ptr` 개체 자체는 포인터가 아닙니다. 포인터 의미 체계를 준수하지 않으며 포인터 멤버 액세스(`->`) 또는 간접 참조(*) 연산자와 함께 사용될 수 없습니다. `exception_ptr` 개체에는 공용 데이터 멤버 또는 멤버 함수가 없습니다.
 
@@ -56,7 +57,7 @@ typedef void (*terminate_handler)();
 
 이 형식은 종료 처리기로 사용하는 데 적합한 함수의 포인터에 대해 설명합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `terminate_handler` 사용에 대한 예제는 [set_terminate](../standard-library/exception-functions.md#set_terminate)를 참조하세요.
 
@@ -68,7 +69,7 @@ typedef void (*terminate_handler)();
 typedef void (*unexpected_handler)();
 ```
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `unexpected_handler` 사용에 대한 예제는 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)를 참조하세요.
 

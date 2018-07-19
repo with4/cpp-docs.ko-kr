@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246557"
 ---
 # <a name="compiler-error-c3232"></a>컴파일러 오류 C3232
 'param': 정규화된 이름에는 제네릭 형식 매개 변수를 사용할 수 없습니다.  

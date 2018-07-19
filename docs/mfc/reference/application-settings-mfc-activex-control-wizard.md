@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351604"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>응용 프로그램 설정, MFC ActiveX 컨트롤 마법사
 MFC ActiveX 컨트롤 마법사의 이 페이지를 사용하여 기본 기능을 디자인하고 새 MFC ActiveX 프로젝트에 추가합니다. 이러한 설정은 컨트롤의 특정 기능이나 요소가 아닌 응용 프로그램 자체에 적용됩니다.  

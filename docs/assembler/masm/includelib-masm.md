@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050999"
 ---
 # <a name="includelib-masm"></a>INCLUDELIB (MASM)
 현재 모듈와 연결 되어야 하는 링커 알립니다 *libraryname*합니다.  

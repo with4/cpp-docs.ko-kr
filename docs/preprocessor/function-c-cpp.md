@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849485"
 ---
 # <a name="function-cc"></a>함수 (C/C++)
 pragma의 인수 목록에서 지정된 함수에 대한 호출이 생성되도록 지정합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291416"
 ---
 # <a name="compiler-warning-level-3-c4192"></a>컴파일러 경고 (수준 3) C4192
 'name' 형식 라이브러리 'library'를 가져오는 동안 자동으로 제외 합니다.  

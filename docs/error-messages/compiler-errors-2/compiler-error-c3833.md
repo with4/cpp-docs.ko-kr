@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268652"
 ---
 # <a name="compiler-error-c3833"></a>컴파일러 오류 C3833
 'type': pointer_type에 대 한 잘못 된 대상 형식  

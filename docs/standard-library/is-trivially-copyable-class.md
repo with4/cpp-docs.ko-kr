@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 177ba6e688f6d7ed2b4c76eb0ede95cc288b1d5d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 19bed4a455ea2b0b894ba842f349aa304e9f261d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964685"
 ---
 # <a name="istriviallycopyable-class"></a>is_trivially_copyable 클래스
 
@@ -36,11 +37,11 @@ struct is_trivially_copyable;
 
 ### <a name="parameters"></a>매개 변수
 
-`T` 형식이 쿼리입니다.
+*T* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `T` 형식이 일반적으로 복사 가능한 형식인 경우 true이고, 그렇지 않으면 false입니다. 일반적으로 복사 가능한 형식에는 특수한 복사 작업, 이동 작업 또는 소멸자가 없습니다. 일반적으로 복사 작업은 비트 복사로 구현할 수 있는 경우 trivial로 간주됩니다. 기본 제공 형식과 일반적으로 복사 가능한 형식의 배열은 모두 일반적으로 복사 가능합니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *T* 형식인 일반적으로 복사 가능한 그렇지 않으면 false입니다. 일반적으로 복사 가능한 형식에는 특수한 복사 작업, 이동 작업 또는 소멸자가 없습니다. 일반적으로 복사 작업은 비트 복사로 구현할 수 있는 경우 trivial로 간주됩니다. 기본 제공 형식과 일반적으로 복사 가능한 형식의 배열은 모두 일반적으로 복사 가능합니다.
 
 ## <a name="requirements"></a>요구 사항
 

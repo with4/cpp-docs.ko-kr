@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856490"
 ---
 # <a name="support-for-using-wmain"></a>wmain 사용 지원
 Visual c + +에서는 정의할 수는 **wmain** 함수 및 유니코드 응용 프로그램에 와이드 문자 인수를 전달 합니다. 형식 매개 변수를 선언 하면 **wmain**, 비슷한 형식으로 사용 하 여 **주**합니다. 와이드 문자 인수 또는 와이드 문자 환경 포인터를 프로그램에 전달할 수 있습니다. **wmain**에 대한 `argv` 및 `envp` 매개 변수는 `wchar_t*` 형식입니다. 예를 들어:  

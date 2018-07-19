@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095468"
 ---
 # <a name="converting-data-not-supported-by-the-provider"></a>공급자가 지원하지 않는 데이터 변환
 OLE DB 공급자 템플릿 코드에 대 한 소비자는 공급자에서 지원 되지 않는 데이터 형식을 요청 하면 `IRowsetImpl::GetData` Msdadc.dll 데이터 형식을 변환을 호출 합니다.  

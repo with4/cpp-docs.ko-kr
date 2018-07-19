@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f312d7e829657f2cc9c7c41c65afad8d8f8b343
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121866"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap 클래스
 `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`및 `CMapStringToPtr`포인터-맵 클래스 개체에 대해 형식 안전 "래퍼"를 제공합니다.  
@@ -41,13 +42,13 @@ class CTypedPtrMap : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  형식화 된 포인터 map 클래스;의 기본 클래스 포인터 맵 클래스 여야 합니다 ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, 또는 `CMapStringToPtr`).  
   
- `KEY`  
+ *KEY*  
  맵에 대 한 키로 사용 되는 개체의 클래스입니다.  
   
- `VALUE`  
+ *값*  
  Map에 저장 된 개체의 클래스입니다.  
   
 ## <a name="members"></a>멤버  
@@ -93,25 +94,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rPosition`  
- 에 대 한 참조를 지정 된 **위치** 이전에서 반환 된 값 `GetNextAssoc` 또는 `BASE_CLASS` **:: GetStartPosition** 호출 합니다.  
+ *rPosition*  
+ 이전에서 반환 되는 위치 값에 대 한 참조를 지정 `GetNextAssoc` 또는 `BASE_CLASS` **:: GetStartPosition** 호출 합니다.  
   
  *KEY*  
  Map의 키 유형을 지정 하는 템플릿 매개 변수  
   
- `rKey`  
+ *rKey*  
  검색 된 요소의 반환 된 키를 지정합니다.  
   
  *값*  
  Map의 값의 형식을 지정 하는 템플릿 매개 변수  
   
- `rValue`  
+ *rValue*  
  검색 된 요소의 반환 된 값을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 map의 모든 요소를 통해 반복 하는 데 가장 유용 합니다. 참고 위치 시퀀스 아닌지 반드시 키 값 시퀀스와 동일 합니다.  
   
- 검색된 된 요소는 맵에서 마지막 다음 새 값의 경우 `rNextPosition` 로 설정 된 **NULL**합니다.  
+ 검색된 된 요소는 맵에서 마지막 다음 새 값의 경우 `rNextPosition` NULL로 설정 됩니다.  
   
  이 인라인 함수가 호출 `BASE_CLASS` **:: GetNextAssoc**합니다.  
   
@@ -123,16 +124,16 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  이 맵의 클래스의 기본 클래스를 지정 하는 템플릿 매개 변수  
   
- `key`  
+ *key*  
  조회 되는 요소의 키입니다.  
   
  *값*  
  이 맵에 저장 된 값의 형식을 지정 하는 템플릿 매개 변수  
   
- `rValue`  
+ *rValue*  
  검색 된 요소의 반환 된 값을 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -152,10 +153,10 @@ VALUE& operator[ ](base_class ::base_arg_key key);
  *값*  
  이 맵에 저장 된 값의 형식을 지정 하는 템플릿 매개 변수  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  이 맵의 클래스의 기본 클래스를 지정 하는 템플릿 매개 변수  
   
- `key`  
+ *key*  
  조회 하거나 만들 맵에서 요소의 키입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -172,7 +173,7 @@ BOOL RemoveKey(KEY key);
  *KEY*  
  Map의 키 유형을 지정 하는 템플릿 매개 변수  
   
- `key`  
+ *key*  
  제거할 요소의 키입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -192,10 +193,10 @@ void SetAt(KEY key, VALUE newValue);
  *KEY*  
  Map의 키 유형을 지정 하는 템플릿 매개 변수  
   
- `key`  
+ *key*  
  새 값의 키 값을 지정합니다.  
   
- `newValue`  
+ *새 값*  
  새 요소의 값에 해당 개체 포인터를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  

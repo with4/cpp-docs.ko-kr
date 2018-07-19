@@ -56,6 +56,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415532"
 ---
 # <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr, wcschr, _mbschr, _mbschr_l
 현재 로캘 또는 지정된 LC_CTYPE 변환 상태 범주를 사용하여 문자열에서 문자를 찾습니다.

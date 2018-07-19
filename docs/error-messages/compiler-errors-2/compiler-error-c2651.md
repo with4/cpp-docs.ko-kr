@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199669"
 ---
 # <a name="compiler-error-c2651"></a>컴파일러 오류 C2651
 데이터 형식: '연산자' 왼쪽은 클래스, 구조체 또는 공용 구조체 이어야 합니다  

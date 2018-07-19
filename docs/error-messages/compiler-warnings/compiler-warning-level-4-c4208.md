@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292365"
 ---
 # <a name="compiler-warning-level-4-c4208"></a>컴파일러 경고(수준 4) C4208
 비표준 확장이 사용 됨: delete [exp]-exp가 계산 되지만 무시  

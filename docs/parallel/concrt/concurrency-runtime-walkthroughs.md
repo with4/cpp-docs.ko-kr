@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686635"
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>동시성 런타임 연습
 이 섹션에서는 시나리오 기반 항목에는 다양 한 동시성 런타임 기능을 사용 하는 방법을 보여 줍니다.  

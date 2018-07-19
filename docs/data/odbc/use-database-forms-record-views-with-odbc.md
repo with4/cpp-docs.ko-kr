@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089819"
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>ODBC에서 데이터베이스 폼(레코드 뷰) 사용
 데이터 항목 또는 데이터 보기와 같은 일부 응용 프로그램 폼, 대화 상자 스타일 컨트롤과 보기가 필요 합니다.  

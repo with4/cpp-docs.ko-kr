@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344310"
 ---
 # <a name="menu-sample-list"></a>메뉴 샘플 목록
 만들기, 편집 및 업데이트 메뉴를 설명 하는 다음 샘플 프로그램을 참조 하십시오.  

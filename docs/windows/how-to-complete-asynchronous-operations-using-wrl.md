@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881527"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>방법: WRL을 사용하여 비동기 작업 완료
 이 문서에서는 Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 사용 하 여 비동기 작업을 시작 하 고 작업 완료 시 작업을 수행 하는 방법을 보여 줍니다.  

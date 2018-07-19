@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243491"
 ---
 # <a name="compiler-error-c2870"></a>컴파일러 오류 C2870
 'name': 네임 스페이스 정의 다른 네임 스페이스 정의 내에서 파일 범위에 있으며 즉시 나타나야 합니다.  

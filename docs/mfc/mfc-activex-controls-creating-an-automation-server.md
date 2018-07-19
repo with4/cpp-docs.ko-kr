@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346765"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX 컨트롤: 자동화 서버 만들기
 프로그래밍 방식으로 제어 하는 다른 응용 프로그램에 포함 하 고 응용 프로그램에서 컨트롤의 메서드를 호출 하기 위해 자동화 서버로 MFC ActiveX 컨트롤을 개발할 수 있습니다. 이러한 컨트롤은 여전히 ActiveX 컨트롤 컨테이너에서 호스팅할 수 수 없습니다.  

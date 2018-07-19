@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110082"
 ---
 # <a name="overriding-provider-service-defaults"></a>공급자 서비스 기본값 재정의
 공급자의 레지스트리 값에 대 한 **OLEDB_SERVICES** 에 대 한 기본 값으로 반환 되는 [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx) 데이터 원본 개체에서 초기화 속성입니다.  

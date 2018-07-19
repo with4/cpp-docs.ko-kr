@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106442"
 ---
 # <a name="ctableprivileges-ctableprivilegeinfo"></a>CTablePrivileges, CTablePrivilegeInfo
 Typedef 클래스 호출 **CTablePrivileges** 해당 매개 변수 클래스를 구현 하려면 **CTablePrivilegeInfo**합니다.  

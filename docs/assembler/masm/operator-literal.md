@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054587"
 ---
 # <a name="operator-ltgt"></a>연산자 &lt;&gt;
 처리 *텍스트* 리터럴 단일 요소로 합니다.  

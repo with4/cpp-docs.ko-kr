@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e210af223ffe6d3b8e0766adaaf539f0bb97f73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63b2c11b7a5a8d48e3fe068807b641489c6aa323
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957362"
 ---
 # <a name="isfundamental-class"></a>is_fundamental 클래스
 
@@ -36,13 +37,13 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 형식이 쿼리입니다.
+*Ty* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `Ty` 형식이 `void`, 정수 형식, 부동 소수점 형식 또는 이들 형식 중 하나의 `cv-qualified` 형식이면 true이고, 그렇지 않으면 false입니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식 *Ty* 즉,이 기본 형식이 **void**, 정수 형식, 부동 소수점 형식 또는 `cv-qualified` 고, 그렇지 않으면 false 중 하나의 형식을 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__is_fundamental.cpp

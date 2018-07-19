@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342022"
 ---
 # <a name="control-bar-classes"></a>컨트롤 막대 클래스
 컨트롤 막대 프레임 창에 연결 됩니다. 단추, 상태 창 또는 대화 상자 템플릿을 포함 합니다. 자유 부동 컨트롤 막대, 라고도 함 도구 팔레트에 연결 하 여 구현 됩니다는 [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md) 개체입니다.  

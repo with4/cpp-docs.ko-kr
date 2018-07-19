@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055933"
 ---
 # <a name="operator-shl"></a>연산자 SHL
 결과의 비트를 시프트를 반환 *식* 왼쪽 *count* 비트의 번호입니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258463"
 ---
 # <a name="compiler-error-c3415"></a>컴파일러 오류 C3415
 여러 'section_name' 섹션이 다양한 특성('value')을 갖고 있습니다.  

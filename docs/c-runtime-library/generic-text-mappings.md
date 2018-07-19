@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388577"
 ---
 # <a name="generic-text-mappings"></a>일반 텍스트 매핑
 국제 시장에 대한 코드를 간단하게 작성하기 위해 다음에 대한 TCHAR.H에 제네릭 텍스트 매핑이 정의되어 있습니다.  

@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387485"
 ---
 # <a name="lifetime"></a>수명
 "수명"은 변수나 함수가 존재하는 프로그램 실행 중의 기간입니다. 식별자의 저장 기간에 따라 수명이 결정됩니다.  

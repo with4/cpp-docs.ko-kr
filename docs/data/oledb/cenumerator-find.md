@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094484"
 ---
 # <a name="cenumeratorfind"></a>CEnumerator::Find
 사용 가능한 공급자 중에서 지정된 된 이름을 찾습니다.  

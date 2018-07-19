@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384680"
 ---
 # <a name="function-body"></a>함수 본문
 "함수 본문"은 함수가 수행하는 작업을 지정하는 문이 포함된 복합 문입니다.  

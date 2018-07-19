@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090936"
 ---
 # <a name="cdatasourceopenfrominitializationstring"></a>CDataSource::OpenFromInitializationString
 사용자가 제공한 초기화 문자열에 지정 된 데이터 원본이 열립니다.  

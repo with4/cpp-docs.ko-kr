@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244949"
 ---
 # <a name="compiler-error-c2883"></a>컴파일러 오류 C2883
 'name': 함수 선언이 using 선언으로 인해 'identifier'와 충돌  

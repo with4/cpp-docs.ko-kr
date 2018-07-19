@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198796"
 ---
 # <a name="fatal-error-c1509"></a>심각한 오류 C1509
 컴파일러 한계: ' function '함수에에서 예외 처리기 상태가 너무 많습니다. 함수를 단순화 합니다.  

@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7337669cae68c088265d812585a44fadd6bcb76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d23f204e7e8a545fbee7ab516495ed711d7984a9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944638"
 ---
 # <a name="bstrtcopy"></a>_bstr_t::copy
 **Microsoft 전용**  
@@ -32,21 +33,19 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      BSTR copy(  
-  bool fCopy = true  
-) const;  
+BSTR copy( bool fCopy = true ) const;  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `fCopy`  
- 경우 **true**, **복사** 는 포함 된 복사본을 반환 `BSTR`, 그렇지 않으면 **복사** 실제 BSTR을 반환 합니다.  
+ *fCopy*  
+ TRUE 이면 `copy` 포함된 된 복사본을 반환 합니다 `BSTR`, 그렇지 않으면 `copy` 는 실제 BSTR을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
  캡슐화된 `BSTR` 개체에 새로 할당된 복사본을 반환합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp 
 STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t  
    *pVal = m_bsConStr.copy();  
 }  

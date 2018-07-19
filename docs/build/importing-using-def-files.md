@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368859"
 ---
 # <a name="importing-using-def-files"></a>DEF 파일을 사용하여 가져오기
 사용 하려는 경우 **__declspec (dllimport)** .def 파일을 함께.def 파일 상수 대신 데이터를 사용 하 여 잘못 된 코딩 문제가 발생할 수 가능성을 변경 해야 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878465"
 ---
 # <a name="handletdetach-method"></a>HandleT::Detach 메서드
 현재 HandleT 개체에서 기본 핸들을 분리합니다.  

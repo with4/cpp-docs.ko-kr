@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688871"
 ---
 # <a name="multithreading-creating-user-interface-threads"></a>다중 스레딩: 사용자 인터페이스 스레드 만들기
 사용자 인터페이스 스레드는 대개 응용 프로그램의 다른 부분을 실행 하는 스레드 독립적으로 사용자 이벤트에 응답 하 고 사용자 입력을 처리 합니다. 기본 응용 프로그램 스레드 (에 제공 된 프로그램 `CWinApp`-파생 클래스)가 이미 만들어져서 시작 됩니다. 이 항목에서는 추가 사용자 인터페이스 스레드를 만드는 데 필요한 단계에 설명 합니다.  

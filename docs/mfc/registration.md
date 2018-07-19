@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d51589d9261d497c4c1f9185bd90b889e46eb34
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930692"
 ---
 # <a name="registration"></a>등록
 응용 프로그램으로 OLE 항목을 삽입 하려는 OLE에서 선택할 수 있는 개체 유형 목록이 표시 됩니다. OLE 서버 응용 프로그램 모두에서 제공 하는 정보가 포함 된 시스템 등록 데이터베이스에서이 목록을 가져옵니다. 서버는 자신을 등록 하는 경우 시스템 등록 데이터베이스 (레지스트리)에 포함할 항목 제공 하는 개체의 각 유형 설명, 파일 확장명 및 기타 정보 중에서 자체에 대 한 경로입니다.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/04/2018
   
  서버 응용 프로그램을 시작 하는 경우 인스턴스 등록을 수행할 수 있음을 확인 해야 합니다. 인스턴스를 등록 서버가 인지 활성 상태이 고 컨테이너에서 요청을 받을 준비가 OLE 시스템 Dll에 알립니다. 등록 데이터베이스에 항목을 추가 하지 않습니다. 호출 하 여 서버 인스턴스 등록을 수행 합니다.는 `ConnectTemplate` 멤버 함수에 정의 된 `COleTemplateServer`합니다. 이렇게 연결는 `CDocTemplate` 개체는 `COleTemplateServer` 개체입니다.  
   
- `ConnectTemplate` 함수는 세 개의 매개 변수 사용: 서버의 **CLSID**에 대 한 포인터는 `CDocTemplate` 개체 및 서버 인스턴스를 여러 개 지원 하는지 여부를 나타내는 플래그입니다. 미니 서버 인스턴스를 여러 개 지원할 수 있어야, 즉, 각 컨테이너에 대 한 동시에 실행 서버의 여러 인스턴스에 대 한 가능한 이어야 합니다. 따라서 전달 **TRUE** 미니 서버를 시작할 때이 플래그입니다.  
+ `ConnectTemplate` 함수는 세 개의 매개 변수 사용: 서버의 *CLSID*에 대 한 포인터는 `CDocTemplate` 개체 및 서버 인스턴스를 여러 개 지원 하는지 여부를 나타내는 플래그입니다. 미니 서버 인스턴스를 여러 개 지원할 수 있어야, 즉, 각 컨테이너에 대 한 동시에 실행 서버의 여러 인스턴스에 대 한 가능한 이어야 합니다. 따라서 전달 **TRUE** 미니 서버를 시작할 때이 플래그입니다.  
   
  미니 서버를 정의 컨테이너에 의해 항상 시작 됩니다 작성 하는 경우. 여전히 "/embedding" 옵션에 대 한 확인 하려면 명령줄을 구문 분석 해야 있습니다. 명령줄에서이 옵션이 없으면 독립 실행형 응용 프로그램으로 미니 서버를 시작 하는 사용자가 시도 의미 합니다. 이 경우 시스템 등록 데이터베이스 서버에 등록 한 다음 컨테이너 응용 프로그램에서 미니 서버를 시작 하려면 사용자에 게 알리는 메시지 상자를 표시 합니다.  
   

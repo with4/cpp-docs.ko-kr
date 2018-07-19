@@ -52,11 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2f5f0a72c08aeabcd764cf4c7763c9506769585
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121626"
 ---
 # <a name="cuintarray-class"></a>CUIntArray 클래스
 부호 없는 정수의 배열을 지원합니다.  
@@ -68,7 +69,7 @@ class CUIntArray : public CObject
 ```  
   
 ## <a name="members"></a>멤버  
- 멤버 함수 `CUIntArray` 클래스의 멤버 함수와 비슷한 [CObArray](../../mfc/reference/cobarray-class.md)합니다. 이처럼 두 함수가 비슷하므로 `CObArray` 참조 설명서에서 멤버 함수 관련 사항을 확인할 수 있습니다. 볼 때마다는 `CObject` 포인터를 함수 매개 변수 또는 반환 값으로 대체 한 **UINT**합니다.  
+ 멤버 함수 `CUIntArray` 클래스의 멤버 함수와 비슷한 [CObArray](../../mfc/reference/cobarray-class.md)합니다. 이처럼 두 함수가 비슷하므로 `CObArray` 참조 설명서에서 멤버 함수 관련 사항을 확인할 수 있습니다. 볼 때마다는 `CObject` UINT으로 포인터를 함수 매개 변수 또는 반환 값으로 대체 합니다.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -93,7 +94,7 @@ class CUIntArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|현재 상한을 초과하며 사용되지 않는 모든 메모리를 해제합니다.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|지정된 인덱스의 값을 반환합니다.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|이 배열에 있는 요소의 수를 가져옵니다.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|배열의 요소에 대한 액세스를 허용합니다. 수 **NULL**합니다.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|배열의 요소에 대한 액세스를 허용합니다. NULL이 될 수 있습니다.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|이 배열에 있는 요소의 수를 가져옵니다.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|유효한 최대 인덱스를 반환합니다.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|지정한 인덱스에 요소 하나 또는 다른 배열의 모든 요소를 삽입합니다.|  
@@ -111,7 +112,7 @@ class CUIntArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|지정한 인덱스에 있는 요소를 설정하거나 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
- 부호 없는 정수로 또는 **UINT**, 단어 및 2 배 워드 하에서 다른의 실제 크기는 **UINT** 대상 운영 환경에 따라 변경할 수 있습니다. A **UINT** 는 워드 단위와 같은 크기입니다.  
+ 부호 없는 정수 또는 UINT, 단어 및 2 배 워드 점에서 다릅니다 UINT의 실제 크기는 대상 운영 환경에 따라 변경할 수 있습니다. UINT는 워드 단위 크기가 같은 합니다.  
   
  `CUIntArray` 통합 된 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) 런타임 형식 액세스 및 덤프를 지원 하기 위해 매크로 [CDumpContext](../../mfc/reference/cdumpcontext-class.md) 개체입니다. 부호 없는 정수 개별 요소의 덤프가 필요한 경우 덤프 컨텍스트 깊이 1 이상으로 설정 해야 합니다. 부호 없는 정수 배열은 직렬화 할 수 없습니다.  
   

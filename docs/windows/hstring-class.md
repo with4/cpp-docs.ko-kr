@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879374"
 ---
 # <a name="hstring-class"></a>HString 클래스
 RAII 패턴을 사용 하 여를 HSTRING의 수명을 관리 하기 위한 도우미 클래스입니다.

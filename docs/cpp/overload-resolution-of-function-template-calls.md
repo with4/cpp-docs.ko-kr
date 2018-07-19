@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420030"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>함수 템플릿 호출의 오버로드 확인
 함수 템플릿은 동일한 이름의 비템플릿 함수를 오버로드할 수 있습니다. 이 시나리오에서 함수 호출은 첫 번째 템플릿 인수 추론을 사용하여 고유한 특수화를 통해 함수 템플릿을 인스턴스화할 수 있습니다. 템플릿 인수 추론이 실패하는 경우 다른 함수 오버로드가 호출을 해결하기 위해 고려됩니다. 후보 집합이라고도 불리는 이러한 다른 오버로드는 비템플릿 함수와 다른 인스턴스화된 함수 템플릿을 포함합니다. 템플릿 인수 추론이 성공하는 경우 생성된 함수는 오버로드 확인 규칙에 따라 다른 함수와 비교하여 최상의 경우를 결정합니다. 자세한 내용은 참조 [함수 오버 로드](function-overloading.md)합니다.  

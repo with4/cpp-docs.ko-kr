@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880168"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr(C++/CLI)
 선언는 *고정 포인터*, 공용 언어 런타임만을 사용 합니다.  

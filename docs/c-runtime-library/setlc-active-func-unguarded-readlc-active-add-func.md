@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409737"
 ---
 # <a name="setlcactivefunc-unguardedreadlcactiveaddfunc"></a>___setlc_active_func, ___unguarded_readlc_active_add_func
 사용되지 않습니다. CRT는 이진 호환성을 유지하기 위해서만 내부 함수를 내보냅니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891596"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>대화 상자 편집기 도구 모음 표시 또는 숨기기
 대화 상자 편집기를 열려면 대화 상자 편집기 도구 모음에서 자동으로 솔루션의 위쪽에 나타납니다.  

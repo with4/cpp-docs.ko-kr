@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383347"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>확장 콤보 상자 컨트롤에서 이미지 목록 사용
 확장 된 콤보 상자 컨트롤의 주요 기능은는 콤보 상자 컨트롤의 개별 항목과 함께 이미지 목록의 이미지를 연결 하는 기능입니다. 각 항목은 세 가지 서로 다른 이미지를 표시할 수 있으며: 선택 된 상태로, 오버레이 이미지에 대 한 세 번째 이와 선택 되지 않은 상태에 대 한 하나 있습니다.  

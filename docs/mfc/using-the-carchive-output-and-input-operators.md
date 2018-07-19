@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82b729caaa650fde72741497d3f4ab3c131f46ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 617157c3adce8521eb54156988cb098c0e709fd2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953287"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>CArchive를 사용 하 여 &lt; &lt; 및 &gt; &gt; 연산자
 `CArchive` 제공 <\< 및 >> 작성 및 단순 데이터 형식을 읽기 위한 연산자와 `CObject`하 고 파일에서 s입니다.  
@@ -39,13 +40,13 @@ ms.lasthandoff: 05/04/2018
   
      [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]  
   
- 저장 하 고에 보관을 통해 파일 간에 데이터를 로드 하는 일반적으로 `Serialize` 의 기능 `CObject`-있는 선언한 해야 하는 클래스를 파생 된 **DECLARE_SERIALIZE** 매크로입니다. 에 대 한 참조는 `CArchive` 를 전달 하 여 `Serialize` 함수입니다. 호출 하면는 `IsLoading` 의 함수는 `CArchive` 결정 하는 개체 여부는 `Serialize` 파일에서 데이터를 로드 하거나 파일의 데이터를 저장 기능을 호출 했습니다.  
+ 저장 하 고에 보관을 통해 파일 간에 데이터를 로드 하는 일반적으로 `Serialize` 의 기능 `CObject`-DECLARE_SERIALIZE 매크로가 있는 선언한 해야 하는 클래스를 파생 합니다. 에 대 한 참조는 `CArchive` 를 전달 하 여 `Serialize` 함수입니다. 호출 하면는 `IsLoading` 의 함수는 `CArchive` 결정 하는 개체 여부는 `Serialize` 파일에서 데이터를 로드 하거나 파일의 데이터를 저장 기능을 호출 했습니다.  
   
  `Serialize` 함수는 직렬화 가능의 `CObject`-파생된 클래스에는 일반적으로 형식은 다음과 같습니다.  
   
  [!code-cpp[NVC_MFCSerialization#9](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_3.cpp)]  
   
- 위의 코드 서식 파일은 정확히 하나에 대 한 응용 프로그램 마법사에서는 동일는 `Serialize` 문서의 함수 (클래스에서 파생 **CDocument)** 합니다. 이 코드 서식 파일을 저장 코드와 로딩 코드는 다음 예제와 같이 병렬 항상 이어야 하기 때문에 보다 잘를 검토할 수 있는 코드를 작성할 수 있습니다.  
+ 위의 코드 서식 파일은 정확히 하나에 대 한 응용 프로그램 마법사에서는 동일는 `Serialize` 문서의 함수 (클래스에서 파생 `CDocument`). 이 코드 서식 파일을 저장 코드와 로딩 코드는 다음 예제와 같이 병렬 항상 이어야 하기 때문에 보다 잘를 검토할 수 있는 코드를 작성할 수 있습니다.  
   
  [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/04/2018
   
 ||||  
 |-|-|-|  
-|`CObject*`|**크기와 CSize**|**float**|  
+|`CObject*`|**크기** 및 `CSize`|**float**|  
 |**WORD**|`CString`|**지점** 및 `CPoint`|  
 |`DWORD`|**BYTE**|`RECT` 및 `CRect`|  
 |**Double**|**LONG**|`CTime` 및 `CTimeSpan`|  

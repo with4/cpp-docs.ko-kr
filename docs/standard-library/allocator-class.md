@@ -44,15 +44,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaa9ab355456c912617bfcc1d803fa980ff21669
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4062ebc1e6c78bcd6e50adca4c372012030f75d0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964511"
 ---
 # <a name="allocator-class"></a>allocator 클래스
 
-템플릿 클래스는 **형식** 형식의 개체 배열에 대한 저장소 할당 및 해제를 관리하는 개체를 설명합니다. 클래스 **allocator**의 개체는 C++ 표준 라이브러리의 여러 컨테이너 템플릿 클래스에 대한 생성자에 지정된 기본 할당자 개체입니다.
+저장소 할당 및 배열 형식의 개체에 대 한 해제를 관리 하는 개체를 설명 하는 템플릿 클래스 `Type`합니다. 클래스의 개체 `allocator` c + + 표준 라이브러리의 여러 컨테이너 템플릿 클래스의 생성자에 지정 된 기본 할당자 개체입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -63,11 +64,11 @@ class allocator
 
 ### <a name="parameters"></a>매개 변수
 
-*형식* 저장 되는 개체의 유형을 할당 하거나 할당 합니다.
+*형식* 저장 되는 개체의 형식을 할당 또는 할당 취소 합니다.
 
 ## <a name="remarks"></a>설명
 
-모든 C++ 표준 템플릿 라이브러리 컨테이너에는 **allocator**로 기본 설정되는 템플릿 매개 변수가 있습니다. 사용자 지정 할당자로 컨테이너를 생성하면 해당 컨테이너 요소의 할당 및 해제를 제어할 수 있습니다.
+모든 c + + 표준 라이브러리 컨테이너를 기본값으로 사용 하는 템플릿 매개 변수가 `allocator`합니다. 사용자 지정 할당자로 컨테이너를 생성하면 해당 컨테이너 요소의 할당 및 해제를 제어할 수 있습니다.
 
 예를 들어 할당자 개체에서 전용 힙 또는 공유 메모리에 저장소를 할당하거나, 작거나 큰 개체 크기에 맞게 최적화할 수 있습니다. 또한 제공된 형식 정의를 사용하여 공유 메모리를 관리하는 특수 접근자 개체를 통해 요소에 액세스하거나 자동 가비지 컬렉션을 수행하도록 지정할 수 있습니다. 따라서 할당자 개체를 사용하여 저장소를 할당하는 클래스는 C++ 표준 라이브러리의 컨테이너처럼 이러한 형식을 사용하여 포인터 및 참조 개체를 선언해야 합니다.
 
@@ -75,15 +76,15 @@ class allocator
 
 따라서 할당자는 다음과 같은 형식을 정의합니다.
 
-- [pointer](#pointer)는 **형식**에 대한 포인터처럼 동작합니다.
+- [포인터](#pointer) 에 대 한 포인터 처럼 동작 `Type`합니다.
 
-- [const_pointer](#const_pointer)는 **형식**에 대한 const 포인터처럼 동작합니다.
+- [const_pointer](#const_pointer) 에 대 한 const 포인터 처럼 동작 `Type`합니다.
 
-- [reference](#reference)는 **형식**에 대한 참조처럼 동작합니다.
+- [참조](#reference) 에 대 한 참조 처럼 `Type`합니다.
 
-- [const_reference](#const_reference)는 **형식**에 대한 const 참조처럼 동작합니다.
+- [const_reference](#const_reference) 에 대 한 const 참조 처럼 `Type`합니다.
 
-이러한 **형식**은 할당된 요소에 대해 포인터 및 참조를 사용해야 하는 폼을 지정합니다. ([allocator::pointer](#pointer)는 클래스 **allocator**에 대한 명확한 정의가 있는 경우에도 모든 할당자 개체에 대한 **형식**\*과 동일할 필요가 없습니다.)
+이러한 `Type`은 할당 된 요소에 대 한 포인터 및 참조를 사용 해야 하는 폼을 지정 합니다. ( [allocator:: pointer](#pointer) 아닐 동일 `Type*` 모든 할당자 개체에도 있기 클래스에 대 한 명확한 정의가 `allocator`.)
 
 **C++11 이상:** 할당자에서 이동 작업을 사용하려면 최소 할당자 인터페이스를 사용하고 복사 생성자, == 및 != 연산자, 할당 및 할당 취소를 구현하세요. 자세한 내용 및 예제는 [할당자](../standard-library/allocators.md)를 참조하세요.
 
@@ -142,7 +143,7 @@ const_pointer address(const_reference val) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`val` 에 대 한 주소가 검색 되는 개체의 const 또는 nonconst 값입니다.
+*val* 해당 주소가 검색 되는 개체의 const 또는 nonconst 값입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -150,9 +151,9 @@ const_pointer address(const_reference val) const;
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 할당된 요소에 대해 포인터가 가져야 하는 형식으로 `val`의 주소를 반환합니다.
+주소를 반환 하는 멤버 함수 *val*에서 할당 된 요소에 대해 포인터가 가져야 하는 형식입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // allocator_address.cpp
@@ -206,9 +207,9 @@ pointer allocate(size_type count, const void* _Hint);
 
 ### <a name="parameters"></a>매개 변수
 
-`count` 충분 한 저장소에 할당할 요소 수입니다.
+*개수* 충분 한 저장소가 할당 되는 요소의 수입니다.
 
-*_Hint* 도움이 되는 할당자 개체는 const 포인터 요청 하기 전에 할당 된 개체의 주소를 배치 하 여 저장소에 대 한 요청을 충족 합니다.
+*_Hint* 할당자 개체를 지원할 수 있는 const 포인터는 요청 이전에 할당 된 개체의 주소를 찾음으로써 저장소에 대 한 요청을 충족 합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -216,9 +217,9 @@ pointer allocate(size_type count, const void* _Hint);
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 연산자 new(`count`)를 호출함으로써 **Type** 형식의 count 요소 배열에 대한 저장소를 할당합니다. 할당된 개체에 대한 포인터를 반환합니다. 힌트 인수는 일부 할당자의 참조 지역성 개선에 도움이 됩니다. 동일한 할당자 개체에 의해 이미 할당되었지만 아직 할당 취소되지 않은 개체의 주소가 유효한 선택입니다. 힌트를 제공하지 않으려면 null 포인터 인수를 대신 사용합니다.
+형식의 count 요소 배열에 대 한 저장소를 할당 하는 멤버 함수 `Type`, 새 호출 연산자 (*개수*). 할당된 개체에 대한 포인터를 반환합니다. 힌트 인수는 일부 할당자의 참조 지역성 개선에 도움이 됩니다. 동일한 할당자 개체에 의해 이미 할당되었지만 아직 할당 취소되지 않은 개체의 주소가 유효한 선택입니다. 힌트를 제공하지 않으려면 null 포인터 인수를 대신 사용합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // allocator_allocate.cpp
@@ -267,13 +268,13 @@ allocator(const allocator<Other>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 복사할 할당자 개체입니다.
+*오른쪽* 복사할 할당자 개체입니다.
 
 ### <a name="remarks"></a>설명
 
 생성자는 아무 작업도 수행하지 않습니다. 그러나 일반적으로 다른 할당자 개체로부터 구성된 할당자 개체는 비교 시 같아야 하며, 두 할당자 개체 간에 개체 할당 및 해제를 서로 혼합할 수 있어야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // allocator_allocator.cpp
@@ -346,9 +347,9 @@ typedef const value_type *const_pointer;
 
 ### <a name="remarks"></a>설명
 
-포인터 형식은 템플릿 클래스 할당자의 개체가 할당할 수 있는 const 개체를 **\*ptr** 식을 통해 지정할 수 있는 **ptr** 개체를 설명합니다.
+개체를 설명 하는 포인터 형식 `ptr` 지정할 수 있는 식을 통해 `*ptr`, 템플릿 클래스 할당자의 개체가 할당할 수 있는 const 개체입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // allocator_const_ptr.cpp
@@ -403,7 +404,7 @@ typedef const value_type& const_reference;
 
 참조 형식은 템플릿 클래스 할당자의 개체가 할당할 수 있는 const 개체를 지정할 수 있는 개체를 설명합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // allocator_const_ref.cpp
@@ -470,15 +471,15 @@ void construct(pointer ptr, _Other&&...   val);
 
 ### <a name="parameters"></a>매개 변수
 
-`ptr` 개체가 생성 될 위치에 대 한 포인터입니다.
+*ptr* 개체를 생성할 위치에 대 한 포인터입니다.
 
-`val` 생성 중인 개체를 초기화 된 값입니다.
+*val* 생성 되는 개체를 초기화할 수 있는 값입니다.
 
 ### <a name="remarks"></a>설명
 
 첫 번째 멤버 함수는 **new** ( ( `void` \*) `ptr` ) **Type** ( `val` )과 등가입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // allocator_construct.cpp
@@ -537,15 +538,15 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>매개 변수
 
-`ptr` 저장소에서 할당을 취소할 수 첫 번째 개체에 대 한 포인터입니다.
+*ptr* 저장소에서 할당을 취소할 첫 번째 개체에 대 한 포인터입니다.
 
-`count` 저장소에서 할당을 취소할 수 있는 개체의 수입니다.
+*개수* 저장소에서 할당을 취소할 개체의 수입니다.
 
 ### <a name="remarks"></a>설명
 
-형식의 개수 개체의 배열에 대 한 저장소를 해제 하는 멤버 함수 **형식** 에서 시작 `ptr`를 호출 하 여 `operator delete(ptr)`합니다. **\*이것**과 같은지를 비교하는 할당자 개체에 대해 [allocate](#allocate)를 호출하고 같은 크기와 형식의 배열 개체를 할당하여 `ptr` 포인터가 이미 반환된 상태여야 합니다. `deallocate`은 예외를 throw할 수 없습니다.
+형식의 count 개체 배열에 대 한 저장소를 해제 하는 멤버 함수 `Type` 부터 *ptr*를 호출 하 여 `operator delete(ptr)`입니다. 포인터 *ptr* 이미 반환 된 이전를 호출 하 여 [할당할](#allocate) 같은지를 비교 하는 할당자 개체에 대 한  **\*이**, 배열 할당 동일한 크기 및 유형의 개체입니다. `deallocate`은 예외를 throw할 수 없습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 멤버 함수 사용의 예제를 보려면 [allocator::allocate](#allocate)를 참조하세요.
 
@@ -559,13 +560,13 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>매개 변수
 
-`ptr` 소멸 될 예정 개체의 주소 지정 하는 포인터입니다.
+*ptr* 제거할 개체의 주소를 지정 하는 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-가 지정 된 개체를 제거 하는 멤버 함수 `ptr`, 소멸자를 호출 하 여 `ptr->` **형식**::**~ 유형**합니다.
+멤버 함수는 지정 된 개체를 제거 *ptr*, 소멸자를 호출 하 여 `ptr->` **형식**::**~ 형식**합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // allocator_destroy.cpp
@@ -626,7 +627,7 @@ typedef ptrdiff_t difference_type;
 
 부호 있는 정수 형식은 템플릿 클래스 할당자의 개체가 할당할 수 있는 시퀀스에서 두 요소의 주소 간 차이점을 나타낼 수 있는 개체를 설명합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // allocator_diff_type.cpp
@@ -677,7 +678,7 @@ The difference between the integer's addresses is: 8.
 
 ## <a name="max_size"></a>  allocator::max_size
 
-사용 가능한 메모리가 모두 사용되기 전에 allocator 클래스의 개체가 할당할 수 있는 **Type** 형식의 요소 수를 반환합니다.
+사용 가능한 메모리가 모두 사용되기 전에 allocator 클래스의 개체가 할당할 수 있는 `Type` 형식의 요소 수를 반환합니다.
 
 ```cpp
 size_type max_size() const;
@@ -687,7 +688,7 @@ size_type max_size() const;
 
 할당할 수 있는 요소의 수입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // allocator_max_size.cpp
@@ -755,7 +756,7 @@ allocator<Type>& operator=(const allocator<Other>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 이러한 개체를 다른 할당에 사용 되는 할당자 개체입니다.
+*오른쪽* 할당할 간에 이러한 개체는 할당자 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -765,7 +766,7 @@ allocator<Type>& operator=(const allocator<Other>& right);
 
 템플릿 대입 연산자는 아무것도 수행하지 않습니다. 그러나 일반적으로 다른 할당자 개체에 할당된 할당자 개체는 비교 시 같아야 하며, 두 할당자 개체 간에 개체 할당 및 해제를 서로 혼합할 수 있어야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // allocator_op_assign.cpp
@@ -816,9 +817,9 @@ typedef value_type *pointer;
 
 ### <a name="remarks"></a>설명
 
-포인터 형식은 템플릿 클래스 할당자의 개체가 할당할 수 있는 개체를 **\*ptr** 식을 통해 지정할 수 있는 **ptr** 개체를 설명합니다.
+개체를 설명 하는 포인터 형식 `ptr` 지정할 수 있는 식을 통해  **\*ptr**, 템플릿 클래스 할당자의 개체가 할당할 수 있는 개체입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // allocator_ptr.cpp
@@ -877,7 +878,7 @@ struct rebind {    typedef allocator<_Other> other ;    };
 
 멤버 템플릿 클래스는 other 형식을 정의합니다. 형식 이름 **allocator**\< **Type**>이 지정되면 형식 이름 **allocator**\<_ **Other**>를 제공하는 것이 유일한 목적입니다.
 
-예를 들어 형식 **A**의 할당자 개체 **al**이 지정되면 다음 식으로 형식 **_Other**의 개체를 할당할 수 있습니다.
+예를 들어 할당자 개체를 지정 `al` 형식의 `A`, 형식의 개체를 할당할 수 있습니다 `_Other` 식을 사용 하 여:
 
 ```cpp
 A::rebind<Other>::other(al).allocate(1, (Other *)0)
@@ -889,7 +890,7 @@ A::rebind<Other>::other(al).allocate(1, (Other *)0)
 A::rebind<Other>::other::pointer
 ```
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // allocator_rebind.cpp
@@ -926,7 +927,7 @@ typedef value_type& reference;
 
 참조 형식은 템플릿 클래스 할당자의 개체가 할당할 수 있는 개체를 지정할 수 있는 개체를 설명합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // allocator_reference.cpp
@@ -982,7 +983,7 @@ The element referred to by vref after being modified is: 150.
 typedef size_t size_type;
 ```
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // allocator_size_type.cpp
@@ -1029,9 +1030,9 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 템플릿 매개 변수 **Type**과 동일한 의미입니다.
+이 형식은 템플릿 매개 변수 `Type`의 동의어입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // allocator_value_type.cpp

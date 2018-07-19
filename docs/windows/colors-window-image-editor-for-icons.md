@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860374"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>색상 창(아이콘에 대한 이미지 편집기)
 색상 창은 다음과 같은 두 부분으로 구성됩니다.  

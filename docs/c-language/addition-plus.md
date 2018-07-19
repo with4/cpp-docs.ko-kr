@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380929"
 ---
 # <a name="addition-"></a>더하기(+)
 더하기 연산자(**+**)는 두 피연산자를 더합니다. 두 피연산자 모두 정수 계열 또는 부동 형식이 되거나 하나는 포인터가 되고 다른 하나는 정수가 될 수 있습니다.  

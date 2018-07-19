@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052052"
 ---
 # <a name="operator-ne"></a>연산자 NE
 True (-1)를 반환 합니다 *expression1* 같지 않음 *expression2*, 하거나 그렇지 않으면 false (0)를 반환 합니다.  

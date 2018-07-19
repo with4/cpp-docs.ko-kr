@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857352"
 ---
 # <a name="unicode-and-mbcs"></a>유니코드 및 MBCS
 Microsoft Foundation 클래스 (MFC) 라이브러리, Visual c + +에 대 한 C 런타임 라이브러리 및 Visual c + + 개발 환경 국제 프로그래밍을 지원 하기 위해 활성화 됩니다. 제공:  

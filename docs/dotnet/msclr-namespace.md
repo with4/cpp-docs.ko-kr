@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132910"
 ---
 # <a name="msclr-namespace"></a>msclr 네임스페이스
 `msclr` 네임 스페이스는 c + + 지원 라이브러리의 모든 클래스를 포함 합니다. 이러한 클래스에 대 한 자세한 내용은 참조 하십시오. [c + + 지원 라이브러리](../dotnet/cpp-support-library.md)합니다.  

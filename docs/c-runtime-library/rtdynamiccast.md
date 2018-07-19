@@ -32,6 +32,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450936"
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
 [dynamic_cast](../cpp/dynamic-cast-operator.md) 연산자의 런타임 구현입니다.  

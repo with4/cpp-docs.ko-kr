@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111057"
 ---
 # <a name="user-record"></a>사용자 레코드
 사용자 레코드에 대 한 행 집합 열 데이터를 나타내는 코드 및 데이터 구조를 제공 합니다. 컴파일 타임 또는 런타임 시 사용자 레코드를 만들 수 있습니다. ATL OLE DB 공급자 마법사를 사용 하 여 공급자를 만들 때 마법사는 다음과 같은 ("MyProvider"의 공급자 이름 [short name]로 지정 했다고 가정) 기본 사용자 레코드를 만듭니다.  

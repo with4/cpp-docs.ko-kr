@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112058"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>OLE DB 소비자 템플릿 참조
 OLE DB 소비자 템플릿은 다음 클래스를 포함 합니다. 참조 자료도 포함 되어 항목에는 [OLE DB 소비자 템플릿에 대 한 매크로](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)합니다.  

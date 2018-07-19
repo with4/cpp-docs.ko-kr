@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052775"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>ARM 어셈블러 진단 메시지
 Microsoft ARM 어셈블러 (*armasm*)가 발견 될 때 진단 경고와 오류를 내보냅니다. 이 문서에서는 가장 일반적으로 발생 한 메시지를 설명 합니다.  

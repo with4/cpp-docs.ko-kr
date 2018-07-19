@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229094"
 ---
 # <a name="fatal-error-c1067"></a>심각한 오류 C1067
 컴파일러 한계: 형식 레코드 크기의 64k 한도 초과 했습니다  

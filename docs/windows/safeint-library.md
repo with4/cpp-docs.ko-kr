@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892054"
 ---
 # <a name="safeint-library"></a>SafeInt 라이브러리
 SafeInt 라이브러리는 응용 프로그램이 수학 연산을 수행할 때 발생할 수 있는 정수 오버플로를 방지합니다.  

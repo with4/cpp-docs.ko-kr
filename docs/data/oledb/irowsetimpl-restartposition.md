@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101252"
 ---
 # <a name="irowsetimplrestartposition"></a>IRowsetImpl::RestartPosition
 다음 인출 위치를 초기 위치로; 위치 변경 즉, 행 집합을 첫 번째 경우에 해당 위치에 만들어집니다.  

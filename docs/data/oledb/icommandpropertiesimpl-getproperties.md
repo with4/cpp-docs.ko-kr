@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099721"
 ---
 # <a name="icommandpropertiesimplgetproperties"></a>ICommandPropertiesImpl::GetProperties
 명령의 속성 맵을 사용 하 여 모든 요청 된 속성 집합을 반환 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281793"
 ---
 # <a name="compiler-warning-level-1-c4269"></a>컴파일러 경고(수준 1) C4269
 'identifier': 컴파일러에서 생성 된 기본 생성자를 사용 하 여 초기화 하는 'const' 자동 데이터 신뢰할 수 없는 결과 생성 합니다.  

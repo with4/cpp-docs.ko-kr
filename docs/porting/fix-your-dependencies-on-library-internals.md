@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839062"
 ---
 # <a name="fix-your-dependencies-on-library-internals"></a>라이브러리 내부 요소에 대한 종속성 해결
 

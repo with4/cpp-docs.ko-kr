@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374754"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>최적화 pragma 및 키워드
 몇 가지 키워드와 C 또는 c + + 코드에서 사용 하는 pragma 최적화를 영향을 줍니다.  

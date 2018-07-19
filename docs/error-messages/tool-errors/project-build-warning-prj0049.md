@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319812"
 ---
 # <a name="project-build-warning-prj0049"></a>프로젝트 빌드 경고 PRJ0049
 참조 된 대상 '\<참조 >'을 실행 하려면.NET \<MinFrameworkVersion > 하며이 프로젝트의 대상 프레임 워크에서 실행 되지 것입니다  

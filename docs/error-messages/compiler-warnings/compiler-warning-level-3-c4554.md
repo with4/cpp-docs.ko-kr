@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294416"
 ---
 # <a name="compiler-warning-level-3-c4554"></a>컴파일러 경고(수준 3) C4554
 'operator': 연산자 우선 순위에 오류가; 확인 우선 순위를 명확 하 게 괄호를 사용 합니다.  

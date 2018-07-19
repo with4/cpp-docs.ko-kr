@@ -60,11 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db9f7a66b60d70231628ded5dc096bad702bf088
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 135bb279daf4c000c025ac6f8fa51a6b023e2d1e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952546"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject 클래스
 모든 애니메이션 개체의 기본 클래스입니다.  
@@ -112,7 +113,7 @@ class CAnimationBaseObject : public CObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAnimationBaseObject::m_bAutodestroyTransitions](#m_bautodestroytransitions)|관련 된 전환의 자동으로 제거 되어야 할지 여부를 지정 합니다.|  
 |[CAnimationBaseObject::m_dwUserData](#m_dwuserdata)|사용자 정의 데이터를 저장 합니다.|  
@@ -148,10 +149,10 @@ virtual BOOL ApplyTransitions(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pStoryboard`  
+ *pStoryboard*  
  스토리 보드에 대 한 포인터입니다.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
  FALSE 인이 메서드는 키 프레임에 의존 하지 않는 전환만 추가 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -174,13 +175,13 @@ CAnimationBaseObject(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nGroupID`  
+ *nGroupID*  
  그룹 ID를 지정 합니다.  
   
- `nObjectID`  
+ *nObjectID*  
  개체 ID를 지정 합니다.  
   
- `dwUserData`  
+ *dwUserData*  
  사용자 정의 데이터를 애니메이션 개체에 연결 하 고 나중에 런타임에 검색할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -194,7 +195,7 @@ virtual void ClearTransitions(BOOL bAutodestroy);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bAutodestroy`  
+ *bAutodestroy*  
  변환 개체를 자동으로 제거 하거나 관련된 된 목록에서 제거 하기만 것인지 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -208,7 +209,7 @@ virtual BOOL ContainsVariable(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pVariable`  
+ *pVariable*  
  애니메이션 변수에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -250,10 +251,10 @@ virtual void EnableIntegerValueChangedEvent(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pController`  
+ *pController*  
  부모 컨트롤러에 대 한 포인터입니다.  
   
- `bEnable`  
+ *bEnable*  
  를 사용 하도록 설정 하거나 정수 값 변경 이벤트를 사용 하지 않도록 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -269,10 +270,10 @@ virtual void EnableValueChangedEvent(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pController`  
+ *pController*  
  부모 컨트롤러에 대 한 포인터입니다.  
   
- `bEnable`  
+ *bEnable*  
  를 사용 하도록 설정 하거나 값 변경 이벤트를 사용 하지 않도록 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -288,7 +289,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lst`  
+ *lst*  
  애니메이션 개체에 포함 된 애니메이션 변수로 채워야 하는 목록입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -389,7 +390,7 @@ void SetAutodestroyTransitions(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bValue`  
+ *bValue*  
  자동 소멸 플래그를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -405,10 +406,10 @@ void SetID(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nObjectID`  
+ *nObjectID*  
  새 개체 ID를 지정 합니다.  
   
- `nGroupID`  
+ *nGroupID*  
  새 그룹 ID를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -432,7 +433,7 @@ void SetUserData (DWORD dwUserData);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwUserData`  
+ *dwUserData*  
  사용자 지정 데이터를 지정합니다.  
   
 ### <a name="remarks"></a>설명  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849329"
 ---
 # <a name="component"></a>구성 요소
 소스 파일 내에서의 찾아보기 정보 또는 종속성 정보의 수집을 제어합니다.  

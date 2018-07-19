@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246019"
 ---
 # <a name="compiler-error-c3234"></a>컴파일러 오류 C3234
 제네릭 클래스는 제네릭 형식 매개 변수에서 상속할 수 없습니다.  

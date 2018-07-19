@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258298"
 ---
 # <a name="compiler-error-c3609"></a>컴파일러 오류 C3609
 'member': 봉인 함수 또는 최종 함수는 virtual이어야 합니다.  

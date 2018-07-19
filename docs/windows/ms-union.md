@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882039"
 ---
 # <a name="msunion"></a>ms_union
 Nonencapsulated 공용 구조체의 네트워크 데이터 표현 맞춤을 제어합니다.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358327"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>BSTR에 대해 메모리 할당 및 해제
 만들 때 `BSTR`s 및 COM 개체 사이 어떻게 전달, 메모리 누수를 방지 하기 위해 사용 하는 메모리를 처리 하는 방법에 주의 해야 합니다. 경우는 `BSTR` 인터페이스 내에서 유지 되며, 완료 되 면 메모리를 해제 해야 합니다. 그러나, 한 `BSTR` 인터페이스 외부로 과정을 받는 개체는 해당 메모리 관리 담당 합니다.  

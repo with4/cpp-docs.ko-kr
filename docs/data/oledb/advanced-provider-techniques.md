@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088874"
 ---
 # <a name="advanced-provider-techniques"></a>고급 공급자 기술
 고급 공급자 기술에 대 한 자세한 내용은 다음 항목을 참조 합니다.  

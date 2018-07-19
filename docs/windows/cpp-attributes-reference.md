@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870847"
 ---
 # <a name="c-attributes-reference"></a>C++ 특성 참조
 Microsoft은.NET Framework 공용 언어 런타임 개발 및 COM 프로그래밍을 단순화 하는 특성 집합을 정의 합니다. 소스 파일에서 특성을 포함 하는 경우 컴파일러 공급자 코드를 삽입 하거나 생성 된 개체 파일의 코드를 수정 하는 Dll와 함께 작동 합니다.  

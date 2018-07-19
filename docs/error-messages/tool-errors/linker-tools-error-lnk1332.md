@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299788"
 ---
 # <a name="linker-tools-error-lnk1332"></a>링커 도구 오류 LNK1332
 검색\<개수 > 한 개의 모듈에 가져오고 다른 모듈에 정의 된 Windows 런타임 형식  

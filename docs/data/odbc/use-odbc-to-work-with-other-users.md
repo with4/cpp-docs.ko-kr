@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093522"
 ---
 # <a name="use-odbc-to-work-with-other-users"></a>ODBC를 사용하여 다른 사용자와 작업
 여러 사용자가 같은 ODBC 데이터베이스는 사용 환경에서 ODBC를 사용 합니다.  

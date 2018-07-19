@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291494"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>컴파일러 경고(수준 3) C4191
 'operator/operation': '식 형식'에서 '필요한 형식'으로의 변환이 안전하지 않습니다.  

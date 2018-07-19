@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106312"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>저장 프로시저 하나에서 여러 결과 집합 사용
 대부분의 저장된 프로시저는 여러 결과 집합을 반환 합니다. 이상의 select 문 또는 일반적으로 이러한 저장된 프로시저는 하나 포함 됩니다. 소비자는 모든 결과 집합을 처리 하기 위해이 고려해 야 합니다.  

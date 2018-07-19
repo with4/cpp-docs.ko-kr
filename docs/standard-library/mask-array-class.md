@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b19ac68f1d1db9ac73e0519b566f68443775db11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1dc03a9d8f5f11b08ab2d5cb9d21190ac0a75925
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962675"
 ---
 # <a name="maskarray-class"></a>mask_array 클래스
 
@@ -30,13 +31,13 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="remarks"></a>설명
 
-이 클래스는 **valarray\<Type>** 개체에서 선택할 요소의 시퀀스를 설명하는 [valarray\<bool>](../standard-library/valarray-bool-class.md) 클래스의 **ba** 개체와 함께 [valarray](../standard-library/valarray-class.md)**\<Type>** 클래스의 **va** 개체에 대한 참조를 저장하는 개체를 설명합니다.
+개체에 대 한 참조를 저장 하는 개체를 설명 하는 클래스 `va` 클래스의 [valarray](../standard-library/valarray-class.md)**\<유형 >**, 개체와 함께 `ba` 클래스의 [ valarray\<bool >](../standard-library/valarray-bool-class.md)에서 선택할 요소의 시퀀스를 설명 하는 `valarray<Type>` 개체입니다.
 
-**mask_array\<Type>** 개체를 생성하려면 [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at) 형식의 식을 작성하면 됩니다. 그러면 mask_array 클래스의 멤버 함수는 선택한 요소의 시퀀스에만 영향을 준다는 점을 제외하고 **valarray\<Type>** 에 대해 정의된 해당하는 함수 시그니처처럼 동작합니다.
+생성 하는 `mask_array<Type>` 개체 형식의 식을 작성 해야만 [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at)합니다. Mask_array 클래스의 멤버 함수에 대해 정의 된 해당 함수 시그니처 처럼 동작 `valarray<Type>`에 선택한 요소의 시퀀스에만 영향을 제외 하 고, 합니다.
 
-시퀀스는 최대 **ba.size** 개 요소로 구성됩니다. 요소 *J* 는 **ba**[ *J*]가 true인 경우에만 포함됩니다. 따라서 **ba**에 있는 true 요소 수 만큼의 요소가 시퀀스에 있습니다. `I` 가 **ba**에서 가장 낮은 true 요소의 인덱스인 경우 **va**[ `I`]는 선택한 시퀀스의 요소 0입니다.
+시퀀스의 최대 구성 `ba.size` 요소입니다. 요소 *J* 는 **ba**[ *J*]가 true인 경우에만 포함됩니다. 따라서 가지에 있는 true 요소 수 만큼의 요소가 시퀀스에 `ba`입니다. 하는 경우 `I` 에서 가장 낮은 true 요소의 인덱스가 `ba`, 한 다음 **va**[ `I`]는 선택한 시퀀스의 요소 0입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // mask_array.cpp

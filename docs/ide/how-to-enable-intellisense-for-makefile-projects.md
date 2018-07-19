@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9de79d56c6e8b6e496c0e7988ada07ed7595ea70
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b9b11f04f1fe8d201d6d07ca5ed83f9ca7d991b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329585"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705464"
 ---
 # <a name="how-to-enable-intellisense-for-makefile-projects"></a>방법: 메이크파일 프로젝트에 IntelliSense 사용
 특정 프로젝트 설정 또는 컴파일러 옵션이 잘못 설정된 경우 Visual C++ 메이크파일 프로젝트용 IDE에서 IntelliSense가 작동하지 않습니다. 이 절차를 사용하여 Visual C++ 메이크파일 프로젝트를 구성하면 Visual Studio 개발 환경에서 메이크파일 프로젝트가 열려 있을 때 IntelliSense가 작동합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "33329585"
   
     -   **강제 사용 어셈블리** 속성을 설정하여 메이크파일 프로젝트를 빌드할 때 처리할 .NET 어셈블리를 지정합니다. 자세한 내용은 [/FU(강제 #using 파일 이름 지정)](../build/reference/fu-name-forced-hash-using-file.md)를 참조하세요.  
   
-    -   **추가 옵션** 속성을 설정하여 C++ 파일을 구문 분석할 때 Intellisense에서 사용하는 추가 컴파일러 스위치를 지정합니다.  
+    -   **추가 옵션** 속성을 설정하여 C++ 파일을 구문 분석할 때 IntelliSense에서 사용하는 추가 컴파일러 스위치를 지정합니다.  
   
 4.  **확인**을 클릭하여 속성 페이지를 닫습니다.  
   

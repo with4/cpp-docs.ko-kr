@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087258"
 ---
 # <a name="platformoutofmemoryexception-class"></a>Platform::OutOfMemoryException 클래스
 메모리가 부족하여 작업을 완료할 수 없는 경우 throw됩니다.  

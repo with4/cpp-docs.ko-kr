@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382826"
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>공용 컨트롤을 자식 창으로 사용
 다른 모든 창의 자식 창으로 사용할 수는 Windows 공용 컨트롤 중 하나입니다. 다음 절차에는 공용 컨트롤을 동적으로 만들고 다음 작업을 하는 방법을 설명 합니다.  

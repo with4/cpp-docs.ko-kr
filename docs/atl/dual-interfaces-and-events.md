@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354069"
 ---
 # <a name="dual-interfaces-and-events"></a>이중 인터페이스 및 이벤트
 이중으로는 이벤트 인터페이스를 디자인할 수 있지만 이렇게 하려면 하지 좋은 디자인 상의 이유로의 여러 가지가 있습니다. 기본 이유는 이벤트의 소스는 vtable 또는 통해 이벤트 발생만 `Invoke`하나만 있습니다. 이벤트 소스 직접 vtable 메서드 호출으로 이벤트를 발생 시키는 경우에 `IDispatch` 메서드를 사용 하지 않을 인터페이스 순수 vtable 인터페이스 되었는지가 명확 하 고 있습니다. 이벤트 소스에 대 한 호출으로 이벤트를 발생 시킨 경우 `Invoke`, vtable 메서드를 사용 하지 않을 있고 그것이 인터페이스는 dispinterface 되었는지가 명확 합니다. 이중 이벤트 인터페이스를 정의 하는 경우 일부 사용 되지 것입니다는 인터페이스를 구현 하는 클라이언트 필요 합니다.  

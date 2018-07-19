@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7facc4c712d070cffe9be5f07a236b2b04b972e9
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931917"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 컨트롤: 사용자 지정 속성 추가
 스톡 속성에서 사용자 지정 속성 다를 사용자 지정 속성에서 아직 구현 되지 않는 한다는 점에서 `COleControl` 클래스입니다. 사용자 지정 속성은 특정 상태 또는 컨트롤을 사용 하 여 프로그래머에 ActiveX 컨트롤의 모양을을 노출할 사용 됩니다.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/04/2018
   
 -   매개 변수가 있는 구현  
   
-     매개 변수가 있는 구현은 속성 추가 마법사에서 지원 됩니다. 매개 변수가 있는 속성 (속성 배열 라고도 함) 값 집합을 단일 사용자 컨트롤의 속성을 통해 액세스 데 사용할 수 있습니다. 이 구현에 대 한 디스패치 맵 항목 매크로 `DISP_PROPERTY_PARAM`합니다. 이 형식을 구현에 대 한 자세한 내용은 참조 하십시오. [매개 변수가 있는 속성을 구현](../mfc/mfc-activex-controls-advanced-topics.md) 문서의 ActiveX 컨트롤: 고급 항목입니다.  
+     매개 변수가 있는 구현은 속성 추가 마법사에서 지원 됩니다. 매개 변수가 있는 속성 (속성 배열 라고도 함) 값 집합을 단일 사용자 컨트롤의 속성을 통해 액세스 데 사용할 수 있습니다. 이 구현에 대 한 디스패치 맵 항목 매크로 DISP_PROPERTY_PARAM입니다. 이 형식을 구현에 대 한 자세한 내용은 참조 하십시오. [매개 변수가 있는 속성을 구현](../mfc/mfc-activex-controls-advanced-topics.md) 문서의 ActiveX 컨트롤: 고급 항목입니다.  
   
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> 사용 하는 속성 추가 마법사 사용자 지정 속성을 추가 하려면  
  다음 절차 CircleOffset Get/Set 메서드 구현을 사용 하 여 사용자 지정 속성을 추가 하는 방법을 보여 줍니다. CircleOffset 사용자 지정 속성에는 컨트롤의 사용자를를 컨트롤의 경계 사각형의 중앙에서 원을 오프셋할 수 있습니다. Get/Set 메서드 이외의 구현 사용 하 여 사용자 지정 속성을 추가 하기 위한 절차는 매우 비슷합니다.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/04/2018
   
      열립니다는 [속성 추가 마법사](../ide/names-add-property-wizard.md)합니다.  
   
-5.  에 **속성 이름** 상자에서 입력 `CircleOffset`합니다.  
+5.  에 **속성 이름** 상자에서 입력 *CircleOffset*합니다.  
   
 6.  **구현 형식**에서 **Get/Set 메서드**를 클릭합니다.  
   

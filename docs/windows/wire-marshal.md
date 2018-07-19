@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890215"
 ---
 # <a name="wiremarshal"></a>wire_marshal
 응용 프로그램 관련 데이터 형식이 아닌 전송을 위해 사용 될 데이터 형식을 지정 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875749"
 ---
 # <a name="licensed"></a>licensed
 적용 되는 COM 개체 사용이 허가 되 고 사용 하 여 인스턴스화되어야 나타냅니다 **IClassFactory2**합니다.  

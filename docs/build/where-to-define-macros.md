@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380916"
 ---
 # <a name="where-to-define-macros"></a>매크로를 정의할 위치
 명령줄, 명령 파일 및 메이크파일 Tools.ini 파일에 매크로 정의 합니다.  

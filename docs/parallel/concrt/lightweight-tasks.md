@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687415"
 ---
 # <a name="lightweight-tasks"></a>간단한 작업
 이 문서에서는 동시성 런타임에서 간단한 작업의 역할을 설명 합니다. A *간단한 작업* 에서 직접 예약 하는 작업은 한 `concurrency::Scheduler` 또는 `concurrency::ScheduleGroup` 개체입니다. 간단한 작업을 Windows API를 제공 하는 함수를 유사한 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) 함수입니다. 따라서 간단한 작업은 동시성 런타임의 일정 예약 기능을 사용 하도록 기존 코드를 조정 하는 경우 유용 합니다. 동시성 런타임 자체에서 간단한 작업을 사용 하 여 비동기 에이전트를 예약 하 고 비동기 메시지 블록 간에 메시지를 전송 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232648"
 ---
 # <a name="compiler-error-c2706"></a>컴파일러 오류 C2706
 일치 하는 없이 __except를 잘못 \__try (누락 '}'에 \__try 블록?)  

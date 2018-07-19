@@ -17,31 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f281007bea3f23bc8e7cebcdd68b9a306b500e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc826b588f133abb93c9942e7907dd8b0fce9574
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944245"
 ---
 # <a name="while-statement-c"></a>while 문 (C++)
-실행 *문을* 때까지 반복 해 서 *식* 0으로 계산 합니다.  
+실행 *문을* 까지 반복 해 서 *식* 0으로 계산 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
   
-      while ( expression )  
+while ( expression )  
    statement  
 ```  
   
 ## <a name="remarks"></a>설명  
- 테스트 *식* 루프를 실행 하기 전에 수행 따라서는 `while` 루프 0 번 이상 실행 합니다. *식* 정수 계열 형식, 포인터 형식 또는 클래스 형식으로 명확한 변환 하는 정수 계열 또는 포인터 형식 이어야 합니다.  
+ 테스트 *식* 루프를 실행 하기 전에 수행 하므로 **하는 동안** 루프는 0 번 이상 실행 합니다. *식* 정수 계열 형식, 포인터 형식, 또는 정수를 변환 하는 명확한 변환 사용 하 여 클래스 형식 또는 포인터 형식 이어야 합니다.  
   
- A `while` 루프 종료할 수도 있습니다는 [나누기](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), 또는 [반환](../cpp/return-statement-cpp.md) 문 내에서 본문이 실행 됩니다. 사용 하 여 [계속](../cpp/continue-statement-cpp.md) 끝내 지 않고 현재 반복을 종료 하는 `while` 루프입니다. **계속** 의 다음 반복으로 제어가 전달는 `while` 루프입니다.  
+ **하는 동안** 루프 종료할 수도 있습니다는 [중단](../cpp/break-statement-cpp.md)를 [goto](../cpp/goto-statement-cpp.md), 또는 [반환](../cpp/return-statement-cpp.md) 문 내에서 본문이 실행 됩니다. 사용 하 여 [계속](../cpp/continue-statement-cpp.md) 종료 하지 않고 현재 반복을 종료 하는 **하는 동안** 루프입니다. **계속** 의 다음 반복으로 제어를 전달 합니다 **하는 동안** 루프입니다.  
   
- 다음 코드에서는 `while` 문자열에서 후행 잘라내며 루프 밑줄:  
+ 다음 코드에서는 한 **동안** 문자열에서 후행 trim 루프 밑줄:  
   
-```  
+```cpp 
 // while_statement.cpp  
   
 #include <string.h>  
@@ -68,7 +69,7 @@ int main()
 }  
 ```  
   
- 종료 조건은 루프의 맨 위쪽에 평가 됩니다. 뒤에 밑줄이 있으면 루프 실행 하지 않습니다.  
+ 루프의 맨 위에 있는 종료 조건이 평가 됩니다. 뒤에 밑줄이 있으면 루프 실행 하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [반복 문](../cpp/iteration-statements-cpp.md)   

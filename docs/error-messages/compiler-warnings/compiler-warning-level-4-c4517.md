@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297695"
 ---
 # <a name="compiler-warning-level-4-c4517"></a>컴파일러 경고(수준 4) C4517
 액세스 선언은 사용 되지 않습니다. 멤버를 사용 하 여 선언 보다 더 효율적을 제공합니다.  

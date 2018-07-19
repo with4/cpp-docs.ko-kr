@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891674"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>그리기 도구 사용(아이콘에 대한 이미지 편집기)
 이미지 편집기의 자유 그리기 및 지우기 동일한 방식으로 작동 하는 도구: 도구를 선택 하 고, 필요한 경우 [전경색과 배경색을 선택](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) 및 크기와 셰이프 옵션. 다음 이미지에 포인터를 이동 하 고를 클릭 하거나 끈 도형 그리기 및 지우기입니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097256"
 ---
 # <a name="crowsetimplnamefromdbid"></a>CRowsetImpl::NameFromDBID
 문자열을 추출는 **DBID** 에 복사는 `bstr` 전달 합니다.  

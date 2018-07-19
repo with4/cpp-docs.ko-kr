@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391950"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>형식 사양 필드: scanf 및 wscanf 함수
 이 정보는 안전한 버전을 포함한 전체 `scanf` 함수 패밀리에 적용되며, `scanf`용 입력 스트림 `stdin`과 같은 입력 스트림을 프로그램 변수로 삽입된 값으로 구문 분석하는 방법을 `scanf` 함수에 지시하는 데 사용하는 기호를 설명합니다.  

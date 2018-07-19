@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849576"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ 전처리기 참조
 *C/c + + 전처리기 참조* Microsoft C/c + +에서 구현 되는 전처리기에 설명 합니다. 전처리기는 C 및 C++ 파일이 컴파일러로 전달되기 전에 해당 파일에 대한 준비 작업을 수행합니다. 전처리기를 사용하여 조건에 따라 코드를 컴파일하고, 파일을 삽입하고, 컴파일 시간 오류 메시지를 지정하고, 코드 섹션에 시스템별 규칙을 적용할 수 있습니다.  

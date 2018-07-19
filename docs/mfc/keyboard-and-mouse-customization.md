@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b073ff2a9565c9106111299ba5b1b9d5a47351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fda670198dd9bd03a6d944ce4db70542926bf41
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931582"
 ---
 # <a name="keyboard-and-mouse-customization"></a>키보드 및 마우스 사용자 지정
 MFC 응용 프로그램 키보드 및 마우스 입력을 처리 하는 방법을 사용자 지정할 수 있습니다. 사용자 명령에 바로 가기 키를 지정 하 여 키보드 입력을 사용자 지정할 수 있습니다. 사용자를 사용자 지정할 수도 마우스 입력 내부 응용 프로그램의 특정 windows 사용자가 실행 해야 하는 명령을 선택 합니다. 이 응용 프로그램에 대 한 입력을 사용자 지정 하는 방법을 설명 합니다.  
@@ -60,7 +61,7 @@ MFC 응용 프로그램 키보드 및 마우스 입력을 처리 하는 방법�
   
  프레임 워크를 추가 하는 응용 프로그램의 마우스 관리자를 초기화는 **마우스** 탭에 **사용자 지정** 대화 상자. 모든 뷰를 추가 하지 않으면 하는 경우 탭에 액세스 하는 처리 되지 않은 예외가 발생 합니다. 보기, 목록을 만든 후의 **마우스** 탭은 사용자에 게 사용할 수 있습니다.  
   
- 마우스 관리자에 게 새 뷰를 추가할 때 지정 고유한 id입니다. 창에 대 한 마우스 사용자 지정을 지원 하려면 처리 해야는 `WM_LBUTTONDBLCLICK` 메시지와 호출 된 [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) 함수입니다. 이 함수를 호출할 때 해당 창에 대 한 ID 매개 변수 중 하나입니다. 것은 ID 번호와 연결 된 개체를 추적 하는 프로그래머의 책임입니다.  
+ 마우스 관리자에 게 새 뷰를 추가할 때 지정 고유한 id입니다. WM_LBUTTONDBLCLICK 메시지와 호출 처리 해야 창에 대 한 마우스 사용자 지정을 지원 하려는 경우는 [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) 함수입니다. 이 함수를 호출할 때 해당 창에 대 한 ID 매개 변수 중 하나입니다. 것은 ID 번호와 연결 된 개체를 추적 하는 프로그래머의 책임입니다.  
   
 ## <a name="security-concerns"></a>보안 고려 사항  
  에 설명 된 대로 [사용자 정의 도구](../mfc/user-defined-tools.md), 사용자를 두 번 클릭 이벤트와 도구 사용자 지정 ID를 연결할 수 있습니다. 연결 된 ID와 일치 하는 사용자 도구에 대 한 응용 프로그램에서는 사용자가 보기, 응용 프로그램 일치 하는 도구를 발견 하는 경우이 도구를 실행 합니다. 응용 프로그램 일치 하는 도구를 찾을 수 없는 경우 ID 가진 WM_COMMAND 메시지를 두 번 클릭 하는 뷰를 보냅니다.  

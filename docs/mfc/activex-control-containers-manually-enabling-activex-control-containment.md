@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339893"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX 컨트롤 컨테이너: ActiveX 컨트롤 포함 수동 설정
 MFC 응용 프로그램 마법사를 사용 하 여 응용 프로그램을 생성 하는 경우 ActiveX 컨트롤을 지 원하는 설정 하지 않은 경우에이 지원을 수동으로 추가 해야 합니다. 이 문서에서는 ActiveX 컨트롤을 포함할 기존 OLE 컨테이너 응용 프로그램에 수동으로 추가 하는 것에 대 한 프로세스를 설명 합니다. 사전에 OLE 컨테이너에서 ActiveX 컨트롤을 지 원하는 한다고 알고 있는 경우 문서를 참조 하십시오. [MFC ActiveX 컨트롤 컨테이너 만들기](../mfc/reference/creating-an-mfc-activex-control-container.md)합니다.  

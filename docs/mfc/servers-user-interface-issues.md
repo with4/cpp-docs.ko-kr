@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379673"
 ---
 # <a name="servers-user-interface-issues"></a>서버: 사용자 인터페이스 문제
 서버 응용 프로그램에 다양 한 OLE 항목 컨테이너 응용 프로그램을 제공 하는 사용자 인터페이스에 추가 해야 하는 기능이 있습니다. 메뉴와 서버 응용 프로그램에 추가 해야 하는 추가 리소스에 보다 자세한 정보를 참조 하십시오. [메뉴 및 리소스: 서버 추가](../mfc/menus-and-resources-server-additions.md)합니다.  

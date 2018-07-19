@@ -58,11 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74dc0fde7ea066707bb6e93592420009b882ee21
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 54ea69a53204de2d304340ed042b3ba028dd404c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966643"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -77,7 +78,7 @@ ms.lasthandoff: 05/07/2018
 ## <a name="remarks"></a>설명
 
 > [!NOTE]
-> 사용 하 여 컴파일된 코드에서 **/clr**,이 헤더 ï ´ ù.
+> 코드를 사용 하 여 컴파일된 **/clr**,이 헤더가 차단 됩니다.
 
 원자 연산에는 뮤텍스 잠금을 사용하지 않은 채 여러 스레드를 사용하여 개체를 올바르게 조작하는 데 도움이 되는 두 가지 주요 속성이 있습니다.
 
@@ -89,7 +90,7 @@ ms.lasthandoff: 05/07/2018
 
 **C++11**: `obj.is_lock_free()` 또는 `atomic_is_lock_free(x)`가 true인 경우 일부 신호 처리기에서 `obj` 개체에 대한 원자 연산을 수행할 수 없습니다.
 
-[atomic_flag](../standard-library/atomic-flag-structure.md) 클래스는 `bool` 플래그가 포함된 최소 원자성 형식을 제공합니다. 해당 연산은 항상 잠금 해제입니다.
+클래스 [atomic_flag](../standard-library/atomic-flag-structure.md) 보유 하는 최소 원자성 형식을 제공 된 **bool** 플래그입니다. 해당 연산은 항상 잠금 해제입니다.
 
 `atomic<T>` 템플릿 클래스는 `T` 인수 형식의 개체를 저장하고 저장된 값에 대한 원자성 액세스를 제공합니다. [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)를 사용하여 복사할 수 있고 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)를 사용하여 같음을 테스트할 수 있는 모든 형식을 사용하여 인스턴스화할 수 있습니다. 특히 이 클래스는 이러한 요구 사항을 충족하는 사용자 정의 형식과 함께, 그리고 많은 경우 부동 소수점 형식과 함께 사용할 수 있습니다.
 
@@ -109,20 +110,20 @@ ms.lasthandoff: 05/07/2018
 
 |`atomic_integral` 형식|정수 형식|`atomic_is_lock_free` 매크로|
 |----------------------------|-------------------|---------------------------------|
-|`atomic_char`|`char`|`ATOMIC_CHAR_LOCK_FREE`|
-|`atomic_schar`|`signed char`|`ATOMIC_CHAR_LOCK_FREE`|
-|`atomic_uchar`|`unsigned char`|`ATOMIC_CHAR_LOCK_FREE`|
-|`atomic_char16_t`|`char16_t`|`ATOMIC_CHAR16_T_LOCK_FREE`|
-|`atomic_char32_t`|`char32_t`|`ATOMIC_CHAR32_T_LOCK_FREE`|
-|`atomic_wchar_t`|`wchar_t`|`ATOMIC_WCHAR_T_LOCK_FREE`|
-|`atomic_short`|`short`|`ATOMIC_SHORT_LOCK_FREE`|
-|`atomic_ushort`|`unsigned short`|`ATOMIC_SHORT_LOCK_FREE`|
-|`atomic_int`|`int`|`ATOMIC_INT_LOCK_FREE`|
-|`atomic_uint`|`unsigned int`|`ATOMIC_INT_LOCK_FREE`|
-|`atomic_long`|`long`|`ATOMIC_LONG_LOCK_FREE`|
-|`atomic_ulong`|`unsigned long`|`ATOMIC_LONG_LOCK_FREE`|
-|`atomic_llong`|`long long`|`ATOMIC_LLONG_LOCK_FREE`|
-|`atomic_ullong`|`unsigned long long`|`ATOMIC_LLONG_LOCK_FREE`|
+|`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_schar`|**서명 된 char**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_uchar`|**unsigned char**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_char16_t`|`char16_t`|ATOMIC_CHAR16_T_LOCK_FREE|
+|`atomic_char32_t`|`char32_t`|ATOMIC_CHAR32_T_LOCK_FREE|
+|`atomic_wchar_t`|**wchar_t**|ATOMIC_WCHAR_T_LOCK_FREE|
+|`atomic_short`|**short**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_ushort`|**unsigned short**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_int`|**int**|ATOMIC_INT_LOCK_FREE|
+|`atomic_uint`|**unsigned int**|ATOMIC_INT_LOCK_FREE|
+|`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_llong`|**long long**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**부호 없는 long long**|ATOMIC_LLONG_LOCK_FREE|
 
 Typedef 이름은 \<inttypes.h> 헤더에 정의된 일부 형식에 대한 원자성 템플릿의 특수화를 위해 존재합니다.
 
@@ -164,7 +165,7 @@ Typedef 이름은 \<inttypes.h> 헤더에 정의된 일부 형식에 대한 원�
 |이름|설명|
 |----------|-----------------|
 |[atomic 구조체](../standard-library/atomic-structure.md)|저장된 값에 대해 원자 연산을 수행하는 개체를 설명합니다.|
-|[atomic_flag 구조체](../standard-library/atomic-flag-structure.md)|`bool` 플래그를 원자 단위로 설정하고 지우는 개체를 설명합니다.|
+|[atomic_flag 구조체](../standard-library/atomic-flag-structure.md)|원자 단위로 설정 하 고 지우는 개체를 설명 합니다는 **bool** 플래그입니다.|
 
 ## <a name="enums"></a>열거형
 
@@ -176,7 +177,7 @@ Typedef 이름은 \<inttypes.h> 헤더에 정의된 일부 형식에 대한 원�
 
 다음 목록에서 `_explicit`로 끝나지 않는 함수는, `memory_order_seq_cst`의 암시적 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 인수를 가지고 있다는 점을 제외하고, 해당 `_explicit`의 의미 체계를 가지고 있습니다.
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|*원자 비교 및 교환* 작업을 수행합니다.|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|*원자 비교 및 교환* 작업을 수행합니다.|
@@ -194,10 +195,10 @@ Typedef 이름은 \<inttypes.h> 헤더에 정의된 일부 형식에 대한 원�
 |[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|기존의 저장된 값에서 지정된 값을 뺍니다.|
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|지정된 값 및 기존의 저장된 값에 대해 비트 `exclusive or`를 수행합니다.|
 |[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|지정된 값 및 기존의 저장된 값에 대해 비트 `exclusive or`를 수행합니다.|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|`atomic_flag` 개체의 플래그를 `false`로 설정합니다.|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|`atomic_flag` 개체의 플래그를 `false`로 설정합니다.|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|`atomic_flag` 개체의 플래그를 `true`로 설정합니다.|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|`atomic_flag` 개체의 플래그를 `true`로 설정합니다.|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|플래그를 설정 하는 `atomic_flag` 개체를 **false**합니다.|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|플래그를 설정 하는 `atomic_flag` 개체를 **false**합니다.|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|플래그를 설정 하는 `atomic_flag` 개체를 **true**합니다.|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|플래그를 설정 하는 `atomic_flag` 개체를 **true**합니다.|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|`atomic` 개체에서 저장된 값을 설정합니다.|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|지정된 개체에 대한 원자 연산이 잠금 해제인지를 지정합니다.|
 |[atomic_load](../standard-library/atomic-functions.md#atomic_load)|값을 원자 단위로 검색합니다.|

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265054"
 ---
 # <a name="compiler-error-c3805"></a>컴파일러 오류 C3805
 'token': 예기치 않은 토큰이 역시 예상 '을 (를) ' 또는 식별자  

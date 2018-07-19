@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227410"
 ---
 # <a name="compiler-error-c2557"></a>컴파일러 오류 C2557
 'identifier': 전용 및 보호된 멤버는 생성자 없이 초기화할 수 없습니다.  

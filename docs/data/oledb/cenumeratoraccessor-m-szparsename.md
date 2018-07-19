@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096248"
 ---
 # <a name="cenumeratoraccessormszparsename"></a>CEnumeratorAccessor::m_szParseName
 에 전달 하는 문자열 [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) 데이터 원본 또는 열거자에 대 한 모니커를 가져오는 합니다.  

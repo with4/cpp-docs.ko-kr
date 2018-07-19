@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250992"
 ---
 # <a name="compiler-error-c3506"></a>컴파일러 오류 C3506
 typelib가 없습니다. LIBID 'id'에 대 한 등록  

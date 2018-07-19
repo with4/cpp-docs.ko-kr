@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385678"
 ---
 # <a name="c-bit-fields"></a>C 비트 필드
 구조 선언자는 구조체 또는 공용 구조체의 멤버에 대한 선언자일 뿐만 아니라 “비트 필드"라는 지정된 비트 수로 구성될 수도 있습니다. 해당 길이는 필드 이름에 대한 선언자에서 콜론으로 설정됩니다. 비트 필드는 정수 데이터 형식으로 해석됩니다.  

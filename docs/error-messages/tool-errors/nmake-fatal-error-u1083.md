@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321563"
 ---
 # <a name="nmake-fatal-error-u1083"></a>NMAKE 심각한 오류 U1083
 'target' 대상 매크로가 확장 되지 않습니다.  

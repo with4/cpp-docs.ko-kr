@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388242"
 ---
 # <a name="c-keywords"></a>C 키워드
 "키워드"는 C 컴파일러에서 특별한 의미를 가진 단어입니다. 7번째 및 8번째 변환 단계에서는 식별자가 C 키워드와 같은 철자 및 대/소문자를 사용할 수 없습니다. 자세한 내용은 *전처리기 참조*의 [변환 단계](../preprocessor/phases-of-translation.md) 설명을 참조하세요. 식별자에 대한 자세한 내용은 [식별자](../c-language/c-identifiers.md)를 참조하세요. C 언어는 다음의 키워드를 사용합니다.  

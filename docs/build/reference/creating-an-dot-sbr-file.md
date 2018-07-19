@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371085"
 ---
 # <a name="creating-an-sbr-file"></a>.Sbr 파일 만들기
 BSCMAKE에 대 한 입력된 파일은.sbr 파일입니다. 컴파일러는.sbr 파일을 컴파일하는 각 개체 파일 (.obj)을 만듭니다. 빌드하거나 찾아보기 정보 파일을 업데이트할 때 프로젝트에 대 한 모든.sbr 파일이 디스크에 제공 해야 합니다.  

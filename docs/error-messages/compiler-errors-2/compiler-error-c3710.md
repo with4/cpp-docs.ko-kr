@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266489"
 ---
 # <a name="compiler-error-c3710"></a>컴파일러 오류 C3710
 'function': __hook의 이벤트 처리기 지정 구문이 잘못 /\__unhook  

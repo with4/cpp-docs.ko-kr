@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169506"
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>C++에서 명시적 PInvoke 사용(DllImport 특성)
 .NET Framework 명시적 플랫폼 호출 (또는 PInvoke) 기능을 제공 하는 `Dllimport` Dll 패키지 된 관리 되지 않는 함수를 호출 하는 관리 되는 응용 프로그램을 허용 하는 특성입니다. 명시적 PInvoke는 관리 되지 않는 Api는 Dll로 패키지 하 고 소스 코드를 사용할 수 있는 경우 필요 합니다. PInvoke 필요 예를 들어 Win32 함수를 호출 합니다. 그렇지 않은 경우 암시적 P을 사용 하 여 {Invoke; 참조 [c + + Interop를 사용 하 여 (암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md) 자세한 정보에 대 한 합니다.  

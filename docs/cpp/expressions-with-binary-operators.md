@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414678"
 ---
 # <a name="expressions-with-binary-operators"></a>이항 연산자로 구성된 식
 이항 연산자는 한 식에서 두 개의 피연산자에 대해 작동합니다. 이항 연산자는 다음과 같습니다.  

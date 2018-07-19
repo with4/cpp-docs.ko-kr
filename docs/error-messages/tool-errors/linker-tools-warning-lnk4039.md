@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300321"
 ---
 # <a name="linker-tools-warning-lnk4039"></a>링커 도구 경고 LNK4039
 /SECTION 옵션에 지정 된 ' name' 섹션이 없습니다  

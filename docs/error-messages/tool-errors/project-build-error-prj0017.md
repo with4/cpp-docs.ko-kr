@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320897"
 ---
 # <a name="project-build-error-prj0017"></a>프로젝트 빌드 오류 PRJ0017
 현재 작업 디렉터리가 잘못 되었습니다.  

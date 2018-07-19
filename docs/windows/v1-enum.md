@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890663"
 ---
 # <a name="v1enum"></a>v1_enum
 열거 형식이 지정된 된 16 비트 기본이 아닌 32 비트 엔터티 전송 될 지시 합니다.  

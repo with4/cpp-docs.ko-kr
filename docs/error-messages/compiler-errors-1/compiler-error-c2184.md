@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171756"
 ---
 # <a name="compiler-error-c2184"></a>컴파일러 오류 C2184
 'type': __except 식의 형식이 잘못되었습니다. 정수여야 합니다.  

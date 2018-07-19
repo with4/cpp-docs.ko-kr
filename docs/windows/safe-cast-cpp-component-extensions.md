@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891518"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast(C++ 구성 요소 확장명)
 `safe_cast` 작업은 성공하는 경우 지정된 식을 지정된 형식으로 반환하고, 그렇지 않은 경우 `InvalidCastException`을 throw합니다.  

@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e528ea7901518112c255eefbfb1e674fddee04e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d03966cb61e1ccab3f8f3886638efdf95a534a73
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930315"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>지속성 및 초기화 최적화
 지 속성 및 초기화 컨트롤에서 기본적으로 처리는 `DoPropExchange` 멤버 함수입니다. 일반적인 컨트롤에서이 함수를 몇 개의 호출을 포함 **PX_** 함수 (`PX_Color`, `PX_Font`등), 각 속성에 대 한 합니다.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]  
   
- 캐스팅 하는 것이 아니라 임시 변수를 사용한 부하의 경우 해당 값이 할당 되며 `m_boolProp` 에 **바이트** 참조 합니다. 1 바이트의 캐스팅 방법을 초래 `m_boolProp` 수정 하 고, 나머지 바이트는 초기화 되지 않았습니다.  
+ 캐스팅 하는 것이 아니라 임시 변수를 사용한 부하의 경우 해당 값이 할당 되며 *m_boolProp* 에 **바이트** 참조 합니다. 1 바이트의 캐스팅 방법을 초래 *m_boolProp* 수정 하 고, 나머지 바이트는 초기화 되지 않았습니다.  
   
  동일한 컨트롤에 대 한 재정의 하 여 컨트롤의 초기화를 최적화할 수 [COleControl::OnResetState](../mfc/reference/colecontrol-class.md#onresetstate) 다음과 같습니다.  
   

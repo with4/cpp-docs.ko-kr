@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096830"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults 클래스
 템플릿 인수로 사용 (*TMultiple*)를 [CCommand](../../data/oledb/ccommand-class.md) 세트를 만들려면 단일 결과 처리 하는 최적화 된 명령입니다.  

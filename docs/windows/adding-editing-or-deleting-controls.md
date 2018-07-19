@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856715"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>컨트롤 추가, 편집 및 삭제
 대화 상자 편집기를 사용 하 여 있습니다 수 추가, 크기 조정, 편집 및 대화 상자에서 컨트롤을 삭제 합니다. 해당 ID와 같은 컨트롤의 속성을 편집할 수도 있습니다 여부나 디렉터리 이름이 처음에 표시 되 런타임 시.  

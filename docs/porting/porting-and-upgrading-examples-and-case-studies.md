@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850146"
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>포팅 및 업그레이드: 예제 및 사례 연구
 성공적인 마이그레이션 스토리를 검토하여 이전 버전의 Visual C++에서 현재 버전으로 마이그레이션하는 동안 발생할 수 있는 문제 종류에 대한 아이디어를 얻을 수 있습니다.  

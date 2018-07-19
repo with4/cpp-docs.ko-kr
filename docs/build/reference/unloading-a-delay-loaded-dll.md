@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375216"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>지연 로드된 DLL 언로드
 기본적으로 제공 되는 지연 로드 도우미 지연 로드 설명자는 포인터가 되 고 원래 가져오기 주소 테이블 (IAT)의 사본을 pUnloadIAT 필드에 있어야 하는 경우를 확인 합니다. 이 경우은 가져오기 지연 설명자를 목록에 대 한 포인터를 저장 합니다. 이렇게 하면 DLL을 찾을 해당 DLL의 명시적 언로드를 지원 하기 위해 이름별 도우미 함수입니다.  

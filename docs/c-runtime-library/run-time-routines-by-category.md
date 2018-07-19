@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412373"
 ---
 # <a name="universal-c-runtime-routines-by-category"></a>범주별 유버니설 C 런타임 루틴
 

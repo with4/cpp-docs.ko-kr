@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270858"
 ---
 # <a name="compiler-warning-level-1-c4031"></a>컴파일러 경고 (수준 1) C4031
 두 번째 형식 매개 변수 목록이 첫 번째 목록 보다 깁니다.  

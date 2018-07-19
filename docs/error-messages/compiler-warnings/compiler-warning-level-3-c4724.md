@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295271"
 ---
 # <a name="compiler-warning-level-3-c4724"></a>컴파일러 경고(수준 3) C4724
 0의 나머지 연산이 발생할 수 있습니다.  

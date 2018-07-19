@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371436"
 ---
 # <a name="improving-compiler-throughput"></a>컴파일러 처리량 향상
 미리 컴파일된 헤더를 사용 하 여 프로젝트를 더 빠르게 작성 합니다. ATL, MFC, 또는 Windows SDK 헤더 파일을 사용 하는 경우에 유용 합니다.  

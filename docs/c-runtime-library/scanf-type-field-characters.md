@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417411"
 ---
 # <a name="scanf-type-field-characters"></a>scanf 형식 필드 문자
 다음 정보는 `scanf` 와 같은 보안 버전을 비롯하여 함수의 모든 `scanf_s`패밀리에 적용됩니다.  

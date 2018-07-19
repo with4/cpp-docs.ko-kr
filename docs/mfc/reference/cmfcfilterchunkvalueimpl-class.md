@@ -56,14 +56,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d274cbafbd50df2f577b484e433c964f1dec096
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c11e50755097176b276c82877c7a636be149756
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852577"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl 클래스
-청크 및 속성 모두 값 쌍의 논리를 간소화 하는 클래스입니다.  
+청크 및 속성 값 쌍의 논리를 간소화 하는 클래스입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -77,7 +78,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
   
 |이름|설명|  
 |----------|-----------------|  
-|[CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|개체를 destructs 합니다.|  
+|[CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|개체를 destructs입니다.|  
 |[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|개체를 생성합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
@@ -91,17 +92,17 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 |[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|청크 PID (속성 ID)를 검색합니다.|  
 |[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|가져옵니다 청크 형식입니다.|  
 |[CMFCFilterChunkValueImpl::GetString](#getstring)|검색 된 문자열 값입니다.|  
-|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|할당 된 propvariant 값을 검색 합니다.|  
-|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|값을 반환 할당 되지 않은 (내부 값).|  
+|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|할당 된 propvariant으로 값을 검색합니다.|  
+|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|(내부 값)을 할당 되지 않은 반환 값입니다.|  
 |[CMFCFilterChunkValueImpl::IsValid](#isvalid)|이 속성 값이 유효한 지 여부를 확인 합니다.|  
 |[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|오버로드됨. 부울 값을 키로 속성을 설정합니다.|  
-|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|DWORD에 대 한 키로 속성을 설정합니다.|  
-|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|filetime 키로 속성을 설정합니다.|  
-|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Int64 키로 속성을 설정합니다.|  
-|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Int 키로 속성을 설정합니다.|  
-|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|LONG 키로 속성을 설정합니다.|  
+|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|DWORD 키로 속성을 설정합니다.|  
+|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Filetime 키로 속성을 설정합니다.|  
+|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Int64로 키 속성을 설정합니다.|  
+|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|정수를 키로 속성을 설정합니다.|  
+|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|LONG 값을 키로 속성을 설정합니다.|  
 |[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|속성을 SystemTime 키로 설정합니다.|  
-|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|유니코드 문자열에는 키로 속성을 설정합니다.|  
+|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|유니코드 문자열에 키로 속성을 설정합니다.|  
   
 ### <a name="protected-methods"></a>보호된 메서드  
   
@@ -110,7 +111,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 |[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|청크의 공용 속성을 설정 하는 도우미 함수입니다.|  
   
 ## <a name="remarks"></a>설명  
- 를 사용 하려면 단순히 만들면 적합 한 종류의 CMFCFilterChunkValueImpl 클래스  
+ 를 사용 하려면 단순히 만든 올바른 종류의 CMFCFilterChunkValueImpl 클래스  
   
  예제:  
   
@@ -149,7 +150,7 @@ CMFCFilterChunkValueImpl();
 ### <a name="remarks"></a>설명  
   
 ##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl  
- 개체를 destructs 합니다.  
+ 개체를 destructs입니다.  
   
 ```  
 virtual ~CMFCFilterChunkValueImpl();
@@ -165,11 +166,11 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pStatChunk`  
- 청크의 특징을 설명 하는 대상 값에 대 한 포인터입니다.  
+ *pStatChunk*  
+ 청크의 특성을 설명 하는 대상 값에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+ 성공 하면 s_ok이 고 그렇지 않으면 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -181,7 +182,7 @@ void CopyFrom (IFilterChunkValue* pValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pValue`  
+ *pValue*  
  복사할 소스 값을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -194,7 +195,7 @@ REFGUID GetChunkGUID() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 청크를 식별 하는 GUID에 대 한 참조입니다.  
+ 참조 된 청크를 식별 하는 GUID입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -211,7 +212,7 @@ DWORD GetChunkPID() const;
 ### <a name="remarks"></a>설명  
   
 ##  <a name="getchunktype"></a>  CMFCFilterChunkValueImpl::GetChunkType  
- 청크 유형을 검색합니다.  
+ 청크 형식을 검색합니다.  
   
 ```  
 CHUNKSTATE GetChunkType() const;  
@@ -235,23 +236,23 @@ CString &GetString();
 ### <a name="remarks"></a>설명  
   
 ##  <a name="getvalue"></a>  CMFCFilterChunkValueImpl::GetValue  
- 할당 된 propvariant 값을 검색 합니다.  
+ 할당 된 propvariant으로 값을 검색합니다.  
   
 ```  
 HRESULT GetValue(PROPVARIANT** ppPropVariant);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ppPropVariant`  
- 함수가 반환할 때이 매개 변수는 청크 값을 포함 합니다.  
+ *ppPropVariant*  
+ 함수는 반환 될 때이 매개 변수는 청크 값을 포함 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- PROPVARIANT 성공적으로 할당 된 및 청크 값 성공적으로 복사 하면 s_ok이 고 `ppPropVariant`고, 그렇지 않으면 오류 코드가 있습니다.  
+ 청크 값을 복사 했습니다 PROPVARIANT 성공적으로 할당 된 경우 S_OK *ppPropVariant*이 고 그렇지 않으면 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="getvaluenoalloc"></a>  CMFCFilterChunkValueImpl::GetValueNoAlloc  
- 할당 되지 않은 (내부 값)을 반환합니다.  
+ 할당 되지 않은 (내부) 값을 반환합니다.  
   
 ```  
 PROPVARIANT GetValueNoAlloc ();
@@ -270,7 +271,7 @@ BOOL IsValid() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 현재 청크 값이 잘못 되었습니다. 그렇지 않으면 `FALSE`합니다.  
+ 현재 청크 값이 잘못 되었습니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -299,29 +300,29 @@ HRESULT SetBoolValue(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pkey`  
+ *pkey*  
  속성 키를 지정합니다.  
   
- `bVal`  
+ *bVal*  
  설정할 청크 값을 지정 합니다.  
   
- `chunkType`  
- 플래그는이 청크 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ *chunkType*  
+ 플래그는이 청크는 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져옵니다.  
   
- `locale`  
- 언어와 관련 된 텍스트의 청크 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하 여 문서 인덱서 사용 됩니다. 청크가 텍스트 형식 또는 VT_LPWSTR, VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ *locale*  
+ 언어 및 하위 텍스트의 청크를 사용 하 여 연결 합니다. 청크 로캘이 문서 인덱서에서 적절 한 단어 문자의 분리 하는 데 사용 됩니다. 청크 텍스트 형식이 아니고 VT_LPWSTR,: VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식의 경우이 필드는 무시 됩니다.  
   
- `cwcLenSource`  
- 현재 청크 파생 된 소스 텍스트의 문자 길이입니다. 0 값은 소스 텍스트와 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 직접 대응 관계 존재 한다는 것을 의미 합니다.  
+ *cwcLenSource*  
+ 현재 청크가 파생 된 원본 텍스트의 문자 길이입니다. 값이 0 이면 소스 텍스트 및 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값을 이러한 직접적인 대응이 없습니다 있음을 의미 합니다.  
   
- `cwcStartSource`  
- 소스 청크에 파생 청크 소스 텍스트 시작 되는 오프셋입니다.  
+ *cwcStartSource*  
+ 파생된 청크에 대 한 소스 텍스트 원본 청크의 시작 오프셋입니다.  
   
- `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 나누기의 형식입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
+ *chunkBreakType*  
+ 형식에서 현재 청크가 이전 청크를 구분 하는 중단입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+ 성공 하면 s_ok이 고 그렇지 않으면 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -339,23 +340,23 @@ HRESULT SetChunk(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pkey`  
+ *pkey*  
  속성 키를 지정합니다.  
   
- `chunkType`  
- 플래그는이 청크 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ *chunkType*  
+ 플래그는이 청크는 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져옵니다.  
   
- `locale`  
- 언어와 관련 된 텍스트의 청크 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하 여 문서 인덱서 사용 됩니다. 청크가 텍스트 형식 또는 VT_LPWSTR, VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ *locale*  
+ 언어 및 하위 텍스트의 청크를 사용 하 여 연결 합니다. 청크 로캘이 문서 인덱서에서 적절 한 단어 문자의 분리 하는 데 사용 됩니다. 청크 텍스트 형식이 아니고 VT_LPWSTR,: VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식의 경우이 필드는 무시 됩니다.  
   
- `cwcLenSource`  
- 현재 청크 파생 된 소스 텍스트의 문자 길이입니다. 0 값은 소스 텍스트와 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 직접 대응 관계 존재 한다는 것을 의미 합니다.  
+ *cwcLenSource*  
+ 현재 청크가 파생 된 원본 텍스트의 문자 길이입니다. 값이 0 이면 소스 텍스트 및 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값을 이러한 직접적인 대응이 없습니다 있음을 의미 합니다.  
   
- `cwcStartSource`  
- 소스 청크에 파생 청크 소스 텍스트 시작 되는 오프셋입니다.  
+ *cwcStartSource*  
+ 파생된 청크에 대 한 소스 텍스트 원본 청크의 시작 오프셋입니다.  
   
- `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 나누기의 형식입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
+ *chunkBreakType*  
+ 형식에서 현재 청크가 이전 청크를 구분 하는 중단입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공 하면 s_ok이 고 그렇지 않으면 오류 코드입니다.  
@@ -363,7 +364,7 @@ HRESULT SetChunk(
 ### <a name="remarks"></a>설명  
   
 ##  <a name="setdwordvalue"></a>  CMFCFilterChunkValueImpl::SetDwordValue  
- DWORD에 대 한 키로 속성을 설정 합니다.  
+ DWORD 키로 속성을 설정 합니다.  
   
 ```  
 HRESULT SetDwordValue(
@@ -377,34 +378,34 @@ HRESULT SetDwordValue(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pkey`  
+ *pkey*  
  속성 키를 지정합니다.  
   
- `dwVal`  
+ *dwVal*  
  설정할 청크 값을 지정 합니다.  
   
- `chunkType`  
- 플래그는이 청크 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ *chunkType*  
+ 플래그는이 청크는 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져옵니다.  
   
- `locale`  
- 언어와 관련 된 텍스트의 청크 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하 여 문서 인덱서 사용 됩니다. 청크가 텍스트 형식 또는 VT_LPWSTR, VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ *locale*  
+ 언어 및 하위 텍스트의 청크를 사용 하 여 연결 합니다. 청크 로캘이 문서 인덱서에서 적절 한 단어 문자의 분리 하는 데 사용 됩니다. 청크 텍스트 형식이 아니고 VT_LPWSTR,: VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식의 경우이 필드는 무시 됩니다.  
   
- `cwcLenSource`  
- 현재 청크 파생 된 소스 텍스트의 문자 길이입니다. 0 값은 소스 텍스트와 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 직접 대응 관계 존재 한다는 것을 의미 합니다.  
+ *cwcLenSource*  
+ 현재 청크가 파생 된 원본 텍스트의 문자 길이입니다. 값이 0 이면 소스 텍스트 및 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값을 이러한 직접적인 대응이 없습니다 있음을 의미 합니다.  
   
- `cwcStartSource`  
- 소스 청크에 파생 청크 소스 텍스트 시작 되는 오프셋입니다.  
+ *cwcStartSource*  
+ 파생된 청크에 대 한 소스 텍스트 원본 청크의 시작 오프셋입니다.  
   
- `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 나누기의 형식입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
+ *chunkBreakType*  
+ 형식에서 현재 청크가 이전 청크를 구분 하는 중단입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+ 성공 하면 s_ok이 고 그렇지 않으면 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue  
- filetime 키로 속성을 설정 합니다.  
+ Filetime 키로 속성을 설정 합니다.  
   
 ```  
 HRESULT SetFileTimeValue(
@@ -418,34 +419,34 @@ HRESULT SetFileTimeValue(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pkey`  
+ *pkey*  
  속성 키를 지정합니다.  
   
- `dtVal`  
+ *dtVal*  
  설정할 청크 값을 지정 합니다.  
   
- `chunkType`  
- 플래그는이 청크 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ *chunkType*  
+ 플래그는이 청크는 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져옵니다.  
   
- `locale`  
- 언어와 관련 된 텍스트의 청크 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하 여 문서 인덱서 사용 됩니다. 청크가 텍스트 형식 또는 VT_LPWSTR, VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ *locale*  
+ 언어 및 하위 텍스트의 청크를 사용 하 여 연결 합니다. 청크 로캘이 문서 인덱서에서 적절 한 단어 문자의 분리 하는 데 사용 됩니다. 청크 텍스트 형식이 아니고 VT_LPWSTR,: VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식의 경우이 필드는 무시 됩니다.  
   
- `cwcLenSource`  
- 현재 청크 파생 된 소스 텍스트의 문자 길이입니다. 0 값은 소스 텍스트와 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 직접 대응 관계 존재 한다는 것을 의미 합니다.  
+ *cwcLenSource*  
+ 현재 청크가 파생 된 원본 텍스트의 문자 길이입니다. 값이 0 이면 소스 텍스트 및 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값을 이러한 직접적인 대응이 없습니다 있음을 의미 합니다.  
   
- `cwcStartSource`  
- 소스 청크에 파생 청크 소스 텍스트 시작 되는 오프셋입니다.  
+ *cwcStartSource*  
+ 파생된 청크에 대 한 소스 텍스트 원본 청크의 시작 오프셋입니다.  
   
- `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 나누기의 형식입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
+ *chunkBreakType*  
+ 형식에서 현재 청크가 이전 청크를 구분 하는 중단입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+ 성공 하면 s_ok이 고 그렇지 않으면 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="setint64value"></a>  CMFCFilterChunkValueImpl::SetInt64Value  
- Int64 키로 속성을 설정 합니다.  
+ Int64로 키 속성을 설정 합니다.  
   
 ```  
 HRESULT SetInt64Value(
@@ -459,34 +460,34 @@ HRESULT SetInt64Value(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pkey`  
+ *pkey*  
  속성 키를 지정합니다.  
   
- `nVal`  
+ *nVal*  
  설정할 청크 값을 지정 합니다.  
   
- `chunkType`  
- 플래그는이 청크 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ *chunkType*  
+ 플래그는이 청크는 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져옵니다.  
   
- `locale`  
- 언어와 관련 된 텍스트의 청크 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하 여 문서 인덱서 사용 됩니다. 청크가 텍스트 형식 또는 VT_LPWSTR, VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ *locale*  
+ 언어 및 하위 텍스트의 청크를 사용 하 여 연결 합니다. 청크 로캘이 문서 인덱서에서 적절 한 단어 문자의 분리 하는 데 사용 됩니다. 청크 텍스트 형식이 아니고 VT_LPWSTR,: VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식의 경우이 필드는 무시 됩니다.  
   
- `cwcLenSource`  
- 현재 청크 파생 된 소스 텍스트의 문자 길이입니다. 0 값은 소스 텍스트와 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 직접 대응 관계 존재 한다는 것을 의미 합니다.  
+ *cwcLenSource*  
+ 현재 청크가 파생 된 원본 텍스트의 문자 길이입니다. 값이 0 이면 소스 텍스트 및 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값을 이러한 직접적인 대응이 없습니다 있음을 의미 합니다.  
   
- `cwcStartSource`  
- 소스 청크에 파생 청크 소스 텍스트 시작 되는 오프셋입니다.  
+ *cwcStartSource*  
+ 파생된 청크에 대 한 소스 텍스트 원본 청크의 시작 오프셋입니다.  
   
- `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 나누기의 형식입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
+ *chunkBreakType*  
+ 형식에서 현재 청크가 이전 청크를 구분 하는 중단입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+ 성공 하면 s_ok이 고 그렇지 않으면 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="setintvalue"></a>  CMFCFilterChunkValueImpl::SetIntValue  
- Int 키로 속성을 설정 합니다.  
+ 정수를 키로 속성을 설정 합니다.  
   
 ```  
 HRESULT SetIntValue(
@@ -500,34 +501,34 @@ HRESULT SetIntValue(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pkey`  
+ *pkey*  
  속성 키를 지정합니다.  
   
- `nVal`  
+ *nVal*  
  설정할 청크 값을 지정 합니다.  
   
- `chunkType`  
- 플래그는이 청크 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ *chunkType*  
+ 플래그는이 청크는 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져옵니다.  
   
- `locale`  
- 언어와 관련 된 텍스트의 청크 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하 여 문서 인덱서 사용 됩니다. 청크가 텍스트 형식 또는 VT_LPWSTR, VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ *locale*  
+ 언어 및 하위 텍스트의 청크를 사용 하 여 연결 합니다. 청크 로캘이 문서 인덱서에서 적절 한 단어 문자의 분리 하는 데 사용 됩니다. 청크 텍스트 형식이 아니고 VT_LPWSTR,: VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식의 경우이 필드는 무시 됩니다.  
   
- `cwcLenSource`  
- 현재 청크 파생 된 소스 텍스트의 문자 길이입니다. 0 값은 소스 텍스트와 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 직접 대응 관계 존재 한다는 것을 의미 합니다.  
+ *cwcLenSource*  
+ 현재 청크가 파생 된 원본 텍스트의 문자 길이입니다. 값이 0 이면 소스 텍스트 및 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값을 이러한 직접적인 대응이 없습니다 있음을 의미 합니다.  
   
- `cwcStartSource`  
- 소스 청크에 파생 청크 소스 텍스트 시작 되는 오프셋입니다.  
+ *cwcStartSource*  
+ 파생된 청크에 대 한 소스 텍스트 원본 청크의 시작 오프셋입니다.  
   
- `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 나누기의 형식입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
+ *chunkBreakType*  
+ 형식에서 현재 청크가 이전 청크를 구분 하는 중단입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+ 성공 하면 s_ok이 고 그렇지 않으면 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="setlongvalue"></a>  CMFCFilterChunkValueImpl::SetLongValue  
- LONG 키로 속성을 설정 합니다.  
+ LONG 값을 키로 속성을 설정 합니다.  
   
 ```  
 HRESULT SetLongValue(
@@ -541,29 +542,29 @@ HRESULT SetLongValue(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pkey`  
+ *pkey*  
  속성 키를 지정합니다.  
   
- `lVal`  
+ *lVal*  
  설정할 청크 값을 지정 합니다.  
   
- `chunkType`  
- 플래그는이 청크 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ *chunkType*  
+ 플래그는이 청크는 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져옵니다.  
   
- `locale`  
- 언어와 관련 된 텍스트의 청크 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하 여 문서 인덱서 사용 됩니다. 청크가 텍스트 형식 또는 VT_LPWSTR, VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ *locale*  
+ 언어 및 하위 텍스트의 청크를 사용 하 여 연결 합니다. 청크 로캘이 문서 인덱서에서 적절 한 단어 문자의 분리 하는 데 사용 됩니다. 청크 텍스트 형식이 아니고 VT_LPWSTR,: VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식의 경우이 필드는 무시 됩니다.  
   
- `cwcLenSource`  
- 현재 청크 파생 된 소스 텍스트의 문자 길이입니다. 0 값은 소스 텍스트와 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 직접 대응 관계 존재 한다는 것을 의미 합니다.  
+ *cwcLenSource*  
+ 현재 청크가 파생 된 원본 텍스트의 문자 길이입니다. 값이 0 이면 소스 텍스트 및 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값을 이러한 직접적인 대응이 없습니다 있음을 의미 합니다.  
   
- `cwcStartSource`  
- 소스 청크에 파생 청크 소스 텍스트 시작 되는 오프셋입니다.  
+ *cwcStartSource*  
+ 파생된 청크에 대 한 소스 텍스트 원본 청크의 시작 오프셋입니다.  
   
- `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 나누기의 형식입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
+ *chunkBreakType*  
+ 형식에서 현재 청크가 이전 청크를 구분 하는 중단입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+ 성공 하면 s_ok이 고 그렇지 않으면 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -582,34 +583,34 @@ HRESULT SetSystemTimeValue(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pkey`  
+ *pkey*  
  속성 키를 지정합니다.  
   
- `systemTime`  
+ *systemTime*  
  설정할 청크 값을 지정 합니다.  
   
- `chunkType`  
- 플래그는이 청크 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ *chunkType*  
+ 플래그는이 청크는 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져옵니다.  
   
- `locale`  
- 언어와 관련 된 텍스트의 청크 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하 여 문서 인덱서 사용 됩니다. 청크가 텍스트 형식 또는 VT_LPWSTR, VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ *locale*  
+ 언어 및 하위 텍스트의 청크를 사용 하 여 연결 합니다. 청크 로캘이 문서 인덱서에서 적절 한 단어 문자의 분리 하는 데 사용 됩니다. 청크 텍스트 형식이 아니고 VT_LPWSTR,: VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식의 경우이 필드는 무시 됩니다.  
   
- `cwcLenSource`  
- 현재 청크 파생 된 소스 텍스트의 문자 길이입니다. 0 값은 소스 텍스트와 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 직접 대응 관계 존재 한다는 것을 의미 합니다.  
+ *cwcLenSource*  
+ 현재 청크가 파생 된 원본 텍스트의 문자 길이입니다. 값이 0 이면 소스 텍스트 및 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값을 이러한 직접적인 대응이 없습니다 있음을 의미 합니다.  
   
- `cwcStartSource`  
- 소스 청크에 파생 청크 소스 텍스트 시작 되는 오프셋입니다.  
+ *cwcStartSource*  
+ 파생된 청크에 대 한 소스 텍스트 원본 청크의 시작 오프셋입니다.  
   
- `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 나누기의 형식입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
+ *chunkBreakType*  
+ 형식에서 현재 청크가 이전 청크를 구분 하는 중단입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+ 성공 하면 s_ok이 고 그렇지 않으면 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="settextvalue"></a>  CMFCFilterChunkValueImpl::SetTextValue  
- 유니코드 문자열에는 키로 속성을 설정합니다.  
+ 유니코드 문자열에 키로 속성을 설정합니다.  
   
 ```  
 HRESULT SetTextValue(
@@ -623,29 +624,29 @@ HRESULT SetTextValue(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pkey`  
+ *pkey*  
  속성 키를 지정합니다.  
   
- `pszValue`  
+ *pszValue*  
  설정할 청크 값을 지정 합니다.  
   
- `chunkType`  
- 플래그는이 청크 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ *chunkType*  
+ 플래그는이 청크는 텍스트 형식 또는 값 형식 속성에 포함 되는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져옵니다.  
   
- `locale`  
- 언어와 관련 된 텍스트의 청크 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하 여 문서 인덱서 사용 됩니다. 청크가 텍스트 형식 또는 VT_LPWSTR, VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ *locale*  
+ 언어 및 하위 텍스트의 청크를 사용 하 여 연결 합니다. 청크 로캘이 문서 인덱서에서 적절 한 단어 문자의 분리 하는 데 사용 됩니다. 청크 텍스트 형식이 아니고 VT_LPWSTR,: VT_LPSTR, 또는 VT_BSTR 데이터 형식과 값 형식의 경우이 필드는 무시 됩니다.  
   
- `cwcLenSource`  
- 현재 청크 파생 된 소스 텍스트의 문자 길이입니다. 0 값은 소스 텍스트와 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 직접 대응 관계 존재 한다는 것을 의미 합니다.  
+ *cwcLenSource*  
+ 현재 청크가 파생 된 원본 텍스트의 문자 길이입니다. 값이 0 이면 소스 텍스트 및 파생된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값을 이러한 직접적인 대응이 없습니다 있음을 의미 합니다.  
   
- `cwcStartSource`  
- 소스 청크에 파생 청크 소스 텍스트 시작 되는 오프셋입니다.  
+ *cwcStartSource*  
+ 파생된 청크에 대 한 소스 텍스트 원본 청크의 시작 오프셋입니다.  
   
- `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 나누기의 형식입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
+ *chunkBreakType*  
+ 형식에서 현재 청크가 이전 청크를 구분 하는 중단입니다. CHUNK_BREAKTYPE 열거형의 값은입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+ 성공 하면 s_ok이 고 그렇지 않으면 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
   

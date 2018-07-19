@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302622"
 ---
 # <a name="linker-tools-error-lnk1188"></a>링커 도구 오류 LNK1188
 잘못 된 fixup 대상 BADFIXUPSECTION:: 'symbol'; 가능한 길이 섹션이 0  

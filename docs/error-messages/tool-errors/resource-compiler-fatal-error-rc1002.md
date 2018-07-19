@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321667"
 ---
 # <a name="resource-compiler-fatal-error-rc1002"></a>리소스 컴파일러 심각한 오류 RC1002
 힙 공간이 부족 합니다.  

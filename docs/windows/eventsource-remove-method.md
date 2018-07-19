@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874384"
 ---
 # <a name="eventsourceremove-method"></a>EventSource::Remove 메서드
 현재 EventSource 개체에 연결 된 이벤트 처리기의 집합에서 지정 된 이벤트 등록 토큰이 나타내는 이벤트 처리기를 삭제 합니다.  

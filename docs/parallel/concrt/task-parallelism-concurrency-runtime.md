@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695326"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>작업 병렬 처리(동시성 런타임)
 동시성 런타임에서 *작업* 특정 작업을 수행 하 고 일반적으로 다른 작업과 병렬로 실행 하는 작업의 단위입니다. 작업으로 구성 되는 보다 세분화 된 추가 작업으로 분해할 수 있습니다는 *작업 그룹*합니다.  

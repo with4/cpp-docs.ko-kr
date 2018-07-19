@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c7d7babe1112bbfcc80485d54d5a4a005b4dfc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ce85d846d142e2c15a0fba6d2d3fb76c924b97f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966604"
 ---
 # <a name="fpos-class"></a>fpos 클래스
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/07/2018
 
 - [streamoff](../standard-library/ios-typedefs.md#streamoff) 형식의 바이트 오프셋
 
-- basic_filebuf 클래스의 개체에서 사용하기 위한 **St** 형식의 변환 상태(일반적으로 `mbstate_t`)
+- 형식의 basic_filebuf 클래스의 개체 사용에 대 한 변환 상태 `St`일반적으로 `mbstate_t`입니다.
 
 [basic_filebuf](../standard-library/basic-filebuf-class.md) 클래스의 개체에서 사용하기 위한 `fpos_t` 형식의 임의 파일 위치를 저장할 수도 있습니다. 그러나 파일 크기가 제한된 환경에서는 `streamoff`와 `fpos_t`를 바꿔서 사용할 수 있는 경우도 있습니다. 상태 종속적 인코딩을 포함하는 스트림이 없는 환경에서는 `mbstate_t`가 실제로 사용되지 않을 수 있습니다. 따라서 저장되는 멤버 개체 수는 경우에 따라 다를 수 있습니다.
 
@@ -91,17 +92,17 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Off` 스트림에 대 한 오프셋입니다.
+*_Off* 스트림에 대 한 오프셋입니다.
 
-`_State` 시작 상태는 `fpos` 개체입니다.
+*_State* 의 시작 상태를 `fpos` 개체입니다.
 
 *_Filepos* 스트림에 대 한 오프셋입니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 파일의 시작 위치를 기준으로 초기 변환 상태에서 오프셋 `_Off`를 저장합니다(문제가 되는 경우) `_Off`가 -1이면 결과 개체는 잘못된 스트림 위치를 나타냅니다.
+첫 번째 생성자는 저장 된 오프셋 *_Off*초기 변환 상태 (중요 실행 하 는) 경우에 파일의 시작 부분에 상대적입니다. 하는 경우 *_Off* 가-1 이면 결과 개체는 잘못 된 스트림 위치를 나타냅니다.
 
-두 번째 생성자는 0 오프셋 및 개체 `_State`를 저장합니다.
+두 번째 생성자는 0 오프셋 및 개체를 저장 합니다 *_State*합니다.
 
 ## <a name="op_neq"></a>  fpos::operator!=
 
@@ -113,7 +114,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 비교할 파일 위치 표시기입니다.
+*오른쪽* 비교할 파일 위치 표시기입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -123,7 +124,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 멤버 함수는 `!(*this == right)`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // fpos_op_neq.cpp
@@ -185,7 +186,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`_Off` 파일 위치 표시기 증가 하는 데 사용할 오프셋입니다.
+*_Off* 는 파일 위치 표시기를 증분 시킬 오프셋입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -195,7 +196,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 이 멤버 함수는 **fpos(\*this) +=** `_Off`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `operator+` 사용에 대한 샘플은 [operator!=](#op_neq)을 참조하세요.
 
@@ -209,7 +210,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Off` 파일 위치 표시기 증가 하는 데 사용할 오프셋입니다.
+*_Off* 는 파일 위치 표시기를 증분 시킬 오프셋입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -217,9 +218,9 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 `_Off`를 저장된 오프셋 멤버 개체에 추가하고 **\*this**를 반환합니다. 파일 내 위치를 지정할 경우 결과는 일반적으로 상태 종속적 인코딩이 없는 이진 스트림의 경우에만 유효합니다.
+멤버 함수 추가 *_Off* 저장 된 오프셋된 멤버 개체 및 다음 반환  **\*이**합니다. 파일 내 위치를 지정할 경우 결과는 일반적으로 상태 종속적 인코딩이 없는 이진 스트림의 경우에만 유효합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `operator+=` 사용에 대한 샘플은 [operator!=](#op_neq)을 참조하세요.
 
@@ -235,15 +236,15 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 파일 위치입니다.
+*오른쪽* 파일 위치입니다.
 
-`_Off` 스트림 오프셋입니다.
+*_Off* Stream 오프셋입니다.
 
 ### <a name="return-value"></a>반환 값
 
 첫 번째 구성원 함수는 `(streamoff)*this - (streamoff) right`를 반환합니다. 두 번째 구성원 함수는 `fpos(*this) -= _Off`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `operator-` 사용에 대한 샘플은 [operator!=](#op_neq)을 참조하세요.
 
@@ -257,7 +258,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Off` 스트림 오프셋입니다.
+*_Off* Stream 오프셋입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -267,7 +268,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 파일 내 위치를 지정할 경우 결과는 일반적으로 상태 종속적 인코딩이 없는 이진 스트림의 경우에만 유효합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `operator-=` 사용에 대한 샘플은 [operator!=](#op_neq)을 참조하세요.
 
@@ -281,7 +282,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 비교할 파일 위치 표시기입니다.
+*오른쪽* 비교할 파일 위치 표시기입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -291,7 +292,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 멤버 함수는 `(streamoff)*this == (streamoff)right`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `operator+=` 사용에 대한 샘플은 [operator!=](#op_neq)을 참조하세요.
 
@@ -307,7 +308,7 @@ operator streamoff() const;
 
 이 멤버 함수는 저장된 오프셋 멤버 개체와 `fpos_t` 멤버 개체의 일부로 저장된 모든 추가 오프셋을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // fpos_op_streampos.cpp
@@ -354,7 +355,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>매개 변수
 
-`_State` 새 변환 상태입니다.
+*_State* 새로운 변환 상태입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -362,9 +363,9 @@ void state(Statetype _State);
 
 ### <a name="remarks"></a>설명
 
-첫 번째 멤버 함수는 **St** 멤버 개체에 저장된 값을 반환합니다. 두 번째 멤버 함수는 `_State`를 **St** 멤버 개체에 저장합니다.
+에 저장 된 값을 반환 하는 첫 번째 멤버 함수는 `St` 멤버 개체입니다. 두 번째 멤버 함수는 *_State* 에 `St` 멤버 개체입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // fpos_state.cpp

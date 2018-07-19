@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093274"
 ---
 # <a name="caccessorbasegetnumaccessors"></a>CAccessorBase::GetNumAccessors
 클래스로 만든 접근자 수를 검색 합니다.  

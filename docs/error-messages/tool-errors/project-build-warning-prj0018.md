@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317039"
 ---
 # <a name="project-build-warning-prj0018"></a>프로젝트 빌드 경고 PRJ0018
 다음과 같은 환경 변수를 찾지 못한:  

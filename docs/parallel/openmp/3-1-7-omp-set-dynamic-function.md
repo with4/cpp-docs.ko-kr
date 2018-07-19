@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687870"
 ---
 # <a name="317-ompsetdynamic-function"></a>3.1.7 omp_set_dynamic 함수
 **omp_set_dynamic** 함수 하거나 병렬 영역의 실행에 사용할 수 있는 스레드 수의 동적 조정을 해제 합니다. 형식은 다음과 같습니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357736"
 ---
 # <a name="what-is-a-host-object"></a>호스트 개체는 무엇입니까?
 호스트 개체는 특정 창에 대 한 ATL에서 제공 하는 ActiveX 컨트롤 컨테이너를 나타내는 COM 개체. 호스트 개체 하위 클래스 컨테이너 창 컨트롤에 대 한 메시지를 반영할 수는 컨트롤을 사용 하는 데 필요한 컨테이너 인터페이스를 제공 하 고 노출 하는 [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) 및 [ IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md) 인터페이스 컨트롤의 환경을 구성할 수 있도록 합니다.  

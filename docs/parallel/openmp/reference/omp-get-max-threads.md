@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695839"
 ---
 # <a name="ompgetmaxthreads"></a>omp_get_max_threads
 될 경우 병렬 영역 없이 사용할 수 있는 스레드 개수 보다 크거나 같은 정수를 반환 [num_threads](../../../parallel/openmp/reference/num-threads.md) 코드 내에서 해당 지점에서 정의 되었습니다.  

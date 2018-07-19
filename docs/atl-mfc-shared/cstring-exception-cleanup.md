@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355508"
 ---
 # <a name="cstring-exception-cleanup"></a>CString 예외 정리
 이전 버전의 MFC 정리 하 중요 했습니다 [CString](../atl-mfc-shared/reference/cstringt-class.md) 개체 후 사용 합니다. MFC 버전 3.0 이상에서 명시적 정리 작업이 필요 없습니다.  

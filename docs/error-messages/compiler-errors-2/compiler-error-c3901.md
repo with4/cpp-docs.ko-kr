@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269424"
 ---
 # <a name="compiler-error-c3901"></a>컴파일러 오류 C3901
 'accessor_function': 'type' 반환 형식이 있어야 합니다.  

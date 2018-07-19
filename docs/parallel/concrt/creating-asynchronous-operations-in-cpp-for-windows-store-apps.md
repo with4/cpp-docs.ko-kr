@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695761"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>C + + UWP 앱 용 비동기 작업 만들기
 이 문서에서는 런타임 UWP (유니버설 Windows) 응용 프로그램에서 Windows ThreadPool 기반 비동기 작업을 생성 하기 위해 태스크 클래스를 사용할 때 염두에서에 둬야 할 주요 사항 들을 설명 합니다.  

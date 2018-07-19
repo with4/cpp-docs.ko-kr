@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369905"
 ---
 # <a name="txt-files-as-linker-input"></a>링커 입력 파일로 사용하는 .Txt 파일
 LINK에서는 다양 한 텍스트 파일을 추가 입력으로 사용 합니다. [명령 파일](../../build/reference/link-command-files.md) 지정자 (@) 및 [기준 주소](../../build/reference/base-base-address.md) (/ 기본) [/DEF](../../build/reference/def-specify-module-definition-file.md), 및 [/순서](../../build/reference/order-put-functions-in-order.md) 옵션은 모두 텍스트 파일을 지정 합니다. 이러한 파일은 모든 확장, 뿐 아니라.txt 있을 수 있습니다.  

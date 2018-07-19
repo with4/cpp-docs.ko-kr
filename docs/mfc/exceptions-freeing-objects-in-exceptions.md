@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347830"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>예외: 예외의 개체 해제
 이 문서 필요성 및 예외가 발생 하면 개체를 해제 하는 방법을 설명 합니다. 다음과 같은 내용을 다룹니다.  

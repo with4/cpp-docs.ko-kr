@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296109"
 ---
 # <a name="compiler-warning-level-4-c4703"></a>컴파일러 경고(수준 4) C4703
 초기화되지 않았을 수 있는 로컬 포인터 변수 'name'이(가) 사용되었습니다.  

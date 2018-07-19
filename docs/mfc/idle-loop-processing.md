@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d66983eb915c856ecf52e225b71151359a499b4b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20be85f7089f2a53b067d7287780159de51a8c86
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929558"
 ---
 # <a name="idle-loop-processing"></a>유휴 루프 처리
 대부분의 응용 프로그램 "에서"배경입니다. 시간이 오래 걸리는 처리를 수행합니다. 경우에 따라 성능 고려 사항에 따라 이러한 작업에 다중 스레딩을 사용할. 스레드 관련 별도 개발 오버 헤드 하므로 MFC가 유휴 시간 작업 등의 간단한 작업에 대 한 권장 되지 않습니다는 [OnIdle](../mfc/reference/cwinthread-class.md#onidle) 함수입니다. 이 문서는 유휴 프로세스에 중점을 둡니다. 다중 스레딩, 참조에 대 한 자세한 내용은 [다중 스레딩 항목](../parallel/multithreading-support-for-older-code-visual-cpp.md)합니다.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
  MFC를 사용 하 여 개발 된 응용 프로그램에서는 기본 메시지 루프는 `CWinThread` 호출 하는 메시지 루프를 포함 하는 클래스는 [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) Win32 API입니다. 이 호출 또한 루프는 `OnIdle` 의 멤버 함수 `CWinThread` 메시지 사이입니다. 응용 프로그램 재정의 하 여 유휴 시간에 메시지를 처리할 수는 `OnIdle` 함수입니다.  
   
 > [!NOTE]
->  **실행**, `OnIdle`, 다른 특정 멤버 함수는 이제 클래스의 멤버 및 `CWinThread` 아닌 클래스의 `CWinApp`합니다. `CWinApp`는 `CWinThread`에서 파생됩니다.  
+>  `Run``OnIdle`, 다른 특정 멤버 함수는 이제 클래스의 멤버 및 `CWinThread` 아닌 클래스의 `CWinApp`합니다. `CWinApp`는 `CWinThread`에서 파생됩니다.  
   
  유휴 처리를 수행 하는 방법에 대 한 자세한 내용은 참조 [OnIdle](../mfc/reference/cwinthread-class.md#onidle) 에 *MFC 참조*합니다.  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCDocView#8](../mfc/codesnippet/cpp/idle-loop-processing_1.cpp)]  
   
- 이 코드는 함수에 포함 된 작업을 수행 하는 유휴 상태 처리가으로 반복 됩니다. 해당 루프 내에서 중첩된 된 루프 반복 해 서 호출 **PeekMessage**합니다. 루프를 호출 하는 호출 하는 0이 아닌 값을 반환 하는 경우으로 `CWinThread::PumpMessage` 일반 메시지 변환 및 디스패치를 수행 하려면. 하지만 `PumpMessage` 문서화 않습니다 ThrdCore.Cpp 파일 Visual c + + 설치의 \atlmfc\src\mfc 디렉터리에서 해당 소스 코드를 검사할 수 있습니다.  
+ 이 코드는 함수에 포함 된 작업을 수행 하는 유휴 상태 처리가으로 반복 됩니다. 해당 루프 내에서 중첩된 된 루프 반복 해 서 호출 `PeekMessage`합니다. 루프를 호출 하는 호출 하는 0이 아닌 값을 반환 하는 경우으로 `CWinThread::PumpMessage` 일반 메시지 변환 및 디스패치를 수행 하려면. 하지만 `PumpMessage` 문서화 않습니다 ThrdCore.Cpp 파일 Visual c + + 설치의 \atlmfc\src\mfc 디렉터리에서 해당 소스 코드를 검사할 수 있습니다.  
   
  한 번 안쪽 루프 종료 외부 루프 처리를 수행 유휴 하나 이상의 호출을 통해 `OnIdle`합니다. MFC의 목적에서 첫 번째 호출이 됩니다. 에 대 한 추가 호출을 만들 수 있습니다 `OnIdle` 직접 백그라운드 작업을 수행할 수 있습니다.  
   

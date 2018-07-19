@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382595"
 ---
 # <a name="walkthroughs-mfc"></a>연습(MFC)
 이 단원에는 새 MFC 라이브러리 기능과 연결된 다양한 작업을 안내하는 문서가 포함되어 있습니다.  

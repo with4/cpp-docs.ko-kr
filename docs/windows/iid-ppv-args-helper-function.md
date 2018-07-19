@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882344"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper 함수
 지정된 된 인수 형식에서 파생 되었는지 확인는 `IUnknown` 인터페이스입니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409438"
 ---
 # <a name="signal-action-constants"></a>신호 작업 상수
 인터럽트 신호를 받을 때 수행되는 작업은 `func` 값에 따라 다릅니다.  

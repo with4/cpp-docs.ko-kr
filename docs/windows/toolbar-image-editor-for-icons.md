@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890556"
 ---
 # <a name="toolbar-image-editor-for-icons"></a>도구 모음(아이콘에 대한 이미지 편집기)
 **이미지 편집기** 도구 모음에 그리기, 그리기, 텍스트를 입력, 지우기, 및 뷰를 조작 하는 도구가 있습니다. 또한 각 도구를 사용 하기 위한 옵션을 선택할 수 있는 옵션 선택기를 포함 합니다. 예를 들어 다양 한 브러시 너비, 배율 요소 및 선 스타일에서 선택할 수 있습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343245"
 ---
 # <a name="creating-the-month-calendar-control"></a>MonthCalendar 컨트롤 만들기
 달력 컨트롤을 만드는 방법은 대화 상자에서 컨트롤을 사용 중인지 또는 비모달 창에서 만드는지에 따라 달라집니다.  

@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a117a7f9299591d971ecbfdd0a681b008937da33
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7d8b87b51bfeef68ef8bfe22c8e7e201929aa3f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957076"
 ---
 # <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt; 구조체
 
-`wchar_t` 형식 요소에 대한 템플릿 구조체 **char_traits\<CharType>** 의 특수화인 클래스입니다.
+템플릿 구조체의 특수화 인 클래스 **char_traits\<CharType >** 형식의 요소 **wchar_t**합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -36,7 +37,7 @@ struct char_traits<wchar_t>;
 
 ## <a name="remarks"></a>설명
 
-특수화를 사용하면 구조체에서 이 `wchar_t` 형식의 개체를 조작하는 라이브러리 함수를 활용할 수 있습니다.
+특수화는이 형식의 개체를 조작 하는 라이브러리 함수를 활용 하는 구조체를 허용 **wchar_t**합니다.
 
 ## <a name="requirements"></a>요구 사항
 

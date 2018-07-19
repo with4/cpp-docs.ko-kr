@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248528"
 ---
 # <a name="compiler-error-c3190"></a>컴파일러 오류 C3190
 제공 된 템플릿 인수를 갖는 ' 인스턴스화' t y'의 모든 멤버 함수의 명시적 인스턴스화가 아닙니다.  

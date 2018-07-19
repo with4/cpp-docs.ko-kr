@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d335c684ab46846e9d3c49ef45522cf7288d916a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e341b15baa54b57148582c92beb9d231da8c96bb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954573"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -41,14 +42,14 @@ C++ 언어와 C++ 표준 라이브러리는 두 가지 문자열 형식을 지�
 
 - Null로 종료되는 문자 배열은 보통 C 문자열이라고 합니다.
 
-- 모든 `basic_string` 형식 템플릿 인수를 처리하는 `char` 형식의 템플릿 클래스 개체입니다.
+- 형식의 템플릿 클래스 개체 `basic_string`를 처리 하는 모든 **char**-템플릿 인수입니다.
 
 ### <a name="typedefs"></a>형식 정의
 
 |형식 이름|설명|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|`basic_string` 형식 요소가 포함된 템플릿 클래스 `char`의 특수화를 `string`으로 설명하는 형식입니다.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|`basic_string` 형식 요소가 포함된 템플릿 클래스 `wchar_t`의 특수화를 `wstring`으로 설명하는 형식입니다.|
+|[string](../standard-library/string-typedefs.md#string)|템플릿 클래스의 특수화를 설명 하는 형식 `basic_string` 형식의 요소를 사용 하 여 **char** 로 `string`합니다.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|템플릿 클래스의 특수화를 설명 하는 형식 `basic_string` 형식의 요소를 사용 하 여 **wchar_t** 로 `wstring`합니다.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|`basic_string` 형식 요소를 기준으로 템플릿 클래스 `char16_t`의 특수화를 설명하는 형식입니다.|
 |[u32string](../standard-library/string-typedefs.md#u32string)|`basic_string` 형식 요소를 기준으로 템플릿 클래스 `char32_t`의 특수화를 설명하는 형식입니다.|
 
@@ -71,19 +72,19 @@ C++ 언어와 C++ 표준 라이브러리는 두 가지 문자열 형식을 지�
 |||
 |-|-|
 |[swap](../standard-library/string-functions.md#swap)|두 문자열의 문자 배열을 교환합니다.|
-|[stod](../standard-library/string-functions.md#stod)|문자 시퀀스를 `double.`로 변환합니다.|
-|[stof](../standard-library/string-functions.md#stof)|문자 시퀀스를 `float`으로 변환합니다.|
+|[stod](../standard-library/string-functions.md#stod)|문자 시퀀스를 변환 된 **이중**합니다.|
+|[stof](../standard-library/string-functions.md#stof)|문자 시퀀스를 변환 된 **float**합니다.|
 |[stoi](../standard-library/string-functions.md#stoi)|문자 시퀀스를 정수로 변환합니다.|
-|[stold](../standard-library/string-functions.md#stold)|문자 시퀀스를 `long double`으로 변환합니다.|
-|[stoll](../standard-library/string-functions.md#stoll)|문자 시퀀스를 `long long`으로 변환합니다.|
-|[stoul](../standard-library/string-functions.md#stoul)|문자 시퀀스를 `unsigned long`으로 변환합니다.|
-|[stoull](../standard-library/string-functions.md#stoull)|문자 시퀀스를 `unsigned long long`으로 변환합니다.|
+|[stold](../standard-library/string-functions.md#stold)|문자 시퀀스를 변환 된 **long double**합니다.|
+|[stoll](../standard-library/string-functions.md#stoll)|문자 시퀀스를 변환 된 **long long**합니다.|
+|[stoul](../standard-library/string-functions.md#stoul)|문자 시퀀스를 변환 합니다는 **부호 없는 long**합니다.|
+|[stoull](../standard-library/string-functions.md#stoull)|문자 시퀀스를 변환 합니다는 **부호 없는 long long**합니다.|
 |[to_string](../standard-library/string-functions.md#to_string)|값을 `string`로 변환합니다.|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|값을 와이드 `string`으로 변환합니다.|
 
 ### <a name="functions"></a>함수
 
-|함수|설명|
+|기능|설명|
 |-|-|
 |[getline 템플릿](../standard-library/string-functions.md#getline)|입력 스트림에서 문자열을 한 줄씩 추출합니다.|
 

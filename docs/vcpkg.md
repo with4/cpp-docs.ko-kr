@@ -14,11 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca4c672000278fcfc00ba8c08a7a160faff151aa
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: af51ee7c6fa4e1243b400be58ac22ba833cfae80
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705440"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Windows, Linux 및 MacOS용 C++ 패키지 관리자
 
@@ -120,7 +121,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 그러면 폴더/헤더를 입력하는 것만으로 헤더를 포함할 수 있으며 자동 완성이 도움이 됩니다. 라이브러리에 연결하거나 프로젝트 참조를 추가하는 추가 단계는 필요 없습니다. 다음 그림에서는 Visual Studio가 azure-storage-cpp 헤더를 찾는 방법을 보여 줍니다. vcpkg는 대상 플랫폼으로 분할된 **/installed** 하위 폴더에 헤더를 배치합니다. 다음 다이어그램에서는 라이브러리의 **/was** 하위 폴더에 있는 포함 파일의 목록을 보여줍니다.
 
-![vcpkg Intellisense 통합](media/vcpkg-intellisense.png "vcpkg 및 Intellisense")
+![vcpkg IntelliSense 통합](media/vcpkg-intellisense.png "vcpkg 및 IntelliSense")
 
 ### <a name="per-project"></a>프로젝트 단위
 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354448"
 ---
 # <a name="atl-collection-and-enumerator-classes"></a>ATL 컬렉션 및 열거자 클래스
 ATL은 컬렉션 및 열거자를 구현 하려면 다음 클래스를 제공 합니다.  

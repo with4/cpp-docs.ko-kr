@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860348"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy 열거형
 종료 상태를 전환 하는 비동기 작업의 시도 하는 방법을 나타냅니다 완료 또는 오류는 클라이언트 요청 취소 된 상태에 대해 작동 해야 합니다.  

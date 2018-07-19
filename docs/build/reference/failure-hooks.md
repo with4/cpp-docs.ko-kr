@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371787"
 ---
 # <a name="failure-hooks"></a>오류 후크
 오류 후크를 동일한 방식으로 사용 하 여 [알림 후크](../../build/reference/notification-hooks.md)합니다. 처리 되도록 적합 한 값을 반환 하려면 후크 라우팅 요구 (HINSTANCE 또는 FARPROC) 계속할 수 또는 0을 예외가 발생 하도록 합니다.  

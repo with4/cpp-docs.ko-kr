@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889932"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 자세한 오류 반환에 대한 지원을 구현합니다.  

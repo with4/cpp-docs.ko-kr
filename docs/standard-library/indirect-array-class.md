@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f1d24fb90b99d7b757f628be4b39d42f0c0051f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 676cc8ea493d113e9ef8a6f85108fdf3bad6ce5f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959509"
 ---
 # <a name="indirectarray-class"></a>indirect_array 클래스
 
@@ -30,11 +31,11 @@ ms.lasthandoff: 05/07/2018
 
 ## <a name="remarks"></a>설명
 
-이 클래스는 **valarray\<Type>** 개체에서 선택할 요소의 시퀀스에 대해 설명하는 **valarray<size_t>** 클래스의 **xa** 개체와 함께 [valarray](../standard-library/valarray-class.md)**\<Type>** 클래스의 **va** 개체에 대한 참조를 저장하는 개체에 대해 설명합니다.
+개체에 대 한 참조를 저장 하는 개체를 설명 하는 클래스 `va` 클래스의 [valarray](../standard-library/valarray-class.md)**\<유형 >**, 개체와 함께 `xa` 클래스의 `valarray<size_t>`, 선택할 요소의 시퀀스를 설명 하는 `valarray<Type>` 개체입니다.
 
-**indirect_array\<Type>** 개체만 생성하려면 **va[xa]** 형식의 식을 작성합니다. 그러면 indirect_array 클래스의 멤버 함수는 선택한 요소의 시퀀스에만 영향을 준다는 점을 제외하고 **valarray\<Type>** 에 대해 정의된 해당 함수 시그니처처럼 동작합니다.
+생성 하는 `indirect_array<Type>` 개체 형식의 식을 작성 해야만 `va[xa]`합니다. Indirect_array 클래스의 멤버 함수에 대해 정의 된 해당 함수 시그니처 처럼 동작 `valarray<Type>`에 선택한 요소의 시퀀스에만 영향을 제외 하 고, 합니다.
 
-시퀀스는 **xa.**[size](../standard-library/valarray-class.md#size) 요소로 구성되며, 여기서 `I` 요소는 **va** 내에서 **xa**[ `I`] 인덱스가 됩니다.
+시퀀스 이루어져 **xa.** [크기](../standard-library/valarray-class.md#size) 요소에 있는 요소 `I` 인덱스가 됩니다 **xa**[ `I`] 내에서 `va`합니다.
 
 ## <a name="example"></a>예제:
 

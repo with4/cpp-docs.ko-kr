@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf15ef0b5134af7831cf2e71b4235df9534f3425
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8775c681954799e2239da5ad429f9f8131ca25b1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958892"
 ---
 # <a name="addvolatile-class"></a>add_volatile 클래스
 
-지정된 형식에서 휘발성 형식을 만듭니다.
+만듭니다는 **volatile** 지정된 된 형식에서 형식입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -43,9 +44,9 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ## <a name="remarks"></a>설명
 
-`add_volatile<T>`의 인스턴스에는 *T*가 참조, 함수 또는 휘발성 한정 형식인 경우 *T*, 아닌 경우 `volatile` *T*인 멤버 typedef `type`이 있습니다. `add_volatile_t` 별칭은 멤버 typedef `type`에 액세스하기 위한 바로 가기입니다.
+인스턴스의 `add_volatile<T>` 멤버가 **typedef** `type` 즉 *T* 경우 *T* 대 한 참조, 함수 또는 휘발성 한정 형식인,이 고, 그렇지 **volatile** *T*합니다. 별칭 `add_volatile_t` 멤버에 액세스 하려면 바로 가기입니다 **typedef** `type`합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 #include <type_traits>

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5066e793c58dca9ccc12ccc159a010654df3efbc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 68d2ca3de8e6e3c05095580ce63a5bac253548c0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955454"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -54,7 +55,7 @@ Visual Studio는 확인 및 확인되지 않은 반복기에 대한 다양한 �
 
 ### <a name="functions"></a>함수
 
-|함수|설명|
+|기능|설명|
 |-|-|
 |[advance](../standard-library/iterator-functions.md#advance)|지정된 위치 수만큼 반복기를 증가시킵니다.|
 |[back_inserter](../standard-library/iterator-functions.md#back_inserter)|지정된 컨테이너 뒤에 요소를 삽입할 수 있는 반복기를 만듭니다.|
@@ -88,22 +89,22 @@ Visual Studio는 확인 및 확인되지 않은 반복기에 대한 다양한 �
 
 |클래스|설명|
 |-|-|
-|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|출력 반복기 개체를 설명하는 템플릿 클래스입니다. 여기에 저장되는 컨테이너라는 보호된 **pointer** 개체를 통해 액세스하는 **Container** 형식의 컨테이너에 요소를 삽입합니다.|
-|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|양방향 반복기를 나타내는 **iterator_category** 함수에 반환 형식을 제공하는 클래스입니다.|
+|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|출력 반복기 개체를 설명하는 템플릿 클래스입니다. 형식의 컨테이너에 요소를 삽입 `Container`, 보호를 통해 액세스 하는 `pointer` 저장 개체 컨테이너를 호출 합니다.|
+|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|에 대 한 반환 형식을 제공 하는 클래스는 `iterator_category` 양방향 반복기를 나타내는 함수입니다.|
 |[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|확인된 반복기인 임의 액세스를 사용하는 배열에 액세스하는 클래스입니다. **참고:**  이 클래스는 C++ 표준 라이브러리의 Microsoft 확장입니다. 이 함수를 사용하여 구현한 코드는 이 Microsoft 확장을 지원하지 않는 C++ 표준 빌드 환경으로 이식할 수 없습니다.|
-|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|정방향 반복기를 나타내는 **iterator_category** 함수에 반환 형식을 제공하는 클래스입니다.|
-|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|출력 반복기 개체를 설명하는 템플릿 클래스입니다. 여기에 저장되는 컨테이너라는 보호된 **pointer** 개체를 통해 액세스하는 **Container** 형식의 컨테이너에 요소를 삽입합니다.|
-|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|입력 반복기를 나타내는 **iterator_category** 함수에 반환 형식을 제공하는 클래스입니다.|
-|[insert_iterator](../standard-library/insert-iterator-class.md)|출력 반복기 개체를 설명하는 템플릿 클래스입니다. 여기에 저장되는 컨테이너라는 보호된 **pointer** 개체를 통해 액세스하는 **Container** 형식의 컨테이너에 요소를 삽입합니다. 또한 **Container::iterator** 클래스의 **iter**이라는 보호된 **iterator** 개체를 저장합니다.|
-|[istream_iterator](../standard-library/istream-iterator-class.md)|입력 반복기 개체를 설명하는 템플릿 클래스입니다. 여기에 저장되는 개체를 통해 액세스하는, `basic_istream`\<**Elem**, **Tr**>에 대한 형식 포인터의 입력 스트림에서 **Ty** 클래스의 개체를 추출합니다.|
-|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|입력 반복기 개체를 설명하는 템플릿 클래스입니다. 여기에 저장되는 개체를 통해 액세스하는, `basic_streambuf`\<**Elem**, **Tr**>에 대한 형식 **포인터**의 출력 스트림 버퍼에 **Elem** 클래스의 요소를 삽입합니다.|
+|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|에 대 한 반환 형식을 제공 하는 클래스는 `iterator_category` 하는 정방향 반복기를 나타내는 함수입니다.|
+|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|출력 반복기 개체를 설명하는 템플릿 클래스입니다. 형식의 컨테이너에 요소를 삽입 `Container`, 보호를 통해 액세스 하는 `pointer` 저장 개체 컨테이너를 호출 합니다.|
+|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|에 대 한 반환 형식을 제공 하는 클래스는 `iterator_category` 는 입력된 반복기를 나타내는 함수입니다.|
+|[insert_iterator](../standard-library/insert-iterator-class.md)|출력 반복기 개체를 설명하는 템플릿 클래스입니다. 형식의 컨테이너에 요소를 삽입 `Container`, 보호를 통해 액세스 하는 `pointer` 저장 개체 컨테이너를 호출 합니다. 또한 보호 된 저장 `iterator` 클래스의 개체 `Container::iterator`라는 `iter`합니다.|
+|[istream_iterator](../standard-library/istream-iterator-class.md)|입력 반복기 개체를 설명하는 템플릿 클래스입니다. 클래스의 개체를 추출 `Ty` 형식 포인터를 저장 하는 개체를 통해 액세스 하는 입력 스트림에서 `basic_istream` \< **Elem**하십시오 **Tr**>.|
+|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|입력 반복기 개체를 설명하는 템플릿 클래스입니다. 클래스의 요소를 삽입 `Elem` 는 출력 스트림 버퍼에 액세스 하는 개체를 통해 해당 형식의 저장소 `pointer` 에 `basic_streambuf` \< **Elem**하십시오 **Tr** >.|
 |[iterator](../standard-library/iterator-struct.md)|템플릿 클래스는 모든 반복기에 대해 기본 형식으로 사용됩니다.|
 |[iterator_traits](../standard-library/iterator-traits-struct.md)|다른 반복기 형식과 관련이 되어 같은 방식으로 참조되는 중요한 형식을 제공하는 템플릿 도우미 클래스입니다.|
 |[move_iterator](../standard-library/move-iterator-class.md)|다음 `move_iterator` 개체는 `RandomIterator` 형식의 임의 액세스 반복기를 저장합니다. 역참조 되는 경우를 제외하고 임의 액세스 반복기처럼 동작합니다. 다음 `operator*` 결과는 `value_type&&:`을 만들기 위해 암시적으로 `rvalue reference`로 캐스팅됩니다.|
-|[ostream_iterator](../standard-library/ostream-iterator-class.md)|출력 반복기 개체를 설명하는 템플릿 클래스입니다. 여기에 저장되는 개체를 통해 액세스하는, `basic_ostream`\<**Elem**, **Tr**>에 대한 형식 **포인터**의 출력 스트림에 **Type** 클래스의 개체를 삽입합니다.|
-|[ostreambuf_iterator 클래스](../standard-library/ostreambuf-iterator-class.md)|출력 반복기 개체를 설명하는 템플릿 클래스입니다. 여기에 저장되는 개체를 통해 액세스하는, `basic_streambuf`\<**Elem**, **Tr**>에 대한 형식 포인터의 출력 스트림 버퍼에 **Elem** 클래스의 요소를 삽입합니다.|
-|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|출력 반복기를 나타내는 **iterator_category** 함수에 반환 형식을 제공하는 클래스입니다.|
-|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|임의 액세스 반복기를 나타내는 **iterator_category** 함수에 반환 형식을 제공하는 클래스입니다.|
+|[ostream_iterator](../standard-library/ostream-iterator-class.md)|출력 반복기 개체를 설명하는 템플릿 클래스입니다. 클래스의 개체를 삽입 `Type` 는 출력 스트림에 액세스 하는 개체를 통해 해당 형식의 저장소 `pointer` 하 `basic_ostream` \< **Elem**를 **Tr**>.|
+|[ostreambuf_iterator 클래스](../standard-library/ostreambuf-iterator-class.md)|출력 반복기 개체를 설명하는 템플릿 클래스입니다. 클래스의 요소를 삽입 `Elem` 형식 포인터를 저장 하는 개체를 통해 액세스 하는 출력 스트림 버퍼를 `basic_streambuf` \< **Elem**하십시오 **Tr**>.|
+|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|에 대 한 반환 형식을 제공 하는 클래스 `iterator_category` 출력 반복기를 나타내는 함수입니다.|
+|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|에 대 한 반환 형식을 제공 하는 클래스 `iterator_category` 임의 액세스 반복기를 나타내는 함수입니다.|
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|반대 방향에서만 임의 액세스 반복기처럼 동작하는 개체를 설명하는 템플릿 클래스입니다.|
 |[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|확인되지 않은 반복기인 임의 액세스를 사용하는 배열에 액세스하는 클래스입니다. **참고:**  이 클래스는 C++ 표준 라이브러리의 Microsoft 확장입니다. 이 함수를 사용하여 구현한 코드는 이 Microsoft 확장을 지원하지 않는 C++ 표준 빌드 환경으로 이식할 수 없습니다.|
 

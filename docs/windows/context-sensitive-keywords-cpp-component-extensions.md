@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871525"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>상황에 맞는 키워드(C++ 구성 요소 확장)
 *상황에 맞는 키워드* 는 특정 컨텍스트에서만에서 인식 되는 언어 요소입니다. 특정 컨텍스트가 아닐 경우 상황에 맞는 키워드는 사용자 정의 기호일 수 있습니다.  

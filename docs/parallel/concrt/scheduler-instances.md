@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693863"
 ---
 # <a name="scheduler-instances"></a>Scheduler 인스턴스
 이 문서에서는 동시성 런타임 및 사용 하는 방법에 대 한 스케줄러 인스턴스의 역할과 설명는 [concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md) 및 [concurrency:: currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md) 만들고 관리 하는 클래스 스케줄러 인스턴스입니다. 스케줄러 인스턴스는 특정 유형의 작업 부하와 명시적 일정 예약 정책을 연결 하려는 경우에 유용 합니다. 예를 들어 높은 스레드 우선 순위로 일부 작업을 실행하기 위한 스케줄러 인스턴스를 하나 만들고, 기본 스케줄러를 사용하여 보통 스레드 우선 순위로 다른 작업을 실행할 수 있습니다.  

@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a3147ae06e4deedf48415b4ae605e524458343c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51479d6571a58fccf57c9060254cd0c445f8483b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944827"
 ---
 # <a name="relational-function-templates"></a>관계형 함수 템플릿
 **Microsoft 전용**  
@@ -27,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      template<typename _InterfaceType> bool operator==(  
+template<typename _InterfaceType> bool operator==(  
    int NULL,  
    _com_ptr_t<_InterfaceType>& p   
 );  
@@ -87,7 +88,7 @@ template<typename _Interface,
  *i*  
  원시 인터페이스 포인터입니다.  
   
- `p`  
+ *p*  
  스마트 포인터입니다.  
   
 ## <a name="remarks"></a>설명  

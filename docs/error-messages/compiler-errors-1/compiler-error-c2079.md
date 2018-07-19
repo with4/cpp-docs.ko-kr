@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168034"
 ---
 # <a name="compiler-error-c2079"></a>컴파일러 오류 C2079
 'identifier' 정의 되지 않은 클래스/구조체/공용 'name'를 사용합니다.  

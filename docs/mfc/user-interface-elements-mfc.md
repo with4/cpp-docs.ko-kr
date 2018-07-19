@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383244"
 ---
 # <a name="user-interface-elements-mfc"></a>사용자 인터페이스 요소(MFC)
 Microsoft Foundation 클래스 (MFC) 라이브러리를 사용 하 여 응용 프로그램에 대 한 사용자 인터페이스를 만드는 방법에 대 한 자세한 내용은 다음 항목을 참조 합니다.  

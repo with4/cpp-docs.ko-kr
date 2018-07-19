@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091818"
 ---
 # <a name="cbookmarkoperator-"></a>CBookmark::operator =
 할당 한 `CBookmark` 개체를 다른 개체입니다.  

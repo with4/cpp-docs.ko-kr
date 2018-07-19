@@ -13,6 +13,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33848517"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>잠재적인 업그레이드 문제 개요(Visual C++)
 

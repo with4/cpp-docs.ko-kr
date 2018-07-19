@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090590"
 ---
 # <a name="odbc-classes-and-threads"></a>ODBC 클래스와 스레드
 MFC 4.2 부터는 지원은 다중 스레드 MFC ODBC 클래스에 대 한 합니다. 그러나 단, MFC 지원 하지 않는 다중 스레딩 DAO 클래스에 대 한 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380107"
 ---
 # <a name="specifying-an-inline-file"></a>인라인 파일 지정
 두 개의 꺾쇠 괄호를 지정 (<<) 명령에 여기서 *filename* 표시 하는 것입니다. 꺾쇠 괄호 매크로 확장 될 수 없습니다.  

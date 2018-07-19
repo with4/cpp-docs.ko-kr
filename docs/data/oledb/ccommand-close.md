@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089766"
 ---
 # <a name="ccommandclose"></a>CCommand::Close
 명령과 연결 된 접근자 행 집합을 해제 합니다.  

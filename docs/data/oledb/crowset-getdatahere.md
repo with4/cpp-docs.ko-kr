@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091160"
 ---
 # <a name="crowsetgetdatahere"></a>CRowset::GetDataHere
 현재 행의 데이터를 검색 하 고 지정된 된 버퍼에 배치 합니다.  

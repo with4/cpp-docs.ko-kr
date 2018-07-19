@@ -25,14 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89d1e9269536ee28f2c8dd29819ff594c89c186b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6720ef830563e24d887071e1ee1e4a8c31df05c
+ms.sourcegitcommit: bb4488366e4581c561ca1e573a2b99b71d4c6288
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38993570"
 ---
 # <a name="iregistrar-interface"></a>IRegistrar 인터페이스
-이 인터페이스 atliface.h에 정의 되어 있으며 내부적으로 사용 됩니다 CAtlModule 멤버 함수에 의해 같은 [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)합니다.   
+이 인터페이스 atliface.h에 정의 되어 있으며 내부적으로 사용 됩니다 CAtlModule 멤버 함수에 의해와 같은 [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)합니다.   
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 typedef interface IRegistrar IRegistrar;
 ```  
 ## <a name="remarks"></a>설명
-항목을 참조 [를 사용 하 여 대체 가능 매개 변수 (The 등록자 전처리기)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) 내용을 확인 합니다.  
+항목을 참조 하세요 [를 사용 하 여 대체 가능 매개 변수 (The 등록자 전처리기)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) 대 한 자세한 내용은 합니다.  
 
 ## <a name="members"></a>멤버  
   
@@ -49,13 +50,13 @@ typedef interface IRegistrar IRegistrar;
 |이름|설명|  
 |----------|-----------------|  
 |[IRegistrar::ResourceRegisterSz](#resourceregistersz)|리소스를 등록합니다. |  
-|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| 리소스를 등록 취소합니다.|  
-|[IRegistrar::FileRegister](#fileregister)|파일을 등록 합니다.|  
-|[IRegistrar::FileUnregister](#fileunregister)|파일의 등록을 취소 합니다.|  
+|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| 리소스 등록을 취소 합니다.|  
+|[IRegistrar::FileRegister](#fileregister)|파일을 등록합니다.|  
+|[IRegistrar::FileUnregister](#fileunregister)|파일을 등록 취소합니다.|  
 |[IRegistrar::StringRegister](#stringregister)|문자열을 등록합니다.|  
-|[IRegistrar::StringUnregister](#stringunregister)|문자열의 등록을 취소합니다|  
+|[IRegistrar::StringUnregister](#stringunregister)|문자열을 등록 취소|  
 |[IRegistrar::ResourceRegister](#resourceregister)|리소스를 등록합니다.|  
-|[IRegistrar::ResourceUnregister](#resourceunregister)|리소스를 등록 취소합니다.| 
+|[IRegistrar::ResourceUnregister](#resourceunregister)|리소스 등록을 취소 합니다.| 
   
 
  
@@ -75,7 +76,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
  
   
 ##  <a name="resourceunregistersz"></a>  IRegistrar::ResourceUnregisterSz  
- 리소스를 등록 취소합니다.
+ 리소스 등록을 취소 합니다.
   
 ```
 virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz( 
@@ -86,7 +87,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz(
   
   
 ##  <a name="fileregister"></a>  IRegistrar::FileRegister  
-파일을 등록 합니다.
+파일을 등록합니다.
   
 ```
 virtual HRESULT STDMETHODCALLTYPE FileRegister( 
@@ -95,7 +96,7 @@ virtual HRESULT STDMETHODCALLTYPE FileRegister(
   
   
 ##  <a name="fileunregister"></a>  IRegistrar::FileUnregister  
-파일의 등록을 취소 합니다.
+파일을 등록 취소합니다.
 
 ```
 virtual HRESULT STDMETHODCALLTYPE FileUnregister( 
@@ -131,7 +132,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
    
   
 ##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister  
- 리소스를 등록 취소합니다.  
+ 리소스 등록을 취소 합니다.  
   
 ```
 virtualHRESULT STDMETHODCALLTYPE ResourceUnregister( 

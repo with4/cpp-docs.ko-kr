@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389283"
 ---
 # <a name="for-statement-c"></a>for 문 (C)
 **for** 문을 사용하면 지정한 횟수만큼 문 또는 복합 문을 반복할 수 있습니다. **for** 문의 본문은 선택적 조건이 false가 될 때까지 0번 이상 실행됩니다. **for** 문 내에 선택적 식을 사용하여 **for** 문의 실행 중 값을 초기화하고 변경할 수 있습니다.  

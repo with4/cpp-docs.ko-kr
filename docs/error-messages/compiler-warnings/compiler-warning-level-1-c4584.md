@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281166"
 ---
 # <a name="compiler-warning-level-1-c4584"></a>컴파일러 경고(수준 1) C4584
 'class1': 기본 'class2' 클래스는 이미 'class3'의 기본 클래스  

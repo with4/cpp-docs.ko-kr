@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c6f4a8779bcc92b48896fa016944df27c58903
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 366a0ec46b69567e9f03f1e0667555acd08f31be
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960956"
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution 클래스
 
@@ -79,13 +80,13 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-*RealType* 부동 소수점 결과 형식 기본값이 `double`합니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
+*RealType* 부동 소수점 결과 형식에 기본값이 **double**합니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
 
 *URNG* 균일 난수 생성기 엔진입니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-코시 분포에 따라 분포된 경우 템플릿 클래스는 사용자 지정 부동 소수점 형식 또는 아무것도 제공되지 않았다면 `double` 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
+부동 소수점는 사용자 지정 값을 생성 하는 분포를 설명 하는 템플릿 클래스 형식 또는 형식 **이중** 코시 분포에 따라 제공 하지 않으면 배포 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
 ||||
 |-|-|-|
@@ -106,7 +107,7 @@ public:
 
 코시 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [Cauchy Distribution](http://go.microsoft.com/fwlink/p/?linkid=400523)(코시 분포)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // compile with: /EHsc /W4
@@ -262,7 +263,7 @@ explicit cauchy_distribution(const param_type& parm);
 
 *b* 는 `b` 분포 매개 변수입니다.
 
-*매개 변수* 는 `param_type` 분포를 생성 하는 데 사용 되는 구조입니다.
+*parm* 는 `param_type` 분포를 생성 하는 데 사용 되는 구조입니다.
 
 ### <a name="remarks"></a>설명
 

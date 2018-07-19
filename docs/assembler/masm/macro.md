@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054447"
 ---
 # <a name="macro"></a>MACRO
 호출 매크로 블록 표시 *이름* 설정 *매개 변수* 매크로 호출 될 때 자리 표시자 인수를 전달 합니다.  

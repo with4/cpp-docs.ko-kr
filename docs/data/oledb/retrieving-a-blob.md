@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105207"
 ---
 # <a name="retrieving-a-blob"></a>BLOB 검색
 다양 한 방법으로 binary large object (BLOB)을 검색할 수 있습니다. 사용할 수 있습니다 **DBTYPE_BYTES** 바이트의 시퀀스로 BLOB를 검색 하거나 같은 인터페이스를 사용 하 여 `ISequentialStream`합니다. 자세한 내용은 참조 [and OLE](https://msdn.microsoft.com/en-us/library/ms711511.aspx) 에 *OLE DB Programmer's Reference*합니다.  

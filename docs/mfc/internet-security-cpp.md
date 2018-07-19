@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348853"
 ---
 # <a name="internet-security-c"></a>인터넷 보안(C++)
 코드 보안은 인터넷 응용 프로그램의 사용자와 개발자를 위한 중요 한 문제입니다. 위험이 있는: 악의적인 코드, 변조 되었거나, 코드 및 작성자 또는 알 수 없는 사이트에서 코드입니다.  

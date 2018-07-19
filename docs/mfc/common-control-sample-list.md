@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341041"
 ---
 # <a name="common-control-sample-list"></a>공용 컨트롤 샘플 목록
 공용 컨트롤을 설명 하는 다음 샘플 프로그램을 참조 하십시오.  

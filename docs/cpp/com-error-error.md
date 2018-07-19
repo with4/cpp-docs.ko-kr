@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02afac78de5eb5908d477f8503ceeebffe46f672
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 21f2da8c10b9b796740144f81d0390f1af124cab
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942057"
 ---
 # <a name="comerrorerror"></a>_com_error::Error
 **Microsoft 전용**  
   
- 생성자에 전달된 `HRESULT`를 검색합니다.  
+ 생성자에 전달 된 HRESULT를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,10 +38,10 @@ HRESULT Error( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 생성자에 전달된 원시 `HRESULT` 항목입니다.  
+ 원시 HRESULT 항목 생성자에 전달 합니다.  
   
 ## <a name="remarks"></a>설명  
- `HRESULT` 개체에서 캡슐화된 `_com_error` 항목을 검색합니다.  
+ 캡슐화 된 HRESULT 항목 검색을 `_com_error` 개체입니다.  
   
  **Microsoft 전용 종료**  
   

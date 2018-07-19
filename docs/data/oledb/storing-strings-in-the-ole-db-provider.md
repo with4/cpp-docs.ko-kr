@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106988"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>OLE DB 공급자에 문자열 저장
 MyProviderRS.h, ATL OLE DB 공급자 마법사 라는 기본 사용자 레코드를 만듭니다. `CWindowsFile`합니다. 수정 하거나 두 문자열을 처리 하려면 `CWindowsFile` 또는 다음 코드에 표시 된 대로 사용자 고유의 레코드를 추가 합니다.  

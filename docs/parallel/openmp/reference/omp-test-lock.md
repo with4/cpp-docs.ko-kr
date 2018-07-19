@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691939"
 ---
 # <a name="omptestlock"></a>omp_test_lock
 잠금을 설정 하려고 시도 하지만 스레드 실행을 차단 하지 않습니다.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096654"
 ---
 # <a name="crowsetaddrefrows"></a>CRowset::AddRefRows
 호출 [irowset:: Addrefrows](https://msdn.microsoft.com/en-us/library/ms719619.aspx) 현재 행 핸들와 관련 된 참조 횟수를 1) (씩 증가 합니다.  

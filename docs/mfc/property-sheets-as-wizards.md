@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347333"
 ---
 # <a name="property-sheets-as-wizards"></a>마법사 역할을 하는 속성 시트
 마법사 속성 시트의 주요 특징은 탐색 탭 대신 다음 또는 다시, 완료 및 취소 단추와 함께 제공 됩니다. 호출 해야 [CPropertySheet::SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode) 호출 하기 전에 [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) 에이 기능을 활용 하려면 속성 시트 개체입니다.  

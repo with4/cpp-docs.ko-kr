@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226267"
 ---
 # <a name="fatal-error-c1128"></a>심각한 오류 C1128
 섹션 수가 개체 파일 형식 한도 초과 했습니다: /bigobj를 사용 하 여 컴파일  

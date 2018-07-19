@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20b4015e5bdbb0ad015f3bb5299e888c862567c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a743398b60bc51118045b00e8caf4effde2c68da
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944224"
 ---
 # <a name="false-c"></a>false (C++)
-이 키워드는 형식의 변수에 대 한 두 값 중 하나 [bool](../cpp/bool-cpp.md) 조건식 (조건식은 이제는 **true** 부울 식). 예를 들어 경우 `i` 형식의 변수는 `bool`, `i = false;` 문 할당 **false** 를 `i`합니다.  
+키워드를 사용 하면 형식의 변수에 대 한 두 값 중 하나인 [bool](../cpp/bool-cpp.md) 조건식 (조건식은 이제는 **true** 부울 식). 예를 들어 경우 `i` 형식의 변수가 **bool**의 `i = false;` 문 할당 **false** 를 `i`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp 
 // bool_false.cpp  
 #include <stdio.h>  
   

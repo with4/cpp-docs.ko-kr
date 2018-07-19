@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368615"
 ---
 # <a name="precedence-in-macro-definitions"></a>매크로 정의의 우선 순위
 NMAKE는 매크로 정의가 여러 개 있으면, 우선 순위가 가장 높은 정의 사용 합니다. 다음 목록은 내림차순 우선 순위를 나타냅니다.  

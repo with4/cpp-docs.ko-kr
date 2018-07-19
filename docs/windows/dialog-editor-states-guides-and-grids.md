@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872837"
 ---
 # <a name="dialog-editor-states-guides-and-grids"></a>대화 상자 편집기 상태(안내선과 모눈)
 세 가지 상태 중 하나에 대화 상자 편집기와 대화 상자에 컨트롤을 정렬할 수 있습니다.  

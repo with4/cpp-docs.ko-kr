@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873227"
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>장치 이미지 만들기(아이콘에 대한 이미지 편집기)
 특정 스타일 (32 × 32, 아이콘에 대 한 16 색과 32 × 32, 커서 흑백) 이미지를 먼저 만듭니다 새 아이콘이 나 커서 리소스, 이미지를 만들 때 편집기. 그런 다음 초기 아이콘이 나 커서에 다양 한 크기 및 스타일에 이미지를 추가 및 다른 디스플레이 장치에 대 한 필요에 따라 각 추가 이미지를 편집할 수 있습니다. 또한 기존 이미지 형식에서 또는 그래픽 프로그램에서 만든 비트맵에서의 잘라내기 및 붙여넣기 작업을 수행 하 여 이미지를 편집할 수 있습니다.  

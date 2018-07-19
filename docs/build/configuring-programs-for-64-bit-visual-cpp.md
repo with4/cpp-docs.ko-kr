@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366811"
 ---
 # <a name="configure-visual-c-for-64-bit-x64-targets"></a>64 비트 x64 Visual c + + 구성 대상
 

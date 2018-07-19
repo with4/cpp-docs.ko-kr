@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257849"
 ---
 # <a name="compiler-error-c3364"></a>컴파일러 오류 C3364
 'delegate': 대리 생성자: 인수에 관리 되는 클래스의 멤버 함수 또는 전역 함수에 대 한 포인터 여야 합니다.  

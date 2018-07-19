@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318515"
 ---
 # <a name="project-build-error-prj0050"></a>프로젝트 빌드 오류 PRJ0050
 출력을 등록하지 못했습니다. 레지스트리를 수정 하려면 적절 한 권한이 있는지 확인 하십시오.  

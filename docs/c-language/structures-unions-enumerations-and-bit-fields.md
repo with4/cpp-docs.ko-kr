@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384720"
 ---
 # <a name="structures-unions-enumerations-and-bit-fields"></a>구조체, 공용 구조체, 열거형 및 비트 필드
 -   [공용 구조체에 대한 부적절한 액세스](../c-language/improper-access-to-a-union.md)  

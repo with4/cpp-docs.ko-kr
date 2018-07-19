@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295550"
 ---
 # <a name="expression-evaluator-error-cxx0053"></a>식 계산기 오류 CXX0053
 중단점을 바인딩하는 동안 비 함수 기호 일치  

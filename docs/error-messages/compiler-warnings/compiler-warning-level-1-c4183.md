@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277474"
 ---
 # <a name="compiler-warning-level-1-c4183"></a>컴파일러 경고 (수준 1) C4183
 'identifier': 반환 형식이 없습니다. 'int'를 반환 하는 멤버 함수로 간주 됩니다.  

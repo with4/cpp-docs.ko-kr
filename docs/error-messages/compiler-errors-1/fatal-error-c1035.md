@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196989"
 ---
 # <a name="fatal-error-c1035"></a>심각한 오류 C1035
 식이 너무 복잡합니다. 간단하게 만드세요.  

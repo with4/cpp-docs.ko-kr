@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842510"
 ---
 # <a name="comment-cc"></a>C 주석 (C/C++)
 주석 기록을 개체 파일 또는 실행 파일에 배치합니다.  

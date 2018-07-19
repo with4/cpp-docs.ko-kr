@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360275"
 ---
 # <a name="when-do-i-need-to-call-atlaxwininit"></a>AtlAxWinInit 호출 해야 하는 경우는 합니까?
 

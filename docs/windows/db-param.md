@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880717"
 ---
 # <a name="dbparam"></a>db_param
 지정 된 멤버 변수는 입력 또는 출력 매개 변수 연결 하 고 변수를 구분 합니다.  

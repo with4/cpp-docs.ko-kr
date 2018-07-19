@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343969"
 ---
 # <a name="dialog-box-components-in-the-framework"></a>프레임워크의 대화 상자 구성 요소
 MFC 프레임 워크 대화 상자에는 두 가지 구성 요소가 있습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233098"
 ---
 # <a name="compiler-error-c2633"></a>컴파일러 오류 C2633
 'identifier': e'는 생성자에 대 한 유일한 저장소 클래스  

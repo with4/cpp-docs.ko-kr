@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134899"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>방법: PInvoke를 사용하여 포함 포인터 마샬링
 플랫폼 호출 (P/Invoke) 기능을 사용 하 여 관리 코드에서 관리 되지 않는 Dll에서 구현 되는 함수를 호출할 수 있습니다. DLL에 대 한 소스 코드를 사용할 수 없는 경우 P/Invoke 상호 운용 하기 위한 유일한 옵션입니다. 그러나 다른.NET 언어와 달리 Visual c + + P/Invoke에 대 한 대안을 제공합니다. 자세한 내용은 참조 [c + + Interop를 사용 하 여 (암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md) 및 [하는 방법: 마샬링 포함 된 포인터를 사용 하 여 c + + Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)합니다.  

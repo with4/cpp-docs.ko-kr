@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881538"
 ---
 # <a name="modulemethodreleasenotifierobject-data-member"></a>Module::MethodReleaseNotifier::object_ 데이터 멤버
 멤버 함수가 현재 Module::MethodReleaseNotifier 개체의 이벤트 처리기인 개체에 대한 포인터를 보유합니다.  

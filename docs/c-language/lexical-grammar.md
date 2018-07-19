@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382798"
 ---
 # <a name="lexical-grammar"></a>어휘 문법
 -   [토큰](../c-language/summary-of-tokens.md)  

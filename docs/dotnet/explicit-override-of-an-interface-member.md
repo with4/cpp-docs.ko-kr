@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110445"
 ---
 # <a name="explicit-override-of-an-interface-member"></a>인터페이스 멤버 명시적 재정의
 선언 클래스 내에서 인터페이스 멤버 명시적 재정의 구문은 Visual c + + Managed Extensions for c + + 변경 되었습니다.  

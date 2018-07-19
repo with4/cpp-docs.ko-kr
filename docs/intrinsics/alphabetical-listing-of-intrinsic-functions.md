@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336507"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>내장 함수의 알파벳순 목록
 다음 섹션에서는 일부 또는 모든 아키텍처에서 사용할 수 있는 Microsoft 관련 내장 함수에 대해 설명합니다. 지원되는 기타 내장 함수에 대한 설명은 프로세서 제조업체에서 제공하는 헤더 파일이나 제조업체 웹 사이트에 나와 있습니다. 참조는 [ARM 내장 함수](../intrinsics/arm-intrinsics.md), [x86 내장 함수](../intrinsics/x86-intrinsics-list.md), 및 [x64 내장 함수](../intrinsics/x64-amd64-intrinsics-list.md) 섹션 제조업체 설명서에 대 한 링크입니다. 내장 함수가을 구현 하는 C 런타임 라이브러리 (CRT) 함수; 여기 설명 하지 않습니다. 이러한 함수는에 설명 되어는 [C 런타임 라이브러리 참조](../c-runtime-library/c-run-time-library-reference.md)합니다.  

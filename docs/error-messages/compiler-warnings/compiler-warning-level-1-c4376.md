@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277142"
 ---
 # <a name="compiler-warning-level-1-c4376"></a>컴파일러 경고(수준 1) C4376
 액세스 지정자 ' old_specifier:'은 더 이상 지원:를 사용 하십시오 ' new_specifier:' 대신  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265885"
 ---
 # <a name="compiler-error-c3744"></a>컴파일러 오류 C3744
 __unhook 관리 되는 이벤트에 대 한 인수가 적어도 3 있어야 합니다.  

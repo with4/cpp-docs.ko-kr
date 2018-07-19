@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366960"
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation 클래스
 팝업 메뉴 애니메이션 사용 하지 않도록 설정 합니다.  

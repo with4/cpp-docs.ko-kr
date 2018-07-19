@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1958c83ef5a0eec5f3c7f5873451edd3839146be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35b5b87944f2b0f9ce78adbe42b59d92b98a6e5a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885837"
 ---
 # <a name="toolbar-control-styles"></a>ToolBar 컨트롤 스타일
-[CMFCToolBarButton 클래스](../../mfc/reference/cmfctoolbarbutton-class.md) 단추의 동작 및 모양을 결정 하는 스타일 플래그 집합입니다. 호출 하 여 이러한 플래그의 조합을 설정할 수 있습니다 [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)합니다. 이 항목에는 스타일 플래그 값 및 해당 의미가 나열됩니다.  
+[CMFCToolBarButton 클래스](../../mfc/reference/cmfctoolbarbutton-class.md) 모양을 결정 하는 스타일 플래그 집합이 있고 단추 동작 합니다. 호출 하 여 이러한 플래그의 조합을 설정할 수 있습니다 [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)합니다. 이 항목에는 스타일 플래그 값 및 해당 의미가 나열됩니다.  
   
 ## <a name="property-values"></a>속성 값  
  다음 값에 따라 컨트롤에서 제공되는 단추 형식이 결정됩니다.  
@@ -61,9 +62,9 @@ ms.lasthandoff: 05/04/2018
  새 줄에 항목을 배치하거나 열을 구분하지 않기 새 열에 배치합니다.  
   
 ## <a name="remarks"></a>설명  
- 현재 스타일에 저장 된 [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle)합니다. 새 값을 설정 하지 마십시오 `m_nStyle` 를 직접 일부 파생 된 클래스를 호출할 때 추가 처리를 수행 하기 때문에 `SetStyles`합니다.  
+ 현재 스타일에 저장 됩니다 [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle)합니다. 새 값을 설정 하지 마십시오 `m_nStyle` 직접 일부 파생 된 클래스를 호출할 때 추가 처리를 수행 하므로 `SetStyles`합니다.  
   
- 시각화 관리자는 각 상태에서 단추의 모양을 결정합니다. 참조 [시각화 관리자](../../mfc/visualization-manager.md) 자세한 정보에 대 한 합니다.  
+ 시각화 관리자는 각 상태에서 단추의 모양을 결정합니다. 참조 [시각화 관리자](../../mfc/visualization-manager.md) 자세한 내용은 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtoolbarbutton.h  

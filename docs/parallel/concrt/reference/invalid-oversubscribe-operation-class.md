@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689518"
 ---
 # <a name="invalidoversubscribeoperation-class"></a>invalid_oversubscribe_operation 클래스
 이 클래스는 `_BeginOversubscription` 매개 변수를 `true`로 설정하여 `Context::Oversubscribe` 메서드를 이전에 호출하지 않고 `_BeginOversubscription` 매개 변수를 `false`로 설정하여 `Context::Oversubscribe` 메서드를 호출하는 경우 발생하는 예외를 설명합니다.  

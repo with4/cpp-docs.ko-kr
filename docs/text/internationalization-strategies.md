@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856598"
 ---
 # <a name="internationalization-strategies"></a>국제화 전략
 대상 운영 체제와 시장에 따라 몇 가지 국제화 전략 해야 합니다.  

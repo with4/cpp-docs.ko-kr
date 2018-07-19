@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385367"
 ---
 # <a name="tree-control-item-information"></a>트리 컨트롤 항목 정보
 트리 컨트롤 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 컨트롤의 항목에 대 한 정보를 검색 하는 멤버 함수의 수를 포함 합니다. [GetItem](../mfc/reference/ctreectrl-class.md#getitem) 멤버 함수 항목에 연결 된 데이터의 일부나 전부를 검색 합니다. 이 데이터 항목의 텍스트, 상태, 이미지, 하위 항목의 수 및 32 비트 응용 프로그램 정의 데이터 값에 포함 될 수 있습니다. 또한 한 [SetItem](../mfc/reference/ctreectrl-class.md#setitem) 항목에 연결 된 데이터의 일부나 전부를 설정할 수 있는 함수입니다.  

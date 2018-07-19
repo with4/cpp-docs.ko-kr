@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362586"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>웹 페이지에 컨트롤 배치(ATL 자습서, 7부)
 컨트롤이 완성 되었습니다. 실제 상황에서 작동 하 여 컨트롤을 보려면 웹 페이지에 추가 합니다. 컨트롤을 정의할 때 컨트롤을 포함 하는 HTML 파일을 만들었습니다. PolyCtl.htm 파일 열기 **솔루션 탐색기**, 웹 페이지에 컨트롤을 볼 수 있습니다.  

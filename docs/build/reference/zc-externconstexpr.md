@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378420"
 ---
 # <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/Zc:externConstexpr (extern constexpr 변수 사용)
 

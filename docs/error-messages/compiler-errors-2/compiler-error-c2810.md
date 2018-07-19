@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235586"
 ---
 # <a name="compiler-error-c2810"></a>컴파일러 오류 C2810
 'interface': 인터페이스는 다른 인터페이스에서 에서만 상속할 수 있습니다  

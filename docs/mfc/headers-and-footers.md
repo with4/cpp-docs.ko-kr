@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348252"
 ---
 # <a name="headers-and-footers"></a>머리글 및 바닥글
 이 문서에서는 인쇄 문서에 머리글 및 바닥글을 추가 하는 방법에 설명 합니다.  

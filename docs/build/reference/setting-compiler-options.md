@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375808"
 ---
 # <a name="setting-compiler-options"></a>컴파일러 옵션 설정
 C 및 C++ 컴파일러 옵션은 통합 개발 환경이나 명령줄에서 설정할 수 있습니다.  

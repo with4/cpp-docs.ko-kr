@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695774"
 ---
 # <a name="how-to-use-combinable-to-combine-sets"></a>방법: combinable을 사용하여 집합 결합
 이 항목에서는 사용 하는 [concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) 소수 집합을 계산 하는 클래스입니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055530"
 ---
 # <a name="struct-masm"></a>STRUCT (MASM)
 지정 된 것 구조체 형식을 선언 *fielddeclarations*합니다. 각 필드에 올바른 데이터 정의 여야 합니다. 와 동일 [STRUC](../../assembler/masm/struc.md)합니다.  

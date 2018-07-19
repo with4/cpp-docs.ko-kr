@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882500"
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>그래픽 리소스 편집(아이콘에 대한 이미지 편집기)
 그래픽 리소스는 응용 프로그램에 대해 정의 하는 이미지입니다. 자유형 그리기 또는 셰이프를 사용 하 여 그릴 수 있습니다. 편집, 대칭 이동 또는 크기 조정에 대 한 이미지의 부분을 선택할 수 있고 이미지의 선택한 부분에서 사용자 지정 브러시 만들기 해당 브러시를 사용 하 여 그릴 수 있습니다. 이미지 속성을 정의 하 고, 서로 다른 형식으로 이미지를 저장 하 고, 이미지를 다른 형식 으로부터 변환 수입니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270498"
 ---
 # <a name="compiler-warning-c4368"></a>컴파일러 경고 C4368
 'member' 관리 되는 'type'의 멤버로 정의할 수 없습니다: 혼합된 형식은 지원 되지 않습니다  

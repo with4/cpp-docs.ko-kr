@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875567"
 ---
 # <a name="eventreceiver"></a>event_receiver
 이벤트 수신기(싱크)를 만듭니다.  

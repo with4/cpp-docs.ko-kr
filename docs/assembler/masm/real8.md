@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050898"
 ---
 # <a name="real8"></a>REAL8
 할당 및 각각에 대 한 이중 정밀도 (8 바이트) 부동 소수점 숫자를 선택적으로 초기화 *이니셜라이저*합니다.  

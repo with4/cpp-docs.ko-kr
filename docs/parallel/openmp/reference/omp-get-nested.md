@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686882"
 ---
 # <a name="ompgetnested"></a>omp_get_nested
 중첩 된 병렬 처리를 사용할 수 있는지 여부를 나타내는 값을 반환 합니다.  

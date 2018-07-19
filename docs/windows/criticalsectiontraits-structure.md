@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870553"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 구조체
 잘못 된 임계 또는 중요 한 섹션을 해제 하는 함수를 지원 하기 위해 CriticalSection 개체를 특수화입니다.  

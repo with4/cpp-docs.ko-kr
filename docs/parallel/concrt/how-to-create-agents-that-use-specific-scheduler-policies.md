@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685738"
 ---
 # <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>방법: 특정 스케줄러 정책을 사용하는 에이전트 만들기
 에이전트는 큰 계산 작업을 해결 하기 위해 다른 구성 요소를 비동기적으로 사용 하는 응용 프로그램 구성 요소입니다. 에이전트는 일반적으로 수명 주기가 설정 하 고 상태를 유지 합니다.  

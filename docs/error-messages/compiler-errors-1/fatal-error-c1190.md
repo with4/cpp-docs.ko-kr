@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227341"
 ---
 # <a name="fatal-error-c1190"></a>심각한 오류 C1190
 관리되는 대상 코드에는 '/clr' 옵션을 사용해야 합니다.  

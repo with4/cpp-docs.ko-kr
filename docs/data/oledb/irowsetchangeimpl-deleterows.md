@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101099"
 ---
 # <a name="irowsetchangeimpldeleterows"></a>IRowsetChangeImpl::DeleteRows
 행 집합에서 행을 삭제합니다.  

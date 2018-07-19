@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341106"
 ---
 # <a name="clipboard"></a>클립보드
 이 문서에서는 MFC 응용 프로그램에서 Windows 클립보드에 대 한 지원을 구현 하는 방법을 설명 합니다. 두 가지 방법으로 Windows 클립보드 사용 됩니다.  

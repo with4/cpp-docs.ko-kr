@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d4e07c4869bd345e77f0af4f30f694773aed114
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 973f183980e89ac0be268e5cbbec42de83a378f4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965817"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-템플릿 클래스 [codecvt](../standard-library/codecvt-class.md)를 기반으로 하는 개체를 설명하는 여러 템플릿 클래스를 정의합니다. 이러한 개체는 `Elem` 형식의 값 시퀀스와 `char` 형식의 값 시퀀스 간의 변환을 제어하는 [로캘 패싯](../standard-library/locale-class.md#facet_class)으로 사용할 수 있습니다.
+템플릿 클래스 [codecvt](../standard-library/codecvt-class.md)를 기반으로 하는 개체를 설명하는 여러 템플릿 클래스를 정의합니다. 이러한 개체 역할도 할 수 있습니다 [로캘 패싯](../standard-library/locale-class.md#facet_class) 형식의 값 시퀀스 간의 변환을 제어 하는 `Elem` 형식의 값 시퀀스 **char**합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/07/2018
 
 - UTF-16은 프로그램 내에서 하나 또는 두 개의 16비트 정수로 인코드된 유니코드입니다. (표준 C 또는 표준 C++에 대한 유효한 와이드 문자 인코딩의 모든 요구 사항을 충족하지는 않습니다. 그럼에도 불구하고 매우 광범위하게 사용됩니다.)
 
-바이트 스트림의 경우(파일에 저장되거나 바이트 시퀀스로 전송되거나 프로그램 내에서 `char` 배열로 저장됨):
+바이트 스트림의 (파일에 저장, 바이트 시퀀스로 전송 되거나 배열 프로그램 내에서 저장 **char**):
 
 - UTF-8은 바이트 스트림 내에서 결정적 바이트 순서를 가진 하나 이상의 8비트 바이트로 인코드된 유니코드입니다.
 

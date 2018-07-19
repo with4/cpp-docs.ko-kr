@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37f121912a13d6e4dac1692d2dab1b5ffd34bd6d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f379500f9455ed9ad9a581966e0f8ed7bfed13f7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953916"
 ---
 # <a name="makeunsigned-class"></a>make_unsigned 클래스
 
@@ -41,11 +42,11 @@ using make_unsigned_t = typename make_unsigned<T>::type;
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`T`|수정할 형식입니다.|
+|*T*|수정할 형식입니다.|
 
 ## <a name="remarks"></a>설명
 
-형식 한정자의 인스턴스는 `is_unsigned<T>`가 true일 때 `T`인 수정된 형식을 가집니다. 그렇지 않은 경우 가장 작은 부호 있는 형식 `ST`이며, 여기서 `sizeof (T) <= sizeof (ST)`입니다.
+형식 수정자의 인스턴스는 수정 된 형식인 됩니다 *T* 경우 `is_unsigned<T>` 마찬가지입니다. 그렇지 않은 경우 가장 작은 부호 있는 형식 `ST`이며, 여기서 `sizeof (T) <= sizeof (ST)`입니다.
 
 ## <a name="requirements"></a>요구 사항
 

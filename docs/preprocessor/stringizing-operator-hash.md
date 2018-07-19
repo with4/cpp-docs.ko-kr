@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841701"
 ---
 # <a name="stringizing-operator-"></a>문자열화 연산자 (#)
 숫자 기호 또는 "문자열 화" 연산자 (**#**) 매개 변수 정의 확장 없이 매크로 매개 변수를 문자열 리터럴로 변환 합니다. 인수를 사용하는 매크로에만 사용됩니다. 매크로 호출이 전달하는 실제 인수가 매크로 정의에서 형식 매개 변수 앞에 나오는 경우, 해당 인수는 따옴표로 묶이고 문자열 리터럴로 취급됩니다. 해당 문자열 리터럴은 매크로 정의에서 문자열화된 연산자와 형식적 매개 변수의 조합이 발생할 때마다 이를 대체합니다.  

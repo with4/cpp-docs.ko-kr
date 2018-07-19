@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694120"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>동시성 런타임의 유용한 일반 정보
 이 문서에서는 동시성 런타임의 여러 영역에 적용 되는 모범 사례를 설명 합니다.  

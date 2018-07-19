@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385124"
 ---
 # <a name="using-your-old-toolbars"></a>이전 도구 모음 사용
 사용 하 여 이전 버전의 Visual c + + 도구 모음 사용자 지정 된 클래스의 새 구현을 만드는 경우 [CToolBar](../mfc/reference/ctoolbar-class.md) 문제를 일으킬 수 있습니다. 새 기능을 사용 하려면 이전 도구 모음을 포기 하지 않아도 되도록 이전 구현이 지원 합니다.  

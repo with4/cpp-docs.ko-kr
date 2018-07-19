@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372484"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>MFC ActiveX 컨트롤 컨테이너 만들기
 ActiveX 컨트롤 컨테이너는 실행 하기 위해 (이전의 OLE) ActiveX 컨트롤에 대 한 환경을 제공 하는 부모 프로그램. 상관 없이, MFC ActiveX 컨트롤을 포함할 수 있는 응용 프로그램을 만들 수 있지만 MFC로 수행할 작업을 훨씬 쉽습니다.  

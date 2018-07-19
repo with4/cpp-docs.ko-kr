@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376470"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X(표준 포함 경로 무시)
 컴파일러를 PATH 및 INCLUDE 환경 변수에 지정 된 디렉터리에서 포함 파일을 검색할 수 없습니다.  

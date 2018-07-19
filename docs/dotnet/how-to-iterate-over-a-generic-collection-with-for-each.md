@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128029"
 ---
 # <a name="how-to-iterate-over-a-generic-collection-with-for-each"></a>방법: for each로 제네릭 컬렉션 반복
 [제네릭](../windows/generics-cpp-component-extensions.md) Visual c + +의 기능을 사용 하면 제네릭 컬렉션을 만들 수 있습니다.  

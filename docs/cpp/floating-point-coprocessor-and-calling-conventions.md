@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410803"
 ---
 # <a name="floating-point-coprocessor-and-calling-conventions"></a>부동 소수점 보조 프로세서 및 호출 규칙
 부동 유지 해야 하는 경우를 작성 하는 어셈블리 루틴은 부동 소수점 보조 프로세서 반환 하지 않으면 보조 프로세서 스택을 정리 하 고 소수점 제어 단어는 **float** 또는 **double** 값 (함수가 st (0)에서 반환 해야 합니다.  

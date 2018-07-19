@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098253"
 ---
 # <a name="cdynamicparameteraccessorgetparamcount"></a>CDynamicParameterAccessor::GetParamCount
 버퍼에 저장된 매개 변수의 수를 검색합니다.  

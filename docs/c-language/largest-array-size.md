@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384482"
 ---
 # <a name="largest-array-size"></a>가장 큰 배열 크기
 **ANSI 3.3.3.4, 4.1.1** 배열의 최대 크기를 보유하는 데 필요한 정수의 형식 즉, **size_t**의 크기입니다.  

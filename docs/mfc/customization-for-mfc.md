@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341876"
 ---
 # <a name="customization-for-mfc"></a>MFC에 대한 사용자 지정
 이 항목에서는 MFC 응용 프로그램을 사용자 지정 하기 위한 팁을 제공 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877256"
 ---
 # <a name="lcid"></a>lcid
 로캘 식별자는 함수에 전달할 수 있습니다.  

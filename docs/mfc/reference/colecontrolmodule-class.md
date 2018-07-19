@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369741"
 ---
 # <a name="colecontrolmodule-class"></a>COleControlModule 클래스
 OLE 컨트롤 모듈 개체를 파생하는 기본 클래스입니다.  

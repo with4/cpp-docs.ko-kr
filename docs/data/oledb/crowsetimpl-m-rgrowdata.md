@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097382"
 ---
 # <a name="crowsetimplmrgrowdata"></a>CRowsetImpl::m_rgRowData
 기본적으로는 `CAtlArray` 하려면 사용자 레코드 템플릿 인수에 있는 templatizes `CRowsetImpl`합니다.  

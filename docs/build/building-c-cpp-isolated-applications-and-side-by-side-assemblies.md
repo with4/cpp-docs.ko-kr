@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361286"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>C/C++ 격리된 응용 프로그램 및 side-by-side 어셈블리 빌드
 Visual C++은 [격리된 응용 프로그램](http://msdn.microsoft.com/library/aa375190) 및 [side-by-side 어셈블리](http://msdn.microsoft.com/library/ff951640)아이디어를 기반으로 Windows 클라이언트 응용 프로그램의 배포 모델을 지원합니다. 기본적으로 Visual C++은 모든 네이티브 C/C++ 응용 프로그램을 [매니페스트](http://msdn.microsoft.com/library/aa375365) 를 사용하여 Visual C++ 라이브러리에 대한 종속성을 설명하는 격리된 응용 프로그램으로 빌드합니다.  

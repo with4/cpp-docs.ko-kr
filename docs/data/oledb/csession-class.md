@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097083"
 ---
 # <a name="csession-class"></a>CSession 클래스
 단일 데이터베이스 액세스 세션을 나타냅니다.  

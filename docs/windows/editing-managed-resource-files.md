@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880696"
 ---
 # <a name="editing-managed-resource-files"></a>관리되는 리소스 파일 편집
 관리 되는 리소스 파일 (.resx)는 XML 파일입니다. 관리 되는 리소스 파일에서 프로젝트에 추가 되는 경우는 **새 항목 추가** 대화 상자는 **관리 되는 리소스 편집기** 기본적으로 열립니다.  

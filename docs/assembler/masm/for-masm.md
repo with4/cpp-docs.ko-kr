@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051945"
 ---
 # <a name="for-masm"></a>FOR (MASM)
 각각에 대해 한 번씩 반복 되는 블록 표시 `argument`, 현재의 `argument` 교체 `parameter` 각 반복 시.  

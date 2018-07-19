@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319724"
 ---
 # <a name="nmake-fatal-error-u1087"></a>NMAKE 심각한 오류 U1087
 사용할 수 없습니다: 및:: 동일한 대상에 대 한 종속 항목  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098682"
 ---
 # <a name="commands-and-tables"></a>명령 및 테이블
 명령 및 테이블에 액세스할 수 있도록 행 집합입니다. 즉, 행 집합을 열고 명령을 실행 하 고 열을 바인딩하십시오. [CCommand](../../data/oledb/ccommand-class.md) 및 [CTable](../../data/oledb/ctable-class.md) 클래스 각각 명령 및 테이블 개체를 인스턴스화합니다. 이러한 클래스에서 파생 [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) 다음 그림에 나와 있는 것 처럼 합니다.  

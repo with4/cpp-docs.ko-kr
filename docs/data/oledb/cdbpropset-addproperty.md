@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097668"
 ---
 # <a name="cdbpropsetaddproperty"></a>CDBPropSet::AddProperty
 속성은 속성 집합을 추가 합니다.  

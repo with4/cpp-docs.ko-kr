@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383369"
 ---
 # <a name="working-with-window-objects"></a>창 개체 작업
 두 종류의 작업에 대 한 windows 호출 작업:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356310"
 ---
 # <a name="implementing-the-event-handling-interface"></a>이벤트 처리 인터페이스를 구현 합니다.
 ATL 사용 하면 이벤트를 처리 하는 데 필요한 세 요소 모두: 이벤트 인터페이스를 구현 하 고 이벤트 소스를 확인 하 라는 바이 이벤트 소스입니다. 수행 해야 하는 정확한 단계는 응용 프로그램의 성능 요구 사항 및 이벤트 인터페이스의 형식에 따라 달라 집니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383243"
 ---
 # <a name="struct-unwindinfo"></a>구조체 UNWIND_INFO
 해제 데이터 정보 구조체를 사용 하 여 함수에 스택 포인터 및 스택에 비휘발성 레지스터 저장 되는 효과 기록 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381212"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>OLE 응용 프로그램을 만드는 작업 시퀀스
 다음 표에서 OLE 연결 및 포함 응용 프로그램을 만드는 사용자의 역할 및 프레임 워크의 역할을 보여 줍니다. 이러한 수행 하려면 단계의 시퀀스 하는 대신 사용할 수 있는 옵션을 나타냅니다.  

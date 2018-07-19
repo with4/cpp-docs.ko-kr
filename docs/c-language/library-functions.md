@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387742"
 ---
 # <a name="library-functions"></a>라이브러리 함수
 -   [NULL 매크로](../c-language/null-macro.md)  

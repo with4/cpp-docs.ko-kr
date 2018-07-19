@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371179"
 ---
 # <a name="editbin-command-line"></a>EDITBIN 명령줄
 EDITBIN를 실행 하려면 다음 구문을 사용 합니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385072"
 ---
 # <a name="root-class-cobject"></a>루트 클래스: CObject
 대부분의 Microsoft Foundation 클래스 (MFC) 라이브러리의 클래스는 클래스 계층의 루트에 단일 기본 클래스에서 파생 됩니다. `CObject` 다양 한 오버 헤드가 매우 낮으므로와 여기에서 파생 된 모든 클래스에 유용한 기능을 제공 합니다. 에 대 한 자세한 내용은 `CObject` 참조의 기능 및 [CObject 사용 하 여](../mfc/using-cobject.md)합니다.  

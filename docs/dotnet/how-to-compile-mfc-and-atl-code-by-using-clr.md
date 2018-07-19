@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136069"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>방법: /clr을 사용하여 MFC 및 ATL 코드 컴파일
 이 항목에서는 기존 MFC 및 ATL 프로그램을 공용 언어 런타임을 대상으로 컴파일하는 방법을 설명 합니다.  

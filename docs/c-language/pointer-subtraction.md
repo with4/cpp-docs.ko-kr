@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383733"
 ---
 # <a name="pointer-subtraction"></a>포인터 빼기
 **ANSI 3.3.6, 4.1.1** 같은 배열 **ptrdiff_t**의 요소에 대한 두 포인터 사이의 차이를 수용하는 데 필요한 정수 형식  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693197"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>연습: 매트릭스 곱
 이 단계별 연습 매트릭스 곱의 실행을 가속화 하 c + + AMP를 사용 하는 방법을 보여 줍니다. 두 알고리즘 바둑판식 배열 없는 및 바둑판식으로 표시 됩니다.  

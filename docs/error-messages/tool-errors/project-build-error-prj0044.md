@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324540"
 ---
 # <a name="project-build-error-prj0044"></a>프로젝트 빌드 오류 PRJ0044
 'Rule' 'file' 파일에 할당 된 사용자 지정 빌드 규칙에 대 한 ' 추가 종속성 ' 속성이 잘못 되었습니다. 이 속성에 'string'이 포함되어 있으며 이것은 'value'로 계산됩니다.  

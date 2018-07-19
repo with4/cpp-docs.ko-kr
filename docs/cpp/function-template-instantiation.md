@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412126"
 ---
 # <a name="function-template-instantiation"></a>함수 템플릿 인스턴스화
 함수 템플릿이 각 형식에 대해 처음 호출될 때 컴파일러는 인스턴스를 만듭니다(인스턴스화). 각 인스턴스는 형식에 대해 특수화된 템플릿 함수의 버전입니다. 이 인스턴스는 함수가 형식에 사용될 때마다 호출됩니다. 동일한 인스턴스가 여러 개 있는 경우 서로 다른 모듈에 있더라도 인스턴스의 복사본이 하나만 실행 파일에 존재하게 됩니다.  

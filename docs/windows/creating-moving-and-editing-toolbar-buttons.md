@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871343"
 ---
 # <a name="creating-moving-and-editing-toolbar-buttons"></a>도구 모음 단추 만들기, 이동 및 편집
 수 쉽게, 이동, 복사, 만들고 편집 도구 모음 단추입니다.  

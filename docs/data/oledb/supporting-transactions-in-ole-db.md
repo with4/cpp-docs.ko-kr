@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110343"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>OLE DB에서 트랜잭션 지원
 A [트랜잭션](../../data/transactions-mfc-data-access.md) 그룹 또는 일괄 처리는 일련의 데이터 원본에 대 한 업데이트 커밋되지 않으며 (경우 중 하나라도 실패할) 또는 실패 하 고 한 번에 커밋됩니다 모든 되도록 하는 방법 및 전체 트랜잭션이 롤백됩니다. 이 프로세스는 데이터 원본에 대 한 결과의 무결성을 보장 합니다.  

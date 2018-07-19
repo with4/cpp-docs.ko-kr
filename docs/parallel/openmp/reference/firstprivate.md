@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691705"
 ---
 # <a name="firstprivate"></a>firstprivate
 병렬 구문 하기 전에 존재 하기 때문에 각 스레드에 변수의 자체 인스턴스에 있어야 하 고 변수 값으로 변수를 초기화 해야 한다는 지정 합니다.  

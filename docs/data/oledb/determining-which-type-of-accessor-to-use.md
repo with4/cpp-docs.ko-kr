@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104011"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>사용할 접근자 형식 결정
 컴파일 시 또는 런타임에 행 집합에서 데이터 형식을 확인할 수 있습니다.  

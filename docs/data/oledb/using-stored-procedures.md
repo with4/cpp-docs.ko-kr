@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112240"
 ---
 # <a name="using-stored-procedures"></a>저장 프로시저 사용
 저장된 프로시저는 실행 가능한 개체는 데이터베이스에 저장 합니다. 저장된 프로시저를 호출 하는 것은 SQL 명령을 호출 하는 것과 비슷합니다. 저장된 프로시저를 사용 하 여 실행 하거나 클라이언트 응용 프로그램에서 문 준비) 하는 것 (대신 데이터 원본에 대해 더 높은 성능, 네트워크 오버 헤드 감소, 및 향상 된 일관성 및 정확도 포함 하는 여러 가지 이점을 제공할 수 있습니다.  

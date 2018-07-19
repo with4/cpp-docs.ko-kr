@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367270"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>메이크파일 전처리 식
 **! IF** 또는 **! ELSE IF** `constantexpression` 10 진수 또는 C 언어 표기법으로 정수 상수, 문자열 상수 또는 명령으로 구성 됩니다. 그룹 식에 괄호를 사용 합니다. 식을 사용 하 여 C 스타일 부호 있는 정수 (long) 산술; 숫자는 32 비트 2의 보수 형식 범위-2147483648에서 2147483647입니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345165"
 ---
 # <a name="hierarchy-chart"></a>계층 구조 차트
 다음 그림에서 파생 된 MFC 클래스를 나타냅니다. `CObject`:  

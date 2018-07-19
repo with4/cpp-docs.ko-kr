@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381331"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>데이터베이스 응용 프로그램을 만드는 작업 시퀀스
 다음 표에서 사용자의 역할와 프레임 워크의 데이터베이스 응용 프로그램을 보여 줍니다.  

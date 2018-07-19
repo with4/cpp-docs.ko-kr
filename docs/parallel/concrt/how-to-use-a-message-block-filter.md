@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688273"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>방법: 메시지 블록 필터 사용
 이 문서를 수락 하거나 해당 메시지의 페이로드를 기준으로 메시지를 거부 하 여 비동기 메시지 블록을 사용 하도록 설정 하려면 필터 함수를 사용 하는 방법을 보여 줍니다.  

@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9a6495c23695f8cdedf45fbdd7cbc915b96873e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929610"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX 컨트롤: ActiveX 컨트롤 지역화
 이 문서에서는 ActiveX 컨트롤 인터페이스의 지역화를 위한 절차를 설명 합니다.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/04/2018
     > [!NOTE]
     >  이 제대로 작동 하지 일부 경우에 더 이상 서로 다른 로캘을 하는 경우.  
   
--   사용 하 여는 **OnAmbientChanged** 알림 함수를 동적으로 컨테이너의 로캘에 대 한 적절 한 리소스를 로드 합니다.  
+-   사용 된 `OnAmbientChanged` 알림 함수를 동적으로 컨테이너의 로캘에 대 한 적절 한 리소스를 로드 합니다.  
   
     > [!NOTE]
     >  이 연결은 컨트롤을 사용할 수 있지만 LocaleID 앰비언트 속성이 변경 될 때 런타임 DLL 동적으로 자체 리소스를 업데이트 하지는 않습니다. 또한 ActiveX 컨트롤 런타임 Dll은 스레드 로컬을 사용 하 여 해당 리소스에 대 한 로캘을 결정 합니다.  
@@ -97,7 +98,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFC_AxLoc#4](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_4.cpp)]  
   
- 멤버 함수 재정의 하는 예를 들어 위의 코드 샘플을 넣는 [COleControl::OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite)합니다. 또한 `m_hResDLL` 컨트롤 클래스의 멤버 변수 여야 합니다.  
+ 멤버 함수 재정의 하는 예를 들어 위의 코드 샘플을 넣는 [COleControl::OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite)합니다. 또한 *m_hresdll은 해당* 컨트롤 클래스의 멤버 변수 여야 합니다.  
   
  컨트롤의 속성 페이지의 지역화를 위한 유사한 논리를 사용할 수 있습니다. 속성 페이지를 지역화 하려면 다음 샘플과 유사한 코드 속성 페이지의 구현 파일에 추가 합니다 (재정의에서 [COlePropertyPage::OnSetPageSite](../mfc/reference/colepropertypage-class.md#onsetpagesite)):  
   

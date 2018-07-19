@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369330"
 ---
 # <a name="calculating-necessary-values"></a>필요한 값 계산
 두 가지 중요 한 정보를 지연 도우미 루틴에 의해 계산 해야 합니다. 이 위해이 정보를 계산 하기 위한 delayhlp.cpp에 두 개의 인라인 함수 있습니다.  

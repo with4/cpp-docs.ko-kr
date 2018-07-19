@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360656"
 ---
 # <a name="automation-in-a-dll"></a>DLL의 자동화
 MFC DLL 마법사에서 자동화 옵션을 선택 하면 마법사를 다음으로 제공 합니다.  

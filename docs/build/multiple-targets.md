@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368189"
 ---
 # <a name="multiple-targets"></a>대상이 여러 개인 경우
 NMAKE 각각 별도 설명 블록에는 지정 된 것 처럼 단일 종속성의 여러 대상을 계산 합니다.  

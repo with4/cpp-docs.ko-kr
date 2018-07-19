@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692431"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>동시성 런타임 개요
 이 문서에서는 동시성 런타임에 대한 개요를 제공합니다. 또한 동시성 런타임의 이점, 사용할 시기, 구성 요소가 서로 상호 작용하는 방식과 운영 체제 및 응용 프로그램과 상호 작용하는 방식에 대해 설명합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101346"
 ---
 # <a name="cutlprops-class"></a>CUtlProps 클래스
 다양 한 OLE DB 속성 인터페이스에 대 한 속성 구현 (예를 들어 `IDBProperties`, `IDBProperties`, 및 `IRowsetInfo`).  

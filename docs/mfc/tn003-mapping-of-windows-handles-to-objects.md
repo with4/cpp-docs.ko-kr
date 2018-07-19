@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8658868c36008c5ed6b9db9747eb63ae37e4d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2be47da802fd1168ec7b43c2f7701351b3c88d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951510"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Windows 핸들을 개체로 매핑
 이 노트에서는 MFC 설명 루틴을 지 원하는 Windows 매핑 개체 c + + 개체에 대 한 핸들입니다.  
@@ -55,15 +56,15 @@ ms.lasthandoff: 05/04/2018
   
 -   소켓 ([CSocket](../mfc/reference/csocket-class.md))  
   
- 이러한 개체 중 하나에에 핸들을 지정한 정적 메서드를 호출 하 여 핸들을 래핑하는 MFC 개체를 찾을 수 `FromHandle`합니다. 예를 들어 호출 HWND `hWnd`, 다음 줄에 대 한 포인터를 반환 합니다는 `CWnd` 를 래핑하는 `hWnd`:  
+ 이러한 개체 중 하나에에 핸들을 지정한 정적 메서드를 호출 하 여 핸들을 래핑하는 MFC 개체를 찾을 수 `FromHandle`합니다. 예를 들어 호출 HWND *hWnd*, 다음 줄에 대 한 포인터를 반환 합니다는 `CWnd` 를 래핑하는 *hWnd*:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- 경우 `hWnd` 임시 특정 래퍼 개체를 없는 `CWnd` 래핑할 만들어집니다 `hWnd`합니다. 따라서 올바른 c + + 개체 핸들에서 가져올 수 있습니다.  
+ 경우 *hWnd* 임시 특정 래퍼 개체를 없는 `CWnd` 래핑할 만들어집니다 *hWnd*합니다. 따라서 올바른 c + + 개체 핸들에서 가져올 수 있습니다.  
   
- 래퍼 개체를 사용 하는 다음에 래퍼 클래스의 public 멤버 변수에서 해당 핸들을 검색할 수 있습니다. 경우에 `CWnd`, `m_hWnd` 해당 개체에 대 한 HWND를 포함 합니다.  
+ 래퍼 개체를 사용 하는 다음에 래퍼 클래스의 public 멤버 변수에서 해당 핸들을 검색할 수 있습니다. 경우에 `CWnd`, *m_hWnd* 해당 개체에 대 한 HWND를 포함 합니다.  
   
 ## <a name="attaching-handles-to-mfc-objects"></a>MFC 개체에 연결 하는 핸들  
  Windows 개체에 대 한 핸들 및 새로 만든된 핸들 래퍼 개체를 들어 두 호출 하 여 연결할 수 있습니다는 `Attach` 다음이 예제와 같이 작동 합니다.  
@@ -73,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- 이렇게 하면 항목에 영구 맵에 연결 `myWnd` 및 `hWnd`합니다. 호출 `CWnd::FromHandle(hWnd)` 은 이제 반환에 대 한 포인터 `myWnd`합니다. 때 `myWnd` 은 삭제 된 소멸자가 자동으로 삭제 합니다 `hWnd` Windows를 호출 하 여 [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) 함수입니다. 이 원치 않을 경우 `hWnd` 에서 분리 해야 `myWnd` 하기 전에 `myWnd` 소멸 됩니다 (되는 범위를 벗어나면 될 때 정상적으로 `myWnd` 정의 된). `Detach` 메서드는이 수행 합니다.  
+ 이렇게 하면 항목에 영구 맵에 연결 *myWnd* 및 *hWnd*합니다. 호출 `CWnd::FromHandle(hWnd)` 은 이제 반환에 대 한 포인터 *myWnd*합니다. 때 *myWnd* 은 삭제 된 소멸자가 자동으로 삭제 합니다 *hWnd* Windows를 호출 하 여 [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) 함수입니다. 이 원치 않을 경우 *hWnd* 에서 분리 해야 *myWnd* 전에 *myWnd* 소멸 됩니다 (되는 범위를 벗어나면 될 때 정상적으로 *myWnd*정의 된). `Detach` 메서드는이 수행 합니다.  
   
 ```  
 myWnd.Detach();

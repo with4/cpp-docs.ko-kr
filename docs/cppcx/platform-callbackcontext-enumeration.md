@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086953"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext 열거형
 콜백 함수(이벤트 처리기)가 실행되는 스레드 컨텍스트를 지정합니다.  

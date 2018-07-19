@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055367"
 ---
 # <a name="operator--masm"></a>operator ! (MASM)
 처리 `character` 아닌 기호 또는 연산자를 리터럴 문자로 합니다.  

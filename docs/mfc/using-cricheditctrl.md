@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382169"
 ---
 # <a name="using-cricheditctrl"></a>CRichEditCtrl 사용
 Rich edit 컨트롤에는 사용자 입력 수 있으며 텍스트 편집 창입니다. 텍스트 문자 및 단락 서식을 할당할 수 있으며 포함 된 OLE 개체를 포함할 수 있습니다. Rich edit 컨트롤에서 MFC에서 표시 되는 [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) 클래스입니다.  

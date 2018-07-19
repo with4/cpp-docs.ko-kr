@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343478"
 ---
 # <a name="destroying-frame-windows"></a>프레임 창 제거
 MFC 프레임 워크는 프레임 워크 문서 및 뷰를와 연결 된 해당 창에 대 한 작성 뿐만 아니라 창 소멸을 관리 합니다. 추가로 창을 만드는 모르는 경우을 제거 해야 합니다.  

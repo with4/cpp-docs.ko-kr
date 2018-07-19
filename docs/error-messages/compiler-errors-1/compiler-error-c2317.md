@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196142"
 ---
 # <a name="compiler-error-c2317"></a>컴파일러 오류 C2317
 줄 'number'에서 시작하는 'try' 블록에 catch 처리기가 없습니다.  

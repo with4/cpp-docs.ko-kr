@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857716"
 ---
 # <a name="changing-a-symbol-or-symbol-name-id"></a>기호 또는 기호 이름(ID) 변경
 새 리소스 또는 리소스 개체를 만들 때 개발 환경에서 IDD_DIALOG1과 같은 기본 기호 이름을 할당합니다. 사용할 수는 [속성 창](/visualstudio/ide/reference/properties-window) 를 기본 기호 이름을 변경 하거나 이미 리소스와 연결 된 기호의 이름을 변경할 수 있습니다.  

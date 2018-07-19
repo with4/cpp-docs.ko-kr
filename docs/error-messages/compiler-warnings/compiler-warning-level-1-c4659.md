@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285618"
 ---
 # <a name="compiler-warning-level-1-c4659"></a>컴파일러 경고(수준 1) C4659
 \#pragma 'pragma': #pragma 주석 (linker,...)를 사용 하 여, 사용 하 여 예약 된 세그먼트 'segment' 동작이 정의 되지 않았습니다  

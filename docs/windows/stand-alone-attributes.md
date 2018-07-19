@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890435"
 ---
 # <a name="stand-alone-attributes"></a>독립 실행형 특성
 독립 실행형 특성 c + + 키워드에서 작동 하지 않습니다 있지만 코드 줄을 비슷합니다. 독립 실행형 특성 문은 줄의 끝에 세미콜론이 필요합니다.  

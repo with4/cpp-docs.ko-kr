@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346563"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>모달 및 모덜리스 대화 상자
 클래스를 사용할 수 [CDialog](../mfc/reference/cdialog-class.md) 두 종류의 대화 상자를 관리 하려면:  

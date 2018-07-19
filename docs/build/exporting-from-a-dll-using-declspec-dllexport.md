@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368550"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>__declspec(dllexport)을 사용하여 DLL에서 내보내기
 도입 된 Microsoft **__export** 16 비트 컴파일러 버전의 Visual c + + 컴파일러가 내보내기 이름을 자동으로 생성 하는.lib 파일에 배치할 수 있도록 합니다. 이.lib 파일은 DLL에 연결 하는 정적.lib 처럼 방금 사용할 수 있습니다.  

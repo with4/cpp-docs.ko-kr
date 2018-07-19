@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105285"
 ---
 # <a name="irowsetlocateimplcompare"></a>IRowsetLocateImpl::Compare
 두 개의 책갈피를 비교합니다.  

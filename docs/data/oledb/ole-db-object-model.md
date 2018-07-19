@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111083"
 ---
 # <a name="ole-db-object-model"></a>OLE DB 개체 모델
 OLE DB 개체 모델에는 다음 개체 또는 구성 요소 구성 됩니다. 처음 4 개의 개체나 나열 된 구성 요소 (데이터 원본, 세션, 명령 및 행 집합) 데이터 원본에 연결 하 고 볼 수 있도록 합니다. 접근자 이하의 나머지 표시 되 면 데이터 작업과 관련이 있습니다.  

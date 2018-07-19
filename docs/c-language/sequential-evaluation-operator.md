@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388489"
 ---
 # <a name="sequential-evaluation-operator"></a>순차적 확인 연산자
 "쉼표 연산자"라고도 하는 순차 계산 연산자는 두 피연산자를 왼쪽에서 오른쪽으로 순차적으로 계산합니다.  

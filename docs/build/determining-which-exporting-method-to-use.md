@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368761"
 ---
 # <a name="determining-which-exporting-method-to-use"></a>사용할 내보내기 방법 결정
 두 가지 방법 중 하나에 함수를 내보낼 수-.def 파일 또는 `__declspec(dllexport)` 키워드입니다. 어떤 방식으로 사용 하는 것이 DLL에 대 한 더 나은 결정을 하려면 이러한 질문을 고려 합니다.  

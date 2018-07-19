@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258775"
 ---
 # <a name="compiler-error-c3535"></a>컴파일러 오류 C3535
 'type1'에서 'type2'에 대 한 형식을 추론할 수 없습니다.  

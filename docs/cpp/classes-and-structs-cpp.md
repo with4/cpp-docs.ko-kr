@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61348578018a5bbddcaff293fa3ed76575eb16de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 88836d93d6ce3ba4dff817c7b470e87f48f61b14
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954179"
 ---
 # <a name="classes-and-structs-c"></a>클래스 및 구조체(C++)
 이 섹션에서는 C++ 클래스 및 구조체를 소개합니다. 구조체에서는 기본 접근성이 공용이고, 클래스에서는 기본값이 개인이라는 점을 제외하면 C++에서 두 구문이 동일합니다.  
@@ -57,15 +58,15 @@ ms.lasthandoff: 05/03/2018
   
 -   [C++ 비트 필드](../cpp/cpp-bit-fields.md)  
   
- 세 가지 클래스 형식은 구조체, 클래스 및 공용 구조체입니다. 사용 하 여 선언 된는 [구조체](../cpp/struct-cpp.md), [클래스](../cpp/class-cpp.md), 및 [union](../cpp/unions.md) 키워드 (참조 [클래스 형식 정의](http://msdn.microsoft.com/en-us/e8c65425-0f3a-4dca-afc2-418c3b1e57da)). 다음 표에서는 세 가지 클래스 형식 간의 차이점을 보여 줍니다.  
+ 세 가지 클래스 형식은 구조체, 클래스 및 공용 구조체입니다. 사용 하 여 선언 된 합니다 [구조체](../cpp/struct-cpp.md)를 [클래스](../cpp/class-cpp.md), 및 [union](../cpp/unions.md) 키워드입니다. 다음 표에서는 세 가지 클래스 형식 간의 차이점을 보여 줍니다.  
   
- 공용 구조체에 대 한 자세한 내용은 참조 하십시오. [공용 구조체](../cpp/unions.md)합니다. 관리 되는 클래스와 구조체에 대 한 정보를 참조 하십시오. [클래스 및 구조체](../windows/classes-and-structs-cpp-component-extensions.md)합니다.  
+ 공용 구조체에 대 한 자세한 내용은 참조 하세요. [공용 구조체](../cpp/unions.md)합니다. 관리 되는 클래스 및 구조체에 대 한 내용은 참조 하세요 [클래스 및 구조체](../windows/classes-and-structs-cpp-component-extensions.md)합니다.  
   
 ### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>구조체, 클래스 및 공용 구조체의 Access Control 및 제약 조건  
   
-|구조체|클래스|공용 구조체|  
+|구조체|클래스|Unions|  
 |----------------|-------------|------------|  
-|클래스 키가 `struct`임|클래스 키가 **클래스**|클래스 키가 **공용 구조체**|  
+|클래스 키가 **구조체**|클래스 키가 **클래스**|클래스 키가 **공용 구조체**|  
 |기본 액세스가 공용임|기본 액세스가 개인임|기본 액세스가 공용임|  
 |사용 제약 조건 없음|사용 제약 조건 없음|한 번에 한 멤버만 사용|  
   

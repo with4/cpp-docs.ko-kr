@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686492"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier 클래스
 동기화를 사용 하 여 스레드 그룹 (타일)에서 실행 중인 스레드의 실행 `wait` 메서드. 런타임에만이 클래스를 인스턴스화할 수 있습니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688702"
 ---
 # <a name="e-implementation-defined-behaviors-in-openmp-cc"></a>E. 구현 정의 동작 OpenMP C/c + +에서
 이 부록 "구현에서 정의 된"이 api에서로 설명 하는 동작을 요약 합니다.  각 동작은 다시 상호 참조 하도록 주 사양에서 설명 합니다.  

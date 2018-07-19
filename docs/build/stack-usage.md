@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379860"
 ---
 # <a name="stack-usage"></a>스택 사용
 모든 메모리 RSP의 현재 주소 외에 메모리 휘발성 것으로 간주 됩니다: OS, 또는 디버거, 인터럽트 처리기 또는 사용자 디버그 세션 동안이 메모리를 덮어쓸 수 있습니다. 따라서 RSP 항상 읽기 또는 스택 프레임으로 값을 쓰기를 시도 하기 전에 설정 해야 합니다.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099552"
 ---
 # <a name="iaccessorimplcreateaccessor"></a>IAccessorImpl::CreateAccessor
 바인딩 집합에서 접근자를 만듭니다.  

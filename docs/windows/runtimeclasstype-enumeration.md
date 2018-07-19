@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892405"
 ---
 # <a name="runtimeclasstype-enumeration"></a>RuntimeClassType 열거형
 유형을 지정 [RuntimeClass](../windows/runtimeclass-class.md) 지원 되는 인스턴스.  

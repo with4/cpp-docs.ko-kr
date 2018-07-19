@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385714"
 ---
 # <a name="unrepresented-character-constants"></a>나타낼 수 없는 문자 상수
 **ANSI 3.1.3.4** 기본 실행 문자 집합 또는 확장된 문자 집합(와이드 문자 상수의 경우)으로 표현되지 않는 문자 또는 이스케이프 시퀀스를 포함하는 정수 문자 상수의 값  

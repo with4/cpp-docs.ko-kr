@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091786"
 ---
 # <a name="crowsetmovefirst"></a>CRowset::MoveFirst
 초기 위치에 커서를 이동 하 고 초기 행을 검색 합니다.  

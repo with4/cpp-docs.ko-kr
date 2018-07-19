@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299242"
 ---
 # <a name="linker-tools-error-lnk1245"></a>링커 도구 오류 LNK1245
 잘못 된 하위 시스템 '하위 시스템'; /SUBSYSTEM은 WINDOWS, WINDOWSCE 또는 CONSOLE 이어야 합니다.  

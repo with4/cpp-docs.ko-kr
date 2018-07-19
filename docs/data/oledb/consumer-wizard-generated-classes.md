@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091987"
 ---
 # <a name="consumer-wizard-generated-classes"></a>소비자 마법사 생성 클래스
 ATL OLE DB 소비자 마법사를 사용하여 소비자를 생성하는 경우 OLE DB 템플릿 또는 OLE DB 특성을 사용하도록 선택할 수 있습니다. 두 경우 모두 마법사에서 명령 클래스 및 사용자 레코드 클래스를 생성합니다. 명령 클래스는 마법사에서 지정한 데이터 원본 및 행 집합을 여는 코드를 포함합니다. 사용자 레코드 클래스는 선택한 데이터베이스 테이블에 대한 열 맵을 포함합니다. 그러나 생성된 코드는 각각의 경우마다 다릅니다.  

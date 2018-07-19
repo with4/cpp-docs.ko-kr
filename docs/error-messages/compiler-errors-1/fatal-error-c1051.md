@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198250"
 ---
 # <a name="fatal-error-c1051"></a>심각한 오류 C1051
 'pdbfile' 프로그램 데이터베이스 파일에 삭제 하 고 다시 컴파일해야 사용 되지 않는 형식이 있습니다.  

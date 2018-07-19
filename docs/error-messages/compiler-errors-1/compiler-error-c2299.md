@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170845"
 ---
 # <a name="compiler-error-c2299"></a>컴파일러 오류 C2299
 'function': 동작 변경: 명시적 특수화는 복사 생성자 또는 복사 할당 연산자 일 수 없습니다  

@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d195b2888c47a318369df13c371f85b21cc7bf84
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8e693a0e6a2353693f676ed0d63d7087d3e57455
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040901"
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog 클래스
 리본에 표시 됩니다 **사용자 지정** 페이지.  
@@ -81,13 +82,13 @@ CMFCRibbonCustomizeDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  부모 창 (일반적으로 주 프레임)에 대 한 포인터입니다.  
   
- [in] `pRibbon`  
+ [in] *pRibbon*  
  에 대 한 포인터는 `CMFCRibbonBar` 를 사용자 지정할 수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 생성 하는 방법을 `CMFCRibbonCustomizeDialog` 개체입니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#18](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]  

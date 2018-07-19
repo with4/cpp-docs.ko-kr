@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386737"
 ---
 # <a name="system-function"></a>시스템 함수
 **ANSI 4.10.4.5** **시스템** 함수에 의한 문자열의 실행 모드 및 내용  

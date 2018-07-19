@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110466"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>OLE DB 적합성 테스트 통과
 Data Access SDK 공급자를 보다 일관 되 게 하려면 OLE DB 적합성 테스트 집합이 제공 합니다. 테스트는 공급자의 모든 측면을 확인 하 고 예상 대로 프로그램 공급자 작동 하는지 적절히 제공 합니다. Microsoft Data Access SDK에 OLE DB 적합성 테스트를 찾을 수 있습니다. 이 섹션 규칙 테스트를 통과 하기 위해 수행 해야 하는 것에 중점을 둡니다. OLE DB 적합성 테스트를 실행 하는 방법에 대 한 정보, SDK를 참조 하십시오.  

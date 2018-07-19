@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101203"
 ---
 # <a name="fetching-data"></a>데이터 페치
 데이터 원본, 세션 및 행 집합 개체를 연 후에 데이터를 인출할 수 있습니다. 사용 하는 접근자의 형식에 따라 열을 바인딩할 할 수 있습니다.  

@@ -1,5 +1,5 @@
 ---
-title: 함수 템플릿 | Microsoft Docs
+title: 템플릿 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d5ed1bae5f4571cad6b942af9d6e9b4ff646ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 71bb3985fe870b29d06ebc01d0b7dab4712f1797
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941069"
 ---
 # <a name="function-templates"></a>함수 템플릿
 클래스 템플릿은 인스턴스화할 때 클래스에 전달되는 형식 인수를 기반으로 하는 관련 클래스 패밀리를 정의합니다. 함수 템플릿은 클래스 템플릿과 유사하지만 함수 패밀리를 정의합니다. 함수 템플릿을 사용하면 동일한 코드를 기반으로 하지만 서로 다른 형식이나 클래스에서 작동하는 함수 집합을 지정할 수 있습니다. 다음 함수 템플릿은 두 항목을 바꿉니다.  
@@ -36,9 +37,9 @@ int main() {
 }  
 ```  
   
- 이 코드는 인수 값을 바꾸는 함수 패밀리를 정의합니다. 이 서식 파일에서 바꾸는 함수를 생성할 수 있습니다 **int** 및 **긴** 형식 및 사용자 정의 형식입니다. 클래스의 복사 생성자와 대입 연산자가 제대로 정의된 경우 `MySwap`으로 클래스도 바꿀 수 있습니다.  
+ 이 코드는 인수 값을 바꾸는 함수 패밀리를 정의합니다. 이 템플릿에서 바꾸는 함수를 생성할 수 있습니다 **int** 하 고 **긴** 형식 및 사용자 정의 형식입니다. 클래스의 복사 생성자와 대입 연산자가 제대로 정의된 경우 `MySwap`으로 클래스도 바꿀 수 있습니다.  
   
- 또한 컴파일러는 컴파일 타임에 `a` 및 `b` 매개 변수의 형식을 알기 때문에 함수 템플릿을 사용하면 형식이 서로 다른 개체를 바꿀 수 없게 됩니다.  
+ 또한 함수 템플릿을 것을 방지 다양 한 유형의 개체를 교환에서 컴파일러는 변수의 형식을 알기 때문에 *는* 하 고 *b* 컴파일 타임에 매개 변수입니다.  
   
  이 함수는 void 포인터를 사용하여 템플릿이 아닌 함수로 실행할 수 있지만 템플릿 버전은 형식 안정적입니다. 다음 호출을 참조하십시오.  
   
@@ -63,10 +64,10 @@ int main(int j) {
 }  
 ```  
   
- 템플릿 인수가 명시적으로 지정되면 함수 인수를 해당 함수 템플릿 매개 변수의 형식으로 변환하기 위해 표준 암시적 변환이 수행됩니다. 위의 예제에서 컴파일러는 변환 `char j` 입력 `int`합니다.  
+ 템플릿 인수가 명시적으로 지정되면 함수 인수를 해당 함수 템플릿 매개 변수의 형식으로 변환하기 위해 표준 암시적 변환이 수행됩니다. 위의 예제에서 컴파일러는 변환 `char j` 입력할 **int**합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [서식 파일](../cpp/templates-cpp.md)   
+ [템플릿](../cpp/templates-cpp.md)   
  [함수 템플릿 인스턴스화](../cpp/function-template-instantiation.md)   
  [명시적 인스턴스화](../cpp/explicit-instantiation.md)   
  [함수 템플릿의 명시적 특수화](../cpp/explicit-specialization-of-function-templates.md)

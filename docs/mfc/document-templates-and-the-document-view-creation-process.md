@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348093"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>문서 템플릿 및 문서/뷰 만들기 프로세스
 두 문서 서식 파일 클래스를 사용 하는 프레임 워크 관련된 뷰 및 프레임 창 항목과 함께 문서를 만들기의 복잡 한 프로세스를 관리 하려면: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) SDI 응용 프로그램에 대 한 및 [CMultiDocTemplate ](../mfc/reference/cmultidoctemplate-class.md) MDI 응용 프로그램에 대 한 합니다. A `CSingleDocTemplate` 만들고 한 번에 한 종류의 한 문서를 저장할 수 있습니다. A `CMultiDocTemplate` 열려 있는 문서를 다양 한 형식의 목록을 유지 합니다.  

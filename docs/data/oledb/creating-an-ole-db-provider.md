@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097109"
 ---
 # <a name="creating-an-ole-db-provider"></a>OLE DB 공급자 만들기
 OLE DB 공급자를 만들려면 마법사를 사용 하는 ATL COM 프로젝트와 공급자를 만들고 다음 OLE DB 템플릿을 사용 하 여 파일을 수정 하는 것이 좋습니다. 공급자를 사용자 지정할 때에 필요 하지 않은 속성을 주석 수 있으며 선택적 인터페이스를 추가할 수 있습니다.  

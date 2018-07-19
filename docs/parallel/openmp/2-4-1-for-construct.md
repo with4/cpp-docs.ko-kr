@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693551"
 ---
 # <a name="241-for-construct"></a>2.4.1 for 구문
 **에 대 한** 지시문 병렬로 연결 된 루프의 반복을 실행할지를 지정 하는 반복 작업 공유 생성자를 식별 합니다. 반복 된 **에 대 한** 루프 실행을 바인딩하는 병렬 구문 팀에 이미 있는 스레드 간에 배포 됩니다. 구문은 **에 대 한** 구문은 다음과 같습니다.  

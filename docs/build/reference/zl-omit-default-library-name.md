@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379720"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl(기본 라이브러리 이름 생략)
 .Obj 파일에서 기본 C 런타임 라이브러리 이름을 생략합니다. 기본적으로 컴파일러는 올바른 라이브러리로 링커를 보내기 위해 라이브러리 이름을 .obj 파일에 넣습니다.  

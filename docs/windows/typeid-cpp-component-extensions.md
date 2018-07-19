@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888369"
 ---
 # <a name="typeid--c-component-extensions"></a>typeid(C++ 구성 요소 확장)
 개체의 유형을 나타내는 값을 가져옵니다.  

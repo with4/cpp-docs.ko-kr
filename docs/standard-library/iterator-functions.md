@@ -34,11 +34,12 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 965ff7aadb4add306061599bbe55466bbfb87f94
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 995aa846af4642070150f2dd41d4bf6463f46ee8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964465"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 함수
 
@@ -63,19 +64,19 @@ void advance(
 
 ### <a name="parameters"></a>매개 변수
 
-`InIt` 증가 되 고 하는 입력된 반복기의 요구 사항을 충족 해야 하는 반복기입니다.
+*InIt* 증가 하 고는 입력된 반복기의 요구 사항을 충족 해야 하는 반복기입니다.
 
-`Off` 반복기의 차이 형식으로 변환 될 수 있는 간격의 수를 지정 하는 정수 계열 형식을 고급 반복기의 위치가입니다.
+*해제* 반복기의 차이 형식으로 변환할 수 있고 반복기의 위치가 고급 간격의 수를 지정 하는 정수 계열 형식입니다.
 
 ### <a name="remarks"></a>설명
 
 증가 범위는 특이하지 않아야 하며, 반복기는 역참조 가능하거나 끝을 지날 수 있어야 합니다.
 
-**InputIterator**가 양방향 반복기 형식의 요구 사항을 충족할 경우 `Off`는 음수가 될 수 있습니다. **InputIterator**가 입력 또는 정방향 반복기 형식인 경우 `Off`는 음수가 아니어야 합니다.
+경우는 `InputIterator` 다음에 양방향 반복기 형식의 요구 사항을 충족 *해제* 음수가 될 수 있습니다. 하는 경우 `InputIterator` , 입력 또는 정방향 반복기 형식인 *해제* 음수가 아니어야 합니다.
 
-advance 함수는 **InputIterator**가 임의 액세스 반복기의 요구 사항을 충족할 경우 고정적 복잡성이 있습니다. 그렇지 않으면 선형 복잡성이 있으며 비용도 잠재적으로 높을 수 있습니다.
+고급 함수에 고정적 복잡성 때 `InputIterator` , 임의 액세스 반복기의 요구 사항을 충족 합니다. 그렇지 않으면 선형 복잡성이 있으며 따라서 잠재적으로 높을 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // iterator_advance.cpp
@@ -133,17 +134,17 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Cont` 후면 삽입을 실행할 수는 컨테이너입니다.
+*_Cont* 후면 삽입 실행할 컨테이너입니다.
 
 ### <a name="return-value"></a>반환 값
 
-컨테이너 개체 `_Cont`와 연결된 `back_insert_iterator`입니다.
+A `back_insert_iterator` 컨테이너 개체에 연결 된 *_Cont*합니다.
 
 ### <a name="remarks"></a>설명
 
 C++ 표준 라이브러리 내에서 인수는 `push_back` 멤버 함수가 있는 세 가지 시퀀스 컨테이너 [deque 클래스](../standard-library/deque-class.md), [list 클래스](../standard-library/list-class.md) 또는 [vector 클래스](../standard-library/vector-class.md) 중 하나를 참조해야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // iterator_back_inserter.cpp
@@ -211,17 +212,17 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>매개 변수
 
-`cont` 컨테이너입니다.
+*계속* 컨테이너입니다.
 
-`array` 형식 개체의 배열 `Ty`합니다.
+*배열* 형식의 개체 배열을 `Ty`합니다.
 
 ### <a name="return-value"></a>반환 값
 
 첫 번째 두 템플릿 함수에서 `cont.begin()`을 반환합니다. 첫 번째 함수는 비상수이고, 두 번째는 상수입니다.
 
-세 번째 템플릿 함수는 `array`를 반환합니다.
+세 번째 템플릿 함수 *배열*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 제네릭 동작이 더 필요할 경우 컨테이너 멤버 `begin()` 대신 이 템플릿 함수를 사용하는 것이 좋습니다.
 
@@ -304,7 +305,7 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>매개 변수
 
-`cont` 컨테이너 또는 initializer_list입니다.
+*계속* 컨테이너 또는 initializer_list입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -314,7 +315,7 @@ auto cbegin(const Container& cont)
 
 이 함수는 모든 C++ 표준 라이브러리 컨테이너와 [initializer_list](../standard-library/initializer-list-class.md)에서 작동합니다.
 
-`begin()` 템플릿 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container`를 수정 가능(비`const`) 컨테이너 또는 `begin()` 및 `cbegin()`을 지원하는 모든 종류의 `initializer_list`로 가정합니다.
+`begin()` 템플릿 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 예제를 고려해 야 `Container` 수정 되도록 (비 **const**) 컨테이너 또는 `initializer_list` 지 원하는 모든 종류의 `begin()` 및 `cbegin()`합니다.
 
 ```cpp
 auto i1 = Container.begin();
@@ -336,7 +337,7 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>매개 변수
 
-`cont` 컨테이너 또는 initializer_list입니다.
+*계속* 컨테이너 또는 initializer_list입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -346,7 +347,7 @@ auto cend(const Container& cont)
 
 이 함수는 모든 C++ 표준 라이브러리 컨테이너와 [initializer_list](../standard-library/initializer-list-class.md)에서 작동합니다.
 
-[end()](../standard-library/iterator-functions.md#end) 템플릿 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container`를 수정 가능(비`const`) 컨테이너 또는 `end()` 및 `cend()`를 지원하는 모든 종류의 `initializer_list`로 가정합니다.
+[end()](../standard-library/iterator-functions.md#end) 템플릿 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 예제를 고려해 야 `Container` 수정 되도록 (비 **const**) 컨테이너 또는 `initializer_list` 지 원하는 모든 종류의 `end()` 및 `cend()`합니다.
 
 ```cpp
 auto i1 = Container.end();
@@ -367,19 +368,19 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="parameters"></a>매개 변수
 
-`first` 두 번째 인스턴스와의 거리가 결정 해야 하는 첫 번째 반복기입니다.
+*첫 번째* 두 번째 거리가 결정 해야 하는 첫 번째 반복기입니다.
 
-`last` 첫 번째 인스턴스와의 거리가 결정 해야 하는 두 번째 반복기입니다.
+*마지막* 첫 번째 거리가 결정 해야 하는 두 번째 반복기입니다.
 
 ### <a name="return-value"></a>반환 값
 
-`first`가 `last`가 될 때까지 증가되어야 하는 횟수입니다.
+수 있는 횟수 *첫 번째* 가 될 때까지 증가 되어야 *마지막*합니다.
 
 ### <a name="remarks"></a>설명
 
-distance 함수는 **InputIterator**가 임의 액세스 반복기의 요구 사항을 충족할 경우 고정적 복잡성이 있습니다. 그렇지 않으면 선형 복잡성이 있으며 비용도 잠재적으로 높을 수 있습니다.
+Distance 함수 고정적 복잡성이 때 `InputIterator` , 임의 액세스 반복기의 요구 사항을 그렇지 않으면 선형 복잡성이 있으며 따라서 잠재적으로 비용이 많이 드는 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // iterator_distance.cpp
@@ -446,9 +447,9 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>매개 변수
 
-`cont` 컨테이너입니다.
+*계속* 컨테이너입니다.
 
-`array` 형식 개체의 배열 `Ty`합니다.
+*배열* 형식의 개체 배열을 `Ty`합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -471,11 +472,11 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Cont` 컨테이너 개체 앞에 해당 요소는 데 삽입 합니다.
+*_Cont* 해당 프런트 요소가 있는 컨테이너 개체를 삽입 합니다.
 
 ### <a name="return-value"></a>반환 값
 
-컨테이너 개체 `_Cont`와 연결된 `front_insert_iterator`입니다.
+A `front_insert_iterator` 컨테이너 개체에 연결 된 *_Cont*합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -483,7 +484,7 @@ front_insert_iterator 클래스의 멤버 함수 [front_insert_iterator](../stan
 
 C++ 표준 라이브러리 내에서 인수는 `push_back` 멤버 함수가 있는 두 가지 시퀀스 컨테이너 [deque 클래스](../standard-library/deque-class.md) 또는 "list 클래스" 중 하나를 참조해야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // iterator_front_inserter.cpp
@@ -532,7 +533,7 @@ After the front insertions, the list L is:
 
 ## <a name="inserter"></a>  inserter
 
-사용 하는 도우미 템플릿 함수 `inserter(_Cont, _Where)` 대신 `insert_iterator<Container>(_Cont, _Where)`합니다.
+사용할 수 있도록 하는 도우미 템플릿 함수 `inserter(_Cont, _Where)` 대신 `insert_iterator<Container>(_Cont, _Where)`합니다.
 
 ```cpp
 template <class Container>
@@ -544,15 +545,15 @@ inserter(
 
 ### <a name="parameters"></a>매개 변수
 
-`_Cont` 새 요소를 추가할 수는 컨테이너입니다.
+*_Cont* 새 요소를 추가할 컨테이너입니다.
 
-`_Where` 삽입 지점 찾기는 반복기입니다.
+*_Where* 삽입 지점을 찾고 반복기입니다.
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수를 반환 [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`합니다.
+템플릿 함수 [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // iterator_inserter.cpp
@@ -617,11 +618,11 @@ checked_array_iterator<Iter>
 
 ### <a name="parameters"></a>매개 변수
 
-`Ptr` 대상 배열에 대 한 포인터입니다.
+*Ptr* 대상 배열에 대 한 포인터입니다.
 
-`Size` 대상 배열의 크기입니다.
+*크기* 대상 배열의 크기입니다.
 
-`Index` 배열의 인덱스입니다 (옵션)입니다.
+*인덱스* 배열로 선택적 인덱스입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -633,7 +634,7 @@ checked_array_iterator<Iter>
 
 이 함수는 원시 포인터를 사용하며, 경계를 벗어나 확인하지 않는 [checked_array_iterator](../standard-library/checked-array-iterator-class.md) 클래스로 래핑되는 경우가 일반적입니다. 해당 클래스는 확인된 것으로 표시되기 때문에 C++ 표준 라이브러리에서 그에 대해 경고하지 않습니다. 자세한 내용과 코드 예제는 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 [벡터](../standard-library/vector-class.md)를 만들고 10개 항목으로 채웁니다. 벡터 콘텐츠는 복사 알고리즘을 사용하여 배열로 복사된 다음, `make_checked_array_iterator`를 사용하여 대상을 지정합니다. 그러면 디버그 어설션 실패를 트리거할 수 있도록 고의적 경계 위반 확인을 수행합니다.
 
@@ -703,11 +704,11 @@ make_move_iterator(const Iterator& _It);
 
 ### <a name="parameters"></a>매개 변수
 
-`_It` 새 이동 반복기에 저장 된 반복기입니다.
+*_It* 새 저장 되는 반복기는 반복기를 이동 합니다.
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수를 반환 `move_iterator` `<Iterator>(_It)`합니다.
+템플릿 함수 `move_iterator` `<Iterator>(_It)`합니다.
 
 ## <a name="make_unchecked_array_iterator"></a>  make_unchecked_array_iterator
 
@@ -724,7 +725,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>매개 변수
 
-`Ptr` 대상 배열에 대 한 포인터입니다.
+*Ptr* 대상 배열에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -736,7 +737,7 @@ unchecked_array_iterator<Iter>
 
 이 함수는 원시 포인터를 사용하고 확인을 수행하지 않는 클래스에서 래핑되어 최적화 대상이 없지만, [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) 등의 컴파일러 경고도 해제합니다. 따라서 이 방법은 경고를 전체적으로 해제하거나 확인 비용 없이 확인하지 않은 포인터 경고를 처리할 수 있는 계획적 방법입니다. 자세한 내용과 코드 예제는 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 [벡터](../standard-library/vector-class.md)를 만들고 10개 항목으로 채웁니다. 벡터 콘텐츠는 복사 알고리즘을 사용하여 배열로 복사된 다음, `make_unchecked_array_iterator`를 사용하여 대상을 지정합니다.
 
@@ -801,17 +802,17 @@ InputIterator next(
 
 ### <a name="parameters"></a>매개 변수
 
-`first` 현재 위치입니다.
+*첫 번째* 현재 위치입니다.
 
-`_Off` 반복 횟수입니다.
+*_Off* 반복 횟수입니다.
 
 ### <a name="return-value"></a>반환 값
 
-`_Off`번 반복 후 새 반복기 위치를 반환합니다.
+반복 후 새 반복기 위치를 반환 *_Off* 시간입니다.
 
 ### <a name="remarks"></a>설명
 
-이 템플릿 함수는 `_Off`번 증가된 `next`를 반환합니다.
+템플릿 함수 `next` 증가 *_Off* 시간
 
 ## <a name="prev"></a>  prev
 
@@ -826,9 +827,9 @@ BidirectionalIterator prev(
 
 ### <a name="parameters"></a>매개 변수
 
-`first` 현재 위치입니다.
+*첫 번째* 현재 위치입니다.
 
-`_Off` 반복 횟수입니다.
+*_Off* 반복 횟수입니다.
 
 ### <a name="remarks"></a>설명
 

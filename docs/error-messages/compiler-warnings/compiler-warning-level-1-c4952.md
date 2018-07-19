@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292144"
 ---
 # <a name="compiler-warning-level-1-c4952"></a>컴파일러 경고(수준 1) C4952
 'function': 프로그램 데이터베이스 'pgd_file'에 프로필 데이터가 없습니다.  

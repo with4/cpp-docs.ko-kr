@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281260"
 ---
 # <a name="compiler-warning-level-1-c4392"></a>컴파일러 경고(수준 1) C4392
 '서명': 내장 함수의 인수 개수가 잘못 되었습니다 'number' 인수를 필요 합니다.  

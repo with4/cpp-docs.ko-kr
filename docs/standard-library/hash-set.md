@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dccf608b9949ad9e1502b489a237adf60a4d50a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f163ef7d0e5ec05dd0f41c11ea77c558cfef4919
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955705"
 ---
 # <a name="lthashsetgt"></a>&lt;hash_set&gt;
 
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/07/2018
 
 |클래스|설명|
 |-|-|
-|[hash_compare 클래스](../standard-library/hash-compare-class.md)|해시 연관 컨테이너(hash_map, hash_multimap, hash_set 또는 hash_multiset) 중 하나에서 기본 **Traits** 매개 변수 개체로 사용하여 포함된 요소의 순서를 지정하고 해시할 수 있는 개체를 설명합니다.|
+|[hash_compare 클래스](../standard-library/hash-compare-class.md)|해시 연관 컨테이너에서 사용할 수 있는 개체를 설명-hash_map, hash_multimap, hash_set 또는 hash_multiset-기본값으로 `Traits` 를 주문 하 고 포함 된 요소의 해시 매개 변수 개체입니다.|
 |[hash_set 클래스](../standard-library/hash-set-class.md)|포함된 요소의 값이 고유하고 키 값으로 사용된 컬렉션의 데이터를 빠르게 검색하고 저장하는 데 사용됩니다.|
 |[hash_multiset 클래스](../standard-library/hash-multiset-class.md)|포함된 요소의 값이 고유하고 키 값으로 사용된 컬렉션의 데이터를 빠르게 검색하고 저장하는 데 사용됩니다.|
 

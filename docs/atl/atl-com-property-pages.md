@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357534"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM 속성 페이지
 속성을 설정 하기 위한 사용자 인터페이스를 제공 하는 COM 속성 페이지 (또는 메서드를 호출할) 하나 이상의 COM 개체입니다. 속성 페이지 컨트롤 속성을 디자인 타임에 설정 될 수 있는 풍부한 사용자 인터페이스를 제공 하기 위해 ActiveX 컨트롤에서 광범위 하 게 사용 됩니다.  

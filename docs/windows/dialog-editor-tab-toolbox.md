@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882578"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>도구 상자, 대화 상자 편집기 탭
 대화 상자 편집기 탭이 표시는 [도구 상자 창](/visualstudio/ide/reference/toolbox) 대화 상자 편집기에서 작업 하는 경우. 새 대화 상자에 컨트롤을 추가 하려면 컨트롤 도구 상자에서 만들려는 대화 상자로 끌어 (자세한 내용은 참조 [대화 상자에 컨트롤 추가](adding-a-control-to-a-dialog-box.md)). 그런 다음 컨트롤을 주변으로 이동하거나 크기와 모양을 변경할 수 있습니다.  

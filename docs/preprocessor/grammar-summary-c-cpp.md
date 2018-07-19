@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849147"
 ---
 # <a name="grammar-summary-cc"></a>문법 요약 (C/C++)
 전처리기의 정식 문법에 대해 설명하는 이 단원에서는 전처리 지시문의 구문을 설명 하 고 연산자에 설명 된 [전처리기](../preprocessor/preprocessor.md) 및 [Pragma 지시문](../preprocessor/pragma-directives-and-the-pragma-keyword.md)합니다.  

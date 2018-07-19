@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375586"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>링커의 지연 로드된 DLL 지원
 이제 Visual c + + 링커는 Dll의 지연된 로드를 지원합니다. 이 방식으로 제공 절약 Windows SDK 함수를 사용할 필요가 **LoadLibrary** 및 **GetProcAddress** DLL 지연 로드를 구현 하 합니다.  

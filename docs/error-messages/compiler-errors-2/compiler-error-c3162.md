@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253802"
 ---
 # <a name="compiler-error-c3162"></a>컴파일러 오류 C3162
 'type': 소멸자가 있는 참조 형식은 정적 데이터 멤버 'member'의 형식으로 사용할 수 없습니다  

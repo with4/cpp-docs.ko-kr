@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096693"
 ---
 # <a name="creating-an-ole-db-consumer"></a>OLE DB 소비자 만들기
 만들 수 있습니다 OLE DB 템플릿 소비자 상관 없이 ATL OLE DB 소비자 마법사를 경우에 마법사를 사용 하는 것이 좋습니다. 소비자는 ATL이 지원 있는 모든 응용 프로그램에서 작동할 수 있습니다.  

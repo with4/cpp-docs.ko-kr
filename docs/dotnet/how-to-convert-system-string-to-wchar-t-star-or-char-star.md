@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33139763"
 ---
 # <a name="how-to-convert-systemstring-to-wchart-or-char"></a>방법: System::String을 wchar_t* 또는 char*로 변환
 사용할 수 있습니다 `PtrToStringChars` 변환할 Vcclr.h에서 <xref:System.String> 네이티브로 `wchar_t *` 또는 `char *`합니다.  이 항상 CLR 문자열은 내부적으로 유니코드 때문에 넓은 유니코드 문자열 포인터를 반환 합니다. 다음 예제와 같이 전체에서 변환할 수 있습니다.  

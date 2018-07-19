@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366863"
 ---
 # <a name="calling-convention"></a>호출 규칙
 이 섹션에서는 함수 (호출자)에 대해 수행 하는 프로세스를 설명 (호출 수신자) 다른 함수를 호출 합니다.  

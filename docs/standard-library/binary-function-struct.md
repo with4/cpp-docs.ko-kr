@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb54ae332dac556333516c5e50129b9ba43ce07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01eb327458331ca457b7b7f23d8c69668fbf1fa7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964160"
 ---
 # <a name="binaryfunction-struct"></a>binary_function 구조체
 
@@ -44,9 +45,9 @@ struct binary_function {
 
 **const second_argument_type&** ) **const**
 
-이러한 모든 이항 함수는 첫 번째 인수 형식을 **first_argument_type**, 두 번째 인수 형식을 **second_argument_type**, 반환 형식을 ***result_type***으로 참조할 수 있습니다.
+이러한 모든 이항 함수는 첫 번째 인수 형식을 참조할 수 있습니다 `first_argument_type`, 해당 두 번째 인수 형식을 `second_argument_type`, 및 반환 형식을 ***result_type***합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // functional_binary_function.cpp

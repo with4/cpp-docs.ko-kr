@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688130"
 ---
 # <a name="264-atomic-construct"></a>2.6.4 atomic 구문
 `atomic` 지시어를 사용 하면 다 수의 가능성에 노출 하는 대신 특정 메모리 위치를 개별적으로 업데이트 되도록 동시 스레드를 작성 합니다. 구문은 `atomic` 지시문은 다음과 같습니다.  

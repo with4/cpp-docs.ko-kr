@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384387"
 ---
 # <a name="postfix-operators"></a>후위 연산자
 후위 연산자는 식 계산에서 가장 높은 우선 순위(가장 강력한 바인딩)를 가집니다.  

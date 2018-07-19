@@ -7,11 +7,12 @@ f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-ms.openlocfilehash: 356c98ce5c93d1e05a583fc30c4758c5d15d7529
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5795d146714c6eb00902518347138a98574679a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960650"
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt; 열거형
 
@@ -34,13 +35,13 @@ enum float_denorm_style {
 
 이 열거형은 다음을 반환합니다.
 
-- **denorm_indeterminate** - 변환할 때 비정규화된 폼의 존재 여부를 확인할 수 없는 경우.
+- `denorm_indeterminate` 변환 시 비 정규화 된 폼의 유무를 확인할 수 없습니다 하는 경우.
 
-- **denorm_absent** - 비정규화된 폼이 없는 경우.
+- `denorm_absent` 비 정규화 된 폼 없는 경우.
 
-- **denorm_present** - 비정규화된 폼이 있는 경우.
+- `denorm_present` 비 정규화 된 폼이 경우 다음을 제공 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 이 열거형의 값에 액세스할 수 있는 예제는 [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm)을 참조하세요.
 
@@ -61,17 +62,17 @@ enum float_round_style {
 
 이 열거형은 다음을 반환합니다.
 
-- **round_indeterminate** - 반올림 방법을 확인할 수 없는 경우.
+- `round_indeterminate` 경우 반올림 방법을 확인할 수 없습니다.
 
-- **round_toward_zero** - 0으로 반올림되는 경우.
+- `round_toward_zero` 경우 0으로 반올림 합니다.
 
-- **round_to_nearest** - 가장 가까운 정수로 반올림되는 경우.
+- `round_to_nearest` 경우는 가장 가까운 정수로 반올림 합니다.
 
-- **round_toward_infinity**  - 0에서 올림되는 경우.
+- `round_toward_infinity` 경우 0에서 멀어지는 쪽 반올림 합니다.
 
-- **round_toward_neg_infinity** - 더 큰 음의 정수로 반올림되는 경우.
+- `round_toward_neg_infinity` 하는 경우 더 음의 정수는 반올림 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 이 열거형의 값에 액세스할 수 있는 예제는 [numeric_limits::round_style](../standard-library/numeric-limits-class.md#round_style)을 참조하세요.
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092755"
 ---
 # <a name="columnnameps"></a>COLUMN_NAME_PS
 행 집합의 특정 열에는 행 집합의 바인딩을 나타냅니다. 비슷한 [COLUMN_NAME](../../data/oledb/column-name.md)단 정밀도 배율이이 매크로 또한 사용 하며, 합니다.  

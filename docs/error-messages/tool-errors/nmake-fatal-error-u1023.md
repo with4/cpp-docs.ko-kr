@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324729"
 ---
 # <a name="nmake-fatal-error-u1023"></a>NMAKE 심각한 오류 U1023
 식에 구문 오류가 있습니다.  

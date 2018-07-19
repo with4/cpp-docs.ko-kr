@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879505"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>명시적 재정의(C++ 구성 요소 확장명)
 이 항목에서는 기본 클래스 또는 인터페이스의 멤버를 명시적으로 재정의 하는 방법을 설명 합니다. 명명 된 명시적 재정의 다른 이름이 있는 파생 메서드로 메서드를 재정의 하만 사용 해야 합니다.  

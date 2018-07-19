@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199290"
 ---
 # <a name="fatal-error-c1201"></a>심각한 오류 C1201
 클래스 템플릿 정의에 구문 오류가 있어서 계속할 수 없습니다.  

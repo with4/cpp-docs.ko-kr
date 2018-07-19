@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367162"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>이전 코드를 위한 부동 소수점 지원(Visual C++)
 MMX와 부동 소수점 스택 레지스터 (MM0-MM7/ST0-ST7) 컨텍스트 유지 됩니다.  이러한 레지스터에 대 한 명시적 호출 규칙 없는 있습니다.  이러한 레지스터 사용은 엄격 하 게 커널 모드 코드에서 금지 됩니다.  

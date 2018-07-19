@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129439"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>MFC 대화 상자에서 Windows Form 사용자 정의 컨트롤 호스팅
 MFC ActiveX 컨트롤의 특수 한 종류는 Windows Forms 컨트롤을 호스트 하 고 ActiveX 인터페이스, 속성 및 메서드를 사용 하 여 컨트롤와 통신 하는 <xref:System.Windows.Forms.Control> 클래스입니다. 컨트롤에서 작동 하려면.NET Framework 속성 및 메서드를 사용 하는 것이 좋습니다.  

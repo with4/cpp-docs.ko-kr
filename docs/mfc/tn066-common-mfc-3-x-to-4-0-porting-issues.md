@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381792"
 ---
 # <a name="tn066-common-mfc-3x-to-40-porting-issues"></a>TN066: 일반적인 MFC 3.x에서 4.0으로의 이식 문제
 이 기술 노트는 MFC로 작성 된 응용 프로그램 이식 하려고 할 때 발생할 수 있는 가장 일반적인 문제를 설명 3.x (포함 된 Visual c + + MFC 2.x) MFC 4.0에 있습니다.  

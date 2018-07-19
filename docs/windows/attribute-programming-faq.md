@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862366"
 ---
 # <a name="attribute-programming-faq"></a>특성 프로그래밍 FAQ
 이 항목에는 다음 질문과 대답 합니다.  

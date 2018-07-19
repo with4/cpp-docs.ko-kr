@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322002"
 ---
 # <a name="resource-compiler-warning-rw4003"></a>리소스 컴파일러 오류 RW4003
 VIRTKEY 없이 SHIFT 또는 CONTROL이 사용되었습니다.  

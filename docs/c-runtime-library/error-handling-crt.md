@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee55abe1107e578729fe8d5a301a067afdb6c551
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f39fe3743c023bb0c4cb3130400e9bcb7b97db1b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704849"
 ---
 # <a name="error-handling-crt"></a>오류 처리(CRT)
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="error-handling-routines"></a>오류 처리 루틴
 
-|루틴|사용|
+|루틴에서 반환된 값|사용|
 |-------------|---------|
 |[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md) 매크로|런타임 라이브러리의 디버그 및 릴리스 버전 모두에서 사용할 수 있는 프로그래밍 논리 오류 테스트입니다.|
 |[_ASSERT, _ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 매크로|**assert**와 비슷하지만 런타임 라이브러리의 디버그 버전에서만 사용할 수 있습니다.|
@@ -45,4 +46,4 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="see-also"></a>참고 항목
 
-[범주별 유버니설 C 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)<br/>
+- [범주별 유버니설 C 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)

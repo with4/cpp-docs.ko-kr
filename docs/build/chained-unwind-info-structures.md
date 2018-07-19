@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366954"
 ---
 # <a name="chained-unwind-info-structures"></a>연결된 해제 정보 구조체
 UNW_FLAG_CHAININFO 플래그가 설정 된 경우, 해제 정보 구조체는 보조 로케이터로 되 고 주 해제 정보를 포함 하는 공유 되는 예외-처리기/연결 된 정보 주소 필드. 다음 코드를 검색 주 정보를 가정 하 고 해제 `unwindInfo` 는 UNW_FLAG_CHAININFO이 있는 구조 플래그가 설정 됩니다.  

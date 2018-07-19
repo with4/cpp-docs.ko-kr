@@ -24,17 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30d220c928f2ca3fe0594d03d558d2d6dcfce773
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64a8df138ef0d581bcc93bf836ee0935a634983d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930505"
 ---
 # <a name="files-in-mfc"></a>MFC의 파일
 에 MFC Microsoft Foundation Class 라이브러리 (), 클래스 [CFile](../mfc/reference/cfile-class.md) 일반적인 파일 I/O 작업을 처리 합니다. 이 문서 열기 및 파일을 닫고 뿐만 아니라 데이터 읽기 및 쓰기를 해당 파일에 하는 방법을 설명 합니다. 또한 파일 상태 작업에 설명 합니다. 데이터 읽기 및 쓰기 파일에는 대체 방법으로 MFC의 serialization 개체 기반 기능을 사용 하는 방법에 대 한 문서를 참조 [Serialization](../mfc/serialization-in-mfc.md)합니다.  
   
 > [!NOTE]
->  MFC를 사용 하는 경우 **CDocument** 개체, 프레임 워크는 serialization 작업의 대부분을 수행 합니다. 특히, 프레임 워크에서 만들고 사용 하 여 `CFile` 개체입니다. 재정의에서 코드를 작성 해야는 `Serialize` 클래스의 멤버 함수 **CDocument**합니다.  
+>  MFC를 사용 하는 경우 `CDocument` 개체, 프레임 워크는 serialization 작업의 대부분을 수행 합니다. 특히, 프레임 워크에서 만들고 사용 하 여 `CFile` 개체입니다. 재정의에서 코드를 작성 해야는 `Serialize` 클래스의 멤버 함수 `CDocument`합니다.  
   
  `CFile` 클래스는 일반적인 이진 파일 작업에 대 한 인터페이스를 제공 합니다. `CStdioFile` 및 `CMemFile` 클래스에서 파생 된 `CFile` 및 `CSharedFile` 에서 파생 된 클래스 `CMemFile` 더 특수 한 파일 서비스를 제공 합니다.  
   

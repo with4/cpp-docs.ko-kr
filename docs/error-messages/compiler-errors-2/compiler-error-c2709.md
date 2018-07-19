@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230139"
 ---
 # <a name="compiler-error-c2709"></a>컴파일러 오류 C2709
 'identifier': 정식 매개 변수 길이(바이트)가 이전 선언과 다릅니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386072"
 ---
 # <a name="c-storage-classes"></a>C 저장소 클래스
 변수의 "저장소 클래스"는 항목에 "전역" 또는 "로컬" 수명을 사용할지 여부를 결정합니다. C에서는 "정적" 수명과 "자동" 수명을 호출합니다. 프로그램 실행 전체에 전역 수명을 가진 항목이 존재하고 값을 갖습니다. 모든 함수는 전역 수명을 갖습니다.  

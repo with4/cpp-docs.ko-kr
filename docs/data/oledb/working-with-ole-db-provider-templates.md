@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112071"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>OLE DB 공급자 템플릿을 사용하여 작업
 OLE DB 공급자 템플릿을 사용 하는 방법을 알아보려면 다음 항목을 참조 합니다.  

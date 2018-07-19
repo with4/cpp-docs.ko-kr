@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344898"
 ---
 # <a name="exception-classes"></a>예외 클래스
 클래스 라이브러리는 `CException` 클래스를 기반으로 예외 처리 메커니즘을 제공합니다. 응용 프로그램 프레임 워크는 해당 코드에서 예외를 사용합니다. 사용자도 자신의 코드에서 예외를 사용할 수 있습니다. 자세한 내용은 문서 참조 [예외](../mfc/exception-handling-in-mfc.md)합니다. 사용자는 `CException`에서 고유한 예외 형식을 파생할 수 있습니다.  

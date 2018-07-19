@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346258"
 ---
 # <a name="printing-and-print-preview"></a>인쇄 및 인쇄 미리 보기
 MFC 클래스를 통해 프로그램의 문서에 대 한 인쇄 및 인쇄 미리 보기는 지원 [CView](../mfc/reference/cview-class.md)합니다. 기본 인쇄 및 인쇄 미리 보기에 대 한 뷰 클래스를 재정의 하기만 [OnDraw](../mfc/reference/cview-class.md#ondraw) 멤버 함수가 그래도 수행 해야 합니다. 보기는 실제 프린터에 대 한 프린터 장치 컨텍스트를 화면에 해당 함수를 그릴 수 또는 화면에서 프린터를 시뮬레이션 하는 장치 컨텍스트를 합니다.  

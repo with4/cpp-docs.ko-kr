@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373220"
 ---
 # <a name="error-handling-and-notification"></a>오류 처리 및 알림
 오류 처리 및 알림에 대 한 자세한 내용은 참조 하십시오. [도우미 함수 이해](understanding-the-helper-function.md)합니다.  

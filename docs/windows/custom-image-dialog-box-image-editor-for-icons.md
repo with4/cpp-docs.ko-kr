@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883136"
 ---
 # <a name="custom-image-dialog-box-image-editor-for-icons"></a>사용자 지정 이미지 대화 상자(아이콘에 대한 이미지 편집기)
 사용자 지정 크기 및 색상 수와 새 이미지를 만들 수 있습니다.

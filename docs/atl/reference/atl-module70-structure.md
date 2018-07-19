@@ -1,5 +1,5 @@
 ---
-title: _ATL_MODULE70 구조 | Microsoft Docs
+title: _ATL_MODULE70 구조체 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,13 +19,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a374ee01387c576a5d1a727857badc7ef7139ad
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 9666d73eec770ff8231e5730e01520b0bee68012
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886221"
 ---
-# <a name="atlmodule70-structure"></a>_ATL_MODULE70 구조
+# <a name="atlmodule70-structure"></a>_ATL_MODULE70 구조체
 모든 ATL 모듈에 의해 사용 되는 데이터를 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -44,12 +45,12 @@ struct _ATL_MODULE70 {
  버전 관리에 사용 되는 구조체의 크기입니다.  
   
  `m_nLockCnt`  
- 모듈을 활성 상태로 남아 해야 기간 결정 하기 위한 참조 횟수입니다.  
+ 모듈을 활성 상태로 유지 해야 기간을 확인 하려면 참조 횟수입니다.  
   
- **m_pTermFuncs**  
- ATL 종료 될 때 호출 될에 등록 된 트랙 함수입니다.  
+ `m_pTermFuncs`  
+ ATL 종료 될 때 호출할에 등록 된 추적 함수입니다.  
   
- **m_csStaticDataInitAndTypeInfo**  
+ `m_csStaticDataInitAndTypeInfo`  
  다중 스레드 상황에서 내부 데이터에 대 한 액세스를 조정 하는 데 사용 합니다.  
   
 ## <a name="remarks"></a>설명  

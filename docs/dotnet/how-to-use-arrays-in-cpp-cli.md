@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138779"
 ---
 # <a name="how-to-use-arrays-in-ccli"></a>방법: C++/CLI에서 배열 사용
 이 문서에서는 배열을 사용 하 여 C + + /cli CLI 합니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353630"
 ---
 # <a name="ole-in-mfc"></a>MFC의 OLE
 이 문서에서는 MFC를 사용 하 여 OLE 프로그래밍의 기본적인 사항을 설명 합니다. MFC는 OLE를 사용 하는 프로그램을 작성 하는 가장 쉬운 방법은 제공 합니다.  

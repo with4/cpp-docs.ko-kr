@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233973"
 ---
 # <a name="compiler-error-c2758"></a>컴파일러 오류 c 2758
 'member': 참조 형식의 멤버를 초기화해야 합니다.  

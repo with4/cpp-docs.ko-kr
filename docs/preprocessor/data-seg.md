@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841234"
 ---
 # <a name="dataseg"></a>data_seg
 초기화된 변수가 .obj 파일에 저장되는 데이터 세그먼트를 지정합니다.  

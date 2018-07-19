@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847418"
 ---
 # <a name="setlocale"></a>setlocale
 와이드 문자 상수와 문자열 리터럴을 변환할 때 사용되는 로캘(국가/지역 및 언어)을 정의합니다.  

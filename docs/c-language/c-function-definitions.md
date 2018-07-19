@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389945"
 ---
 # <a name="c-function-definitions"></a>C 함수 정의
 함수 정의는 함수의 이름, 받아야 하는 매개 변수의 형식과 개수 및 반환 형식을 지정합니다. 함수 정의는 지역 변수의 선언과 함수의 기능을 결정하는 문이 있는 함수 본문도 포함합니다.  

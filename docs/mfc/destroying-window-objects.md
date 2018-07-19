@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343378"
 ---
 # <a name="destroying-window-objects"></a>창 개체 제거
 주의 해야 자신의 자식 창으로 창을 사용 하 여 사용자가 완료 하는 경우 c + + 창 개체를 제거할 수 있습니다. 이러한 개체가 소멸 되지 않습니다 응용 프로그램에서 메모리를 복구 하지 않습니다. 다행히 프레임 워크는 프레임 창, 뷰 및 대화 상자에 대 한 작성 뿐만 아니라 창 소멸을 관리합니다. 추가로 창을 만드는 모르는 경우을 제거 해야 합니다.  

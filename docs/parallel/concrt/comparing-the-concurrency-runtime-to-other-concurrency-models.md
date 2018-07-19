@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694071"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>동시성 런타임과 기타 동시성 모델 비교
 이 문서에서는 동시성 런타임과 기타 기술의 기능 및 프로그래밍 모델 간 차이점에 대해 설명합니다. 동시성 런타임의 이점을 다른 프로그래밍 모델의 이점과 비교하는 방법을 이해하면 응용 프로그램 요구 사항에 가장 적합한 기술을 선택할 수 있습니다.  

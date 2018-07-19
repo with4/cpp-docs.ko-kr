@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362163"
 ---
 # <a name="ccomapartment-class"></a>CComApartment 클래스
 이 클래스는 아파트 호수 스레드 풀링 EXE 모듈에서 관리 하기 위한 지원을 제공 합니다.  

@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d341a2d7ee9f6220922dbdde95e19020fe085892
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f516114dbaa9e507491cf669c3371b6b8fbaf11
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944545"
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
 **Microsoft 전용**  
@@ -37,13 +38,13 @@ void __stdcall _set_com_error_handler(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `pHandler`  
+ *pHandler*  
  대체 함수에 대한 포인터입니다.  
   
- `hr`  
- `HRESULT` 정보입니다.  
+ *hr*  
+ HRESULT 정보입니다.  
   
- `perrinfo`  
+ *perrinfo*  
  `IErrorInfo` 개체  
   
 ## <a name="remarks"></a>설명  
@@ -51,9 +52,9 @@ void __stdcall _set_com_error_handler(
   
  대체 함수에는 `_com_raise_error`의 시그니처에 해당하는 시그니처가 있어야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp 
 // _set_com_error_handler.cpp  
 // compile with /EHsc  
 #include <stdio.h>  
@@ -95,7 +96,7 @@ Exception raised: Unable to establish the connection!
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<comdef.h >  
   
- **Lib:** 경우는 **wchar_t is Native Type** 컴파일러 옵션이 설정 되어 있는 경우 comsuppw.lib 또는 comsuppwd.lib를 사용 합니다. 경우 **wchar_t is Native Type** 해제, comsupp.lib를 사용 합니다. 자세한 내용은 [/Zc:wchar_t(wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)를 참조하세요.  
+ **Lib:** 경우는 **wchar_t is Native Type** 컴파일러 옵션이 설정 되어 있는 경우 comsuppw.lib 또는 comsuppwd.lib를 사용 합니다. 하는 경우 **wchar_t is Native Type** 해제가 comsupp.lib를 사용 합니다. 자세한 내용은 [/Zc:wchar_t(wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [컴파일러 COM 전역 함수](../cpp/compiler-com-global-functions.md)

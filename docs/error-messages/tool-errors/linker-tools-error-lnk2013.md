@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299853"
 ---
 # <a name="linker-tools-error-lnk2013"></a>링커 도구 오류 LNK2013
 픽스업 형식 픽스업 오버플로입니다. 대상 'symbol name' 범위를 벗어났습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316503"
 ---
 # <a name="resource-compiler-fatal-error-rc1011"></a>리소스 컴파일러 심각한 오류 RC1011
 컴파일러 한계: 'identifier': 매크로 정의 너무 큽니다.  

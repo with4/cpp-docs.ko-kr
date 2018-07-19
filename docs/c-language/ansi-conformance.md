@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380591"
 ---
 # <a name="ansi-conformance"></a>ANSI 규칙
 Microsoft C는 ANSI C 표준의 9899:1990 버전에서 명시된 C 언어의 표준을 준수합니다.  

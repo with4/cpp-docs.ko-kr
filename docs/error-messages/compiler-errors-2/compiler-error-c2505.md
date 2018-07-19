@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227663"
 ---
 # <a name="compiler-error-c2505"></a>컴파일러 오류 C2505
 'symbol': '__declspec(modifer)' 선언 또는 전역 개체 또는 정적 데이터 멤버의 정의에 적용 될 수 있습니다  

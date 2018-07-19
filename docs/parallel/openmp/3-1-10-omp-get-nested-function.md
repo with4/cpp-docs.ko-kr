@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686723"
 ---
 # <a name="3110-ompgetnested-function"></a>3.1.10 omp_get_nested 함수
 `omp_get_nested` 해제 된 경우 중첩 된 병렬 처리에 사용 되는 경우 0이 아닌 값과 0 함수 반환 합니다. 중첩 된 병렬 처리에 대 한 자세한 내용은 40 페이지 3.1.9 섹션을 참조 합니다. 형식은 다음과 같습니다.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693538"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>동시성 네임 스페이스 함수 (AMP)
 ||||  

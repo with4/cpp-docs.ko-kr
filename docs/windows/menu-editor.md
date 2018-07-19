@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879440"
 ---
 # <a name="menu-editor"></a>메뉴 편집기
 메뉴를 통해 논리적이고 찾기 쉬운 방식으로 명령을 정렬할 수 있습니다. 메뉴 편집기를 사용하면 완성된 응용 프로그램과 매우 유사한 메뉴 모음을 직접 활용하여 메뉴를 만들고 편집할 수 있습니다.  

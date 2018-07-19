@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1441337275ac07b0d1ba39e8bfa34e7165f87f82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa500288ec4982ca4e1d304fac2cd577d58f4207
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944815"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>단항 더하기 및 부정 연산자: + 및 -
 ## <a name="syntax"></a>구문  
@@ -33,22 +34,18 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 + cast-expression  
-```  
-  
-```  
-  
 - cast-expression  
 ```  
   
 ## <a name="-operator"></a>+ 연산자  
  단항 더하기 연산자의 결과 (**+**)는 피연산자의 값입니다. 단항 더하기 연산자의 피연산자는 산술 형식이어야 합니다.  
   
- 정수 계열 확장은 정수 계열 피연산자를 대상으로 수행됩니다. 결과 형식은 피연산자가 승격될 형식입니다. 따라서, `+ch`가 `ch` 형식인 `char` 식은 `int` 형식이 되며 그 값은 변경되지 않습니다. 참조 [표준 변환](standard-conversions.md) 확장 수행 방법에 대 한 자세한 내용은 합니다.  
+ 정수 계열 확장은 정수 계열 피연산자를 대상으로 수행됩니다. 결과 형식은 피연산자가 승격될 형식입니다. 따라서, 다음 식은 `+ch`여기서 `ch` 형식입니다 **char**, 형식이 **int**; 값이 수정 되지 않습니다. 참조 [표준 변환](standard-conversions.md) 승격 수행 되는 방법에 대 한 자세한 내용은 합니다.  
   
 ## <a name="--operator"></a>- 연산자  
  단항 부정 연산자 (**-**)는 피연산자의 부정을 생성 합니다. 단항 부정 연산자의 피연산자는 산술 형식이어야 합니다.  
   
- 정수 계열 확장은 정수 계열 피연산자에서 수행되며, 결과 형식은 피연산자가 확장되는 형식입니다. 참조 [표준 변환](standard-conversions.md) 확장 수행 방법에 대 한 자세한 내용은 합니다.  
+ 정수 계열 확장은 정수 계열 피연산자에서 수행되며, 결과 형식은 피연산자가 확장되는 형식입니다. 참조 [표준 변환](standard-conversions.md) 승격 수행 하는 방법에 대 한 자세한 내용은 합니다.  
   
 ## <a name="microsoft-specific"></a>Microsoft 전용  
  부호 없는 수량의 단항 부정은 2^n에서 피연산자의 값을 빼서 수행됩니다. 여기서 n은 지정된 부호 없는 형식의 개체에 있는 비트 수입니다.

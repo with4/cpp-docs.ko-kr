@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375729"
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG(디버깅 정보 생성)
 ```  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860296"
 ---
 # <a name="chaininterfacescancastto-method"></a>ChainInterfaces::CanCastTo 메서드
 지정 된 인터페이스 ID의 특수화는 기본이 아닌 템플릿 매개 변수에 의해 정의 된 각으로 캐스팅 될 수 있는지 여부를 나타냅니다.  

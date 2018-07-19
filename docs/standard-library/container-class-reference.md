@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cad92eb5ce664d22cc5ee0ad8b4c26d41c88d883
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13883e1426be22c8cf3d329be33258c69511900d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966021"
 ---
 # <a name="container-classreference"></a>Container Class::reference
 
@@ -36,7 +37,7 @@ typedef T2 reference;
 
 ## <a name="remarks"></a>설명
 
-여기서는 지정되지 않은 형식 **T2**의 동의어(일반적으로 **Alloc::reference**)로 설명됩니다. **reference** 형식의 개체는 [const_reference](../standard-library/container-class-const-reference.md) 형식의 개체로 캐스트할 수 있습니다.
+설명 됩니다 여기서 지정 되지 않은 형식에 대 한 동의어 `T2` (일반적으로 `Alloc::reference`). 형식의 개체 `reference` 형식의 개체를 캐스팅할 수 있습니다 [const_reference](../standard-library/container-class-const-reference.md)합니다.
 
 ## <a name="see-also"></a>참고자료
 

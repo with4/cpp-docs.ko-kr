@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415688"
 ---
 # <a name="class-templates"></a>클래스 템플릿
 이 항목에서는 c + + 클래스 템플릿과 관련 된 규칙을 설명 합니다.  

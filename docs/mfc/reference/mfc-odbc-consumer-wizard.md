@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371426"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC 소비자 마법사
 여기에 요약 "검색 결과"를 삽입 합니다.  

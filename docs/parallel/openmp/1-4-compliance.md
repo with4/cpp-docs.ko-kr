@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687233"
 ---
 # <a name="14-compliance"></a>1.4 규격
 OpenMP C/c + + API의 구현은 *OpenMP 규격* 부록 C. 부록 A "," B "," D "," E "및" F는 및 인식 하 고 장 1, 2, 3, 4에 따라 해당이 설정의 요소를 모두의 의미 체계를 유지 하는 경우 목적 으로만 사용 정보와 사양의 포함 되지 않습니다. API의 하위 집합만 포함 하는 구현 OpenMP 규격이 아닙니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269259"
 ---
 # <a name="compiler-error-c3803"></a>컴파일러 오류 C3803
 'property': 속성에는 해당 접근자 'accessor' 중 하 나와 호환 되지 않는 형식  

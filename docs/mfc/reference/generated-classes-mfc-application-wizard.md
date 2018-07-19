@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370834"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>MFC 응용 프로그램 마법사, 생성된 클래스
 이 항목에는 프로젝트에서 생성 되는 기본 클래스 및 파일 이름을 나열 합니다. 기본적으로는 이름에 지정 된 프로젝트 이름에 따라는 **새 프로젝트 대화 상자**합니다. 여기에 설명 된 대로 대부분의이 이름은 변경할 수 있습니다.  

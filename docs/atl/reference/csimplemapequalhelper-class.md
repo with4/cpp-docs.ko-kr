@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4bfef99d12ae724c2ca6e70375f08a8dc1fb15b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d629806582d7ad9902ef5ca0d9425d6f1ecd7d7
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879697"
 ---
 # <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper 클래스
 이 클래스는에 대 한 도우미는 [CSimpleMap](../../atl/reference/csimplemap-class.md) 클래스입니다.  
@@ -36,11 +37,11 @@ class CSimpleMapEqualHelper
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `TKey`  
- 핵심 요소입니다.  
+ *TKey*  
+ 주요 요소입니다.  
   
- `TVal`  
- Value 요소입니다.  
+ *TVal*  
+ 값 요소입니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -52,7 +53,7 @@ class CSimpleMapEqualHelper
 |[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(정적) 두 값이 같은지를 테스트합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 특성 클래스는 적용 하기 위해는 `CSimpleMap` 클래스입니다. 두 개의 비교를 위한 메서드를 제공 `CSimpleMap` 개체 같은지 요소 (특히, 키 및 값 구성 요소). 기본적으로 키와 값 비교에 사용할 `operator==()`, 되지만 지도 자신의 같음 연산자를 없는 복잡 한 데이터 형식이 있으면이 클래스 필수 추가 기능을 제공 하기 재정의할 수 있습니다.  
+ 이 특성 클래스는 보완을 `CSimpleMap` 클래스입니다. 두 비교 하기 위한 메서드를 제공 `CSimpleMap` 개체 같음에 대 한 요소 (특히, 키 및 값 구성 요소). 기본적으로 키와 값 비교에 사용할 **operator==()**, 없지만 지도 자체 같음 연산자를 없는 복잡 한 데이터 형식에 있으면 필요한 추가 기능을 제공 하기이 클래스를 재정의할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsimpcoll.h  
@@ -65,14 +66,14 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `k1`  
+ *k1*  
  첫 번째 키입니다.  
   
- `k2`  
+ *k2*  
  두 번째 키입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 키가 같으면 false를 반환 하지 않으면 true를 반환 합니다.  
+ 키가 같으면 false이 고, 그렇지 true를 반환 합니다.  
   
 ##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue  
  두 값이 같은지를 테스트합니다.  
@@ -82,14 +83,14 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- *V1*  
+ *v1*  
  첫 번째 값입니다.  
   
- *V2*  
+ *v2*  
  두 번째 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 값이 같으면 false를 반환 하지 않으면 true를 반환 합니다.  
+ 값이 같으면 false이 고, 그렇지 true를 반환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CSimpleMapEqualHelperFalse 클래스](../../atl/reference/csimplemapequalhelperfalse-class.md)   

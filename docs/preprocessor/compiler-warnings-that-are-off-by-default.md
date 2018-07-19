@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d311c730781aee70d4b77723ddec98a79407e42a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c1187d0fcfec45a21a358c8d20c4f3684f17feb3
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705568"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322396"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>기본적으로 해제 되어 있는 컴파일러 경고
 
@@ -89,7 +89,7 @@ ms.locfileid: "34705568"
 |[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) (수준 1)|'*operator1*': 쉼표 앞의 연산자에 영향을 주지 않습니다; 시겠습니까 '*operator2*'?|
 |[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) (수준 1)|식이 효과가 없습니다. 파생 작업이 있는 식이어야 합니다.|
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) (수준 3)|효과 포함 '__assume' '*효과*'|
-|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (수준 4)|변경; Visual c + + 7.1부터 catch (...) 의미 체계를 알림: 구조적된 예외 (SEH) 변경 되었습니다.|
+|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (수준 4)|정보 제공 용 이므로: 변경; Visual c + + 7.1부터 catch (...) 의미 체계 구조적된 예외 (SEH) 변경 되었습니다.|
 |C4574 (수준 4)|'*식별자*'같이 정의 됩니다. ' 0': =을 사용 하 여 ' #if *식별자*'?|
 |C4577 (수준 1)|' noexcept' 처리 모드를 지정 합니다; 예외가 함께 사용 예외 시 종료가 보장 되지 않습니다. /EHsc를 지정 합니다.|
 |C4582 (수준 4)|'*형식*': 생성자가 암시적으로 호출 되지 않습니다|
@@ -153,12 +153,14 @@ ms.locfileid: "34705568"
 |[C5038](../error-messages/compiler-warnings/c5038.md) (수준 4)|데이터 멤버 '*member1*'초기화 될 데이터 멤버 뒤'*member2*' <sup>15.3</sup>|
 |C5039 (수준 4)|'*함수*': 포인터 또는 함수를 잠재적으로 throw 하는 참조-EHc 아래 extern C 함수에 전달 합니다. 이 함수는 예외를 throw 하는 경우 정의 되지 않은 동작이 발생할 수 있습니다. <sup>15.5</sup>|
 |C5042 (수준 3)|'*함수*': 함수 선언은 블록 범위에서 표준 c + +에서 '인라인'이 지정 된 일 수 없습니다. '인라인' 지정자를 제거 <sup>15.5</sup>|
+|[C5045](../error-messages/compiler-warnings/c5045.md)|/Qspectre 스위치를 지정 하는 경우 컴파일러는 유령 더 이상 적용 하지 않은 메모리 로드를 삽입 <sup>15.7</sup>|
 
-<sup>14.1</sup> 이 경고는 Visual Studio 2015 업데이트 1부터 사용할 수 있습니다.<br>
-<sup>14.3</sup> 이 경고는 Visual Studio 2015 업데이트 3부터 사용할 수 있습니다.<br>
-<sup>15.3</sup> 이 경고는 Visual Studio 2017 15.3 버전부터 사용할 수 있습니다.<br>
-<sup>15.5</sup> 이 경고는 Visual Studio 2017 15.5 버전부터 사용할 수 있습니다.<br>
-<sup>권한</sup> 하지 않는 한이 경고는 해제 되어는 [관대 한 /-](../build/reference/permissive-standards-conformance.md) 컴파일러 옵션을 설정 합니다.
+<sup>14.1</sup> 이 경고는 Visual Studio 2015 업데이트 1부터 사용할 수 있습니다.  
+<sup>14.3</sup> 이 경고는 Visual Studio 2015 업데이트 3부터 사용할 수 있습니다.  
+<sup>15.3</sup> 이 경고는 Visual Studio 2017 15.3 버전부터 사용할 수 있습니다.  
+<sup>15.5</sup> 이 경고는 Visual Studio 2017 15.5 버전부터 사용할 수 있습니다.  
+<sup>15.7</sup> 이 경고는 Visual Studio 2017 15.7 버전부터 사용할 수 있습니다.  
+<sup>권한</sup> 하지 않는 한이 경고는 해제 되어는 [관대 한 /-](../build/reference/permissive-standards-conformance.md) 컴파일러 옵션을 설정 합니다.  
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>이전 버전에서는 기본적으로 경고 해제
 

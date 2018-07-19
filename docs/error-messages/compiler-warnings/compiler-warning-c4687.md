@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272723"
 ---
 # <a name="compiler-warning-c4687"></a>컴파일러 경고 C4687
 'class': 봉인된 추상 클래스는 ' interface '인터페이스를 구현할 수 없습니다  

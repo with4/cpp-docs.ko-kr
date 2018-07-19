@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341367"
 ---
 # <a name="adding-items-to-the-control"></a>컨트롤에 항목 추가
 목록 컨트롤에 항목을 추가 하려면 ([CListCtrl](../mfc/reference/clistctrl-class.md))의 여러 버전 중 하나를 호출 하는 [InsertItem](../mfc/reference/clistctrl-class.md#insertitem) 있는 정보에 따라 멤버 함수입니다. 한 버전에서는 [LV_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) 준비 하는 구조입니다. 때문에 `LV_ITEM` 구조에 많은 멤버가 포함 되어, 목록 컨트롤 항목의 특성에 대 한 제어 강화 해야 합니다.  

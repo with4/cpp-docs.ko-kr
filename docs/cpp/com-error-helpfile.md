@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1f02238d228b5de4302812bacf4f9ad5cf1300c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acd909224d6a682a210e15eebf04d2c8429a8a3c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939560"
 ---
 # <a name="comerrorhelpfile"></a>_com_error::HelpFile
 **Microsoft 전용**  
   
- 호출 **ierrorinfo:: Gethelpfile** 함수입니다.  
+ 호출 `IErrorInfo::GetHelpFile` 함수입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,10 +37,10 @@ _bstr_t HelpFile() const;
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 결과 반환 **ierrorinfo:: Gethelpfile** 에 대 한는 **IErrorInfo** 내에 기록 된 개체는 `_com_error` 개체입니다. 결과 BSTR은 `_bstr_t` 개체에 캡슐화됩니다. 없는 경우 **IErrorInfo** 는 빈 반환, 기록 `_bstr_t`합니다.  
+ 결과 반환 합니다 `IErrorInfo::GetHelpFile` 에 대 한는 `IErrorInfo` 내에 기록 된 개체는 `_com_error` 개체입니다. 결과 BSTR은 `_bstr_t` 개체에 캡슐화됩니다. 없으면 `IErrorInfo` 는 빈 반환 기록 `_bstr_t`합니다.  
   
 ## <a name="remarks"></a>설명  
- 호출 하는 동안 모든 오류는 **ierrorinfo:: Gethelpfile** 메서드는 무시 됩니다.  
+ 호출 하는 동안 모든 오류를 `IErrorInfo::GetHelpFile` 메서드는 무시 됩니다.  
   
  **Microsoft 전용 종료**  
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347070"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>MFC 프로젝트에 ATL 지원 추가
 MFC 기반 응용 프로그램을 이미 만든 경우 다음 지원을 추가할 수 있습니다 액티브 템플릿 라이브러리 (ATL)에 대 한 쉽게 MFC 프로젝트 마법사에는 ATL 지원 추가 실행 하 여 합니다.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881005"
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Visual C++의 제네릭 개요
 제네릭은 공용 언어 런타임에서 지원하는 매개 변수화된 형식입니다. 매개 변수화된 형식은 제네릭이 사용될 때 지정되는 알 수 없는 형식 매개 변수로 정의된 형식입니다.  

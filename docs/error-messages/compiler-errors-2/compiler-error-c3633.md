@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267025"
 ---
 # <a name="compiler-error-c3633"></a>컴파일러 오류 C3633
 'member' 관리 되는 'type'의 멤버로 정의할 수 없습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301543"
 ---
 # <a name="command-line-warning-d9028"></a>명령줄 경고 D9028
 최소 다시 빌드에 실패 했습니다. 정상 빌드로  

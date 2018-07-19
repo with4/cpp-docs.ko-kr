@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374010"
 ---
 # <a name="fo-object-file-name"></a>/Fo(개체 파일 이름)
 기본값 대신 사용할 개체(.obj) 파일 이름 또는 디렉터리를 지정합니다.  

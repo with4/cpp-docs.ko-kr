@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089080"
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>약한 참조 및 순환 중단(C++/CX)
 참조 횟수를 기반으로 하는 모든 형식 시스템에서는 형식 참조가 *순환*을 형성할 수 있는 문제가 있습니다. 즉, 하나의 개체가 두 번째 개체를 참조하고, 두 번째 개체가 세 번째 개체를 참조하는 식으로 최종 개체가 첫 번째 개체를 다시 참조할 때까지 진행됩니다. 이러한 순환에서는 한 개체의 참조 횟수가 0인 경우 개체를 올바르게 삭제할 수 없습니다. C +이 문제 해결을 돕기 위해 + CX 제공는 [platform:: weakreference 클래스](../cppcx/platform-weakreference-class.md) 클래스입니다. `WeakReference` 개체는 [Resolve](../cppcx/platform-weakreference-class.md#resolve) 메서드를 지원하며, 이 메서드는 개체가 더 이상 존재하지 않는 경우 null을 반환하고 개체가 활성 상태이지만 [형식이 아닌 경우](../cppcx/platform-invalidcastexception-class.md) Platform::InvalidCastException `T`을 throw합니다.  

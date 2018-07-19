@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371969"
 ---
 # <a name="lib-input-files"></a>LIB 입력 파일
 LIB에서 필요로 하는 입력된 파일은 다음 표에 나와 있는 것 처럼가 사용 되 고 있는 모드에 따라 달라 집니다.  

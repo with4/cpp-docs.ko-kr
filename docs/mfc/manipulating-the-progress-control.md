@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347405"
 ---
 # <a name="manipulating-the-progress-control"></a>진행률 컨트롤 조작
 진행률 컨트롤의 현재 위치를 변경 하는 방법은 세 가지가 ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)).  

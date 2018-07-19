@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690347"
 ---
 # <a name="266-ordered-construct"></a>2.6.6 ordered 구문
 구조화 된 블록 다음은 **정렬** 지시문 반복 하면 순차 루프에 실행할 수 있는 순서 대로 실행 됩니다. 구문은 **정렬** 지시문은 다음과 같습니다.  

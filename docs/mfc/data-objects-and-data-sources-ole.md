@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342981"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>데이터 개체 및 데이터 소스(OLE)
 클립보드 또는 끌어 놓기를 사용 하 여 데이터 전송을 수행 하는 경우 데이터 원본 및 대상에 있습니다. 응용 프로그램 하나를 복사 하기 위한 데이터를 제공 하 고 다른 응용 프로그램 붙여 넣기 위해 수락 키를 누릅니다. 전송의 양쪽에 성공 하려면 전송에 대 한 동일한 데이터에서 다른 작업을 수행 해야 합니다. Microsoft Foundation 클래스 (MFC) 라이브러리에서는이 전송의 양쪽을 나타내는 두 개의 클래스를 제공 합니다.  

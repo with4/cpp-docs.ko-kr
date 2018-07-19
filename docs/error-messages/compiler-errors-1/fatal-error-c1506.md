@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198393"
 ---
 # <a name="fatal-error-c1506"></a>심각한 오류 C1506
 복구할 수 없는 블록 범위 지정 오류입니다.  

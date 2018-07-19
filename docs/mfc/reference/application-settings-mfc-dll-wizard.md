@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348682"
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>MFC DLL 마법사, 응용 프로그램 설정
 MFC DLL 마법사의이 페이지를 사용 하 여 디자인 하 고 새 MFC DLL 프로젝트에 기본 기능을 추가 합니다.  

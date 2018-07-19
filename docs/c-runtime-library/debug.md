@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387546"
 ---
 # <a name="debug"></a>_DEBUG
 /MTd 또는 /MDd를 지정하면 컴파일러는 `_DEBUG`를 정의합니다. 이러한 옵션은 C 런타임 라이브러리 디버그 버전을 지정합니다.  

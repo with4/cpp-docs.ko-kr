@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877880"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits 구조체
 초기화 되지 않은 상태로 핸들의 일반적인 특성을 정의합니다.  

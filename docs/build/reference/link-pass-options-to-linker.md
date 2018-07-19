@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373295"
 ---
 # <a name="link-pass-options-to-linker"></a>/link(옵션을 링커로 전달)
 하나 이상의 링커 옵션을 링커에 전달 합니다.  

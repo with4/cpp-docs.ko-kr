@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bf83b3f6ece4e8422f1ba8dbc5d1448da6bf0c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a8a734eae486ca5e88009301b13d71b21473d9f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939258"
 ---
 # <a name="comptrtrelease"></a>_com_ptr_t::Release
 **Microsoft 전용**  
   
- 호출의 **릴리스** 의 멤버 함수 **IUnknown** 캡슐화 된 인터페이스 포인터입니다.  
+ 호출 된 `Release` 멤버 함수 `IUnknown` 캡슐화 된 인터페이스 포인터에 대 한 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +38,7 @@ void Release( );
 ```  
   
 ## <a name="remarks"></a>설명  
- 호출 `IUnknown::Release` 캡슐화 된 인터페이스 포인터를 발생 시키는 `E_POINTER` 이 인터페이스 포인터가 있으면 오류 **NULL**합니다.  
+ 호출 `IUnknown::Release` 이 인터페이스 포인터가 null 인 경우 캡슐화 된 인터페이스 포인터에 대 한 E_POINTER 오류를 발생 합니다.  
   
  **Microsoft 전용 종료**  
   

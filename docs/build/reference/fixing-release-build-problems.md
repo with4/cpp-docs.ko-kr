@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372154"
 ---
 # <a name="fixing-release-build-problems"></a>릴리스 빌드 문제 해결
 코드에서 디버그 빌드에서 릴리스 빌드로에서 전환한 후 컴파일 오류가 발생 하면 경우 일부 영역을 확인 해야 합니다.  

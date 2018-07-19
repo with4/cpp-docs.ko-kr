@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089313"
 ---
 # <a name="cdynamicaccessorclose"></a>CDynamicAccessor::Close
 모든 열을 바인딩 해제, 할당된 된 메모리를 해제 하 고 해제는 [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) 클래스에 인터페이스 포인터입니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892718"
 ---
 # <a name="safeadd"></a>SafeAdd
 오버플로 방지 하는 방식으로 두 개의 숫자를 추가 합니다.  

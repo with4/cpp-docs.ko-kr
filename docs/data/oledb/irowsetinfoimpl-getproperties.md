@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101281"
 ---
 # <a name="irowsetinfoimplgetproperties"></a>IRowsetInfoImpl::GetProperties
 속성에 대 한 현재 설정을 반환는 **DBPROPSET_ROWSET** 그룹입니다.  

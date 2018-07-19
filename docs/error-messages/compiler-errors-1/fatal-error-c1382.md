@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229257"
 ---
 # <a name="fatal-error-c1382"></a>심각한 오류 C1382
 'file' PCH 파일이 'o b j'가 생성 된 후 다시 빌드 되었습니다. 이 개체를 다시 빌드하세요.  

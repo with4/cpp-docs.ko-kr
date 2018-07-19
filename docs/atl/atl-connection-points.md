@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354670"
 ---
 # <a name="atl-connection-points"></a>ATL 연결 지점
 연결 가능 개체는 송신 인터페이스를 지원합니다. 송신 인터페이스에서는 개체가 클라이언트와 통신할 수 있습니다. 연결 가능 개체는 각 송신 인터페이스에 대해 연결 지점을 노출합니다. 각 송신 인터페이스는 싱크라는 개체에서 클라이언트에 의해 구현됩니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692239"
 ---
 # <a name="parallel-programming-in-visual-c"></a>Visual C++의 병렬 프로그래밍
 일반 GPU를 사용 하 여 다중 코어 활용 하기 위해 병렬 프로그램 용도 프로그래밍 하기 위해 및 visual c + + 다중 스레드를 만들 수 있도록 다음과 같은 기술을 제공 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289879"
 ---
 # <a name="compiler-warning-level-1-c4930"></a>컴파일러 경고(수준 1) C4930
 '프로토타입': 프로토타입 함수가 호출 되지 (의도 되는 변수 정의 ि ल ्?)  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376064"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT(MIDL 출력 파일 이름 지정)
 ```  

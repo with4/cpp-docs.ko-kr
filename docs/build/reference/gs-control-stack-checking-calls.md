@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375742"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs(스택 검사 호출 제어)
 스택 프로브를 제어합니다.  

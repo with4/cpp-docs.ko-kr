@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879330"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>대화 상자의 라디오 단추 그룹화
 대화 상자에 라디오 단추를 추가할 경우 그룹의 첫 번째 단추에 대한 속성 창에서 그룹 속성을 설정하여 라디오 단추를 그룹으로 처리합니다. 그러면 해당 라디오 단추의 컨트롤 ID가 [멤버 변수 추가 마법사](../ide/add-member-variable-wizard.md)에 표시됩니다. 이 마법사를 통해 라디오 단추 그룹에 대한 멤버 변수를 추가할 수 있습니다.  

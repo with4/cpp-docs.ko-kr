@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350356"
 ---
 # <a name="mdi-tabbed-groups"></a>MDI 탭 그룹
 다중 문서 MDI (인터페이스) 탭된 그룹 기능 사용 하면 하나 이상의 탭된 창에 표시 하려면 여러 문서 MDI (인터페이스) 응용 프로그램 (또는 그룹으로 알려진 탭된 창에 *탭 그룹*) MDI 클라이언트 영역에 있습니다. 탭 창은 세로 또는 가로로 정렬할 수 있습니다. 응용 프로그램이 두 개 이상의 MDI 탭 그룹을 호스팅할 경우, 그룹이 분할자로 구분됩니다.  

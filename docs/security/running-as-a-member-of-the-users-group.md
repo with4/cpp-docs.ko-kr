@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841662"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>사용자 그룹의 멤버로 실행
 이 항목에서는 Windows 사용자 계정을 관리자 그룹이 아닌 사용자 그룹의 멤버로 구성하면 악의적인 코드에 감염될 가능성이 줄어들어 보안이 강화된다는 점에 대해 설명합니다.  

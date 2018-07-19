@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267175"
 ---
 # <a name="compiler-error-c3848"></a>컴파일러 오류 C3848
 식 형식 't y'는 'function'를 호출 하기 위해 일부 const-volatile 한정자 손실  

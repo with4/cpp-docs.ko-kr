@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230827"
 ---
 # <a name="compiler-error-c2601"></a>컴파일러 오류 C2601
 'function': 지역 함수 정의가 적합 하지 않습니다.  

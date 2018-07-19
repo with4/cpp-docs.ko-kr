@@ -38,31 +38,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7b0c0499b9dfbaf3cb1f19eba16fc684a229839
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0521d09f4f96c73c20022d88621671564e7ada78
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965528"
 ---
 # <a name="valarray-class"></a>valarray 클래스
 
-이 템플릿 클래스는 고속 수치 연산을 수행하도록 설계되어 컴퓨터 사용 성능에 최적화된, 배열로 저장되는 형식 **Type**의 요소 시퀀스를 제어하는 개체에 대해 설명합니다.
+형식의 요소 시퀀스를 제어 하는 개체를 설명 하는 템플릿 클래스 `Type` 배열로 저장, 고속 수치 연산을 수행 하는 것에 대 한 설계 및 계산 성능에 대 한 액세스에 최적화 된입니다.
 
 ## <a name="remarks"></a>설명
 
 이 클래스는 정렬된 값 집합의 수학적 개념을 표현한 것이며 요소는 번호가 0부터 순차적으로 지정됩니다. 이 클래스는 [vector](../standard-library/vector-class.md)와 같은 고급 시퀀스 컨테이너가 지원하는 기능 중 일부를 지원하므로 유사 컨테이너로 설명됩니다. 이 클래스는 다음의 중요한 두 가지 점에서 템플릿 클래스 벡터와 다릅니다.
 
-- *xarr* = cos( *yarr*) + sin( *zarr*)과 같이, 형식 및 길이가 동일한 **valarray\<Type>** 개체의 해당 요소 간에 다양한 산술 연산을 정의합니다.
+- 해당 요소 간에 다양 한 산술 연산을 정의 `valarray<Type>` 개체는 동일한 형식 및 길이 같은 *xarr* = cos ( *과*) + sin ( *zarr*).
 
-- [operator&#91;&#93;](#op_at)를 오버로드하여 **valarray\<Type>** 개체에 아래 첨자를 지정하는 흥미로운 다양한 방법을 정의합니다.
+- 다양 한 흥미로운 방법 아래 첨자를 정의 하는 `valarray<Type>` 오버 로드 하 여 개체 [연산자&#91;&#93;](#op_at)합니다.
 
-클래스 **Type**의 개체 특성은 다음과 같습니다.
+클래스의 개체 `Type`:
 
 - 기본 동작과 함께 공용 기본 생성자, 소멸자, 복사 생성자 및 대입 연산자를 포함합니다.
 
 - 필요에 따라 기본 동작으로 부동 소수점 형식을 위해 정의된 산술 연산자 및 수학 함수를 정의합니다.
 
-특히 복사본 생성과 뒤에 할당이 이어지는 기본 생성 간에는 차이가 없을 수도 있습니다. 클래스 **Type**의 개체에 대한 작업 중 예외를 throw하는 작업이 없을 수도 있습니다.
+특히 복사본 생성과 뒤에 할당이 이어지는 기본 생성 간에는 차이가 없을 수도 있습니다. 클래스의 개체에서 작업을 하나도 `Type` 예외를 throw 할 수 있습니다.
 
 ### <a name="constructors"></a>생성자
 
@@ -130,9 +131,9 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*_Func(Type)* 피연산자 valarray의 각 요소에 적용 될 함수 개체입니다.
+*_Func(Type)* 피연산자 valarray의 각 요소에 적용할 함수 개체입니다.
 
-*_Func(const Type&)* const 피연산자 valarray의 각 요소에 적용 될 수에 대 한 함수 개체입니다.
+*_Func(const Type&)* 피연산자 valarray의 각 요소에 적용할 const의 함수 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -142,7 +143,7 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 구성원 함수는 길이가 [size](#size)인 [valarray](../standard-library/valarray-class.md)**\<Type>** 클래스의 개체를 반환합니다. 각 개체의 요소 `I`는 **func**(( **\*this**)[ `I`])입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_apply.cpp
@@ -201,19 +202,20 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`count` 요소 자릿수 만큼 앞으로 이동 됩니다.
+*count*  
+ 요소를 앞으로 이동할 위치 수입니다.
 
 ### <a name="return-value"></a>반환 값
 
-모든 요소가 valarray 앞쪽(피연산자 valarray 위치를 기준으로는 왼쪽)을 향해 `count` 위치만큼 순환 이동된 새 valarray
+모든 요소를 이동 된 새 valarray *개수* 주기적으로 피연산자 valarray 위치를 기준으로 왼쪽 valarray 앞쪽에 위치 합니다.
 
 ### <a name="remarks"></a>설명
 
-`count` 값이 양수이면 요소가 왼쪽으로 `count`개 위치만큼 순환 이동합니다.
+값이 양수 *개수* 주기적으로 왼쪽으로 요소 이동 *개수* 배치 합니다.
 
-`count` 값이 음수이면 요소가 오른쪽으로 `count`개 위치만큼 순환 이동합니다.
+값이 음수 *개수* 주기적으로 오른쪽 요소 이동 *개수* 배치 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_cshift.cpp
@@ -300,9 +302,9 @@ Type max() const;
 
 ### <a name="remarks"></a>설명
 
-구성원 함수는 클래스 **Type**의 요소 쌍 간에 **operator\<** 또는 **operator>** 를 적용하여 값을 비교합니다. 이때 요소 **Type**에 대해 연산자를 제공해야 합니다.
+멤버 함수를 적용 하 여 값을 비교 **연산자\<**  하거나 **연산자 >** 클래스의 요소 쌍 간에 `Type`, 연산자를 제공 해야 합니다 요소 `Type`.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_max.cpp
@@ -352,9 +354,9 @@ Type min() const;
 
 ### <a name="remarks"></a>설명
 
-구성원 함수는 클래스 **Type**의 요소 쌍 간에 **operator\<** 또는 **operator>** 를 적용하여 값을 비교합니다. 이때 요소 **Type**에 대해 연산자를 제공해야 합니다.
+멤버 함수를 적용 하 여 값을 비교 **연산자\<**  하거나 **연산자 >** 클래스의 요소 쌍 간에 `Type`, 연산자를 제공 해야 합니다 요소 `Type`.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_min.cpp
@@ -406,9 +408,9 @@ valarray<bool> operator!() const;
 
 논리 연산 **NOT**은 모든 0을 1로 변환하며 0이 아닌 모든 값은 1로 간주하여 0으로 변환하므로 요소를 부정합니다. 부울 값의 반환된 valarray는 피연산자 valarray와 크기가 같습니다.
 
-valarray의 `char` 및 `int` 요소 이진 표현 내에서 개별 비트 수준을 부정하는 비트 **NOT**[valarray::operator~](#op_dtor)도 있습니다.
+이기도 비트 **되지**[valarray:: operator ~](#op_dtor) 의 이진 표현 내에서 개별 비트 수준을 부정 하는 **char** 고 **int**  valarray의 요소입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_lognot.cpp
@@ -459,13 +461,14 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` Valarray 또는 동일한 지 피연산자 valarray 요소를 요소 별로, 나눌 수 있는 피연산자 valarray 요소 형식의 값입니다.
+*right*  
+ 요소 전체에서 피연산자 valarray를 나눌 피연산자 valarray의 요소 형식과 동일한 요소 형식의 값 또는 valarray
 
 ### <a name="return-value"></a>반환 값
 
-해당 요소가 `right`를 통한 피연산자 valarray 요소 전체 나누기의 나머지인 valarray
+해당 요소가 피연산자 valarray의 요소 전체 나누기에서 나머지 valarray에서 *오른쪽*
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_class_op_rem.cpp
@@ -523,19 +526,20 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` Valarray 또는 결합 될 수 있는 피연산자 valarray 동일한, 논리적으로 요소나 요소 형식의 값 **AND** 피연산자 valarray 사용 합니다.
+*right*  
+ 값 형식의 요소와 동일한 결합할 피연산자 valarray의 요소 전체에서 논리적으로 또는 `AND` 피연산자 valarray를 사용 하 여 합니다.
 
 ### <a name="return-value"></a>반환 값
 
-해당 요소가 `right`를 통한 요소 전체 논리적 **AND**인 valarray
+한 valarray의 요소 전체 논리적 `AND` 피연산자 valarray의 *오른쪽*
 
 ### <a name="remarks"></a>설명
 
-비트 연산은 `char` 및 `int` 데이터 형식과 변환의 비트를 조작하는 데만 사용할 수 있으며 **float**, **double**, **longdouble**, `void`, `bool` 또는 보다 복잡한 기타 데이터 형식에는 사용할 수 없습니다.
+비트를 조작 하는 연산을 사용할 수 있습니다 **char** 하 고 **int** 데이터 형식 및 변형 아닌 **float**를 **double**, **longdouble**, **void**하십시오 **bool**, 또는 기타 복잡 한 데이터 형식.
 
-비트 AND는 논리적 **AND**와 같은 진리표를 포함하지만 개별 비트 수준에서 데이터 형식에 적용됩니다. *b*1 및 *b*2가 지정되는 경우 *b*1 **AND** *b*2는 두 비트가 모두 true이면 **true**이고 두 비트 중 하나 이상이 false이면 **false**입니다.
+논리적으로 같은 진리표를 포함 하는 비트 AND `AND` 하지만 개별 비트 수준에서 데이터 형식에 적용 됩니다. 비트를 지정 된 *b*1 및 *b*2 *b*1 `AND` *b*2 **true** 양쪽 비트가 모두 true 이면 **false** 하나 이상이 false 인 경우.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_class_op_bitand.cpp
@@ -593,17 +597,18 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 오른쪽 시프트 또는 valarray 요소의 오른쪽 시프트의 요소나 양을 나타냅니다의 크기를 나타내는 값입니다.
+*right*  
+ 오른쪽으로 이동할 크기를 나타내는 값 또는 해당 요소가 요소 전체 오른쪽 이동 크기를 나타내는 valarray
 
 ### <a name="return-value"></a>반환 값
 
-해당 요소가 `right`에 지정된 크기만큼 오른쪽으로 이동된 valarray
+요소가 된 valarray 만큼 오른쪽으로 이동에 지정 된 양에 *오른쪽*합니다.
 
 ### <a name="remarks"></a>설명
 
 부호 있는 숫자의 부호는 유지됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_class_op_rs.cpp
@@ -661,17 +666,18 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 왼쪽된 시프트 또는 해당 요소가 왼쪽된 시프트의 요소나 양을 나타냅니다 valarray의 크기를 나타내는 값입니다.
+*right*  
+ 왼쪽으로 이동할 크기를 나타내는 값 또는 해당 요소가 요소 전체 왼쪽 이동 크기를 나타내는 valarray
 
 ### <a name="return-value"></a>반환 값
 
-해당 요소가 `right`에 지정된 크기만큼 왼쪽으로 이동된 valarray
+요소가 있는 이동 된 valarray에 지정 된 크기를 왼쪽 *오른쪽*합니다.
 
 ### <a name="remarks"></a>설명
 
 부호 있는 숫자의 부호는 유지됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_class_op_ls.cpp
@@ -730,13 +736,14 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` Valarray 또는 동일한 지를 피연산자 valarray 요소를 요소 별로, 곱하기 피연산자 valarray 요소 형식의 값입니다.
+*right*  
+ 요소 전체에서 피연산자 valarray를 곱할 피연산자 valarray의 요소 형식과 동일한 요소 형식의 값 또는 valarray
 
 ### <a name="return-value"></a>반환 값
 
-피연산자 valarray의 요소 전체의 곱 요소가 valarray 및 `right`합니다.
+요소가 피연산자 valarray의 요소 전체 곱 인 valarray 및 *오른쪽*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_emult.cpp
@@ -794,7 +801,7 @@ valarray<Type> operator+() const;
 
 해당 요소가 피연산자 배열 요소에 +가 적용된 valarray
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_eplus.cpp
@@ -845,13 +852,14 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` Valarray 또는 동일한 지를 추가할 요소를 요소 별로, 피연산자 valarray에 있는 피연산자 valarray 요소 형식의 값입니다.
+*right*  
+ 요소 전체에서 피연산자 valarray를 더할 피연산자 valarray의 요소 형식과 동일한 요소 형식의 값 또는 valarray
 
 ### <a name="return-value"></a>반환 값
 
-피연산자 valarray의 요소 합계 요소가 valarray 및 `right`합니다.
+요소가 피연산자 valarray의 요소 전체 합 인 valarray 및 *오른쪽*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_eadd.cpp
@@ -909,7 +917,7 @@ valarray<Type> operator-() const;
 
 해당 요소가 피연산자 배열 요소에 -가 적용된 valarray
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_eminus.cpp
@@ -960,13 +968,14 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` Valarray 또는 동일한 지, 요소를 요소 별로,에서 뺄 피연산자 valarray에 있는 피연산자 valarray 요소 형식의 값입니다.
+*right*  
+ 요소 전체에서 피연산자 valarray에서 뺄 피연산자 valarray의 요소 형식과 동일한 요소 형식의 값 또는 valarray
 
 ### <a name="return-value"></a>반환 값
 
-피연산자 valarray의 요소 차이 요소가 valarray 및 `right`합니다.
+요소가 피연산자 valarray의 요소 전체 차 인 valarray 및 *오른쪽*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_esub.cpp
@@ -1024,13 +1033,14 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` Valarray 또는 동일한 지으로 나눌 수, 요소를 요소 별로, 피연산자 valarray에 있는 피연산자 valarray 요소 형식의 값입니다.
+*right*  
+ 요소 전체에서 피연산자 valarray로 나눌 피연산자 valarray의 요소 형식과 동일한 요소 형식의 값 또는 valarray
 
 ### <a name="return-value"></a>반환 값
 
-피연산자 valarray의 요소 몫 요소가 valarray로 나눈 `right`합니다.
+해당 요소가 피연산자 valarray의 요소 전체 몫인 valarray로 나눈 *오른쪽*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_ediv.cpp
@@ -1098,25 +1108,31 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 피연산자 valarray에 복사할 valarray입니다.
+*right*  
+ 피연산자 valarray에 복사할 valarray
 
-`val` 피연산자 valarray의 요소에 할당할 값입니다.
+*val*  
+ 피연산자 valarray의 요소에 할당할 값
 
-`_Slicearray` 피연산자 valarray에 복사할 slice_array입니다.
+*_Slicearray*  
+ 피연산자 valarray에 복사할 slice_array
 
-`_Gslicearray` 피연산자 valarray에 복사할 gslice_array입니다.
+*_Gslicearray*  
+ 피연산자 valarray에 복사할 gslice_array
 
-`_Maskarray` 피연산자 valarray에 복사할 mask_array입니다.
+*_Maskarray*  
+ 피연산자 valarray에 복사할 mask_array
 
-`_Indarray` 피연산자 valarray에 복사할 indirect_array입니다.
+*_Indarray*  
+ 피연산자 valarray에 복사할 indirect_array
 
 ### <a name="return-value"></a>반환 값
 
-첫 번째 구성원 연산자는 제어되는 시퀀스를 `right`로 제어되는 시퀀스 복사본으로 대체합니다.
+첫 번째 멤버 연산자 제어 되는 시퀀스를 제어 하는 시퀀스 복사본으로 대체 *오른쪽*합니다.
 
 두 번째 구성원 연산자도 첫 번째 구성원 연산자와 동일하지만 [Rvalue 참조 선언자: &&](../cpp/rvalue-reference-declarator-amp-amp.md)를 포함합니다.
 
-세 번째 구성원 연산자는 제어되는 시퀀스의 각 요소를 `val`의 복사본으로 대체합니다.
+세 번째 멤버 연산자의 복사본을 사용 하 여 제어 된 시퀀스의 각 요소를 바꿉니다 *val*합니다.
 
 나머지 구성원 연산자는 해당 인수가 선택한 제어되는 시퀀스의 요소를 대체합니다. 이러한 요소는 [operator&#91;&#93;](#op_at)를 통해서만 생성됩니다.
 
@@ -1126,7 +1142,7 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 제어되는 시퀀스의 길이가 변경되면 대개 결과가 정의되지 않습니다. 그러나 이 구현에서는 단순히 제어되는 시퀀스의 요소에 대한 참조나 포인터만 무효화됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_assign.cpp
@@ -1210,15 +1226,20 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`_Off` 값이 할당 되 고 요소의 인덱스입니다.
+*_Off*  
+ 값을 할당할 요소의 인덱스
 
-`_Slicearray` 선택 하거나 새 valarray를 반환 해야 하위 집합을 지정 하는 valarray의 slice_array입니다.
+*_Slicearray*  
+ 선택하거나 새 valarray로 반환할 하위 집합을 지정하는 valarray의 slice_array
 
-`_Gslicearray` 선택 하거나 새 valarray를 반환 해야 하위 집합을 지정 하는 valarray의 gslice_array입니다.
+*_Gslicearray*  
+ 선택하거나 새 valarray로 반환할 하위 집합을 지정하는 valarray의 gslice_array
 
-*_Boolarray* 선택 하거나 새 valarray를 반환 해야 하위 집합을 지정 하는 valarray의 bool_array 합니다.
+*_Boolarray*  
+ 선택하거나 새 valarray로 반환할 하위 집합을 지정하는 valarray의 bool_array
 
-`_Indarray` 선택 하거나 새 valarray를 반환 해야 하위 집합을 지정 하는 valarray의 indirect_array입니다.
+*_Indarray*  
+ 선택하거나 새 valarray로 반환할 하위 집합을 지정하는 valarray의 indirect_array
 
 ### <a name="return-value"></a>반환 값
 
@@ -1226,11 +1247,11 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="remarks"></a>설명
 
-멤버 연산자는 시퀀스의 요소에 의해 제어 하는 것 중에서 선택할 수 있는 몇 가지 방법을 제공 하도록 오버 로드 *\****이**합니다. 첫 번째 5개 연산자 그룹은 [operator=](#op_eq) 및 기타 할당 연산자의 다양한 오버로드와 함께 작동하여 제어되는 시퀀스의 선택적 교체(조각화)를 허용합니다. 이 경우 선택한 요소가 있어야 합니다.
+멤버 연산자는 요소에 의해 제어 되는 순서를 선택 하는 여러 방법을 제공 하도록 오버 로드 *\****이**합니다. 첫 번째 5개 연산자 그룹은 [operator=](#op_eq) 및 기타 할당 연산자의 다양한 오버로드와 함께 작동하여 제어되는 시퀀스의 선택적 교체(조각화)를 허용합니다. 이 경우 선택한 요소가 있어야 합니다.
 
 1 또는 2로 정의된 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)을 사용하여 컴파일한 경우 valarray 범위를 벗어난 요소에 액세스하면 런타임 오류가 발생합니다.  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 연산자를 선언하고 사용하는 방법의 예제는 [slice::slice](../standard-library/slice-class.md#slice) 및 [gslice::gslice](../standard-library/gslice-class.md#gslice)의 예제를 참조하세요.
 
@@ -1246,17 +1267,18 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` Valarray 또는 동일한 지 결합 될 수 있는 피연산자 valarray, 배타적 논리 하 여 요소나 요소 형식의 값 **XOR** 피연산자 valarray 사용 합니다.
+*right*  
+ 요소 전체에서 배타적 논리 **XOR**을 통해 피연산자 valarray와 결합할 피연산자 valarray의 요소 형식과 동일한 요소 형식의 값 또는 valarray
 
 ### <a name="return-value"></a>반환 값
 
-한 valarray 요소 별로, 배타적 논리 **XOR** 피연산자 valarray의 및 `right`합니다.
+해당 요소가 valarray 요소 전체에서 배타적 논리 **XOR** 피연산자 valarray의 및 *오른쪽*합니다.
 
 ### <a name="remarks"></a>설명
 
 **XOR**로 지칭되는 배타적 논리 OR의 의미 체계에서는 *e*1 및 *e*2 요소가 지정되는 경우 *e*1 **XOR** *e*2는 요소 중 정확히 하나가 true이면 **true**이고 두 요소가 모두 false이거나 true이면 **false**입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_exor.cpp
@@ -1318,19 +1340,20 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` Valarray 또는 동일한 지 결합 될 수 있는 피연산자 valarray, 비트 하 여 요소나 요소 형식의 값 `OR` 피연산자 valarray 사용 합니다.
+*right*  
+ 요소 전체에서 비트 `OR`을 통해 피연산자 valarray와 결합할 피연산자 valarray의 요소 형식과 동일한 요소 형식의 값 또는 valarray
 
 ### <a name="return-value"></a>반환 값
 
-한 valarray의 요소 별로 비트 `OR` 하 여 피연산자 valarray의 `right`합니다.
+한 valarray의 요소 전체 비트 `OR` 에서 피연산자 valarray *오른쪽*합니다.
 
 ### <a name="remarks"></a>설명
 
-비트 연산은 `char` 및 `int` 데이터 형식과 변환의 비트를 조작하는 데만 사용할 수 있으며 **float**, **double**, **longdouble**, `void`, `bool` 또는 보다 복잡한 기타 데이터 형식에는 사용할 수 없습니다.
+비트를 조작 하는 연산을 사용할 수 있습니다 **char** 하 고 **int** 데이터 형식 및 변형 아닌 **float**를 **double**, **longdouble**, **void**하십시오 **bool**, 또는 기타 복잡 한 데이터 형식.
 
 비트 `OR`은 논리적 `OR`과 같은 진리표를 포함하지만 개별 비트 수준에서 데이터 형식에 적용됩니다. *b*1 및 *b*2가 지정되는 경우 *b*1 `OR` *b*2는 비트 중 하나 이상이 true이면 **true**이고 두 비트가 모두 false이면 **false**입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_class_op_bitor.cpp
@@ -1385,7 +1408,7 @@ The element-by-element result of the logical OR
 
 ## <a name="op_dtor"></a>  valarray::operator~
 
-valarray에 있는 각 요소의 비트 **NOT** 값을 가져오는 단항 연산자입니다.
+비트를 가져오는 단항 연산자 `NOT` valarray에 있는 각 요소의 값입니다.
 
 ```cpp
 valarray<Type> operator~() const;
@@ -1393,15 +1416,15 @@ valarray<Type> operator~() const;
 
 ### <a name="return-value"></a>반환 값
 
-피연산자 valarray 요소 값의 비트 **NOT**인 부울 값의 valarray
+비트 부울 값의 valarray `NOT` 피연산자 valarray의 요소 값입니다.
 
 ### <a name="remarks"></a>설명
 
-비트 연산은 `char` 및 `int` 데이터 형식과 변환의 비트를 조작하는 데만 사용할 수 있으며 **float**, **double**, **longdouble**, `void`, `bool` 또는 보다 복잡한 기타 데이터 형식에는 사용할 수 없습니다.
+비트를 조작 하는 연산을 사용할 수 있습니다 **char** 하 고 **int** 데이터 형식 및 변형 아닌 **float**를 **double**, **longdouble**를 **void**하십시오 **bool** 또는 기타 복잡 한 데이터 형식입니다.
 
-비트 **NOT**은 논리적 **NOT**과 같은 진리표를 포함하지만 개별 비트 수준에서 데이터 형식에 적용됩니다. *b*를 지정하는 경우 ~ *b*는 *b*가 false이면 true이고 *b*가 true이면 false입니다. 논리적 **NOT**[operator!](#op_not)는 요소 수준에서 적용되어 0이 아닌 모든 값을 **true**로 계산하며, 결과는 부울 값의 valarray입니다. 반면 비트 **NOToperator~** 를 사용하는 경우에는 비트 연산의 결과에 따라 0이나 1이 아닌 값의 valarray가 생성될 수 있습니다.
+비트 `NOT`은 논리적 `NOT`과 같은 진리표를 포함하지만 개별 비트 수준에서 데이터 형식에 적용됩니다. *b*를 지정하는 경우 ~ *b*는 *b*가 false이면 true이고 *b*가 true이면 false입니다. 논리적 **NOT**[operator!](#op_not)는 요소 수준에서 적용되어 0이 아닌 모든 값을 **true**로 계산하며, 결과는 부울 값의 valarray입니다. 비트 `NOToperator~`, 반면에 비트 연산의 결과 따라 1 이나 0이 아닌 값의 valarray 발생할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_bitnot.cpp
@@ -1492,9 +1515,11 @@ void resize(
 
 ### <a name="parameters"></a>매개 변수
 
-`_Newsize` 크기 조정된 된 valarray의 요소 수입니다.
+*_Newsize*  
+ 크기 조정된 valarray의 요소 수입니다.
 
-`val` 크기 조정된 된 valarray의 요소에 제공 될 값입니다.
+*val*  
+ 크기 조정된 valarray의 요소에 지정할 값입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1502,7 +1527,7 @@ void resize(
 
 제어된 시퀀스의 요소에 대한 모든 포인터 또는 참조가 무효화됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 valarray::resize 멤버 함수의 사용을 보여 줍니다.
 
@@ -1561,19 +1586,20 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`count` 요소 자릿수 만큼 앞으로 이동 됩니다.
+*count*  
+ 요소를 앞으로 이동할 위치 수입니다.
 
 ### <a name="return-value"></a>반환 값
 
-모든 요소가 valarray 앞쪽(피연산자 valarray 위치를 기준으로는 왼쪽)을 향해 `count` 위치만큼 이동된 새 valarray
+모든 요소를 이동 된 새 valarray *개수* 피연산자 valarray 위치를 기준으로 왼쪽 valarray 앞쪽에 위치 합니다.
 
 ### <a name="remarks"></a>설명
 
-`count` 값이 양수이면 요소가 왼쪽으로 `count`개 위치만큼 이동하며 0이 채워집니다.
+값이 양수 *개수* 요소가 왼쪽으로 이동 *개수* 장소, 0이 채워집니다.
 
-`count` 값이 음수이면 요소가 오른쪽으로 `count`개 위치만큼 이동하며 0이 채워집니다.
+값이 음수 *개수* 요소가 오른쪽으로 이동 *개수* 장소, 0이 채워집니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_shift.cpp
@@ -1636,7 +1662,7 @@ size_t size() const;
 
 피연산자 valarray에 있는 요소 수입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 valarray:: size 멤버 함수의 사용을 보여 줍니다.
 
@@ -1715,9 +1741,9 @@ Type sum() const;
 
 ### <a name="remarks"></a>설명
 
-길이가 1보다 크면 구성원 함수는 클래스 **Type**의 요소 쌍 간에 `operator+=`를 적용하여 합에 값을 더합니다. 이때 **Type** 형식의 요소에 대해 연산자를 제공해야 합니다.
+길이가 1 보다 큰 경우 멤버 함수 추가 값 합계에 적용 하 여 `operator+=` 클래스의 요소 쌍 간에 `Type`, 형식 요소에 대해 제공 해야 따라서 어떤 운영자 `Type`합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_sum.cpp
@@ -1762,11 +1788,11 @@ void swap(valarray& right);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`right`|교환할 요소를 제공하는 `valarray`입니다.|
+|*right*|교환할 요소를 제공하는 `valarray`입니다.|
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 `*this` 와 `right`간에 제어되는 시퀀스를 교환합니다. 일정한 시간에 이 작업을 수행하고, 예외를 throw하지 않고, 두 개의 제어된 시퀀스에서 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다.
+멤버 함수 간에 제어 된 시퀀스를 교환 `*this` 하 고 *오른쪽*합니다. 일정한 시간에 이 작업을 수행하고, 예외를 throw하지 않고, 두 개의 제어된 시퀀스에서 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다.
 
 ## <a name="valarray"></a>  valarray::valarray
 
@@ -1810,31 +1836,40 @@ valarray(
 
 ### <a name="parameters"></a>매개 변수
 
-`Count` Valarray에 있는 요소의 수입니다.
+*개수*  
+ valarray에 지정할 요소의 수입니다.
 
-`Val` Valarray의 요소를 초기화 하는 데 사용할 값입니다.
+*val*  
+ valarray의 요소를 초기화하는 데 사용할 값입니다.
 
-`Ptr` Valarray의 요소를 초기화 하는 데 사용할 값에 대 한 포인터입니다.
+*ptr*  
+ valarray의 요소를 초기화하는 데 사용할 값에 대한 포인터입니다.
 
-`Right` 새 valarray를 초기화할 기존 valarray입니다.
+*오른쪽*  
+ 새 valarray를 초기화할 기존 valarray입니다.
 
-`SliceArray` 생성 중인 valarray의 요소를 초기화 하는 데 사용할 요소 값을 포함 하는 slice_array입니다.
+*SliceArray*  
+ 생성 중인 valarray의 요소를 초기화하는 데 사용할 요소 값을 포함하는 slice_array입니다.
 
-`GsliceArray` 생성 중인 valarray의 요소를 초기화 하는 데 사용할 요소 값을 포함 하는 gslice_array입니다.
+*GsliceArray*  
+ 생성 중인 valarray의 요소를 초기화하는 데 사용할 요소 값을 포함하는 gslice_array입니다.
 
-`MaskArray` 생성 중인 valarray의 요소를 초기화 하는 데 사용할 요소 값을 포함 하는 mask_array입니다.
+*MaskArray*  
+ 생성 중인 valarray의 요소를 초기화하는 데 사용할 요소 값을 포함하는 mask_array입니다.
 
-`IndArray` 생성 중인 valarray의 요소를 초기화 하는 데 사용할 요소 값을 포함 하는 indirect_array입니다.
+*IndArray*  
+ 생성 중인 valarray의 요소를 초기화하는 데 사용할 요소 값을 포함하는 indirect_array입니다.
 
-`IList` 복사할 요소를 포함 하는 initializer_list입니다.
+*IList*  
+ 복사할 요소를 포함하는 initializer_list입니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째(기본) 생성자는 개체를 빈 배열로 초기화합니다. 다음 세 가지 생성자는 각각 다음과 같이 개체를 `Count`요소의 배열로 초기화합니다.
+첫 번째(기본) 생성자는 개체를 빈 배열로 초기화합니다. 다음 3 개 생성자는 배열에 개체를 초기화할 *개수* 다음과 같은 요소:
 
 - 명시적 `valarray(size_t Count)`의 경우 각 요소는 기본 생성자를 사용하여 초기화됩니다.
 
-- `valarray(const Type& Val, Count)`의 경우 각 요소는 `Val`을 사용하여 초기화됩니다.
+- 에 대 한 `valarray(const Type& Val, Count)`를 사용 하 여 각 요소를 초기화할 *Val*합니다.
 
 - `valarray(const Type* Ptr, Count)`의 경우 `I` 위치의 요소는 `Ptr`[`I`]로 초기화됩니다.
 
@@ -1842,7 +1877,7 @@ valarray(
 
 마지막 생성자도 그 앞의 생성자와 마찬가지이지만 [Rvalue 참조 선언자: &&](../cpp/rvalue-reference-declarator-amp-amp.md)를 사용합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_ctor.cpp
@@ -1902,9 +1937,9 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 템플릿 매개 변수 **Type**과 동일한 의미입니다.
+이 형식은 템플릿 매개 변수 `Type`의 동의어입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_value_type.cpp

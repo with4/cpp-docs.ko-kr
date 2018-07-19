@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f3bd6c6463bbbe26214a29960260d2be583e20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb5e6ad4cfcc1e14d3b6accc1e5adaf4037669a4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950216"
 ---
 # <a name="using-documents"></a>문서 사용
 문서 및 뷰를 함께 작동 합니다.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/04/2018
   
 -   [처리](../mfc/handling-commands-in-the-document.md) 대부분의 응용 프로그램의 명령 및 메시지입니다.  
   
- 데이터 관리에 특히 관련 된 문서가 있습니다. 문서 클래스 멤버 변수에서 일반적으로 데이터를 저장 합니다. 보기 표시에 대 한 데이터를 액세스 하 고 업데이트할 이러한 변수를 사용 합니다. 문서의 기본 serialization 메커니즘 데이터 읽기 및 쓰기는 파일로 / 파일에서 관리 합니다. 문서를 처리할 수도 명령 (하지 Windows 이외의 다른 메시지 하지만 **WM_COMMAND**).  
+ 데이터 관리에 특히 관련 된 문서가 있습니다. 문서 클래스 멤버 변수에서 일반적으로 데이터를 저장 합니다. 보기 표시에 대 한 데이터를 액세스 하 고 업데이트할 이러한 변수를 사용 합니다. 문서의 기본 serialization 메커니즘 데이터 읽기 및 쓰기는 파일로 / 파일에서 관리 합니다. 명령 (않음 WM_COMMAND는) 문서를 처리할 수도 있습니다.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   

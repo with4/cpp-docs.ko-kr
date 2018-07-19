@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102009"
 ---
 # <a name="irowsetimplmbreset"></a>IRowsetImpl::m_bReset
 행 집합에서 커서 위치를 정의할 경우 결정 하는 데 사용 되는 비트 플래그입니다.  

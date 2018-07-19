@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875860"
 ---
 # <a name="dialog-editor"></a>대화 상자 편집기
 대화 상자 편집기에서는 대화 상자 리소스를 만들거나 편집할 수 있습니다. 리소스 뷰 창에서 대화 상자의.rc 파일을 두 번 클릭 하 여 대화 상자 편집기를 엽니다 (**보기 &#124; 리소스 뷰**). Express 버전에서는 리소스 뷰를 사용할 수 없습니다.  

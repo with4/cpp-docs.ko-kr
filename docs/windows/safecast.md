@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892454"
 ---
 # <a name="safecast"></a>SafeCast
 한 가지 형식의 숫자를 다른 형식으로 캐스팅합니다.  

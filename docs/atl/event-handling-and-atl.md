@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354934"
 ---
 # <a name="event-handling-and-atl"></a>이벤트 처리 및 ATL
 이 섹션에서는 ATL.를 사용 하 여 이벤트 싱크 하는 방법을 보여 줍니다. COM 이벤트 처리 원칙과 ATL. 제공한 지원을 사용 하 여 이벤트 싱크의 세부 사항 설명  

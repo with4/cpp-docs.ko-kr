@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850537"
 ---
 # <a name="variadic-macros"></a>Variadic 매크로
 Variadic 매크로 가변 개수의 인수를 포함 하는 함수 형식 매크로입니다.  

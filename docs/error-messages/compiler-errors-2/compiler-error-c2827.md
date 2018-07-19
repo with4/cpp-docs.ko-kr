@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33238591"
 ---
 # <a name="compiler-error-c2827"></a>컴파일러 오류 C2827
 'operator 연산자' 단항 폼을 전역으로 재정의할 수 없습니다.  

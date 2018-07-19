@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342136"
 ---
 # <a name="creating-the-date-and-time-picker-control"></a>날짜 및 시간 선택 컨트롤 만들기
 날짜 및 시간 선택 컨트롤의 인스턴스가 만들어지는 방법을 대화 상자에서 컨트롤 사용 또는 비 모달 창에서 만드는 인지에 따라 달라 집니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421949"
 ---
 # <a name="using-structured-exception-handling-with-c"></a>C++에서 구조적 예외 처리 사용
 이러한 문서에 설명된 구조적 예외 처리는 C 및 C++ 소스 파일에서 작동합니다. 하지만 C++용으로 특별히 디자인되지 않았으므로 권장되지 않습니다. C++ 예외 처리를 사용하여 코드의 이식성이 향상되는지 확인할 수 있습니다. 또한 C++ 예외 처리 메커니즘은 모든 형식의 예외를 처리할 수 있다는 점에서 보다 유연합니다.  

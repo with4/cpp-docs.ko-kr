@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 540f5085d1f2ab3b641e023654d05f1e9e66bae2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fe7672a925105bff3b63032a709353388143c0c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953012"
 ---
 # <a name="syncnone-class"></a>sync_none 클래스
 
@@ -71,7 +72,7 @@ void *allocate(std::size_t count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`count`|할당할 배열의 요소 수입니다.|
+|*count*|할당할 배열의 요소 수입니다.|
 
 ### <a name="remarks"></a>설명
 
@@ -89,8 +90,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`ptr`|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
-|`count`|저장소에서 할당을 취소할 개체의 수입니다.|
+|*ptr*|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
+|*count*|저장소에서 할당을 취소할 개체의 수입니다.|
 
 ### <a name="remarks"></a>설명
 
@@ -108,12 +109,12 @@ bool equals(const sync<Cache>& Other) const;
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Cache`|동기화 필터의 캐시 개체입니다.|
-|`Other`|같은지 비교할 캐시 개체입니다.|
+|*캐시*|동기화 필터의 캐시 개체입니다.|
+|*기타*|같은지 비교할 캐시 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-구성원 함수는 항상 `true`를 반환합니다.
+멤버 함수는 항상 반환 **true**합니다.
 
 ### <a name="remarks"></a>설명
 

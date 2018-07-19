@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250705"
 ---
 # <a name="compiler-error-c3161"></a>컴파일러 오류 C3161
 'interface': 중첩 클래스, 구조체, 공용 구조체 또는 인터페이스의 인터페이스 올바르지 않습니다. 클래스, 구조체 또는 공용 구조체에 중첩 인터페이스 올바르지 않습니다.  

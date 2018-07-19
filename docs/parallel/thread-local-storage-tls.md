@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694552"
 ---
 # <a name="thread-local-storage-tls"></a>TLS(스레드 로컬 저장소)
 TLS(스레드 로컬 저장소)는 지정된 다중 스레드 프로세스의 각 스레드에서 스레드별 데이터를 저장하는 위치를 할당하는 방법입니다. 동적으로 바인딩 (런타임) 스레드별 데이터는 TLS API를 통해 지원 됩니다 ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801), [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812), [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818), 및 [TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). Windows 스레드 로컬 저장소가 구현 되는 방법에 대 한 자세한 내용은 참조 [스레드 로컬 저장소 (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx)합니다.  Win32 및 Visual C++ 컴파일러는 이제 기존 API 구현 외에도 정적으로 바인딩된(로드 타임) 스레드별 데이터도 지원합니다.  

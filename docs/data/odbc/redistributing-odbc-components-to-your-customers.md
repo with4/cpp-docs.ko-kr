@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090226"
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>고객에게 ODBC 구성 요소 재배포
 응용 프로그램에 ODBC 관리자 프로그램의 기능을 통합 하는 경우도 배포 해야 사용자에 게 이러한 프로그램을 실행 하는 파일입니다. 이 ODBC 파일의 Visual c + + CD-ROM \OS\System 디렉터리에 있어야 합니다. Redistrb.wri 파일과 동일한 디렉터리에 사용권 계약에는 재배포할 수 있는 ODBC 파일 목록이 포함 되어 있습니다.  

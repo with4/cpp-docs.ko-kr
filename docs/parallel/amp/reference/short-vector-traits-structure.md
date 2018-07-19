@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688904"
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits 구조체
 short_vector_traits는 기본 벡터 길이 및 짧은 벡터 형식의 스칼라 형식 또는 스칼라 형식 검색할 수 있게 합니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096537"
 ---
 # <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession(MyProviderSess.H)
 MyProviderSess.H 선언 및 OLE DB 세션 개체에 대 한 구현을 포함합니다. 데이터 원본 개체 세션 개체를 만들고 소비자 및 공급자 간의 대화를 나타냅니다. 여러 개의 동시 세션 하나의 데이터 원본에 대 한 열 수 있습니다. 에 대 한 상속 목록 `CMyProviderSession` 따릅니다.  

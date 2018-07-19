@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381679"
 ---
 # <a name="what-does-it-cost-me-to-derive-a-class-from-cobject"></a>CObject에서 클래스를 파생시키는 비용
 클래스에서 파생 된에 오버 헤드가 [CObject](../mfc/reference/cobject-class.md) 최소화 됩니다. 파생된 클래스 상속 4 개의 가상 함수 및 하나의 [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) 개체입니다.  

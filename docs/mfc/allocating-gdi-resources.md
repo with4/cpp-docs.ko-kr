@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343223"
 ---
 # <a name="allocating-gdi-resources"></a>GDI 리소스 할당
 이 문서에서는 인쇄에 필요한 Windows GDI(그래픽 장치 인터페이스) 개체를 할당 및 할당 취소하는 방법을 설명합니다.  

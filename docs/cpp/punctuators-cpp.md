@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420091"
 ---
 # <a name="punctuators-c"></a>문장 부호 (c + +)
 C++의 문장 부호는 컴파일러에서 구문 및 의미 체계를 의미하지만 스스로 값을 생성하는 연산을 지정하지 않습니다. 또한 일부 단독 또는 조합 문장 기호는 C++ 연산자가 될 수도 있고 전처리기에 중요할 수도 있습니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384270"
 ---
 # <a name="null-statement-c"></a>Null 문 (C)
 "null 문"은 세미콜론만 포함하는 문입니다. 문이 예상되는 위치에 이러한 문이 표시될 수 있습니다. null 문을 실행할 때 아무 작업도 수행되지 않습니다. null 문을 코딩하는 올바른 방법은 다음과 같습니다.  

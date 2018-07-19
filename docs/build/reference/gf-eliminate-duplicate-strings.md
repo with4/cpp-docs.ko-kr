@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375895"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF(중복 문자열 제거)
 컴파일러가 실행 하는 동안 프로그램 이미지에서와 메모리에 동일한 문자열의 단일 복사본을 만들 수 있습니다. 이 호출 하는 최적화 *문자열 풀링* 더 작은 프로그램을 만들 수 있는 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267396"
 ---
 # <a name="compiler-error-c3836"></a>컴파일러 오류 C3836
 정적 생성자에는 멤버 이니셜라이저 목록을 사용할 수 없습니다.  

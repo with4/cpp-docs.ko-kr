@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104463"
 ---
 # <a name="irowsetupdateimplundo"></a>IRowsetUpdateImpl::Undo
 마지막 페치 또는 업데이트 이후 행에 변경 내용을 실행 취소합니다.  

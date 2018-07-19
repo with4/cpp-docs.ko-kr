@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858489"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>대화 상자에 컨트롤 배치
 대화 상자 편집기 맞춤 고 컨트롤을 자동으로 크기를 조정 하는 레이아웃 도구를 제공 합니다. 대부분의 작업에 사용할 수 있습니다는 [대화 상자 편집기 도구 모음](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)합니다. 모든 대화 상자 편집기 도구 모음 명령 서식 메뉴에서 사용 가능 하며 대부분 [바로 가기 키](../windows/accelerator-keys-for-the-dialog-editor.md)합니다.  

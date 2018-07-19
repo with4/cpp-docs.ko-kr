@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1447bcd0cb0a9bfff1d527f6a53eccf25e008f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d4c4aeeaf79172950aae6d06c5e8a1246064246
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705688"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 변경 기록 2003 - 2015
 
@@ -92,7 +93,7 @@ Visual Studio 2017에 대한 자세한 내용은 [Visual Studio 2017의 Visual C
   
 -   **new 및 delete** 이전 라이브러리 버전에서는 구현 시 정의된 연산자 new 및 delete 함수를 런타임 라이브러리 DLL(예: msvcr120.dll)에서 내보냈습니다. 현재 이들 연산자 함수는 런타임 라이브러리 DLL을 사용할 때라도 항상 정적으로 이진 파일에 연결됩니다.  
   
-     이는 네이티브 또는 혼합 코드(/clr)에 대한 주요 변경 내용이 아니지만 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md)로 컴파일된 코드의 경우 이로 인해 코드가 컴파일되지 않을 수 있습니다. 코드를 /clr:pure로 컴파일할 경우 이 변경으로 인한 빌드 오류를 해결하려면 #include \<new> 또는 #include \<new.h>를 추가해야 할 수 있습니다. /clr:pure는 Visual Studio 2015에서 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다. “순수”해야하는 코드는 C#으로 포팅되어야 합니다.  
+     이는 네이티브 또는 혼합 코드(/clr)에 대한 주요 변경 내용이 아니지만 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md)로 컴파일된 코드의 경우 이로 인해 코드가 컴파일되지 않을 수 있습니다. 코드를 /clr:pure로 컴파일할 경우 이 변경으로 인한 빌드 오류를 해결하려면 #include \<new> 또는 #include \<new.h>를 추가해야 할 수 있습니다. 참고: /clr:pure는 Visual Studio 2015에서 사용되지 않으며 Visual Studio 2017에서 지원되지 않습니다. “순수”해야하는 코드는 C#으로 포팅되어야 합니다.  
   
 #### <a name="processh"></a>\<process.h>  
   

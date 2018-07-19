@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248172"
 ---
 # <a name="compiler-error-c3236"></a>컴파일러 오류 C3236
 제네릭을 명시적으로 인스턴스화할 수 없습니다.  

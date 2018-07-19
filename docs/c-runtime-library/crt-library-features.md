@@ -28,11 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b20fa6862a835ca913a2865a651112584966af3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8ba56f0b4fa6d7d6ac56f3f118edeaad03643b5
+ms.sourcegitcommit: 0ce270566769cba76d763dd69b304a55eb375d01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799196"
 ---
 # <a name="crt-library-features"></a>CRT 라이브러리 기능
 
@@ -85,7 +86,7 @@ C 런타임 라이브러리를 지정하는 컴파일러 옵션을 사용하지 
 
 정적 CRT에 연결하여 작성된 DLL에는 자체 CRT 상태가 있으므로 DLL에서 CRT에 정적으로 연결하는 것은 이로 인한 결과를 특별히 원하거나 알고 있는 경우 외에는 권장되지 않습니다. 예를 들어 자체의 정적 CRT에 연결된 DLL를 로드하는 실행 파일에서 [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) 를 호출하는 경우 DLL의 코드에서 생성되는 하드웨어 예외는 catch되지 않지만 주 실행 파일의 코드에서 생성되는 하드웨어 예외는 catch됩니다.
 
-**/clr** 컴파일러 스위치를 사용하는 경우 코드가 정적 라이브러리인 msvcmrt.lib와 연결됩니다. 이 정적 라이브러리는 관리 코드와 네이티브 CRT 사이의 프록시를 제공합니다. 정적으로 연결된 CRT( **/MT** 또는 **/MTd** 옵션)를 **/clr**과 함께 사용할 수 없습니다. 대신 동적으로 연결된 라이브러리(**/MD** 또는 **/MDd**)를 사용하세요.
+**/clr** 컴파일러 스위치를 사용하는 경우 코드가 정적 라이브러리인 msvcmrt.lib와 연결됩니다. 이 정적 라이브러리는 관리 코드와 네이티브 CRT 사이의 프록시를 제공합니다. 정적으로 연결된 CRT( **/MT** 또는 **/MTd** 옵션)를 **/clr**과 함께 사용할 수 없습니다. 대신 동적으로 연결된 라이브러리(**/MD** 또는 **/MDd**)를 사용하세요. 순수 관리 CRT 라이브러리는 Visual Studio 2015에서 사용되지 않으며 Visual Studio 2017에서 지원되지 않습니다.
 
 **/clr**과 함께 CRT를 사용하는 방법에 대한 자세한 내용은 [혼합형(네이티브 및 관리) 어셈블리](../dotnet/mixed-native-and-managed-assemblies.md)를 참조하세요.
 
@@ -112,10 +113,15 @@ C 런타임 라이브러리를 지정하는 컴파일러 옵션을 사용하지 
 
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>응용 프로그램에서 여러 CRT 버전을 사용하는 경우 발생하는 문제
 
-둘 이상의 DLL 또는 EXE가 있는 경우에는 다른 버전의 Visual C++를 사용하는지 여부와 상관없이 둘 이상의 CRT가 있을 수 있습니다. 예를 들어 CRT를 여러 DLL에 정적으로 연결하면 동일한 문제가 발생할 수 있습니다. 정적 CRT에서 이 문제가 발생하는 경우 개발자는 **/MD** 로 컴파일하여 CRT DLL을 사용하게 됩니다. DLL에서 DLL 경계를 넘어 CRT 리소스를 전달하는 경우 CRT가 일치하지 않는 문제가 발생하며 Visual C++를 사용하여 프로젝트를 다시 컴파일해야 합니다.
+모든 실행 가능 이미지(EXE 또는 DLL)에는 고유한 정적으로 연결된 CRT가 있을 수 있거나, CRT에 동적으로 연결할 수 있습니다. 특정 이미지에 의해 정적으로 포함되거나 동적으로 로드된 CRT의 버전은 빌드한 도구 및 라이브러리 버전에 따라 다릅니다. 단일 프로세스는 여러 EXE 및 DLL 이미지를 로드할 수 있으며 각각 고유한 CRT가 있습니다. 각 해당 CRT는 다른 할당자를 사용하고, 다른 내부 구조체 레이아웃을 가지며, 다른 저장소 배열을 사용할 수 있습니다. 즉 할당된 메모리, CRT 리소스 또는 DLL 경계에서 전달된 클래스는 메모리 관리, 내부 정적 사용 또는 레이아웃 해석에 문제를 일으킬 수 있습니다. 예를 들어, 클래스가 하나의 DLL에 할당되었지만 다른 DLL에서 삭제했다면 어떤 CRT 비할당자가 사용될까요? 발생하는 오류는 감지하기 힘든 범위에서 즉각적으로 치명적인 범위까지 이를 수 있으며, 그러므로 이러한 리소스의 직접 전송은 권장되지 않습니다.
 
-프로그램 둘 이상의 CRT 버전을 사용하는 경우에는 특정 CRT 개체(예: 파일 핸들, 로캘 및 환경 변수)를 DLL 경계를 넘어 전달할 때 주의해야 합니다. 관련된 문제 및 해결 방법에 대한 자세한 내용은 [DLL 경계를 넘어 CRT 개체를 전달할 때 발생할 수 있는 오류](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)를 참조하세요.
+안정적이고 버전화 가능하도록 설계된 ABI(응용 프로그램 이진 인터페이스) 기술을 대신 사용하여 이러한 여러 문제를 피할 수 있습니다. DLL 내보내기 인터페이스를 디자인하여 값으로 정보를 전달하거나, 로컬에서 할당되어 호출자에게 반환되는 대신 호출자가 전달하는 메모리에 대해 작업합니다. 마샬링 기술을 사용하여 실행 가능 이미지 간에 구조화된 데이터를 복사합니다. 리소스를 로컬에서 캡슐화하고 클라이언트에 공개하는 핸들 또는 함수를 통해서만 조작을 허용합니다.
+
+프로세스의 모든 이미지가 동적으로 로드된 동일한 버전의 CRT를 사용하는 경우에도 이러한 문제를 피할 수 있습니다. 모든 구성 요소가 동일한 DLL 버전의 CRT를 사용하도록 하려면 **/MD** 옵션을 사용하여 빌드하고, 동일한 컴파일러 도구 집합 및 속성 설정을 사용합니다.
+
+동일한 버전의 CRT를 사용하는 경우에도, 프로그램에서 DLL 경계에서 특정 CRT 리소스(예: 파일 핸들, 로캘 및 환경 변수)를 전달하는 경우 주의해야 합니다. 관련된 문제 및 해결 방법에 대한 자세한 내용은 [DLL 경계를 넘어 CRT 개체를 전달할 때 발생할 수 있는 오류](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)를 참조하세요.
+
 
 ## <a name="see-also"></a>참고 항목
 
-[C 런타임 라이브러리 참조](../c-runtime-library/c-run-time-library-reference.md)
+- [C 런타임 라이브러리 참조](../c-runtime-library/c-run-time-library-reference.md)

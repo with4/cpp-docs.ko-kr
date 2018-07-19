@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172315"
 ---
 # <a name="compiler-error-c2247"></a>컴파일러 오류 C2247
 ' identifier' 'class'는 'class'에서 상속 하도록 'specifier'를 사용 하기 때문에 액세스할 수 없습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254624"
 ---
 # <a name="compiler-error-c3182"></a>컴파일러 오류 C3182
 'class': using 선언 또는 액세스 선언 멤버 내에서 또는 관리 되는 WinRTtype 올바르지 않습니다.  

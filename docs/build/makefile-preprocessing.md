@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368228"
 ---
 # <a name="makefile-preprocessing"></a>메이크파일 전처리
 전처리 지시문과 식을 사용 하 여 NMAKE 세션을 제어할 수 있습니다. 메이크파일의 또는 Tools.ini 지침 전처리를 배치할 수 있습니다. 지시문을 사용 조건에 따라 처리 메이크파일을, 오류 메시지를 표시, 다른 메이크파일 포함는 매크로 정의 해제 하 고 있습니다 특정 옵션을 설정 하거나 해제 합니다.  

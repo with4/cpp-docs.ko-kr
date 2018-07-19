@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089394"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array 및 WriteOnlyArray(C++/CX)
 일반 C 스타일 배열 자유롭게 사용할 수 있습니다 또는 [std:: array](../standard-library/array-class-stl.md) C + + /CX 프로그램 (있지만 [std:: vector](../standard-library/vector-class.md) 더 적합할), 메타 데이터에 게시 된 모든 api에서는 C 스타일 배열 변환 해야 하지만 또는을 벡터는 [platform:: array](../cppcx/platform-array-class.md) 또는 [platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md) 사용 방법에 따라 형식입니다. [Platform::Array](../cppcx/platform-array-class.md) 형식은 [std::vector](../standard-library/vector-class.md)만큼 효율적이지도 않고 강력하지도 않으므로 배열 요소에 대한 많은 작업을 수행하는 내부 코드에서는 사용하지 않아야 합니다.  

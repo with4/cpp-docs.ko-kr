@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70731665ca2a2eba739f139678e0f7eaface2b85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92f7e0f3652a1142c97f878784edba6229fb19cd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944479"
 ---
 # <a name="uuidof-operator"></a>__uuidof 연산자
 **Microsoft 전용**  
@@ -33,29 +34,27 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      __uuidof (  
-   expression   
-)  
+__uuidof (expression)  
 ```  
   
 ## <a name="remarks"></a>설명  
- *식* 이러한 형식 또는 이러한 형식의 변수에서 특수화 된 템플릿, 형식 이름, 포인터, 참조 또는 해당 형식의 배열이 될 수 있습니다. 컴파일러에서 인수를 사용하여 연결된 GUID를 찾을 수 있으면 해당 인수는 유효합니다.  
+ 합니다 *식* 이러한 형식 또는 이러한 형식의 변수에서 특수화 된 템플릿, 형식 이름, 포인터, 참조 또는 해당 형식의 배열과 될 수 있습니다. 컴파일러에서 인수를 사용하여 연결된 GUID를 찾을 수 있으면 해당 인수는 유효합니다.  
   
- 이 내장 함수의 특별 한 경우는 경우 어느 **0** 또는 **NULL** 인수로 제공 합니다. 이 경우 `__uuidof`는 0으로 구성된 GUID를 반환합니다.  
+ 이 내장 함수의 특별 한 경우 때 어느 **0** 또는 NULL 인수로 제공 됩니다. 이 예에서 **__uuidof** 0으로 구성 된 GUID가 반환 됩니다.  
   
  이 키워드를 사용하여 연결된 GUID를 다음으로 추출합니다.  
   
--   개체는 [uuid](../cpp/uuid-cpp.md) 확장된 특성입니다.  
+-   개체를 [uuid](../cpp/uuid-cpp.md) 확장 된 특성입니다.  
   
 -   사용 하 여 만든 라이브러리 블록의 [모듈](../windows/module-cpp.md) 특성입니다.  
   
 > [!NOTE]
->  디버그 빌드에서 `__uuidof`는 항상 동적으로(런타임으로) 개체를 초기화합니다. 릴리스 빌드에서 `__uuidof`는 정적으로(컴파일 시) 개체를 초기화할 수 있습니다.  
+>  디버그 빌드에서 **__uuidof** 항상 동적으로 (런타임으로) 개체를 초기화 합니다. 릴리스 빌드에서 **__uuidof** 정적으로 (컴파일 시) 개체를 초기화할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  ole32.lib를 사용하여 컴파일된 다음 코드는 module 특성을 사용하여 만든 라이브러리 블록의 uuid를 표시합니다.  
   
-```  
+```cpp 
 // expre_uuidof.cpp  
 // compile with: ole32.lib  
 #include "stdio.h"  
@@ -77,9 +76,9 @@ int main() {
 ```  
   
 ## <a name="comments"></a>설명  
- 라이브러리를 더 이상 범위에서의 경우에서 __LIBID를 사용할 수 없습니다\_ 대신 `__uuidof`합니다. 예를 들어:  
+ 라이브러리를 더 이상 범위의 경우에 사용할 수 없습니다 `__LIBID_` of **__uuidof**합니다. 예를 들어:  
   
-```  
+```cpp 
 StringFromCLSID(__LIBID_, &lpolestr);  
 ```  
   

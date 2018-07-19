@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873903"
 ---
 # <a name="flipping-an-image-image-editor-for-icons"></a>이미지 대칭 이동(아이콘에 대한 이미지 편집기)
 대칭 이동 하거나 이미지를 회전할 수 있습니다.  

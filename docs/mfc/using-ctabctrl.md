@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383684"
 ---
 # <a name="using-ctabctrl"></a>CTabCtrl 사용
 "탭 컨트롤"은 노트북의 구분선 또는 파일 캐비닛의 레이블이 지정 된 폴더와 비슷합니다. 클래스에 표시 탭 컨트롤을 사용 하 여 [CTabCtrl](../mfc/reference/ctabctrl-class.md), 피어 또는 각 페이지 간의 논리적 관계를 제안 하는 형식에서 한 번에 하나씩 사용자에 게 정보나 컨트롤의 여러 페이지를 표시 합니다.  

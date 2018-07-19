@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387901"
 ---
 # <a name="ansi-c-compliance"></a>ANSI C 규격
 런타임 시스템(예: 함수, 매크로, 상수, 변수 및 형식 정의)의 모든 Microsoft 고유의 식별자에 대한 명명 규칙은 ANSI 규격입니다. 이 설명서에서는 ANSI/ISO C 표준을 따르는 모든 런타임 함수를 ANSI 호환으로 기록합니다. ANSI 호환 응용 프로그램은 이러한 ANSI 호환 함수를 사용해야 합니다.  

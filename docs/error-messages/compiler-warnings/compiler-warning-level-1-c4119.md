@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271177"
 ---
 # <a name="compiler-warning-level-1-c4119"></a>컴파일러 경고(수준 1) C4119
 서로 다른 기준 'base1'과 'base2'를 지정했습니다.  

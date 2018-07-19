@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891937"
 ---
 # <a name="roinitializewrapperhresult-operator"></a>RoInitializeWrapper::HRESULT() 연산자
 마지막 RoInitializeWrapper 생성자에 의해 생성된 HRESULT 값을 검색합니다.  

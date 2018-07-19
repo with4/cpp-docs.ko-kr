@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379257"
 ---
 # <a name="role-of-the-view-in-printing"></a>인쇄에서 뷰의 역할
 또한 보기는 관련된 문서를 인쇄에 두 가지 중요 한 역할을 재생 합니다.  

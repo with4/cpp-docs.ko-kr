@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879167"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>방법: 프로젝트 외부에서 리소스 스크립트 파일 열기(독립 실행형)
 프로젝트를 열지 않고도 .rc 파일에서 리소스를 볼 수 있습니다. .Rc 파일에서 열리지 않고 문서 창에 열립니다는 [리소스 뷰](../windows/resource-view-window.md) 창 (즉, 프로젝트 내에서 파일이 열릴 때와).  

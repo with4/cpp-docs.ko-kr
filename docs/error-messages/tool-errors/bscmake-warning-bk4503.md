@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293454"
 ---
 # <a name="bscmake-warning-bk4503"></a>BSCMAKE 경고 BK4503
 .SBR 파일 이름의 사소한 오류가 무시되었습니다.  

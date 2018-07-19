@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244308"
 ---
 # <a name="compiler-error-c3157"></a>컴파일러 오류 C3157
 ParamArray 특성은 마지막 매개 변수에 적용할 수 있습니다.  

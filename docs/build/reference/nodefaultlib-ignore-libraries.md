@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375716"
 ---
 # <a name="nodefaultlib-ignore-libraries"></a>/NODEFAULTLIB(라이브러리 무시)
 ```  

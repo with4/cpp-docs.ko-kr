@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695800"
 ---
 # <a name="321-ompinitlock-and-ompinitnestlock-functions"></a>3.2.1 omp_init_lock and omp_init_nest_lock 함수
 이러한 함수는 잠금을 초기화 하는 유일한 방법은 제공 합니다. 각 함수는 매개 변수와 관련 된 잠금 초기화 *잠금* 후속 호출에서 사용 하도록 합니다. 형식은 다음과 같습니다.  

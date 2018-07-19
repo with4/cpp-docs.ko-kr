@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383893"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>프롤로그/에필로그 코드를 작성할 때 고려 사항
 **Microsoft 전용**  

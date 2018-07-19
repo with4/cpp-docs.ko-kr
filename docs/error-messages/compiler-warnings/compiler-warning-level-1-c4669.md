@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33280184"
 ---
 # <a name="compiler-warning-level-1-c4669"></a>컴파일러 경고(수준 1) C4669
 'cast': 안전하지 않은 변환입니다. 'class'는 WinRT 또는 관리되는 형식 개체입니다.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094184"
 ---
 # <a name="cdbpropsetoperator-"></a>CDBPropSet::operator =
 다른 속성 집합으로 설정 하는 하나의 속성의 콘텐츠를 할당 합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346317"
 ---
 # <a name="html-help-context-sensitive-help-for-your-programs"></a>HTML 도움말: 프로그램에 대한 상황에 맞는 도움말
 > [!IMPORTANT]

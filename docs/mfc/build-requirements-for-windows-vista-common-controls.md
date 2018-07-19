@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08d86af5f54fb9dfe81327b4589d60e5290b2610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8f167ac560fd8e2109c149f30841ecbe3c44fc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930978"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Windows Vista 공용 컨트롤의 빌드 요구 사항
 MFC(Microsoft Foundation Class) 라이브러리는 Windows 공용 컨트롤 버전 6.1을 지원합니다. 공용 컨트롤은 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]에 포함되며, 라이브러리는 [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]에 포함됩니다. 라이브러리에서 기존 클래스 및 새 클래스를 향상 시키는 새로운 메서드와 지 원하는 메서드를 제공 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 공용 컨트롤입니다. 응용 프로그램을 빌드할 때는 다음 섹션에 설명된 컴파일 및 마이그레이션 요구 사항을 따라야 합니다.  
@@ -43,7 +44,7 @@ MFC(Microsoft Foundation Class) 라이브러리는 Windows 공용 컨트롤 버�
  ANSI 버전으로 된 일부 MFC 메서드는 Windows 공용 컨트롤 버전 6.1부터 더 이상 사용되지 않습니다. 자세한 내용은 참조 [사용 되지 않는 ANSI Api](../mfc/deprecated-ansi-apis.md)합니다.  
   
 ## <a name="migration-requirements"></a>마이그레이션 요구 사항  
- Visual Studio IDE를 사용해서 Windows 공용 컨트롤 버전 6.1을 사용하는 새로운 MFC 응용 프로그램을 빌드할 경우, IDE가 적절한 매니페스트를 자동으로 선언합니다. 하지만 이전 버전의 Visual Studio에서 기존 MFC 응용 프로그램을 마이그레이션하고 새로운 공용 컨트롤을 사용하려는 경우에는 IDE가 응용 프로그램을 업그레이드하기 위한 매니페스트 정보를 자동으로 제공하지 않습니다. 대신 stdafx.h 파일에 다음 소스 코드를 수동으로 삽입해야 합니다.  
+ Visual Studio IDE를 사용해서 Windows 공용 컨트롤 버전 6.1을 사용하는 새로운 MFC 응용 프로그램을 빌드할 경우, IDE가 적절한 매니페스트를 자동으로 선언합니다. 하지만 이전 버전의 Visual Studio에서 기존 MFC 응용 프로그램을 마이그레이션하고 새로운 공용 컨트롤을 사용하려는 경우에는 IDE가 응용 프로그램을 업그레이드하기 위한 매니페스트 정보를 자동으로 제공하지 않습니다. 대신, 다음 소스 코드를 수동으로 삽입 해야 프로그램 **stdafx.h** 파일:  
   
 ```  
 #ifdef UNICODE  

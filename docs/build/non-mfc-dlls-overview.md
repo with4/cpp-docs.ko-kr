@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368644"
 ---
 # <a name="non-mfc-dlls-overview"></a>비 MFC DLL: 개요
 비 MFC DLL은 MFC를 내부적으로 사용 하지 않는 DLL 및 MFC 또는 비 MFC 실행 파일에서 DLL의 내보낸된 함수를 호출할 수 있습니다. 함수는 표준 C 인터페이스를 사용 하 여 비 MFC DLL에서 대개 내보내집니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368332"
 ---
 # <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>방법: MSBuild 프로젝트에 사용자 지정 빌드 도구 추가
 사용자 지정 빌드 도구는 특정 파일에 연관 된 사용자 정의 명령줄 도구입니다.  

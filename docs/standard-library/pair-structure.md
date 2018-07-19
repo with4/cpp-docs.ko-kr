@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0be002676860acb4f55d989416114ec23ce809
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ad86773fdc78f3cb8d5219ce14919a035755f3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955334"
 ---
 # <a name="pair-structure"></a>pair 구조체
 
@@ -53,27 +54,27 @@ struct pair
 
 ### <a name="parameters"></a>매개 변수
 
-`Val1` 첫 번째 요소로 초기화 하는 값 `pair`합니다.
+*Val1* 의 첫 번째 요소를 초기화 하는 값 `pair`합니다.
 
-`Val2` 두 번째 요소를 초기화 하는 값 `pair`합니다.
+*Val2* 의 두 번째 요소를 초기화 하는 값 `pair`합니다.
 
-`Right` 다른 쌍의 요소를 초기화 하는 데 사용 되어야 하는 값을 포함 하는 쌍입니다.
+*오른쪽* 다른 쌍의 요소를 초기화 하는 데 해당 값은 쌍입니다.
 
 ## <a name="return-value"></a>반환 값
 
-첫 번째(기본값) 생성자는 쌍의 첫 번째 요소를 **T1** 형식의 기본값으로 초기화하고, 두 번째 요소를 **T2** 형식의 기본값으로 초기화합니다.
+첫 번째 (기본값) 생성자는 기본 형식 쌍의 첫 번째 요소를 초기화 `T1` 하 고 두 번째 요소 형식의 기본값으로 `T2`합니다.
 
-두 번째 생성자는 쌍의 첫 번째 요소를 `Val1`로 초기화하고 두 번째 요소를 *Val2*로 초기화합니다.
+두 번째 생성자는 쌍의 첫 번째 요소를 초기화 *Val1* 고 두 번째 *Val2입니다.*
 
-세 번째(템플릿) 생성자는 쌍의 첫 번째 요소를 `Right`. **first**로 초기화하고 두 번째 요소를 `Right`. **second**로 초기화합니다.
+세 번째(템플릿) 생성자는 쌍의 첫 번째 요소를 `Right`. **first**로 초기화하고 두 번째 요소를 `Right`. **second**와 같습니다.
 
-네 번째 생성자는 [Rvalue 참조 선언자: &&](../cpp/rvalue-reference-declarator-amp-amp.md)를 사용하여 쌍의 첫 번째 요소를 `Val1`로 초기화하고 두 번째 요소를 *Val2*로 초기화합니다.
+네 번째 생성자는 쌍의 첫 번째 요소를 초기화 *Val1* 고 두 번째 *Val2* 사용 하 여 [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)합니다.
 
 ## <a name="remarks"></a>설명
 
-템플릿 구조체는 각각 **T1** 및 **T2** 형식의 개체 쌍을 저장합니다. **first_type** 형식은 템플릿 매개 변수 **T1**과 동일하고, **second_type** 형식은 템플릿 매개 변수 **T2**와 동일합니다. **T1** 및 **T2**는 각각 기본 생성자, 단일 인수 생성자 및 소멸자만 제공해야 합니다. `pair` 형식의 모든 구성원은 형식이 **class**가 아니라 `struct`로 선언되었으므로 공용입니다. 쌍을 사용하는 두 가지 가장 일반적인 방법은 두 값을 반환하는 함수에 대한 반환 형식으로 사용하거나, 각 요소에 키와 값 형식이 둘 다 연결되어 있는 결합형 컨테이너 클래스 [map 클래스](../standard-library/map-class.md) 및 [multimap 클래스](../standard-library/multimap-class.md)에 대한 요소로 사용하는 것입니다. 후자의 경우 쌍 결합형 컨테이너에 대한 요구 사항을 충족하고 `pair`< **const**`key_type`, `mapped_type`> 형태의 값 형식을 갖습니다.
+템플릿 구조체 형식의 개체 쌍을 저장 `T1` 고 `T2`, 각각. 형식 `first_type` 템플릿 매개 변수로 동일 `T1` 유형과 `second_type` 템플릿 매개 변수로 동일 `T2`합니다. `T1` 및 `T2` 각각 기본 생성자만, 단일 인수 생성자 및 소멸자를 제공 해야 합니다. `pair` 형식의 모든 구성원은 형식이 **class**가 아니라 `struct`로 선언되었으므로 공용입니다. 쌍을 사용하는 두 가지 가장 일반적인 방법은 두 값을 반환하는 함수에 대한 반환 형식으로 사용하거나, 각 요소에 키와 값 형식이 둘 다 연결되어 있는 결합형 컨테이너 클래스 [map 클래스](../standard-library/map-class.md) 및 [multimap 클래스](../standard-library/multimap-class.md)에 대한 요소로 사용하는 것입니다. 후자의 경우 쌍 결합형 컨테이너에 대한 요구 사항을 충족하고 `pair`< **const**`key_type`, `mapped_type`> 형태의 값 형식을 갖습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // utility_pair.cpp

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388288"
 ---
 # <a name="control-flags"></a>제어 플래그
 Microsoft C 런타임 라이브러리의 디버그 버전에서는 힙 할당과 보고 프로세스를 제어하기 위해 다음 플래그를 사용합니다. 자세한 내용은 [CRT 디버깅 기술](/visualstudio/debugger/crt-debugging-techniques)을 참조하세요.  

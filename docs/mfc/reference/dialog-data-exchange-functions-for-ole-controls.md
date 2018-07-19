@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dd7e1b9b18e8478cfa4e61a22806cf067cb3699
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542afe8ba67e1d9c6138998320483a964a08724a
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121827"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE 컨트롤에 대한 대화 상자 데이터 교환 함수
 이 항목 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 내 OLE 컨트롤의 속성 및 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버 간에 데이터를 교환 하는 데 사용 하 여 DDX_OC 함수를 나열 합니다.  
@@ -47,8 +48,8 @@ ms.lasthandoff: 05/04/2018
 |[DDX_OCColorRO](#ddx_occolorro)|전송을 관리 **OLE_COLOR** OLE 컨트롤의 읽기 전용 속성 간에 데이터 및 **OLE_COLOR** 데이터 멤버입니다.|  
 |[DDX_OCFloat](#ddx_ocfloat)|전송을 관리 **float** (또는 **double**) OLE 컨트롤의 속성 간에 데이터 및 **float** (또는 **double**) 데이터 멤버입니다.|  
 |[DDX_OCFloatRO](#ddx_ocfloatro)|전송을 관리 **float** (또는 **double**) OLE 컨트롤의 읽기 전용 속성 간에 데이터 및 **float** (또는 **double**) 데이터 멤버입니다.|  
-|[DDX_OCInt](#ddx_ocint)|전송을 관리 `int` (또는 **긴**) OLE 컨트롤의 속성 간에 데이터 및 `int` (또는 **긴**) 데이터 멤버입니다.|  
-|[DDX_OCIntRO](#ddx_ocintro)|전송을 관리 `int` (또는 **긴**) OLE 컨트롤의 읽기 전용 속성 간에 데이터 및 `int` (또는 **긴**) 데이터 멤버입니다.|  
+|[DDX_OCInt](#ddx_ocint)|전송을 관리 **int** (또는 **긴**) OLE 컨트롤의 속성 간에 데이터 및 **int** (또는 **긴**) 데이터 멤버입니다.|  
+|[DDX_OCIntRO](#ddx_ocintro)|전송을 관리 **int** (또는 **긴**) OLE 컨트롤의 읽기 전용 속성 간에 데이터 및 **int** (또는 **긴**) 데이터 멤버입니다.|  
 |[DDX_OCShort](#ddx_ocshort)|전송을 관리 **짧은** OLE 컨트롤의 속성 간에 데이터 및 **짧은** 데이터 멤버입니다.|  
 |[DDX_OCShortRO](#ddx_ocshortro)|전송을 관리 **짧은** OLE 컨트롤의 읽기 전용 속성 간에 데이터 및 **짧은** 데이터 멤버입니다.|  
 |[DDX_OCText](#ddx_octext)|전송을 관리 **CString** OLE 컨트롤의 속성 간에 데이터 및 **CString** 데이터 멤버입니다.|  
@@ -66,13 +67,13 @@ void AFXAPI DDX_OCBool(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- `nIDC`  
+ *nIDC*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 ID입니다.  
   
- `dispid`  
+ *dispid*  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
  *값*  
@@ -96,13 +97,13 @@ void AFXAPI DDX_OCBoolRO(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- `nIDC`  
+ *nIDC*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 ID입니다.  
   
- `dispid`  
+ *dispid*  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
  *값*  
@@ -115,7 +116,7 @@ void AFXAPI DDX_OCBoolRO(
   **헤더** afxdisp.h  
   
 ##  <a name="ddx_occolor"></a>  DDX_OCColor  
- `DDX_OCColor` 함수의 전송을 관리 **OLE_COLOR** 대화 상자에서 OLE 컨트롤의 속성 간에 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 **OLE_COLOR** 대화 상자의 데이터 멤버 폼 뷰 또는 컨트롤 뷰 개체입니다.  
+ `DDX_OCColor` 폼 보기를 컨트롤 뷰 개체 및 대화 상자의 OLE_COLOR 데이터 멤버 또는 컨트롤 뷰 개체 또는 함수에는 폼 보기 대화 상자에서 OLE 컨트롤의 속성 간의 OLE_COLOR 데이터의 전송을 관리 합니다.  
   
 ```   
 void AFXAPI DDX_OCColor(
@@ -126,13 +127,13 @@ void AFXAPI DDX_OCColor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- `nIDC`  
+ *nIDC*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 ID입니다.  
   
- `dispid`  
+ *dispid*  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
  *값*  
@@ -145,7 +146,7 @@ void AFXAPI DDX_OCColor(
   **헤더** afxdisp.h  
   
 ##  <a name="ddx_occolorro"></a>  DDX_OCColorRO  
- `DDX_OCColorRO` 함수의 전송을 관리 **OLE_COLOR** 대화 상자에서 OLE 컨트롤의 읽기 전용 속성 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 **OLE_COLOR** 데이터 멤버에는 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체입니다.  
+ `DDX_OCColorRO` 폼 보기를 컨트롤 뷰 개체 및 대화 상자의 OLE_COLOR 데이터 멤버 또는 컨트롤 뷰 개체 또는 함수에는 폼 보기 대화 상자에서 OLE 컨트롤의 읽기 전용 속성 간의 OLE_COLOR 데이터의 전송을 관리 합니다.  
   
 ```   
 void AFXAPI DDX_OCColorRO(
@@ -156,13 +157,13 @@ void AFXAPI DDX_OCColorRO(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- `nIDC`  
+ *nIDC*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 ID입니다.  
   
- `dispid`  
+ *dispid*  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
  *값*  
@@ -192,13 +193,13 @@ void AFXAPI DDX_OCFloat(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- `nIDC`  
+ *nIDC*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 ID입니다.  
   
- `dispid`  
+ *dispid*  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
  *값*  
@@ -228,13 +229,13 @@ void AFXAPI DDX_OCFloatRO(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- `nIDC`  
+ *nIDC*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 ID입니다.  
   
- `dispid`  
+ *dispid*  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
  *값*  
@@ -247,7 +248,7 @@ void AFXAPI DDX_OCFloatRO(
   **헤더** afxdisp.h  
   
 ##  <a name="ddx_ocint"></a>  DDX_OCInt  
- `DDX_OCInt` 함수의 전송을 관리 `int` (또는 **긴**) 대화 상자에서 OLE 컨트롤의 속성 간에 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `int` (또는 **장기**) 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
+ `DDX_OCInt` 함수의 전송을 관리 **int** (또는 **긴**) 대화 상자에서 OLE 컨트롤의 속성 간에 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 **int**(또는 **긴**) 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
   
 ```   
 void AFXAPI DDX_OCInt(
@@ -264,13 +265,13 @@ void AFXAPI DDX_OCInt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- `nIDC`  
+ *nIDC*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 ID입니다.  
   
- `dispid`  
+ *dispid*  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
  *값*  
@@ -283,7 +284,7 @@ void AFXAPI DDX_OCInt(
   **헤더** afxdisp.h  
   
 ##  <a name="ddx_ocintro"></a>  DDX_OCIntRO  
- `DDX_OCIntRO` 함수의 전송을 관리 `int` (또는 **긴**) 대화 상자에서 OLE 컨트롤의 읽기 전용 속성 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `int` (또는 **긴** ) 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
+ `DDX_OCIntRO` 함수의 전송을 관리 **int** (또는 **긴**) 대화 상자에서 OLE 컨트롤의 읽기 전용 속성 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 **int** (또는 **긴**) 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
   
 ```   
 void AFXAPI DDX_OCIntRO(
@@ -300,13 +301,13 @@ void AFXAPI DDX_OCIntRO(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- `nIDC`  
+ *nIDC*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 ID입니다.  
   
- `dispid`  
+ *dispid*  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
  *값*  
@@ -330,13 +331,13 @@ void AFXAPI DDX_OCShort(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- `nIDC`  
+ *nIDC*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 ID입니다.  
   
- `dispid`  
+ *dispid*  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
  *값*  
@@ -360,13 +361,13 @@ void AFXAPI DDX_OCShortRO(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- `nIDC`  
+ *nIDC*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 ID입니다.  
   
- `dispid`  
+ *dispid*  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
  *값*  
@@ -390,13 +391,13 @@ void AFXAPI DDX_OCText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  에 대 한 포인터는 **CDataExchange** 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- `nIDC`  
+ *nIDC*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 ID입니다.  
   
- `dispid`  
+ *dispid*  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
  *값*  
@@ -420,13 +421,13 @@ void AFXAPI DDX_OCTextRO(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- `nIDC`  
+ *nIDC*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 ID입니다.  
   
- `dispid`  
+ *dispid*  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
  *값*  

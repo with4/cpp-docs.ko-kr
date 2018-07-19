@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361305"
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 구성 요소 마법사
 이 마법사를 사용 하 여 트랜잭션을 포함 하 여 COM + 1.0 서비스를 지 원하는 프로젝트에 개체를 추가 합니다.  

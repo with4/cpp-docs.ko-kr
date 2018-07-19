@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7f87c83b9f4c3840318b27922f758787d929d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80f0c9802077b89ca5555dc476b1066f61e6c593
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121492"
 ---
 # <a name="csmoothstoptransition-class"></a>CSmoothStopTransition 클래스
 부드러운 중지 전환을 캡슐화합니다.  
@@ -83,7 +84,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pLibrary`  
+ *pLibrary*  
  표준 전환 만드는 담당 하는 전환 라이브러리에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -99,10 +100,10 @@ CSmoothStopTransition(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `maximumDuration`  
+ *maximumDuration*  
  전환의 최대 기간입니다.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  전환의 끝에서 애니메이션 변수의 값입니다.  
   
 ##  <a name="m_dblfinalvalue"></a>  CSmoothStopTransition::m_dblFinalValue  

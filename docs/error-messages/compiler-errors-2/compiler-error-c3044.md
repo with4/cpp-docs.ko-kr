@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252113"
 ---
 # <a name="compiler-error-c3044"></a>컴파일러 오류 C3044
 'section' : OpenMP 'sections' 지시문 내부에 직접 중첩되어야 합니다.  

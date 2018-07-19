@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882656"
 ---
 # <a name="resizing-an-entire-image-image-editor-for-icons"></a>전체 이미지 크기 조정(아이콘에 대한 이미지 편집기)
 ### <a name="to-resize-an-entire-image-using-the-properties-window"></a>속성 창을 사용 하 여 전체 이미지 크기를 조정 하려면  

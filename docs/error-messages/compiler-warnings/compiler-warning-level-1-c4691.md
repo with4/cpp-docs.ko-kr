@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282599"
 ---
 # <a name="compiler-warning-level-1-c4691"></a>컴파일러 경고(수준 1) C4691
 'type': 참조 하는 형식이 참조 되지 않은 어셈블리 'file'를 대신 사용 하는 현재 변환 단위에 정의 된 형식에에서 필요  

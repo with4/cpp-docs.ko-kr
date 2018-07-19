@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349619"
 ---
 # <a name="general-mfc-topics"></a>일반 MFC 항목
 이 문서에는 MFC(Microsoft Foundation Class) 라이브러리에 대한 기술 정보가 포함되어 있고 MFC 프레임워크와 해당 키 구성 요소 및 하위 시스템의 개요가 제공됩니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095250"
 ---
 # <a name="ccommandcreate"></a>CCommand::Create
 호출 [ccommand:: Createcommand](../../data/oledb/ccommand-createcommand.md) 지정된 된 세션에 대 한 명령을 만들려면 다음 호출 [icommandtext:: Setcommandtext](https://msdn.microsoft.com/en-us/library/ms709825.aspx) 명령 텍스트를 지정 합니다.  

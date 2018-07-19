@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110403"
 ---
 # <a name="ccli-tasks"></a>C++/CLI 작업
 설명서의이 섹션의 문서에는 C +의 다양 한 기능을 사용 하는 방법을 보여 줍니다 + CLI 합니다.  

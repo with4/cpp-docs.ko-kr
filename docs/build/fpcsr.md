@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367448"
 ---
 # <a name="fpcsr"></a>FpCsr
 레지스터 상태에도 x87 FPU 제어 단어입니다. 호출 규칙 비휘발성 되도록이 레지스터를 결정 합니다.  

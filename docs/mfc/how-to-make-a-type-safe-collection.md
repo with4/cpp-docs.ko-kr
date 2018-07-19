@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd1fbce9e6dda649da8fe2e53fc7dc70db1da33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cbcdeec6e39e104625d1b5d47c494915a821d38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930035"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>방법: 형식이 안전한 컬렉션 만들기
 이 문서에서는 사용자 지정 데이터 형식에 대 한 형식이 안전한 컬렉션을 확인 하는 방법을 설명 합니다. 다음과 같은 내용을 다룹니다.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/04/2018
   
 3.  필요한 경우 구현에서 [도우미 함수](../mfc/reference/collection-class-helpers.md) 및 [SerializeElements](../mfc/reference/collection-class-helpers.md#serializeelements)합니다. 이러한 함수를 구현 하는 정보를 참조 하십시오. [도우미 함수 구현](#_core_implementing_helper_functions)합니다.  
   
- 이 예제에는 정수 목록이의 선언을 보여 줍니다. 1 단계에서 첫 번째 매개 변수는 목록의 요소로 저장 된 데이터의 형식입니다. 두 번째 매개 변수 데이터를 전달 하 고와 같은 컬렉션 클래스의 멤버 함수에서 반환 하는 방법을 지정 **추가** 및 `GetAt`합니다.  
+ 이 예제에는 정수 목록이의 선언을 보여 줍니다. 1 단계에서 첫 번째 매개 변수는 목록의 요소로 저장 된 데이터의 형식입니다. 두 번째 매개 변수 데이터를 전달 하 고와 같은 컬렉션 클래스의 멤버 함수에서 반환 하는 방법을 지정 `Add` 및 `GetAt`합니다.  
   
 ##  <a name="_core_implementing_helper_functions"></a> 도우미 함수 구현  
  템플릿 기반 컬렉션 클래스 `CArray`, `CList`, 및 `CMap` 파생 된 컬렉션 클래스에 대 한 필요에 따라 사용자 지정할 수 있는 5 개의 글로벌 도우미 함수를 사용 합니다. 이러한 도우미 함수에 대 한 자세한 내용은 참조 [컬렉션 클래스 도우미](../mfc/reference/collection-class-helpers.md) 에 *MFC 참조*합니다. Serialization 함수는 템플릿 기반 컬렉션 클래스의 대부분의 사용자에 필요.  
@@ -65,10 +66,10 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCCollections#9](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_3.cpp)]  
   
- 에 대 한 오버 로드 된 삽입 연산자 `CArchive` 호출 `CObject::Serialize` (또는 해당 함수에 대 한 재정의) 각각에 대해 **CPerson** 개체입니다.  
+ 에 대 한 오버 로드 된 삽입 연산자 `CArchive` 호출 `CObject::Serialize` (또는 해당 함수에 대 한 재정의) 각각에 대해 `CPerson` 개체입니다.  
   
 ##  <a name="_core_using_nontemplate_collection_classes"></a> 비템플릿 컬렉션 클래스를 사용 하 여  
- MFC는 또한 MFC 버전 1.0에 도입 된 컬렉션 클래스를 지원 합니다. 이러한 클래스는 템플릿을 기반으로 하지 합니다. 지원 되는 형식의 데이터를 포함 하는 데 사용 될 수 `CObject*`, **UINT**, `DWORD`, 및 `CString`합니다. 이러한 미리 정의 된 컬렉션을 사용할 수 있습니다 (예: `CObList`)에서 파생 된 모든 개체의 컬렉션을 보유 하 `CObject`합니다. MFC와 같은 기본 형식을 보유 하는 다른 미리 정의 된 컬렉션을 제공 **UINT** 포인터를 무효화 하 고 (`void`*). 그러나 일반적으로 유용 보다 구체적인 클래스와 해당 파생 클래스의 개체를 보유 하는 사용자 지정 형식이 안전한 컬렉션을 정의할 수 있습니다. 하지 컬렉션 클래스와 함께 이렇게 템플릿을 기반으로 하는 템플릿 기반 클래스를 사용 하 여 보다 더 많은 작업 합니다.  
+ MFC는 또한 MFC 버전 1.0에 도입 된 컬렉션 클래스를 지원 합니다. 이러한 클래스는 템플릿을 기반으로 하지 합니다. 지원 되는 형식의 데이터를 포함 하는 데 사용 될 수 `CObject*`, `UINT`, `DWORD`, 및 `CString`합니다. 이러한 미리 정의 된 컬렉션을 사용할 수 있습니다 (예: `CObList`)에서 파생 된 모든 개체의 컬렉션을 보유 하 `CObject`합니다. MFC와 같은 기본 형식을 보유 하는 다른 미리 정의 된 컬렉션을 제공 `UINT` 포인터를 무효화 하 고 (`void`*). 그러나 일반적으로 유용 보다 구체적인 클래스와 해당 파생 클래스의 개체를 보유 하는 사용자 지정 형식이 안전한 컬렉션을 정의할 수 있습니다. 하지 컬렉션 클래스와 함께 이렇게 템플릿을 기반으로 하는 템플릿 기반 클래스를 사용 하 여 보다 더 많은 작업 합니다.  
   
  두 가지 방법으로 비템플릿 컬렉션을 사용 하 여 형식이 안전한 컬렉션을 만들려면:  
   

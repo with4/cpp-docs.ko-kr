@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129491"
 ---
 # <a name="how-to-convert-char--string-to-systembyte-array"></a>방법: char * 문자열을 System::Byte 배열로 변환
 변환 하는 가장 효율적인 방법은 `char *` 문자열을 한 <xref:System.Byte> 배열을 사용 하는 것 <xref:System.Runtime.InteropServices.Marshal> 클래스입니다.  

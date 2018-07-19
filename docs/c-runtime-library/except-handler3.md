@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389409"
 ---
 # <a name="excepthandler3"></a>_except_handler3
 내부 CRT 함수입니다. 프레임워크에서 적절한 예외 처리기를 찾아 현재 예외를 처리하는 데 사용됩니다.  

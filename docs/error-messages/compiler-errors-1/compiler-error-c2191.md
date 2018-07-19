@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169438"
 ---
 # <a name="compiler-error-c2191"></a>컴파일러 오류 C2191
 두 번째 매개 변수 목록이 첫째 보다 깁니다.  

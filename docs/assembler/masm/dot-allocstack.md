@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050869"
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
 생성 된 **UWOP_ALLOC_SMALL** 또는 **UWOP_ALLOC_LARGE** 를 프롤로그에서 현재 오프셋에 대 한 지정 된 크기가 합니다.  

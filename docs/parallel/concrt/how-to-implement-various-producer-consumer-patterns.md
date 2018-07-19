@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687740"
 ---
 # <a name="how-to-implement-various-producer-consumer-patterns"></a>방법: 다양한 공급자/소비자 패턴 구현
 이 항목에서는 응용 프로그램에서 공급자-소비자 패턴을 구현 하는 방법을 설명 합니다. 이 패턴에서 *생산자*는 메시지 블록에 메시지를 보내고 *소비자*는 해당 블록에서 메시지를 읽습니다.  

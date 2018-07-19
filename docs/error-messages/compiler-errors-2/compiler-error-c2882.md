@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33242195"
 ---
 # <a name="compiler-error-c2882"></a>컴파일러 오류 C2882
 'name': 식에서 네임 스페이스 식별자를 잘못 사용 했습니다.  

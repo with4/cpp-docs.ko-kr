@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366751"
 ---
 # <a name="cinvalidargexception-class"></a>CInvalidArgException 클래스
 이 클래스는 잘못된 인수 예외 상태를 나타냅니다.  

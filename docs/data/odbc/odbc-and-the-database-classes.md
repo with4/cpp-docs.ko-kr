@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088469"
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC 및 데이터베이스 클래스
 ODBC API 함수 호출이 일반적으로 하는 것 직접 멤버에서의 기능을 캡슐화 하는 MFC ODBC 데이터베이스 클래스는 [CDatabase](../../mfc/reference/cdatabase-class.md) 및 [CRecordset](../../mfc/reference/crecordset-class.md) 클래스입니다. 예를 들어 복잡 한 ODBC 호출 시퀀스, 저장소 위치, 오류 조건 처리 및 기타 작업에 반환 되는 레코드의 바인딩을 관리 사용자에 대 한 데이터베이스 클래스 합니다. 훨씬 단순한 클래스 인터페이스를 사용 하 여 recordset 개체를 통해 레코드를 조작 하는 결과적으로, 합니다.  

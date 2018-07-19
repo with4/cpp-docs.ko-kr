@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289895"
 ---
 # <a name="compiler-warning-level-3-c4290"></a>컴파일러 경고(수준 3) C4290
 C + + 예외 사양이 나타내는 함수를 제외 하 고 무시 __declspec (nothrow) 되지 않습니다.  

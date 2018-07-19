@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290318"
 ---
 # <a name="compiler-warning-level-1-c4964"></a>컴파일러 경고(수준 1) C4964
 최적화 옵션을 지정 합니다. 프로필 정보가 수집 되지 않습니다.  

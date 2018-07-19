@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849667"
 ---
 # <a name="noregistry"></a>no_registry
 `no_registry`는 `#import`를 사용하여 가져온 형식 라이브러리를 레지스트리에서 검색하지 않도록 컴파일러에 지시합니다.  

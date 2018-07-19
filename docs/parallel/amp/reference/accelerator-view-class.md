@@ -36,6 +36,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692719"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view 클래스
 C + + AMP 데이터 병렬 가속기에서 가상 장치 추상화를 나타냅니다.  

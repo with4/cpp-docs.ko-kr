@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6ca49fd2696a8fc5a488962f1f13ead1d861c20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e04bcdf797f7036d943219f9d067dcbf786cfa3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039783"
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey 클래스
 가상 키 매핑 및 서식을 구현 하는 도우미 클래스입니다.  
@@ -57,7 +58,7 @@ class CMFCAcceleratorKey : public CObject
   
  바로 가기 키 및 액셀러레이터 키 테이블을 사용 하는 방법에 대 한 자세한 내용은 참조 [CKeyboardManager 클래스](../../mfc/reference/ckeyboardmanager-class.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 생성 하는 방법을 `CMFCAcceleratorKey` 개체와 사용 하는 방법의 `Format` 메서드.  
   
  [!code-cpp[NVC_MFC_RibbonApp#30](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkey-class_1.cpp)]  
@@ -79,7 +80,7 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpAccel`  
+ [in] *lpAccel*  
  바로 가기 키에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -93,7 +94,7 @@ void Format(CString& str) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `str`  
+ [out] *str*  
  에 대 한 참조는 `CString` 메서드 번역 된 바로 가기 키를 기록 하는 위치 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -107,7 +108,7 @@ void SetAccelerator(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpAccel`  
+ [in] *lpAccel*  
  바로 가기 키에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  

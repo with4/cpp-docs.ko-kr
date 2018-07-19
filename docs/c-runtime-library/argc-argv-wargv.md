@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390219"
 ---
 # <a name="argc-argv-wargv"></a>__argc, __argv, __wargv
 `__argc` 전역 변수는 프로그램에 전달된 명령줄 인수의 수입니다. `__argv`는 프로그램 인수가 포함된 싱글바이트 문자 또는 멀티바이트 문자열의 배열에 대한 포인터이고 `__wargv`는 프로그램 인수가 포함된 와이드 문자열의 배열에 대한 포인터입니다. 이러한 전역 변수는 `main` 또는 `wmain`에 인수를 제공합니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880139"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>방법: 복사할 때 리소스의 언어 또는 조건 변경
 리소스에서 복사하는 동안 언어 속성이나 조건 속성 또는 두 가지 모두를 변경할 수 있습니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387865"
 ---
 # <a name="function-calls"></a>함수 호출
 *함수 호출*은 컨트롤 및 인수(있는 경우)를 함수에 전달하는 다음 형식의 식입니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099224"
 ---
 # <a name="irowsetchangeimplflushdata"></a>IRowsetChangeImpl::FlushData
 데이터 저장소에 커밋하는 공급자에 의해 재정의 되 면입니다.  

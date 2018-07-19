@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690896"
 ---
 # <a name="barrier"></a>barrier
 팀;의 모든 스레드를 동기화합니다. 장벽, 모든 스레드는 장벽 실행 될 때까지 모든 스레드가 일시 중지 합니다.  

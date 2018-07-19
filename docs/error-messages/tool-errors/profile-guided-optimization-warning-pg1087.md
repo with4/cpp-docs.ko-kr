@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323149"
 ---
 # <a name="profile-guided-optimization-warning-pg1087"></a>프로필 기반 최적화 경고 PG1087
 'File' PGC 파일 올바르지 않습니다.  

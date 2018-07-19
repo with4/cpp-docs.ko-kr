@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890637"
 ---
 # <a name="weakrefcopyto-method"></a>WeakRef::CopyTo 메서드
 사용 가능한 경우 지정된 포인터 변수에 인터페이스에 대한 포인터를 할당합니다.  

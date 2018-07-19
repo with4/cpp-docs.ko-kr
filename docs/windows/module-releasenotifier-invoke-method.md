@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876204"
 ---
 # <a name="modulereleasenotifierinvoke-method"></a>Module::ReleaseNotifier::Invoke 메서드
 구현될 때 모듈의 마지막 개체가 해제되면 이벤트 처리기를 호출합니다.  

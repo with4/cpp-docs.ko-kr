@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236561"
 ---
 # <a name="compiler-error-c2821"></a>컴파일러 오류 C2821
 'operator new' 첫 번째 형식 매개 변수 'unsigned int' 이어야 합니다.  

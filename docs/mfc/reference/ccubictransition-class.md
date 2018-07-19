@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 001a1e66707544f6446a5bc54e70269f94108654
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8697e52368fd407d1c325990552ee9851d48a76
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953222"
 ---
 # <a name="ccubictransition-class"></a>CCubicTransition 클래스
 3차원 전환을 캡슐화합니다.  
@@ -87,13 +88,13 @@ CCubicTransition(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `duration`  
+ *duration*  
  전환의 기간입니다.  
   
- `finalValue`  
+ *finalValue*  
  전환의 끝에서 애니메이션 변수의 값입니다.  
   
- `finalVelocity`  
+ *finalVelocity*  
  전환의 끝에 있는 변수의 속도입니다.  
   
 ##  <a name="create"></a>  CCubicTransition::Create  
@@ -106,7 +107,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
-`pLibrary`  
+*pLibrary*  
  에 대 한 포인터는 [IUIAnimationTransitionLibrary 인터페이스](https://msdn.microsoft.com/library/windows/desktop/dd371897), 표준 전환의 라이브러리를 정의 하는 합니다.  
 
 ### <a name="return-value"></a>반환 값  

@@ -87,6 +87,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688377"
 ---
 # <a name="unorm3-class"></a>unorm_3 클래스
 3 가지 서명 되지 않은 일반 숫자의 short 벡터를 나타냅니다.  

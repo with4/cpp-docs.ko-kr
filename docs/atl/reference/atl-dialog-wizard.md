@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358008"
 ---
 # <a name="atl-dialog-wizard"></a>ATL 대화 상자 마법사
 이 마법사에서 파생 된 ATL 대화 상자 개체를 프로젝트에 삽입 [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md)합니다. 대화 상자에서 파생 된 `CAxDialogImpl` ActiveX 컨트롤을 호스트할 수 있습니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389886"
 ---
 # <a name="byte-and-wide-streams"></a>바이트 및 와이드 스트림
 바이트 스트림은 파일을 바이트의 시퀀스로 처리합니다. 프로그램에서 스트림은 바이트 시퀀스와 동일합니다.  

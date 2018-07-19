@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317660"
 ---
 # <a name="project-build-error-prj0030"></a>프로젝트 빌드 오류 PRJ0030
 매크로 확장 오류입니다. $(매크로)에 대해 수준 32를 넘는 재귀 호출을 실행 합니다.  

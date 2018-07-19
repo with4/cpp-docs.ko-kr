@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341138"
 ---
 # <a name="command-routing-illustration"></a>명령 라우팅 설명
 예를 들어 MDI 응용 프로그램의 편집 메뉴에서 메뉴 항목 모두 지우기 명령 메시지를 것이 좋습니다. 이 명령의 처리기 함수 발생 하는 응용 프로그램의 문서 클래스의 멤버 함수로 가정 합니다. 메뉴 항목을 선택한 후 해당 명령에 해당 처리기 도달 하는 방법을 다음과 같습니다.  

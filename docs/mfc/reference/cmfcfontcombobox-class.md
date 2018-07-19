@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67fae4e4fd130e8cb61554f7e2d41595070ee819
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852282"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox 클래스
 `CMFCFontComboBox` 클래스 글꼴 목록이 포함 된 콤보 상자 컨트롤을 만듭니다.  
@@ -54,22 +55,22 @@ class CMFCFontComboBox : public CComboBox
   
 |이름|설명|  
 |----------|-----------------|  
-|`CMFCFontComboBox::CompareItem`|현재 글꼴 콤보 상자 컨트롤의 정렬 된 목록 상자에 새 항목의 상대 위치를 결정 하기 위해 프레임 워크에서 호출 됩니다. (재정의 [CComboBox::CompareItem](../../mfc/reference/ccombobox-class.md#compareitem).)|  
+|`CMFCFontComboBox::CompareItem`|현재 글꼴 콤보 상자 컨트롤의 정렬 된 목록 상자에서 새 항목의 상대 위치를 확인 하기 위해 프레임 워크에서 호출 됩니다. (재정의 [CComboBox::CompareItem](../../mfc/reference/ccombobox-class.md#compareitem).)|  
 |`CMFCFontComboBox::DrawItem`|현재 글꼴 콤보 상자 컨트롤에서 지정된 된 항목을 그리기 위해 프레임 워크에서 호출 됩니다. (재정의 [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|  
-|[CMFCFontComboBox::GetSelFont](#getselfont)|현재 선택 된 글꼴에 대 한 정보를 검색합니다.|  
-|`CMFCFontComboBox::MeasureItem`|Windows 목록 상자에서 현재 글꼴 콤보 상자 컨트롤의 크기를 알리기 위해 프레임 워크에서 호출 됩니다. (재정의 [CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem).)|  
-|`CMFCFontComboBox::PreTranslateMessage`|창 메시지를 변환 하 여 디스패치 되기 전에 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) 및 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 함수입니다. ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)를 재정의합니다.)|  
+|[CMFCFontComboBox::GetSelFont](#getselfont)|현재 선택한 글꼴에 대 한 정보를 검색합니다.|  
+|`CMFCFontComboBox::MeasureItem`|현재 글꼴 콤보 상자 컨트롤에서 목록 상자 크기의 Windows를 알리기 위해 프레임 워크에서 호출 됩니다. (재정의 [CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem).)|  
+|`CMFCFontComboBox::PreTranslateMessage`|디스패치 되기 전에 창 메시지를 변환 합니다 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) 하 고 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 함수입니다. ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)를 재정의합니다.)|  
 |[CMFCFontComboBox::SelectFont](#selectfont)|글꼴 콤보 상자에서 지정된 된 조건과 일치 하는 글꼴을 선택 합니다.|  
-|[CMFCFontComboBox::Setup](#setup)|글꼴 콤보 상자에 있는 항목 목록을 초기화합니다.|  
+|[CMFCFontComboBox::Setup](#setup)|글꼴 콤보 상자에서 항목 목록을 초기화합니다.|  
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
-|[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|현재 글꼴 콤보 상자에서 항목 레이블을 그리는 데 사용할 글꼴 프레임 워크에 알립니다.|  
+|[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|현재 글꼴 콤보 상자의 항목 레이블을 그리는 데 사용할 글꼴을 프레임 워크를 나타냅니다.|  
   
 ## <a name="remarks"></a>설명  
- 사용 하는 `CMFCFontComboBox` 대화 상자에서 개체를 추가 `CMFCFontComboBox` 변수 대화 상자 클래스를 합니다. 그런 다음는 `OnInitDialog` 호출 대화 상자 클래스의 메서드는 [CMFCFontComboBox::Setup](#setup) 메서드를 콤보 상자 컨트롤에 있는 항목의 목록을 초기화 합니다.  
+ 사용 하는 `CMFCFontComboBox` 대화 상자에서 개체를 추가 `CMFCFontComboBox` 변수 대화 상자 클래스를 합니다. 그런 다음 합니다 `OnInitDialog` 호출 대화 상자 클래스의 메서드를 [CMFCFontComboBox::Setup](#setup) 콤보 상자 컨트롤에서 항목 목록을 초기화 하는 방법입니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -97,26 +98,26 @@ CMFCFontComboBox();
 ### <a name="remarks"></a>설명  
   
 ##  <a name="getselfont"></a>  CMFCFontComboBox::GetSelFont  
- 현재 선택 된 글꼴에 대 한 정보를 검색합니다.  
+ 현재 선택한 글꼴에 대 한 정보를 검색합니다.  
   
 ```  
 CMFCFontInfo* GetSelFont() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터 [CMFCFontInfo 클래스](../../mfc/reference/cmfcfontinfo-class.md) 글꼴을 설명 하는 개체입니다. 것이 `NULL` 콤보 상자에서 선택한 글꼴이 없는 경우.  
+ 에 대 한 포인터 [CMFCFontInfo 클래스](../../mfc/reference/cmfcfontinfo-class.md) 글꼴을 설명 하는 개체입니다. 콤보 상자의 없는 글꼴을 선택 하는 경우 NULL 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="m_bdrawusingfont"></a>  CMFCFontComboBox::m_bDrawUsingFont  
- 현재 글꼴 콤보 상자에서 항목 레이블을 그리는 데 사용할 글꼴 프레임 워크에 알립니다.  
+ 현재 글꼴 콤보 상자의 항목 레이블을 그리는 데 사용할 글꼴을 프레임 워크를 나타냅니다.  
   
 ```  
 static BOOL m_bDrawUsingFont;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 멤버를 설정 `TRUE` 각 항목 레이블 그릴 같은 글꼴을 사용 하기 위해 프레임 워크에 지시 합니다. 이 멤버를 설정 `FALSE` 레이블로 동일한 이름이 글꼴을 사용 하 여 각 항목 레이블을 그리기 위해 프레임 워크에 지시 합니다. 이 멤버의 기본값은 `FALSE`합니다.  
+ 이 멤버를 각 항목 레이블 그릴 같은 글꼴을 사용 하기 위해 프레임 워크를 TRUE로 설정 합니다. 이 멤버 이름이 레이블로 동일 글꼴을 사용 하 여 각 항목 레이블을 그리기 위해 프레임 워크를 FALSE로 설정 합니다. 이 멤버의 기본값은 FALSE입니다.  
   
 ##  <a name="selectfont"></a>  CMFCFontComboBox::SelectFont  
  글꼴 콤보 상자에서 지정된 된 조건과 일치 하는 글꼴을 선택 합니다.  
@@ -131,29 +132,29 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDesc`  
+ [in] *pDesc*  
  글꼴 설명 개체를 가리킵니다.  
   
- [in] `lpszName`  
+ [in] *lpszName*  
  글꼴 이름을 지정합니다.  
   
- [in] `nCharSet`  
- 문자 집합을 지정합니다. 기본값은 DEFAULT_CHARSET 합니다. 자세한 내용은 참조는 `lfCharSet` 의 멤버는 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) 구조입니다.  
+ [in] *nCharSet*  
+ 문자 집합을 지정합니다. 기본값은 DEFAULT_CHARSET 합니다. 자세한 내용은 참조 하세요. 합니다 `lfCharSet` 의 멤버는 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 글꼴 콤보 상자에 있는 항목의 설명 개체를 지정 된 글꼴 또는 글꼴 이름 및 charset; 일치 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ 글꼴 콤보 상자의 항목 설명 개체를 지정 된 글꼴 또는 글꼴 이름과 charset; 일치 하는 경우 TRUE 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드를 사용 하 여 선택 하 고 지정된 된 글꼴에 해당 하는 글꼴 콤보 상자에 있는 항목으로 스크롤합니다.  
+ 이 메서드를 사용 하 여 선택 하 고 지정한 글꼴에 해당 하는 글꼴 콤보 상자에 있는 항목으로 스크롤합니다.  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 `SelectFont` 에서 메서드는 `CMFCFontComboBox` 클래스. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
+### <a name="example"></a>예  
+ 다음 예제에서는 사용 하는 방법에 설명 합니다 `SelectFont` 의 메서드는 `CMFCFontComboBox` 클래스입니다. 이 예제는의 일부를 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]  
   
 ##  <a name="setup"></a>  CMFCFontComboBox::Setup  
- 글꼴 콤보 상자에 있는 항목 목록을 초기화합니다.  
+ 글꼴 콤보 상자에서 항목 목록을 초기화합니다.  
   
 ```  
 BOOL Setup(
@@ -163,23 +164,23 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nFontType`  
- 글꼴 종류를 지정합니다. 기본값은 DEVICE_FONTTYPE, RASTER_FONTTYPE, 및 또는 이러한 옵션의 비트 조합 (OR)입니다.  
+ [in] *nFontType*  
+ 글꼴 종류를 지정합니다. 기본값은 DEVICE_FONTTYPE, RASTER_FONTTYPE, TRUETYPE_FONTTYPE의 비트 조합 (OR)입니다.  
   
- [in] `nCharSet`  
- 글꼴 문자 집합을 지정합니다. 기본값은 DEFAULT_CHARSET 합니다.  
+ [in] *nCharSet*  
+ 글꼴 문자 집합을 지정 합니다. 기본값은 DEFAULT_CHARSET 합니다.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  글꼴 피치 및 패밀리를 지정합니다. 기본값은 DEFAULT_PITCH 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 글꼴 콤보 상자 성공적으로 초기화 된 경우 그렇지 않으면 `FALSE`합니다.  
+ 글꼴 콤보 상자 성공적으로 초기화 된 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 지정된 된 매개 변수와 일치 하는 현재 설치 된 글꼴 열거 하 고 글꼴 콤보 상자에서 해당 글꼴 이름을 삽입 하 여 글꼴 콤보 상자를 초기화 합니다.  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 `Setup` 에서 메서드는 `CMFCFontComboBox` 클래스. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
+### <a name="example"></a>예  
+ 다음 예제에서는 사용 하는 방법에 설명 합니다 `Setup` 의 메서드는 `CMFCFontComboBox` 클래스입니다. 이 예제는의 일부를 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#36](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_3.cpp)]  

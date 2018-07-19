@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379226"
 ---
 # <a name="source-charset-set-source-character-set"></a>/source-charset (소스 문자 집합 설정)
 소스 문자 실행 파일의 집합을 지정할 수 있습니다.  

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57387af452ff4a127eec6b669cec6e02863b8fd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0b4221e32b6e85df0b559b1d6d4ecda381d8e3d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959640"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits 구조체
 
@@ -44,17 +45,17 @@ struct iterator_traits {
 
 이 템플릿 구조체는 멤버 형식을 정의합니다.
 
-- **iterator_category**: **Iterator::iterator_category**의 동의어입니다.
+- `iterator_category`: 동의어 `Iterator::iterator_category`합니다.
 
-- `value_type`: **Iterator::value_type**의 동의어입니다.
+- `value_type`: 동의어 `Iterator::value_type`합니다.
 
-- `difference_type`: **Iterator::difference_type**의 동의어입니다.
+- `difference_type`: 동의어 `Iterator::difference_type`합니다.
 
-- `distance_type`: **Iterator::difference_type.** 의 동의어입니다.
+- `distance_type`: 동의어 `Iterator::difference_type.`
 
-- **pointer**: **Iterator::pointer**의 동의어입니다.
+- `pointer`: 동의어 `Iterator::pointer`합니다.
 
-- **reference**: **Iterator::reference**의 동의어입니다.
+- `reference`: 동의어 `Iterator::reference`합니다.
 
 부분 특수화는 **Type \*** 또는 const **Type \*** 형식의 개체 포인터와 연결된 중요한 형식을 결정합니다.
 
@@ -82,7 +83,7 @@ ptrdiff_t *_Dist_type(const Ty *);
 
 이러한 함수는 여러 가지 동일한 형식을 보다 간접적으로 결정합니다. 함수 호출에서 인수로 이러한 함수를 사용합니다. 또한 호출된 함수에 유용한 템플릿 클래스 매개 변수를 제공하려는 용도로만 사용됩니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // iterator_traits.cpp

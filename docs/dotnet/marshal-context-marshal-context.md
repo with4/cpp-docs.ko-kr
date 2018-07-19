@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33140122"
 ---
 # <a name="marshalcontextmarshalcontext"></a>marshal_context::marshal_context
 생성 된 `marshal_context` 관리 / 네이티브 데이터 형식 간의 데이터 변환에 사용할 개체입니다.  

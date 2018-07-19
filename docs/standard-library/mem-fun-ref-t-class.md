@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 029fba9cc5a13569df8cc1e2e11b639e65ea24c9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc0684d51fd406f16588188555f67fcebb351fbf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956100"
 ---
 # <a name="memfunreft-class"></a>mem_fun_ref_t 클래스
 
-참조 인수를 사용하여 초기화할 때 인수를 사용하지 않는 **non_const** 멤버 함수를 단항 함수 개체로 호출할 수 있도록 하는 어댑터 클래스입니다.
+허용 하는 어댑터 클래스를 `non_const` 멤버 함수는 인수 없이 참조 인수를 사용 하 여 초기화할 때 단항 함수 개체로 호출할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -41,9 +42,9 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ### <a name="parameters"></a>매개 변수
 
-`_Pm` 클래스의 멤버 함수에 대 한 포인터 **형식** 함수 개체를 변환할 수 있습니다.
+*_Pm* 클래스의 멤버 함수에 대 한 포인터 `Type` 함수 개체를 변환할 수 있습니다.
 
-`left` 개체는는 `_Pm` 에서 멤버 함수를 호출 합니다.
+*왼쪽* 개체는 합니다 *_Pm* 멤버 함수가 호출 됩니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -51,9 +52,9 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ## <a name="remarks"></a>설명
 
-템플릿 클래스는 `_Pm`의 복사본을 저장합니다. 이는 전용 멤버 개체에서 **Type** 클래스의 멤버 함수에 대한 포인터여야 합니다. 또한 해당 멤버 함수 `operator()`를 ( **left**.* `_Pm`)( )을 반환하는 것으로 정의합니다.
+복사본을 저장 하는 템플릿 클래스 *_Pm*, 클래스의 멤버 함수에 대 한 포인터 여야 `Type`, 전용 멤버 개체에 있습니다. 또한 해당 멤버 함수 `operator()`를 ( **left**.* `_Pm`)( )을 반환하는 것으로 정의합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 `mem_fun_ref_t`의 생성자는 일반적으로 직접 사용되지 않습니다. 도우미 함수 `mem_fun_ref`은 멤버 함수를 적용하는 데 사용됩니다. 멤버 함수 어댑터를 사용하는 방법에 대한 예제는 [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)를 참조하세요.
 

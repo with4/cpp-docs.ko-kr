@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892607"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits 구조체
 Semaphore 개체의 일반적인 특성을 정의합니다.  

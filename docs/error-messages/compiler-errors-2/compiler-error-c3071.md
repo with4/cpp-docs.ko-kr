@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247679"
 ---
 # <a name="compiler-error-c3071"></a>컴파일러 오류 C3071
 'operator' 연산자는 ref 클래스 또는 값 형식의 인스턴스에만 적용할 수 있습니다.  

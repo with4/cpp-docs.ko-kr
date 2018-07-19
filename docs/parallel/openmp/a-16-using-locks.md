@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695904"
 ---
 # <a name="a16---using-locks"></a>A.16   Locks 사용
 다음 예에서 (에 대 한 [섹션 3.2](../../parallel/openmp/3-2-lock-functions.md) 페이지 41) 잠금 함수에 인수 형식에 있어야 하는 참고 `omp_lock_t`, 올바르고 플러시 필요가 없습니다.  잠금 기능으로 인해 스레드가 첫 번째 중요 섹션에 항목을 기다리는 동안 유휴 상태가 될 수 있지만 두 번째 항목을 기다리는 동안 다른 작업을 수행할 수입니다.  `omp_set_lock` 함수 블록 이지만 `omp_test_lock` 함수는 작업을 수행 해야 하는 skip()에서 허용 하지 않습니다.  

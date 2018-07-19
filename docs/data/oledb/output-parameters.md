@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104388"
 ---
 # <a name="output-parameters"></a>출력 매개 변수
 저장된 프로시저를 호출 하는 것은 SQL 명령을 호출 하는 것과 비슷합니다. 주요 차이점에는 저장된 프로시저 출력 매개 변수 (또는 "outparameter")를 사용 및 반환 값은입니다.  

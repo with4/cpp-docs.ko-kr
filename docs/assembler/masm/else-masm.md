@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054096"
 ---
 # <a name="else-masm"></a>ELSE (MASM)
 조건부 블록 내에서 대체 된 블록의 시작을 표시 합니다.  

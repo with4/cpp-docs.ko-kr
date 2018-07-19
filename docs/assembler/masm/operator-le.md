@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057905"
 ---
 # <a name="operator-le"></a>연산자 LE
 True (-1)를 반환 합니다 *expression1* 보다 작거나 같음 *expression2*, 하거나 없는 경우 false (0)를 반환 합니다.  

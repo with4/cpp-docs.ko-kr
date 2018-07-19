@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385288"
 ---
 # <a name="pointer-arithmetic"></a>포인터 산술 연산
 포인터와 정수가 포함된 가감 연산은 포인터 피연산자가 배열 멤버의 주소를 지정하고 정수 값이 동일한 배열의 경계 내에서 오프셋을 생성하는 경우에만 의미 있는 결과를 제공합니다. 정수 값이 주소 오프셋으로 변환될 때 컴파일러는 동일한 크기의 메모리 위치만 원래 주소와 오프셋을 더한 주소 사이에 있다고 가정합니다.  

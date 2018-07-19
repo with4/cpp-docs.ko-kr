@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880708"
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr(C++ 구성 요소 확장)
 `nullptr` 키워드 나타냅니다는 *null 포인터 값*합니다. 개체 핸들, 내부 포인터 또는 원시 포인터 형식 개체를 가리키지 않습니다 나타내기 위해 null 포인터 값을 사용 합니다.  

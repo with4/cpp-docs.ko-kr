@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100020"
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>단순한 읽기 전용 공급자의 기능 향상
 이 섹션에서는 향상 하는 방법을 보여 줍니다.는 [단순한 읽기 전용 공급자](../../data/oledb/implementing-the-simple-read-only-provider.md) 이전 섹션에서 만든 합니다. `IRowsetLocateImpl` 에 대 한 구현을 만듭니다는 `IRowsetLocate` 인터페이스 및 책갈피 지원을 추가 합니다.  

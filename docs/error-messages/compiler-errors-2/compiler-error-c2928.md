@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241806"
 ---
 # <a name="compiler-error-c2928"></a>컴파일러 오류 C2928
 명시적 인스턴스화. 'identifier'는 함수 또는 템플릿-클래스 'class'의 정적 데이터 멤버가 아닙니다.  

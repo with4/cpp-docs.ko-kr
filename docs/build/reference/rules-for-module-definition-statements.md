@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376392"
 ---
 # <a name="rules-for-module-definition-statements"></a>모듈 정의 문의 규칙
 다음 구문 규칙은.def 파일의 모든 문에 적용 됩니다. 각 문을 사용 하 여 특정 문에 적용 되는 다른 규칙 설명 되어 있습니다.  

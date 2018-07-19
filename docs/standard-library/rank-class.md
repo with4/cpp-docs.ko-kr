@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be250d2908522ac85902563d64bf57ca7cde88a0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 615da57a092a9cbdc1933ed57adbbaed6afdcf65
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960605"
 ---
 # <a name="rank-class"></a>rank 클래스
 
@@ -36,13 +37,13 @@ struct rank;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 형식이 쿼리입니다.
+*Ty* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 쿼리는 배열 형식 `Ty`의 차원 수 값이거나, `Ty`가 배열 형식이 아니면 0입니다.
+형식 쿼리는 배열 형식의 차원 수의 값을 보유 *Ty*, 또는 0 이면 *Ty* 배열 형식이 아닙니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__rank.cpp

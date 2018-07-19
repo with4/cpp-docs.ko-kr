@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368072"
 ---
 # <a name="macro-substitution"></a>매크로 대체
 때 *매크로 이름* 가 호출의 각 항목 *string1* 으로 대체 하는 문자열의 정의에 *string2*합니다.  

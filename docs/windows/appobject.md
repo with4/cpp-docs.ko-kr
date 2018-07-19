@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856975"
 ---
 # <a name="appobject"></a>appobject
 전체.exe 응용 프로그램과 연결 된 문서를 나타내고 함수 및 coclass의 속성은이 전체적으로 사용할 수 있는 응용 프로그램 개체를으로 coclass를 식별 [형식 라이브러리](../mfc/automation-clients-using-type-libraries.md)합니다.  

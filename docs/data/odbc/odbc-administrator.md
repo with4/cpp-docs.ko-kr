@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090197"
 ---
 # <a name="odbc-administrator"></a>ODBC 관리자
 ODBC 관리자를 등록 하 고 구성는 [데이터 소스](../../data/odbc/data-source-odbc.md) 있습니다 사용할 수 있는 로컬 또는 네트워크를 통해 합니다. ODBC 관리자가 제공 하는 정보를 사용 하 여 사용자가 데이터 원본에 연결 하는 응용 프로그램에서 코드를 만들려면 마법사.  

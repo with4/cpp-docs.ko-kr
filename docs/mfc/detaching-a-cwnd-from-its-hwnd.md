@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342682"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>CWnd를 해당 HWND에서 분리
 개체-을 우회 하는 경우`HWND` 다른 관계, MFC는 `CWnd` 멤버 함수 [분리](../mfc/reference/cwnd-class.md#detach)는 c + + 창 개체 Windows 창에서 연결을 끊습니다. 이 소멸자는 개체가 소멸 될 때 Windows 창을 제거를 차단 합니다.  

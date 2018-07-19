@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33705252"
 ---
 # <a name="how-to-send-a-message-at-a-regular-interval"></a>방법: 정기적으로 메시지 보내기
 이 예제에는 동시성을 사용 하는 방법을 보여 줍니다::[timer 클래스](../../parallel/concrt/reference/timer-class.md) 정기적으로 메시지를 보내려고 합니다.  

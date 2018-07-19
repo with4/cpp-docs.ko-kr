@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414785"
 ---
 # <a name="character-sets"></a>문자 집합
 C++ 프로그램의 텍스트는 특정 문자 인코딩을 사용하는 소스 파일에 저장됩니다. C++ 표준에서는 소스 파일에 대해 기본 소스 문자 집합을 지정하고 컴파일된 파일에 대해 기본 실행 문자 집합을 지정합니다. Visual C++에서는 추가 로캘별 문자 집합을 소스 파일 및 컴파일된 파일에서 사용할 수 있습니다.  

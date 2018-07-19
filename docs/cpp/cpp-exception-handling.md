@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413910"
 ---
 # <a name="c-exception-handling"></a>C++ 예외 처리
 C++ 언어에는 예외의 throw 및 catch를 기본적으로 지원합니다. C++에서 프로그래밍하는 경우 이 단원에서 설명한 대로 기본 제공 C++ 예외 지원을 거의 항상 사용해야 합니다.  

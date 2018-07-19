@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371868"
 ---
 # <a name="fast-compilation"></a>컴파일 속도 향상
 컴파일 속도 늘리려면:  

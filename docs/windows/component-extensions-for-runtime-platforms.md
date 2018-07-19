@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862642"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>런타임 플랫폼의 구성 요소 확장명
 Visual C++에서는 런타임 플랫폼을 대상으로 프로그래밍할 수 있도록 언어 확장을 제공합니다. 통해 C + + /CX에서는 유니버설 Windows 플랫폼 앱 및 구성 요소는 네이티브 코드로 컴파일할 프로그래밍할 수 있습니다. C +를 사용 하 여 Windows 런타임 COM 인터페이스에 대해 직접 프로그래밍 하 여 유니버설 Windows 플랫폼 앱을 만들 수 있지만 + /CX에서는 생성자, 예외 및 기타 최신 c + + 프로그래밍 관용구와 작업할 수 있습니다. .NET 플랫폼에서 관리 되는 실행 환경에서 c + + 프로그래밍을 사용 하도록 설정 하려면 다음을 사용할 수 있습니다 C + + /cli CLI 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230087"
 ---
 # <a name="fatal-error-c1205"></a>심각한 오류 C1205
 설치된 런타임 버전에서는 제네릭이 지원되지 않습니다.  

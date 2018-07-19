@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392064"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll 및 Visual c + + 런타임 라이브러리 동작  
   

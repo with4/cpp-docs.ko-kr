@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33160838"
 ---
 # <a name="property-index-declaration"></a>속성 인덱스 선언
 인덱싱된 속성을 선언 하는 구문은 Visual c + + Managed Extensions for c + + 변경 되었습니다.  

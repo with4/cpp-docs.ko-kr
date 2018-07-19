@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290818"
 ---
 # <a name="compiler-warning-level-3-c4243"></a>컴파일러 경고(수준 3) C4243
 'conversion type' 변환이 'type1'에서 'type2' (으) 있지만 액세스할 수 없으면  

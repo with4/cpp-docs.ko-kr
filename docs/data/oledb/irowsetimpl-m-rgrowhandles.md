@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101749"
 ---
 # <a name="irowsetimplmrgrowhandles"></a>IRowsetImpl::m_rgRowHandles
 현재 공급자에 대 한 응답에서에 포함 된 행 핸들의 지도 `GetNextRows`합니다.  

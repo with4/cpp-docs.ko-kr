@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281644"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>컴파일러 경고(수준 1) C4436
 생성자 또는 소멸자에서 가상 기본 'class1'에서 'class2'로의 dynamic_cast는 부분적으로 생성된 개체와 함께 실패할 수 있습니다.        /vd2를 사용해서 컴파일하거나 해당 #pragma vtordisp(2)에 'class2'를 정의하십시오.  

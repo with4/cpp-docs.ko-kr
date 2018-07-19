@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372978"
 ---
 # <a name="obj-files-as-linker-input"></a>링커 입력 파일로 사용하는 .Obj 파일
 

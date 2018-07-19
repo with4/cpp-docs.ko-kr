@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693265"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>방법: 동시성 런타임을 사용하기 위해 취소를 사용하는 OpenMP 루프 변환
 병렬 루프 모든 반복 실행 될 필요가 없습니다. 예를 들어 값을 검색 하는 알고리즘은 값을 찾은 후 종료 될 수 있습니다. OpenMP 병렬 루프를 중단 하는 메커니즘을 제공 하지 않습니다. 그러나 솔루션을 찾았습니다 나타내려면 루프의 반복을 사용 하도록 설정 하는 부울 값입니다. 또는 플래그를 사용할 수 있습니다. 동시성 런타임에서 아직 시작 되지 않은 다른 작업을 취소 한 작업을 수 있는 기능을 제공 합니다.  

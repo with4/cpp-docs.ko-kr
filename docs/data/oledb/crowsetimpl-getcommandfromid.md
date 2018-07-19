@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091296"
 ---
 # <a name="crowsetimplgetcommandfromid"></a>CRowsetImpl::GetCommandFromID
 데이터 멤버에 문자열 값을 복사 하는 문자열 값을 포함 하는 매개 변수 중 하나 또는 둘 그리고 있다면 확인 [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) 및 [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)합니다.  

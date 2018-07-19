@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254657"
 ---
 # <a name="compiler-error-c3233"></a>컴파일러 오류 C3233
 'type': 제네릭 형식 매개 변수에 이미 제약 조건이 적용되었습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299928"
 ---
 # <a name="command-line-warning-d9040"></a>명령줄 경고 D9040
 옵션을 무시 '/analyze'; 코드 분석 경고는 컴파일러의이 버전에서 사용할 수 없습니다  

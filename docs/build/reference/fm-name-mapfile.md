@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374286"
 ---
 # <a name="fm-name-mapfile"></a>/Fm(맵 파일 이름 지정)
 세그먼트에 해당 하는.exe 파일 또는 DLL에 있는 순서 대로 목록을 포함 하는 맵 파일을 만들도록 링커에 지시할 수 있습니다.  

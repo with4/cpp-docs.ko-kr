@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334063"
 ---
 # <a name="accessing-run-time-class-information"></a>런타임 클래스 정보 액세스
 이 문서에서는 런타임에 개체의 클래스에 대 한 정보를 액세스 하는 방법을 설명 합니다.  

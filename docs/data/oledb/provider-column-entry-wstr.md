@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104076"
 ---
 # <a name="providercolumnentrywstr"></a>PROVIDER_COLUMN_ENTRY_WSTR
 공급자에서 지 원하는 특정 열을 나타냅니다.  

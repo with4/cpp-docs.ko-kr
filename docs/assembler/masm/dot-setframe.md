@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052588"
 ---
 # <a name="setframe"></a>.SETFRAME
 채우기 프레임에서 레지스터에 지정된 된 레지스터를 사용 하 여 해제 정보 필드와 오프셋 (`reg`) 및 오프셋 (`offset`). 오프셋은 16의 배수 여야 합니다. 및 240 합니다. 이 지시문도 생성 한 `UWOP_SET_FPREG` 현재 프롤로그 오프셋을 사용 하 여 지정 된 등록에 대 한 코드 항목을 해제 합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381657"
 ---
 # <a name="c-constants"></a>C 상수
 "상수"는 프로그램에서 값으로 사용할 수 있는 숫자, 문자 또는 문자열입니다. 수정할 수 없는 부동 소수점, 정수, 열거형 또는 문자 값을 나타내려면 상수를 사용합니다.  

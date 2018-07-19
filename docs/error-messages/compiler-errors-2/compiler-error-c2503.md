@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198874"
 ---
 # <a name="compiler-error-c2503"></a>컴파일러 오류 C2503
 'class': 기본 클래스에는 크기가 0 인 배열을 포함할 수 없습니다  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246959"
 ---
 # <a name="compiler-error-c3065"></a>컴파일러 오류 C3065
 클래스 범위가 아닌 범위에서는 속성을 선언할 수 없습니다.  

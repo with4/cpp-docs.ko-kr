@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688546"
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>연습: 간단한 작업을 사용하기 위해 기존 코드 조정
 이 항목에서는 Windows API를 사용 하 여 만들고 간단한 작업을 사용 하는 스레드를 실행 하는 기존 코드를 조정 하는 방법을 보여 줍니다.  

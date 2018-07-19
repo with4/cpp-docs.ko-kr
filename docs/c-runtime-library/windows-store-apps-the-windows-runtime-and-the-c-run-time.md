@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410842"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>UWP 앱, Windows 런타임 및 C 런타임
 

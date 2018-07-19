@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688260"
 ---
 # <a name="multithreading-when-to-use-the-synchronization-classes"></a>다중 스레딩: 동기화 클래스 사용 시기
 MFC와 함께 제공 되는 다중 스레드 클래스 두 범주로 나누어집니다: 동기화 개체 ([CSyncObject](../mfc/reference/csyncobject-class.md), [CSemaphore](../mfc/reference/csemaphore-class.md), [CMutex](../mfc/reference/cmutex-class.md), [ 아니오](../mfc/reference/ccriticalsection-class.md), 및 [CEvent](../mfc/reference/cevent-class.md)) 및 동기화 개체에 액세스 ([CMultiLock](../mfc/reference/cmultilock-class.md) 및 [경우 CSingleLock](../mfc/reference/csinglelock-class.md)).  

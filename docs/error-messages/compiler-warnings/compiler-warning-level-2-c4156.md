@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296451"
 ---
 # <a name="compiler-warning-level-2-c4156"></a>컴파일러 경고 (수준 2) C4156
 'delete'; 배열 형식을 사용 하지 않고 배열 식 삭제 배열 형식이 대체 됩니다.  

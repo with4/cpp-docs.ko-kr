@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099240"
 ---
 # <a name="endaccessor"></a>END_ACCESSOR
 접근자 항목의 끝을 표시합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130401"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>방법: 네이티브 컴파일에 override 지정자 선언(C++/CLI)
 [봉인 된](../windows/sealed-cpp-component-extensions.md), [추상](../windows/abstract-cpp-component-extensions.md), 및 [재정의](../windows/override-cpp-component-extensions.md) 사용 하지 않는 컴파일에 사용할 수 있는 **/ZW** 또는 [/clr](../build/reference/clr-common-language-runtime-compilation.md)합니다.  

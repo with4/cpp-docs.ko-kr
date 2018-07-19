@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd414e2e6f23cb2fe44e6de4b5f53b33ef3555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a399fa8a9f8fc9a73d75605f31245e42a2154b7c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963630"
 ---
 # <a name="iterator-struct"></a>iterator 구조체
 
-사용자 정의 반복기 클래스가 **iterator_trait**에서 제대로 작동하도록 하기 위해 사용되는 빈 기본 구조체입니다.
+사용자 정의 반복기 클래스가 사용 하 여 올바르게 작동 하는지 확인 하는 데 사용 하는 빈 기본 구조체 `iterator_trait`s입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -46,7 +47,7 @@ struct iterator {
 
 - `iterator_category`(템플릿 매개 변수 `Category`의 동의어)
 
-- `value_type`(템플릿 매개 변수 **Type**의 동의어)
+- `value_type`(템플릿 매개 변수 `Type`의 동의어)
 
 - `difference_type`(템플릿 매개 변수 `Distance`의 동의어)
 
@@ -56,9 +57,9 @@ struct iterator {
 
 - `reference`(템플릿 매개 변수 `Reference`의 동의어)
 
-`value_type`은 **pointer**가 const **Type**의 개체를 가리키고 참조가 const **Type**의 개체를 지정하는 경우에도 상수 형식이 아니어야 합니다.
+유의 `value_type` 경우에도 상수 형식이 아니어야 `pointer` 의 개체 **const** `Type` 참조의 개체를 지정 하 고 **const** `Type`합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 반복기 기본 클래스에서 형식을 선언하고 사용하는 방법에 대한 예제는 [iterator_traits](../standard-library/iterator-traits-struct.md)를 참조하세요.
 

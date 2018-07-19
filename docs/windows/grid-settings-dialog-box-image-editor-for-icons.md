@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873578"
 ---
 # <a name="grid-settings-dialog-box-image-editor-for-icons"></a>모눈 설정 대화 상자(아이콘에 대한 이미지 편집기)
 편집 된 이미지 모눈선을 표시 및 이미지에 대 한 눈금 설정을 지정할 수 있습니다. 줄은 이미지를 편집 하는 데 유용 하지만 이미지 자체의 일부로 저장 되지 않습니다.  

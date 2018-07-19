@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101398"
 ---
 # <a name="irowsetimplmbcanscrollback"></a>IRowsetImpl::m_bCanScrollBack
 공급자는 커서 스크롤을 이전 버전과 가질 수 있는지 여부를 나타냅니다.  

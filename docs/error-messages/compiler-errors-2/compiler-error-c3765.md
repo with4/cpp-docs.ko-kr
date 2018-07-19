@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274770"
 ---
 # <a name="compiler-error-c3765"></a>컴파일러 오류 C3765
 'event': event_receiver로 표시 된 'type' 클래스/구조체에는 이벤트를 정의할 수 없습니다  

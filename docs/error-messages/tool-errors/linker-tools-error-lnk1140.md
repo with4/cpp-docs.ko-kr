@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302739"
 ---
 # <a name="linker-tools-error-lnk1140"></a>링커 도구 오류 LNK1140
 프로그램 데이터베이스에 너무 많은 모듈 링크 합니다. /PDB: NONE  

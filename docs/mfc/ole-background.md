@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355563"
 ---
 # <a name="ole-background"></a>OLE 백그라운드
 OLE를 만들고 항목 또는 "개체"를 포함 하는 문서를 편집할 수 있는 메커니즘이 만들어집니다는 여러 응용 프로그램.  

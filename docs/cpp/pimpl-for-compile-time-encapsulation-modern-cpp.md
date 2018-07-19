@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420157"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>컴파일 시간 캡슐화에 대한 Pimpl(최신 C++)
 *pimpl 관용구* 은 최신 c + + 기술 구현, 결합, 최소화 하 고 분리 인터페이스를 숨기려면 합니다. Pimpl는 짧은 "포인터"를 구현 합니다. 이미 개념을 잘 알고 있어야 하지만 명칭 또는 컴파일러 방화벽 관용구와 같은 다른 이름으로 알 수 있습니다.  

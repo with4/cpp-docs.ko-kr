@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876516"
 ---
 # <a name="eventsource-class"></a>EventSource 클래스
 Agile이 아닌 이벤트를 나타냅니다. EventSource 멤버 함수는 추가, 제거 및 이벤트 처리기를 호출 합니다. Agile 이벤트에 대 한 사용 하 여 [AgileEventSource](agileeventsource-class.md)합니다. 

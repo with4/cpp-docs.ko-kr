@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097070"
 ---
 # <a name="cdatasourceopen"></a>CDataSource::Open
 사용 하 여 데이터 원본에 대 한 연결을 엽니다는 **CLSID**, **ProgID**, 또는 `CEnumerator` 모니커 또는 로케이터 대화 상자를 표시 합니다.  

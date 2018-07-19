@@ -38,11 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d3b1a5dcfc8481727bffd8b80e0bb1b230d56ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4bc7a236b8a1dfc8877bc094641d26163f735a3e
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122772"
 ---
 # <a name="cstatic-class"></a>CStatic 클래스
 Windows 정적 컨트롤의 기능을 제공합니다.  
@@ -77,7 +78,7 @@ class CStatic : public CWnd
 |[CStatic::SetIcon](#seticon)|정적 컨트롤에 표시할 아이콘을 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 정적 컨트롤 텍스트 문자열, 상자, 사각형, 아이콘, 커서, 비트맵 또는 메타 파일을 표시합니다. 레이블, 상자 또는 다른 컨트롤에 구분에 사용할 수 있습니다. 정적 컨트롤을 일반적으로 없는 입력을 제공 출력이 없습니다. 그러나로 생성 하는 경우 해당 부모 마우스 클릭 알릴 수 것 **SS_NOTIFY** 스타일입니다.  
+ 정적 컨트롤 텍스트 문자열, 상자, 사각형, 아이콘, 커서, 비트맵 또는 메타 파일을 표시합니다. 레이블, 상자 또는 다른 컨트롤에 구분에 사용할 수 있습니다. 정적 컨트롤을 일반적으로 없는 입력을 제공 출력이 없습니다. 그러나 SS_NOTIFY 스타일으로 만들어진 경우 마우스 클릭의 부모를 알릴 수 것입니다.  
   
  두 단계에서 정적 컨트롤을 만듭니다. 먼저,을 만드는 생성자를 호출는 `CStatic` 개체를 호출 합니다는 [만들기](#create) 정적 컨트롤을 만들고에 연결 하는 멤버 함수는 `CStatic` 개체입니다.  
   
@@ -110,48 +111,48 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszText`  
- 컨트롤에 배치할 텍스트를 지정 합니다. 경우 **NULL**, 텍스트가 표시 됩니다.  
+ *lpszText*  
+ 컨트롤에 배치할 텍스트를 지정 합니다. NULL 인 경우에 텍스트가 표시 됩니다.  
   
- `dwStyle`  
+ *dwStyle*  
  정적 컨트롤의 창 스타일을 지정합니다. 어떠한 조합의 적용 [정적 컨트롤 스타일](../../mfc/reference/styles-used-by-mfc.md#static-styles) 컨트롤에 있습니다.  
   
- `rect`  
+ *rect*  
  정적 컨트롤의 크기와 위치를 지정합니다. 있습니다는 `RECT` 구조 또는 `CRect` 개체입니다.  
   
- `pParentWnd`  
- 지정 된 `CStatic` 부모 창, 일반적으로 `CDialog` 개체입니다. 않아야 **NULL**합니다.  
+ *pParentWnd*  
+ 지정 된 `CStatic` 부모 창, 일반적으로 `CDialog` 개체입니다. NULL이 아니어야 합니다.  
   
- `nID`  
+ *nID*  
  정적 컨트롤의 컨트롤 ID를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 생성 된 `CStatic` 두 단계를 수행에서 하는 개체입니다. 먼저 생성자를 호출 합니다. `CStatic`, 한 다음 호출 **만들기**, Windows 정적 컨트롤을 만들고에 연결 하는 `CStatic` 개체입니다.  
+ 생성 된 `CStatic` 두 단계를 수행에서 하는 개체입니다. 먼저 생성자를 호출 합니다. `CStatic`, 한 다음 호출 `Create`, Windows 정적 컨트롤을 만들고에 연결 하는 `CStatic` 개체입니다.  
   
  다음 적용 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles) 정적 컨트롤에:  
   
-- **WS_CHILD** 항상  
+- WS_CHILD 항상  
   
-- **WS_VISIBLE** Usually  
+- 일반적으로 WS_VISIBLE  
   
-- **WS_DISABLED** 거의  
+- WS_DISABLED 거의  
   
  다음 중 하나를 적용 해야 정적 컨트롤에 비트맵, 커서, 아이콘 또는 메타 파일을 표시 하려는 경우 [정적 스타일](../../mfc/reference/styles-used-by-mfc.md#static-styles):  
   
-- **SS_BITMAP** 비트맵에 대 한이 스타일을 사용 합니다.  
+- SS_BITMAP은 비트맵에 대 한이 스타일을 사용 합니다.  
   
-- **SS_ICON** 커서 및 아이콘에 대 한이 스타일을 사용 합니다.  
+- SS_ICON 커서 및 아이콘에 대 한이 스타일을 사용 합니다.  
   
-- **SS_ENHMETAFILE** 향상 된 메타 파일에 대 한이 스타일을 사용 합니다.  
+- SS_ENHMETAFILE 향상 된 메타 파일에 대 한이 스타일을 사용 합니다.  
   
  커서, 비트맵 또는 아이콘을 다음 스타일을 사용 하 여 할 수도 있습니다.  
   
-- **SS_CENTERIMAGE** 가운데 맞춤 정적 컨트롤의 이미지를 사용 합니다.  
+- 정적 컨트롤의 이미지를 중앙 SS_CENTERIMAGE 사용 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CStatic#1](../../mfc/reference/codesnippet/cpp/cstatic-class_1.cpp)]  
   
 ##  <a name="cstatic"></a>  CStatic::CStatic  
@@ -161,7 +162,7 @@ virtual BOOL Create(
 CStatic();
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CStatic#2](../../mfc/reference/codesnippet/cpp/cstatic-class_2.cpp)]  
   
 ##  <a name="drawitem"></a>  CStatic::DrawItem  
@@ -172,11 +173,11 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  에 대 한 포인터는 [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) 구조입니다. 구조에 필요한 그리기의 형식과 항목을 그릴 수 있도록 하는 방법에 대 한 정보가 들어 있습니다.  
   
 ### <a name="remarks"></a>설명  
- 소유자가 그린에 대 한 그리기를 구현 하려면이 함수를 재정의 **CStatic** 개체 (컨트롤에 스타일이 **SS_OWNERDRAW**).  
+ 소유자가 그린에 대 한 그리기를 구현 하려면이 함수를 재정의 `CStatic` (컨트롤에 스타일이 SS_OWNERDRAW) 개체입니다.  
   
 ##  <a name="getbitmap"></a>  CStatic::GetBitmap  
  이전에 사용 하 여 설정 하는 비트맵의 핸들을 가져옵니다 [SetBitmap](#setbitmap), 즉 연관 `CStatic`합니다.  
@@ -186,9 +187,9 @@ HBITMAP GetBitmap() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 현재 비트맵에 대 한 핸들 또는 **NULL** 비트맵이 없습니다 설정 된 경우.  
+ 핸들의 현재 비트맵 또는 비트맵이 없습니다 설정 된 경우 NULL입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
   
 ##  <a name="getcursor"></a>  CStatic::GetCursor  
@@ -199,9 +200,9 @@ HCURSOR GetCursor();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 현재 커서에 대 한 핸들 또는 **NULL** 커서가 없습니다 설정 된 경우.  
+ 핸들의 현재 커서 또는 커서가 없습니다 설정 된 경우 NULL입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
   
 ##  <a name="getenhmetafile"></a>  CStatic::GetEnhMetaFile  
@@ -212,9 +213,9 @@ HENHMETAFILE GetEnhMetaFile() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 현재 확장된 메타 파일에 대 한 핸들 또는 **NULL** 없는 확장된 메타 파일 설정 된 경우.  
+ 현재 확장된 메타 파일 또는 NULL이 없는 확장된 메타 파일 설정 된 경우에 핸들입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
   
 ##  <a name="geticon"></a>  CStatic::GetIcon  
@@ -225,9 +226,9 @@ HICON GetIcon() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 현재 아이콘에 대 한 핸들 또는 **NULL** 아이콘이 없는 설정 된 경우.  
+ 현재 아이콘 또는 아이콘이 없는 설정 된 경우에 NULL에 대 한 핸들입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CStatic#6](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]  
   
 ##  <a name="setbitmap"></a>  CStatic::SetBitmap  
@@ -238,11 +239,11 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hBitmap`  
+ *hBitmap*  
  정적 컨트롤에 그릴 비트맵의 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 이전에 정적 컨트롤에 연결 되었던으로 비트맵의 핸들 또는 `NULL` 비트맵이 없습니다 정적 컨트롤에 연결 된 경우.  
+ 정적 컨트롤에 연결 된 비트맵이 없습니다 되었으면 정적 컨트롤 또는 NULL에 이전에 연결 되었던으로 비트맵의 핸들입니다.  
   
 ### <a name="remarks"></a>설명  
  비트맵 정적 컨트롤에 자동으로 그려집니다. 기본적으로 왼쪽 위 모서리에 놓입니다 하 고 비트맵의 크기를 정적 컨트롤 크기가 조정 됩니다.  
@@ -264,7 +265,7 @@ MyStaticControl.SetBitmap(HBITMAP(MyBitmap));
 ```  
 다음 예제에서는 두 개의 `CStatic` 힙의 개체입니다. 다음을 사용 하 여 시스템 비트맵 로드 `CBitmap::LoadOEMBitmap` 및 사용 하 여 파일에서 다른 `CImage::Load`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
   
 ##  <a name="setcursor"></a>  CStatic::SetCursor  
@@ -275,22 +276,22 @@ HCURSOR SetCursor(HCURSOR hCursor);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hCursor`  
+ *hCursor*  
  정적 컨트롤에 그릴 커서의 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 정적 컨트롤을 이전에 연관 된 커서의 핸들 또는 **NULL** 커서가 없습니다 정적 컨트롤에 연결 된 경우.  
+ 이전에 연결 된 정적 컨트롤 또는 NULL 커서가 없습니다 정적 컨트롤에 연결 된 경우 커서의 핸들입니다.  
   
 ### <a name="remarks"></a>설명  
  커서는 정적 컨트롤에 자동으로 그려집니다. 기본적으로 왼쪽 위 모서리에 놓입니다 하 고는 커서의 크기를 정적 컨트롤 크기가 조정 됩니다.  
   
  다양 한 창 및 정적 컨트롤 스타일을 포함 하 여 다음을 사용할 수 있습니다.  
   
-- **SS_ICON** 커서 및 아이콘에 대 한이 스타일을 항상 사용 합니다.  
+- SS_ICON 커서 및 아이콘에 대 한이 스타일을 항상 사용 합니다.  
   
-- **SS_CENTERIMAGE** 가운데 맞춤 정적 컨트롤을 사용 합니다. 이미지는 정적 컨트롤 보다 클 경우 잘립니다. 정적 컨트롤 보다 작은 경우 이미지 주위의 빈 공간을 정적 컨트롤의 배경색으로 입력 됩니다.  
+- 정적 컨트롤의 가운데에 SS_CENTERIMAGE 사용 합니다. 이미지는 정적 컨트롤 보다 클 경우 잘립니다. 정적 컨트롤 보다 작은 경우 이미지 주위의 빈 공간을 정적 컨트롤의 배경색으로 입력 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
   
 ##  <a name="setenhmetafile"></a>  CStatic::SetEnhMetaFile  
@@ -301,20 +302,20 @@ HENHMETAFILE SetEnhMetaFile(HENHMETAFILE hMetaFile);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hMetaFile`  
+ *hMetaFile*  
  정적 컨트롤에 그릴 확장된 메타 파일의 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 이전에 정적 컨트롤과 연결 된 확장된 메타 파일의 핸들 또는 **NULL** 없는 확장된 메타 파일 정적 컨트롤에 연결 된 경우.  
+ 이전에 없는 확장된 메타 파일 정적 컨트롤에 연결 된 경우 정적 컨트롤 또는 NULL와 연결 된 확장된 메타 파일의 핸들입니다.  
   
 ### <a name="remarks"></a>설명  
  확장된 메타 파일 정적 컨트롤에 자동으로 그려집니다. 확장된 메타 파일 정적 컨트롤의 크기에 맞게 크기가 조정 됩니다.  
   
  다양 한 창 및 정적 컨트롤 스타일을 포함 하 여 다음을 사용할 수 있습니다.  
   
-- **SS_ENHMETAFILE** 향상 된 메타 파일에 대 한이 스타일을 항상 사용 합니다.  
+- SS_ENHMETAFILE 항상이 스타일에 대 한 고급 사용 메타 파일 사용 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
   
 ##  <a name="seticon"></a>  CStatic::SetIcon  
@@ -325,22 +326,22 @@ HICON SetIcon(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hIcon`  
+ *hIcon*  
  정적 컨트롤에 그릴 아이콘의 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 정적 컨트롤을 이전에 연관 된 아이콘의 핸들 또는 **NULL** 아이콘이 없는 정적 컨트롤에 연결 된 경우.  
+ 이전에 연결 된 아이콘의 정적 컨트롤 또는 NULL 아이콘이 없는 정적 컨트롤에 연결 된 경우의 핸들입니다.  
   
 ### <a name="remarks"></a>설명  
  아이콘 정적 컨트롤에 자동으로 그려집니다. 기본적으로 왼쪽 위 모서리에 놓입니다 하 고 아이콘의 크기를 정적 컨트롤 크기가 조정 됩니다.  
   
  다양 한 창 및 정적 컨트롤 스타일을 포함 하 여 다음을 사용할 수 있습니다.  
   
-- **SS_ICON** 커서 및 아이콘에 대 한이 스타일을 항상 사용 합니다.  
+- SS_ICON 커서 및 아이콘에 대 한이 스타일을 항상 사용 합니다.  
   
-- **SS_CENTERIMAGE** 가운데 맞춤 정적 컨트롤을 사용 합니다. 이미지는 정적 컨트롤 보다 클 경우 잘립니다. 정적 컨트롤 보다 작은 경우 이미지 주위의 빈 공간을 정적 컨트롤의 배경색으로 입력 됩니다.  
+- 정적 컨트롤의 가운데에 SS_CENTERIMAGE 사용 합니다. 이미지는 정적 컨트롤 보다 클 경우 잘립니다. 정적 컨트롤 보다 작은 경우 이미지 주위의 빈 공간을 정적 컨트롤의 배경색으로 입력 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CStatic#6](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

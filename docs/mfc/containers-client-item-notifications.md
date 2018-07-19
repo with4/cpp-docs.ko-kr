@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2255f28c1250096bfbeb1a9365c57f78e17e20d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d76717e68e37769cf55dceb4492ed78031c49e10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928226"
 ---
 # <a name="containers-client-item-notifications"></a>컨테이너: 클라이언트 항목 알림
 이 문서에서는 MFC 프레임 워크 클라이언트 응용 프로그램의 문서에 항목을 수정 하는 서버 응용 프로그램을 호출 하는 재정의 가능한 함수를 설명 합니다.  
@@ -31,11 +32,11 @@ ms.lasthandoff: 05/04/2018
   
 |알림|의미|  
 |------------------|-------------|  
-|`OLE_CHANGED`|OLE 항목의 모양 변경 되었습니다.|  
-|`OLE_SAVED`|OLE 항목이 저장 되었습니다.|  
-|`OLE_CLOSED`|OLE 항목 종료 되었습니다.|  
+|**OLE_CHANGED**|OLE 항목의 모양 변경 되었습니다.|  
+|**OLE_SAVED**|OLE 항목이 저장 되었습니다.|  
+|**OLE_CLOSED**|OLE 항목 종료 되었습니다.|  
 |**OLE_RENAMED**|OLE 항목을 포함 하는 서버 문서 이름이 변경 되었습니다.|  
-|`OLE_CHANGED_STATE`|OLE 항목은 다른 한 상태에서 변경 되었습니다.|  
+|**OLE_CHANGED_STATE**|OLE 항목은 다른 한 상태에서 변경 되었습니다.|  
 |**OLE_CHANGED_ASPECT**|OLE 항목의 그리기 모양은 프레임 워크에 의해 변경 되었습니다.|  
   
  이러한 값은 고 **OLE_NOTIFICATION** AFXOLE에 정의 된 열거형입니다. 8.  
@@ -44,9 +45,9 @@ ms.lasthandoff: 05/04/2018
   
 |첫 번째 인수는 경우|두 번째 인수|  
 |----------------------------|---------------------|  
-|`OLE_SAVED` 또는 `OLE_CLOSED`|사용 되지 않습니다.|  
-|`OLE_CHANGED`|변경 된 OLE 항목의 모양을 지정 합니다.|  
-|`OLE_CHANGED_STATE`|입력 되 고 상태를 설명 (`emptyState`, **loadedState**, `openState`, `activeState`, 또는 `activeUIState`).|  
+|**OLE_SAVED** 또는 **OLE_CLOSED**|사용 되지 않습니다.|  
+|**OLE_CHANGED**|변경 된 OLE 항목의 모양을 지정 합니다.|  
+|**OLE_CHANGED_STATE**|입력 되 고 상태를 설명 (*emptyState*, *loadedState*, *openState*, *activeState*, 또는  *activeUIState*).|  
   
  클라이언트 항목 간주 될 수 있는 상태에 대 한 자세한 내용은 참조 [컨테이너: 클라이언트 항목 상태](../mfc/containers-client-item-states.md)합니다.  
   

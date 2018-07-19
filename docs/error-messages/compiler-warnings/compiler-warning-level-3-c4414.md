@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289710"
 ---
 # <a name="compiler-warning-level-3-c4414"></a>컴파일러 경고(수준 3) C4414
 'function': 함수로 short 점프는 near로 변환 됩니다  

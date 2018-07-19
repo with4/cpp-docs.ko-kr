@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102910"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor 클래스
 데이터 저장소의 스키마 (기본 구조)에 대해 알지 못합니다 때 문자열 데이터로 데이터 소스에 액세스할 수 있습니다.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891661"
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>색 작업(아이콘에 대한 이미지 편집기)
 이미지 편집기를 처리 하 고 색을 사용자 지정 하는 다양 한 기능을 포함 합니다. 전경 또는 배경 색을 설정 지정, 경계 영역을 색으로 채우기 또는 현재 전경 또는 배경 색으로 사용할 이미지에서 색을 선택 합니다. 도구를 사용할 수는 [이미지 편집기 도구 모음](../windows/toolbar-image-editor-for-icons.md) 색상표에 함께 [색상 창](../windows/colors-window-image-editor-for-icons.md) 이미지를 만드는 합니다.  

@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efd633fb4617a5058afd9bd55b40ccb4fbcee06e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6830baf3d474b80f2e7906a7aadd27d2eee27f9a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958622"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator 클래스
 
@@ -39,7 +40,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>매개 변수
 
-`Container` 어떤 요소가 뒷면에 컨테이너의 유형으로 삽입할은 한 `back_insert_iterator`합니다.
+*컨테이너* 요소 뒤의 컨테이너 형식을 삽입 하려는 `back_insert_iterator`합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -82,13 +83,13 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Cont` 컨테이너는는 `back_insert_iterator` 에 요소를 삽입 하는 것입니다.
+*_Cont* 컨테이너는는 `back_insert_iterator` 에 요소를 삽입 하는 것입니다.
 
 ### <a name="return-value"></a>반환 값
 
 매개 변수 컨테이너에 대한 `back_insert_iterator`입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // back_insert_iterator_back_insert_iterator.cpp
@@ -149,7 +150,7 @@ container_type;
 
 이 형식은 템플릿 매개 변수 **Container**의 동의어입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // back_insert_iterator_container_type.cpp
@@ -206,7 +207,7 @@ back_insert_iterator<Container>& operator*();
 
 출력 반복기 식 **\*Iter** = **value**를 구현하는 데 사용됩니다. **Iter**이 시퀀스에서 요소의 주소를 지정하는 반복기인 경우 **\*Iter** = **value**는 해당 요소를 값과 바꾸며 시퀀스에서 총 요소 수를 변경하지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // back_insert_iterator_back_insert.cpp
@@ -267,7 +268,7 @@ back_insert_iterator<Container> operator++(int);
 
 preincrementation과 postincrementation 연산자는 둘 다 동일한 결과를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // back_insert_iterator_op_incre.cpp
@@ -322,7 +323,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>매개 변수
 
-`val` 컨테이너에 삽입할 값입니다.
+*val* 컨테이너에 삽입할 값입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -338,7 +339,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 그런 다음 `*this`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // back_insert_iterator_op_assign.cpp
@@ -389,7 +390,7 @@ typedef typename Container::reference reference;
 
 이 형식은 연관 컨테이너에서 제어하는 시퀀스의 요소에 대한 참조를 제공합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // back_insert_iterator_reference.cpp

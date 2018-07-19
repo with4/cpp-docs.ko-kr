@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689300"
 ---
 # <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 결합된 병렬 작업 공유 구문
 결합 된 병렬 작업 공유 생성자는 하나의 작업 공유 생성자를 포함 하는 병렬 영역의 지정 하기 위한 바로 가기 키입니다. 이러한 지시문의 의미 체계는 동일 합니다 명시적으로 지정 하는 **병렬** 지시문 뒤에 단일 작업 공유 구문입니다.  

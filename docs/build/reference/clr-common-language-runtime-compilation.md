@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379616"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr(공용 언어 런타임 컴파일)
 응용 프로그램 및 구성 요소가 CLR(공용 언어 런타임)의 기능을 사용할 수 있게 합니다.  

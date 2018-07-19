@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299177"
 ---
 # <a name="linker-tools-error-lnk1241"></a>링커 도구 오류 LNK1241
 이미 지정 된 ' 리소스 파일' 리소스 파일  

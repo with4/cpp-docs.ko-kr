@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091935"
 ---
 # <a name="caccessorrowsetclose"></a>CAccessorRowset::Close
 모든 활성 접근자 및 행 집합을 해제합니다.  

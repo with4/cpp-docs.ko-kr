@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368488"
 ---
 # <a name="precedence-in-inference-rules"></a>유추 규칙의 우선 순위
 NMAKE 유추 규칙 정의 된 경우 곱하기, 우선 순위가 가장 높은 정의 사용 합니다. 다음 목록은 내림차순으로 최고 우선 순위를 나타냅니다.  

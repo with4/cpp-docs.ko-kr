@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873500"
 ---
 # <a name="handletraitsgetinvalidvalue-method"></a>HANDLETraits::GetInvalidValue 메서드
 잘못 된 핸들을 나타냅니다.  

@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec9757a463bce7ef873720f229b70da695deae8d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf25b84c4ee9808210d2dbf2f5115319a517c71b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931940"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>컬렉션의 모든 멤버에 액세스
 템플릿 기반이든 아니든 MFC 배열 컬렉션 클래스는 인덱스를 사용하여 해당 요소에 액세스합니다. 템플릿 기반이든 아니든 MFC 목록 및 맵 컬렉션 클래스는 **POSITION** 형식의 표시기를 사용하여 컬렉션 내의 지정된 위치를 설명합니다. 이러한 컬렉션의 멤버 하나 이상에 액세스하려면 먼저 위치 표시기를 초기화한 다음 해당 위치를 컬렉션에 반복적으로 전달하고 다음 요소를 반환하도록 요청합니다. 컬렉션은 반복 진행률에 대한 상태 정보를 유지하는 역할을 담당하지 않습니다. 이 정보는 위치 표시기에 유지됩니다. 그러나 특정 위치가 지정된 경우 컬렉션은 다음 요소를 반환합니다.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/04/2018
   
      이 예제에서는 `CPerson` 개체에 대한 포인터를 포함하는 형식화된 포인터 배열을 사용합니다. 이 배열은 미리 정의된 비템플릿 클래스 중 하나인 `CObArray`클래스에서 파생됩니다. `GetAt` 는 `CPerson` 개체에 대한 포인터를 반환합니다. 형식화된 포인터 컬렉션 클래스(배열 또는 목록)의 경우 첫 번째 매개 변수는 기본 클래스를 지정하고, 두 번째 매개 변수는 저장할 형식을 지정합니다.  
   
-     `CTypedPtrArray` 클래스도 오버 로드는 **[ ]** 연산자 요소 배열에 액세스 하는 일반적인 배열-아래 첨자 구문을 사용할 수 있도록 합니다. 위 `for` 루프 본문의 문을 대체하는 문은 다음과 같습니다.  
+     `CTypedPtrArray` 클래스도 오버 로드는 **[ ]** 연산자 요소 배열에 액세스 하는 일반적인 배열-아래 첨자 구문을 사용할 수 있도록 합니다. 본문에 문의 하는 대신은 **에 대 한** 위의 루프는  
   
      [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]  
   

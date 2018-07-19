@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33228596"
 ---
 # <a name="compiler-error-c2563"></a>컴파일러 오류 C2563
 형식 매개 변수 목록에서 일치 하지 않습니다.  

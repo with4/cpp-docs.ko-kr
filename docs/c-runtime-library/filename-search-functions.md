@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391804"
 ---
 # <a name="filename-search-functions"></a>파일 이름 검색 함수
 이러한 함수는 지정된 파일 이름을 검색하고 검색을 닫습니다.  

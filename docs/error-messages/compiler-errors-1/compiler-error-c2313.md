@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169974"
 ---
 # <a name="compiler-error-c2313"></a>컴파일러 오류 C2313
 'type1': 참조('type2')에 의해 줄 number에서 catch되었습니다.  

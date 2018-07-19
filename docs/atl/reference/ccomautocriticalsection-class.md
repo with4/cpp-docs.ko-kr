@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357231"
 ---
 # <a name="ccomautocriticalsection-class"></a>CComAutoCriticalSection 클래스
 `CComAutoCriticalSection` 가져오기을 임계 영역 개체의 소유권을 해제 하기 위한 메서드를 제공 합니다.  

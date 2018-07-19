@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687467"
 ---
 # <a name="2721-private"></a>2.7.2.1 private
 `private` 절 팀에서 각 스레드에 private 변수 목록에서 변수를 선언 합니다. 구문은 `private` 절은 다음과 같습니다.  

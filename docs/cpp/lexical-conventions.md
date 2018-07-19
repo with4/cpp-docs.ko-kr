@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419130"
 ---
 # <a name="lexical-conventions"></a>어휘 규칙
 이 단원에서는 C++ 프로그램의 기본 요소를 소개합니다. 문, 정의, 선언 등을 생성하는 "어휘 요소" 또는 "토큰"이라고 하는 요소를 사용하여 완전한 프로그램을 구성할 수 있습니다. 이 단원에서 설명하는 어휘 요소는 다음과 같습니다.

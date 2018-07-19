@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688585"
 ---
 # <a name="tiledextent-class"></a>tiled_extent 클래스
 A `tiled_extent` 개체가 `extent` 익스텐트 공간 1, 2 또는 3 차원 타일으로 세분 하는 1 ~ 3 차원 개체입니다.  

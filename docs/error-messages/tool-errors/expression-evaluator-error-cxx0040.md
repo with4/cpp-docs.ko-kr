@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295433"
 ---
 # <a name="expression-evaluator-error-cxx0040"></a>식 계산기 오류 CXX0040
 함수에 암시적 변환이 필요 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369892"
 ---
 # <a name="cc-build-tools"></a>C/C++ 빌드 도구
 Visual c + + 보거나 빌드 출력을 조작 하기 위한 다음과 같은 명령줄 도구를 제공 합니다.  

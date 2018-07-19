@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269095"
 ---
 # <a name="compiler-error-c3816"></a>컴파일러 오류 C3816
 'declaration' 이전에 선언 되었거나 다른 관리 되는 또는 WinRTmodifier로 정의  

@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36df93b54accbfdc3ff8f486c41a47af72032c3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 364ae6c544f58f09208cefeec9d3984de35120e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965218"
 ---
 # <a name="wbufferconvert-class"></a>wbuffer_convert 클래스
 
@@ -38,9 +39,9 @@ class wbuffer_convert
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Codecvt`|변환 개체를 나타내는 [locale](../standard-library/locale-class.md) 패싯입니다.|
-|`Elem`|와이드 문자 요소 형식입니다.|
-|`Traits`|*Elem*과 연결된 특성입니다.|
+|*Codecvt*|변환 개체를 나타내는 [locale](../standard-library/locale-class.md) 패싯입니다.|
+|*Elem*|와이드 문자 요소 형식입니다.|
+|*특성*|*Elem*과 연결된 특성입니다.|
 
 ## <a name="remarks"></a>설명
 

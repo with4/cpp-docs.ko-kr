@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094077"
 ---
 # <a name="cbulkrowsetcbulkrowset"></a>CBulkRowset::CBulkRowset
 새 `CBulkRowset` 개체를 기본 행 개수를 10으로 설정 합니다.  

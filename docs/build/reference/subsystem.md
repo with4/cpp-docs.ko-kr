@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377625"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 실행 가능 이미지에 필요한 실행 환경을 지정합니다.  

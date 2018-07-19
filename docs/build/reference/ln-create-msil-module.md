@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375313"
 ---
 # <a name="ln-create-msil-module"></a>/LN(MSIL 모듈 만들기)
 어셈블리 매니페스트를 출력 파일에 삽입하지 않도록 지정합니다.  

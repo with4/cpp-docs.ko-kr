@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846235"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Pragma 지시문 및 __Pragma 키워드
 Pragma 지시문이 컴퓨터 또는 운영 체제 관련 컴파일러 기능을 지정합니다. Microsoft 컴파일러 전용인 `__pragma` 키워드를 사용하여 매크로 정의 안에 pragma 지시문을 코딩할 수 있습니다.  

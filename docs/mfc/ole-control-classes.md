@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355360"
 ---
 # <a name="ole-control-classes"></a>OLE 컨트롤 클래스
 이들은 OLE 컨트롤을 작성할 때 사용 하는 기본 클래스입니다. `COleControlModule` OLE 컨트롤 모듈에서 클래스와 비슷합니다는 [CWinApp](../mfc/reference/cwinapp-class.md) 응용 프로그램의 클래스입니다. 각 모듈에는 하나 이상의 OLE 컨트롤; 구현 이러한 컨트롤은 `COleControl` 개체입니다. 이러한 컨트롤을 사용 하는 컨테이너와 통신 `CConnectionPoint` 개체입니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249469"
 ---
 # <a name="compiler-error-c3457"></a>컴파일러 오류 C3457
 'attribute': 특성은 명명되지 않은 인수를 지원하지 않습니다.  

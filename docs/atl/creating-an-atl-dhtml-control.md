@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354171"
 ---
 # <a name="creating-an-atl-dhtml-control"></a>ATL DHTML 컨트롤 만들기
 ATL 컨트롤 마법사 DHTML 컨트롤을 만드는 과정을 자동화 합니다. 샘플 코드를 포함 하는 HTML 파일을 포함 하 여 필요한 리소스 파일을 생성 합니다.  

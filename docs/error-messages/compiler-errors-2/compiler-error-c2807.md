@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33237018"
 ---
 # <a name="compiler-error-c2807"></a>컴파일러 오류 C2807
 'operator 연산자' 후 위 두 번째 형식 매개 변수 'int' 여야 합니다.  

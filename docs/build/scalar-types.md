@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381173"
 ---
 # <a name="scalar-types"></a>스칼라 형식
 데이터의 액세스를 모든 맞춤에서 발생할 수 있습니다, 있지만 데이터 성능 손실 (또는 복잡성)을 방지 하기 위해 해당 자연 경계에 정렬 될 것이 좋습니다. 열거형 상수 정수가 고 32 비트 정수로 처리 됩니다. 다음 표에서 맞춤 다음 맞춤 값을 사용 하 여 관련 된 것에 대 한 형식 정 및 권장 되는 저장소 설명:  

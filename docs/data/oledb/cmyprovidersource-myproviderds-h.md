@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098656"
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource(MyProviderDS.H)
 공급자 클래스는 다중 상속을 사용합니다. 다음 코드에서는 데이터 원본 개체에 대 한 상속 체인을 보여 줍니다.  

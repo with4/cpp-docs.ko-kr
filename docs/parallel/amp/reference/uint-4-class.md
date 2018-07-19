@@ -283,6 +283,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694396"
 ---
 # <a name="uint4-class"></a>uint_4 클래스
 부호 없는 정수 4 개의 짧은 벡터를 나타냅니다.  

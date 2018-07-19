@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267435"
 ---
 # <a name="compiler-error-c3855"></a>컴파일러 오류 C3855
 'class': 형식 매개 변수 'param' 선언과 호환 되지 않습니다.  

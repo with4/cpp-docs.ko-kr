@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093663"
 ---
 # <a name="caccessorbasereleaseaccessors"></a>CAccessorBase::ReleaseAccessors
 클래스로 만든 접근자를 해제 합니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32407988"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof 및 alignas(C++)
 `alignas` 형식 지정자는 변수 및 사용자 정의 형식의 사용자 지정 맞춤을 지정하는 포팅 가능한 C++ 표준 방법입니다. 마찬가지로 `alignof` 연산자도 지정된 형식 또는 변수의 맞춤을 얻는 포팅 가능한 표준 방법입니다.  

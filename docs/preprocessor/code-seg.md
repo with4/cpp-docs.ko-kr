@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839075"
 ---
 # <a name="codeseg"></a>code_seg
 함수가 .obj 파일에 저장되는 텍스트 세그먼트를 지정합니다.  

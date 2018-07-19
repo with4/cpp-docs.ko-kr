@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391030"
 ---
 # <a name="type-cast-conversions"></a>형식 캐스팅 변환
 형식 캐스팅을 사용하여 명시적으로 형식을 변환할 수 있습니다.  

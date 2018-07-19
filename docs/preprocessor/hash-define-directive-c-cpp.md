@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846157"
 ---
 # <a name="define-directive-cc"></a>#define 지시문 (C/C++)
 `#define` 만듭니다는 *매크로*, 식별자 또는 매개 변수화 된 식별자와 토큰 문자열 연결 하는입니다. 매크로가 정의된 후 컴파일러는 소스 파일에서 발생하는 각 식별자를 토큰 문자열로 대체할 수 있습니다.  

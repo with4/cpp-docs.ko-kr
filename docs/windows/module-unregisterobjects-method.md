@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874121"
 ---
 # <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects 메서드
 다른 응용 프로그램에서 지정된 모듈의 개체에 연결할 수 없도록 이 개체의 등록을 취소합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053245"
 ---
 # <a name="oword"></a>OWORD
 형식 지정자로 사용 되는 16 바이트 데이터 형식이 필요 합니다.  

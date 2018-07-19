@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1d0d41439748cd0ddbc981ecb1d74194d5fbd59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bfafe3c59b8b36e95441c7fe269239d7f87111e7
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885856"
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow 인터페이스
 이 인터페이스는 컨트롤 및 해당 호스트 개체를 조작 하기 위한 메서드를 제공 합니다.  
@@ -49,16 +50,16 @@ interface IAxWinHostWindow : IUnknown
 |-|-|  
 |[AttachControl](#attachcontrol)|호스트 개체를 기존 컨트롤을 연결합니다.|  
 |[CreateControl](#createcontrol)|컨트롤을 만들고 호스트 개체에 연결 합니다.|  
-|[CreateControlEx](#createcontrolex)|컨트롤을 만듭니다., 호스트 개체에 연결 하 고 필요에 따라 이벤트 처리기를 설정 합니다.|  
+|[CreateControlEx](#createcontrolex)|컨트롤을 만들고 호스트 개체에 연결 합니다. 필요에 따라 이벤트 처리기를 설정 합니다.|  
 |[QueryControl](#querycontrol)|호스팅된 컨트롤에 대 한 인터페이스 포인터를 반환합니다.|  
-|[SetExternalDispatch](#setexternaldispatch)|설정 하는 외부 `IDispatch` 인터페이스입니다.|  
-|[SetExternalUIHandler](#setexternaluihandler)|설정 하는 외부 `IDocHostUIHandlerDispatch` 인터페이스입니다.|  
+|[SetExternalDispatch](#setexternaldispatch)|외부 설정 `IDispatch` 인터페이스입니다.|  
+|[SetExternalUIHandler](#setexternaluihandler)|외부 설정 `IDocHostUIHandlerDispatch` 인터페이스입니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 인터페이스는 ATL의 ActiveX 컨트롤 호스팅 개체에 의해 노출 됩니다. 만들기 및/또는 컨트롤 호스팅된 컨트롤에서 인터페이스를 가져올 수 또는 웹 브라우저를 호스트 하는 경우 외부 dispinterface 또는 사용에 대 한 UI 처리기를 설정 하려면 호스트 개체에 연결 하려면이 인터페이스에서 메서드를 호출 합니다.  
+ 이 인터페이스는 개체를 호스트 하는 ATL의 ActiveX 컨트롤에 의해 노출 됩니다. 만들기 및/또는 호스트 된 컨트롤에서 인터페이스를 가져올 수 또는 웹 브라우저를 호스팅하는 경우 외부 dispinterface 또는 사용에 대 한 UI 처리기를 설정 하려면 호스트 개체에 컨트롤을 연결 하는이 인터페이스의 메서드를 호출 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- 아래와 같이이 인터페이스의 정의 IDL 또는 c + +로 제공 됩니다.  
+ 이 인터페이스의 정의 아래와 같이 IDL 또는 c + +를 사용할 수 있습니다.  
   
 |정의 유형|파일|  
 |---------------------|----------|  
@@ -66,7 +67,7 @@ interface IAxWinHostWindow : IUnknown
 |C++|ATLIFace.h (ATLBase.h에도 포함)|  
   
 ##  <a name="attachcontrol"></a>  IAxWinHostWindow::AttachControl  
- 로 식별 되는 창을 사용 하 여 호스트 개체는 기존 (및 이전에 초기화) 컨트롤 연결 `hWnd`합니다.  
+ 기존 (및 이전에 초기화) 컨트롤을 식별 하 여 창을 사용 하 여 호스트 개체에 연결 *hWnd*합니다.  
   
 ```
 STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
@@ -74,16 +75,16 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
   
 ### <a name="parameters"></a>매개 변수  
  *pUnkControl*  
- [in] 에 대 한 포인터는 **IUnknown** 호스트 개체에 연결 될 컨트롤의 인터페이스입니다.  
+ [in] 에 대 한 포인터를 `IUnknown` 호스트 개체에 연결 될 컨트롤의 인터페이스입니다.  
   
- `hWnd`  
- [in] 호스팅에 사용할 창 핸들입니다.  
+ *hWnd*  
+ [in] 호스팅에 사용 되는 창 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 표준 `HRESULT` 값입니다.  
+ 표준 HRESULT 값입니다.  
   
 ##  <a name="createcontrol"></a>  IAxWinHostWindow::CreateControl  
- 컨트롤을 만들고 초기화를로 식별 되는 창에 호스팅합니다 `hWnd`합니다.  
+ 컨트롤을 만들고, 초기화 및 구분 창에 호스팅합니다 *hWnd*합니다.  
   
 ```
 STDMETHOD(CreateControl)(
@@ -93,27 +94,27 @@ STDMETHOD(CreateControl)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpTricsData`  
- [in] 만들 컨트롤을 식별 하는 문자열입니다. (중괄호 포함 해야 함) CLSID, ProgID, URL 또는 원시 HTML 될 수 있습니다 (접두사로 **MSHTML:**).  
+ *lpTricsData*  
+ [in] 만들 컨트롤을 식별 하는 문자열입니다. (중괄호를 포함 해야 함) CLSID, ProgID, URL 또는 원시 HTML 수 (접두사로 **MSHTML:**).  
   
- `hWnd`  
- [in] 호스팅에 사용할 창 핸들입니다.  
+ *hWnd*  
+ [in] 호스팅에 사용 되는 창 핸들입니다.  
   
- `pStream`  
- [in] 컨트롤에 대 한 초기화 데이터를 포함 하는 스트림에 대 한 인터페이스 포인터입니다. 수 **NULL**합니다.  
+ *pStream*  
+ [in] 컨트롤에 대 한 초기화 데이터를 포함 하는 스트림에 대 한 인터페이스 포인터입니다. NULL 일 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
- 표준 `HRESULT` 값입니다.  
+ 표준 HRESULT 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 메시지를 컨트롤에 반영 될 수 있습니다 및 기타 컨테이너 기능을 사용할 수 있도록이 인터페이스를 노출 하는 호스트 개체에서이 창을 서브클래싱 할 됩니다.  
+ 메시지를 컨트롤에 반영 될 수 있습니다 하 고 다른 컨테이너 기능을 사용할 수 있도록이 인터페이스를 노출 하는 호스트 개체에서이 창을 서브클래싱 할 됩니다.  
   
  이 메서드를 호출 하는 것 [IAxWinHostWindow::CreateControlEx](#createcontrolex)합니다.  
   
- 사용 허가 받은 ActiveX 컨트롤을 만들려면 참조 [IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)합니다.  
+ 사용이 허가 된 ActiveX 컨트롤을 참조 하세요 [IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)합니다.  
   
 ##  <a name="createcontrolex"></a>  IAxWinHostWindow::CreateControlEx  
- ActiveX 컨트롤을 만들고 초기화를 유사 하며 지정한 창에 호스팅합니다 [IAxWinHostWindow::CreateControl](#createcontrol)합니다.  
+ ActiveX 컨트롤을 만들고, 초기화 및 비슷하게 지정 된 창에서 호스트 [IAxWinHostWindow::CreateControl](#createcontrol)합니다.  
   
 ```
 STDMETHOD(CreateControlEx)(
@@ -126,31 +127,31 @@ STDMETHOD(CreateControlEx)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpTricsData`  
- [in] 만들 컨트롤을 식별 하는 문자열입니다. (중괄호 포함 해야 함) CLSID, ProgID, URL 또는 원시 HTML 될 수 있습니다 (접두사로 **MSHTML:**).  
+ *lpTricsData*  
+ [in] 만들 컨트롤을 식별 하는 문자열입니다. (중괄호를 포함 해야 함) CLSID, ProgID, URL 또는 원시 HTML 수 (접두사로 **MSHTML:**).  
   
- `hWnd`  
- [in] 호스팅에 사용할 창 핸들입니다.  
+ *hWnd*  
+ [in] 호스팅에 사용 되는 창 핸들입니다.  
   
- `pStream`  
- [in] 컨트롤에 대 한 초기화 데이터를 포함 하는 스트림에 대 한 인터페이스 포인터입니다. 수 **NULL**합니다.  
+ *pStream*  
+ [in] 컨트롤에 대 한 초기화 데이터를 포함 하는 스트림에 대 한 인터페이스 포인터입니다. NULL 일 수 있습니다.  
   
- `ppUnk`  
- [out] 수신할 포인터의 주소는 **IUnknown** 만든된 컨트롤의 인터페이스입니다. 수 **NULL**합니다.  
+ *ppUnk*  
+ [out] 수신할 포인터의 주소는 `IUnknown` 만든된 컨트롤의 인터페이스입니다. NULL 일 수 있습니다.  
   
  *riidAdvise*  
- [in] 포함 된 개체에는 송신 인터페이스의 인터페이스 식별자입니다. 수 **IID_NULL**합니다.  
+ [in] 포함된 된 개체에는 송신 인터페이스의 인터페이스 식별자입니다. IID_NULL 될 수 있습니다.  
   
  *punkAdvise*  
- [in] 에 대 한 포인터는 **IUnknown** 가 지정한 포함 된 개체에 있는 연결 지점에 연결 되어 싱크 개체의 인터페이스 `iidSink`합니다.  
+ [in] 에 대 한 포인터를 `IUnknown` 으로 지정 된 포함된 된 개체의 연결 지점에 연결 되어 싱크 개체의 인터페이스가 `iidSink`합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 표준 `HRESULT` 값입니다.  
+ 표준 HRESULT 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 와 달리는 `CreateControl` 메서드를 `CreateControlEx` 새로 생성된 된 컨트롤에 대 한 인터페이스 포인터를 수신 및 컨트롤에 의해 실행 되는 이벤트를 수신할 이벤트 싱크를 설정할 수 있습니다.  
+ 와 달리 합니다 `CreateControl` 메서드를 `CreateControlEx` 새로 만든된 컨트롤에 대 한 인터페이스 포인터를 수신 하 고 컨트롤에서 발생 하는 이벤트를 수신 하는 이벤트 싱크 설정 할 수도 있습니다.  
   
- 사용 허가 받은 ActiveX 컨트롤을 만들려면 참조 [IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)합니다.  
+ 사용이 허가 된 ActiveX 컨트롤을 참조 하세요 [IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)합니다.  
   
 ##  <a name="querycontrol"></a>  IAxWinHostWindow::QueryControl  
  호스팅된 컨트롤에서 제공 된 인터페이스 포인터를 반환 합니다.  
@@ -162,45 +163,45 @@ STDMETHOD(QueryControl)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `riid`  
- [in] 인터페이스에 요청 된 컨트롤의 ID입니다.  
+ *riid*  
+ [in] 요청 된 컨트롤에 인터페이스의 ID입니다.  
   
- `ppvObject`  
- [out] 생성된 된 컨트롤의 지정된 된 인터페이스를 수신할 포인터의 주소입니다.  
+ *ppvObject*  
+ [out] 만든된 컨트롤의 지정된 된 인터페이스를 수신할 포인터의 주소입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 표준 `HRESULT` 값입니다.  
+ 표준 HRESULT 값입니다.  
   
 ##  <a name="setexternaldispatch"></a>  IAxWinHostWindow::SetExternalDispatch  
- 통해 포함 된 컨트롤에 사용할 수 있는 외부 dispinterface 설정는 [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) 메서드.  
+ 통해 포함 된 컨트롤에 사용할 수 있는 외부 dispinterface를 설정 합니다 [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) 메서드.  
   
 ```
 STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDisp`  
+ *pDisp*  
  [in] 에 대 한 포인터는 `IDispatch` 인터페이스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 표준 `HRESULT` 값입니다.  
+ 표준 HRESULT 값입니다.  
   
 ##  <a name="setexternaluihandler"></a>  IAxWinHostWindow::SetExternalUIHandler  
- 외부를 설정 하려면이 함수 호출 [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) 에 대 한 인터페이스는 `CAxWindow` 개체입니다.  
+ 외부를 설정 하려면이 함수를 호출 [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) 에 대 한 인터페이스를 `CAxWindow` 개체입니다.  
   
 ```
 STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDisp`  
- [in] 에 대 한 포인터는 **IDocHostUIHandlerDispatch** 인터페이스입니다.  
+ *pDisp*  
+ [in] 에 대 한 포인터는 `IDocHostUIHandlerDispatch` 인터페이스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 표준 `HRESULT` 값입니다.  
+ 표준 HRESULT 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수에 대 한 호스트의 사이트를 쿼리 하는 컨트롤 (예: 웹 브라우저 컨트롤)에서 사용 하 여 `IDocHostUIHandlerDispatch` 인터페이스입니다.  
+ 이 함수에 대 한 호스트의 사이트를 쿼리 하는 (예: 웹 브라우저 컨트롤) 컨트롤에서 사용 되는 `IDocHostUIHandlerDispatch` 인터페이스입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [IAxWinAmbientDispatch 인터페이스](../../atl/reference/iaxwinambientdispatch-interface.md)   

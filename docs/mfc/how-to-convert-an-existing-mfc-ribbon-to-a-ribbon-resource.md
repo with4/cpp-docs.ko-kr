@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8024acc4abbb02b14ed968df83779d34bd4a7271
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2551709652df0e0c65b1b0b6b5085550044e9966
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928999"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>방법: 기존 MFC 리본을 리본 리소스로 변환
 리본 리소스는 시각화를 수정 하 고 수동으로 코딩 된 리본 보다 유지 관리 하기 쉽습니다. 이 항목에서는 MFC 프로젝트에 수동으로 코딩 된 리본을 리본 리소스로 변환 하는 방법을 설명 합니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>MFC 리본을 리본 리소스로 변환 하려면  
   
-1.  Visual Studio에서 기존 MFC 프로젝트에서 CMFCRibbonBar 개체를 초기화 하는 소스 파일을 엽니다. 일반적으로 mainfrm.cpp 파일이 있습니다. 리본 메뉴에 대 한 초기화 코드 뒤에 다음 코드를 추가 합니다.  
+1.  Visual Studio에서 기존 MFC 프로젝트를 열고 소스 파일 위치는 `CMFCRibbonBar` 개체가 초기화 되었습니다. 일반적으로 mainfrm.cpp 파일이 있습니다. 리본 메뉴에 대 한 초기화 코드 뒤에 다음 코드를 추가 합니다.  
   
  ```  
     m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");

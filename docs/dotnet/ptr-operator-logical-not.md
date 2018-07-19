@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161956"
 ---
 # <a name="ptroperator"></a>ptr::operator!
 소유 하는 COM 개체가 유효한 지 확인 하는 연산자입니다.  

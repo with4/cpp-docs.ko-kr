@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355877"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>ATL 및 C 런타임 코드를 사용한 프로그래밍
 이 섹션에서는 C 런타임 라이브러리 (CRT)를 사용 하 여 정적 또는 동적 링크의 경우의 이점을 설명 합니다.  

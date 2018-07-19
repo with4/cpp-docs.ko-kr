@@ -29,11 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84bc2ce7c084f2951d63eee546df3bf70a2ba1fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21efd095a1d8e89c140ef39072a753c300a3043b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929309"
 ---
 # <a name="memory-management-examples"></a>메모리 관리: 예
 이 문서에서는 MFC 프레임 할당과 힙 할당에 대 한 성능을 각 메모리 할당의 세 가지 일반적인 종류를 설명 합니다.  
@@ -98,7 +99,7 @@ ms.lasthandoff: 05/04/2018
   
      [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]  
   
-     경우에 대 한 인수는 `CPerson` 생성자에 대 한 포인터는 `char`, 프레임 할당 문은입니다.  
+     경우에 대 한 인수는 `CPerson` 생성자에 대 한 포인터는 **char**, 프레임 할당 문은입니다.  
   
      [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]  
   

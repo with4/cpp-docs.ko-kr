@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872990"
 ---
 # <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>도구 모음 표시 또는 숨기기(아이콘에 대한 이미지 편집기)
 많은 그리기 도구를 사용할 수 있기 때문는 [키보드](../windows/accelerator-keys-image-editor-for-icons.md), 이미지 편집기 도구 모음을 숨기려면 경우가 유용 합니다.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881912"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>아이콘 및 커서: 디스플레이 장치용 이미지 리소스(아이콘에 대한 이미지 편집기)
 아이콘 및 커서는 다양한 유형의 디스플레이 장치에 맞는 다양한 크기 및 색 구성표의 여러 이미지를 포함할 수 있는 그래픽 리소스입니다. 또한 커서에는 Windows에서 해당 위치를 추적하는 데 사용하는 위치인 "핫스팟"이 있습니다. 비트맵 및 기타 이미지와 마찬가지로 아이콘과 커서는 모두 이미지 편집기를 사용하여 생성하고 편집할 수 있습니다.  

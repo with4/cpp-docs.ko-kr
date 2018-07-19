@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689378"
 ---
 # <a name="2727-copyin"></a>2.7.2.7 copyin
 **copyin** 절에 동일한 값을 할당 하는 메커니즘을 제공 **threadprivate** 병렬 영역을 실행 하는 팀에서 각 스레드에 대 한 변수입니다. 에 지정 된 각 변수에 대해는 **copyin** 병렬 영역 맨 앞에 스레드 전용 복사본에 할당 하 여 마치 절, 팀의 마스터 스레드에의 변수 값을 복사 합니다. 구문은 **copyin** 절은 다음과 같습니다.  

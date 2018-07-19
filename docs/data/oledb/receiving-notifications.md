@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112318"
 ---
 # <a name="receiving-notifications"></a>알림 수신
 OLE DB 이벤트가 발생할 때 알림을 수신 하기 위한 인터페이스를 제공 합니다. 에 설명 되어 [OLE DB 개체 알림](https://msdn.microsoft.com/en-us/library/ms725406.aspx) 에 *OLE DB Programmer's Reference*합니다. 이러한 이벤트의 설정은 표준 COM 연결 지점 메커니즘을 사용 합니다. ATL 개체를 통해 이벤트를 검색 하는 예를 들어 `IRowsetNotify` 구현 하는 `IRowsetNotify` 인터페이스를 추가 하 여 `IRowsetNotify` 파생 된 클래스 목록 및를 통해 노출 하는 **COM_INTERFACE_ENTRY** 매크로입니다.  

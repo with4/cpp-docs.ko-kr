@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385529"
 ---
 # <a name="significant-characters-with-external-linkage"></a>외부 링크가 있는 중요한 문자
 **ANSI 3.1.2** 외부 링크가 있는 중요한 문자 수  

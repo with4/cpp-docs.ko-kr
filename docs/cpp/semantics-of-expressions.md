@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424131"
 ---
 # <a name="semantics-of-expressions"></a>식의 의미
 식은 해당 연산자의 그룹화 및 우선 순위에 따라 계산됩니다. ([연산자 우선순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md) 에 [어휘 규칙](../cpp/lexical-conventions.md), 연산자가 식에 적용 하는 c + + 관계를 표시 합니다.)  

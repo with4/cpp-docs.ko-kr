@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692940"
 ---
 # <a name="copyprivate"></a>copyprivate
 하나 이상의 변수 모든 스레드 간에 공유 되지 않아야 지정 합니다.  

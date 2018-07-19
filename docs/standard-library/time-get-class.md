@@ -48,11 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c3db9edd974d111881b17b6f1a53c1b4ac3b336
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d0ab896860d1e759b5ad1df6bb23e93f42d28f9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960133"
 ---
 # <a name="timeget-class"></a>time_get 클래스
 
@@ -68,9 +69,11 @@ class time_get : public time_base;
 
 ### <a name="parameters"></a>매개 변수
 
-`CharType` 문자를 인코딩하기 위해 프로그램 내 사용 유형입니다.
+*CharType*  
+ 문자를 인코딩하기 위해 프로그램 내 사용하는 형식
 
-`InputIterator` 시간 값을 읽어올 반복기입니다.
+*InputIterator*  
+ 시간 값을 읽어올 반복기입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -142,7 +145,7 @@ dateorder date_order() const;
 
 구성원 함수는 [do_date_order](#do_date_order)를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // time_get_date_order.cpp
@@ -202,7 +205,7 @@ virtual dateorder do_date_order() const;
 
 보호된 가상 구성원 함수는 [do_get_date](#do_get_date)를 통해 날짜 구성 요소 일치를 확인하는 순서를 설명하는 **time_base::dateorder** 형식의 값을 반환합니다. 이 구현에서 값은 1979년 12월 2일 형식의 날짜에 해당하는 **time_base::mdy**입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `do_date_order`를 호출하는 [date_order](#date_order)에 대한 예제를 참조하세요.
 
@@ -224,27 +227,27 @@ virtual iter_type
 
 ### <a name="parameters"></a>매개 변수
 
-`first` 변환할 시퀀스의 시작을 표시 하는 입력 반복기입니다.
+*첫 번째* 변환할 시퀀스의 시작을 나타내는 입력 반복기입니다.
 
-`last` 시퀀스의 끝을 나타내는 입력 반복기입니다.
+*마지막* 시퀀스의 끝을 나타내는 입력 반복기입니다.
 
-`iosbase` 스트림 개체입니다.
+*iosbase* 스트림 개체입니다.
 
-`state` Iosbase의 오류를 나타내기 위해 적절 한 비트 마스크 요소가 설정 되어 있는 필드입니다.
+*상태* iosbase에서 오류를 나타내도록 적절 한 비트 마스크 요소가 설정 되어 있는 필드입니다.
 
-`ptm` 시간을 저장할 시간 구조에 대 한 포인터입니다.
+*ptm* 에 저장할 시간 구조에 대 한 포인터입니다.
 
-`fmt` 변환 지정자 문자입니다.
+*fmt* 변환 지정자 문자입니다.
 
-`mod` 선택적 한정자 문자입니다.
+*mod* 선택적 한정자 문자입니다.
 
 ### <a name="return-value"></a>반환 값
 
-변환되지 않은 첫 번째 요소를 지정하는 반복기를 반환합니다. 변환 실패 시 `state`에 `ios_base::failbit`가 설정되고 `first`가 반환됩니다.
+변환되지 않은 첫 번째 요소를 지정하는 반복기를 반환합니다. 변환에 실패 하면 설정 `ios_base::failbit` 에 `state` 반환 *첫 번째*입니다.
 
 ### <a name="remarks"></a>설명
 
-범위의 요소를 더 많은 입력 또는 가상 멤버 함수는 변환 하 고 하나를 건너뛰고 [`first`, `last`)의 하나 이상의 멤버에 저장 된 값을 확인 하려면 `*pt`합니다. 변환 실패 시 `state`에 `ios_base::failbit`가 설정되고 `first`가 반환됩니다. 그렇지 않은 경우 함수는 변환되지 않은 첫 번째 요소를 지정하는 반복기를 반환합니다.
+요소 범위에서 더 많은 입력 또는 가상 멤버 함수는 변환 하 고 하나를 건너뜁니다 [`first`, `last`)의 하나 이상의 멤버에 저장 된 값을 확인 하려면 `*pt`합니다. 변환에 실패 하면 설정 `ios_base::failbit` 에 `state` 반환 *첫 번째*입니다. 그렇지 않은 경우 함수는 변환되지 않은 첫 번째 요소를 지정하는 반복기를 반환합니다.
 
 변환 지정자는 다음과 같습니다.
 
@@ -310,15 +313,20 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="parameters"></a>매개 변수
 
-`first` 변환할 시퀀스의 시작 주소를 지정 하는 입력된 반복기입니다.
+*first*  
+ 변환할 시퀀스의 시작 부분 주소를 지정하는 입력 반복기입니다.
 
-`last` 변환할 시퀀스의 끝을 주소 지정 하는 입력된 반복기입니다.
+*last*  
+ 변환할 시퀀스의 끝부분 주소를 지정하는 입력 반복기입니다.
 
-`iosbase` 형식 플래그는 집합을 나타내면 통화 기호는 선택 사항입니다. 그렇지 않으면가 필요 합니다.
+*iosbase*  
+ 집합이 통화 기호가 선택 사항임을 나타낼 때 사용하는 형식 플래그입니다. 그 외의 경우 통화 기호는 필수 항목입니다.
 
-`state` 작업의 성공 여부에 따라 스트림 상태에 대 한 적절 한 비트 마스크 요소를 설정 합니다.
+*state*  
+ 작업 성공 여부에 따라 스트림 상태에 대해 적절한 비트 마스크 요소를 설정합니다.
 
-`ptm` 날짜 정보는 저장 될 위치에 대 한 포인터입니다.
+*ptm*  
+ 날짜 정보를 저장할 위치에 대한 포인터입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -326,7 +334,7 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="remarks"></a>설명
 
-보호된 가상 구성원 함수는 비어 있지 않은 완전한 날짜 입력 필드를 인식할 때까지 시퀀스 [ `first`, `last`)에서 처음 시작되는 순차 요소 일치를 시도합니다. 경우 성공이 필드를 변환할 해당 하는 값에 해당 구성 요소와 **tm::tm\_mon**, **tm::tm\_일**, 및 **tm::tm\_연도** , 결과를 저장 하 고 `ptm->tm_mon`, `ptm->tm_day`, 및 `ptm->tm_year`각각. 이 함수는 날짜 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 그렇지 않으면 함수가 설정 `iosbase::failbit` 에서 `state`합니다. 그리고 유효한 날짜 입력 필드의 접두사를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 두 경우 모두 반환 값이 `last`와 같으면 함수는 `state`에서 `ios_base::eofbit`를 설정합니다.
+보호된 가상 구성원 함수는 비어 있지 않은 완전한 날짜 입력 필드를 인식할 때까지 시퀀스 [ `first`, `last`)에서 처음 시작되는 순차 요소 일치를 시도합니다. 경우 성공 하면이 필드를 변환할와 동일한 값 구성 요소와 **tm::tm\_mon**하십시오 **tm::tm\_일**, 및 **tm::tm\_연도** , 결과를 가져와 `ptm->tm_mon`를 `ptm->tm_day`, 및 `ptm->tm_year`, 각각. 이 함수는 날짜 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 함수를 설정 하는 고, 그렇지 `iosbase::failbit` 에 *상태*합니다. 그리고 유효한 날짜 입력 필드의 접두사를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 두 경우 모두 반환 값이 같으면 *마지막*, 함수 집합 `ios_base::eofbit` 에서 *상태*합니다.
 
 날짜 입력 필드의 형식은 로캘에 따라 달랄집니다. 기본 로캘의경우 날짜 입력 필드의 형식은 MMM DD, YYYY입니다. 여기서 각 항목의 의미는 다음과 같습니다.
 
@@ -338,7 +346,7 @@ virtual iter_type do_get_date(iter_type first,
 
 리터럴 공백 및 쉼표는 입력 시퀀스의 해당 요소와 일치해야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `do_get_date`를 호출하는 [get_date](#get_date)에 대한 예제를 참조하세요.
 
@@ -356,15 +364,20 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="parameters"></a>매개 변수
 
-`first` 변환할 시퀀스의 시작 주소를 지정 하는 입력된 반복기입니다.
+*first*  
+ 변환할 시퀀스의 시작 부분 주소를 지정하는 입력 반복기입니다.
 
-`last` 변환할 시퀀스의 끝을 주소 지정 하는 입력된 반복기입니다.
+*last*  
+ 변환할 시퀀스의 끝부분 주소를 지정하는 입력 반복기입니다.
 
-`iosbase` 사용 되지 않습니다.
+*iosbase*  
+ 사용되지 않습니다.
 
-`state` 작업의 성공 여부에 따라 스트림 상태에 대 한 적절 한 비트 마스크 요소를 설정 하는 출력 매개 변수입니다.
+*state*  
+ 작업 성공 여부에 따라 스트림 상태에 대해 적절한 비트 마스크 요소를 설정하는 출력 매개 변수입니다.
 
-`ptm` 월 정보는 저장 될 위치에 대 한 포인터입니다.
+*ptm*  
+ 월 정보를 저장할 포인터입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -372,11 +385,11 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="remarks"></a>설명
 
-보호된 가상 구성원 함수는 비어 있지 않은 완전한 월 입력 필드를 인식할 때까지 시퀀스 [ `first`, `last`)에서 처음 시작되는 순차 요소 일치를 시도합니다. 경우 성공적으로 변환이 필드는 구성 요소와 해당 값으로 **tm::tm\_mon**, 결과를 저장 하 고 `ptm->tm_mon`합니다. 이 함수는 월 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 그렇지 않으면 함수가 설정 `ios_base::failbit` 에 *상태*합니다. 그리고 유효한 월 입력 필드의 접두사를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 두 경우 모두 반환 값이 같은 경우 `last`, 함수 집합 `ios_base::eofbit` 에 *상태*합니다.
+보호된 가상 구성원 함수는 비어 있지 않은 완전한 월 입력 필드를 인식할 때까지 시퀀스 [ `first`, `last`)에서 처음 시작되는 순차 요소 일치를 시도합니다. 경우 성공 하면이 필드를 변환할 동일한 값으로 구성 요소 **tm::tm\_mon**에 결과를 가져와 `ptm->tm_mon`합니다. 이 함수는 월 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 함수를 설정 하는 고, 그렇지 `ios_base::failbit` 에 *상태*합니다. 그리고 유효한 월 입력 필드의 접두사를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 두 경우 모두 반환 값이 같으면 *마지막*, 함수 집합 `ios_base::eofbit` 에서 *상태*합니다.
 
 월 입력 필드는 1, 1월, 2, 2월 등의 로캘별 시퀀스 집합 중 가장 긴 항목과 일치하는 시퀀스입니다. 변환된 값은 1월 이후 지난 개월 수입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `do_get_monthname`을 호출하는 [get_monthname](#get_monthname)에 대한 예제를 참조하세요.
 
@@ -394,15 +407,20 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="parameters"></a>매개 변수
 
-`first` 변환할 시퀀스의 시작 주소를 지정 하는 입력된 반복기입니다.
+*first*  
+ 변환할 시퀀스의 시작 부분 주소를 지정하는 입력 반복기입니다.
 
-`last` 변환할 시퀀스의 끝을 주소 지정 하는 입력된 반복기입니다.
+*last*  
+ 변환할 시퀀스의 끝부분 주소를 지정하는 입력 반복기입니다.
 
-`iosbase` 사용 되지 않습니다.
+*iosbase*  
+ 사용되지 않습니다.
 
-`state` 작업의 성공 여부에 따라 스트림 상태에 대 한 적절 한 비트 마스크 요소를 설정 합니다.
+*state*  
+ 작업 성공 여부에 따라 스트림 상태에 대해 적절한 비트 마스크 요소를 설정합니다.
 
-`ptm` 날짜 정보는 저장 될 위치에 대 한 포인터입니다.
+*ptm*  
+ 날짜 정보를 저장할 위치에 대한 포인터입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -410,7 +428,7 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="remarks"></a>설명
 
-보호된 가상 구성원 함수는 비어 있지 않은 완전한 시간 입력 필드를 인식할 때까지 시퀀스[ `first`, `last`)에서 처음 시작되는 순차 요소 일치를 시도합니다. 경우 성공이 필드를 변환할 해당 하는 값에 해당 구성 요소와 **tm::tm_hour**, **tm::tm_min**, 및 **tm::tm_sec**, 에결과저장하고`ptm->tm_hour`, `ptm->tm_min`, 및 `ptm->tm_sec`각각. 이 함수는 시간 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 그렇지 않으면 함수가 설정 `ios_base::failbit` 에 *상태*합니다. 그리고 유효한 시간 입력 필드의 접두사를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 두 경우 모두 반환 값이 같은 경우 `last`, 함수 집합 `ios_base::eofbit` 에 *상태*합니다.
+보호된 가상 구성원 함수는 비어 있지 않은 완전한 시간 입력 필드를 인식할 때까지 시퀀스[ `first`, `last`)에서 처음 시작되는 순차 요소 일치를 시도합니다. 경우 성공 하면이 필드를 변환할와 동일한 값 구성 요소와 `tm::tm_hour`, `tm::tm_min`, 및 `tm::tm_sec`, 결과를 가져와 `ptm->tm_hour`를 `ptm->tm_min`, 및 `ptm->tm_sec`각각. 이 함수는 시간 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 함수를 설정 하는 고, 그렇지 `ios_base::failbit` 에 *상태*합니다. 그리고 유효한 시간 입력 필드의 접두사를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 두 경우 모두 반환 값이 같으면 *마지막*, 함수 집합 `ios_base::eofbit` 에서 *상태*합니다.
 
 이 구현에서 시간 입력 필드의 형식은 HH:MM:SS입니다. 여기서 각 항목의 의미는 다음과 같습니다.
 
@@ -422,7 +440,7 @@ virtual iter_type do_get_time(iter_type first,
 
 리터럴 콜론은 입력 시퀀스의 해당 요소와 일치해야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `do_get_time`을 호출하는 [get_time](#get_time)에 대한 예제를 참조하세요.
 
@@ -440,15 +458,20 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="parameters"></a>매개 변수
 
-`first` 변환할 시퀀스의 시작 주소를 지정 하는 입력된 반복기입니다.
+*first*  
+ 변환할 시퀀스의 시작 부분 주소를 지정하는 입력 반복기입니다.
 
-`last` 변환할 시퀀스의 끝을 주소 지정 하는 입력된 반복기입니다.
+*last*  
+ 변환할 시퀀스의 끝부분 주소를 지정하는 입력 반복기입니다.
 
-`iosbase` 형식 플래그는 집합을 나타내면 통화 기호는 선택 사항입니다. 그렇지 않으면가 필요 합니다.
+*iosbase*  
+ 집합이 통화 기호가 선택 사항임을 나타낼 때 사용하는 형식 플래그입니다. 그 외의 경우 통화 기호는 필수 항목입니다.
 
-`state` 작업의 성공 여부에 따라 스트림 상태에 대 한 적절 한 비트 마스크 요소를 설정 합니다.
+*state*  
+ 작업 성공 여부에 따라 스트림 상태에 대해 적절한 비트 마스크 요소를 설정합니다.
 
-`ptm` 요일 정보는 저장 될 위치에 대 한 포인터입니다.
+*ptm*  
+ 요일 정보를 저장할 포인터입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -456,11 +479,11 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="remarks"></a>설명
 
-보호된 가상 구성원 함수는 비어 있지 않은 완전한 요일 입력 필드를 인식할 때까지 시퀀스 [ `first`, `last`)의 `first`에서 시작되는 순차 요소 일치를 시도합니다. 경우 성공적으로 변환이 필드는 구성 요소와 해당 값으로 **tm::tm\_wday**, 결과를 저장 하 고 `ptm->tm_wday`합니다. 이 함수는 요일 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 그렇지 않으면 함수가 설정 `ios_base::failbit` 에 *상태*합니다. 그리고 유효한 요일 입력 필드의 접두사를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 두 경우 모두 반환 값이 같은 경우 `last`, 함수 집합 `ios_base::eofbit` 에 *상태*합니다.
+보호 된 가상 구성원 함수에서 시작 하는 순차 요소 일치를 시도 *첫 번째* 순서로 [ `first`, `last`) 비어 있지 않은 요일 입력 필드를 전체 인식할를 때까지 합니다. 경우 성공 하면이 필드를 변환할 동일한 값으로 구성 요소 **tm::tm\_wday**에 결과를 가져와 `ptm->tm_wday`합니다. 이 함수는 요일 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 함수를 설정 하는 고, 그렇지 `ios_base::failbit` 에 *상태*합니다. 그리고 유효한 요일 입력 필드의 접두사를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 두 경우 모두 반환 값이 같으면 *마지막*, 함수 집합 `ios_base::eofbit` 에서 *상태*합니다.
 
 요일 입력 필드는 일, 일요일, 월, 월요일 등의 로캘별 시퀀스 집합 중 가장 긴 항목과 일치하는 시퀀스입니다. 변환된 값은 일요일 이후 지난 일 수입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `do_get_weekday`를 호출하는 [get_weekday](#get_weekday)에 대한 예제를 참조하세요.
 
@@ -478,15 +501,20 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="parameters"></a>매개 변수
 
-`first` 변환할 시퀀스의 시작 주소를 지정 하는 입력된 반복기입니다.
+*first*  
+ 변환할 시퀀스의 시작 부분 주소를 지정하는 입력 반복기입니다.
 
-`last` 변환할 시퀀스의 끝을 주소 지정 하는 입력된 반복기입니다.
+*last*  
+ 변환할 시퀀스의 끝부분 주소를 지정하는 입력 반복기입니다.
 
-`iosbase` 형식 플래그는 집합을 나타내면 통화 기호는 선택 사항입니다. 그렇지 않으면가 필요 합니다.
+*iosbase*  
+ 집합이 통화 기호가 선택 사항임을 나타낼 때 사용하는 형식 플래그입니다. 그 외의 경우 통화 기호는 필수 항목입니다.
 
-`state` 작업의 성공 여부에 따라 스트림 상태에 대 한 적절 한 비트 마스크 요소를 설정 합니다.
+*state*  
+ 작업 성공 여부에 따라 스트림 상태에 대해 적절한 비트 마스크 요소를 설정합니다.
 
-`ptm` 연도 정보는 저장 될 위치에 대 한 포인터입니다.
+*ptm*  
+ 연도 정보를 저장할 위치에 대한 포인터입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -494,11 +522,11 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="remarks"></a>설명
 
-보호된 가상 구성원 함수는 비어 있지 않은 완전한 연도 입력 필드를 인식할 때까지 시퀀스[ `first`, `last`)의 `first`에서 시작되는 순차 요소 일치를 시도합니다. 경우 성공적으로 변환이 필드는 구성 요소와 해당 값으로 **tm::tm\_연도**, 결과를 저장 하 고 `ptm->tm_year`합니다. 이 함수는 연도 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 그렇지 않으면 함수가 설정 `ios_base::failbit` 에 *상태*합니다. 그리고 유효한 연도 입력 필드의 접두사를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 두 경우 모두 반환 값이 같은 경우 `last`, 함수 집합 `ios_base::eofbit` 에 *상태*합니다.
+보호 된 가상 구성원 함수에서 시작 하는 순차 요소 일치를 시도 *첫 번째* 순서로 [ `first`, `last`) 비어 있지 않은 연도 입력 필드를 전체 인식할를 때까지 합니다. 경우 성공 하면이 필드를 변환할 동일한 값으로 구성 요소 **tm::tm\_연도**, 결과를 가져와 `ptm->tm_year`합니다. 이 함수는 연도 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 함수를 설정 하는 고, 그렇지 `ios_base::failbit` 에 *상태*합니다. 그리고 유효한 연도 입력 필드의 접두사를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다. 두 경우 모두 반환 값이 같으면 *마지막*, 함수 집합 `ios_base::eofbit` 에서 *상태*합니다.
 
 연도 입력 필드는 해당하는 숫자 값이 [1900, 2036) 범위에 있어야 하는 10진수 시퀀스입니다. 이 값에서 1900을 뺀 값이 저장됩니다. 이 구현에서는 [69, 136) 범위의 값이 연도 범위 [1969, 2036)을 나타냅니다. [0, 69) 범위의 값도 사용 가능하지만 이 값은 특정 변환 환경에 따라 연도 범위 [1900, 1969) 또는 [2000, 2069)를 나타낼 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `do_get_year`를 호출하는 [get_year](#get_year)에 대한 예제를 참조하세요.
 
@@ -528,23 +556,32 @@ iter_type get(
 
 ### <a name="parameters"></a>매개 변수
 
-`first` 변환할 시퀀스의 시작 위치를 나타내는 입력된 반복기입니다.
+*first*  
+ 변환할 시퀀스의 시작 위치를 나타내는 입력 반복기입니다.
 
-`last` 변환할 시퀀스의 끝을 나타내는 입력된 반복기입니다.
+*last*  
+ 변환할 시퀀스의 끝 부분을 나타내는 입력 반복기입니다.
 
-`iosbase` 스트림입니다.
+*iosbase*  
+ 스트림입니다.
 
-`state` 스트림 상태가 오류에 대 한 적절 한 비트 마스크 요소가 설정 됩니다.
+*state*  
+ 적절한 비트 마스크 요소는 스트림 상태가 오류를 나타내도록 설정됩니다.
 
-`ptm` 시간은 저장할 수 있는 구조에 대 한 포인터입니다.
+*ptm*  
+ 시간을 저장할 시간 구조에 대한 포인터입니다.
 
-`fmt` 변환 지정자 문자입니다.
+*fmt*  
+ 변환 지정자 문자입니다.
 
-`mod` 선택적 한정자 문자입니다.
+*mod*  
+ 선택적 한정자 문자입니다.
 
-`fmt_first` 형식 지시문의 시작 위치를 가리킵니다.
+*fmt_first*  
+ 형식 지시문의 시작 위치를 가리킵니다.
 
-`fmt_last` 형식 지시문의 끝을 가리킵니다.
+*fmt_last*  
+ 형식 지시문의 끝을 가리킵니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -556,11 +593,11 @@ iter_type get(
 
 두 번째 구성원 함수는 `[fmt_first, fmt_last)`로 구분된 형식에 의해 제어되는 `do_get`을 호출합니다. 형식을 필드 시퀀스로 취급하며, 각 필드는 `[first, last)`로 구분된 0개 이상의 입력 요소의 변환을 결정합니다. 변환되지 않은 첫 번째 요소를 지정하는 반복기를 반환합니다. 다음과 같이 세 종류의 필드가 있습니다.
 
-퍼센트 (%) 형식으로의 선택적 한정자 뒤 `mod` 집합 [EOQ #], 입력 한 다음 변환 지정자 `fmt`, 대체 `first` 에서 반환 된 값을 가진 `do_get(first, last, iosbase, state, ptm, fmt, mod)`합니다. 변환에 실패하면 `state`에서 `ios_base::failbit`이 설정되고 반환됩니다.
+선택적 한정자 뒤에 형식으로 리디렉션되어 (%) *mod* 집합 [EOQ #]에 뒤에 변환 지정자 *fmt*, 대체 *첫 번째* 반환 하는 값을 사용 하 여 `do_get(first, last, iosbase, state, ptm, fmt, mod)`. 변환에 실패 하면 설정 `ios_base::failbit` 에 *상태* 반환 합니다.
 
 이 형식에 있는 공백 요소는 0개 이상의 입력 공백 요소를 건너뜁니다.
 
-이 형식에 있는 다른 모든 요소는 건너뛰는 그 다음 입력 요소와 일치해야 합니다. 일치하지 않으면 `state`에서 `ios_base::failbit`이 설정되고 반환됩니다.
+이 형식에 있는 다른 모든 요소는 건너뛰는 그 다음 입력 요소와 일치해야 합니다. 일치 하지 않으면 설정 `ios_base::failbit` 에 *상태* 반환 합니다.
 
 ## <a name="get_date"></a>  time_get::get_date
 
@@ -576,15 +613,20 @@ iter_type get_date(iter_type first,
 
 ### <a name="parameters"></a>매개 변수
 
-`first` 변환할 시퀀스의 시작 주소를 지정 하는 입력된 반복기입니다.
+*first*  
+ 변환할 시퀀스의 시작 부분 주소를 지정하는 입력 반복기입니다.
 
-`last` 변환할 시퀀스의 끝을 주소 지정 하는 입력된 반복기입니다.
+*last*  
+ 변환할 시퀀스의 끝부분 주소를 지정하는 입력 반복기입니다.
 
-`iosbase` 형식 플래그는 집합을 나타내면 통화 기호는 선택 사항입니다. 그렇지 않으면가 필요 합니다.
+*iosbase*  
+ 집합이 통화 기호가 선택 사항임을 나타낼 때 사용하는 형식 플래그입니다. 그 외의 경우 통화 기호는 필수 항목입니다.
 
-`state` 작업의 성공 여부에 따라 스트림 상태에 대 한 적절 한 비트 마스크 요소를 설정 합니다.
+*state*  
+ 작업 성공 여부에 따라 스트림 상태에 대해 적절한 비트 마스크 요소를 설정합니다.
 
-`ptm` 날짜 정보는 저장 될 위치에 대 한 포인터입니다.
+*ptm*  
+ 날짜 정보를 저장할 위치에 대한 포인터입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -592,11 +634,11 @@ iter_type get_date(iter_type first,
 
 ### <a name="remarks"></a>설명
 
-구성원 함수는 [do_get_date](#do_get_date)( `first`, `last`, `iosbase`, `state`, `ptm`)를 반환합니다.
+멤버 함수는 반환 [do_get_date](#do_get_date)(`first`, `last`에 `iosbase`를 `state`, `ptm`).
 
 월은 0~11 범위로 계산됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // time_get_get_date.cpp
@@ -665,15 +707,20 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="parameters"></a>매개 변수
 
-`first` 변환할 시퀀스의 시작 주소를 지정 하는 입력된 반복기입니다.
+*first*  
+ 변환할 시퀀스의 시작 부분 주소를 지정하는 입력 반복기입니다.
 
-`last` 변환할 시퀀스의 끝을 주소 지정 하는 입력된 반복기입니다.
+*last*  
+ 변환할 시퀀스의 끝부분 주소를 지정하는 입력 반복기입니다.
 
-`iosbase` 사용 되지 않습니다.
+*iosbase*  
+ 사용되지 않습니다.
 
-`state` 작업의 성공 여부에 따라 스트림 상태에 대 한 적절 한 비트 마스크 요소를 설정 하는 출력 매개 변수입니다.
+*state*  
+ 작업 성공 여부에 따라 스트림 상태에 대해 적절한 비트 마스크 요소를 설정하는 출력 매개 변수입니다.
 
-`ptm` 월 정보는 저장 될 위치에 대 한 포인터입니다.
+*ptm*  
+ 월 정보를 저장할 포인터입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -681,9 +728,9 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="remarks"></a>설명
 
-구성원 함수는 [do_get_monthname](#do_get_monthname)( `first`, `last`, `iosbase`, `state`, `ptm`)을 반환합니다.
+멤버 함수는 반환 [do_get_monthname](#do_get_monthname)(`first`, `last`에 `iosbase`를 `state`, `ptm`).
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // time_get_get_monthname.cpp
@@ -752,15 +799,20 @@ iter_type get_time(iter_type first,
 
 ### <a name="parameters"></a>매개 변수
 
-`first` 변환할 시퀀스의 시작 주소를 지정 하는 입력된 반복기입니다.
+*first*  
+ 변환할 시퀀스의 시작 부분 주소를 지정하는 입력 반복기입니다.
 
-`last` 변환할 시퀀스의 끝을 주소 지정 하는 입력된 반복기입니다.
+*last*  
+ 변환할 시퀀스의 끝부분 주소를 지정하는 입력 반복기입니다.
 
-`iosbase` 사용 되지 않습니다.
+*iosbase*  
+ 사용되지 않습니다.
 
-`state` 작업의 성공 여부에 따라 스트림 상태에 대 한 적절 한 비트 마스크 요소를 설정 합니다.
+*state*  
+ 작업 성공 여부에 따라 스트림 상태에 대해 적절한 비트 마스크 요소를 설정합니다.
 
-`ptm` 날짜 정보는 저장 될 위치에 대 한 포인터입니다.
+*ptm*  
+ 날짜 정보를 저장할 위치에 대한 포인터입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -768,9 +820,9 @@ iter_type get_time(iter_type first,
 
 ### <a name="remarks"></a>설명
 
-구성원 함수는 [do_get_time](#do_get_time)( `first`, `last`, `iosbase`, `state`, `ptm`)을 반환합니다.
+멤버 함수는 반환 [do_get_time](#do_get_time)(`first`, `last`에 `iosbase`를 `state`, `ptm`).
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // time_get_get_time.cpp
@@ -828,15 +880,20 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="parameters"></a>매개 변수
 
-`first` 변환할 시퀀스의 시작 주소를 지정 하는 입력된 반복기입니다.
+*first*  
+ 변환할 시퀀스의 시작 부분 주소를 지정하는 입력 반복기입니다.
 
-`last` 변환할 시퀀스의 끝을 주소 지정 하는 입력된 반복기입니다.
+*last*  
+ 변환할 시퀀스의 끝부분 주소를 지정하는 입력 반복기입니다.
 
-`iosbase` 형식 플래그는 집합을 나타내면 통화 기호는 선택 사항입니다. 그렇지 않으면가 필요 합니다.
+*iosbase*  
+ 집합이 통화 기호가 선택 사항임을 나타낼 때 사용하는 형식 플래그입니다. 그 외의 경우 통화 기호는 필수 항목입니다.
 
-`state` 작업의 성공 여부에 따라 스트림 상태에 대 한 적절 한 비트 마스크 요소를 설정 합니다.
+*state*  
+ 작업 성공 여부에 따라 스트림 상태에 대해 적절한 비트 마스크 요소를 설정합니다.
 
-`ptm` 요일 정보는 저장 될 위치에 대 한 포인터입니다.
+*ptm*  
+ 요일 정보를 저장할 포인터입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -844,9 +901,9 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="remarks"></a>설명
 
-구성원 함수는 [do_get_weekday](#do_get_weekday)( `first`, `last`, `iosbase`, `state`, `ptm`)를 반환합니다.
+멤버 함수는 반환 [do_get_weekday](#do_get_weekday)(`first`, `last`에 `iosbase`를 `state`, `ptm`).
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // time_get_get_weekday.cpp
@@ -900,15 +957,20 @@ iter_type get_year(iter_type first,
 
 ### <a name="parameters"></a>매개 변수
 
-`first` 변환할 시퀀스의 시작 주소를 지정 하는 입력된 반복기입니다.
+*first*  
+ 변환할 시퀀스의 시작 부분 주소를 지정하는 입력 반복기입니다.
 
-`last` 변환할 시퀀스의 끝을 주소 지정 하는 입력된 반복기입니다.
+*last*  
+ 변환할 시퀀스의 끝부분 주소를 지정하는 입력 반복기입니다.
 
-`iosbase` 형식 플래그는 집합을 나타내면 통화 기호는 선택 사항입니다. 그렇지 않으면가 필요 합니다.
+*iosbase*  
+ 집합이 통화 기호가 선택 사항임을 나타낼 때 사용하는 형식 플래그입니다. 그 외의 경우 통화 기호는 필수 항목입니다.
 
-`state` 작업의 성공 여부에 따라 스트림 상태에 대 한 적절 한 비트 마스크 요소를 설정 합니다.
+*state*  
+ 작업 성공 여부에 따라 스트림 상태에 대해 적절한 비트 마스크 요소를 설정합니다.
 
-`ptm` 연도 정보는 저장 될 위치에 대 한 포인터입니다.
+*ptm*  
+ 연도 정보를 저장할 위치에 대한 포인터입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -916,9 +978,9 @@ iter_type get_year(iter_type first,
 
 ### <a name="remarks"></a>설명
 
-구성원 함수는 [do_get_year](#do_get_year)( `first`, `last`, `iosbase`, `state`, `ptm`)를 반환합니다.
+멤버 함수는 반환 [do_get_year](#do_get_year)(`first`, `last`에 `iosbase`를 `state`, `ptm`).
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // time_get_get_year.cpp
@@ -981,11 +1043,12 @@ explicit time_get(size_t refs = 0);
 
 ### <a name="parameters"></a>매개 변수
 
-`refs` 개체에 대 한 메모리 관리의 유형을 지정 하는 데 사용 되는 정수 값입니다.
+*refs*  
+ 개체에 대한 메모리 관리 형식을 지정하는 데 사용하는 정수값입니다.
 
 ### <a name="remarks"></a>설명
 
-`refs` 매개 변수에 대해 사용 가능한 값과 해당 중요도는 다음과 같습니다.
+에 대 한 가능한 값을 *refs* 매개 변수 및 중요성은:
 
 - 0: 개체를 포함하는 로캘에 의해 개체의 수명이 관리됩니다.
 
@@ -995,7 +1058,7 @@ explicit time_get(size_t refs = 0);
 
 소멸자는 보호되므로 직접적인 예제는 확인할 수 없습니다.
 
-생성자는 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `refs`)를 통해 해당 기준 개체를 초기화합니다.
+생성자를 통해 해당 기준 개체를 초기화 **locale::**[패싯](../standard-library/locale-class.md#facet_class)(`refs`).
 
 ## <a name="see-also"></a>참고자료
 

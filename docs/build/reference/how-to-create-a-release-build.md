@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370878"
 ---
 # <a name="how-to-create-a-release-build"></a>방법: 릴리스 빌드 만들기
 ### <a name="to-generate-a-release-build-of-your-program"></a>프로그램의 릴리스 빌드를 생성 하려면  

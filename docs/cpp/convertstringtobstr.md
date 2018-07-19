@@ -16,33 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6dbf91f2d354bf3a68ce0f251bc6b5d9675af7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2683daf4fd1293d3fad043037165fa3cbc13de3c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943171"
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
 **Microsoft 전용**  
   
- 변환 된 **char \***  값을 한 `BSTR`합니다.  
+ 변환 된 **char \***  값을 `BSTR`합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
   
-      BSTR __stdcall ConvertStringToBSTR(  
-   const char* pSrc  
-)  
+BSTR __stdcall ConvertStringToBSTR(const char* pSrc)  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `pSrc`  
+ *pSrc*  
  A **char \***  변수입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp 
 // ConvertStringToBSTR.cpp  
 #include <comutil.h>  
 #include <stdio.h>  
@@ -71,7 +70,7 @@ BSTR text: Test
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<comutil.h >  
   
- **Lib:** 에서는 comsuppw.lib 또는 comsuppwd.lib (참조 [/zc: wchar_t (wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 자세한 내용은)  
+ **Lib:** comsuppw.lib 또는 comsuppwd.lib (참조 [/zc: wchar_t (wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 자세한)  
   
 ## <a name="see-also"></a>참고 항목  
  [컴파일러 COM 전역 함수](../cpp/compiler-com-global-functions.md)

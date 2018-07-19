@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380175"
 ---
 # <a name="special-characters-in-macros"></a>매크로의 특수 문자
 숫자 기호 (#) 후 정의 설명을 지정 합니다. 매크로에서 리터럴 숫자 기호를 지정 하려면 사용 하 여 캐럿 (^)에서 같이 ^ #.  

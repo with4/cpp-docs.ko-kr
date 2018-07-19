@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169857"
 ---
 # <a name="compiler-error-c2251"></a>컴파일러 오류 C2251
 네임스페이스 'namespace'에 멤버 'member'가 없습니다. 'member'를 사용하시겠습니까?  

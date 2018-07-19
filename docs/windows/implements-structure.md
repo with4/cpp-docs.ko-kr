@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880921"
 ---
 # <a name="implements-structure"></a>Implements 구조체
 지정된 인터페이스에 대해 QueryInterface 및 GetIid를 구현합니다.  

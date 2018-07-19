@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264209"
 ---
 # <a name="compiler-error-c3718"></a>컴파일러 오류 C3718
 'event' 받는 클래스의 멤버 함수의 컨텍스트에서 호출할 수 있습니다.  

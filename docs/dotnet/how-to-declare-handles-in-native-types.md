@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130973"
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>방법: 네이티브 형식으로 핸들 선언
 네이티브 형식에 핸들 형식을 선언할 수 없습니다. vcclr.h 형식이 안전한 래퍼 템플릿을 제공 `gcroot` c + + 힙에서 CLR 개체를 참조 하려면. 이 서식 파일을 사용 하 여 네이티브 형식에 가상 핸들을 포함 하 고 기본 형식인 것으로 취급할 수 있습니다. 대부분의 경우에서 사용할 수 있습니다는 `gcroot` 캐스팅 없이 포함 된 형식으로 개체입니다. 그러나 [각 항목에 대해에서](../dotnet/for-each-in.md)를 사용 해야 `static_cast` 를 기본 관리 되는 참조를 검색 합니다.  

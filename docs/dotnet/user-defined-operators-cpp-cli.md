@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33174152"
 ---
 # <a name="user-defined-operators-ccli"></a>사용자 정의 연산자(C++/CLI)
 정적 멤버 또는 인스턴스 멤버 또는 전역 범위에서 관리 되는 형식에 대 한 사용자 정의 연산자는 허용 됩니다. 그러나 정적 연산자만는 Visual c + + 이외의 언어로 작성 된 클라이언트에 메타 데이터를 통해 액세스할 수 있습니다.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086950"
 ---
 # <a name="default-namespace"></a>default 네임스페이스
 `default` 네임 스페이스 범위에서 C + 지원 되는 기본 제공 형식 + CX 합니다.  

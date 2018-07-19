@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318014"
 ---
 # <a name="nmake-fatal-error-u1088"></a>NMAKE 심각한 오류 U1088
 잘못 된 구분 기호 ':: ' 유추 규칙에  

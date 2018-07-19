@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876068"
 ---
 # <a name="hstringattach-method"></a>HString::Attach 메서드
 현재 HString 개체가 지정 된 HString 개체를 연결합니다.  

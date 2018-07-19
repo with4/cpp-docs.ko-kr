@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373831"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT(파이버 안전 스레드 로컬 저장소 지원)
 정적 스레드 로컬 저장소를 사용 하 여 할당 하는 데이터 즉,를 사용 하 여 할당 한 데이터의 파이버 안전을 지원 `__declspec(thread)`합니다.  

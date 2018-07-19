@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872317"
 ---
 # <a name="entry"></a>entry
 DLL의 진입점을 식별 하 여 모듈에서 내보낸된 함수 또는 상수를 지정 합니다.  

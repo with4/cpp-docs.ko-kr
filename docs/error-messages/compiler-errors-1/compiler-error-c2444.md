@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196534"
 ---
 # <a name="compiler-error-c2444"></a>컴파일러 오류 C2444
 'identifier': ANSI 프로토타입이 사용되었습니다. '{' 또는 ';'이 있어야 하는데 'type'이 있습니다.  

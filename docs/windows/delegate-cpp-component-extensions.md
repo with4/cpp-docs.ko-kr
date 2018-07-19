@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879661"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate(C++ 구성 요소 확장)
 함수 포인터를 나타내는 형식을 선언 합니다.  

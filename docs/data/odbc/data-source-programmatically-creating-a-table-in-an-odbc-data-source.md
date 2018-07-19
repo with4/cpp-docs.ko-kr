@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090512"
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>데이터 소스: ODBC 데이터 소스에서 프로그래밍 방식으로 테이블 작성
 이 항목에서는 데이터에 대 한 테이블을 만드는 방법을 설명 소스를 사용 하 여는 `ExecuteSQL` 클래스의 멤버 함수 `CDatabase`, 함수가 포함 된 문자열을 전달는 **CREATE TABLE** SQL 문입니다.  

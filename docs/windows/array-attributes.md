@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854469"
 ---
 # <a name="array-attributes"></a>배열 특성
 배열에는 다음과 같은 특성이 적용 또는 **SAFEARRAY**s입니다.  

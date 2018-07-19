@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088305"
 ---
 # <a name="platformoutofboundsexception-class"></a>Platform::OutOfBoundsException 클래스
 작업이 유효한 범위를 벗어난 데이터에 액세스하려고 하면 throw됩니다.  

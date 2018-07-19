@@ -15,18 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ee906061c7b51ade818b164c1d371a88ef3d462
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bec66d25be2cb56c75f42f60af2ccd5e3f759ad
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944797"
 ---
 # <a name="transfers-of-control"></a>컨트롤 전송
-사용할 수 있습니다는 `goto` 문 또는 **대/소문자** 이라는 레이블이 `switch` 이니셜라이저 지난 분기 하는 프로그램을 지정 하는 문입니다. 이 같은 코드는 이니셜라이저를 포함한 선언이 점프 명령문이 있는 블록이 둘러싼 블록에 없는 경우 올바르지 않습니다.  
+사용할 수 있습니다는 **goto** 문 또는 **사례** 레이블을 **전환** 분기가 이니셜라이저를 지나는 프로그램을 지정 하는 문. 이 같은 코드는 이니셜라이저를 포함한 선언이 점프 명령문이 있는 블록이 둘러싼 블록에 없는 경우 올바르지 않습니다.  
   
- 다음 예제에서는 `total`, `ch` 및 `i` 개체를 선언하고 초기화하는 루프를 보여 줍니다. 또한 이니셜라이저를 지나 컨트롤을 전송하는 잘못된 `goto` 문이 있습니다.  
+ 다음 예제에서는 `total`, `ch` 및 `i` 개체를 선언하고 초기화하는 루프를 보여 줍니다. 이기도 잘못 된 **goto** 이니셜라이저를 지나는 제어를 전송 하는 문입니다.  
   
-```  
+```cpp 
 // transfers_of_control.cpp  
 // compile with: /W1  
 // Read input until a nonnumeric character is entered.  
@@ -56,7 +57,7 @@ int main()
 }  
 ```  
   
- 위의 예제에서 `goto` 문은 `i`의 초기화를 지나 컨트롤을 전송합니다. 단, `i`가 선언되었지만 초기화되지 않은 경우 전송은 유효합니다.  
+ 앞의 예제에는 **goto** 문은의 초기화를 지 나 컨트롤을 전송할 `i`합니다. 단, `i`가 선언되었지만 초기화되지 않은 경우 전송은 유효합니다.  
   
- 개체 `total` 및 `ch`역할을 하는 블록에 선언 된는 *문을* 의 `while` 문을 사용 하 여 해당 블록을 종료할 때 삭제 됩니다는 `break` 문.  
+ 개체 `total` 및 `ch`역할을 하는 블록에서 선언 된를 *문을* 의 **하는 동안** 문을 사용 하 여 해당 블록이 종료 될 때 제거 되는  **나누기** 문입니다.  
   

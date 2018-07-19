@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358901"
 ---
 # <a name="stock-properties-atl-control-wizard"></a>스톡 속성, ATL 컨트롤 마법사
 마법사의이 페이지는 컨트롤에 대해 지 원하는 스톡 속성을 식별 합니다. 기본적으로 속성이 식별 됩니다.  

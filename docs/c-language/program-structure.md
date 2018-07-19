@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385958"
 ---
 # <a name="program-structure"></a>프로그램 구조
 이 단원에서는 C 프로그램 및 프로그램 실행에 대해 간략하게 설명합니다. 또한 C 프로그램 및 구성 요소를 이해하는 데 중요한 기능과 용어도 소개합니다. 여기서 설명하는 항목은 다음과 같습니다.  

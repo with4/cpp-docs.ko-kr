@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea8f2585a1e385795a42c745aa95e180c6bb352
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03964b224603d86064290aa68344c828c2630a17
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944500"
 ---
 # <a name="interface"></a>__interface
 **Microsoft 전용**  
@@ -43,36 +44,35 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-modifier  
- __interface interface-name {interface-definition};  
+modifier __interface interface-name {interface-definition};  
 ```  
   
 ## <a name="remarks"></a>설명  
- C + + [클래스](../cpp/class-cpp.md) 또는 [구조체](../cpp/struct-cpp.md) 로 이러한 규칙을 구현할 수 있지만 `__interface` 적용 합니다.  
+ C + + [클래스](../cpp/class-cpp.md) 또는 [구조체](../cpp/struct-cpp.md) 이러한 규칙을 사용 하 여 구현할 수 있지만 **__interface** 적용 합니다.  
   
  예를 들어 다음은 샘플 인터페이스 정의입니다.  
   
-```  
+```cpp 
 __interface IMyInterface {  
    HRESULT CommitX();  
    HRESULT get_X(BSTR* pbstrName);  
 };  
 ```  
   
- 관리 되는 인터페이스에 대 한 자세한 내용은 참조 [인터페이스 클래스](../windows/interface-class-cpp-component-extensions.md)합니다.  
+ 관리 되는 인터페이스에 대 한 내용은 참조 하세요 [인터페이스 클래스](../windows/interface-class-cpp-component-extensions.md)합니다.  
   
  `CommitX` 및 `get_X` 함수가 순수 가상 함수임을 명시적으로 나타낼 필요가 없습니다. 첫 번째 함수에 대한 동일한 선언은 다음과 같습니다.  
   
-```  
+```cpp 
 virtual HRESULT CommitX() = 0;  
 ```  
   
- `__interface` 의미는 [novtable](../cpp/novtable.md) `__declspec` 한정자입니다.  
+ **__interface** 것을 의미 합니다 [novtable](../cpp/novtable.md) **__declspec** 한정자입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 인터페이스에서 선언된 속성을 사용하는 방법을 보여 줍니다.  
   
-```  
+```cpp 
 // deriv_interface.cpp  
 #define _ATL_ATTRIBUTES 1  
 #include <atlbase.h>  

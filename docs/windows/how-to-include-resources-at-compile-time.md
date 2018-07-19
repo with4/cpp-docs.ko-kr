@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880153"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>방법: 컴파일 타임에 리소스 포함
 일반적으로 하나의 리소스 스크립트(.rc) 파일에서 모든 리소스의 기본 배열을 사용하는 것이 쉽고 편리합니다. 그러나에 추가할 수 있습니다 리소스 다른 파일에 있는 현재 프로젝트 컴파일 타임에 나열 된 **컴파일 타임 지시문** 상자에 [리소스 내용 대화 상자](../windows/resource-includes-dialog-box.md)합니다.  

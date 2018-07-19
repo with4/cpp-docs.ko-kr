@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385633"
 ---
 # <a name="using-ctooltipctrl"></a>CToolTipCtrl 사용
 [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) 클래스 응용 프로그램 도구의 용도 설명 하는 텍스트 한 줄을 표시 하는 작은 팝업 창 도구 설명 컨트롤의 기능을 캡슐화 합니다. 도구 설명에는 대부분의 사용자는 도구에 커서를 놓습니다 있고 그대로 있을 약 절반에 대 한 두 번째 경우에 표시 되는 시간 숨겨져 있습니다. 도구 설명 커서 옆에 표시 하 고 사용자가 마우스 단추를 클릭 하거나 도구에서 커서를 이동 하면 사라집니다.  

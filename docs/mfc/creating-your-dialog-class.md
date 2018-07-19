@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341912"
 ---
 # <a name="creating-your-dialog-class"></a>대화 상자 클래스 만들기
 프로그램의 각 대화 상자에 대 한 대화 상자 리소스를 사용 하는 새 대화 상자 클래스를 만듭니다.  

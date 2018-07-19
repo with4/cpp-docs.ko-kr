@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050976"
 ---
 # <a name="catstr"></a>@CatStr
 하나 이상의 문자열을 연결 하는 매크로 함수입니다. 문자열을 반환합니다.  

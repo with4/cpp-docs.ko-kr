@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298553"
 ---
 # <a name="bscmake-error-bk1517"></a>BSCMAKE 오류 BK1517
 /Yc 및 /Yu를 사용 하 여 컴파일된 sbrfile에 대 한 소스 파일  

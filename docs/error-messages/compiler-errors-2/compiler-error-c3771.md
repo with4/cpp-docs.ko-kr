@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272547"
 ---
 # <a name="compiler-error-c3771"></a>컴파일러 오류 C3771
 "identifier": 가장 가까운 네임스페이스 범위에서 friend 선언을 찾을 수 없습니다.  

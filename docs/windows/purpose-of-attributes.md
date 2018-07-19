@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877838"
 ---
 # <a name="purpose-of-attributes"></a>특성의 용도
 방향으로 현재는 가능 하지 c + + 언어의 기본 구조를 위반 하지 않고 확장 하는 특성입니다. 특성을 통해 공급자 (별도 Dll) 언어 기능을 동적으로 확장할 수 있습니다. 특성의 기본 목표는 간소화 구성 요소 개발자의 생산성 수준을 높여 외에도 COM 구성 요소를 작성 하는 것입니다. 특성을 적용할 수 클래스, 데이터 멤버 또는 멤버 함수 등 거의 모든 c + + 구문에 있습니다. 다음은이 새로운 기술에서 제공 하는 이점의 강조 표시입니다.  

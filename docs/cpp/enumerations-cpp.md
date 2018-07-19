@@ -20,17 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c02a7670456dff9c7e5a3dfd1583892d918d268
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75344e8fef933b493177f812b06edd3c187046f6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944818"
 ---
 # <a name="enumerations-c"></a>열거형(C++)
 열거형은 열거자라는 명명된 정수 상수 집합으로 구성된 사용자 정의 형식입니다.  
   
 > [!NOTE]
->  이 문서에서는 ISO 표준 C++ 언어 `enum` 형식과 C++11에 도입된 범위가 지정된(또는 강력한 형식의) `enum class` 형식을 다룹니다. 에 대 한 내용은 `public enum class` 또는 `private enum class` 형식에서 C + + /CLI 및 C + + /CX에서는 참조 [enum 클래스](../windows/enum-class-cpp-component-extensions.md)합니다.  
+>  이 문서에서는 ISO 표준 c + + 언어를 다룹니다 **enum** 종류와 범위가 지정 된 (또는 강력한 형식의) **enum 클래스** c++11에서 도입 된 형식입니다. 에 대 한 자세한를 **public enum 클래스** 또는 **개인 enum 클래스** 형식 C + + 및 C + + /CX에서는 참조 [enum 클래스](../windows/enum-class-cpp-component-extensions.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +46,7 @@ enum [class|struct]
 {enum-list};  
 ```  
   
-```  
+```cpp 
 // Forward declaration of enumerations  (C++11):  
 enum A : int; // non-scoped enum must have type specified
 enum class B; // scoped enum defaults to int but ...
@@ -53,17 +54,17 @@ enum class C : short;  // ... may have any integral underlying type
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- `identifier`  
+ *identifier*  
  열거형에 지정된 형식 이름입니다.  
   
- `type`  
+ *type*  
  열거자의 기본 형식이며, 모든 열거자는 동일한 기본 형식을 갖습니다. 모든 정수 계열 형식이 가능합니다.  
   
- `enum-list`  
- 열거형에서 열거자의 쉼표로 구분된 목록입니다. 범위에 있는 모든 열거자 또는 변수 이름은 고유해야 합니다. 하지만 값이 중복될 수 있습니다. 범위가 정해지지 않은 열거형에서 범위는 주변 범위이며 범위가 지정된 열거형에서 범위는 `enum-list` 자체입니다.  범위가 지정 된 열거형에 적용 된 새 정수 계열 형식을 정의 하는 목록 비어 있을 수 있습니다.
+ *enum 목록*  
+ 열거형에서 열거자의 쉼표로 구분된 목록입니다. 범위에 있는 모든 열거자 또는 변수 이름은 고유해야 합니다. 하지만 값이 중복될 수 있습니다. 범위가 지정 되지 않은 열거형에서 범위는 주변 범위가 지정 됩니다. 범위가 지정 된 열거형에서 범위는 합니다 *enum 목록* 자체입니다.  범위가 지정 된 열거형에서 실제로 정의 하는 새 정수 계열 형식 목록은 비어 있을 수 있습니다.
   
- `class`  
- 이 키워드를 선언에 사용하여, 열거형의 범위가 지정되고 `identifier`가 제공되도록 지정합니다. `struct` 키워드를 `class` 대신 사용할 수도 있습니다. 이 컨텍스트에서는 이러한 키워드의 의미 체계가 같기 때문입니다.  
+ *class*  
+ 열거형의 범위가 지정 지정할 선언에이 키워드를 사용 하면 및 *식별자* 제공 해야 합니다. 사용할 수도 있습니다는 **구조체** 대신 키워드 **클래스**처럼이 컨텍스트에서 의미상 동일 합니다.  
   
 ## <a name="enumerator-scope"></a>열거자 범위  
  열거형은 명명된 상수로 표현되고 열거자라고도 하는 값의 범위를 설명하기 위한 컨텍스트를 제공합니다. 원래 C 및 C++ 열거형 형식에서는 정규화되지 않은 열거자가 열거형이 선언되는 범위 전체에 표시됩니다. 범위가 지정된 열거형에서는 열거자 이름을 열거형 형식 이름으로 한정해야 합니다. 다음 예제에서는 두 가지 열거형의 이러한 기본적인 차이점을 보여 줍니다.  
@@ -112,7 +113,7 @@ enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
   
  ## <a name="casting-rules"></a>캐스팅 규칙  
   
- 범위가 지정되지 않은 열거형 상수를 `int`로 암시적으로 변환할 수 있지만, `int`는 열거형 값으로 암시적으로 변환할 수 없습니다. 다음 예제에서는 `hand`에 `Suit`가 아닌 값을 할당하면 어떻게 되는지를 보여 줍니다.  
+ 범위가 지정 되지 않은 열거형 상수를 암시적으로 변환할 수 있습니다 **int**, 되지만 **int** 열거형 값으로 암시적으로 변환할 되지 않습니다. 다음 예제에서는 `hand`에 `Suit`가 아닌 값을 할당하면 어떻게 되는지를 보여 줍니다.  
   
 ```cpp  
 int account_num = 135692;  
@@ -121,7 +122,7 @@ hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
   
 ```  
   
- `int`를 범위가 지정된 열거자 또는 범위가 지정되지 않은 열거자로 변환하려면 캐스팅해야 합니다. 캐스팅하지 않고 범위가 지정된 열거자를 정수 값으로 승격할 수 있습니다.  
+ 캐스트를 변환 해야 합니다.는 **int** 또는 범위가 지정 되지 않은 열거자입니다. 캐스팅하지 않고 범위가 지정된 열거자를 정수 값으로 승격할 수 있습니다.  
   
 ```cpp  
 int account_num = Hearts; //OK if Hearts is in a unscoped enum  
@@ -151,15 +152,15 @@ namespace ScopedEnumConversions
   
  선 `hand = account_num;`은 앞에서 보았듯이 범위가 지정되지 않은 열거형에 발생하는 오류를 초래합니다. 명시적 캐스트로 허용됩니다. 그러나 범위가 지정된 열거형을 사용하여 다음 문 `account_num = Suit::Hearts;`에서 시도된 변환은 명시적 캐스트 없이는 더 이상 허용되지 않습니다. 
 
-## <a name="enums-with-no-enumerators"></a>없는 열거자 열거형
-**Visual Studio 2017 버전 15.3 이상** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 명시적 기본 형식이 없는 열거자와는 enum (일반 또는 범위가 지정 된)를 정의 하 여 적용을 둘 수 있습니다는 새 하는 정수 계열 형식 다른 형식으로 암시적 변환이 있습니다. 기본 제공 기본 형식 대신이 형식을 사용 하 여 의도 하지 않은 암시적 변환으로 발생 하는 미묘한 오류에 대 한 가능성을 제거할 수 있습니다.  
+## <a name="enums-with-no-enumerators"></a>없는 열거자를 사용 하 여 열거형
+**Visual Studio 2017 버전 15.3 이상** (사용할 수 있습니다 [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): (일반 또는 범위가 지정 된) 열거형에 명시적 기본 형식 및 없습니다 열거자를 사용 하 여 정의 하 여 적용를 도입할 수 있습니다 새는 정수 계열 형식 다른 형식으로 암시적 변환이 있습니다. 기본 제공 기본 형식 대신이 형식을 사용 하 여 의도 하지 않은 암시적 변환으로 인 한 사소한 오류 가능성을 제거할 수 있습니다.  
 
 
 ```cpp
 enum class byte : unsigned char { };
 ```
 
-새 type 기본 형식으로의 정확한 복사본을 때문에 같은 호출 규칙 즉, 모든 성능 저하 없이 ABIs 간에 사용할 수 있습니다. 형식의 변수를 직접 목록 초기화를 사용 하 여 초기화 됩니다 캐스트는 필요 합니다. 다음 예제에서는 열거형을 다양 한 컨텍스트에서 없는 열거자로 초기화 하는 방법을 보여 줍니다.
+새 형식 기본 형식의 정확한 복사본이 있고 따라서 모든 성능 저하 없이 Abi에서 사용할 수 있습니다는 동일한 호출 규칙을 합니다. 형식의 변수를 직접 목록 초기화를 사용 하 여 초기화 됩니다 캐스트 안 함이 필요 합니다. 다음 예제에서는 다양 한 컨텍스트에서 없습니다 열거자를 사용 하 여 열거형을 초기화 하는 방법을 보여 줍니다.
 
 ```cpp
 enum class byte : unsigned char { };

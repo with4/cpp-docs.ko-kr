@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343365"
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>인터넷의 비동기 모니커
 인터넷은 속도가 느린 네트워크 액세스로 인해 응용 프로그램 디자인 하기 위해 새로운 접근 방식이 필요합니다. 응용 프로그램 사용자 인터페이스를 정지 하지 않도록를 비동기적으로 네트워크 액세스를 수행 해야 합니다. MFC 클래스 [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) 파일을 다운로드 하는 것에 대 한 비동기 지원을 제공 합니다.  

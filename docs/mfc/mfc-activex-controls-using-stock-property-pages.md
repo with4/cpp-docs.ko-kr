@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e8d54f87e4e018a004bbab503664fa1788f36c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5eb8dc1bbdc496072df829531b0f10aaaca069a8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932197"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC ActiveX 컨트롤: 스톡 속성 페이지 사용
 이 문서에서는 ActiveX 컨트롤 및 사용 하는 방법에 사용할 수 있는 스톡 속성 페이지에 설명 합니다.  
@@ -40,13 +41,13 @@ ms.lasthandoff: 05/04/2018
   
 -   [MFC ActiveX 컨트롤: 다른 사용자 지정 속성 페이지 추가](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
- MFC ActiveX 컨트롤 사용 하기 위한 세 가지 스톡 속성 페이지를 제공: **CLSID_CColorPropPage**, **CLSID_CFontPropPage**, 및 **CLSID_CPicturePropPage**합니다. 이러한 페이지는 각각 주식 색, 글꼴 및 그림 속성에 대 한 사용자 인터페이스를 표시 합니다.  
+ MFC ActiveX 컨트롤 사용 하기 위한 세 가지 스톡 속성 페이지를 제공: `CLSID_CColorPropPage`, `CLSID_CFontPropPage`, 및 `CLSID_CPicturePropPage`합니다. 이러한 페이지는 각각 주식 색, 글꼴 및 그림 속성에 대 한 사용자 인터페이스를 표시 합니다.  
   
  컨트롤에 이러한 속성 페이지를 통합 하려면 컨트롤의 속성 페이지 Id 배열을 초기화 하는 코드를 해당 Id를 추가 합니다. 다음 예제에서는이 코드는 컨트롤 구현 파일에 있는 (합니다. CPP)를 모두 세 개의 스톡 속성 페이지와 기본 속성 페이지를 포함 하도록 배열 초기화 (라는 `CMyPropPage` 이 예에서):  
   
  [!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/cpp/mfc-activex-controls-using-stock-property-pages_1.cpp)]  
   
- Count 속성의 페이지는 `BEGIN_PROPPAGEIDS` 매크로 4입니다. 이 ActiveX 컨트롤에서 지 원하는 속성 페이지의 수를 나타냅니다.  
+ BEGIN_PROPPAGEIDS 매크로의 속성 페이지의 수는 4를 참고 합니다. 이 ActiveX 컨트롤에서 지 원하는 속성 페이지의 수를 나타냅니다.  
   
  이러한 수정 사항을 적용 된 후 프로젝트를 다시 빌드하십시오. 컨트롤에는 이제 글꼴, 그림 및 색 속성에 대 한 속성 페이지에 있습니다.  
   

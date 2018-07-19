@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392499"
 ---
 # <a name="ismbb-routines"></a>_ismbb 루틴
 현재 로캘 또는 지정된 LC_CTYPE 변환 상태 범주를 사용하여 지정된 정수 값 `c` 를 특정 조건에 대해 테스트합니다.  

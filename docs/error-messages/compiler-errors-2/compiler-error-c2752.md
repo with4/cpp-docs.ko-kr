@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233475"
 ---
 # <a name="compiler-error-c2752"></a>컴파일러 오류 C2752
 'template': 둘 이상의 부분 특수화는 템플릿 인수 목록과 일치 합니다.  

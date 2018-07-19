@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090772"
 ---
 # <a name="cdatasourceopenfromfilename"></a>CDataSource::OpenFromFileName
 사용자가 제공한 파일 이름으로 지정된 파일에서 데이터 소스를 엽니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377934"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>가져오기 라이브러리 및 내보내기 파일을 사용한 작업
 /DEF 옵션으로 LIB를 사용 하 여 가져오기 라이브러리 및 내보내기 파일을 만들 수 있습니다. LINK 포함 하는 프로그램을 작성 하는 내보내기 파일을 사용 하 여 (일반적으로 동적 연결 라이브러리 (DLL))을 내보내고 가져오기 라이브러리를 사용 하 여 다른 프로그램의 내보내기에 대 한 참조를 확인 합니다.  

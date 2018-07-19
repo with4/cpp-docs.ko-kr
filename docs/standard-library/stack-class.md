@@ -30,11 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c162f6092c127277e2af992eda1e47c00c7cb43
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963227"
 ---
 # <a name="stack-class"></a>stack 클래스
 
@@ -49,17 +50,17 @@ class stack
 
 ### <a name="parameters"></a>매개 변수
 
-*형식* 스택의에 저장 되는 요소 데이터 형식입니다.
+*형식* 스택에 저장 될 요소 데이터 형식입니다.
 
-`Container` 스택을 구현 하는 데 기본 컨테이너의 형식입니다. 기본값은 클래스 `deque`*\<Type>* 입니다.
+*컨테이너* 스택을 구현 하는 데 사용 된 기본 컨테이너의 형식입니다. 기본값은 클래스 `deque`*\<Type>* 입니다.
 
 ## <a name="remarks"></a>설명
 
-stack 개체의 첫 번째 템플릿 매개 변수에 규정된 클래스 **Type**의 요소는 [value_type](#value_type)과 같고, 두 번째 템플릿 매개 변수로 규정된 기본 컨테이너 클래스 **Container**에 있는 요소의 형식과 일치해야 합니다. **Type**은 해당 형식의 개체를 복사하고 해당 형식의 변수에 값을 할당할 수 있도록 할당 가능해야 합니다.
+클래스의 요소 `Type` 규정 된 첫 번째 템플릿 매개 변수는 스택 개체는 [value_type](#value_type) 기본 컨테이너 클래스에 있는 요소의 형식과 일치 해야 합니다 `Container` 에서 규정 합니다 두 번째 템플릿 매개 변수입니다. `Type` 해당 형식의 개체를 복사 하 고 해당 형식의 변수에 값을 할당할 수 있도록 할당할 수 있어야 합니다.
 
-스택에 적합한 기본 컨테이너 클래스에는 **back**, `push_back` 및 `pop_back`의 작업을 지원하는 [deque](../standard-library/deque-class.md), [list 클래스](../standard-library/list-class.md) 및 [vector 클래스](../standard-library/vector-class.md) 또는 기타 시퀀스 컨테이너가 포함됩니다. 기본 컨테이너 클래스는 제한된 시퀀스 컨테이너 멤버 함수 집합만 공용 인터페이스로 표시하는 컨테이너 어댑터 내에서 캡슐화되어 있습니다.
+스택에 적합 한 기본 컨테이너 클래스를 포함 [deque](../standard-library/deque-class.md)를 [list 클래스](../standard-library/list-class.md), 및 [vector 클래스](../standard-library/vector-class.md), 또는 기타 시퀀스 컨테이너가 지 원하는 작업 `back`하십시오 `push_back`, 및 `pop_back`합니다. 기본 컨테이너 클래스는 제한된 시퀀스 컨테이너 멤버 함수 집합만 공용 인터페이스로 표시하는 컨테이너 어댑터 내에서 캡슐화되어 있습니다.
 
-stack 개체는 클래스 **Type**의 요소가 동등 비교 가능한 경우에만 동등 비교할 수 있으며 클래스 **Type**의 요소가 미만 비교 가능한 경우에만 미만 비교가 가능합니다.
+스택 개체는 동등 비교 가능한 경우 경우에만 클래스의 요소 `Type` 요소가 및 작은-비교 가능한 경우 및 경우에만 보다 클래스의 요소 `Type` 작은-비교가 가능 합니다.
 
 - stack 클래스는 LIFO(후입선출) 데이터 구조를 지원합니다. 쌓여 있는 접시 더미의 예로 이해할 수 있습니다. 요소(접시)는 기본 컨테이너의 끝에 있는 마지막 요소인 스택의 맨 위에서만 삽입하거나 검사하거나 제거할 수 있습니다. 맨 위 요소로만 액세스를 제한하는 것이 stack 클래스를 사용하는 이유입니다.
 
@@ -111,7 +112,7 @@ typedef Container container_type;
 
 `Container`에 대한 자세한 내용은 [stack 클래스](../standard-library/stack-class.md) 항목의 설명 섹션을 참조하세요.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `container_type`을 선언하고 사용하는 방법에 대한 예제는 [stack::stack](#stack)의 예제를 참조하세요.
 
@@ -127,7 +128,7 @@ bool empty() const;
 
 스택이 비어 있으면 **true**이고 비어 있지 않으면 **false**입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // stack_empty.cpp
@@ -172,7 +173,7 @@ void pop();
 
 구성원 함수를 적용하려면 스택이 비어 있지 않아야 합니다. 스택 맨 위 위치에는 가장 최근에 추가한 요소가 배치되며, 이 요소가 컨테이너 끝의 마지막 요소가 됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // stack_pop.cpp
@@ -226,13 +227,13 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>매개 변수
 
-`val` 스택의 맨 위에 추가 요소입니다.
+*val* 스택의 맨 위에 추가 되는 요소입니다.
 
 ### <a name="remarks"></a>설명
 
 스택 맨 위 위치에는 가장 최근에 추가한 요소가 배치되며, 이 요소가 컨테이너 끝의 마지막 요소가 됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // stack_push.cpp
@@ -276,7 +277,7 @@ size_type size() const;
 
 스택의 현재 길이입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // stack_size.cpp
@@ -317,7 +318,7 @@ typedef typename Container::size_type size_type;
 
 이 형식은 스택에 의해 조정되는 기본 컨테이너의 `size_type`과 동일한 의미입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.
 
@@ -333,9 +334,9 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 복사본으로 생성 된 스택이 인 컨테이너입니다.
+*오른쪽* 는 생성 된 스택 복사본이 되는 컨테이너입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // stack_stack.cpp
@@ -392,9 +393,9 @@ const_reference top() const;
 
 구성원 함수를 적용하려면 스택이 비어 있지 않아야 합니다. 스택 맨 위 위치에는 가장 최근에 추가한 요소가 배치되며, 이 요소가 컨테이너 끝의 마지막 요소가 됩니다.
 
-**top**의 반환 값이 `const_reference`에 할당된 경우 stack 개체를 수정할 수 없습니다. **top**의 반환 값이 **reference**에 할당된 경우에는 stack 개체를 수정할 수 있습니다.
+하는 경우의 반환 값 `top` 에 할당 되는 `const_reference`, 스택 개체를 수정할 수 없습니다. 하는 경우의 반환 값 `top` 에 할당 되는 `reference`, 스택 개체를 수정할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // stack_top.cpp
@@ -437,7 +438,7 @@ typedef typename Container::value_type value_type;
 
 이 형식은 스택에 의해 조정되는 기본 컨테이너의 `value_type`과 동일한 의미입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // stack_value_type.cpp

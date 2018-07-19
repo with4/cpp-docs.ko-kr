@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383872"
 ---
 # <a name="technical-notes-by-category"></a>범주별 기술 참고 사항
 기술 정보는 다음 범주로 구분 됩니다. 기술 참고 사항의 숫자 목록을 보려면 [번호별 기술 참고 사항](../mfc/technical-notes-by-number.md)합니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097356"
 ---
 # <a name="cnoaccessor-class"></a>CNoAccessor 클래스
 템플릿 인수로 사용할 수 있습니다 (`TAccessor`) 템플릿 클래스에 대 한 같은 `CCommand` 및 `CTable`, 접근자 클래스 인수를 필요로 하는 합니다.  

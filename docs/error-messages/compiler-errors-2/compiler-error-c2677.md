@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233164"
 ---
 # <a name="compiler-error-c2677"></a>컴파일러 오류 C2677
 이항 'operator': 전역 연산자 ' type'를 사용 하는 발견 (또는 허용 가능한 변환이 없는)  

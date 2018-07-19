@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090528"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 클래스
 응용 프로그램을 실행할 때 나타나는 COM 오류를 나타냅니다. COMException은 미리 정의된 표준 예외 집합의 기본 클래스입니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169545"
 ---
 # <a name="value-types-and-their-behaviors-ccli"></a>값 형식 및 동작(C++/CLI)
 값 형식은 Visual c + + c + +에 대 한 다양 한 방법으로 관리 되는 확장에서 변경 되었습니다. 이 섹션에서는 CLR 열거형 형식 및 값 클래스 형식으로 boxing 및 CLR 힙에 boxed 인스턴스에 대 한 액세스를 살펴보면 외부 및 고정 포인터를 살펴보면 함께 살펴보겠습니다. 이 영역에는 광범위 한 언어 변경 사항이 있습니다.  

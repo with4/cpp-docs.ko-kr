@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9020eb0165a0f06e430caa6a0e1641ea1afb3d75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9cf3f78624761b364bf192876cb8368c73507e86
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951577"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush 클래스
 ID2D1SolidColorBrush에 대 한 래퍼입니다.  
@@ -80,7 +81,7 @@ class CD2DSolidColorBrush : public CD2DBrush;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|단색 브러시입니다.|  
 |[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|ID2D1SolidColorBrush 개체에 대 한 포인터를 저장합니다.|  
@@ -112,7 +113,7 @@ void Attach(ID2D1SolidColorBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pResource`  
+ *pResource*  
  기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
   
 ##  <a name="cd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::CD2DSolidColorBrush  
@@ -135,19 +136,19 @@ CD2DSolidColorBrush(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentTarget`  
+ *pParentTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
- `color`  
+ *색*  
  브러시의 색의 빨강, 녹색, 파랑 및 알파 값입니다.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  불투명도 및 브러시의 변환에 대 한 포인터입니다.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  개체를 소유자 (pParentTarget)에 의해 폐기 수를 나타냅니다.  
   
- `nAlpha`  
+ *nAlpha*  
  브러시의 색의 불투명도입니다.  
   
 ##  <a name="create"></a>  CD2DSolidColorBrush::Create  
@@ -158,7 +159,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRenderTarget`  
+ *pRenderTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -233,7 +234,7 @@ void SetColor(D2D1_COLOR_F color);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `color`  
+ *색*  
  이 단색 브러시의 색  
   
 ## <a name="see-also"></a>참고 항목  

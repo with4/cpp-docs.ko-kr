@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089720"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: ODBC API 함수 직접 호출
 데이터베이스 클래스에서 제공 하는 간단한 인터페이스는 [데이터 소스](../../data/odbc/data-source-odbc.md) 는 ODBC 보다 합니다. 결과적으로 클래스는 모든 ODBC API를 캡슐화 하지 않습니다. 클래스의 기능 외부에 있는 모든 기능에 대 한 ODBC API 함수를 직접 호출 해야 합니다. ODBC 카탈로그 함수를 호출 해야 하는 예를 들어 (**:: SQLColumns**, **:: SQLProcedures**, **:: SQLTables**, 및 기타) 직접 합니다.  

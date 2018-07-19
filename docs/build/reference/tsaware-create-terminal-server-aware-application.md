@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379135"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE(터미널 서버 인식 응용 프로그램 만들기)
 ```  

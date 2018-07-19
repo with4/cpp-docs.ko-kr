@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326048"
 ---
 # <a name="project-build-error-prj0047"></a>프로젝트 빌드 오류 PRJ0047
 일시 중단 된 프로세스를 계속할 수 없습니다.  빌드가 실패 했습니다.  

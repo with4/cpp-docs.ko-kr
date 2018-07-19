@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352046"
 ---
 # <a name="ccreatecontext-structure"></a>CCreateContext 구조
 프레임 워크를 사용 하 여는 `CCreateContext` 프레임 창 및 문서와 연결 된 뷰를 만들 때 구성 합니다.  

@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e911d91e987bb5172d9681161dcd87a287201b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7323c7dc104d8fbf54292fb7f1ca455b5e1a92f6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957375"
 ---
 # <a name="randomaccessiteratortag-struct"></a>random_access_iterator_tag 구조체
 
-임의 액세스 반복기를 나타내는 **iterator_category** 함수에 반환 형식을 제공하는 클래스입니다.
+에 대 한 반환 형식을 제공 하는 클래스 `iterator_category` 임의 액세스 반복기를 나타내는 함수입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -37,9 +38,9 @@ struct random_access_iterator_tag    : public bidirectional_iterator_tag {};
 
 범주 태그 클래스는 알고리즘 선택을 위한 컴파일 태그로 사용됩니다. 템플릿 함수는 컴파일 시간에서 가장 효율적인 알고리즘을 사용할 수 있도록 해당 반복기 인수의 가장 구체적인 범주를 찾아야 합니다. `Iterator` 형식의 모든 반복기에 대해 `iterator_traits`< `Iterator`> **::iterator_category**는 반복기 동작을 설명하는 가장 구체적인 범주 태그로 정의되어야 합니다.
 
-**Iter**가 임의 액세스 반복기로 사용될 수 있는 개체를 설명할 경우 형식은 **iterator**\< **Iter**> **::iterator_category**와 같습니다.
+형식은 동일 **반복기** \< **Iter**> **:: iterator_category** 때 `Iter` 으로 사용할 수 있는 개체에 설명 합니다.는 임의 액세스 반복기입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // iterator_rait.cpp

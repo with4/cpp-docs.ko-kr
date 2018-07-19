@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381620"
 ---
 # <a name="using-canimatectrl"></a>CAnimateCtrl 사용
 클래스가 나타내는 애니메이션 컨트롤 [CAnimateCtrl](../mfc/reference/canimatectrl-class.md), 클립 오디오 비디오 인터리빙 된 (AVI) 형식으로 표시 하는 창이 며 — 표준 Windows 비디오/오디오 형식입니다. AVI 클립 일련의 영화 같은 비트맵 프레임입니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375258"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD(보호 검사 사용)
 실행 가능 이미지에서 제어 흐름 보호 검사에 대한 지원을 지정합니다.  

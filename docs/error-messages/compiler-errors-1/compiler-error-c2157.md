@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168544"
 ---
 # <a name="compiler-error-c2157"></a>컴파일러 오류 C2157
 'function': pragma 목록에서 사용하려면 먼저 선언해야 합니다.  

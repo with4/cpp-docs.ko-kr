@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350237"
 ---
 # <a name="mfc-desktop-applications"></a>MFC 데스크톱 응용 프로그램
 MFC(Microsoft Foundation Class) 라이브러리는 많은 Win32 및 COM API에 대한 개체 지향 래퍼를 제공합니다. 간단한 데스크톱 응용 프로그램을 만드는 데도 사용되지만, 여러 컨트롤 간의 매우 복잡한 사용자 인터페이스를 개발해야 하는 경우에도 매우 유용합니다. MFC를 사용하여 Office 스타일의 사용자 인터페이스를 제공하는 응용 프로그램을 만들 수 있습니다.  

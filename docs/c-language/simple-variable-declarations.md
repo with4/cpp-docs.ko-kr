@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389769"
 ---
 # <a name="simple-variable-declarations"></a>단순 변수 선언
 직접 선언자의 가장 간단한 형태로 단순 변수를 선언하여 변수의 이름 및 형식을 지정합니다. 이 선언에서 변수의 저장소 클래스와 데이터 형식도 지정합니다.  

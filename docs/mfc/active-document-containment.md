@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332675"
 ---
 # <a name="active-document-containment"></a>액티브 문서 포함
 액티브 문서 포함은 작업을 만들고 각 문서 유형에 대 한 여러 응용 프로그램 프레임을 사용 하도록 요구 하는 대신 문서는 단일 한 프레임을 제공 하는 기술입니다. OLE 콘텐츠의 일부만 활성화 될 수 있는 복합 문서 내에서 포함 된 개체와 함께 작동 한다는 점에서 기본 OLE 기술에서 다릅니다. 액티브 문서 포함을 단일 프레임의 컨텍스트 내에서 전체 문서 (즉, 전체 응용 프로그램, 연결 된 메뉴, 도구 모음, 및 등을 포함 하 여)를 활성화 합니다.  

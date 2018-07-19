@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695878"
 ---
 # <a name="2725-default"></a>2.7.2.5 기본값
 **기본** 절 변수 데이터 공유 특성에 영향을 줄 수 있습니다. 구문은 **기본** 절은 다음과 같습니다.  

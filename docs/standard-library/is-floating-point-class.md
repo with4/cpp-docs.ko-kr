@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63129ad04e2e74cdae9c590c76e1910e95117431
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52bc5ff0fe53dc89f932bf62dc98f7c8a03a725f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957007"
 ---
 # <a name="isfloatingpoint-class"></a>is_floating_point 클래스
 
@@ -36,15 +37,15 @@ struct is_floating_point;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 형식이 쿼리입니다.
+*Ty* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `Ty` 형식이 부동 소수점 형식 또는 `cv-qualified` 형태의 부동 소수점 형식인 경우 true이고, 그렇지 않은 경우 false입니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *Ty* 부동 소수점 형식 또는 `cv-qualified` 부동 소수점 형식의 입력, 그렇지 않은 경우 false입니다.
 
-부동 소수점 형식은 `float`, `double` 또는 `long double` 중 하나입니다.
+부동 소수점 형식 중 하나인 **부동 소수점**, **double**, 또는 **long double**합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__is_floating_point.cpp

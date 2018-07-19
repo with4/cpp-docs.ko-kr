@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860400"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>/clr을 사용한 C 스타일 캐스트(C++/CLI)
 다음 항목 공용 언어 런타임에만 적용 됩니다.  

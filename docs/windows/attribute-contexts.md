@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860335"
 ---
 # <a name="attribute-contexts"></a>특성 컨텍스트
 4 개의 기본 필드를 사용 하 여 c + + 특성을 설명할 수 있습니다: 대상에 적용 될 수 있습니다 (**에 적용 됩니다.**)는 인지 반복 하는 경우, (**Repeatable**), 필요한 (다른특성의존재여부 **필수 특성**), 및 이며 다른 특성과 호환 되지 않는 기능 (**잘못 된 특성이**). 이러한 필드는 각 특성의 참조 항목에 있는 해당 테이블에 나열 됩니다. 이러한 각 필드 아래에 설명 되어 있습니다.  

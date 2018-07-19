@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33228345"
 ---
 # <a name="compiler-error-c2523"></a>컴파일러 오류 C2523
 ' 클래스:: ~ identifier': 소멸자/종료자 태그 일치 하지 않습니다.  

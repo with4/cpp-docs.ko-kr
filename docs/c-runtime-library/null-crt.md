@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387611"
 ---
 # <a name="null-crt"></a>NULL(CRT)
 **NULL**은 많은 포인터 연산 및 함수에 사용되는 null 포인터 값입니다. 이는 0과 같습니다. **NULL**은 CRTDBG.H, LOCALE.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H, TCHAR.H, TIME.H 및 WCHAR.H 헤더 파일에 정의됩니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873149"
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>사용자 지정 브러시 만들기(아이콘에 대한 이미지 편집기)
 사용자 지정 브러시는를 선택 하 고 하나는 이미지 편집기의 포함 되어 있는 브러시와 같은 사용 되는 이미지의 사각형 부분입니다. 선택 영역에서 수행할 수는 모든 작업을 사용자 지정 브러시에 수행할 수 있습니다.  

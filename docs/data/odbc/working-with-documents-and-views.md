@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092948"
 ---
 # <a name="working-with-documents-and-views"></a>문서 및 뷰 작업
 Microsoft Foundation 클래스 (MFC) 라이브러리는 많은 기능에 대 한 문서/뷰 아키텍처에 의존합니다. 일반적으로 문서 데이터를 저장 하 고는 보기 프레임 창의 클라이언트 영역 내에서 표시 하 고 사용자 데이터와 상호 작용을 관리 합니다. 뷰를 가져오고 데이터를 업데이트 문서와 통신 합니다. Framework와 함께 또는 없이 데이터베이스 클래스를 사용할 수 있습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128516"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>방법: CLR 빈 프로젝트 만들기
 CLR 빈 프로젝트를 만들려면 사용는 **CLR 빈 프로젝트** 서식 파일에서 제공 되는 **새 프로젝트** 대화 상자.  

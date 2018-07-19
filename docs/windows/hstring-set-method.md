@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882419"
 ---
 # <a name="hstringset-method"></a>HString::Set 메서드
 지정 된 와이드 문자 문자열 또는 HString 매개 변수를 현재 HString 개체가 값을 설정합니다.  

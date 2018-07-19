@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880259"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>사용자 지정 색 선택 대화 상자(아이콘에 대한 이미지 편집기)
 이 대화 상자에는 이미지에 사용할 색을 사용자 지정할 수 있습니다. 자세한 내용은 참조 [사용자 지정 또는 색 변경](../windows/customizing-or-changing-colors-image-editor-for-icons.md)합니다.  

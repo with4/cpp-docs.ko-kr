@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235349"
 ---
 # <a name="compiler-error-c2662"></a>컴파일러 오류 C2662
 'function': 'type1'에서 'this'이 포인터를 'type2' (으)로 변환할 수 없습니다  

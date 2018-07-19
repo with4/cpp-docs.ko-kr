@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388327"
 ---
 # <a name="sizeof-operator-c"></a>sizeof 연산자 (C)
 `sizeof` 연산자는 피연산자 형식의 개체를 저장하기 위해 필요한 저장소 공간(바이트)을 제공합니다. 이 연산자를 사용하면 프로그램에서 컴퓨터 종속 데이터 크기를 지정하지 않아도 됩니다.  

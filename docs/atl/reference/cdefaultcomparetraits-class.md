@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5b06bf475c60c0190fc6ab78f4357e1b247f1d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ed197cc1f18821b65c249ee15a7e75f54fc7a32
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884768"
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits 클래스
-이 클래스는 기본 요소 비교 기능을 제공합니다.  
+이 클래스는 기본 요소 비교 함수를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,7 +37,7 @@ class CDefaultCompareTraits
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `T`  
+ *T*  
  컬렉션에 저장할 데이터의 형식입니다.  
   
 ## <a name="members"></a>멤버  
@@ -45,36 +46,36 @@ class CDefaultCompareTraits
   
 |이름|설명|  
 |----------|-----------------|  
-|[CDefaultCompareTraits::CompareElements](#compareelements)|(정적) 두 요소가 같은지 비교 하려면이 함수를 호출 합니다.|  
+|[CDefaultCompareTraits::CompareElements](#compareelements)|(정적) 두 요소가 같은지를 비교 하려면이 함수를 호출 합니다.|  
 |[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(정적) 크고 작은 요소를 확인 하려면이 함수를 호출 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 클래스는 컬렉션 클래스 개체에 저장 된 요소를 비교 하기 위한 두 개의 정적 함수를 포함 합니다. 이 클래스에서 사용 된는 [CDefaultElementTraits 클래스](../../atl/reference/cdefaultelementtraits-class.md)합니다.  
+ 이 클래스에는 컬렉션 클래스 개체에 저장 된 요소를 비교 하기 위한 두 가지 정적 함수가 포함 됩니다. 이 클래스에서 사용 되는 [CDefaultElementTraits 클래스](../../atl/reference/cdefaultelementtraits-class.md)합니다.  
   
- 자세한 내용은 참조 [ATL 컬렉션 클래스](../../atl/atl-collection-classes.md)합니다.  
+ 자세한 내용은 [ATL 컬렉션 클래스](../../atl/atl-collection-classes.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
 ##  <a name="compareelements"></a>  CDefaultCompareTraits::CompareElements  
- 두 요소가 같은지 비교 하려면이 함수를 호출 합니다.  
+ 두 요소가 같은지를 비교 하려면이 함수를 호출 합니다.  
   
 ```
 static bool CompareElements(const T& element1, const T& element2);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `element1`  
+ *element1*  
  첫 번째 요소입니다.  
   
- `element2`  
+ *element2 요소*  
  두 번째 요소입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 요소가 같은지, false를 반환 하지 않으면 true를 반환 합니다.  
+ 요소가 같으면 false이 고, 그렇지 true를 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수의 기본 구현으로도 같음 ( `==`) 연산자. 개체의 단순 데이터 형식 이외의 경우이 함수를 재정의할 수 해야 합니다.  
+ 이 함수의 기본 구현은 같음 (**==**) 연산자. 단순 데이터 형식 이외의 개체에 대 한이 함수를 재정의할 수 해야 합니다.  
   
 ##  <a name="compareelementsordered"></a>  CDefaultCompareTraits::CompareElementsOrdered  
  크고 작은 요소를 확인 하려면이 함수를 호출 합니다.  
@@ -84,10 +85,10 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `element1`  
+ *element1*  
  첫 번째 요소입니다.  
   
- `element2`  
+ *element2 요소*  
  두 번째 요소입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -95,12 +96,12 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
   
 |조건|반환 값|  
 |---------------|------------------|  
-|`element1` < `element2`|<0|  
-|`element1` == `element2`|0|  
-|`element1` > `element2`|>0|  
+|*element1* < *element2 요소*|<0|  
+|*element1* == *element2 요소*|0|  
+|*element1* > *element2 요소*|>0|  
   
 ### <a name="remarks"></a>설명  
- 이 함수의 기본 구현에서는 사용 된 `==`, **\<**, 및 **>** 연산자입니다. 개체의 단순 데이터 형식 이외의 경우이 함수를 재정의할 수 해야 합니다.  
+ 기본 구현은이 함수를 사용 합니다 **==** 를 **\<**, 및 **>** 연산자입니다. 단순 데이터 형식 이외의 개체에 대 한이 함수를 재정의할 수 해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../../atl/atl-class-overview.md)

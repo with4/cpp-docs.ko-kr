@@ -19,19 +19,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65798eb9983273cf3b8b2b136be9a9acc082cb4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a55aca3abe95d189c40c7571db39fc48edf5f4cc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944503"
 ---
 # <a name="subscripting"></a>첨자
 첨자 연산자 (**[]**)과 같은 함수 호출 연산자는 이항 연산자로 간주 됩니다. 첨자 연산자는 단일 인수를 사용하는 비정적 멤버 함수여야 합니다. 이 인수는 어떠한 형식도 될 수 있으며 원하는 배열 첨자를 지정합니다.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 범위 검사를 구현하는 `int` 형식의 벡터를 만드는 방법을 보여 줍니다.  
+## <a name="example"></a>예  
+ 다음 예제에는 형식의 벡터를 만드는 방법을 보여 줍니다 **int** 범위 검사를 구현 하는:  
   
-```  
+```cpp 
 // subscripting.cpp  
 // compile with: /EHsc  
 #include <iostream>  

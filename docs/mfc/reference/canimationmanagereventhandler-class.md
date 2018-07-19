@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ef63cf5c781348e873512c8b2f5bb190ae4976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62a775457d6da763a5c8426146d421a4cc958454
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955650"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler 클래스
 애니메이션 관리자의 상태가 변경될 때 애니메이션 API에서 호출하는 콜백을 구현합니다.  
@@ -89,10 +90,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pAnimationController`  
+ *pAnimationController*  
  이벤트를 수신 하는 애니메이션 컨트롤러에 대 한 포인터입니다.  
   
- `ppManagerEventHandler`  
+ *ppManagerEventHandler*  
  출력입니다. 메서드가 성공 하는 경우 애니메이션 관리자에 대 한 상태 업데이트를 처리 하는 COM 개체에 대 한 포인터를 포함 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -110,10 +111,10 @@ IFACEMETHOD(OnManagerStatusChanged)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `newStatus`  
+ *newStatus*  
  새 상태입니다.  
   
- `previousStatus`  
+ *previousStatus*  
  이전 상태입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -129,7 +130,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pAnimationController`  
+ *pAnimationController*  
  이벤트를 수신 하는 애니메이션 컨트롤러에 대 한 포인터입니다.  
   
 ## <a name="see-also"></a>참고 항목  

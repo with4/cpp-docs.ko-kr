@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33223948"
 ---
 # <a name="compiler-error-c2386"></a>컴파일러 오류 C2386
 'symbol': 이름이 같은 기호가 현재 범위에 이미 있습니다.  

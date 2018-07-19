@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d342fdd903de610c0676d7a9e0b6e58ef15f41f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1412a65ce7afaab5421d49c22a9cd8ece5b283b1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040888"
 ---
 # <a name="clineartransition-class"></a>CLinearTransition 클래스
 선형 전환을 캡슐화합니다.  
@@ -83,10 +84,10 @@ CLinearTransition(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `duration`  
+ *duration*  
  전환의 기간입니다.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  전환의 끝에서 애니메이션 변수의 값입니다.  
   
 ##  <a name="create"></a>  CLinearTransition::Create  
@@ -99,7 +100,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
-`pLibrary`  
+*pLibrary*  
  에 대 한 포인터는 [IUIAnimationTransitionLibrary 인터페이스](https://msdn.microsoft.com/library/windows/desktop/dd371897), 표준 전환의 라이브러리를 정의 하는 합니다.  
   
 ### <a name="return-value"></a>반환 값  

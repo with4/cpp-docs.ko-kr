@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168206"
 ---
 # <a name="compiler-error-c2161"></a>컴파일러 오류 C2161
 매크로 정의 끝에 '##'이 올 수 없습니다.  

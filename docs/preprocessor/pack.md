@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843628"
 ---
 # <a name="pack"></a>pack
 구조체, 공용 구조체 및 클래스 멤버에 대한 압축 맞춤을 지정합니다.  

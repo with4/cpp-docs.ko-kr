@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842965"
 ---
 # <a name="warning-pragma"></a>경고 Pragma
 컴파일러 경고 메시지의 동작을 선택적으로 수정할 수 있습니다.  

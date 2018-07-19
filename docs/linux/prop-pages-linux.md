@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324014"
 ---
 # <a name="linux-project-property-page-reference"></a>Linux 프로젝트 속성 페이지 참조
 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380890"
 ---
 # <a name="x64-software-conventions"></a>x64 소프트웨어 규칙
 이 섹션에서는 Visual c + +에 대 한 호출 규칙을 설명 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], 64 비트 확장 x86 아키텍처.  

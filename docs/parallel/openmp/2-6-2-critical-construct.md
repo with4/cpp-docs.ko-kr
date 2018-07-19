@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689599"
 ---
 # <a name="262-critical-construct"></a>2.6.2 critical 구문
 **중요** 지시문 식별 한 번에 스레드 하나에 연결된 된 구조화 된 블록의 실행을 제한 하는 구문입니다. 구문은 **중요** 지시문은 다음과 같습니다.  

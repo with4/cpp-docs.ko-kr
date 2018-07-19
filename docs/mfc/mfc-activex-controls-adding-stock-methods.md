@@ -16,21 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f02712f3df56bf2fc04fba736f28931250f7bcb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2005391c6d91ee09703194eb8b8062ecfe08ba77
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929801"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX 컨트롤: 스톡 메서드 추가
-스톡 메서드가 사용자 지정 메서드 점에서 다릅니다 클래스에 의해 이미 구현 [COleControl](../mfc/reference/colecontrol-class.md)합니다. 예를 들어 `COleControl` 컨트롤에 대 한 새로 고침 메서드를 지원 하는 미리 정의 된 멤버 함수를 포함 합니다. 이 스톡 메서드가 대 한 디스패치 맵 항목이 **DISP_STOCKFUNC_REFRESH**합니다.  
+스톡 메서드가 사용자 지정 메서드 점에서 다릅니다 클래스에 의해 이미 구현 [COleControl](../mfc/reference/colecontrol-class.md)합니다. 예를 들어 `COleControl` 컨트롤에 대 한 새로 고침 메서드를 지원 하는 미리 정의 된 멤버 함수를 포함 합니다. 이 스톡 메서드에 대 한 디스패치 맵 항목 DISP_STOCKFUNC_REFRESH입니다.  
   
  `COleControl` 스톡 두 가지 방법을 지원: DoClick 및 새로 고침 합니다. 새로 고침을 즉시 업데이트 하는 컨트롤의 모양을; 컨트롤의 사용자에 의해 호출 됩니다. DoClick 컨트롤의 Click 발생 하기 위해 호출 된 이벤트입니다.  
   
 |메서드|디스패치 맵 항목|주석|  
 |------------|------------------------|-------------|  
 |`DoClick`|**DISP_STOCKPROP_DOCLICK)**|Click 이벤트를 발생 시킵니다.|  
-|**새로 고침**|**DISP_STOCKPROP_REFRESH)**|컨트롤의 모양을 즉시 업데이트 됩니다.|  
+|`Refresh`|**DISP_STOCKPROP_REFRESH)**|컨트롤의 모양을 즉시 업데이트 됩니다.|  
   
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> 사용 하 여 스톡 메서드 추가 메서드 추가 마법사  
  스톡 메서드 추가 하는 것은 간단를 사용 하 여 [메서드 추가 마법사](../ide/add-method-wizard.md)합니다. 다음 절차에서는 MFC ActiveX 컨트롤 마법사를 사용 하 여 만든 컨트롤에 Refresh 메서드를 추가 합니다.  

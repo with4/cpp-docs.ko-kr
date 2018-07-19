@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090972"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 클래스
 행 집합 및 해당 관련된 접근자 단일 클래스에 캡슐화합니다.  

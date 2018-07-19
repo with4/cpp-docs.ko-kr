@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369312"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>MFC ActiveX 컨트롤 마법사, 컨트롤 이름
 컨트롤 클래스 및 속성 페이지 클래스, 형식 이름에 대 한 이름을 지정 하 고 컨트롤에 대 한 식별자를 입력 합니다. 제외 **약식 이름**, 다른 모든 필드 독립적으로 편집할 수 있습니다. 에 대 한 텍스트를 변경 하면 **약식 이름**,이 페이지의 다른 모든 필드의 이름에는 변경 내용이 반영 됩니다. 이 명명 문제는 모든 이름을 쉽게 식별할 수 있도록 사용자에 대 한 컨트롤을 개발할 때 설계 되었습니다.  

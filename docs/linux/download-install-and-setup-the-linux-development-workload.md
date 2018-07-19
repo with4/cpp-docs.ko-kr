@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329438"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Linux 작업 다운로드, 설치, 설정
 

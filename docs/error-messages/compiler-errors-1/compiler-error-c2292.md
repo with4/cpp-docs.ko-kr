@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171359"
 ---
 # <a name="compiler-error-c2292"></a>컴파일러 오류 C2292
 'identifier': 최적 case 상속 표현: 'representation1' 'representation2'가 필요 하지만 선언  

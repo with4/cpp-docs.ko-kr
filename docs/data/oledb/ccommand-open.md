@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092091"
 ---
 # <a name="ccommandopen"></a>CCommand::Open
 실행 하 고 필요에 따라 명령을 바인딩합니다.  

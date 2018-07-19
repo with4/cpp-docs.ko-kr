@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383226"
 ---
 # <a name="win32-internet-classes"></a>Win32 인터넷 클래스
 MFC는 인터넷 프로그래밍을 쉽게 수행할 수 있도록 Win32 인터넷 (WinInet) 및 ActiveX 기술 래핑합니다.  

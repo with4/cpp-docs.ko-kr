@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89215ac3d7b1035ef4326d73b21d540aada5fba6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0e2fb16ad96ba102295981b9f9d56fda810ddff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961060"
 ---
 # <a name="istriviallydestructible-class"></a>is_trivially_destructible 클래스
 
@@ -36,11 +37,11 @@ struct is_trivially_destructible;
 
 ### <a name="parameters"></a>매개 변수
 
-`T` 형식이 쿼리입니다.
+*T* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `T` 형식이 소멸 가능한 형식이고 소멸자가 특수한 작업을 사용하지 않는 것으로 컴파일러에 알려진 경우 true이고, 그렇지 않으면 false입니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *T* 소멸 가능한 형식인 하며 소멸자가 컴파일러에 없는 특수 작업을 사용 합니다. 그렇지 않으면 false입니다.
 
 ## <a name="requirements"></a>요구 사항
 

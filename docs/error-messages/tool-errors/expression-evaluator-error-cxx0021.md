@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299369"
 ---
 # <a name="expression-evaluator-error-cxx0021"></a>식 계산기 오류 CXX0021
 구조체 또는 스칼라로 사용 된 공용 구조체  

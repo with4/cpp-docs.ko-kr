@@ -38,11 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343d56ebf3f92dadeb286ae2fa44b6e735498215
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: facfa4d9f98100666f267920cbd18c24ae516e72
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951613"
 ---
 # <a name="cd2dtextlayout-class"></a>CD2DTextLayout 클래스
 IDWriteTextLayout에 대 한 래퍼입니다.  
@@ -84,7 +85,7 @@ class CD2DTextLayout : public CD2DResource;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|IDWriteTextLayout에 대 한 포인터입니다.|  
   
@@ -118,19 +119,19 @@ CD2DTextLayout(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentTarget`  
+ *pParentTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
- `strText`  
+ *strText*  
  새 CD2DTextLayout 개체를 만들려면 문자열을 포함 하는 CString 개체입니다.  
   
- `textFormat`  
+ *textFormat*  
  문자열에 적용할 형식을 포함 하는 CString 개체입니다.  
   
- `sizeMax`  
+ *sizeMax*  
  레이아웃 상자의 크기입니다.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  개체를 소유자 (pParentTarget)에 의해 폐기 수를 나타냅니다.  
   
 ##  <a name="create"></a>  CD2DTextLayout::Create  
@@ -170,10 +171,10 @@ CString GetFontFamilyName(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `currentPosition`  
+ *현재 위치*  
  검사할 텍스트의 위치입니다.  
   
- `textRange`  
+ *textRange*  
  현재 위치에서 지정 된 위치에서 텍스트와 같은 텍스트의 범위 서식 지정 합니다. 이 실행에 글꼴 패밀리 이름에 제한 되지 않음, 지정 된 위치와 동일한 서식을 것을 의미 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -189,10 +190,10 @@ CString GetLocaleName(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `currentPosition`  
+ *현재 위치*  
  검사할 텍스트의 위치입니다.  
   
- `textRange`  
+ *textRange*  
  현재 위치에서 지정 된 위치에서 텍스트와 같은 텍스트의 범위 서식 지정 합니다. 즉 실행 하는 로캘 이름에 제한 되지 않음, 지정 된 위치와 동일한 서식이 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -245,10 +246,10 @@ BOOL SetFontFamilyName(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pwzFontFamilyName`  
+ *pwzFontFamilyName*  
  TextRange에서 지정한 범위 내에서 전체 텍스트 문자열에 적용 되는 글꼴 패밀리 이름  
   
- `textRange`  
+ *textRange*  
  이 변경 내용을 적용 되는 텍스트 범위  
   
 ### <a name="return-value"></a>반환 값  
@@ -264,10 +265,10 @@ BOOL SetLocaleName(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pwzLocaleName`  
+ *pwzLocaleName*  
  Null로 끝나는 로캘 이름 문자열입니다.  
   
- `textRange`  
+ *textRange*  
  이 변경 내용을 적용 되는 텍스트 범위  
   
 ### <a name="return-value"></a>반환 값  

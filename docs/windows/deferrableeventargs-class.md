@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872100"
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs 클래스
 지연에 대한 이벤트 인수 형식에 사용되는 템플릿 클래스입니다.  

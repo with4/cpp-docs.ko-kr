@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291904"
 ---
 # <a name="compiler-warning-level-1-c4965"></a>컴파일러 경고(수준 1) C4965
 암시적 상자 정수 0; nullptr 또는 명시적 캐스트를 사용 하 여  

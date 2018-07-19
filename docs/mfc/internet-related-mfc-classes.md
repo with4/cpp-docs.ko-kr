@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344911"
 ---
 # <a name="internet-related-mfc-classes"></a>인터넷 관련 MFC 클래스
 인터넷 관련 클래스 및 함수에 대 한 정보를 참조 하세요.  

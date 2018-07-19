@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302463"
 ---
 # <a name="expression-evaluator-error-cxx0024"></a>식 계산기 오류 CXX0024
 작업을 해야 l 값  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104791"
 ---
 # <a name="testing-your-provider"></a>공급자 테스트
 공급자를 해제 하기 전에 다음 테스트를 아래 순서로 수행 해야 합니다. 이러한 테스트의 대부분 사용자가 제대로 공급자 작동 하는지 확인 합니다.  

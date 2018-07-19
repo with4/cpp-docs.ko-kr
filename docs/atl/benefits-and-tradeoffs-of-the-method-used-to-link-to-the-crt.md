@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355389"
 ---
 # <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>CRT에 대 한 링크에 사용 되는 방법의 장단점 및 이점
 프로젝트 CRT에 동적 또는 정적 링크 수입니다. 다음 표에서 장점과 단점을 사용할 방법을 선택과 관련 된 간략하게 설명 합니다.  

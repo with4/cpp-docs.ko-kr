@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380487"
 ---
 # <a name="search-paths-for-dependents"></a>종속 파일의 경로 검색
 각 종속 다음과 같이 지정 하는 선택적 검색 경로, 파일에:  

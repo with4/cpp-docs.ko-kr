@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371347"
 ---
 # <a name="structures-used-by-mfc"></a>MFC에서 사용하는 구조체
 다음 표에서 다양 한 멤버 함수에서 호출 하는 구조를 나열 합니다. 개별 구조 사용에 보다 자세한 정보는 클래스 및 각 구조에 대 한 참고 항목 목록에 있는 멤버 함수를 참조 하십시오.  

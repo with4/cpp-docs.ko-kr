@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272014"
 ---
 # <a name="compiler-warning-level-1-c4002"></a>컴파일러 경고(수준 1) C4002
 'identifier' 매크로의 실제 매개 변수가 너무 많습니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354732"
 ---
 # <a name="building-and-testing-the-atl-project"></a>ATL 프로젝트 빌드 및 테스트
 설명한 것 처럼 [합성 컨트롤 삽입](../atl/inserting-a-composite-control.md), 새 복합 컨트롤을 호스트 하는 기본 HTML 페이지에는 프로젝트의 초기 구성 요소 중 하나입니다. 복합 컨트롤을 수정한 후 클릭 **솔루션 빌드** 또는 **솔루션 다시 빌드** 에서 **빌드** 메뉴. 프로젝트를 성공적으로 빌드한 후에 Internet Explorer 또는 다른 브라우저 합성 컨트롤 프로젝트의 루트 디렉터리에 있는 HTML 페이지를 로드 하 고 컨트롤의 기능을 테스트 합니다.  

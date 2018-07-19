@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863332"
 ---
 # <a name="changing-image-properties-image-editor-for-icons"></a>이미지 속성 변경(아이콘에 대한 이미지 편집기)
 설정 하거나 사용 하 여 이미지의 속성을 수정할 수는 [속성 창](/visualstudio/ide/reference/properties-window)합니다.  

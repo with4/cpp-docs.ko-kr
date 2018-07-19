@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088601"
 ---
 # <a name="design-and-create-an-odbc-database-application"></a>ODBC 데이터베이스 응용 프로그램 디자인과 작성
 이러한 항목을 사용 하 여 디자인 및 ODBC 데이터베이스 응용 프로그램을 설정할 수 수 있습니다.  

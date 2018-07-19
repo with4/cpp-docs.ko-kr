@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383997"
 ---
 # <a name="internal-linkage"></a>내부 링크
 개체 또는 함수의 파일 범위 식별자 선언에 *storage-class-specifier* **static**이 있으면 식별자에 내부 링크가 있고 그렇지 않으면 식별자에 외부 링크가 있습니다. *storage-class-specifier* 비터미널에 대한 설명은 [저장소 클래스](../c-language/c-storage-classes.md)를 참조하세요.  

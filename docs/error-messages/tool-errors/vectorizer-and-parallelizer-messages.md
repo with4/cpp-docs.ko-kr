@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336601"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>벡터화 도우미 및 병렬화 도우미 메시지
 Visual c + + 컴파일러 옵션을 사용할 수 [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) 및 [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) 설정 하는 [자동 병렬화 및 자동 벡터화](../../parallel/auto-parallelization-and-auto-vectorization.md) 출력 이유 코드를 하 고 해당 작업에 대 한 정보 메시지입니다. 이 문서는 이유 코드 및 메시지를 설명합니다.  

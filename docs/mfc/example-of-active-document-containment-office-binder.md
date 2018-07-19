@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345963"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>액티브 문서 포함의 예: Office Binder
 Microsoft Office Binder는 액티브 문서 컨테이너의 예시입니다. Office Binder 컨테이너가 않는 일반적으로 두 개의 주 창이 포함 됩니다. 왼쪽된 창에 바인더의 액티브 문서에 해당 하는 아이콘이 포함 되어 있습니다. 각 문서 라고는 *섹션* 바인더 내에서. 예를 들어 한 바인더는 Word 문서, PowerPoint 파일, Excel 스프레드시트, 및 등을 포함할 수 있습니다.  

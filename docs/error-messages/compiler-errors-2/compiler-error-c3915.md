@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271606"
 ---
 # <a name="compiler-error-c3915"></a>컴파일러 오류 C3915
 'type'에 기본 인덱싱된 속성이 (클래스 인덱서)  

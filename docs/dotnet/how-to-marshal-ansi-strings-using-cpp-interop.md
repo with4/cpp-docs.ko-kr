@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129397"
 ---
 # <a name="how-to-marshal-ansi-strings-using-c-interop"></a>방법: C++ Interop를 사용하여 ANSI 문자열 마샬링
 이 항목에서는 ANSI 문자열 수 있는 방법을 보여 줍니다. c + + Interop 하지만.NET Framework를 사용 하 여 전달 <xref:System.String> ANSI로 변환에는 추가 단계는 유니코드 형식으로 문자열을 나타냅니다. 다른 문자열 형식 상호 작용을 하기 위한 다음 항목을 참조 합니다.  

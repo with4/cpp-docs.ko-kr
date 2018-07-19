@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381375"
 ---
 # <a name="auto-storage-class-specifier"></a>자동 저장소 클래스 지정자
 **auto** 저장소 클래스 지정자는 로컬 수명을 가진 변수인 자동 변수를 선언합니다. **auto** 변수는 자신이 선언된 블록에서만 표시됩니다. [초기화](../c-language/initialization.md)에서 설명한 대로 **auto** 변수 선언에는 이니셜라이저를 포함할 수 있습니다. **auto** 저장소 클래스가 있는 변수는 자동으로 초기화되지 않으므로 이 변수를 선언할 때 명시적으로 초기화하거나 블록에 있는 문에서 이 변수에 초기 값을 할당해야 합니다. 초기화되지 않은 **auto** 변수의 값이 정의되지 않았습니다. 이니셜라이저가 제공될 경우 **auto** 또는 **register** 저장소 클래스의 지역 변수가 범위에 도달할 때마다 초기화됩니다.  

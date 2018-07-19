@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddde025fa633ccc1b9561acf595de186548ba3a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e402f103a29dd4c4af49fa1c34b9cae71fc6e9af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964849"
 ---
 # <a name="messagesbase-class"></a>messages_base 클래스
 
-기본 클래스는 메시지 카탈로그에 대한 `int` 형식을 설명합니다.
+설명 하는 기본 클래스는 **int** 카탈로그에 대 한 메시지의 형식입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -37,7 +38,7 @@ struct messages_base : locale::facet {
 
 ## <a name="remarks"></a>설명
 
-형식 카탈로그는 messages:: [do_open](../standard-library/messages-class.md#do_open)에서 가능한 반환 값을 설명하는 `int` 형식의 동의어입니다.
+형식 카탈로그 형식에 대 한 동의어가 **int** 설명 하는 메시지에서 가능한 반환 값:: [do_open](../standard-library/messages-class.md#do_open)합니다.
 
 ## <a name="requirements"></a>요구 사항
 

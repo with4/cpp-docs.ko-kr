@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383084"
 ---
 # <a name="elements-of-c"></a>C 요소
 이 섹션에서는 C 프로그램을 생성하는 데 사용되는 이름, 숫자 및 문자를 비롯하여 C 프로그래밍 언어의 요소에 대해 설명합니다. ANSI C 구문은 이러한 구성 요소 토큰에 레이블을 지정합니다.  

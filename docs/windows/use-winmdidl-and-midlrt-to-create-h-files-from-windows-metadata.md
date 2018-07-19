@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891724"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>방법: winmdidl.exe 및 midlrt.exe를 사용하여 Windows 메타데이터에서 .h 파일 만들기
 Winmdidl.exe 및 midlrt.exe는 Windows 런타임 구성 요소 및 네이티브 C++ 코드 사이의 COM 수준의 상호 작용을 지원합니다. Winmdidl.exe는 입력으로 .winmd 파일을 사용하여 Windows 런타임 구성 요소에 대한 메타데이터를 포함하고 IDL 파일을 출력합니다. Midlrt.exe는 해당 IDL 파일을 C++ 코드에서 사용할 수 있는 헤더 파일로 변환합니다. 두 도구 모두 명령줄에서 실행됩니다.  

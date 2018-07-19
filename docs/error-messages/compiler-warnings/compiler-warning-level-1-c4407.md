@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282953"
 ---
 # <a name="compiler-warning-level-1-c4407"></a>컴파일러 경고(수준 1) C4407
 멤버 표현에 다른 포인터 캐스팅, 컴파일러 코드를 생성할 수 잘못 된  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086345"
 ---
 # <a name="building-apps-and-libraries-ccx"></a>응용 프로그램 및 라이브러리 빌드(C++/CX)
 이 섹션의 항목 빌드 시스템을 사용 하 여 유니버설 Windows 플랫폼 앱 또는 Windows 런타임 구성 요소를 생성 하는 방법에 대 한 몇 가지 정보를 제공 합니다.  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384939"
 ---
 # <a name="windows-sockets-background"></a>Windows 소켓: 백그라운드
 이 문서와 Windows 소켓의 목적을 설명합니다. 문서도 합니다.  

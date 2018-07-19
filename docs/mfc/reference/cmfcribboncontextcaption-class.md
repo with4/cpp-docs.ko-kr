@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370323"
 ---
 # <a name="cmfcribboncontextcaption-class"></a>CMFCRibbonContextCaption 클래스
 리본 범주 맨 위 또는 컨텍스트 범주에 나타나는 색 지정된 캡션을 구현합니다.  

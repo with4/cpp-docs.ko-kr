@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111759"
 ---
 # <a name="supporting-schema-rowsets"></a>스키마 행 집합 지원
 스키마 행 집합 통해 소비자의 기본 구조 또는 스키마를 몰라도 데이터 저장소에 대 한 정보를 얻을 수 있습니다. 예를 들어 데이터 저장소 읽는 것 외에 스키마를 알 수 없으므로 때문에 사용자 정의 계층으로 구성 된 테이블을 할 수 있습니다. (또 다른 예로, note는 Visual c + + 마법사 사용 하 여 스키마 행 집합 생성 소비자에 대 한 접근자입니다.) 이 작업을 수행 하는 소비자를 허용 하려면 공급자의 세션 개체에 메서드를 노출 된 [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) 인터페이스입니다. Visual c + + 응용 프로그램에서 사용 하는 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) 구현할 클래스를 **IDBSchemaRowset**합니다.  

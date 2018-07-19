@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373376"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI(강제 포함 파일 이름 지정)
 전처리기가 지정 된 헤더 파일을 처리 합니다.  

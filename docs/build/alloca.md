@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360422"
 ---
 # <a name="alloca"></a>alloca
 [_alloca](../c-runtime-library/reference/alloca.md) 맞춰지고 프레임 포인터를 사용 하는 데 필요한 또한 16 바이트 수에 필요 합니다.  

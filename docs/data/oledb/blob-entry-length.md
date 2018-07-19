@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094867"
 ---
 # <a name="blobentrylength"></a>BLOB_ENTRY_LENGTH
 함께 사용할 `BEGIN_COLUMN_MAP` 및 `END_COLUMN_MAP` binary large object 바인딩할 ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). 비슷한 [BLOB_ENTRY](../../data/oledb/blob-entry.md)제외 하 고이 매크로 BLOB 열의 바이트 길이 가져옵니다.  

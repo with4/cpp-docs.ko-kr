@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33166116"
 ---
 # <a name="compiler-error-c2242"></a>컴파일러 오류 C2242
 형식 정의 이름은 클래스/구조체/공용 구조체 다음에 올 수 없습니다.  

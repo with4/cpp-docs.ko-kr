@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056241"
 ---
 # <a name="operator-"></a>연산자 :
 기본 세그먼트 재정의 *식* 와 `segment`합니다. `segment` 세그먼트 레지스터, 그룹 이름, 세그먼트 이름 또는 세그먼트 식이 될 수 있습니다. *식* 은 상수 여야 합니다.  

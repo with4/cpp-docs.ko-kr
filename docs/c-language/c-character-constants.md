@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382288"
 ---
 # <a name="c-character-constants"></a>C 문자 상수
 "문자 상수"는 표현 가능한 문자 집합의 단일 문자를 작은따옴표(**' '**)로 묶어 구성합니다. 문자 상수는 [실행 문자 집합](../c-language/execution-character-set.md)에서 문자를 나타내는 데 사용됩니다.  
