@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 504d561dd0d7fbc640c898aa8aa70a70337accb8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860647"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959273"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine 클래스
 
@@ -39,23 +39,23 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>매개 변수
 
-`UIntType` 부호 없는 정수 결과 형식입니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
+*UIntType* 부호 없는 정수 결과 형식입니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
 
-`W` **단어 크기**합니다. 상태 시퀀스의 각 단어 크기입니다(비트). **사전 조건**: `2u < W ≤ numeric_limits<UIntType>::digits`
+*W* **단어 크기**합니다. 상태 시퀀스의 각 단어 크기입니다(비트). **사전 조건**: `2u < W ≤ numeric_limits<UIntType>::digits`
 
-`N` **상태 크기**합니다. 상태 시퀀스의 요소(값) 수입니다.
+*N* **상태 크기**합니다. 상태 시퀀스의 요소(값) 수입니다.
 
-`M` **시프트 크기**합니다. 각 트위스트 중 건너 뛸 요소의 수입니다. **사전 조건**: `0 < M ≤ N`
+*M* **시프트 크기**합니다. 각 트위스트 중 건너 뛸 요소의 수입니다. **사전 조건**: `0 < M ≤ N`
 
-`R` **마스크 비트**합니다. **사전 조건**: `R ≤ W`
+*R* **마스크 비트**합니다. **사전 조건**: `R ≤ W`
 
-`A` **XOR 마스크**합니다. **사전 조건**: `A ≤ (1u<<W) - 1u`
+*A* **XOR 마스크**합니다. **사전 조건**: `A ≤ (1u<<W) - 1u`
 
-`U``S`, `T`, `L` **Tempering shift 매개 변수가**합니다. 암호화(조작)할 때 시프트 값으로 사용됩니다. 사전 조건: `U,S,T,L ≤ W`
+*U*, *S*합니다 *T*를 *L* **Tempering shift 매개 변수**합니다. 암호화(조작)할 때 시프트 값으로 사용됩니다. 사전 조건: `U,S,T,L ≤ W`
 
-`D``B`, `C` **Tempering 비트 마스크 매개 변수**합니다. 암호화(조작)할 때 비트 마스크 값으로 사용됩니다. 사전 조건: `D,B,C ≤ (1u<<W) - 1u`
+*D*하십시오 *B*를 *C* **Tempering 비트 마스크 매개 변수**합니다. 암호화(조작)할 때 비트 마스크 값으로 사용됩니다. 사전 조건: `D,B,C ≤ (1u<<W) - 1u`
 
-`F` **초기화 승수**합니다. 시퀀스 초기화를 지원하는 데 사용됩니다. 사전 조건: `F ≤ (1u<<W) - 1u`
+*F* **초기화 승수**합니다. 시퀀스 초기화를 지원하는 데 사용됩니다. 사전 조건: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>멤버
 
@@ -70,9 +70,9 @@ class mersenne_twister_engine;
 
 ## <a name="remarks"></a>설명
 
-이 템플릿 클래스는 닫힌 간격 [ `0`, `2`<sup>W</sup> - `1`]에 대한 값을 반환하는 난수 엔진을 설명합니다. 여기에는 `W * (N - 1) + R`비트의 큰 정수 값이 들어 있습니다. 이 큰 값에서 한 번에 `W`비트를 추출하고 모든 비트를 사용하는 경우 추출할 새 비트 집합이 있도록 비트를 시프트 후 혼합하여 큰 값을 비틉니다. `N`가 `W`번 이상 호출된 경우 엔진의 상태는 사용된 마지막 `operator()` `N`비트 값입니다. 그렇지 않으면 엔진의 상태는 사용된 `M` `W`비트 값과 시드의 마지막 `N - M` 값입니다.
+이 템플릿 클래스는 닫힌 간격 [ `0`, `2`<sup>W</sup> - `1`]에 대한 값을 반환하는 난수 엔진을 설명합니다. 여기에는 `W * (N - 1) + R`비트의 큰 정수 값이 들어 있습니다. 추출 *W* 모든 비트를 사용 하는 경우 및이 큰 값에서 한 번에 비트 비틉니다 large value 시프트 후 새에서 추출 하는 비트 집합을 갖도록 비트를 혼합 하 여 합니다. 엔진의 상태는 마지막 `N` `W`-경우에 사용 되는 값을 비트 `operator()` 이상 호출한 *N* 번이 고, 그렇지는 `M` `W`-사용 된 값과 마지막 `N - M` 시드 값입니다.
 
-생성기는 시프트 값 `N` 및 `M`과 트위스트 값 `R` 그리고 조건부 XOR 마스크 `A`로 정의되는, 트위스트되고 일반화된 피드백 시프트 레지스터를 사용하여 보유하고 있는 큰 값을 트위스트합니다. 또한 값 `U`, `D`, `S`, `B`, `T`, `C` 및 `L`로 정의된 비트 암호화 매트릭스에 따라 원시 시프트 레지스터의 비트를 암호화(조작)합니다.
+시프트 값으로 정의 고 일반화 된 피드백 시프트 레지스터를 사용 하 여 보유 하는 큰 값을 트위스트 *N* 하 고 *M*, 트위스트 값 *R*, 및 조건부 XOR 마스크 *는*합니다. 또한 원시 시프트 레지스터의 비트를 암호화 (조작) 값으로 정의 하는 비트 암호화 매트릭스에 따라 *U*를 *D*하십시오 *S*, *B* , *T*합니다 *C*, 및 *L*합니다.
 
 템플릿 인수 `UIntType`은 최대 `2`<sup>W</sup> - `1`까지 값을 보유할 수 있도록 충분히 커야 합니다. 다른 템플릿 인수의 값은 다음 요구 사항을 충족해야 합니다. `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
 
@@ -102,7 +102,7 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
 
 메르센 트위스터 알고리즘에 대한 자세한 내용은 Wikipedia 문서 [Mersenne twister](http://go.microsoft.com/fwlink/p/?linkid=402356)(메르센 트위스터)를 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 코드 예제는 [\<random>](../standard-library/random.md)을 참조하세요.
 

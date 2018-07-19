@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f324eaea0f84767d174bb109a8c1cfff7abfb50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e40c06d2dc95366e154f4299dda0087c42698312
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850081"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960198"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution 클래스
 
@@ -77,13 +77,13 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-*RealType* 부동 소수점 결과 형식 기본값이 `double`합니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
+*RealType* 부동 소수점 결과 형식에 기본값이 **double**합니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
 
 *URNG* 난수 생성기 엔진입니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-지수 분포에 따라 분포된 경우 템플릿 클래스는 사용자 지정 정수 형식 또는 아무 것도 제공되지 않았다면 `double` 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
+사용자 지정 정수 값을 생성 하는 분포를 설명 하는 템플릿 클래스 형식 또는 형식 **이중** 지 수 분포에 따라 제공 하지 않으면 배포 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
 ||||
 |-|-|-|
@@ -98,7 +98,7 @@ public:
 
 지수 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [Exponential Distribution](http://go.microsoft.com/fwlink/p/?linkid=401098)(지수 분포)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // compile with: /EHsc /W4
@@ -193,7 +193,7 @@ explicit exponential_distribution(const param_type& parm);
 
 *람다* 는 `lambda` 분포 매개 변수입니다.
 
-*매개 변수* 분포를 생성 하는 데 사용 하는 매개 변수 패키지입니다.
+*parm* 분포를 생성 하는 데 매개 변수 패키지입니다.
 
 ### <a name="remarks"></a>설명
 

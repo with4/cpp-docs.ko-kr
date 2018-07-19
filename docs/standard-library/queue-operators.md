@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: ddcc5ab787e4eba060960207a5260a571a64ff4d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 138eddc6704b5e12798ccceacc5b3f37b3df1d96
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859451"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958294"
 ---
 # <a name="ltqueuegt-operators"></a>&lt;queue&gt; 연산자
 
@@ -44,9 +44,9 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 **큐**합니다.
+*왼쪽* 형식의 개체 `queue`합니다.
 
-`right` 형식의 개체 **큐**합니다.
+*오른쪽* 형식의 개체 `queue`합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -56,7 +56,7 @@ queue가 같으면 **true**이고 queue가 같지 않으면 **false**입니다.
 
 queue 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소값이 같으면 두 큐는 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // queue_op_ne.cpp
@@ -109,9 +109,9 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 **큐**합니다.
+*왼쪽* 형식의 개체 `queue`합니다.
 
-`right` 형식의 개체 **큐**합니다.
+*오른쪽* 형식의 개체 `queue`합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -121,7 +121,7 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 queue 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 queue 개체 간의 보다 작음 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // queue_op_lt.cpp
@@ -170,9 +170,9 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 **큐**합니다.
+*왼쪽* 형식의 개체 `queue`합니다.
 
-`right` 형식의 개체 **큐**합니다.
+*오른쪽* 형식의 개체 `queue`합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -182,7 +182,7 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 queue 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 queue 개체 간의 작거나 같음 관계는 같지 않은 첫 번째 요소 쌍의 비교를 기반으로 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // queue_op_le.cpp
@@ -233,9 +233,9 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 **큐**합니다.
+*왼쪽* 형식의 개체 `queue`합니다.
 
-`right` 형식의 개체 **큐**합니다.
+*오른쪽* 형식의 개체 `queue`합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -245,7 +245,7 @@ queue가 같으면 **true**이고 queue가 같지 않으면 **false**입니다.
 
 queue 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소값이 같으면 두 큐는 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // queue_op_eq.cpp
@@ -297,9 +297,9 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 **큐**합니다.
+*왼쪽* 형식의 개체 `queue`합니다.
 
-`right` 형식의 개체 **큐**합니다.
+*오른쪽* 형식의 개체 `queue`합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -309,7 +309,7 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 queue 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 queue 개체 간의 보다 큼 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // queue_op_gt.cpp
@@ -361,9 +361,9 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 **큐**합니다.
+*왼쪽* 형식의 개체 `queue`합니다.
 
-`right` 형식의 개체 **큐**합니다.
+*오른쪽* 형식의 개체 `queue`합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -373,7 +373,7 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 queue 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소값이 같으면 두 큐는 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // queue_op_ge.cpp

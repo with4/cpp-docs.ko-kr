@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: f151bbaf692d914fa1072021e2f14262b2c72ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 948c00f7c0b773bf366f4ea9e102c832e9878d9b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855905"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960452"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 함수
 
@@ -54,11 +54,12 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>매개 변수
 
-`Rel_time` A [기간](../standard-library/duration-class.md) 시간 간격을 지정 하는 개체입니다.
+*Rel_time*  
+ 시간 간격을 지정하는 [duration](../standard-library/duration-class.md) 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-함수는 최소한 `Rel_time`에서 지정한 시간 동안 호출 스레드를 차단합니다. 이 함수는 예외를 throw하지 않습니다.
+함수 호출 스레드를 차단 합니다 이상으로 지정 된 시간 *Rel_time*합니다. 이 함수는 예외를 throw하지 않습니다.
 
 ## <a name="sleep_until"></a>  sleep_until
 
@@ -73,7 +74,8 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>매개 변수
 
-`Abs_time` 에 시각을 나타냅니다.
+*Abs_time*  
+ 특정 시점을 나타냅니다.
 
 ### <a name="remarks"></a>설명
 
@@ -81,7 +83,7 @@ void sleep_until(const xtime *Abs_time);
 
 ## <a name="swap"></a>  swap
 
-두 `thread` 개체의 상태를 바꿉니다.
+두 개의 상태를 바꿉니다 **스레드** 개체입니다.
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,9 +91,11 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>매개 변수
 
-`Left` 왼쪽 `thread` 개체입니다.
+*왼쪽*  
+ 왼쪽 **스레드** 개체입니다.
 
-`Right` 오른쪽 `thread` 개체입니다.
+*오른쪽*  
+ 오른쪽 **스레드** 개체입니다.
 
 ### <a name="remarks"></a>설명
 

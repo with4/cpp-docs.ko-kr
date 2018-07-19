@@ -16,21 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abf5449135bd0220f82400aed5e1c0aba0b90591
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8485f9565c75796cdb7a10f303469c1393b9f55f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354983"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958220"
 ---
 # <a name="com-modules-classes"></a>COM 모듈 클래스
-다음 클래스에서는 COM 모듈에 대 한 지원:  
+다음 클래스를 COM 모듈에 대 한 지원을 제공 합니다.  
   
 -   [CAtlBaseModule](../atl/reference/catlbasemodule-class.md) 모든 ATL 프로젝트에서이 클래스를 인스턴스화합니다.  
   
 -   [CAtlComModule](../atl/reference/catlcommodule-class.md) 이 클래스는 COM 서버 모듈을 구현 합니다.  
   
--   [CAtlModule](../atl/reference/catlmodule-class.md) 이 클래스는 몇 가지 ATL 모듈 클래스에서 사용 되는 메서드를 제공 합니다.  
+-   [CAtlModule](../atl/reference/catlmodule-class.md) 이 클래스는 여러 ATL 모듈 클래스에서 사용 되는 메서드를 제공 합니다.  
   
 -   [CAtlModuleT](../atl/reference/catlmodulet-class.md) 이 클래스는 ATL 모듈을 구현 합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "32354983"
   
 -   [CComModule](../atl/reference/ccommodule-class.md) 이 클래스는 DLL 또는 EXE 모듈을 구현 합니다. ATL 7.0에서에서 사용 되지 않음.  
   
--   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) 이 클래스는 여러 스레드 풀링 아파트에 대 한 지원 포함 하는 EXE 모듈을 구현 합니다. ATL 7.0에서에서 사용 되지 않음.  
+-   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) 이 클래스는 여러 스레드 풀 아파트에 대 한 지원 포함 하는 EXE 모듈을 구현 합니다. ATL 7.0에서에서 사용 되지 않음.  
   
 ## <a name="related-articles"></a>관련 문서  
  [ATL 모듈 클래스](../atl/atl-module-classes.md)  

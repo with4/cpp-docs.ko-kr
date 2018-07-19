@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec5ca351f6ac96fd8420ee921ca95b78ee2f487d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f13dfb45073a1a21e8d6a7b4585f0dfc5c71b8e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848312"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959750"
 ---
 # <a name="basicregex-class"></a>basic_regex 클래스
 
@@ -84,19 +84,19 @@ class basic_regex {
 
 ### <a name="parameters"></a>매개 변수
 
-`Elem` 와 일치 하도록 요소의 형식입니다.
+*Elem* 일치 하는 요소의 형식입니다.
 
-`RXtraits` 요소에 대 한 특성 클래스입니다.
+*RXtraits* 요소에 대 한 특성 클래스입니다.
 
 ## <a name="remarks"></a>설명
 
-템플릿 클래스는 정규식을 포함하는 개체에 대해 설명합니다. 이 템플릿 클래스의 개체는 템플릿 함수에 전달 될 수 [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search), 및 [regex_replace](../standard-library/regex-functions.md#regex_replace), 적합 한 텍스트 문자열 인수와 함께 텍스트 정규식과 일치 하는 텍스트를 검색 합니다. 이 템플릿 클래스는 두 가지 특수화를 사용합니다. 즉, `char` 형식의 요소는 [regex](../standard-library/regex-typedefs.md#regex) 형식 정의, `wchar_t` 형식의 요소는 [wregex](../standard-library/regex-typedefs.md#wregex)를 적용합니다.
+템플릿 클래스는 정규식을 포함하는 개체에 대해 설명합니다. 이 템플릿 클래스의 개체는 템플릿 함수는 전달할 수 있습니다 [regex_match](../standard-library/regex-functions.md#regex_match)를 [regex_search](../standard-library/regex-functions.md#regex_search), 및 [regex_replace](../standard-library/regex-functions.md#regex_replace), 적합 한 텍스트 문자열 인수와 함께 텍스트 정규식과 일치 하는 텍스트를 검색 합니다. 형식 정의 사용 하 여이 템플릿 클래스의 두 가지 특수화 [regex](../standard-library/regex-typedefs.md#regex) 형식의 요소에 대해 **char**, 및 [wregex](../standard-library/regex-typedefs.md#wregex) 형식의 요소에 대해  **wchar_t**합니다.
 
-템플릿 인수 `RXtraits`는 템플릿 클래스가 지원하는 정규식 구문에 대해 다양하고 중요한 속성을 설명합니다. 이러한 정규식 특성을 지정하는 클래스는 템플릿 클래스 [regex_traits 클래스](../standard-library/regex-traits-class.md)의 개체와 외부 인터페이스가 동일해야 합니다.
+템플릿 인수 *RXtraits* 여러 중요 속성의 템플릿 클래스를 지 원하는 정규식 구문에 대해 설명 합니다. 이러한 정규식 특성을 지정하는 클래스는 템플릿 클래스 [regex_traits 클래스](../standard-library/regex-traits-class.md)의 개체와 외부 인터페이스가 동일해야 합니다.
 
 일부 함수는 정규식을 정의하는 피연산자 시퀀스를 사용합니다. 그러한 피연산자 시퀀스를 여러 방법으로 지정할 수 있습니다.
 
-`ptr` -- `Elem`(null 포인터는 안 됨)에서 시작하고 null로 끝나는 시퀀스입니다(예: 형식 `char`의 `ptr`의 경우 C 문자열). 여기서 종료 요소는 값 `value_type()`이며 피연산자 시퀀스의 일부가 아닙니다.
+`ptr` -null로 끝나는 시퀀스 (예: C 문자열에 대 한 *Elem* 형식의 **char**)부터 `ptr` (되어서는 안 됨 null 포인터)를 여기서 종료 요소는 값 `value_type()` 피연산자 시퀀스의 일부가 아니며
 
 `ptr`, `count` -- `count`(null 포인터는 안 됨)에서 시작하는 `ptr` 요소의 시퀀스
 
@@ -106,7 +106,7 @@ class basic_regex {
 
 `right` -- `basic_regex` 개체 `right`
 
-이러한 멤버 함수는 `flags` 형식에서 설명하는 것 이외에 정규식 해석을 위한 다양한 옵션을 지정하는 인수 `RXtraits`도 사용합니다.
+이러한 멤버 함수는 인수로 걸립니다 `flags` 에서 설명 하는 것 외에도 정규식 해석 위한 다양 한 옵션을 지정 하는 *RXtraits* 형식.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -148,33 +148,33 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>매개 변수
 
-`STtraits` 문자열 소스에 대 한 특성 클래스입니다.
+*STtraits* 문자열 소스에 대 한 특성 클래스입니다.
 
-`STalloc` 문자열 소스에 대 한 할당자 클래스입니다.
+*STalloc* 문자열 소스에 대 한 할당자 클래스입니다.
 
-`InIt` 범위 소스에 대 한 입력된 반복기 형식입니다.
+*InIt* 입력 범위 소스에 대 한 반복기 형식입니다.
 
-`right` 복사할 Regex 소스입니다.
+*오른쪽* 복사할 Regex 소스입니다.
 
-`ptr` 복사할 시퀀스의 시작 부분에 대 한 포인터입니다.
+*ptr* 복사할 시퀀스의 시작 부분에 대 한 포인터입니다.
 
-`flags` 복사 하는 동안 추가할 구문 옵션 플래그입니다.
+*플래그* 복사 하는 동안 추가할 구문 옵션 플래그입니다.
 
-`len/TD>` 복사할 시퀀스의 길이입니다.
+*len/TD >* 복사할 시퀀스의 길이입니다.
 
-`str` 복사할 문자열입니다.
+*str* 복사할 문자열입니다.
 
-`first` 복사할 시퀀스의 시작입니다.
+*첫 번째* 복사할 시퀀스의 시작 합니다.
 
-`last` 복사할 시퀀스의 끝입니다.
+*마지막* 복사할 시퀀스의 끝입니다.
 
-`IList` 복사할 initializer_list입니다.
+*IList* 복사할 initializer_list입니다.
 
 ### <a name="remarks"></a>설명
 
 각 멤버 함수는 `*this`에 보유된 정규식을 피연산자 시퀀스에 설명된 정규식으로 대체한 후 `*this`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__basic_regex_assign.cpp
@@ -293,27 +293,27 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>매개 변수
 
-`STtraits` 문자열 소스에 대 한 특성 클래스입니다.
+*STtraits* 문자열 소스에 대 한 특성 클래스입니다.
 
-`STalloc` 문자열 소스에 대 한 할당자 클래스입니다.
+*STalloc* 문자열 소스에 대 한 할당자 클래스입니다.
 
-`InIt` 범위 소스에 대 한 입력된 반복기 형식입니다.
+*InIt* 입력 범위 소스에 대 한 반복기 형식입니다.
 
-`right` 복사할 Regex 소스입니다.
+*오른쪽* 복사할 Regex 소스입니다.
 
-`ptr` 복사할 시퀀스의 시작 부분에 대 한 포인터입니다.
+*ptr* 복사할 시퀀스의 시작 부분에 대 한 포인터입니다.
 
-`flags` 복사 하는 동안 추가할 구문 옵션 플래그입니다.
+*플래그* 복사 하는 동안 추가할 구문 옵션 플래그입니다.
 
-`len/TD>` 복사할 시퀀스의 길이입니다.
+*len/TD >* 복사할 시퀀스의 길이입니다.
 
-`str` 복사할 문자열입니다.
+*str* 복사할 문자열입니다.
 
-`first` 복사할 시퀀스의 시작입니다.
+*첫 번째* 복사할 시퀀스의 시작 합니다.
 
-`last` 복사할 시퀀스의 끝입니다.
+*마지막* 복사할 시퀀스의 끝입니다.
 
-`IList` 복사할 initializer_list입니다.
+*IList* 복사할 initializer_list입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -321,9 +321,9 @@ explicit basic_regex(
 
 첫 번째 생성자는 빈 `basic_regex` 개체를 생성합니다. 다른 생성자는 피연산자 시퀀스에서 설명하는 정규식을 보유하는 `basic_regex` 개체를 생성합니다.
 
-빈 `basic_regex` 개체가에 전달 될 때 모든 문자 시퀀스와 일치 하지 않는 [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search), 또는 [regex_replace](../standard-library/regex-functions.md#regex_replace)합니다.
+빈 `basic_regex` 개체에 전달 될 때 문자 시퀀스에 맞지 않습니다 [regex_match](../standard-library/regex-functions.md#regex_match)합니다 [regex_search](../standard-library/regex-functions.md#regex_search), 또는 [regex_replace](../standard-library/regex-functions.md#regex_replace)합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__basic_regex_construct.cpp
@@ -417,7 +417,7 @@ typedef regex_constants::syntax_option_type flag_type;
 
 이 형식은 [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type)의 동의어입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__basic_regex_flag_type.cpp
@@ -514,7 +514,7 @@ flag_type flags() const;
 
 멤버 함수는 [basic_regex::assign](#assign) 멤버 함수 중 하나에 대한 최근 호출에 전달된 `flag_type` 인수의 값을 반환하거나, 이러한 호출이 수행되지 않은 경우 생성자에 전달된 값을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__basic_regex_flags.cpp
@@ -611,7 +611,7 @@ locale_type getloc() const;
 
 멤버 함수는 `traits.`[regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()`을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__basic_regex_getloc.cpp
@@ -706,13 +706,13 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>매개 변수
 
-`loc` 저장할 로캘 개체입니다.
+*loc* 저장 하는 로캘 개체.
 
 ### <a name="remarks"></a>설명
 
 멤버 함수는 `*this`를 비우고 `traits.`[regex_traits::imbue](../standard-library/regex-traits-class.md#imbue)`(loc)`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__basic_regex_imbue.cpp
@@ -809,7 +809,7 @@ typedef typename RXtraits::locale_type locale_type;
 
 이 형식은 [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type)의 동의어입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__basic_regex_locale_type.cpp
@@ -906,7 +906,7 @@ unsigned mark_count() const;
 
 멤버 함수는 정규식의 캡처 그룹 수를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__basic_regex_mark_count.cpp
@@ -1006,19 +1006,19 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>매개 변수
 
-`STtraits` 문자열 소스에 대 한 특성 클래스입니다.
+*STtraits* 문자열 소스에 대 한 특성 클래스입니다.
 
-`STalloc` 문자열 소스에 대 한 할당자 클래스입니다.
+*STalloc* 문자열 소스에 대 한 할당자 클래스입니다.
 
-`right` 복사할 Regex 소스입니다.
+*오른쪽* 복사할 Regex 소스입니다.
 
-`str` 복사할 문자열입니다.
+*str* 복사할 문자열입니다.
 
 ### <a name="remarks"></a>설명
 
 각 연산자는 `*this` 에 보유된 정규식을 피연산자 시퀀스에 설명된 정규식으로 대체한 후 `*this`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__basic_regex_operator_as.cpp
@@ -1113,13 +1113,13 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 정규식 개체입니다.
+*오른쪽* 정규식 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 `*this` 와 `right`간에 정규식을 바꿉니다. 일정한 시간에 이 작업을 수행하고 예외를 throw하지 않습니다.
+멤버 함수 간에 정규식을 바꿉니다 `*this` 하 고 *오른쪽*합니다. 일정한 시간에 이 작업을 수행하고 예외를 throw하지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__basic_regex_swap.cpp
@@ -1214,9 +1214,9 @@ typedef Elem value_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 템플릿 매개 변수 `Elem`의 동의어입니다.
+형식은 템플릿 매개 변수에 대 한 동의어 *Elem*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__basic_regex_value_type.cpp

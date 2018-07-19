@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e3948e8697825af6cdd785117647943b33bac0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: caae1a52c36c5d21e55e90a821b280f2face7ede
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850055"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959776"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
 > [!NOTE]
-> 이 헤더는 사용되지 않습니다. 대신 사용 하는 [ \<unordered_map >](unordered-map.md)합니다.
+> 이 헤더는 사용되지 않습니다. 대신 [ \<unordered_map >](unordered-map.md)합니다.
 
 컨테이너 템플릿 클래스 hash_map 및 hash_multimap과 지원 템플릿을 정의합니다.
 
@@ -51,7 +51,7 @@ ms.locfileid: "33850055"
 
 |클래스|설명|
 |-|-|
-|[hash_compare 클래스](hash-compare-class.md)|해시 연관 컨테이너(hash_map, hash_multimap, hash_set 또는 hash_multiset) 중 하나에서 기본 **Traits** 매개 변수 개체로 사용하여 포함된 요소의 순서를 지정하고 해시할 수 있는 개체를 설명합니다.|
+|[hash_compare 클래스](hash-compare-class.md)|해시 연관 컨테이너에서 사용할 수 있는 개체를 설명-hash_map, hash_multimap, hash_set 또는 hash_multiset-기본값으로 `Traits` 를 주문 하 고 포함 된 요소의 해시 매개 변수 개체입니다.|
 |[value_compare 클래스](value-compare-class.md)|키 값 비교를 통해 hash_map의 요소를 비교하여 hash_map 내의 상대 순서를 확인할 수 있는 함수 개체를 제공합니다.|
 |[hash_map 클래스](hash-map-class.md)|각 요소가 값이 고유하고 연결된 데이터 값인 정렬 키가 있는 쌍인 컬렉션에서 데이터를 신속하게 저장하고 검색하는 데 사용됩니다.|
 |[hash_multimap 클래스](hash-multimap-class.md)|각 요소가 값이 고유하고 연결된 데이터 값이 아니어도 되는 정렬 키가 있는 쌍인 컬렉션에서 데이터를 신속하게 저장하고 검색합니다.|

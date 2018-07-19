@@ -14,19 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a4927657bd0a4944e62493134c041011c142051
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 919d62d967df4e41b5a25e953202352305b50d02
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841463"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958168"
 ---
 # <a name="container-classvaluetype"></a>Container Class::value_type
 
 > [!NOTE]
 > 이 항목은 C++ 표준 라이브러리에서 사용되는 작동하지 않는 컨테이너 예제로 Visual C++ 설명서에 포함되어 있습니다. 자세한 내용은 [C++ 표준 라이브러리 컨테이너](../standard-library/stl-containers.md)를 참조하세요.
 
-템플릿 매개 변수 **Ty**의 동의어입니다.
+템플릿 매개 변수 *Ty*의 동의어입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -37,7 +37,7 @@ typedef T4 value_type;
 
 ## <a name="remarks"></a>설명
 
-여기서는 지정되지 않은 형식 **T4**의 동의어(일반적으로 **Alloc::value_type**)로 설명됩니다.
+설명 됩니다 여기서 지정 되지 않은 형식에 대 한 동의어 `T4` (일반적으로 `Alloc::value_type`).
 
 ## <a name="see-also"></a>참고자료
 

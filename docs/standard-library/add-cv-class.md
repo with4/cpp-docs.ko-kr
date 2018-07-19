@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9825b690336acc8e93b0d404cc8335e5b27404b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b138424f3394c940307b422f590648c661d037d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840591"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958145"
 ---
 # <a name="addcv-class"></a>add_cv 클래스
 
-형식에서 const volatile 형식을 만듭니다.
+사용 하면 **const volatile** 형식에서 형식입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -44,11 +44,11 @@ using add_cv_t = typename add_cv<T>::type;
 
 ## <a name="remarks"></a>설명
 
-*T*가 이미 cv 한정자를 가지고 있거나 참조 또는 함수인 경우가 아닌 한, 수정된 형식 `add_cv<T>`의 인스턴스에는 [add_volatile](../standard-library/add-volatile-class.md) 및 [add_const](../standard-library/add-const-class.md)에 의해 수정된 *T*에 해당하는 `type` 멤버 typedef가 있습니다.
+수정 된 형식 인스턴스의 `add_cv<T>` 에 `type` 멤버 **typedef** 같음 *T* 둘 다로 수정 [add_volatile](../standard-library/add-volatile-class.md) 및 [ add_const](../standard-library/add-const-class.md)되지 않은 경우 *T* 이미 cv 한정자가, 참조 또는 함수입니다.
 
 `add_cv_t<T>` 도우미 형식은 `add_cv<T>` 멤버 typedef `type`에 액세스하기 위한 바로 가기입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // add_cv.cpp

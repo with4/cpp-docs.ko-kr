@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b847280209b7844da6b1b9093a9a514aad7b423a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 45710c4a1abca000b5cc8bca4a9db8032e874d9c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853952"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958960"
 ---
 # <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt; 클래스
 
@@ -36,7 +36,7 @@ class regex_traits<wchar_t>
 
 ## <a name="remarks"></a>설명
 
-이 클래스는 `wchar_t` 형식의 요소에 대한 템플릿 클래스 [regex_traits](../standard-library/regex-traits-class.md)의 명시적 특수화입니다(이 형식의 개체를 조작하는 라이브러리 함수를 활용할 수 있도록 함).
+클래스는 템플릿 클래스의 명시적 특수화 [regex_traits](../standard-library/regex-traits-class.md) 형식의 요소에 대해 **wchar_t** (되도록 하므로이 형식의 개체를 조작 하는 라이브러리 함수의 활용할 수 있습니다).
 
 ## <a name="requirements"></a>요구 사항
 

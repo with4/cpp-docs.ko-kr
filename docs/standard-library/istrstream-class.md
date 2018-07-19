@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48e6fcd7da3b1e1c91b4aecb640c02ae4068bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6484d70488da834d0acea79cbe9b02968e0e2a35
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855320"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957287"
 ---
 # <a name="istrstream-class"></a>istrstream 클래스
 
@@ -82,13 +82,13 @@ istrstream(
 
 ### <a name="parameters"></a>매개 변수
 
-`count` 버퍼의 길이 ( `ptr`).
+*개수* 버퍼의 길이 (*ptr*).
 
-`ptr` 내용을 초기화 하는 버퍼입니다.
+*ptr* 버퍼가 초기화 되는 내용입니다.
 
 ### <a name="remarks"></a>설명
 
-모든 생성자는 [istream](../standard-library/istream-typedefs.md#istream)( **sb**)를 호출하여 기본 클래스를 초기화합니다. 여기서 **sb**는 [strstreambuf](../standard-library/strstreambuf-class.md) 클래스의 저장된 개체입니다. 처음 두 생성자도 `strstreambuf`( ( **const**`char` \*) `ptr`, 0 )을 호출하여 **sb**를 초기화합니다. 나머지 두 생성자는 대신 `strstreambuf`( ( **const**`char` *) `ptr`, `count` )를 호출합니다.
+모든 생성자를 호출 하 여 기본 클래스를 초기화 [istream](../standard-library/istream-typedefs.md#istream)(**sb**) 여기서 `sb` 클래스의 저장 개체인 [strstreambuf](../standard-library/strstreambuf-class.md)합니다. 처음 두 생성자를 초기화할 수도 `sb` 호출한 `strstreambuf`(( **const** `char` \*) `ptr`, 0). 나머지 두 생성자는 대신 `strstreambuf`( ( **const**`char` *) `ptr`, `count` )를 호출합니다.
 
 ## <a name="rdbuf"></a>  istrstream::rdbuf
 
@@ -106,7 +106,7 @@ strstreambuf *rdbuf() const
 
 멤버 함수는 pointer 형식의 저장된 스트림 버퍼 주소를 [strstreambuf](../standard-library/strstreambuf-class.md)에 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `rdbuf`를 사용하는 샘플은 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)를 참조하세요.
 
@@ -126,9 +126,9 @@ char *str();
 
 구성원 함수는 [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str)을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
-**str**을 사용하는 샘플은 [strstream::str](../standard-library/strstreambuf-class.md#str)을 참조하세요.
+참조 [strstream:: str](../standard-library/strstreambuf-class.md#str) 사용 하는 샘플에 대 한 `str`합니다.
 
 ## <a name="see-also"></a>참고자료
 

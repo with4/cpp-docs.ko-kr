@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7249aad5e130e805aae73bdbfba7f9c4f78ad4fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c03c47502fdd9309b3d6553c3f46f9685d4eaa9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853985"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958268"
 ---
 # <a name="tuplesize-class"></a>tuple_size 클래스
 
@@ -66,27 +66,33 @@ template <class Tuple>
 
 ### <a name="parameters"></a>매개 변수
 
-*튜플* 튜플의 형식입니다.
+*Tuple*  
+튜플의 형식입니다.
 
-*Elem* 배열 요소의 형식입니다.
+*Elem*  
+배열 요소의 형식입니다.
 
-*크기* 배열의 크기입니다.
+*Size*  
+배열의 크기입니다.
 
-*T1* 쌍의 첫 번째 멤버의 형식입니다.
+*T1*  
+쌍의 첫 번째 구성원 형식입니다.
 
-*T2* 쌍의 두 번째 멤버의 형식입니다.
+*T2*  
+쌍의 두 번째 구성원 형식입니다.
 
-*형식* 튜플 요소의 형식입니다.
+*유형*  
+튜플 요소의 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-템플릿 클래스에는 해당 값이 `value` 형식 튜플의 범위인 내부 상수 식인 `Tuple`멤버가 있습니다.
+템플릿 클래스에 멤버가 `value` 는 정수 계열 상수 식 값은 튜플 형식의 범위로 *튜플*합니다.
 
-배열의 템플릿 특수화에는 해당 값이 `value`(배열의 크기)인 정수 계열 상수 식 `Size` 구성원이 있습니다.
+배열에 대 한 템플릿 특수화에 멤버가 `value` 는 정수 계열 상수 식 값인 *크기*, 배열의 크기는 합니다.
 
 쌍의 템플릿 특수화에는 해당 값이 2인 정수 계열 상수 식 `value` 구성원이 있습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 #include <tuple>
@@ -116,7 +122,7 @@ int main()
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<튜플 > **머리글:** \<배열 > (배열 특수화)에 대 한 **머리글:** \<유틸리티 > (특수화를 위한 쌍)
+**헤더:** \<튜플 > **헤더:** \<배열 > (배열 특수화 용) **헤더:** \<유틸리티 > (쌍 특수화 용)
 
 **네임스페이스:** std
 

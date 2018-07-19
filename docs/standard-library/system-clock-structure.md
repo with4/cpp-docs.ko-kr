@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
-ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
+ms.openlocfilehash: b56a493ce91c6ac7f0864a1bf4e10476603d79fd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458903"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959045"
 ---
 # <a name="systemclock-structure"></a>system_clock 구조체
 
@@ -72,13 +72,13 @@ struct system_clock;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<c h >
+**헤더:** \<chrono >
 
 **네임스페이스:** std::chrono
 
 ## <a name="from_time_t"></a>  system_clock::from_time_t
 
-`Tm`으로 표시되는 대략적인 시간을 가장 근접하게 나타내는 [time_point](../standard-library/time-point-class.md)를 반환하는 정적 메서드입니다.
+반환 하는 정적 메서드를 [time_point](../standard-library/time-point-class.md) 가장 밀접 하 게 대략적인 시간을 나타내는 *Tm*합니다.
 
 ```cpp
 static time_point from_time_t(time_t Tm) noexcept;
@@ -86,7 +86,8 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>매개 변수
 
-`Tm` A [time_t](../c-runtime-library/standard-types.md) 개체입니다.
+*Tm*  
+ [time_t](../c-runtime-library/standard-types.md) 개체
 
 ## <a name="is_monotonic_constant"></a>  system_clock::is_monotonic 상수
 
@@ -98,7 +99,7 @@ static const bool is_monotonic = false;
 
 ### <a name="return-value"></a>반환 값
 
-이 구현에서 `system_clock::is_monotonic`는 항상 `false`를 반환합니다.
+이 구현에서는 `system_clock::is_monotonic` 항상 반환 **false**합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -114,7 +115,7 @@ static const bool is_steady = false;
 
 ### <a name="return-value"></a>반환 값
 
-이 구현에서 `system_clock::is_steady`는 항상 `false`를 반환합니다.
+이 구현에서는 `system_clock::is_steady` 항상 반환 **false**합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -134,7 +135,7 @@ static time_point now() noexcept;
 
 ## <a name="to_time_t"></a>  system_clock::to_time_t
 
-`Time`으로 표시되는 대략적인 시간을 가장 근접하게 나타내는 [time_t](../c-runtime-library/standard-types.md)를 반환하는 정적 메서드입니다.
+반환 하는 정적 메서드를 [time_t](../c-runtime-library/standard-types.md) 가장 밀접 하 게 대략적인 시간을 나타내는 *시간*합니다.
 
 ```cpp
 static time_t to_time_t(const time_point& Time) noexcept;
@@ -142,7 +143,8 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>매개 변수
 
-`Time` A [time_point](../standard-library/time-point-class.md) 개체입니다.
+*시간*  
+ [time_point](../standard-library/time-point-class.md) 개체입니다.
 
 ## <a name="see-also"></a>참고자료
 

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8478490914a6f9049cd54ec78c8de8a1e519f36f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3d3902d900e0dad5ec3e335e9c3424d58ee2674
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845676"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960419"
 ---
 # <a name="cachefreelist-class"></a>cache_freelist 클래스
 
@@ -42,14 +42,14 @@ class cache_freelist
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Sz`|할당할 배열의 요소 수입니다.|
-|`Max`|사용 가능한 목록의 최대 크기를 나타내는 최대 클래스입니다. [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) 또는 [max_variable_size](../standard-library/max-variable-size-class.md)일 수 있습니다.|
+|*sz*|할당할 배열의 요소 수입니다.|
+|*Max*|사용 가능한 목록의 최대 크기를 나타내는 최대 클래스입니다. [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) 또는 [max_variable_size](../standard-library/max-variable-size-class.md)일 수 있습니다.|
 
 ## <a name="remarks"></a>설명
 
-cache_freelist 템플릿 클래스는 크기가 `Sz`인 메모리 블록의 사용 가능한 목록을 유지합니다. 사용 가능한 목록이 가득 찬 경우 `operator delete`를 사용하여 메모리 블록의 할당을 취소합니다. 사용 가능한 목록이 비어 있는 경우 `operator new`를 사용하여 새로운 메모리 블록을 할당합니다. 사용 가능한 목록의 최대 크기는 `Max` 매개 변수로 전달된 최대 클래스에 따라 결정됩니다.
+Cache_freelist 템플릿 클래스는 사용 가능한 메모리 블록 크기의 목록을 유지 관리 *Sz*합니다. 사용 하 여 사용 가능한 목록이 가득 **delete 연산자** 메모리를 할당 해제를 차단 합니다. 사용 하 여 사용 가능한 목록이 비어 있으면 **new 연산자** 새로운 메모리 블록을 할당 합니다. 사용 가능한 목록의 최대 크기에 전달 된 최대 클래스 클래스에 의해 결정 되는 *최대* 매개 변수입니다.
 
-각 메모리 블록은 `operator new`와 `operator delete`에서 필요로 하는 `Sz`바이트의 사용 가능한 메모리 및 데이터를 포함합니다.
+각 메모리 블록 보유 *Sz* 바이트의 사용 가능한 메모리 및 데이터는 **new 연산자** 및 **delete 연산자** 필요 합니다.
 
 ### <a name="constructors"></a>생성자
 
@@ -82,7 +82,7 @@ void *allocate(std::size_t count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`count`|할당할 배열의 요소 수입니다.|
+|*count*|할당할 배열의 요소 수입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -112,8 +112,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`ptr`|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
-|`count`|저장소에서 할당을 취소할 개체의 수입니다.|
+|*ptr*|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
+|*count*|저장소에서 할당을 취소할 개체의 수입니다.|
 
 ### <a name="remarks"></a>설명
 

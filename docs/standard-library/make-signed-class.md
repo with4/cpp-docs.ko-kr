@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b58c31c7f4180f9c65b04bbb852bf15c7315c35d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7fe6eb3ffa83316071de2ba26cf80e6e6cbd5245
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859370"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957349"
 ---
 # <a name="makesigned-class"></a>make_signed 클래스
 
@@ -40,11 +40,11 @@ using make_signed_t = typename make_signed<T>::type;
 
 ### <a name="parameters"></a>매개 변수
 
-`T` 수정할 형식입니다.
+*T* 수정할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 한정자의 인스턴스는 `is_signed<T>`가 true일 때 `T`인 수정된 형식을 가집니다. 그렇지 않은 경우 가장 작은 부호 없는 형식 `UT`이며, 여기서 `sizeof (T) <= sizeof (UT)`입니다.
+형식 수정자의 인스턴스는 수정 된 형식인 됩니다 *T* 경우 `is_signed<T>` 마찬가지입니다. 그렇지 않은 경우 가장 작은 부호 없는 형식 `UT`이며, 여기서 `sizeof (T) <= sizeof (UT)`입니다.
 
 ## <a name="requirements"></a>요구 사항
 

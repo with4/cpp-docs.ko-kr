@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c63aa54675bd0b1d5a52a1c0a9d80a73f53290
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65ac9dc44da5126673ee1f0699f5a5dd9dcb87e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842822"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960783"
 ---
 # <a name="iscopyassignable-class"></a>is_copy_assignable 클래스
 
@@ -36,11 +36,11 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 형식이 쿼리입니다.
+*Ty* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 형식 `Ty`가 복사 할당 연산자를 가진 클래스인 경우 true이고 그렇지 않은 경우 false입니다. is_assignable\<Ty&, const Ty&>와 동일합니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *Ty* 는 클래스에 복사 할당 연산자, 그렇지 않으면 false입니다. is_assignable\<Ty&, const Ty&>와 동일합니다.
 
 ## <a name="requirements"></a>요구 사항
 

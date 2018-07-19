@@ -18,20 +18,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 197e9d538b51ec69c0d2b2ab5dd7395f98bee7e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355347"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958493"
 ---
 # <a name="class-factories-classes"></a>클래스 팩터리 클래스
-다음 클래스 구현 하거나 클래스 팩터리를 지원 합니다.  
+다음 클래스를 구현 하거나 클래스 팩터리를 지원 합니다.  
   
 -   [CComClassFactory](../atl/reference/ccomclassfactory-class.md) 개체 만들기에 대 한 기본 클래스 팩터리를 제공 합니다.  
   
 -   [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) 라이선스를 통해 개체 생성을 제어 합니다.  
   
--   [CComClassFactoryAutoThread](../atl/reference/ccomclassfactoryautothread-class.md) 개체를 여러 스레드 풀링 아파트에서 만들 수 있습니다.  
+-   [CComClassFactoryAutoThread](../atl/reference/ccomclassfactoryautothread-class.md) 개체를 여러 스레드 풀 아파트에서 만들 수 있습니다.  
   
 -   [CComClassFactorySingleton](../atl/reference/ccomclassfactorysingleton-class.md) 단일 개체를 만듭니다.  
   

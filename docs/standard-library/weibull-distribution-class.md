@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28e27742bc956a4d6c86db4a3eb0893ff8437e6c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b651f4117cae6d3b4ed72d22ace5194e5d24446
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859890"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957674"
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution 클래스
 
@@ -80,11 +80,11 @@ class weibull_distribution
 
 ### <a name="parameters"></a>매개 변수
 
-*RealType* 부동 소수점 결과 형식 기본값이 `double`합니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
+*RealType* 부동 소수점 결과 형식에 기본값이 **double**합니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-와이블 분포에 따라 분포된 경우 템플릿 클래스는 사용자 지정 부동 소수점 형식 또는 아무것도 제공되지 않았다면 `double` 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
+사용자 지정 부동 소수점 값을 생성 하는 분포를 설명 하는 템플릿 클래스 형식 또는 형식 **이중** 와 불 분포에 따라 제공 하지 않으면 배포 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
 ||||
 |-|-|-|
@@ -105,7 +105,7 @@ class weibull_distribution
 
 와이블 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [와이블 분포](http://go.microsoft.com/fwlink/p/?linkid=401115)를 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // compile with: /EHsc /W4
@@ -232,11 +232,14 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>매개 변수
 
- 는 `a` 분포 매개 변수입니다.
+*a*  
+`a` 분포 매개 변수입니다.
 
-*b* 는 `b` 분포 매개 변수입니다.
+*b*  
+`b` 분포 매개 변수입니다.
 
-*매개 변수* 는 `param_type` 분포를 생성 하는 데 사용 되는 구조입니다.
+*parm*  
+분포를 생성하는 데 사용되는 `param_type` 구조체입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -264,11 +267,14 @@ struct param_type {
 
 ### <a name="parameters"></a>매개 변수
 
- 는 `a` 분포 매개 변수입니다.
+*a*  
+`a` 분포 매개 변수입니다.
 
-*b* 는 `b` 분포 매개 변수입니다.
+*b*  
+`b` 분포 매개 변수입니다.
 
-*오른쪽* 는 `param_type` 이 비교할 개체입니다.
+*right*  
+이 매개 변수와 비교할 `param_type` 개체입니다.
 
 ### <a name="remarks"></a>설명
 

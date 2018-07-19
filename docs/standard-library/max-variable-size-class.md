@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce8b4fde6668fe7901ecf75c153765302c6d770e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 974cee757708b9f7b1e48ea3bec3c4af98ced558
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854800"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957656"
 ---
 # <a name="maxvariablesize-class"></a>max_variable_size 클래스
 
@@ -77,11 +77,11 @@ void allocated(std::size_t _Nx = 1);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`_Nx`|증분 값입니다.|
+|*_Nx*|증분 값입니다.|
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 `_Nx`를 저장된 값 `_Nallocs`에 더합니다. 이 멤버 함수는 `cache_freelist::allocate`에서 `new` 연산자를 성공적으로 호출할 때마다 호출됩니다. `_Nx` 인수는 청크에서 `new` 연산자가 할당한 메모리 블록의 수입니다.
+이 멤버 함수 추가 *_Nx* 저장된 된 값에 `_Nallocs`입니다. 이 멤버 함수를 호출 하 여 성공적으로 호출할 때마다 `cache_freelist::allocate` 운영자에 게 **새**합니다. 인수 *_Nx* 연산자가 할당 하는 청크에서 메모리 블록 수가 **새**합니다.
 
 ## <a name="deallocated"></a>  max_variable_size::deallocated
 
@@ -95,11 +95,11 @@ void deallocated(std::size_t _Nx = 1);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`_Nx`|증분 값입니다.|
+|*_Nx*|증분 값입니다.|
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 `_Nx`를 저장된 값 `_Nallocs`에서 뺍니다. 이 멤버 함수는 `cache_freelist::deallocate`에서 `delete` 연산자를 호출할 때마다 호출됩니다. `_Nx` 인수는 청크에서 `delete` 연산자가 할당 취소한 메모리 블록의 수입니다.
+멤버 함수를 뺍니다 *_Nx* 저장된 된 값에서 `_Nallocs`합니다. 이 멤버 함수는 호출할 때마다 호출 됩니다 `cache_freelist::deallocate` 운영자에 게 **삭제**합니다. 인수 *_Nx* 연산자가 할당 취소 하는 청크에서 메모리 블록 수가 **삭제**합니다.
 
 ## <a name="full"></a>  max_variable_size::full
 
@@ -111,11 +111,11 @@ bool full();
 
 ### <a name="return-value"></a>반환 값
 
-`_Nallocs / 16 + 16 <= _Nblocks`이면 `true`입니다.
+**true 이면** 경우 `_Nallocs / 16 + 16 <= _Nblocks`합니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 `cache_freelist::deallocate`에서 호출됩니다. 호출에서 `true`를 반환하는 경우 `deallocate`는 메모리 블록을 사용 가능한 목록에 넣고, false를 반환하는 경우 `deallocate`는 `delete` 연산자를 호출하여 블록을 할당 취소합니다.
+이 멤버 함수는 `cache_freelist::deallocate`에서 호출됩니다. 호출 반환 하는 경우 **true**를 `deallocate` false를 반환 하는 경우 사용 가능한 목록;에서 메모리 블록을 배치 `deallocate` 호출 연산자 **삭제** 할당을 취소 하려면 블록입니다.
 
 ## <a name="max_variable_size"></a>  max_variable_size::max_variable_size
 

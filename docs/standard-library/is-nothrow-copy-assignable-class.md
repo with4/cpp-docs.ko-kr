@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c5c5bdc1e944483071f0f1dcd53c3bc93eb6ed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e540d6fe4c00772af01b187d24efae18fd62357f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842939"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957560"
 ---
 # <a name="isnothrowcopyassignable-class"></a>is_nothrow_copy_assignable 클래스
 
@@ -36,11 +36,11 @@ struct is_nothrow_copy_assignable;
 
 ### <a name="parameters"></a>매개 변수
 
-`T` 형식이 쿼리입니다.
+*T* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `is_nothrow_assignable<T&, const T&>`가 true인 참조 가능한 형식 `T`에 대해서는 true이고, 그렇지 않으면 false입니다.
+형식 조건자의 인스턴스 참조 가능한 형식에 대 한 마찬가지 *T* 여기서 `is_nothrow_assignable<T&, const T&>` 보유 true이 고 그렇지 않으면 false입니다.
 
 ## <a name="requirements"></a>요구 사항
 

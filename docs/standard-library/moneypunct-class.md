@@ -56,16 +56,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28acc1eb2f2ed265d20507d2b47efa657c2d1bb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ed808d8b28071978e89d873d0af9735167e4dbf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862509"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957511"
 ---
 # <a name="moneypunct-class"></a>moneypunct 클래스
 
-템플릿 클래스는 통화 입력 필드 또는 통화 출력 필드를 나타내는 데 사용 가능한 `CharType` 형식의 시퀀스를 설명하는 데 로캘 패싯으로 사용할 수 있는 개체에 대해 설명합니다. 템플릿 매개 변수 `Intl`이 `true`인 경우 국제 규약을 준수합니다.
+형식의 시퀀스를 설명 하는 로캘 패싯으로 사용할 수 있는 개체를 설명 하는 템플릿 클래스 *CharType* 통화 입력된 필드 또는 통화 출력 필드를 나타내는 데 사용 합니다. 경우 템플릿 매개 변수 *Intl* 됩니다 *true*, 국제 규약을 준수 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -76,15 +76,15 @@ class moneypunct;
 
 ### <a name="parameters"></a>매개 변수
 
-`CharType` 문자를 인코딩하기 위해 프로그램 내 사용 유형입니다.
+*CharType* 문자를 인코딩하기 위해 프로그램 내에서 사용 되는 형식입니다.
 
-`Intl` 국제 규약을 따라야 하는지 여부를 지정 하는 플래그입니다.
+*Intl* 국제 규약을 준수 하는지 여부를 지정 하는 플래그입니다.
 
 ## <a name="remarks"></a>설명
 
 모든 로캘 패싯과 마찬가지로, 고정 개체 ID에는 초기값 0이 저장되어 있습니다. 저장된 값에 액세스를 처음 시도하면 **id**에 고유한 양수 값이 저장됩니다.
 
-상수 정적 개체 intl에는 템플릿 매개 변수 **Intl**의 값이 저장됩니다.
+상수 정적 개체 intl에는 템플릿 매개 변수 *Intl*의 값이 저장됩니다.
 
 ### <a name="constructors"></a>생성자
 
@@ -156,7 +156,7 @@ string_type curr_symbol() const;
 
 구성원 함수는 [do_curr_symbol](#do_curr_symbol)을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // moneypunct_curr_symbol.cpp
@@ -193,7 +193,7 @@ CharType decimal_point() const;
 
 구성원 함수는 [do_decimal_point](#do_decimal_point)를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // moneypunct_decimal_pt.cpp
@@ -235,7 +235,7 @@ virtual string_type do_curr_symbol() const;
 
 소수점 기호로 사용할 로캘별 요소 시퀀스입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `curr_symbol`에 의해 가상 구성원 함수가 호출되는 [curr_symbol](#curr_symbol)의 예제를 참조하세요.
 
@@ -251,7 +251,7 @@ virtual CharType do_decimal_point() const;
 
 소수점 기호로 사용할 로캘별 요소 시퀀스입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `decimal_point`에 의해 가상 구성원 함수가 호출되는 [decimal_point](#decimal_point)의 예제를 참조하세요.
 
@@ -267,7 +267,7 @@ virtual int do_frac_digits() const;
 
 소수점 오른쪽에 표시할 로캘별 자릿수입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `frac_digits`에 의해 가상 구성원 함수가 호출되는 [frac_digits](#frac_digits)의 예제를 참조하세요.
 
@@ -283,9 +283,9 @@ virtual string do_grouping() const;
 
 소수점 왼쪽의 숫자를 그룹화할 방법을 결정하기 위한 로캘별 규칙입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
-**grouping**에 의해 가상 구성원 함수가 호출되는 [grouping](#grouping)의 예제를 참조하세요.
+예를 참조 하세요 [그룹화](#grouping)에 의해 가상 구성원 함수가 호출 되는, `grouping`합니다.
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -297,23 +297,23 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>반환 값
 
-보호된 가상 구성원 함수는 음수 값에 대해 통화 출력 필드를 생성하는 방법을 결정하기 위한 로캘별 규칙을 반환합니다. **pattern::field**의 각 4개 요소가 포함할 수 있는 값은 다음과 같습니다.
+보호된 가상 구성원 함수는 음수 값에 대해 통화 출력 필드를 생성하는 방법을 결정하기 위한 로캘별 규칙을 반환합니다. 네 가지 요소의 각 `pattern::field` 값일 수 있습니다.
 
-- **none** - 0개 이상의 공백과 일치시키거나 아무 항목도 생성하지 않습니다.
+- `none` 0 개 이상의 공백과 일치 시키거나 아무 항목도 생성 됩니다.
 
-- **sign** - 양수/음수 부호와 일치시키거나 해당 부호를 생성합니다.
+- `sign` 검색 하거나 양수 또는 음수 기호를 생성 합니다.
 
-- **space** - 0개 이상의 공백과 일치시키거나 공백을 생성합니다.
+- `space` 0 개 이상의 공백과 일치 시키거나 공백을 생성 합니다.
 
-- **symbol** - 통화 기호와 일치시키거나 통화 기호를 생성합니다.
+- `symbol` -일치 시키거나 통화 기호를 생성 합니다.
 
-- **value** - 통화 값과 일치시키거나 통화 값을 생성합니다.
+- `value` -일치 시키거나 통화 값을 생성 합니다.
 
-통화 출력 필드의 구성 요소가 생성되며, 통화 입력 필드의 구성 요소는 **pattern::field**에 나타나는 순서대로 일치 여부를 확인합니다. 각각의 **sign**, **symbol**, **value** 및 **none** 또는 **space** 값은 정확히 한 번 나와야 합니다. **none** 값은 첫 번째로 나올 수 없습니다. spce 값은 첫 번째나 마지막에 나올 수 **없습니다**. **Intl**이 true이면 값의 순서는 **symbol**, **sign**, **none**, **value**입니다.
+통화 출력 필드의 구성 요소에서 생성 되 고 구성 요소는 통화 입력된 필드의 일치 하는 이러한 요소에 나타나는 순서 `pattern::field`합니다. 각 값 `sign`, `symbol`를 `value`, 및 중 하나 `none` 또는 `space` 정확히 한 번만 나타나야 합니다. 값 `none` 첫 번째로 나타나야 합니다. spce 값은 첫 번째나 마지막에 나올 수 **없습니다**. 경우 `Intl` 가 true 이면 순서가 `symbol`, `sign`, `none`에 다음 `value`합니다.
 
 `moneypunct`\< **CharType**, **Intl**>의 템플릿 버전은 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `neg_format`에 의해 가상 구성원 함수가 호출되는 [neg_format](#neg_format)의 예제를 참조하세요.
 
@@ -329,7 +329,7 @@ virtual string_type do_negative_sign() const;
 
 음수 부호로 사용할 로캘별 요소 시퀀스입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `negative_sign`에 의해 가상 구성원 함수가 호출되는 [negative_sign](#negative_sign)의 예제를 참조하세요.
 
@@ -347,7 +347,7 @@ virtual pattern do_pos_format() const;
 
 moneypunct\< **CharType**, **Inputlterator**>의 템플릿 버전은 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `pos_format`에 의해 가상 구성원 함수가 호출되는 [pos_format](#pos_format)의 예제를 참조하세요.
 
@@ -363,7 +363,7 @@ virtual string_type do_positive_sign() const;
 
 양수 부호로 사용할 로캘별 요소 시퀀스입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `positive_sign`에 의해 가상 구성원 함수가 호출되는 [positive_sign](#positive_sign)의 예제를 참조하세요.
 
@@ -379,7 +379,7 @@ virtual CharType do_thousands_sep() const;
 
 소스점 왼쪽의 그룹 구분 기호로 사용할 로캘별 요소입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `thousands_sep`에 의해 가상 구성원 함수가 호출되는 [thousands_sep](#thousands_sep)의 예제를 참조하세요.
 
@@ -399,7 +399,7 @@ int frac_digits() const;
 
 구성원 함수는 [do_frac_digits](#do_frac_digits)를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // moneypunct_frac_digits.cpp
@@ -468,7 +468,7 @@ string grouping() const;
 
 구성원 함수는 [do_grouping](#do_grouping)을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // moneypunct_grouping.cpp
@@ -531,11 +531,11 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Refs` 개체에 대 한 메모리 관리의 유형을 지정 하는 데 사용 되는 정수 값입니다.
+*_Refs* 개체에 대 한 메모리 관리의 유형을 지정 하는 데 사용 하는 정수 값입니다.
 
 ### <a name="remarks"></a>설명
 
-`_Refs` 매개 변수에 대해 사용 가능한 값과 해당 중요도는 다음과 같습니다.
+에 대 한 가능한 값을 *_Refs* 매개 변수 및 중요성은:
 
 - 0: 개체를 포함하는 로캘에 의해 개체의 수명이 관리됩니다.
 
@@ -563,7 +563,7 @@ pattern neg_format() const;
 
 구성원 함수는 [do_neg_format](#do_neg_format)을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // moneypunct_neg_format.cpp
@@ -611,7 +611,7 @@ string_type negative_sign() const;
 
 구성원 함수는 [do_negative_sign](#do_negative_sign)을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // moneypunct_neg_sign.cpp
@@ -673,7 +673,7 @@ pattern pos_format() const;
 
 구성원 함수는 [do_pos_format](#do_pos_format)을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // moneypunct_pos_format.cpp
@@ -721,7 +721,7 @@ string_type positive_sign() const;
 
 구성원 함수는 [do_positive_sign](#do_positive_sign)을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // moneypunct_pos_sign.cpp
@@ -795,7 +795,7 @@ CharType thousands_sep() const;
 
 구성원 함수는 [do_thousands_sep](#do_thousands_sep)를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // moneypunct_thou_sep.cpp

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e7220d2710465dc8d155cf35ec7d47db4e3c08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 84a6b685501927d9fbd79fa7c82a90c5671f70b2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854079"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958947"
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex 클래스(C++ 표준 라이브러리)
 
@@ -121,7 +121,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>반환 값
 
-메서드가 성공적으로 `true`의 소유권을 가져오면 `mutex`이고, 그렇지 않으면 `false`입니다.
+**true** 메서드는 성공적으로의 소유권을 가져올 경우 합니다 `mutex`이 고, 그렇지 않으면 **false**합니다.
 
 ### <a name="remarks"></a>설명
 

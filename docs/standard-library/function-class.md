@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26164c391689c8fb7f24f49464e141f74a3058ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ca8621067c851b5a1e107eb16800d546562fbb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847844"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959936"
 ---
 # <a name="function-class"></a>function 클래스
 
@@ -89,9 +89,9 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-`Fty` 래핑할 함수 형식입니다.
+*Fty* 래핑할 함수 형식입니다.
 
-`Ax` 할당자 함수입니다.
+*Ax* 할당자 함수입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -164,15 +164,15 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>매개 변수
 
-`_Func` 호출 가능 개체입니다.
+*_Func* 호출 가능 개체입니다.
 
-`_Fnref` 호출 가능 개체를 포함 하는 참조 래퍼.
+*_Fnref* 호출 가능 개체가 포함 된 참조 래퍼입니다.
 
-`Ax` 할당자 개체입니다.
+*Ax* 할당자 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 각각 `*this`에 의해 포함된 `callable object`를 `operand`로 전달된 호출 가능 개체로 바꿉니다. 두 멤버 함수 모두 할당자 개체 `Ax`를 사용하여 저장소를 할당합니다.
+멤버 함수는 각각 `*this`에 의해 포함된 `callable object`를 `operand`로 전달된 호출 가능 개체로 바꿉니다. 할당자 개체를 사용 하 여 저장소를 할당 하는 둘 다 *Ax*합니다.
 
 ## <a name="function"></a>  function::function
 
@@ -199,23 +199,23 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 복사할 함수 개체입니다.
+*오른쪽* 복사할 함수 개체입니다.
 
-`Fx` 호출 가능 개체의 형식입니다.
+*Fx* 호출 가능 개체의 형식입니다.
 
-`_Func` 래핑하는 호출 가능 개체입니다.
+*_Func* 래핑할 호출 가능 개체입니다.
 
-`Alloc` 할당자 형식입니다.
+*Alloc* 할당자 유형입니다.
 
-`Ax` 할당자입니다.
+*Ax* 할당자입니다.
 
-`_Fnref` 줄 바꿈에 대 한 호출 가능 개체 참조입니다.
+*_Fnref* 래핑할 호출 가능 개체 참조입니다.
 
 ### <a name="remarks"></a>설명
 
 처음 두 개의 생성자는 빈 `function` 개체를 생성합니다. 다음 세 개의 생성자는 피연산자로 전달된 호출 가능 개체를 포함하는 `function` 개체를 생성합니다. 마지막 두 개의 생성자는 할당자 개체 Ax를 사용하여 저장소를 할당합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__functional__function_function.cpp
@@ -295,9 +295,9 @@ operator unspecified();
 
 ### <a name="remarks"></a>설명
 
-연산자는 개체가 비어 있지 않은 경우에만 true 값이 포함된 `bool`로 변환할 수 있는 값을 반환합니다. 이를 사용하여 개체가 비어 있는지 테스트합니다.
+로 변환할 수 있는 값을 반환 하는 연산자 **bool** 개체가 비어 있지 않은 경우에 true 값을 사용 하 여 합니다. 이를 사용하여 개체가 비어 있는지 테스트합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__functional__function_operator_bool.cpp
@@ -340,15 +340,15 @@ result_type operator()(
 
 ### <a name="parameters"></a>매개 변수
 
-`TN` N 번째 형식 인수를 호출 합니다.
+*TN* n 번째 호출 인수 형식입니다.
 
-`tN` N 번째 호출 인수입니다.
+*tN* 의 n 번째 호출 인수입니다.
 
 ### <a name="remarks"></a>설명
 
 멤버 함수는 `INVOKE(fn, t1, t2, ..., tN, Ret)`를 반환합니다. 여기서 `fn`은 `*this`에 저장된 대상 개체입니다. 이를 사용하여 래핑된 호출 가능 개체를 호출합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__functional__function_operator_call.cpp
@@ -391,19 +391,19 @@ template <class Fty>
 
 ### <a name="parameters"></a>매개 변수
 
-`npc` Null 포인터 상수입니다.
+*npc* null 포인터 상수입니다.
 
-`right` 복사할 함수 개체입니다.
+*오른쪽* 복사할 함수 개체입니다.
 
-`fn` 래핑하는 호출 가능 개체입니다.
+*fn* 래핑할 호출 가능 개체입니다.
 
-`fnref` 줄 바꿈에 대 한 호출 가능 개체 참조입니다.
+*fnref* 래핑할 호출 가능 개체 참조입니다.
 
 ### <a name="remarks"></a>설명
 
 멤버 함수는 각각 `*this`에 의해 포함된 호출 가능 개체를 피연산자로 전달된 호출 가능 개체로 바꿉니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__functional__function_operator_as.cpp
@@ -466,7 +466,7 @@ typedef Ret result_type;
 
 형식 정의는 템플릿의 호출 시그니처에서 `Ret` 형식의 동의어입니다. 이를 사용하여 래핑된 호출 가능 개체의 반환 형식을 결정합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__functional__function_result_type.cpp
@@ -506,13 +506,13 @@ void swap(function& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 함수 개체입니다.
+*오른쪽* 함수 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 `*this`와 `right` 사이에 대상 개체를 바꿉니다. 일정한 시간에 이 작업을 수행하고 예외를 throw하지 않습니다.
+멤버 함수 사이 대상 개체를 바꿉니다 `*this` 하 고 *오른쪽*합니다. 일정한 시간에 이 작업을 수행하고 예외를 throw하지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__functional__function_swap.cpp
@@ -567,15 +567,15 @@ template <class Fty2>
 
 ### <a name="parameters"></a>매개 변수
 
-`Fty2` 테스트 대상 호출 가능 개체 형식입니다.
+*Fty2* 테스트할 대상 호출 가능 개체 유형입니다.
 
 ### <a name="remarks"></a>설명
 
-`Fty2` 형식은 인수 형식 `T1, T2, ..., TN` 및 반환 형식 `Ret`에 대해 호출 가능해야 합니다. `target_type() == typeid(Fty2)`인 경우 멤버 템플릿 함수는 대상 개체의 주소를 반환하고, 그렇지 않으면 0을 반환합니다.
+형식 *Fty2* 인수 형식에 대해 호출할 수 있어야 합니다 `T1, T2, ..., TN` 반환 형식 및 `Ret`합니다. `target_type() == typeid(Fty2)`인 경우 멤버 템플릿 함수는 대상 개체의 주소를 반환하고, 그렇지 않으면 0을 반환합니다.
 
-`Fty2, T1, T2, ..., TN` 형식의 lvalue `fn, t1, t2, ..., tN`에 대해 각각 `INVOKE(fn, t1, t2, ..., tN)`이 올바른 형식이고 `Ret`가 `Ret`로 변환할 수 있는 `void`가 아닌 경우, `Fty2` 형식은 인수 형식 `T1, T2, ..., TN` 및 반환 형식 `Ret`에 대해 호출 가능합니다.
+형식 *Fty2* 인수 형식에 대해 호출할 수 `T1, T2, ..., TN` 및 반환 형식 `Ret` 경우 lvalue `fn, t1, t2, ..., tN` 형식의 `Fty2, T1, T2, ..., TN`각각 `INVOKE(fn, t1, t2, ..., tN)` 올바른 형식이 있으면 `Ret`되지 **void**변환할, `Ret`합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__functional__function_target.cpp
@@ -627,7 +627,7 @@ const std::type_info& target_type() const;
 
 멤버 함수는 `*this`가 비어 있으면 `typeid(void)`를 반환하고, 그렇지 않으면 `typeid(T)`를 반환합니다. 여기서 `T`는 대상 개체의 형식입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__functional__function_target_type.cpp

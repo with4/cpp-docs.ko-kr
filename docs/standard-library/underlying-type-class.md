@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f45af807b37294b87920b6fabac18647f170025
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b3f796d5039900b591c219c840d1aef94d23e8f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853224"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957583"
 ---
 # <a name="underlyingtype-class"></a>underlying_type 클래스
 
@@ -37,11 +37,12 @@ struct underlying_type;
 
 ### <a name="parameters"></a>매개 변수
 
-`T` 수정할 형식입니다.
+*T*  
+ 수정할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-템플릿 클래스의 `type` 구성원 형식 정의는 `T`가 열거형 형식이면 `T`의 기본 정수 계열 형식 이름을 지정합니다. 그렇지 않은 경우에는 구성원 형식 정의 `type`이 없습니다.
+`type` 템플릿 클래스의 멤버 typedef의 기본 정수 계열 형식 이름을 *T*면 *T* 가 열거형 형식이 없는 멤버 typedef 않으면 `type`합니다.
 
 ## <a name="requirements"></a>요구 사항
 

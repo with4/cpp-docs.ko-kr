@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 108397f6c3c3c088839230f2b48b505300149345
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a04265a68a03edc9f957161991d2ddd91a8e6096
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844395"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958181"
 ---
 # <a name="bidirectionaliteratortag-struct"></a>bidirectional_iterator_tag 구조체
 
-양방향 반복기를 나타내는 **iterator_category** 함수에 반환 형식을 제공하는 클래스입니다.
+에 대 한 반환 형식을 제공 하는 클래스 `iterator_category` 양방향 반복기를 나타내는 함수입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -38,9 +38,9 @@ struct bidirectional_iterator_tag    : public forward_iterator_tag {};
 
 범주 태그 클래스는 알고리즘 선택을 위한 컴파일 태그로 사용됩니다. 템플릿 함수는 컴파일 시 가장 효율적인 알고리즘을 사용할 수 있도록 해당 반복기 인수의 가장 구체적인 범주를 찾아야 합니다. `Iterator` 형식의 모든 반복기에 대해 `iterator_traits`< `Iterator`>:: **iterator_category**는 반복기 동작을 설명하는 가장 구체적인 범주 태그로 정의되어야 합니다.
 
-**Iter**가 출력 반복기로 사용될 수 있는 개체를 설명할 경우 이 형식은 **iterator**\< **Iter**>:: **iterator_category**와 같습니다.
+형식은 동일 **반복기** \< **Iter**>:: **iterator_category** 때 `Iter` 에 양방향으로 사용할 수 있는 개체에 설명 합니다. 반복기입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 `bidirectional_iterator_tag` 사용 방법의 예는 [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)를 참조하세요.
 

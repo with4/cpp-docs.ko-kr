@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e71cdbfad883d1d9560ee88fde0338958240bd19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855827"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959071"
 ---
 # <a name="tupleelement-class"></a>tuple_element 클래스
 
@@ -66,31 +66,37 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>매개 변수
 
-*인덱스* 지정 된 요소의 인덱스입니다.
+*Index*  
+지정된 요소의 인덱스입니다.
 
-*튜플* 튜플의 형식입니다.
+*Tuple*  
+튜플의 형식입니다.
 
-*Elem* 배열 요소의 형식입니다.
+*Elem*  
+배열 요소의 형식입니다.
 
-*크기* 배열의 크기입니다.
+*Size*  
+배열의 크기입니다.
 
-*T1* 쌍의 첫 번째 요소 형식입니다.
+*T1*  
+쌍의 첫 번째 요소의 형식입니다.
 
-*T2* 두 번째 요소는 한 쌍의 형식입니다.
+*T2*  
+쌍의 두 번째 요소 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-템플릿 클래스 `tuple_element`에는 튜플 형식 `Tuple`의 인덱스 `Index`에 있는 형식과 동일한 의미인 중첩 형식 정의 `type`이 있습니다.
+템플릿 클래스 `tuple_element` 중첩 된 typedef `type` 인덱스에 있는 형식의 동의어인 *인덱스* 튜플 형식의 *튜플*합니다.
 
 `tuple_element_t` 형식 정의는 `tuple_element<Index, Tuple>::type`에 사용할 수 있는 편리한 별칭입니다.
 
-배열의 템플릿 클래스 특수화는 `array`에 대한 인터페이스를 각각 형식이 동일한 `Size` 요소의 튜플로 제공합니다. 각 특수화에는 `type` 의 `Index` 요소 형식에 대한 동의어인 중첩된 typedef `array`이 있어 모든 const-volatile 한정자가 유지됩니다.
+배열의 템플릿 클래스 특수화는 `array`에 대한 인터페이스를 각각 형식이 동일한 `Size` 요소의 튜플로 제공합니다. 각 특수화에 중첩 된 typedef `type` 형식의 동의어입니다 합니다 *인덱스* 의 요소를 `array`, 모든 const volatile 한정자가 유지 합니다.
 
 `pair` 형식의 템플릿 특수화는 각각 단일 구성원 형식 정의 `type`를 제공합니다. 이 형식 정의는 쌍의 지정된 위치에 있는 요소 형식과 동일한 의미이며, 모든 const 및/또는 volatile 한정자가 유지됩니다. `tuple_element_t` 형식 정의는 `tuple_element<N, pair<T1, T2>>::type`에 사용할 수 있는 편리한 별칭입니다.
 
-사용 하 여는 [get 함수 &lt;유틸리티&gt; ](../standard-library/utility-functions.md#get) 지정 된 위치 또는 지정 된 형식의 요소를 반환 합니다.
+사용 된 [get 함수 &lt;유틸리티&gt; ](../standard-library/utility-functions.md#get) 지정 된 위치 또는 지정 된 형식의 요소를 반환 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 #include <tuple>
@@ -115,7 +121,7 @@ int main() {
 0 1.5 Tail
 ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 #include <array>
@@ -145,7 +151,7 @@ int main()
  0
 ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 #include <utility>
@@ -178,7 +184,7 @@ int main() {
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<튜플 > **머리글:** \<배열 > (배열 특수화)에 대 한 **머리글:** \<유틸리티 > (특수화를 위해 쌍)  **Namespace:** std
+**헤더:** \<튜플 > **헤더:** \<배열 > (배열 특수화 용) **헤더:** \<유틸리티 > (쌍 특수화의 경우)에 대 한  **Namespace:** std
 
 ## <a name="see-also"></a>참고자료
 

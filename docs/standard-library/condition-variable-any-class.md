@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0fe38031dc215f537d82fe6e06f68acf6db8e0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56082c63ccc64e117d9962ff35dddc01969f403b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847132"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959234"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any 클래스
 
@@ -111,9 +111,9 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>매개 변수
 
-`Lck` A `mutex` 모든 형식의 개체입니다.
+*Lck* 는 `mutex` 형식의 개체입니다.
 
-`Pred` 반환 하는 모든 식 `true` 또는 `false`합니다.
+*Pred* 반환 하는 식 **true** 하거나 **false**합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -140,21 +140,21 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>매개 변수
 
-`Lck` A `mutex` 모든 형식의 개체입니다.
+*Lck* 는 `mutex` 형식의 개체입니다.
 
-`Rel_time` A `chrono::duration` 다시 시작 되어 스레드 하기 전에 시간을 지정 하는 개체입니다.
+*Rel_time* 는 `chrono::duration` 절전 된 시간 전에 스레드를 지정 하는 개체입니다.
 
-`Pred` 반환 하는 모든 식 `true` 또는 `false`합니다.
+*Pred* 반환 하는 식 **true** 하거나 **false**합니다.
 
 ### <a name="return-value"></a>반환 값
 
-첫 번째 메서드는 `Rel_time`이 경과되면 대기가 종료될 경우 `cv_status::timeout`을 반환합니다. 그렇지 않은 경우 메서드는 `cv_status::no_timeout`를 반환합니다.
+첫 번째 메서드는 반환 `cv_status::timeout` 대기가 종료 될 때 하는 경우 *Rel_time* 경과 합니다. 그렇지 않은 경우 메서드는 `cv_status::no_timeout`를 반환합니다.
 
-두 번째 메서드는 `Pred`의 값을 반환합니다.
+값을 반환 하는 두 번째 방법은 *Pred*합니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 메서드는 `condition_variable_any` 개체에서 [notify_one](../standard-library/condition-variable-class.md#notify_one) 또는 [notify_all](../standard-library/condition-variable-class.md#notify_all)에 대한 호출을 통해 신호를 받을 때까지 또는 `Rel_time` 시간 간격이 경과될 때까지 차단합니다. 또한 의사적으로 대기 모드를 해제할 수도 있습니다.
+첫 번째 방법은 될 때까지 차단 합니다 `condition_variable_any` 개체를 호출 하 여 신호를 받는 [notify_one](../standard-library/condition-variable-class.md#notify_one) 또는 [notify_all](../standard-library/condition-variable-class.md#notify_all), 또는 시간 간격까지 *Rel_time* 경과 합니다. 또한 의사적으로 대기 모드를 해제할 수도 있습니다.
 
 두 번째 메서드는 실제로 다음 코드를 실행합니다.
 
@@ -192,21 +192,21 @@ void wait_until(
 
 ### <a name="parameters"></a>매개 변수
 
-`Lck` 뮤텍스 개체입니다.
+*Lck* 뮤텍스 개체입니다.
 
-`Abs_time` A [time_point](../standard-library/time-point-class.md) 개체입니다.
+*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md) 개체입니다.
 
-`Pred` 반환 하는 모든 식 `true` 또는 `false`합니다.
+*Pred* 반환 하는 식 **true** 하거나 **false**합니다.
 
 ### <a name="return-value"></a>반환 값
 
-`cv_status` 형식을 반환하는 메서드는 `Abs_time`이 경과되면 대기가 종료될 경우 `cv_status::timeout`을 반환합니다. 그렇지 않으면 메서드는 `cv_status::no_timeout`을 반환합니다.
+반환 하는 메서드를 `cv_status` 반환 형식 `cv_status::timeout` 대기가 종료 될 때 경우 *Abs_time* 경과 합니다. 그렇지 않으면 메서드는 `cv_status::no_timeout`을 반환합니다.
 
-`bool`을 반환하는 메서드는 `Pred`의 값을 반환합니다.
+반환 하는 메서드를 `bool` 의 값을 반환 *Pred*합니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 메서드는 `condition_variable` 개체에서 [notify_one](../standard-library/condition-variable-class.md#notify_one) 또는 [notify_all](../standard-library/condition-variable-class.md#notify_all)에 대한 호출을 통해 신호를 받을 때까지 또는 `Abs_time`까지 차단합니다. 또한 의사적으로 대기 모드를 해제할 수도 있습니다.
+첫 번째 방법은 될 때까지 차단 합니다 `condition_variable` 개체를 호출 하 여 신호를 받는 [notify_one](../standard-library/condition-variable-class.md#notify_one) 또는 [notify_all](../standard-library/condition-variable-class.md#notify_all), 또는까지 *Abs_time*합니다. 또한 의사적으로 대기 모드를 해제할 수도 있습니다.
 
 두 번째 메서드는 실제로 다음 코드를 실행합니다.
 
