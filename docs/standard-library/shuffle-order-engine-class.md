@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4adbf2c0b6f3ce6d1bababf0a69bb6720ef6be77
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13b46bcd29624d696ae22494c394fa028d58fa8a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859019"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961976"
 ---
 # <a name="shuffleorderengine-class"></a>shuffle_order_engine 클래스
 
@@ -45,9 +45,9 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>매개 변수
 
-`Engine` 기본 엔진 유형입니다.
+*엔진* 기본 엔진 유형입니다.
 
-`K` **테이블 크기**합니다. 버퍼(테이블)에 있는 요소의 수입니다. **사전 조건**: `0 < K`
+*K* **테이블 크기**합니다. 버퍼(테이블)에 있는 요소의 수입니다. **사전 조건**: `0 < K`
 
 ## <a name="members"></a>멤버
 
@@ -60,7 +60,7 @@ class shuffle_order_engine;
 
 ## <a name="remarks"></a>설명
 
-이 템플릿 클래스는 기본 엔진에서 반환하는 값을 다시 정렬하여 값을 생성하는 *엔진 어댑터*에 대해 설명합니다. 각 생성자는 기본 엔진에서 반환한 `K` 값으로 내부 테이블을 채우고 값이 요청되면 이 테이블에서 임의 요소가 선택됩니다.
+이 템플릿 클래스는 기본 엔진에서 반환하는 값을 다시 정렬하여 값을 생성하는 *엔진 어댑터*에 대해 설명합니다. 각 생성자는 사용 하 여 내부 테이블을 채우는 *K* 기본 엔진에서 반환 된 값 및 값 요청 될 때 테이블에서 임의 요소가 선택 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 

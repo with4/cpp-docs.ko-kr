@@ -9,16 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 25e40157c1872df3e970bb234accab5c487c6287
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0bc4ce7c36d3ba097b04b1704fea7633eb7d26ea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841130"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962958"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 연산자
 
-이것은 전역 서식 연산자 함수에 정의 된 &lt;할당자&gt;합니다. 클래스 멤버 연산자 함수를 클래스 설명서를 참조 하십시오.
+에 정의 된 전역 템플릿 연산자 함수를 이들은 &lt;할당자&gt;합니다. 클래스 멤버 연산자 함수를 클래스 설명서를 참조 하십시오.
 
 |||
 |-|-|
@@ -39,8 +39,8 @@ bool operator!=(
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`left`|같지 않은지를 테스트할 할당자 개체 중 하나입니다.|
-|`right`|같지 않은지를 테스트할 할당자 개체 중 하나입니다.|
+|*left*|같지 않은지를 테스트할 할당자 개체 중 하나입니다.|
+|*right*|같지 않은지를 테스트할 할당자 개체 중 하나입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -65,8 +65,8 @@ bool operator==(
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`left`|같은지를 테스트할 할당자 개체 중 하나입니다.|
-|`right`|같은지를 테스트할 할당자 개체 중 하나입니다.|
+|*left*|같은지를 테스트할 할당자 개체 중 하나입니다.|
+|*right*|같은지를 테스트할 할당자 개체 중 하나입니다.|
 
 ### <a name="return-value"></a>반환 값
 

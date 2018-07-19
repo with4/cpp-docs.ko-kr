@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: e5ed9d81e4b63dd57ebaf5f41ecc8422eaf166dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f5dc68dcd2b29b77b54bcc5af7e9dc8e4e79a897
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861612"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962028"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt; 연산자
 
@@ -48,9 +48,11 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 **쌍입니다.**
+*left*  
+ `pair` 형식의 개체입니다.
 
-`right` 형식의 개체 `pair`합니다.
+*right*  
+ `pair` 형식의 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -60,7 +62,7 @@ pair가 같지 않으면 **true**이고 pair가 같으면 **false**입니다.
 
 해당 요소가 각각 같으면 한 쌍과 다른 쌍이 같습니다. 한 쌍의 첫 번째 또는 두 번째 요소가 다른 쌍의 해당 요소와 같지 않으면 두 쌍은 같지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // utility_op_ne.cpp
@@ -118,9 +120,9 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 **쌍입니다.**
+*왼쪽* 형식의 개체 `pair`합니다.
 
-`right` 형식의 개체 `pair`합니다.
+*오른쪽* 형식의 개체 `pair`합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -130,7 +132,7 @@ pair가 같으면 **true**이고 `pair`가 같지 않으면 **false**입니다.
 
 해당 요소가 각각 같으면 한 쌍과 다른 쌍이 같습니다. 함수에서 `left`을 반환합니다. **first** == `right`. **first** && `left`. **second** == `right`. **second**. 한 쌍의 첫 번째 또는 두 번째 요소가 다른 쌍의 해당 요소와 같지 않으면 두 쌍은 같지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // utility_op_eq.cpp
@@ -179,9 +181,11 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 `pair` 연산자의 왼쪽에 있습니다.
+*left*  
+ 연산자의 좌변에 있는 `pair` 형식의 개체입니다.
 
-`right` 형식의 개체 `pair` 연산자의 오른쪽에 있습니다.
+*right*  
+ 연산자의 우변에 있는 `pair` 형식의 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -189,11 +193,11 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>설명
 
-`left` `pair` 엄격 하 게 개체 라고 보다 작은 `right` `pair` 개체를 `left` 가 보다 작거나 같지 않은 `right`합니다.
+합니다 `left` `pair` 엄격 하 게 개체 라고 보다 작은 `right` `pair` 하는 경우 개체 *왼쪽* 보다 작고 같지 *오른쪽*합니다.
 
 쌍의 비교에서 두 쌍에서 값의 첫 번째 요소가 가장 높은 우선 순위를 갖습니다. 서로 다르면 해당 비교 결과가 쌍의 비교 결과로 사용됩니다. 첫 번째 요소 값이 다르지 않으면 두 번째 요소 값이 비교되고 해당 비교 결과가 쌍의 비교 결과로 사용됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // utility_op_lt.cpp
@@ -254,9 +258,11 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 `pair` 연산자의 왼쪽에 있습니다.
+*left*  
+ 연산자의 좌변에 있는 `pair` 형식의 개체입니다.
 
-`right` 형식의 개체 `pair` 연산자의 오른쪽에 있습니다.
+*right*  
+ 연산자의 우변에 있는 `pair` 형식의 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -266,7 +272,7 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 쌍의 비교에서 두 쌍에서 값의 첫 번째 요소가 가장 높은 우선 순위를 갖습니다. 서로 다르면 해당 비교 결과가 쌍의 비교 결과로 사용됩니다. 첫 번째 요소 값이 다르지 않으면 두 번째 요소 값이 비교되고 해당 비교 결과가 쌍의 비교 결과로 사용됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // utility_op_le.cpp
@@ -337,9 +343,11 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 `pair` 연산자의 왼쪽에 있습니다.
+*left*  
+ 연산자의 좌변에 있는 `pair` 형식의 개체입니다.
 
-`right` 형식의 개체 `pair` 연산자의 오른쪽에 있습니다.
+*right*  
+ 연산자의 우변에 있는 `pair` 형식의 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -347,11 +355,11 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>설명
 
-`left` `pair` 개체 보다 엄격 하 게 커야 하 라고는 `right` `pair` 개체를 `left` 보다 크고 같지 않은 `right`합니다.
+`left` `pair` 개체 보다 엄격 하 게 커야 라고 합니다 `right` `pair` 경우 개체 *왼쪽* 보다 크고 같지 *오른쪽*합니다.
 
 쌍의 비교에서 두 쌍에서 값의 첫 번째 요소가 가장 높은 우선 순위를 갖습니다. 서로 다르면 해당 비교 결과가 쌍의 비교 결과로 사용됩니다. 첫 번째 요소 값이 다르지 않으면 두 번째 요소 값이 비교되고 해당 비교 결과가 쌍의 비교 결과로 사용됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // utility_op_gt.cpp
@@ -422,9 +430,11 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 `pair` 연산자의 왼쪽에 있습니다.
+*left*  
+ 연산자의 좌변에 있는 `pair` 형식의 개체입니다.
 
-`right` 형식의 개체 `pair` 연산자의 오른쪽에 있습니다.
+*right*  
+ 연산자의 우변에 있는 `pair` 형식의 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -434,7 +444,7 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 
 쌍의 비교에서 두 쌍에서 값의 첫 번째 요소가 가장 높은 우선 순위를 갖습니다. 서로 다르면 해당 비교 결과가 쌍의 비교 결과로 사용됩니다. 첫 번째 요소 값이 다르지 않으면 두 번째 요소 값이 비교되고 해당 비교 결과가 쌍의 비교 결과로 사용됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // utility_op_ge.cpp

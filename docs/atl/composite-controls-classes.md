@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c421b385564299035e0045dac275859afc5a222
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acfbf8379512513e59528a6eb2855b9caed7d298
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355366"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964199"
 ---
 # <a name="composite-controls-classes"></a>복합 컨트롤 클래스
-다음 클래스는 합성 컨트롤 만들기에 대 한 지원  
+다음 클래스는 복합 컨트롤 만들기에 대 한 지원 제공  
   
--   [CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md) ActiveX 컨트롤에서 파생 된 `CComCompositeControl` 표준 대화 상자에서 호스트 합니다. 이러한 종류의 컨트롤을 다른 컨트롤 (네이티브 Windows 컨트롤 및 ActiveX 컨트롤)를 호스트할 수 있기 때문에 복합 컨트롤 이라고 합니다.  
+-   [CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md) ActiveX 컨트롤에서 파생 된 `CComCompositeControl` 표준 대화 상자를 통해 호스팅됩니다. 이러한 종류의 컨트롤을 다른 컨트롤 (네이티브 Windows 컨트롤 및 ActiveX 컨트롤)를 호스트할 수 있기 때문에 복합 컨트롤 이라고 합니다.  
   
 ## <a name="related-articles"></a>관련 문서  
  [복합 컨트롤 기본 사항](../atl/atl-composite-control-fundamentals.md)  

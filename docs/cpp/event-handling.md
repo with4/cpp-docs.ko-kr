@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09029f3afef0a9a28fdc572b9b7d8685cf76e811
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d27ff977bf3e4132f7782c0ffcb85bebefd42d68
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414622"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961443"
 ---
 # <a name="event-handling"></a>이벤트 처리
-이벤트 처리는 기본적으로 COM 클래스에 대 한 지원 (대개 ATL 클래스를 사용 하 여 COM 개체를 구현 하는 c + + 클래스 또는 [coclass](../windows/coclass.md) 특성).  자세한 내용은 참조 [COM에서 이벤트 처리](../cpp/event-handling-in-com.md)합니다.  
+이벤트 처리는 주로 COM 클래스에 대 한 지원 (대개 ATL 클래스를 사용 하 여 COM 개체를 구현 하는 c + + 클래스와 [coclass](../windows/coclass.md) 특성).  자세한 내용은 [COM에서 이벤트 처리](../cpp/event-handling-in-com.md)합니다.  
   
- 네이티브 C++ 클래스(COM 개체를 구현하지 않는 C++ 클래스)에 대해서도 이벤트 처리가 지원되지만 이 지원은 더 이상 사용되지 않으며 향후 릴리스에서 제거됩니다.  자세한 내용은 참조 [네이티브 c + +에서 이벤트 처리](../cpp/event-handling-in-native-cpp.md)합니다.  
+ 네이티브 C++ 클래스(COM 개체를 구현하지 않는 C++ 클래스)에 대해서도 이벤트 처리가 지원되지만 이 지원은 더 이상 사용되지 않으며 향후 릴리스에서 제거됩니다.  자세한 내용은 [네이티브 c + +에서 이벤트 처리](../cpp/event-handling-in-native-cpp.md)합니다.  
   
  이벤트 처리는 단일 및 다중 스레드 사용을 지원하며 동시 다중 스레드 액세스로부터 데이터를 보호합니다. 이벤트 처리를 사용하면 이벤트 소스나 수신기 클래스에서 하위 클래스를 파생시키고 파생된 클래스에서 확장된 이벤트 소싱/수신을 지원할 수 있습니다.  
   
@@ -44,4 +44,3 @@ ms.locfileid: "32414622"
 ## <a name="see-also"></a>참고 항목  
  [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [키워드](../cpp/keywords-cpp.md)   
- [이벤트 처리 샘플](http://msdn.microsoft.com/en-us/cc0287d4-f92b-4da5-85fc-a0f186e16424)

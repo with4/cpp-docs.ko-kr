@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: d0a556505370078f599d6d667fa856723d9bac8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 974b1294f8ef23936d79e64926595779a9019368
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856800"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963695"
 ---
 # <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt; 연산자
 
@@ -38,8 +38,8 @@ bool operator==(const error_condition& left,
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`left`|같은지 테스트할 개체입니다.|
-|`right`|같은지 테스트할 개체입니다.|
+|*left*|같은지 테스트할 개체입니다.|
+|*right*|같은지 테스트할 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -65,12 +65,12 @@ bool operator!=(const error_condition& left,
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`left`|같지 않은지 테스트할 개체입니다.|
-|`right`|같지 않은지 테스트할 개체입니다.|
+|*left*|같지 않은지 테스트할 개체입니다.|
+|*right*|같지 않은지 테스트할 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-`left`에서 전달된 개체가 `right`에서 전달된 개체와 같지 않으면 **true**이고, 그렇지 않으면 **false**입니다.
+**true** 에 전달 된 개체가 *왼쪽* 에 전달 된 개체와 같지 않은 *오른쪽*이 고 그렇지 않으면 **false**합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -108,12 +108,12 @@ inline bool operator<(
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`left`|비교할 개체입니다.|
-|`right`|비교할 개체입니다.|
+|*left*|비교할 개체입니다.|
+|*right*|비교할 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-`left`에서 전달된 개체가 `right`에서 전달된 개체보다 작으면 **true**이고, 그렇지 않으면 **false**입니다.
+**true 이면** 에 전달 된 개체가 *왼쪽* 에 전달 되는 개체 보다 작습니다 *오른쪽*; 그렇지 않으면 **false**합니다.
 
 ### <a name="remarks"></a>설명
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b886b805eb551831ad2d559b041df0d38c5987
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c931e81b27c3a5eb95d546119e0abee118f6e76a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857872"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964979"
 ---
 # <a name="issame-class"></a>is_same 클래스
 
@@ -37,15 +37,15 @@ struct is_same;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty1` 첫 번째 형식이 쿼리입니다.
+*Ty1* 첫 번째 쿼리할 형식입니다.
 
-`Ty2` 두 번째 형식이 쿼리입니다.
+*Ty2* 두 번째 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `Ty1` 및 `Ty2` 형식이 동일한 형식인 경우 true이고 그렇지 않은 경우 false입니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *Ty1* 하 고 *Ty2* 동일한 형식이, 그렇지 않은 경우 false입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__is_same.cpp

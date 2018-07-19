@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f89e6e0fc83a83ece82793050441fec9a1e7978b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f802dc91c3429ba718778d122d1a787aad0dec87
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844499"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964225"
 ---
 # <a name="independentbitsengine-class"></a>independent_bits_engine 클래스
 
@@ -36,11 +36,11 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>매개 변수
 
-`Engine` 기본 엔진 유형입니다.
+*엔진* 기본 엔진 유형입니다.
 
-`W` **단어 크기**합니다. 생성된 각 수의 크기입니다(비트). **사전 조건**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*W* **단어 크기**합니다. 생성된 각 수의 크기입니다(비트). **사전 조건**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-`UIntType` 부호 없는 정수 결과 형식입니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
+*UIntType* 부호 없는 정수 결과 형식입니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
 
 ## <a name="members"></a>멤버
 
@@ -53,7 +53,7 @@ class independent_bits_engine;
 
 ## <a name="remarks"></a>설명
 
-이 템플릿 클래스는 기본 엔진에서 반환하는 값의 비트를 다시 압축하여 `W` 비트 값을 생성하는 *엔진 어댑터*에 대해 설명합니다.
+이 템플릿 클래스는 *엔진 어댑터* 발생 하는 기본 엔진에서 반환 되는 값의 비트를 다시 압축 하 여 값을 생성 *W*-비트 값입니다.
 
 ## <a name="requirements"></a>요구 사항
 

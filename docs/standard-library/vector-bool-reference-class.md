@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 149b43f0485d3717ad2f413d2519e435f0da0562
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c87975e0b27934d091e896867620011a51b78d52
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857079"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966526"
 ---
 # <a name="vectorltboolgtreference-class"></a>vector&lt;bool&gt;::reference 클래스
 
@@ -43,7 +43,7 @@ bool& refb = vb[1];   // conversion error - do not use
 |멤버 함수|설명|
 |-|-|
 |[flip](../standard-library/vector-bool-reference-flip.md)|벡터 요소의 부울 값을 반전합니다.|
-|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|`vector<bool>::reference`을 `bool`로 묵시적으로 변환합니다.|
+|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|암시적으로 변환 `vector<bool>::reference` 하 **bool**합니다.|
 |[operator=](../standard-library/vector-bool-reference-operator-assign.md)|비트에 부울 값을 할당하거나 참조된 요소에 저장된 값을 비트에 할당합니다.|
 
 ## <a name="requirements"></a>요구 사항

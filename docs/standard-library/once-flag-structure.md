@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8a8d28f19e32988bfa179642a87e880413bb0ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4275b99ada0dbfe1c974446d21862f7fa73aab38
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852340"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964498"
 ---
 # <a name="onceflag-structure"></a>once_flag 구조체
 
-실행 스레드가 여러 개 있는 경우에도 초기화 코드를 한 번만 호출하기 위해 템플릿 함수 [call_once](../standard-library/mutex-functions.md#call_once)와 함께 사용되는 `struct`를 나타냅니다.
+나타냅니다는 **구조체** 템플릿 함수를 사용 하 여 사용 되는 [call_once](../standard-library/mutex-functions.md#call_once) 해당 초기화 되도록 코드는 한 번만 호출, 다중 스레드 방식의 실행 하는 경우에 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -31,7 +31,7 @@ struct once_flag { constexpr once_flag() noexcept; once_flag(const once_flag&); 
 
 ## <a name="remarks"></a>설명
 
-`once_flag` `struct` 기본 생성자만 포함 합니다.
+합니다 `once_flag` **구조체** 기본 생성자만 포함 합니다.
 
 `once_flag` 형식의 개체는 만들 수는 있지만 복사할 수는 없습니다.
 

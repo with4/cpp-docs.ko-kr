@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: b0ca7da732786c2f0ff6087052b5867150702a5e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 728a0f643a77b47bf857d409517407bec3a1b8b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862486"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966630"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 연산자
 
@@ -107,9 +107,9 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` C 스타일 문자열 또는 형식의 개체가 `basic_string` 연결 됩니다.
+*왼쪽* C 스타일 문자열 또는 개체 형식의 `basic_string` 연결할 수 있습니다.
 
-`right` C 스타일 문자열 또는 형식의 개체가 `basic_string` 연결 됩니다.
+*오른쪽* C 스타일 문자열 또는 개체 형식의 `basic_string` 연결할 수 있습니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -119,7 +119,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 각 함수는 `operator+`를 오버로드하여 템플릿 클래스 [basic_string 클래스](../standard-library/basic-string-class.md)의 두 개체를 연결합니다. 모든 함수는 실제로는 `basic_string`\< **CharType**, **Traits**, **Allocator**>(_ *Left*). [append](../standard-library/basic-string-class.md#append)(\_ *Right*)를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // string_op_con.cpp
@@ -194,9 +194,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` C 스타일 문자열 또는 형식의 개체가 `basic_string` 비교 합니다.
+*왼쪽* C 스타일 문자열 또는 개체 형식의 `basic_string` 비교 합니다.
 
-`right` C 스타일 문자열 또는 형식의 개체가 `basic_string` 비교 합니다.
+*오른쪽* C 스타일 문자열 또는 개체 형식의 `basic_string` 비교 합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -206,7 +206,7 @@ bool operator!=(
 
 string 개체 간의 비교는 해당 문자의 쌍 단위 어휘 비교를 기반으로 합니다. 문자 수와 개별 문자 값이 같은 두 문자열은 동일한 문자열입니다. 그렇지 않으면 목록은 같지 않은 것입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // string_op_ne.cpp
@@ -283,9 +283,9 @@ bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` C 스타일 문자열 또는 형식의 개체가 `basic_string` 비교 합니다.
+*왼쪽* C 스타일 문자열 또는 개체 형식의 `basic_string` 비교 합니다.
 
-`right` C 스타일 문자열 또는 형식의 개체가 `basic_string` 비교 합니다.
+*오른쪽* C 스타일 문자열 또는 개체 형식의 `basic_string` 비교 합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -295,7 +295,7 @@ bool operator==(
 
 string 개체 간의 비교는 해당 문자의 쌍 단위 어휘 비교를 기반으로 합니다. 문자 수와 개별 문자 값이 같은 두 문자열은 동일한 문자열입니다. 그렇지 않으면 목록은 같지 않은 것입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // string_op_eq.cpp
@@ -372,9 +372,9 @@ bool operator<(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` C 스타일 문자열 또는 형식의 개체가 `basic_string` 비교 합니다.
+*왼쪽* C 스타일 문자열 또는 개체 형식의 `basic_string` 비교 합니다.
 
-`right` C 스타일 문자열 또는 형식의 개체가 `basic_string` 비교 합니다.
+*오른쪽* C 스타일 문자열 또는 개체 형식의 `basic_string` 비교 합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -390,7 +390,7 @@ bool operator<(
 
 - 같지 않은 문자가 없으며 문자열의 문자 수도 같음이 확인될 때까지. 이 경우 두 문자열은 동일한 것으로 간주합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // string_op_lt.cpp
@@ -466,9 +466,9 @@ bool operator<=(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` C 스타일 문자열 또는 형식의 개체가 `basic_string` 비교 합니다.
+*왼쪽* C 스타일 문자열 또는 개체 형식의 `basic_string` 비교 합니다.
 
-`right` C 스타일 문자열 또는 형식의 개체가 `basic_string` 비교 합니다.
+*오른쪽* C 스타일 문자열 또는 개체 형식의 `basic_string` 비교 합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -484,7 +484,7 @@ bool operator<=(
 
 - 같지 않은 문자가 없으며 문자열의 문자 수도 같음이 확인될 때까지. 이 경우 두 문자열은 동일한 것으로 간주합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // string_op_le.cpp
@@ -557,13 +557,13 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>매개 변수
 
-출력 스트림에 기록 _Ostr.
+*_Ostr* 출력 스트림에 기록 합니다.
 
-`str` 출력 스트림으로 입력 문자열입니다.
+*str* 출력 스트림에 입력할 문자열입니다.
 
 ### <a name="return-value"></a>반환 값
 
-출력 스트림 `_Ostr`에 지정된 문자열의 값을 기록합니다.
+지정된 된 문자열의 값을 출력 스트림에 쓸 *_Ostr*합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -592,9 +592,9 @@ bool operator>(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` C 스타일 문자열 또는 형식의 개체가 `basic_string` 비교 합니다.
+*왼쪽* C 스타일 문자열 또는 개체 형식의 `basic_string` 비교 합니다.
 
-`right` C 스타일 문자열 또는 형식의 개체가 `basic_string` 비교 합니다.
+*오른쪽* C 스타일 문자열 또는 개체 형식의 `basic_string` 비교 합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -610,7 +610,7 @@ bool operator>(
 
 - 같지 않은 문자가 없으며 문자열의 문자 수도 같음이 확인될 때까지. 이 경우 두 문자열은 동일한 것으로 간주합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // string_op_gt.cpp
@@ -693,9 +693,9 @@ bool operator>=(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` C 스타일 문자열 또는 형식의 개체가 `basic_string` 비교 합니다.
+*왼쪽* C 스타일 문자열 또는 개체 형식의 `basic_string` 비교 합니다.
 
-`right` C 스타일 문자열 또는 형식의 개체가 `basic_string` 비교 합니다.
+*오른쪽* C 스타일 문자열 또는 개체 형식의 `basic_string` 비교 합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -711,7 +711,7 @@ bool operator>=(
 
 - 같지 않은 문자가 없으며 문자열의 문자 수도 같음이 확인될 때까지. 이 경우 두 문자열은 동일한 것으로 간주합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // string_op_ge.cpp
@@ -784,19 +784,19 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>매개 변수
 
-`_Istr` 시퀀스를 추출 하는 데 입력된 스트림
+*_Istr* 시퀀스를 추출 하는 데 사용 되는 입력된 스트림에서
 
-`right` 입력 스트림에서 추출 되는 문자열입니다.
+*오른쪽* 입력 스트림에서 추출 하는 문자열입니다.
 
 ### <a name="return-value"></a>반환 값
 
-지정된 된 문자열의 값을 읽고 `_Istr` 로 반환 하 고 `right`합니다.
+지정된 된 문자열의 값을 읽고 *_Istr* 로 반환 합니다 *오른쪽*합니다.
 
 ### <a name="remarks"></a>설명
 
 `skipws` 플래그가 설정된 경우가 아니면 연산자는 선행 공백을 건너뜁니다. 그리고 다음 문자가 공백이거나 파일의 끝에 도달할 때까지 뒤에 오는 모든 문자를 읽습니다.
 
-템플릿 함수는 **operator>>** 를 오버로드하여 `right`로 제어되는 시퀀스를 `_Istr` 스트림에서 추출된 요소 시퀀스로 바꿉니다. 다음과 같은 경우 추출이 중지됩니다.
+템플릿 함수 오버 로드가 **연산자 >>** 제어 하는 시퀀스를 바꾸려면 *오른쪽* 스트림에서 추출 된 요소의 시퀀스를 사용 하 여 *_Istr*합니다. 다음과 같은 경우 추출이 중지됩니다.
 
 - 파일의 끝에 도달하는 경우
 
@@ -806,9 +806,9 @@ basic_istream<CharType, Traits>& operator>>(
 
 - 함수가 *ch* 요소를 추출한 후 이 요소의 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`), **is**( **ctype**\< **CharType**>:: **space**, *ch*)가 true이면 문자가 되돌려집니다.
 
-함수는 요소를 추출하지 않는 경우 [setstate](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit`)를 호출하며, 어떤 경우든 **istr**. **width**(0)을 호출하고 \* **this**를 반환합니다.
+함수가 요소를 추출 하는 경우 호출 [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). 어떤 경우든 **istr**. **width**(0)을 호출하고 \* **this**를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // string_op_read_.cpp

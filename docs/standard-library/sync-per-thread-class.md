@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e366f9b0cf92aed9c61609642f48f0e5cc9530d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 956a18a477ca5a713f951da31ca276bc4e379727
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858772"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964134"
 ---
 # <a name="syncperthread-class"></a>sync_per_thread 클래스
 
@@ -44,7 +44,7 @@ class sync_per_thread
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Cache`|동기화 필터와 연결된 캐시 형식입니다. [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) 또는 [cache_suballoc](../standard-library/cache-suballoc-class.md)일 수 있습니다.|
+|*캐시*|동기화 필터와 연결된 캐시 형식입니다. [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) 또는 [cache_suballoc](../standard-library/cache-suballoc-class.md)일 수 있습니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -76,7 +76,7 @@ void *allocate(std::size_t count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`count`|할당할 배열의 요소 수입니다.|
+|*count*|할당할 배열의 요소 수입니다.|
 
 ### <a name="remarks"></a>설명
 
@@ -94,8 +94,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`ptr`|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
-|`count`|저장소에서 할당을 취소할 개체의 수입니다.|
+|*ptr*|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
+|*count*|저장소에서 할당을 취소할 개체의 수입니다.|
 
 ### <a name="remarks"></a>설명
 
@@ -113,12 +113,12 @@ bool equals(const sync<Cache>& Other) const;
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Cache`|동기화 필터의 캐시 개체입니다.|
-|`Other`|같은지 비교할 캐시 개체입니다.|
+|*캐시*|동기화 필터의 캐시 개체입니다.|
+|*기타*|같은지 비교할 캐시 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-현재 스레드에서 `Other` 또는 이 개체에 대해 캐시 개체가 할당되지 않은 경우 `false`입니다. 그렇지 않으면 두 캐시 개체에 `operator==`를 적용한 결과가 반환됩니다.
+**false** 또는이 개체에 대 한 캐시 개체가 할당 된 경우 *다른* 현재 스레드에서 합니다. 그렇지 않으면 두 캐시 개체에 `operator==`를 적용한 결과가 반환됩니다.
 
 ### <a name="remarks"></a>설명
 

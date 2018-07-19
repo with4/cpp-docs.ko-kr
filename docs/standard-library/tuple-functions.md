@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: d6f921f85ffc6ef6d7985d66fe8637f044965176
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858814"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966409"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt; 함수
 
@@ -64,21 +64,25 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>매개 변수
 
-`Index` 가져올 요소의 인덱스입니다.
+*Index*  
+ 가져올 요소의 인덱스입니다.
 
-`Types` 형식의 시퀀스로, 선언 순서 대로 나열에서 튜플에서 선언 된 합니다.
+*유형*  
+ 튜플에서 선언된 형식의 시퀀스로, 선언 순서대로 나열됩니다.
 
-`T` 가져올 요소의 형식입니다.
+*T*  
+ 가져올 요소의 형식입니다.
 
-`Tuple` std:: tuple 임의의 수의 요소가 들어 있는입니다.
+*Tuple*  
+ 임의의 수의 요소가 포함된 std::tuple입니다.
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수는 인덱스 `Index`에 있는 값에 대한 참조나 `T` 개체에 있는 `tuple` 형식의 참조를 반환합니다.
+인덱스에 있는 값에 대 한 참조를 반환 하는 템플릿 함수 *인덱스*, 또는 형식의 *T* 에 `tuple` 개체입니다.
 
 `get<T>(Tuple)` 을 호출할 때 튜플에 T 형식의 요소가 두 개 이상 있거나 없는 경우 컴파일러 오류가 생성됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 #include <tuple>
@@ -118,9 +122,11 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>매개 변수
 
-`TN` Nth 함수 매개 변수의 형식입니다.
+*TN*  
+ Nth 함수 매개 변수의 형식입니다.
 
-`tN` Nth 함수 매개 변수의 값입니다.
+*TN*  
+ Nth 함수 매개 변수의 값입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -128,7 +134,7 @@ template <class T1, class T2, ..., class TN>
 
 `make_tuple`의 장점 하나는 저장되는 개체 형식이 컴파일러에서 자동으로 저장되며 명시적으로 지정하지 않아도 된다는 점입니다. `make_tuple<int, int>(1, 2)`를 사용할 경우 불필요하게 장황해지고 컴파일 문제의 원인이 될 수 있는 복잡한 rvalue 참조 문제만 더해지므로 `make_tuple` 등의 명시적 템플릿 인수를 사용하지 마십시오.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__tuple__make_tuple.cpp
@@ -174,13 +180,14 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>매개 변수
 
-`TN` N 번째 튜플 요소의 기본 형식입니다.
+*TN*  
+ N번째 튜플 요소의 기본 형식입니다.
 
 ### <a name="remarks"></a>설명
 
 템플릿 함수가 `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__tuple__tie.cpp

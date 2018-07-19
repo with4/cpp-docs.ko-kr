@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c3b9e3ba7a7929158adacfab889007cb518c54b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: efebe74f0f2735b9f32b0114a3db68d0839b90f2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849069"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965011"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap 클래스
 
@@ -122,13 +122,13 @@ class hash_multimap
 
 ### <a name="parameters"></a>매개 변수
 
-`Key` Hash_multimap에 저장 되는 키 데이터 형식입니다.
+*키* hash_multimap에 저장 되는 키 데이터 형식입니다.
 
-`Type` Hash_multimap에 저장 되는 요소 데이터 형식
+*형식* hash_multimap에 저장 되는 요소 데이터 형식입니다.
 
-`Traits` 두 함수 개체를 클래스 중 하나를 포함 하는 유형은 `Traits` 상대적 순서를 결정 하는 해시 함수는 단항 조건자 매핑 키 값의 부호 없는 정수에 요소를 정렬 키로 두 요소 값을 비교할 수 형식 **size_t**합니다. 이 인수는 선택 사항이며 기본값은 `hash_compare<Key, less<Key>>`입니다.
+*Traits* 클래스 중 하나는 두 함수 개체를 포함 하는 형식 *Traits* 해당 상대 순서를 단항 조건자 매핑 키가 해시 함수를 결정 하는 정렬 키로 두 요소 값을 비교할 수는 값 형식의 부호 없는 정수는 요소의 `size_t`합니다. 이 인수는 선택 사항이며 기본값은 `hash_compare<Key, less<Key>>`입니다.
 
-`Allocator` Hash_multimap의 할당 및 메모리 할당 취소에 대 한 세부 정보를 캡슐화 하는 저장 된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `allocator<pair <const Key, Type>>`입니다.
+*할당자* hash_multimap의 할당 및 메모리 할당 취소 하는 방법에 대 한 세부 정보를 캡슐화 하는 저장 된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `allocator<pair <const Key, Type>>`입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -154,7 +154,7 @@ hash_multimap은 다음과 같습니다.
 
 hash_multimap은 [value_compare](../standard-library/value-compare-class.md) 형식의 저장된 해시 `Traits` 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 이 저장된 개체는 [key_comp](../standard-library/hash-map-class.md#key_comp) 멤버 함수를 호출하여 액세스할 수 있습니다. 이러한 함수 개체는 [hash_compare](../standard-library/hash-compare-class.md)`<Key, less<Key>>` 클래스의 개체와 동일하게 동작해야 합니다. 특히, `Key` 형식의 모든 값 `Key`에 대해 `Traits (Key)` 호출은 `size_t` 형식의 값 분포를 생성합니다.
 
-일반적으로, 이 순서를 정하려면 요소의 크기를 비교할 수 있어야 합니다. 즉, 제공된 어떤 두 요소에서 두 요소가 동일하거나(어떤 것도 다른 것보다 작지 않음) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 기술적으로 설명하면, 비교 함수는 표준 함수의 의미에서 엄밀히 약한 정렬을 수행하는 이진 조건자입니다. 이진 조건자 f(x, y)는 두 인수 개체 `x` 및 `y`를 가지는 함수 개체이며, `true` 또는 `false` 값을 반환합니다. 이진 조건자가 비재귀적, 비대칭 및 전이적인 경우 및 동등성이 전이적인 경우 hash_multimap에 적용된 정렬은 엄밀히 약한 정렬입니다. 여기서, f(x, y) 및 f(y, x)가 모두 `false`인 경우 `x` 및 `y` 두 개체는 동등한 것으로 정의됩니다. 키 사이의 더 강력한 같음 조건이 동등 조건을 대체하는 경우, 정렬은 전체가 되고(모든 요소가 서로 상대적으로 정렬됨을 의미) 일치된 키는 서로 구분할 수 없게 됩니다.
+일반적으로, 이 순서를 정하려면 요소의 크기를 비교할 수 있어야 합니다. 즉, 제공된 어떤 두 요소에서 두 요소가 동일하거나(어떤 것도 다른 것보다 작지 않음) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 기술적으로 설명하면, 비교 함수는 표준 함수의 의미에서 엄밀히 약한 정렬을 수행하는 이진 조건자입니다. 이진 조건자 f (x, y)는 두 인수 개체에 있는 함수 개체 `x` 하 고 `y` 의 반환 값과 **true** 또는 **false**합니다. 엄밀히 약한 정렬 이진 조건자가 비재귀적, 비대칭 및 전이적인 경우 및 동등성이 전이적인 경우 여기서 두 개체는 hash_multimap에 적용 된 주문이 `x` 및 `y` 때 동등한 것으로 정의 된 두 f (x y) 및 f (y, x)은 **false**합니다. 키 사이의 더 강력한 같음 조건이 동등 조건을 대체하는 경우, 정렬은 전체가 되고(모든 요소가 서로 상대적으로 정렬됨을 의미) 일치된 키는 서로 구분할 수 없게 됩니다.
 
 제어된 시퀀스의 실제 요소 순서는 해시 함수, 순서 지정 함수 및 컨테이너 개체에 저장된 해시 테이블의 현재 크기에 따라 달라집니다. 해시 테이블의 현재 크기를 확인할 수 없으므로 제어된 시퀀스의 요소 순서는 일반적으로 예측할 수 없습니다. 요소를 삽입할 경우 어떤 반복기도 무효화되지 않으며, 요소를 제거할 경우 제거된 요소를 명확히 가리키고 있는 반복기만 무효화됩니다.
 
@@ -172,9 +172,9 @@ hash_multimap 클래스에서 제공하는 반복기는 양방향 반복기이�
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` 개체의 `hash_multimap` 클래스를 나타내는 형식입니다.|
 |[const_iterator](#const_iterator)|`const`에 있는 `hash_multimap` 요소를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.|
-|[const_pointer](#const_pointer)|`const`에 있는 `hash_multimap` 요소에 대한 포인터를 제공하는 형식입니다.|
-|[const_reference](#const_reference)|`const` 작업을 읽고 수행하기 위해 `hash_multimap`에 저장된 `const` 요소에 대한 참조를 제공하는 형식입니다.|
-|[const_reverse_iterator](#const_reverse_iterator)|`const`에 있는 `hash_multimap` 요소를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.|
+|[const_pointer](#const_pointer)|에 대 한 포인터를 제공 하는 형식을 **상수** 요소에는 `hash_multimap`합니다.|
+|[const_reference](#const_reference)|에 대 한 참조를 제공 하는 형식을 **상수** 에 저장 된 요소를 `hash_multimap` 읽고 수행 하기 위해 **const** 작업.|
+|[const_reverse_iterator](#const_reverse_iterator)|읽을 수 있는 양방향 반복기를 제공 하는 형식 **상수** 요소에는 `hash_multimap`합니다.|
 |[difference_type](#difference_type)|부호 있는 정수 형식은 반복기가 가리키는 요소 사이의 범위에 있는 `hash_multimap`의 요소의 개수를 표현하는 데 사용할 수 있습니다.|
 |[iterator](#iterator)|`hash_multimap`에 있는 모든 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.|
 |[key_compare](#key_compare)|`hash_multimap`의 두 요소간 상대적 순서를 결정하는 두 정렬 키를 비교할 수 있는 함수 개체를 제공하는 형식입니다.|
@@ -245,7 +245,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 `Allocator`에 대한 자세한 내용은 [hash_multimap 클래스](../standard-library/hash-multimap-class.md) 항목의 설명 섹션을 참조하세요.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `allocator_type`을 사용하는 예제는 [get_allocator](#get_allocator)의 예제를 참조하세요.
 
@@ -268,9 +268,9 @@ hash_multimap의 첫 번째 요소 또는 빈 hash_multimap 다음의 위치 주
 
 ### <a name="remarks"></a>설명
 
-**begin**의 반환 값이 `const_iterator`에 할당된 경우 hash_multimap 개체의 요소는 수정할 수 없습니다. **begin**의 반환 값이 **iterator**에 할당된 경우에는 hash_multimap 개체의 요소를 수정할 수 있습니다.
+하는 경우의 반환 값 `begin` 에 할당 되는 `const_iterator`, hash_multimap 개체의 요소를 수정할 수 없습니다. 하는 경우의 반환 값 `begin` 에 할당 되는 `iterator`, hash_multimap 개체의 요소를 수정할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_begin.cpp
@@ -329,7 +329,7 @@ const_iterator cbegin() const;
 
 [hash_multimap](../standard-library/hash-multimap-class.md)의 첫 번째 요소 또는 빈 `hash_multimap` 다음의 위치 주소를 지정하는 상수 양방향 반복기입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_cbegin.cpp
@@ -379,7 +379,7 @@ const_iterator cend() const;
 
 `cend`에서 반환한 값은 역참조되지 않아야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_cend.cpp
@@ -422,7 +422,7 @@ void clear();
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 hash_multimap::clear 멤버 함수의 사용을 보여 줍니다.
 
@@ -474,13 +474,13 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_iterator` 형식을 사용하여 요소의 값을 수정할 수는 없습니다.
 
-`const_iterator` 의 개체에 hash_multimap 점으로 정의 [value_type](#value_type), 유형을 `pair` *\< ***constKey, 형식*** >*. 키의 값은 첫 번째 멤버 쌍을 통해 제공되며 매핑된 요소의 값은 쌍의 두 번째 멤버를 통해 제공됩니다.
+합니다 `const_iterator` hash_multimap 개체를 가리킵니다 정의한 [value_type](#value_type), 유형을 `pair` *\< ***constKey, 형식*** >*. 키의 값은 첫 번째 멤버 쌍을 통해 제공되며 매핑된 요소의 값은 쌍의 두 번째 멤버를 통해 제공됩니다.
 
-역참조에 `const_iterator` `cIter` 사용 하는 hash_multimap의 요소를 가리키는 **->** 연산자입니다.
+역참조에 `const_iterator` `cIter` 사용 하 여 hash_multimap의 요소를 가리키는 `->` 연산자입니다.
 
 요소에 대한 키의 값에 액세스하려면 `cIter` -> **first**를 사용합니다. 이 항목은 (\* `cIter`). **first**와 같습니다. 요소에 대한 매핑된 데이터의 값에 액세스하려면 `cIter` -> **second**를 사용합니다. 이 항목은 (\* `cIter`). **first**와 같습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `const_iterator`를 사용하는 예제는 [begin](#begin)의 예제를 참조하세요.
 
@@ -514,7 +514,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_const_ref.cpp
@@ -574,11 +574,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 hash_multimap에 의해 정의된 `const_reverse_iterator`는 `pair`*\<***const Key, Type>** 형식의 [value_type](#value_type) 개체를 가리킵니다. 형식에서 첫 번째 멤버는 요소에 대한 키이고 두 번째 멤버는 요소에 의해 포함된 매핑된 데이텀입니다.
 
-역참조에 `const_reverse_iterator` `crIter` 사용 하는 hash_multimap의 요소를 가리키는 **->** 연산자입니다.
+역참조에 `const_reverse_iterator` `crIter` 사용 하 여 hash_multimap의 요소를 가리키는 `->` 연산자입니다.
 
 요소에 대한 키의 값에 액세스하려면 `crIter` -> **first**를 사용합니다. 이 항목은 (\* `crIter`). **first**와 같습니다. 요소에 대한 매핑된 데이터의 값에 액세스하려면 `crIter` -> **second**를 사용합니다. 이 항목은 (\* `crIter`). **first**와 같습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `const_reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rend](#rend)의 예제를 참조하세요.
 
@@ -595,7 +595,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`key` Hash_multimap에서 일치 시킬 요소의 키입니다.
+*키* hash_multimap에서 일치 하는지 확인할 요소의 키입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -607,9 +607,9 @@ hash_multimap에 정렬 키가 매개 변수 키와 일치하는 요소가 있�
 
 **[lower_bound (** `key` **), upper_bound (** `key` **) )**
 
-키 값 `key`를 가진 요소의 수를 반환합니다.
+키 값을 가진 *키*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 hash_multimap::count 멤버 함수의 사용을 보여 줍니다.
 
@@ -677,7 +677,7 @@ const_reverse_iterator crbegin() const;
 
 `crbegin`은 `hash_multimap`을 역방향으로 반복할 때 사용할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_crbegin.cpp
@@ -731,7 +731,7 @@ const_reverse_iterator crend() const;
 
 `crend`에서 반환한 값은 역참조되지 않아야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_crend.cpp
@@ -778,7 +778,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::di
 
 입력 반복기 요구 사항을 충족하는 모든 반복기(set 등의 가역 컨테이너에서 지원하는 양방향 반복기 클래스 포함)에 대해 `difference_type`을 사용할 수는 있지만, 반복기 간의 빼기는 vector와 같은 임의 액세스 컨테이너가 제공하는 임의 액세스 반복기를 통해서만 지원됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_difference_type.cpp
@@ -854,7 +854,7 @@ iterator emplace(ValTy&& val);
 
 |매개 변수|설명|
 |-|-|
-|`val`|[hash_multimap](../standard-library/hash-multimap-class.md)에 삽입할 요소를 이동 생성하는 데 사용되는 값입니다.|
+|*val*|[hash_multimap](../standard-library/hash-multimap-class.md)에 삽입할 요소를 이동 생성하는 데 사용되는 값입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -864,7 +864,7 @@ iterator emplace(ValTy&& val);
 
 요소의 [hash_multimap::value_type](#value_type)은 쌍으로, 요소의 값은 첫 번째 구성 요소가 키 값과 동일하고 두 번째 구성 요소가 요소의 데이터 값과 동일한 정렬된 쌍입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_emplace.cpp
@@ -911,8 +911,8 @@ iterator emplace_hint(
 
 |매개 변수|설명|
 |-|-|
-|`val`|`hash_multimap`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_multimap](../standard-library/hash-multimap-class.md)에 삽입되는 요소를 이동 생성하는 데 사용되는 값입니다.|
-|`_Where`|올바른 삽입 지점 검색을 시작할 위치와 관련된 힌트입니다.|
+|*val*|`hash_multimap`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_multimap](../standard-library/hash-multimap-class.md)에 삽입되는 요소를 이동 생성하는 데 사용되는 값입니다.|
+|*_Where*|올바른 삽입 지점 검색을 시작할 위치와 관련된 힌트입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -922,9 +922,9 @@ iterator emplace_hint(
 
 요소의 [hash_multimap::value_type](#value_type)은 쌍으로, 요소의 값은 첫 번째 구성 요소가 키 값과 동일하고 두 번째 구성 요소가 요소의 데이터 값과 동일한 정렬된 쌍입니다.
 
-삽입 지점이 `_Where` 바로 뒤에 오면 로그 시간 대신 분할 상수 시간에 삽입이 발생할 수 있습니다.
+삽입 지점 바로 뒤에 오는 경우 로그 시간 대신 분할 상환된 상수 시간에 삽입이 발생할 수 있습니다 *_Where*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_emplace_hint.cpp
@@ -970,7 +970,7 @@ hash_multimap이 비어 있으면 **true**이고 hash_multimap이 비어 있지 
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_empty.cpp
@@ -1023,11 +1023,11 @@ hash_multimap에서 마지막 요소 다음에 나오는 위치의 주소를 지
 
 ### <a name="remarks"></a>설명
 
-**end**는 반복기가 hash_multimap의 끝에 도달했는지 여부를 테스트하는 데 사용됩니다.
+`end`는 반복기가 hash_multimap의 끝에 도달했는지 여부를 테스트하는 데 사용됩니다.
 
-**end**에서 반환한 값은 역참조해서는 안 됩니다.
+`end`에서 반환한 값은 역참조되지 않아야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_end.cpp
@@ -1090,7 +1090,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>매개 변수
 
-`key` 검색 중인 hash_multimap에서 요소의 정렬 키와 비교할 인수 키입니다.
+*키* 검색 중인 hash_multimap에서 요소의 정렬 키와 비교할 인수 키입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -1100,7 +1100,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_equal_range.cpp
@@ -1180,13 +1180,13 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Where` Hash_multimap에서 제거할 요소의 위치입니다.
+*_Where* hash_multimap에서 제거할 요소의 위치입니다.
 
-`first` Hash_multimap에서 제거 되는 첫 번째 요소의 위치입니다.
+*첫 번째* hash_multimap에서 제거 하는 첫 번째 요소의 위치입니다.
 
-`last` Hash_multimap에서 제거 되는 마지막 요소 바로 뒤의 위치입니다.
+*마지막* hash_multimap에서 마지막 요소 바로 뒤의 위치를 제거 합니다.
 
-`key` Hash_multimap에서 제거할 요소의 키입니다.
+*키* hash_multimap에서 제거할 요소의 키입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -1198,7 +1198,7 @@ size_type erase(const key_type& key);
 
 멤버 함수는 예외를 throw하지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 hash_multimap::erase 멤버 함수의 사용을 보여 줍니다.
 
@@ -1300,7 +1300,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`key` 검색 중인 hash_multimap에서 요소의 정렬 키를 일치 시킬 키입니다.
+*키* 검색 중인 hash_multimap에서 요소의 정렬 키와 일치 하는지 확인할 키입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -1308,11 +1308,11 @@ const_iterator find(const Key& key) const;
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 보다 작음 비교 가능 관계를 기반으로 순서를 적용하는 이진 조건자에서 정렬 키가 인수 키와 **같은** hash_multimap 내 요소의 주소를 지정하는 반복기를 반환합니다.
+정렬 키가 hash_multimap의 요소를 해결 하는 반복기를 반환 하는 멤버 함수 `equivalent` 인수 순서를 적용 하는 이진 조건자에서 키를 기반으로 보다 작음 비교 가능 관계입니다.
 
-**find**의 반환 값이 `const_iterator`에 할당된 경우 hash_multimap 개체는 수정할 수 없습니다. **find**의 반환 값이 **iterator**에 할당되는 경우에는 hash_multimap 개체를 수정할 수 있습니다.
+`find`의 반환 값이 `const_iterator`에 할당된 경우 hash_multimap 개체는 수정할 수 없습니다. 하는 경우의 반환 값 `find` 에 할당 되는 `iterator`, hash_multimap 개체를 수정할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_find.cpp
@@ -1399,7 +1399,7 @@ hash_multimap에서 사용되는 할당자입니다.
 
 hash_multimap 클래스의 할당자는 클래스가 저장소를 관리하는 방법을 지정합니다. C++ 표준 라이브러리 컨테이너 클래스와 함께 제공되는 기본 할당자를 사용하면 대부분의 프로그래밍 요구 사항을 충족할 수 있습니다. 할당자 클래스를 직접 작성하고 사용하는 방법에 대해서는 고급 C++ 항목에서 다룹니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_get_allocator.cpp
@@ -1515,12 +1515,12 @@ hash_multimap(
 
 |매개 변수|설명|
 |-|-|
-|`Al`|이 hash_multimap 개체에 사용할 저장소 할당자 클래스로, 기본값은 `Allocator`입니다.|
-|`Comp`|map의 요소 순서를 지정하는 데 사용되는 `const Traits` 형식의 비교 함수로, 기본값은 `Traits`입니다.|
-|`Right`|생성된 set을 복사할 map입니다.|
-|`First`|복사할 요소의 범위에서 첫 번째 요소의 위치입니다.|
-|`Last`|복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.|
-|`IList`|복사할 원본 initializer_list입니다.|
+|*Al*|이 hash_multimap 개체에 사용할 저장소 할당자 클래스로, 기본값은 `Allocator`입니다.|
+|*구성 요소*|map의 요소 순서를 지정하는 데 사용되는 `const Traits` 형식의 비교 함수로, 기본값은 `Traits`입니다.|
+|*오른쪽*|생성된 set을 복사할 map입니다.|
+|*첫 번째*|복사할 요소의 범위에서 첫 번째 요소의 위치입니다.|
+|*마지막*|복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.|
+|*IList*|복사할 원본 initializer_list입니다.|
 
 ### <a name="remarks"></a>설명
 
@@ -1530,11 +1530,11 @@ hash_multimap(
 
 모든 생성자는 hash_multimap의 키 간 순서를 설정하는 데 사용되며 나중에 [key_comp](#key_comp)를 호출하여 반환할 수 있는 `Traits` 형식의 함수 개체를 저장합니다.
 
-처음 3개 생성자는 빈 초기 hash_multimap을 지정하고, 두 번째 생성자는 요소의 순서를 설정하는 데 사용할 비교 함수(`Comp`)의 형식을 지정하며, 세 번째 생성자는 사용할 할당자 형식(`_Al`)을 명시적으로 지정합니다. `explicit` 키워드를 사용하는 경우 특정 종류의 자동 형식 변환이 수행되지 않습니다.
+처음 세 생성자는 빈 초기 hash_multimap;를 지정합니다. 두 번째 비교 함수 형식을 지정 합니다 (*Comp*) 요소 및 세 번째 순서를 명시적으로 설정 하는 데 사용할 할당자 형식 지정 (`_Al`) 사용할 합니다. `explicit` 키워드를 사용하는 경우 특정 종류의 자동 형식 변환이 수행되지 않습니다.
 
 네 번째 생성자는 `Right` hash_multimap의 복사본을 지정합니다.
 
-다음 3개 생성자는 map의 범위 `First, Last)`를 복사하며, 범위 내에서 클래스 **Traits** 및 allocator의 비교 함수 형식을 지정하는 명시도는 계속 높아집니다.
+다음 세 생성자는 map의 범위 `First, Last)`를 복사하여, `Traits` 클래스 및 할당자의 비교 함수 형식을 지정할 때 명시도가 향상됩니다.
 
 여덟 번째 생성자는 hash_multimap `Right`를 이동합니다.
 
@@ -1575,10 +1575,10 @@ iterator insert(
 
 |매개 변수|설명|
 |-|-|
-|`Val`|해당 요소를 이미 포함하고 있지 않을 경우 또는 보다 일반적으로 키가 동등하게 정렬된 요소를 이미 포함하고 있지 않을 경우 hash_multimap에 삽입되는 요소의 값입니다.|
-|`Where`|올바른 삽입 지점 검색을 시작할 위치에 대한 힌트입니다.|
-|`First`|맵에서 복사할 첫 번째 요소의 위치입니다.|
-|`Last`|맵에서 복사할 마지막 요소 바로 다음 위치입니다.|
+|*val*|해당 요소를 이미 포함하고 있지 않을 경우 또는 보다 일반적으로 키가 동등하게 정렬된 요소를 이미 포함하고 있지 않을 경우 hash_multimap에 삽입되는 요소의 값입니다.|
+|*Where*|올바른 삽입 지점 검색을 시작할 위치에 대한 힌트입니다.|
+|*첫 번째*|맵에서 복사할 첫 번째 요소의 위치입니다.|
+|*마지막*|맵에서 복사할 마지막 요소 바로 다음 위치입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -1594,7 +1594,7 @@ iterator insert(
 
 요소의 [value_type](#value_type)은 쌍으로, 요소의 값은 첫 번째 구성 요소가 키 값과 동일하고 두 번째 구성 요소가 요소의 데이터 값과 동일한 정렬된 쌍입니다.
 
-삽입 지점이 `insert`바로 뒤에 오면 로그 시간 대신 `Where`의 힌트 버전에 대한 분할 상환 상수 시간에 삽입이 발생할 수 있습니다.
+힌트 버전에 대 한 분할 상환된 상수 시간에 삽입이 발생할 수 있습니다 `insert`에 삽입 지점 바로 뒤에 오는 경우 로그 시간 대신 *여기서*합니다.
 
 ## <a name="iterator"></a>  hash_multimap::iterator
 
@@ -1609,17 +1609,17 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>설명
 
-hash_multimap에 의해 정의된 **iterator**는 `pair`\< **const Key, Type**> 형식의 [value_type](#value_type) 개체를 가리킵니다. 형식에서 첫 번째 멤버는 요소에 대한 키이고 두 번째 멤버는 요소에 의해 포함된 매핑된 데이텀입니다.
+합니다 `iterator` hash_multimap 개체를 가리킵니다 정의한 [value_type](#value_type), 유형을 `pair` \< **const Key, 형식**>를 첫 번째 멤버는 요소에 키 및 두 번째 멤버는 요소에 포함 된 매핑된 데이텀입니다.
 
-hash_multimap의 요소를 가리키는 **반복기**`Iter`를 역참조하려면 **->** 연산자를 사용합니다.
+역참조에 **반복기** `Iter` 사용 하 여 hash_multimap의 요소를 가리키는 `->` 연산자입니다.
 
 요소에 대한 키의 값에 액세스하려면 `Iter` -> **first**를 사용합니다. 이 항목은 (\* `Iter`). **first**와 같습니다. 요소에 대한 매핑된 데이터의 값에 액세스하려면 `Iter` -> **second**를 사용합니다. 이 항목은 (\* `Iter`). **first**와 같습니다.
 
-형식 **iterator**는 요소값을 수정할 때 사용할 수 있습니다.
+형식 `iterator` 요소의 값을 수정 하려면 사용할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
-**iterator**를 선언하고 사용하는 방법의 예제는 [begin](#begin)의 예제를 참조하세요.
+`iterator`를 선언하고 사용하는 방법에 대한 예제는 [begin](#begin)의 예제를 참조하세요.
 
 ## <a name="key_comp"></a>  hash_multimap::key_comp
 
@@ -1644,7 +1644,7 @@ hash_multimap이 요소의 순서를 지정하는 데 사용하는 함수 개체
 
 정의합니다. 이 함수는 `left`이 앞에 오며 정렬 순서가 `right`과 같지 않으면 **true**를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_key_comp.cpp
@@ -1706,11 +1706,11 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>설명
 
-**key_compare**는 템플릿 매개 변수 `Traits`의 동의어입니다.
+`key_compare` 템플릿 매개 변수에 대 한 동의어가 *Traits*합니다.
 
-`Traits`에 대한 자세한 내용은 [hash_multimap 클래스](../standard-library/hash-multimap-class.md) 항목을 참조하세요.
+에 대 한 자세한 *Traits* 참조를 [hash_multimap 클래스](../standard-library/hash-multimap-class.md) 항목입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `key_compare`를 선언하고 사용하는 방법에 대한 예제는 [key_comp](#key_comp)의 예제를 참조하세요.
 
@@ -1727,11 +1727,11 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>설명
 
-`key_type`은 템플릿 매개 변수 `Key`의 동의어입니다.
+`key_type` 템플릿 매개 변수에 대 한 동의어가 *키*합니다.
 
-`Key`에 대한 자세한 내용은 [hash_multimap 클래스](../standard-library/hash-multimap-class.md) 항목의 설명 섹션을 참조하세요.
+에 대 한 자세한 *키*의 주의 섹션을 참조 합니다 [hash_multimap 클래스](../standard-library/hash-multimap-class.md) 항목입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `key_compare`를 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.
 
@@ -1750,17 +1750,17 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`key` 검색 중인 hash_multimap에서 요소의 정렬 키와 비교할 인수 키입니다.
+*키* 검색 중인 hash_multimap에서 요소의 정렬 키와 비교할 인수 키입니다.
 
 ### <a name="return-value"></a>반환 값
 
 인수 키보다 크거나 같은 키가 들어 있는 hash_multimap 내 요소의 위치 주소를 지정하거나, 키와 일치하는 항목이 없는 경우 hash_multimap에서 마지막 요소 다음 위치의 주소를 지정하는 [iterator](#iterator) 또는 [const_iterator](#const_iterator)입니다.
 
-`lower_bound`의 반환 값이 `const_iterator`에 할당된 경우 hash_multimap 개체는 수정할 수 없습니다. `lower_bound`의 반환 값이 **iterator**에 할당되는 경우에는 hash_multimap 개체를 수정할 수 있습니다.
+`lower_bound`의 반환 값이 `const_iterator`에 할당된 경우 hash_multimap 개체는 수정할 수 없습니다. 하는 경우의 반환 값 `lower_bound` 에 할당 되는 `iterator`, hash_multimap 개체를 수정할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_lower_bound.cpp
@@ -1842,11 +1842,11 @@ typedef Type mapped_type;
 
 ### <a name="remarks"></a>설명
 
-`mapped_type`은 템플릿 매개 변수 `Type`의 동의어입니다.
+`mapped_type`은 템플릿 매개 변수 *Type*의 동의어입니다.
 
-`Type`에 대한 자세한 내용은 [hash_multimap 클래스](../standard-library/hash-multimap-class.md) 항목을 참조하세요.
+대 한 자세한 내용은 *형식* 를 참조 합니다 [hash_multimap 클래스](../standard-library/hash-multimap-class.md) 항목입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `key_type`를 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.
 
@@ -1867,7 +1867,7 @@ hash_multimap의 최대 허용 길이입니다.
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_max_size.cpp
@@ -1905,13 +1905,13 @@ hash_multimap& operator=(hash_multimap&& right);
 
 |매개 변수|설명|
 |-|-|
-|`right`|`hash_multimap`에 복사되는 [hash_multimap](../standard-library/hash-multimap-class.md)입니다.|
+|*right*|`hash_multimap`에 복사되는 [hash_multimap](../standard-library/hash-multimap-class.md)입니다.|
 
 ### <a name="remarks"></a>설명
 
-`hash_multimap`는 `operator=`에서 기존 요소를 지운 후에 `right`의 내용을 `hash_multimap`로 복사하거나 이동합니다.
+기존 요소를 지운 후는 `hash_multimap`, `operator=` 복사 하거나 이동 내용의 *오른쪽* 에 `hash_multimap`합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_operator_as.cpp
@@ -1962,7 +1962,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>설명
 
-형식 **pointer**는 요소값을 수정할 때 사용할 수 있습니다.
+형식 `pointer` 요소의 값을 수정 하려면 사용할 수 있습니다.
 
 대부분의 경우 [iterator](#iterator)를 사용하여 hash_multimap 개체의 요소에 액세스해야 합니다.
 
@@ -1991,7 +1991,7 @@ reverse_iterator rbegin();
 
 `rbegin`은 hash_multimap을 역방향으로 반복할 때 사용할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_rbegin.cpp
@@ -2064,7 +2064,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::re
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_reference.cpp
@@ -2141,7 +2141,7 @@ reverse_iterator rend();
 
 `rend`에서 반환한 값은 역참조되지 않아야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_rend.cpp
@@ -2219,7 +2219,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 hash_multimap에 의해 정의된 `reverse_iterator`는 `pair`\< **const Key, Type**> 형식의 [value_type](#value_type) 개체를 가리킵니다. 키의 값은 첫 번째 구성원 쌍을 통해 제공되며 매핑된 요소값은 쌍의 두 번째 구성원를 통해 제공됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rbegin](#rbegin)의 예제를 참조하세요.
 
@@ -2240,7 +2240,7 @@ hash_multimap의 현재 길이입니다.
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 hash_multimap::size 멤버 함수의 사용을 보여 줍니다.
 
@@ -2286,7 +2286,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.
 
@@ -2303,13 +2303,13 @@ void swap(hash_multimap& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 요소를 제공 하는 hash_multimap 또는 hash_multimap hash_multimap의와 교환할 요소입니다.
+*오른쪽* 교환할 요소를 제공 하는 hash_multimap 또는 hash_multimap 교환할 hash_multimap의 요소입니다.
 
 ### <a name="remarks"></a>설명
 
 멤버 함수는 해당 요소를 교환할 두 hash_multimap의 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_swap.cpp
@@ -2376,17 +2376,17 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`key` 검색 중인 hash_multimap에서 요소의 정렬 키와 비교할 인수 키입니다.
+*키* 검색 중인 hash_multimap에서 요소의 정렬 키와 비교할 인수 키입니다.
 
 ### <a name="return-value"></a>반환 값
 
 인수 키보다 더 큰 키가 들어 있는 hash_multimap 내 요소의 위치 주소를 지정하거나, 키와 일치하는 항목이 없는 경우 hash_multimap에서 마지막 요소 다음 위치의 주소를 지정하는 [iterator](#iterator) 또는 [const_iterator](#const_iterator)입니다.
 
-`upper_bound`의 반환 값이 `const_iterator`에 할당된 경우 hash_multimap 개체는 수정할 수 없습니다. `upper_bound`의 반환 값이 **iterator**에 할당되는 경우에는 hash_multimap 개체를 수정할 수 있습니다.
+`upper_bound`의 반환 값이 `const_iterator`에 할당된 경우 hash_multimap 개체는 수정할 수 없습니다. 하는 경우의 반환 값 `upper_bound` 에 할당 되는 `iterator`, hash_multimap 개체를 수정할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_upper_bound.cpp
@@ -2469,7 +2469,7 @@ hash_multimap *m*의 두 요소 *e*1(*k*1 *, d*1) 및 *e*2(*k*2 *, d*2)가 [valu
 
 정의합니다. 이 함수는 `left`의 키 값이 앞에 오고 정렬 순서의 `right` 키 값과 같지 않으면 **true**를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_value_comp.cpp
@@ -2529,9 +2529,9 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>설명
 
-`value_type` 쌍으로 선언 된\<const [key_type](#key_type), [mapped_type](#mapped_type)> 쌍으로 연결 하지 및\<key_type, mapped_type >는 적절 한 연관 컨테이너의 키를 변경할 수 있습니다 비상수 반복기 또는 참조를 사용합니다.
+`value_type` 쌍으로 선언 되었습니다\<상수 [key_type](#key_type), [mapped_type](#mapped_type)> 쌍으로 연결 하 고\<key_type, mapped_type > 연관 컨테이너의 키를 변경할 수 없습니다 때문에 상수가 아닌 반복기 또는 참조를 사용합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_multimap_value_type.cpp

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51397080267dd50f012b274e95ac4c9aa4fa64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57e01cbfd7cb291ff7d2651e3244b74ae96adbea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841878"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962402"
 ---
 # <a name="conditional-class"></a>conditional 클래스
 
@@ -40,15 +40,15 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>매개 변수
 
-`B` 선택된 된 형식을 확인 하는 값입니다.
+*B* 선택한 형식을 결정 하는 값입니다.
 
-`T1` B가 true 인 경우의 형식 결과입니다.
+*T1* B가 true 인 경우의 형식 결과입니다.
 
-`T2` B가 false 인 경우 형식 결과입니다.
+*T2* B가 false 인 경우의 형식 결과입니다.
 
 ## <a name="remarks"></a>설명
 
-템플릿 멤버 typedef `conditional<B, T1, T2>::type` 는 `T1` 가 `B` 로 확인될 때 `true`으로 확인되고, `T2` 가 `B` 로 확인될 때 `false`로 확인됩니다.
+템플릿 멤버 typedef `conditional<B, T1, T2>::type` 로 평가 *T1* 때 *B* 로 **true**를 계산 하 고 *T2* 때  *B* 로 평가 **false**합니다.
 
 ## <a name="requirements"></a>요구 사항
 

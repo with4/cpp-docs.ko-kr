@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a860f7c266685e7e10f9b4cbe46c280c356f2681
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81bdbd07e06ef2ec24a5f220fcd11a228b783888
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862038"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965992"
 ---
 # <a name="numput-class"></a>num_put 클래스
 
@@ -45,9 +45,9 @@ class num_put : public locale::facet;
 
 ### <a name="parameters"></a>매개 변수
 
-`CharType` 로캘의 문자를에서 인코딩하기 위해 프로그램 내 사용 유형입니다.
+*CharType* 로캘의 문자를 인코딩하기 위해 프로그램 내에서 사용 되는 형식입니다.
 
-`OutputIterator` 숫자 put 함수가 출력을 쓰는 반복기의 형식입니다.
+*OutputIterator* 숫자 put 함수가 반복기의 형식 출력을 작성 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -89,11 +89,11 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 템플릿 매개 변수 **CharType**의 동의어입니다.
+이 형식은 템플릿 매개 변수 `CharType`의 동의어입니다.
 
 ## <a name="do_put"></a>  num_put::do_put
 
-숫자를 지정된 로캘에 대해 서식이 지정된 숫자를 나타내는 **CharType**의 시퀀스로 변환하기 위해 호출하는 가상 함수입니다.
+숫자를 지정된 로캘에 대해 서식이 지정된 숫자를 나타내는 `CharType`의 시퀀스로 변환하기 위해 호출하는 가상 함수입니다.
 
 ```cpp
 virtual iter_type do_put(
@@ -153,13 +153,13 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>매개 변수
 
-`next` 삽입 된 문자열의 첫 번째 요소를 주소 지정 하는 반복기입니다.
+*다음* 삽입된 된 문자열의 첫 번째 요소를 지정 하는 반복기입니다.
 
-`_Iosbase` 로캘 numpunct 패싯 출력 및 출력 형식 지정에 대 한 플래그 문장 부호 하는 데 사용 된 포함 된 스트림을 지정 합니다.
+*_Iosbase* 출력 및 출력 서식 지정에 대 한 플래그를 문장 부호를 적용 하는 데는 numpunct 패싯이 들어 있는 로캘을 포함 하는 스트림을 지정 합니다.
 
-`_Fill` 간격에 사용 되는 문자입니다.
+*_Fill* 간격에 사용 되는 문자입니다.
 
-`val` 숫자나를 출력 하는 부울 형식입니다.
+*val* 숫자 또는 부울 형식 출력 되는 것입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -167,21 +167,21 @@ virtual iter_type do_put(
 
 ### <a name="remarks"></a>설명
 
-보호되는 첫 번째 가상 구성원 함수는 `val`의 값에서 정수 출력 필드를 생성하기 위해 `next`부터 시작하여 순차 요소를 생성합니다. 함수는 생성된 정수 출력 필드를 지나 요소를 삽입할 다음 위치를 지정하는 반복기를 반환합니다.
+첫 번째 보호 된 가상 구성원 함수에서 시작 하는 순차 요소를 생성 *다음* 의 값에서 정수 출력 필드를 생성 하기 위해 *val*합니다. 함수는 생성된 정수 출력 필드를 지나 요소를 삽입할 다음 위치를 지정하는 반복기를 반환합니다.
 
-정수 출력 필드는 일련의 `char` 요소를 파일에 생성하기 위해 print 함수가 사용하는 것과 같은 규칙을 통해 생성됩니다. 이러한 각 char 요소는 간단한 일대일 매핑을 통해 **CharType** 형식의 동일 요소에 매핑된다고 가정합니다. 그러나 print 함수가 공백이나 숫자 0으로 필드를 채우는 경우 `do_put`은 **fill**을 대신 사용합니다. 동일한 인쇄 변환 사양은 다음과 같이 결정됩니다.
+정수 출력 필드는 일련의 생성을 위한 print 함수가 사용 되는 동일한 규칙으로 생성 됩니다 **char** 요소를 사용 하는 파일입니다. 이러한 각 char 요소에 형식의 동일 요소에 매핑된다고 가정은 `CharType` 간단한 일대일 매핑을 통해. 그러나 Print 함수가 공백이 나 숫자 0으로 필드를 채우는 위치 `do_put` 대신 사용 하 여 `fill`입니다. 동일한 인쇄 변환 사양은 다음과 같이 결정됩니다.
 
-- **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct)인 경우 변환 사양은 **lo**입니다.
+- **iosbase**. [플래그](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), 변환 사양은 `lo`합니다.
 
-- **iosbase.flags** & **ios_base::basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex)인 경우 변환 사양은 **lx**입니다.
+- 하는 경우 **iosbase.flags** & **ios_base:: basefield** == `ios_base::`[16 진수](../standard-library/ios-functions.md#hex), 변환 사양은 `lx`합니다.
 
-- 그렇지 않으면 변환 사양은 **ld**입니다.
+- 그렇지 않으면 변환 사양은 `ld`입니다.
 
 **iosbase**. [width](../standard-library/ios-base-class.md#width)가 0이 아닌 경우 이 값의 필드 너비가 앞에 추가됩니다. 그런 후에 이 함수는 **iosbase**. **width**(0)을 호출하여 필드 너비를 0으로 다시 설정합니다.
 
-출력 필드를 지정하는 데 필요한 최소 요소 수 *N*이 **iosbase**. [width](../standard-library/ios-base-class.md#width)보다 작은 경우에만 채우기가 수행됩니다. 일련의 구성 되며 이러한 패딩이 *N* - **너비** 의 복사 **채우기**합니다. 그런 후에 다음과 같이 채우기가 수행됩니다.
+출력 필드를 지정하는 데 필요한 최소 요소 수 *N*이 **iosbase**. [width](../standard-library/ios-base-class.md#width)보다 작은 경우에만 채우기가 수행됩니다. 이러한 채우기의 시퀀스로 구성 됩니다 *N* - **너비** 복사본 **채우기**합니다. 그런 후에 다음과 같이 채우기가 수행됩니다.
 
-- **iosbase**. **플래그** & `ios_base::adjustfield` == `ios_base::`[왼쪽](../standard-library/ios-functions.md#left), 플래그 **-** 앞에 추가 합니다. 채우기는 생성된 텍스트 뒤에서 수행됩니다.
+- **iosbase**. **플래그** & `ios_base::adjustfield` == `ios_base::`[왼쪽](../standard-library/ios-functions.md#left), 플래그 **-** 앞에 추가 됩니다. 채우기는 생성된 텍스트 뒤에서 수행됩니다.
 
 - **iosbase.flags** & **ios_base::adjustfield** == `ios_base::`[internal](../standard-library/ios-functions.md#internal)인 경우에는 플래그 **0**이 앞에 추가됩니다. 숫자 출력 필드의 경우에는 print 함수가 0으로 채우는 위치에서 채우기가 수행됩니다.
 
@@ -210,7 +210,7 @@ virtual iter_type do_put(iter_type next,
     unsigned long val) const;
 ```
 
-이 함수는 **ld**의 변환 사양을 **lu**로 대체한다는 점을 제외하면 첫 번째 함수와 동일하게 동작합니다.
+이 함수는 `ld`의 변환 사양을 `lu`로 대체한다는 점을 제외하면 첫 번째 함수와 동일하게 동작합니다.
 
 세 번째 보호된 가상 구성원 함수는 다음 코드와 같습니다.
 
@@ -223,11 +223,11 @@ virtual iter_type do_put(iter_type next,
 
 이 함수는 **val**. **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point)의 값에서 부동 소수점 출력 필드를 생성하며 정수 자릿수와 소수 자릿수를 구분하는 시퀀스를 결정한다는 점을 제외하면 첫 번째 함수와 동일하게 동작합니다. 동일한 인쇄 변환 사양은 다음과 같이 결정됩니다.
 
-- **iosbase**. **flags** & `ios_base::floatfield` == `ios_base::`[fixed](../standard-library/ios-functions.md#fixed)이면 변환 사양은 **lf**입니다.
+- **iosbase**. **플래그** & `ios_base::floatfield` == `ios_base::`[고정](../standard-library/ios-functions.md#fixed), 변환 사양은 `lf`합니다.
 
-- **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific)이면 변환 사양은 `le`입니다. **iosbase**. **flags** & `ios_base::`[uppercase](../standard-library/ios-functions.md#uppercase)가 0이 아니면 **e**는 **E**로 바뀝니다.
+- **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific)이면 변환 사양은 `le`입니다. **iosbase**. **플래그** & `ios_base::`[대문자](../standard-library/ios-functions.md#uppercase) 값은 0 `e` 바뀝니다 `E`합니다.
 
-- 그렇지 않으면 변환 사양은 **lg**입니다. **iosbase**. **flags** & **ios_base::uppercase**가 0이 아니면 **g**는 **G**로 바뀝니다.
+- 그렇지 않으면 변환 사양은 **lg**입니다. **iosbase**. **플래그** & **ios_base:: uppercase** 은 0이 아니면 `g` 바뀝니다 `G`합니다.
 
 **iosbase**. **flags** & **ios_base::fixed**가 0이 아니거나 **iosbase**. [precision](../standard-library/ios-base-class.md#precision)이 0보다 크면 **iosbase**. **precision** 값이 포함된 전체 자릿수가 변환 사양 앞에 추가됩니다. 모든 채우기는 정수 출력 필드에 대해 동일하게 동작합니다. 채우기 문자는 **fill**입니다. 그리고 마지막으로 다음과 같이 채우기가 수행됩니다.
 
@@ -244,7 +244,7 @@ virtual iter_type do_put(iter_type next,
     long double val) const;
 ```
 
-이 함수는 변환 사양의 한정자 **l**이 **L**로 바뀐다는 점을 제외하면 세 번째 함수와 동일하게 동작합니다.
+동일 하 게 한다는 점을 제외 하면 세 번째 한정자 `l` 변환에서 사용 하 여 사양 바뀝니다 `L`합니다.
 
 다섯 번째 보호된 가상 구성원 함수는 다음 코드와 같습니다.
 
@@ -266,7 +266,7 @@ virtual iter_type do_put(iter_type next,
     bool val) const;
 ```
 
-이 함수는 `val`에서 부울 출력 필드를 생성한다는 점을 제외하면 첫 번째 함수와 동일하게 동작합니다.
+부울 출력 필드를 생성 한다는 점을 제외 하면 첫 번째 동일 하 게 동작 *val*합니다.
 
 부울 출력 필드는 두 가지 형식 중 하나를 사용합니다. **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha)가 **false**이면 구성원 함수는 `do_put`(_ *Next*, \_ *Iosbase*, \_ *Fill*, ( **long**) `val`)을 반환합니다. 이 경우 일반적으로 생성된 0(**false**의 경우) 또는 1(**true**의 경우) 시퀀스가 생성됩니다. 그렇지 않으면 생성된 시퀀스는 **fac**. [falsename](../standard-library/numpunct-class.md#falsename)`)`(**false**의 경우) 또는 **fac**. [truename](../standard-library/numpunct-class.md#truename)(**true**의 경우)입니다.
 
@@ -279,7 +279,7 @@ virtual iter_type do_put(iter_type next,
     long long val) const;
 ```
 
-이 함수는 **ld**의 변환 사양을 **lld**로 대체한다는 점을 제외하면 첫 번째 함수와 동일하게 동작합니다.
+이 함수는 `ld`의 변환 사양을 `lld`로 대체한다는 점을 제외하면 첫 번째 함수와 동일하게 동작합니다.
 
 여덟 번째 보호된 가상 구성원 함수는 다음 코드와 같습니다.
 
@@ -292,7 +292,7 @@ virtual iter_type do_put(iter_type next,
 
 이 함수는 `ld`의 변환 사양을 `llu`로 대체한다는 점을 제외하면 첫 번째 함수와 동일하게 동작합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `do_put`을 호출하는 [put](#put)에 대한 예제를 참조하세요.
 
@@ -318,11 +318,11 @@ explicit num_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Refs` 개체에 대 한 메모리 관리의 유형을 지정 하는 데 사용 되는 정수 값입니다.
+*_Refs* 개체에 대 한 메모리 관리의 유형을 지정 하는 데 사용 하는 정수 값입니다.
 
 ### <a name="remarks"></a>설명
 
-`_Refs` 매개 변수에 대해 사용 가능한 값과 해당 중요도는 다음과 같습니다.
+에 대 한 가능한 값을 *_Refs* 매개 변수 및 중요성은:
 
 - 0: 개체를 포함하는 로캘에 의해 개체의 수명이 관리됩니다.
 
@@ -336,7 +336,7 @@ explicit num_put(size_t _Refs = 0);
 
 ## <a name="put"></a>  num_put::put
 
-숫자를 지정된 로캘에 대해 서식이 지정된 숫자를 나타내는 **CharType**의 시퀀스로 변환합니다.
+숫자의 시퀀스로 변환 합니다. `CharType`수를 나타내는 지정 된 로캘에 대해 서식이 지정 됩니다.
 
 ```cpp
 iter_type put(
@@ -397,13 +397,13 @@ iter_type put(
 
 ### <a name="parameters"></a>매개 변수
 
-`dest` 삽입 된 문자열의 첫 번째 요소를 주소 지정 하는 반복기입니다.
+*dest* 삽입된 된 문자열의 첫 번째 요소를 지정 하는 반복기입니다.
 
-`_Iosbase` 로캘 numpunct 패싯 출력 및 출력 형식 지정에 대 한 플래그 문장 부호 하는 데 사용 된 포함 된 스트림을 지정 합니다.
+*_Iosbase* 출력 및 출력 서식 지정에 대 한 플래그를 문장 부호를 적용 하는 데는 numpunct 패싯이 들어 있는 로캘을 포함 하는 스트림을 지정 합니다.
 
-`_Fill` 간격에 사용 되는 문자입니다.
+*_Fill* 간격에 사용 되는 문자입니다.
 
-`val` 숫자나를 출력 하는 부울 형식입니다.
+*val* 숫자 또는 부울 형식 출력 되는 것입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -413,7 +413,7 @@ iter_type put(
 
 모든 구성원 함수는 [do_put](#do_put)( `next`, `_Iosbase`, `_Fill`, `val`)을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // num_put_put.cpp

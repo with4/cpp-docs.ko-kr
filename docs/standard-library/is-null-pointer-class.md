@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f1686900fe876d1fd884c8321654b7a7f866647
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6de5d24c0763e731b3123778e74b22c20798b729
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856673"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966539"
 ---
 # <a name="isnullpointer-class"></a>is_null_pointer 클래스
 
@@ -37,11 +37,11 @@ struct is_null_pointer;
 
 ### <a name="parameters"></a>매개 변수
 
-`T` 형식이 쿼리입니다.
+*T* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `T` 형식이 `std::nullptr_t`인 경우 true이고, 그렇지 않으면 false입니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *T* 는 `std::nullptr_t`, 그렇지 않으면 false입니다.
 
 ## <a name="requirements"></a>요구 사항
 

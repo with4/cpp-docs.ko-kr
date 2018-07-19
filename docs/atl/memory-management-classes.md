@@ -14,23 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6849327d796afd1f500102167b82b08b9c60be18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2b7b66989b140b7c93abefdd8075adb640b04b6f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356510"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961099"
 ---
 # <a name="memory-management-classes"></a>메모리 관리 클래스
-이러한 클래스는 힙의 포인터, 스마트 포인터 및 다른 메모리 할당 루틴에 대 한 지원을 제공합니다.  
+이러한 클래스는 힙 포인터, 스마트 포인터 및 다른 메모리 할당 루틴에 대 한 지원을 제공합니다.  
   
 -   [CAutoPtr](../atl/reference/cautoptr-class.md) 이 클래스는 스마트 포인터 개체를 나타냅니다.  
   
--   [CAutoPtrArray](../atl/reference/cautoptrarray-class.md) 이 클래스는 스마트 포인터의 배열을 만들 때 유용한 메서드를 제공 합니다.  
+-   [CAutoPtrArray](../atl/reference/cautoptrarray-class.md) 스마트 포인터의 배열을 생성할 때이 클래스는 유용한 메서드를 제공 합니다.  
   
--   [CAutoPtrList](../atl/reference/cautoptrlist-class.md) 스마트 포인터의 목록을 구성할 때이 클래스는 유용한 메서드를 제공 합니다.  
+-   [CAutoPtrList](../atl/reference/cautoptrlist-class.md) 이 클래스는 스마트 포인터의 목록을 구성할 때 유용한 메서드를 제공 합니다.  
   
--   [CAutoVectorPtr](../atl/reference/cautovectorptr-class.md) 이 클래스는 벡터 new 및 delete 연산자를 사용 하 여 스마트 포인터 개체를 나타냅니다.  
+-   [CAutoVectorPtr](../atl/reference/cautovectorptr-class.md) 이 클래스는 벡터 new 및 delete 연산자를 사용 하는 스마트 포인터 개체를 나타냅니다.  
   
 -   [CComAllocator](../atl/reference/ccomallocator-class.md) 이 클래스는 COM 메모리 루틴을 사용 하 여 메모리를 관리 하기 위한 메서드를 제공 합니다.  
   
@@ -38,25 +38,25 @@ ms.locfileid: "32356510"
   
 -   [CComHeap](../atl/reference/ccomheap-class.md) 이 클래스는 구현 [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) COM 메모리 할당 함수를 사용 합니다.  
   
--   [CComHeapPtr](../atl/reference/ccomheapptr-class.md) 힙에 대 한 포인터를 관리 하기 위해 스마트 포인터 클래스입니다.  
+-   [CComHeapPtr](../atl/reference/ccomheapptr-class.md) 힙 포인터를 관리에 대 한 스마트 포인터 클래스입니다.  
   
--   [CComPtr](../atl/reference/ccomptr-class.md) COM 인터페이스 포인터를 관리 하기 위해 스마트 포인터 클래스입니다.  
+-   [CComPtr](../atl/reference/ccomptr-class.md) COM 인터페이스 포인터를 관리에 대 한 스마트 포인터 클래스입니다.  
   
--   [CComPtrBase](../atl/reference/ccomptrbase-class.md) 이 클래스는 COM 기반 메모리 루틴을 사용 하 여 스마트 포인터 클래스에 대 한 기본 사항을 제공 합니다.  
+-   [CComPtrBase](../atl/reference/ccomptrbase-class.md) 이 클래스는 COM 기반 메모리 루틴을 사용 하 여 스마트 포인터 클래스에 대 한 기반을 제공 합니다.  
   
--   [CComQIPtr](../atl/reference/ccomqiptr-class.md) COM 인터페이스 포인터를 관리 하기 위해 스마트 포인터 클래스입니다.  
+-   [CComQIPtr](../atl/reference/ccomqiptr-class.md) COM 인터페이스 포인터를 관리에 대 한 스마트 포인터 클래스입니다.  
   
 -   [CCRTAllocator](../atl/reference/ccrtallocator-class.md) 이 클래스는 CRT 메모리 루틴을 사용 하 여 메모리를 관리 하기 위한 메서드를 제공 합니다.  
   
 -   [CCRTHeap](../atl/reference/ccrtheap-class.md) 이 클래스는 구현 [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) CRT 힙 함수를 사용 하 여 합니다.  
   
--   [CGlobalHeap](../atl/reference/cglobalheap-class.md) 이 클래스는 구현 [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) Win32 글로벌 힙 함수를 사용 합니다.  
+-   [CGlobalHeap](../atl/reference/cglobalheap-class.md) 이 클래스는 구현 [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) Win32 전역 힙 함수를 사용 합니다.  
   
--   [CHandle](../atl/reference/chandle-class.md) 이 클래스를 만들고 개체 핸들을 사용 하는 메서드를 제공 합니다.  
+-   [CHandle](../atl/reference/chandle-class.md) 이 클래스를 만들고 핸들 개체를 사용 하는 메서드를 제공 합니다.  
   
--   [CHeapPtr](../atl/reference/cheapptr-class.md) 힙에 대 한 포인터를 관리 하기 위해 스마트 포인터 클래스입니다.  
+-   [CHeapPtr](../atl/reference/cheapptr-class.md) 힙 포인터를 관리에 대 한 스마트 포인터 클래스입니다.  
   
--   [CHeapPtrBase](../atl/reference/cheapptrbase-class.md) 여러 스마트 포인터 클래스 힙에 대 한이 클래스는 기본을 형성 합니다.  
+-   [CHeapPtrBase](../atl/reference/cheapptrbase-class.md) 여러 스마트 힙 포인터 클래스에 대 한이 클래스는 기본을 형성 합니다.  
   
 -   [CHeapPtrList](../atl/reference/cheapptrlist-class.md) 힙 포인터 목록을 구성할 때이 클래스는 유용한 메서드를 제공 합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "32356510"
   
 -   [CWin32Heap](../atl/reference/cwin32heap-class.md) 이 클래스는 구현 [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) Win32 힙 할당 함수를 사용 합니다.  
   
--   [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) 이 클래스를 메모리 관리자 인터페이스를 나타냅니다.  
+-   [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) 이 클래스는 메모리 관리자 인터페이스를 나타냅니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../atl/atl-class-overview.md)

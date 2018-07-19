@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], valid
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37d6fc7b01c179f017e04f8064a789b8f4ad2b9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7eb5b8d003682f5b941dd805f424afbe4a36cc85
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860907"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964797"
 ---
 # <a name="packagedtask-class"></a>packaged_task 클래스
 
@@ -77,7 +77,7 @@ class packaged_task;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<이후 >
+**헤더:** \<향후 >
 
 **네임스페이스:** std
 
@@ -123,7 +123,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>매개 변수
 
-`Right` A `packaged_task` 개체입니다.
+*오른쪽* 는 `packaged_task` 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -131,7 +131,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="remarks"></a>설명
 
-작업 후 `Right`에는 더 이상 연결된 비동기 상태가 없습니다.
+작업 후 *오른쪽* 연결 된 비동기 상태를 더 이상.
 
 ## <a name="op_call"></a>  packaged_task::operator()
 
@@ -159,7 +159,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>반환 값
 
-개체가 연결된 비동기 상태이면 `true`이고, 그렇지 않으면 `false`입니다.
+**true 이면** 개체에 연결된 된 비동기 상태가;이 고, 그렇지 **false**합니다.
 
 ## <a name="packaged_task"></a>  packaged_task::packaged_task 생성자
 
@@ -178,21 +178,21 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>매개 변수
 
-`Right` A `packaged_task` 개체입니다.
+*오른쪽* 는 `packaged_task` 개체입니다.
 
-`alloc` 메모리 할당자입니다. 자세한 내용은 [\<allocators>](../standard-library/allocators-header.md)를 참조하세요.
+*alloc* 메모리 할당자입니다. 자세한 내용은 [\<allocators>](../standard-library/allocators-header.md)를 참조하세요.
 
-`fn` 함수 개체입니다.
+*fn* 함수 개체입니다.
 
 ### <a name="remarks"></a>설명
 
 첫 번째 생성자는 *연결된 비동기 상태*가 없는 `packaged_task` 개체를 생성합니다.
 
-두 번째 생성자는 `packaged_task` 개체를 생성하며 `Right`로부터 연결된 비동기 상태를 전송합니다. 작업 후 `Right`에는 더 이상 연결된 비동기 상태가 없습니다.
+두 번째 생성자 구문 한 `packaged_task` 개체와 연결된 된 비동기 상태에서 전송 *오른쪽*합니다. 작업 후 *오른쪽* 연결 된 비동기 상태를 더 이상.
 
-세 번째 생성자는 연결된 비동기 상태로 저장된 `packaged_task`의 복사본이 있는 `fn` 개체를 생성합니다.
+세 번째 생성자 구문을 `packaged_task` 개체의 복사본이입니다 *fn* 연결 된 비동기 상태에 저장 합니다.
 
-네 번째 생성자는 비동기적 연결 상태로 저장된 `packaged_task`의 복사본이 있는 `fn` 개체를 생성하고, 메모리 할당을 위해 `alloc`을 사용합니다.
+네 번째 생성자 구문을 `packaged_task` 개체의 복사본이입니다 *fn* 연결 된 비동기 상태를 저장 하 고 사용 하 여 `alloc` 메모리 할당에 대 한 합니다.
 
 ## <a name="dtorpackaged_task_destructor"></a>  packaged_task::~packaged_task 소멸자
 
@@ -228,7 +228,7 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>매개 변수
 
-`Right` A `packaged_task` 개체입니다.
+*오른쪽* 는 `packaged_task` 개체입니다.
 
 ## <a name="valid"></a>  packaged_task::valid
 
@@ -240,7 +240,7 @@ bool valid() const;
 
 ### <a name="return-value"></a>반환 값
 
-개체가 연결된 비동기 상태이면 `true`이고, 그렇지 않으면 `false`입니다.
+**true 이면** 개체에 연결된 된 비동기 상태가;이 고, 그렇지 **false**합니다.
 
 ## <a name="see-also"></a>참고자료
 

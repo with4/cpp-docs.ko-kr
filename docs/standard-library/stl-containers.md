@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd851ae3cf47ca260b1923d969123b21293d8623
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3b758c5db483f74ddb43031ab41f2d2b46514e4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862431"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965244"
 ---
 # <a name="c-standard-library-containers"></a>C++ 표준 라이브러리 컨테이너
 
@@ -177,7 +177,7 @@ map, multimap, set 및 multiset의 다음 멤버 함수는 유형이 다른 조�
 
 ### <a name="comparing-dissimilar-containers-c14"></a>다른 종류의 컨테이너 비교(C++14)
 
-C++14 이상에서는 두 개의 전체 범위를 사용하는 **std::equal**, **std::mismatch** 또는 **std::is_permutation** 함수 오버로드 중 하나를 사용하여 다른 종류의 컨테이너 및/또는 다른 종류의 요소 형식을 비교할 수 있습니다. 이러한 오버로드를 사용하면 길이가 서로 다른 컨테이너를 비교할 수 있습니다. 이 오버로드는 사용자 오류 취약성이 훨씬 덜하며 길이가 서로 다른 컨테이너를 비교할 때 일정한 시간에 false를 반환하도록 최적화되어 있습니다. 따라서 (1) 사용하지 않아야 할 매우 명확한 이유가 없는 경우 또는 (2) 이중 범위 최적화의 이점을 활용할 수 없는 [std::list](../standard-library/list-class.md) 컨테이너를 사용하지 않는 경우에는 이러한 오버로드를 사용하는 것이 좋습니다.
+서로 다른 컨테이너 및/또는 다른 종류의 요소 형식 중 하나를 사용 하 여 비교할 수 c++14 이상에서는 합니다 `std::equal`, `std::mismatch`, 또는 `std::is_permutation` 함수 두 개의 전체 범위를 사용 하는 오버 로드. 이러한 오버로드를 사용하면 길이가 서로 다른 컨테이너를 비교할 수 있습니다. 이 오버로드는 사용자 오류 취약성이 훨씬 덜하며 길이가 서로 다른 컨테이너를 비교할 때 일정한 시간에 false를 반환하도록 최적화되어 있습니다. 따라서 (1) 사용하지 않아야 할 매우 명확한 이유가 없는 경우 또는 (2) 이중 범위 최적화의 이점을 활용할 수 없는 [std::list](../standard-library/list-class.md) 컨테이너를 사용하지 않는 경우에는 이러한 오버로드를 사용하는 것이 좋습니다.
 
 ## <a name="see-also"></a>참고자료
 

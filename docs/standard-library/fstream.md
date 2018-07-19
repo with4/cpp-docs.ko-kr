@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d2fa3ef6113add6bcf72f85f74b8722033cb8d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6b716248c6fe9d0734cd580800c9254cf01f2a17
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846612"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962876"
 ---
 # <a name="ltfstreamgt"></a>&lt;fstream&gt;
 
@@ -38,23 +38,23 @@ ms.locfileid: "33846612"
 
 |형식 이름|설명|
 |-|-|
-|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|`char` 템플릿 매개 변수에서 특수화된 `basic_filebuf` 형식입니다.|
-|[fstream](../standard-library/fstream-typedefs.md#fstream)|`char` 템플릿 매개 변수에서 특수화된 `basic_fstream` 형식입니다.|
-|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|`char` 템플릿 매개 변수에서 특수화된 `basic_ifstream` 형식입니다.|
-|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|`char` 템플릿 매개 변수에서 특수화된 `basic_ofstream` 형식입니다.|
-|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|`wchar_t` 템플릿 매개 변수에서 특수화된 `basic_fstream` 형식입니다.|
-|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|`wchar_t` 템플릿 매개 변수에서 특수화된 `basic_ifstream` 형식입니다.|
-|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|`wchar_t` 템플릿 매개 변수에서 특수화된 `basic_ofstream` 형식입니다.|
-|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|`wchar_t` 템플릿 매개 변수에서 특수화된 `basic_filebuf` 형식입니다.|
+|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|형식 `basic_filebuf` 에서 특수화 된 **char** 템플릿 매개 변수입니다.|
+|[fstream](../standard-library/fstream-typedefs.md#fstream)|형식 `basic_fstream` 에서 특수화 된 **char** 템플릿 매개 변수입니다.|
+|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|형식 `basic_ifstream` 에서 특수화 된 **char** 템플릿 매개 변수입니다.|
+|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|형식 `basic_ofstream` 에서 특수화 된 **char** 템플릿 매개 변수입니다.|
+|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|형식 `basic_fstream` 에서 특수화 된 **wchar_t** 템플릿 매개 변수입니다.|
+|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|형식 `basic_ifstream` 에서 특수화 된 **wchar_t** 템플릿 매개 변수입니다.|
+|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|형식 `basic_ofstream` 에서 특수화 된 **wchar_t** 템플릿 매개 변수입니다.|
+|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|형식 `basic_filebuf` 에서 특수화 된 **wchar_t** 템플릿 매개 변수입니다.|
 
 ### <a name="classes"></a>클래스
 
 |클래스|설명|
 |-|-|
-|[basic_filebuf](../standard-library/basic-filebuf-class.md)|템플릿 클래스는 외부 파일에 저장된 요소의 시퀀스에서 나가고 들어오는 **Elem** 형식 요소의 전송을 제어하는 스트림 버퍼에 대해 설명하며, 해당 문자 특성은 **Tr** 클래스로 결정됩니다.|
-|[basic_fstream](../standard-library/basic-fstream-class.md)|이 템플릿 클래스는 문자 특성이 **Tr** 클래스에 의해 결정되는 **Elem** 형식의 요소가 있는 [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**> 클래스의 스트림 버퍼를 사용한 요소 및 인코드된 개체의 삽입 및 추출을 제어하는 개체를 설명합니다.|
-|[basic_ifstream](../standard-library/basic-ifstream-class.md)|이 템플릿 클래스는 문자 특성이 **Tr** 클래스에 의해 결정되는 **Elem** 형식의 요소가 있는 [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**> 클래스의 스트림 버퍼에서 요소 및 인코드된 개체의 추출을 제어하는 개체를 설명합니다.|
-|[basic_ofstream](../standard-library/basic-ofstream-class.md)|이 템플릿 클래스는 문자 특성이 **Tr** 클래스에 의해 결정되는 **Elem** 형식의 요소가 있는 [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**> 클래스의 스트림 버퍼에 요소 및 인코드된 개체의 삽입을 제어하는 개체를 설명합니다.|
+|[basic_filebuf](../standard-library/basic-filebuf-class.md)|템플릿 클래스는 외부 파일에 저장된 요소의 시퀀스에서 나가고 들어오는 `Elem` 형식 요소의 전송을 제어하는 스트림 버퍼에 대해 설명하며, 해당 문자 특성은 `Tr` 클래스로 결정됩니다.|
+|[basic_fstream](../standard-library/basic-fstream-class.md)|이 템플릿 클래스의 요소 삽입 및 추출을 제어 하는 개체 및 클래스의 스트림 버퍼를 사용 하 여 인코딩된 개체 설명 [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**,  **Tr**>, 형식의 요소를 사용 하 여 `Elem`에서 문자 특성이 클래스에 의해 결정 됩니다 `Tr`합니다.|
+|[basic_ifstream](../standard-library/basic-ifstream-class.md)|요소의 추출을 제어 하는 개체 및 클래스의 스트림 버퍼에서 인코딩된 개체를 설명 하는 템플릿 클래스 [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, 형식의 요소가 있는 `Elem`에서 문자 특성이 클래스에 의해 결정 됩니다 `Tr`합니다.|
+|[basic_ofstream](../standard-library/basic-ofstream-class.md)|클래스의 스트림 버퍼에 요소 삽입을 제어 하는 개체 및 인코드된 개체를 설명 하는 템플릿 클래스 [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, 형식의 요소가 있는 `Elem`에서 문자 특성이 클래스에 의해 결정 됩니다 `Tr`합니다.|
 
 ## <a name="see-also"></a>참고자료
 

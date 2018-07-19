@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74005682036e0a4d15d17d147b5994864fa97378
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6e12799f10fe86ef5dd556eac4e344aa972e2503
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042120"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027312"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar 클래스
 사용자가 최상위 도구 모음 단추를 누르고 있을 때 나타나는 도구 모음입니다.  
@@ -59,31 +59,31 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(`CMFCToolBar::OnSendCommand`를 재정의합니다.)|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(재정의 [CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/571a38ab-2a56-4968-9796-273516126f80).)|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(재정의 [CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80).)|  
   
 ### <a name="remarks"></a>설명  
- A `CMFCDropDownToolBar` 개체를 결합 하는 도구 모음의 시각적 모양을 팝업 메뉴의 동작입니다. 사용자가 누를 고 드롭 다운 도구 모음 단추가 고 (참조 [CMFCDropDownToolbarButton 클래스](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)), 드롭다운 도구 모음이 나타나고 사용자 스크롤하고 및 마우스를 해제 하 여 드롭다운 목록 도구 모음에서 단추를 선택 수 단추입니다. 사용자가 드롭다운 목록 도구 모음에서 단추를 선택한 후 최상위 도구 모음에는 현재 단추와 해당 단추가 표시 됩니다.  
+ `CMFCDropDownToolBar` 팝업 메뉴의 동작을 사용 하 여 도구 모음의 시각적 모양을 결합 하는 개체입니다. 때 사용자를 누르고 드롭다운 도구 모음 단추 (참조 [CMFCDropDownToolbarButton 클래스](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)), 드롭다운 도구 모음이 나타나고 사용자에 스크롤 및 마우스를 해제 하 여 드롭다운 도구 모음에서 단추에 선택할 수 단추입니다. 사용자가 드롭다운 도구 모음에서 단추를 선택, 최상위 도구 모음에서 현재 단추와 해당 단추가 표시 됩니다.  
   
- 드롭 다운 도구 모음 사용자 지정 또는 도킹할 수 없고 분리 상태가 없습니다.  
+ 드롭다운 도구 모음 사용자 지정 하거나 창을 도킹 하면 없습니다 및 분리 상태 없습니다.  
   
- 다음 그림에서는 한 `CMFCDropDownToolBar` 개체:  
+ 다음 그림에 표시 된 `CMFCDropDownToolBar` 개체:  
   
  ![CMFCDropDownToolbar의 예제](../../mfc/reference/media/cmfcdropdown.png "cmfcdropdown")  
   
- 만들는 `CMFCDropDownToolBar` 는 일반 도구 모음을 만들어 동일한 방식으로 개체 (참조 [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md)).  
+ 만든를 `CMFCDropDownToolBar` 는 일반 도구 모음을 만든 동일한 방식으로 개체 (참조 [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md)).  
   
- 부모 도구 모음에서 드롭다운 도구 모음이 삽입:  
+ 드롭다운 도구 모음에 부모 도구 모음 삽입할:  
   
  1. 부모 도구 모음 리소스의 단추에 대한 더미 리소스 ID를 예약합니다.  
   
- 2. 만들기는 `CMFCDropDownToolBarButton` 드롭다운 도구 모음이 포함 된 개체 (자세한 내용은 참조 [CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton)).  
+ 2. 만들기는 `CMFCDropDownToolBarButton` 드롭다운 도구 모음을 포함 하는 개체 (자세한 내용은 참조 하십시오 [CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton)).  
   
- 3. 대체 된 더미 단추는 `CMFCDropDownToolBarButton` 개체를 사용 하 여 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)합니다.  
+ 3. 사용 하 여 더미 단추 바꾸기 합니다 `CMFCDropDownToolBarButton` 개체를 사용 하 여 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)합니다.  
   
- 도구 모음 단추에 대 한 자세한 내용은 참조 [연습: 도구 모음에 컨트롤 배치](../../mfc/walkthrough-putting-controls-on-toolbars.md)합니다. 예를 보려면 드롭다운 도구 모음이 VisualStudioDemo 샘플 프로젝트를 참조 합니다.  
+ 도구 모음 단추에 대 한 자세한 내용은 참조 하세요. [연습: 도구 모음에 컨트롤 배치](../../mfc/walkthrough-putting-controls-on-toolbars.md)합니다. 드롭다운 도구 모음의 예로, VisualStudioDemo 샘플 프로젝트를 참조 하세요.  
   
 ## <a name="example"></a>예  
- 다음 예제에서는 사용 하는 `Create` 에서 메서드는 `CMFCDropDownToolBar` 클래스. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
+ 다음 예제에서는 사용 하는 방법에 설명 합니다 `Create` 의 메서드는 `CMFCDropDownToolBar` 클래스입니다. 이 코드 조각은의 일부인 합니다 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#29](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_VisualStudioDemo#30](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_2.cpp)]  
@@ -143,7 +143,7 @@ virtual BOOL LoadBitmap(
  일반 메뉴 이미지를 참조하는 비트맵의 리소스 ID입니다.  
   
  [in] *차단*  
- `TRUE` 도구 모음을 잠그려면 그렇지 않으면 `FALSE`합니다.  
+ 도구 모음을 잠그려면 그렇지 않으면 FALSE입니다.  
   
  [in] *uiDisabledResID*  
  비활성화된 도구 모음 이미지를 참조하는 비트맵의 리소스 ID입니다.  
@@ -155,7 +155,7 @@ virtual BOOL LoadBitmap(
  메서드가 성공하면 0이 아니고, 실패하면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) 메서드 도구 모음과 연관 된 이미지를 로드 하려면이 메서드를 호출 합니다. 이미지 리소스의 사용자 지정 로드를 수행하려면 이 메서드를 재정의합니다.  
+ 합니다 [cmfctoolbar:: Loadtoolbarex](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) 도구 모음을 사용 하 여 연결 된 이미지를 로드 하려면이 메서드를 호출 합니다. 이미지 리소스의 사용자 지정 로드를 수행하려면 이 메서드를 재정의합니다.  
   
  `LoadBitmapEx` 메서드를 호출하여 도구 모음을 만든 후 추가 이미지를 로드합니다.  
   

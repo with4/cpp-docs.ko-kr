@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e84ed8ed97a529d67c6d136fd8464cd13c8a502
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1b9bc37213ed2e5690f85fca738d44e6eecfaa8c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845221"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962051"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;functional&gt; 연산자
 
@@ -44,17 +44,17 @@ bool operator==(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>매개 변수
 
-`Fty` 래핑할 함수 형식입니다.
+*Fty* 래핑할 함수 형식입니다.
 
-`f` Function 개체
+*f* 함수 개체
 
-`npc` Null 포인터입니다.
+*npc* null 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
 연산자는 둘 다 `function` 개체에 대한 참조인 인수와 null 포인터 상수인 인수를 사용합니다. `function` 개체가 비어 있는 경우에만 둘 다 true를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__functional__operator_eq.cpp
@@ -101,17 +101,17 @@ bool operator!=(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>매개 변수
 
-`Fty` 래핑할 함수 형식입니다.
+*Fty* 래핑할 함수 형식입니다.
 
-`f` Function 개체
+*f* 함수 개체
 
-`npc` Null 포인터입니다.
+*npc* null 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
 연산자는 둘 다 `function` 개체에 대한 참조인 인수와 null 포인터 상수인 인수를 사용합니다. `function` 개체가 비어 있지 않은 경우에만 둘 다 true를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__functional__operator_ne.cpp

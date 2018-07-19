@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f1bcdfa87eac674d935eeaa8007434f930636e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52f9c1335304cc3eefec76abde641e62932eb727
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854992"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964410"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution 클래스
 
@@ -77,36 +77,36 @@ public:
     result_type min() const;
     result_type max() const;
 };
+```
 
-### Parameters
+### <a name="parameters"></a>매개 변수
 
-*IntType*
-The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).
+*IntType* 정수 결과 형식으로 기본값으로 **int**합니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
 
-## Remarks
+## <a name="remarks"></a>설명
 
-The template class describes a distribution that produces values of a user-specified integral type, or type `int` if none is provided, distributed according to the Negative Binomial Distribution discrete probability function. The following table links to articles about individual members.
+사용자 지정 정수 값을 생성 하는 분포를 설명 하는 템플릿 클래스 형식 또는 형식 **int** 음 이항 분포 이산 확률 함수에 따라 제공 하지 않으면 분산 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-The property members `k()` and `p()` return the currently stored distribution parameter values *k* and *p* respectively.
+속성 멤버 `k()` 하 고 `p()` 현재 저장 된 분포 매개 변수 값을 반환 *k* 하 고 *p* 각각.
 
-The property member `param()` sets or returns the `param_type` stored distribution parameter package.
+속성 구성원 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.
 
-The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.
+`min()` 및 `max()` 구성원 함수는 각각 가능한 가장 작은 결과 및 가능한 가장 큰 결과를 반환합니다.
 
-The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.
+`reset()` 구성원 함수는 캐시된 모든 값을 버립니다. 따라서 `operator()`에 대한 다음 호출의 결과는 호출 전 엔진에서 얻은 어떠한 값의 영향도 받지 않습니다.
 
-The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
+`operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
 
-For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
+분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.
 
-For detailed information about the negative binomial distribution discrete probability function, see the Wolfram MathWorld article [Negative Binomial Distribution](http://go.microsoft.com/fwlink/p/?linkid=400516).
+음 이항 분포 이산 확률 함수에 대 한 자세한 내용은 Wolfram MathWorld 문서를 참조 하세요 [음 이항 분포](http://go.microsoft.com/fwlink/p/?linkid=400516)합니다.
 
-## Example
+## <a name="example"></a>예
 
 ```cpp
 // compile with: /EHsc /W4
@@ -246,7 +246,7 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 *p* 는 `p` 분포 매개 변수입니다.
 
-*매개 변수* 분포를 생성 하는 데 사용 되는 매개 변수 구조입니다.
+*parm* 분포를 생성 하는 데 매개 변수 구조입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -260,7 +260,7 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 분포의 매개 변수를 저장합니다.
 
-구조체 param_type {typedef negative_binomial_distribution`<`result_type > distribution_type; param_type (result_type k = 1, p를 두 번 = 0.5); const; result_type k() const; p()를 두 번
+구조체 param_type {typedef negative_binomial_distribution`<`result_type > distribution_type; param_type (result_type k = 1, p를 두 번 = 0.5); result_type k() const; p() const;를 두 번
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
@@ -270,7 +270,7 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 *p* 는 `p` 분포 매개 변수입니다.
 
-*오른쪽* 는 `param_type` 구조를 비교 하는 데 사용 합니다.
+*오른쪽* 는 `param_type` 구조 비교 하는 데 사용 합니다.
 
 ### <a name="remarks"></a>설명
 

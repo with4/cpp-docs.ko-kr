@@ -14,16 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d180454b3189988752c9002ddc462eb460d51ff4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7dc33d4806e02541f45bfde2ecb5acdc0133ad3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356950"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962226"
 ---
 # <a name="atlurlscheme"></a>ATL_URL_SCHEME  
 
-이 열거형의 멤버에서 인식 된 스키마에 대 한 상수를 제공 [CUrl](curl-class.md)합니다.  
+이 열거형의 멤버에서 인식 하는 스키마에 대 한 상수를 제공 [CUrl](curl-class.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32356950"
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** atlutil.h  
+ **헤더:** 와 atlutil.h  
   
 ## <a name="see-also"></a>참고 항목  
  [개념](../active-template-library-atl-concepts.md)   

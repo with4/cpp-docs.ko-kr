@@ -13,12 +13,12 @@ f1_keywords:
 - iosfwd/std::wstringbuf
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
-ms.openlocfilehash: 23a93f90488e56436a8f185d7b4f12218a93a321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a354a5f7792d85d1d6c5dc02aa1174efae716a73
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861284"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963734"
 ---
 # <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt; 형식 정의
 
@@ -30,7 +30,7 @@ ms.locfileid: "33861284"
 
 ## <a name="istringstream"></a>  istringstream
 
-`char` 템플릿 매개 변수에 대해 특수화된 `basic_istringstream` 형식을 만듭니다.
+형식을 만듭니다 `basic_istringstream` 에서 특수화 된를 **char** 템플릿 매개 변수입니다.
 
 ```cpp
 typedef basic_istringstream<char> istringstream;
@@ -38,11 +38,11 @@ typedef basic_istringstream<char> istringstream;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 `char` 형식의 요소용으로 특수화된 [basic_istringstream](../standard-library/basic-istringstream-class.md) 템플릿 클래스와 동일한 의미입니다.
+형식은 템플릿 클래스에 대 한 동의어 [basic_istringstream](../standard-library/basic-istringstream-class.md)형식의 요소용으로 특수화 된 **char**합니다.
 
 ## <a name="ostringstream"></a>  ostringstream
 
-`char` 템플릿 매개 변수에 대해 특수화된 `basic_ostringstream` 형식을 만듭니다.
+형식을 만듭니다 `basic_ostringstream` 에서 특수화 된를 **char** 템플릿 매개 변수입니다.
 
 ```cpp
 typedef basic_ostringstream<char> ostringstream;
@@ -50,11 +50,11 @@ typedef basic_ostringstream<char> ostringstream;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 `char` 형식의 요소용으로 특수화된 [basic_ostringstream](../standard-library/basic-ostringstream-class.md) 템플릿 클래스와 동일한 의미입니다.
+형식은 템플릿 클래스에 대 한 동의어 [basic_ostringstream](../standard-library/basic-ostringstream-class.md)형식의 요소용으로 특수화 된 **char**합니다.
 
 ## <a name="stringbuf"></a>  stringbuf
 
-`char` 템플릿 매개 변수에 대해 특수화된 `basic_stringbuf` 형식을 만듭니다.
+형식을 만듭니다 `basic_stringbuf` 에서 특수화 된를 **char** 템플릿 매개 변수입니다.
 
 ```cpp
 typedef basic_stringbuf<char> stringbuf;
@@ -62,11 +62,11 @@ typedef basic_stringbuf<char> stringbuf;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 `char` 형식의 요소용으로 특수화된 [basic_stringbuf](../standard-library/basic-stringbuf-class.md) 템플릿 클래스와 동일한 의미입니다.
+형식은 템플릿 클래스에 대 한 동의어 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)형식의 요소용으로 특수화 된 **char**합니다.
 
 ## <a name="stringstream"></a>  stringstream
 
-`char` 템플릿 매개 변수에 대해 특수화된 `basic_stringstream` 형식을 만듭니다.
+형식을 만듭니다 `basic_stringstream` 에서 특수화 된를 **char** 템플릿 매개 변수입니다.
 
 ```cpp
 typedef basic_stringstream<char> stringstream;
@@ -74,11 +74,11 @@ typedef basic_stringstream<char> stringstream;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 `char` 형식의 요소용으로 특수화된 [basic_stringstream](../standard-library/basic-stringstream-class.md) 템플릿 클래스와 동일한 의미입니다.
+형식은 템플릿 클래스에 대 한 동의어 [basic_stringstream](../standard-library/basic-stringstream-class.md)형식의 요소용으로 특수화 된 **char**합니다.
 
 ## <a name="wistringstream"></a>  wistringstream
 
-`wchar_t` 템플릿 매개 변수에 대해 특수화된 `basic_istringstream` 형식을 만듭니다.
+형식을 만듭니다 `basic_istringstream` 에서 특수화 된를 **wchar_t** 템플릿 매개 변수입니다.
 
 ```cpp
 typedef basic_istringstream<wchar_t> wistringstream;
@@ -86,11 +86,11 @@ typedef basic_istringstream<wchar_t> wistringstream;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 `wchar_t` 형식의 요소용으로 특수화된 [basic_istringstream](../standard-library/basic-istringstream-class.md) 템플릿 클래스와 동일한 의미입니다.
+형식은 템플릿 클래스에 대 한 동의어 [basic_istringstream](../standard-library/basic-istringstream-class.md)형식의 요소용으로 특수화 된 **wchar_t**합니다.
 
 ## <a name="wostringstream"></a>  wostringstream
 
-`wchar_t` 템플릿 매개 변수에 대해 특수화된 `basic_ostringstream` 형식을 만듭니다.
+형식을 만듭니다 `basic_ostringstream` 에서 특수화 된를 **wchar_t** 템플릿 매개 변수입니다.
 
 ```cpp
 typedef basic_ostringstream<wchar_t> wostringstream;
@@ -98,11 +98,11 @@ typedef basic_ostringstream<wchar_t> wostringstream;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 `wchar_t` 형식의 요소용으로 특수화된 [basic_ostringstream](../standard-library/basic-ostringstream-class.md) 템플릿 클래스와 동일한 의미입니다.
+형식은 템플릿 클래스에 대 한 동의어 [basic_ostringstream](../standard-library/basic-ostringstream-class.md)형식의 요소용으로 특수화 된 **wchar_t**합니다.
 
 ## <a name="wstringbuf"></a>  wstringbuf
 
-`wchar_t` 템플릿 매개 변수에 대해 특수화된 `basic_stringbuf` 형식을 만듭니다.
+형식을 만듭니다 `basic_stringbuf` 에서 특수화 된를 **wchar_t** 템플릿 매개 변수입니다.
 
 ```cpp
 typedef basic_stringbuf<wchar_t> wstringbuf;
@@ -110,11 +110,11 @@ typedef basic_stringbuf<wchar_t> wstringbuf;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 `wchar_t` 형식의 요소용으로 특수화된 [basic_stringbuf](../standard-library/basic-stringbuf-class.md) 템플릿 클래스와 동일한 의미입니다.
+형식은 템플릿 클래스에 대 한 동의어 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)형식의 요소용으로 특수화 된 **wchar_t**합니다.
 
 ## <a name="wstringstream"></a>  wstringstream
 
-`wchar_t` 템플릿 매개 변수에 대해 특수화된 `basic_stringstream` 형식을 만듭니다.
+형식을 만듭니다 `basic_stringstream` 에서 특수화 된를 **wchar_t** 템플릿 매개 변수입니다.
 
 ```cpp
 typedef basic_stringstream<wchar_t> wstringstream;
@@ -122,7 +122,7 @@ typedef basic_stringstream<wchar_t> wstringstream;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 `wchar_t` 형식의 요소용으로 특수화된 [basic_stringstream](../standard-library/basic-stringstream-class.md) 템플릿 클래스와 동일한 의미입니다.
+형식은 템플릿 클래스에 대 한 동의어 [basic_stringstream](../standard-library/basic-stringstream-class.md)형식의 요소용으로 특수화 된 **wchar_t**합니다.
 
 ## <a name="see-also"></a>참고자료
 

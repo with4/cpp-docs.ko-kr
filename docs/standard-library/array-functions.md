@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 355b9945e8783879c9d35aab9893dffa32596d00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840777"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961073"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 함수
 
-\<array> 헤더에는 `array` 개체에서 작동하는 두 개의 비 멤버 함수인 `get` 및 `swap`이 포함되어 있습니다.
+\<배열 > 머리글에 두 개의 비 멤버 함수 `get` 하 고 `swap`에서 작동 하는 **배열** 개체입니다.
 
 |||
 |-|-|
@@ -50,15 +50,15 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>매개 변수
 
-`Index` 요소 오프셋입니다.
+*인덱스* 요소 오프셋입니다.
 
-`T` 요소의 형식입니다.
+*T* 는 요소의 형식입니다.
 
-`N` 배열에 있는 요소의 수입니다.
+*N* 배열의 요소 수입니다.
 
-`arr` 선택할 배열입니다.
+*arr* 배열에서 선택 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 #include <array>
@@ -92,7 +92,7 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-두 개의 `array` 개체를 교환하는 `std::swap`의 비 멤버 템플릿 특수화입니다.
+비 멤버 템플릿 특수화 `std::swap` 교환 하는 두 개의 **배열** 개체입니다.
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -101,19 +101,19 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 요소의 형식입니다.
+*Ty* 는 요소의 형식입니다.
 
-`N` 배열의 크기입니다.
+*N* 배열의 크기입니다.
 
-`left` 교환할 첫 번째 배열입니다.
+*왼쪽* 교환할 첫 번째 배열입니다.
 
-`right` 교환 하려면 두 번째 배열입니다.
+*오른쪽* 교환 하려면 두 번째 배열입니다.
 
 ### <a name="remarks"></a>설명
 
 이 템플릿 함수는 `left.swap(right)`를 실행합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__array__swap.cpp

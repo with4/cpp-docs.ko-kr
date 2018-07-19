@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ab4990ad1c2440449eff2699634364149f5a055
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06fe531330b1043c78882fb511caafe9cc3a7b6d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845546"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963809"
 ---
 # <a name="greater-struct"></a>greater 구조체
 
-인수에서 큼 연산(`operator>`)을 수행하는 이진 조건자입니다.
+큼 수행 하는 이진 조건자-작업 보다 (`operator>`) 인수에 대해 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -52,11 +52,11 @@ struct greater<void>
 
 ### <a name="parameters"></a>매개 변수
 
-`Type``T`, `U` 지 원하는 모든 형식은 `operator>` 지정 되었거나 유추 된 형식의 피연산자를 사용 하는 합니다.
+*형식*, *T*합니다 *U* 지 원하는 모든 형식은 `operator>` 지정 되었거나 유추 된 형식의 피연산자를 사용 하는 합니다.
 
-`Left` 큼의 왼쪽된 피연산자-작업 보다 합니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `T`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.
+*왼쪽* 큼의 왼쪽된 피연산자-작업 보다 합니다. 형식의 lvalue 참조 인수를 사용 하는 특수화 되지 않은 템플릿은 *형식*합니다. 특수화 된 템플릿은 완벽 하 게 전달의 lvalue 및 rvalue 참조 인수 형식 유추 *T*합니다.
 
-`Right` 큼의 오른쪽 피연산자-작업 보다 합니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `U`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.
+*오른쪽* 큼의 오른쪽 피연산자-작업 보다 합니다. 형식의 lvalue 참조 인수를 사용 하는 특수화 되지 않은 템플릿은 *형식*합니다. 특수화 된 템플릿은 완벽 하 게 전달의 lvalue 및 rvalue 참조 인수 형식 유추 *U*합니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -64,9 +64,9 @@ struct greater<void>
 
 ## <a name="remarks"></a>설명
 
-이진 조건자 `greater`< `Type`>은 이 형식이 표준 수학 요구 사항을 충족하는 경우에만 동등 클래스에 `Type` 형식 요소 값 집합의 엄격하고 약한 순서를 제공하여 그렇게 정렬되도록 합니다. 고유한 값의 모든 요소가 서로를 기준으로 정렬된다는 점에서 모든 포인터 형식에 대한 특수화는 요소의 전체 순서 지정을 생성합니다.
+이진 조건자 `greater` <  `Type`> 형식의 요소 값의 집합이 엄밀히 약한 정렬을 제공 *형식* 동등 클래스에이 이와 같은 수치는 표준 충족 하는 경우에 하 여 그렇게 정렬에 대 한 요구 사항입니다. 고유한 값의 모든 요소가 서로를 기준으로 정렬된다는 점에서 모든 포인터 형식에 대한 특수화는 요소의 전체 순서 지정을 생성합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // functional_greater.cpp

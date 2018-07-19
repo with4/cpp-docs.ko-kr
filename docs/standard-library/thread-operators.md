@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 1f5f523b19581fe11f01266c90e6b8612da125fc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac9a436637f9acf5f3818454706eb146d814b3bc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858873"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964823"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 연산자
 
@@ -49,9 +49,11 @@ bool operator>= (
 
 ### <a name="parameters"></a>매개 변수
 
-`Left` 왼쪽 `thread::id` 개체입니다.
+*왼쪽*  
+ 왼쪽 `thread::id` 개체입니다.
 
-`Right` 오른쪽 `thread::id` 개체입니다.
+*오른쪽*  
+ 오른쪽 `thread::id` 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -73,9 +75,11 @@ bool operator> (
 
 ### <a name="parameters"></a>매개 변수
 
-`Left` 왼쪽 `thread::id` 개체입니다.
+*왼쪽*  
+ 왼쪽 `thread::id` 개체입니다.
 
-`Right` 오른쪽 `thread::id` 개체입니다.
+*오른쪽*  
+ 오른쪽 `thread::id` 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -97,9 +101,11 @@ bool operator<= (
 
 ### <a name="parameters"></a>매개 변수
 
-`Left` 왼쪽 `thread::id` 개체입니다.
+*왼쪽*  
+ 왼쪽 `thread::id` 개체입니다.
 
-`Right` 오른쪽 `thread::id` 개체입니다.
+*오른쪽*  
+ 오른쪽 `thread::id` 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -121,13 +127,15 @@ bool operator<(
 
 ### <a name="parameters"></a>매개 변수
 
-`Left` 왼쪽 `thread::id` 개체입니다.
+*왼쪽*  
+ 왼쪽 `thread::id` 개체입니다.
 
-`Right` 오른쪽 `thread::id` 개체입니다.
+*오른쪽*  
+ 오른쪽 `thread::id` 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
-전체 순서에서 `Left`가 `Right` 앞에 오면 `true`이고 그렇지 않으면 `false`입니다.
+**true** 하는 경우 *왼쪽* 앞에 오는 *오른쪽* 전체 순서;에서 고, 그렇지 **false**합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -147,9 +155,11 @@ bool operator!= (
 
 ### <a name="parameters"></a>매개 변수
 
-`Left` 왼쪽 `thread::id` 개체입니다.
+*왼쪽*  
+ 왼쪽 `thread::id` 개체입니다.
 
-`Right` 오른쪽 `thread::id` 개체입니다.
+*오른쪽*  
+ 오른쪽 `thread::id` 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -170,14 +180,16 @@ bool operator== (
 ```
 
 ### <a name="parameters"></a>매개 변수
+ 
+*왼쪽*  
+ 왼쪽 `thread::id` 개체입니다.
 
-`Left` 왼쪽 `thread::id` 개체입니다.
-
-`Right` 오른쪽 `thread::id` 개체입니다.
+*오른쪽*  
+ 오른쪽 `thread::id` 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
-두 개체가 실행의 동일 스레드를 나타내거나 어떤 개체도 실행의 스레드를 나타내지 않으면 `true`이고 그렇지 않으면 `false`입니다.
+**true 이면** 두 개체가 동일한 실행 스레드를 나타내는 경우 또는 어떤 개체도 실행의 스레드를 나타내는 경우이 고, 그렇지 **false**합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -195,17 +207,19 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>매개 변수
 
-`Ostr` A [basic_ostream](../standard-library/basic-ostream-class.md) 개체입니다.
+*Ostr*  
+ [basic_ostream](../standard-library/basic-ostream-class.md) 개체입니다.
 
-`Id` A `thread::id` 개체입니다.
+*Id*  
+ `thread::id` 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
-`Ostr`.
+*Ostr*합니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 `Id`를 `Ostr`에 삽입합니다.
+이 함수를 삽입 *Id* 로 *Ostr*합니다.
 
 두 `thread::id` 개체가 비교 결과 같으면 해당 개체의 삽입된 텍스트 표현은 동일합니다.
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb721b23f473c59051e72edc969e5de38f1c984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e6df4526eea3b0b8b4e91fa4f3e6a89cdd8adb7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843251"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964312"
 ---
 # <a name="extent-class"></a>extent 클래스
 
@@ -37,15 +37,15 @@ struct extent;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 형식이 쿼리입니다.
+*Ty* 쿼리할 형식입니다.
 
-`I` 쿼리할 바인딩되는 배열입니다.
+*I* 쿼리 바인딩되는 배열입니다.
 
 ## <a name="remarks"></a>설명
 
-`Ty`가 `I` 이상의 차원을 가진 배열 형식인 경우 형식 쿼리에는 `I`에서 지정되는 차원의 요소 수가 포함됩니다. `Ty`가 배열 형식이 아니거나 순위가 `I`보다 작은 경우, 또는 `I`가 0이고 `Ty`가 "범위를 알 수 없는 배열 `U`" 형식인 경우 형식 쿼리는 0 값을 가집니다.
+경우 *Ty* 이상이 있는 배열 형식입니다 *합니까* 차원 형식 쿼리는 지정 된 차원의 요소 수가 보유 *I*합니다. 경우 *Ty* 배열 형식이 아니거나 순위가 보다 작거나 *있습니까*, 이거나 *합니까* 0 및 *Ty* 형식입니다 "의 경계를 알 수 없는 배열 `U` "에 형식 쿼리는 0 값을 보유 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__extent.cpp

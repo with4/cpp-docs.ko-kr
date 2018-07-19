@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d268b9cd2ba7d83f44b5e0ebd516208d17ee726
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6ea34ac38b70defc873278ce964ff10b8383dcc5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858109"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966584"
 ---
 # <a name="ostrstream-class"></a>ostrstream 클래스
 
@@ -77,15 +77,15 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Freezeit` A `bool` 고정 스트림을 여부를 나타내는입니다.
+*_Freezeit* A **bool** 스트림을 고정할지를 나타내는입니다.
 
 ### <a name="remarks"></a>설명
 
 구성원 함수는 [rdbuf](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*)를 호출합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
-**freeze**를 사용하는 예제는 [strstream::freeze](../standard-library/strstreambuf-class.md#freeze)를 참조하세요.
+참조 [strstream:: freeze](../standard-library/strstreambuf-class.md#freeze) 사용 하는 예제에 대 한 `freeze`합니다.
 
 ## <a name="ostrstream"></a>  ostrstream::ostrstream
 
@@ -101,19 +101,19 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>매개 변수
 
-`ptr` 버퍼입니다.
+*ptr* 버퍼입니다.
 
-`count` 버퍼의 바이트의 크기입니다.
+*개수* 바이트 버퍼의 크기입니다.
 
-`_Mode` 버퍼의 입력 및 출력 모드입니다. 자세한 내용은 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)를 참조하세요.
+*모드 (_m)* 버퍼의 입력 및 출력 모드입니다. 자세한 내용은 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)를 참조하세요.
 
 ### <a name="remarks"></a>설명
 
-두 생성자는 모두 [ostream](../standard-library/ostream-typedefs.md#ostream)( **sb**)를 호출하여 기본 클래스를 초기화합니다. 여기서 **sb**는 [strstreambuf](../standard-library/strstreambuf-class.md) 클래스의 저장된 개체입니다. 또한 첫 번째 생성자는 `strstreambuf`를 호출하여 **sb**를 초기화합니다. 두 번째 생성자는 다음의 두 가지 방법 중 하나로 기본 클래스를 초기화합니다.
+두 생성자를 호출 하 여 기본 클래스를 초기화 [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**) 여기서 `sb` 클래스의 저장 개체인 [strstreambuf](../standard-library/strstreambuf-class.md)합니다. 첫 번째 생성자는 초기화 `sb` 를 호출 하 여 `strstreambuf`입니다. 두 번째 생성자는 다음의 두 가지 방법 중 하나로 기본 클래스를 초기화합니다.
 
-- `_Mode` & **ios_base::app**== 0인 경우 `ptr`은 `count` 요소 배열의 첫 번째 요소를 지정해야 합니다. 그러면 생성자가 `strstreambuf`( `ptr`, `count`, `ptr`)를 호출합니다.
+- 경우 `_Mode`  &  **ios_base**= = 0 이면 다음 `ptr` 배열의 첫 번째 요소를 지정 해야 `count` 요소 및 생성자 호출 `strstreambuf`(`ptr`합니다 `count`, `ptr`).
 
-- 그렇지 않은 경우 `ptr`은 첫 번째 요소가 `ptr`에 의해 지정되는 C 문자열이 포함된 count 요소 배열의 첫 번째 요소를 지정해야 합니다. 그러면 생성자가 `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) )를 호출합니다.
+- 이 고, 그렇지 `ptr` 배열의 count 요소 C 문자열이 포함 된 첫 번째 요소가에서 지정 하는 첫 번째 요소를 지정 해야 합니다 `ptr`, 및 생성자 호출 `strstreambuf`(`ptr`, `count`합니다 `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="pcount"></a>  ostrstream::pcount
 
@@ -131,7 +131,7 @@ streamsize pcount() const;
 
 구성원 함수는 [rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount)를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `pcount`를 사용하는 샘플은 [strstream::pcount](../standard-library/strstreambuf-class.md#pcount)를 참조하세요.
 
@@ -149,9 +149,9 @@ strstreambuf *rdbuf() const
 
 ### <a name="remarks"></a>설명
 
-구성원 함수는 **pointer** 형식의 저장된 스트림 버퍼 주소를 [strstreambuf](../standard-library/strstreambuf-class.md)에 반환합니다.
+형식의 저장 된 스트림 버퍼 주소를 반환 하는 멤버 함수 `pointer` 하 [strstreambuf](../standard-library/strstreambuf-class.md)합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `rdbuf`를 사용하는 샘플은 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)를 참조하세요.
 
@@ -171,9 +171,9 @@ char *str();
 
 구성원 함수는 [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str)을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
-**str**을 사용하는 샘플은 [strstream::str](../standard-library/strstreambuf-class.md#str)을 참조하세요.
+참조 [strstream:: str](../standard-library/strstreambuf-class.md#str) 사용 하는 샘플에 대 한 `str`합니다.
 
 ## <a name="see-also"></a>참고자료
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7ae83cd92ac8441d842e704446d519f57d4f65
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fce633707096db8913da6d3601da20d14d3704c7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847730"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961485"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -37,7 +37,7 @@ Iostreams 작업의 여러 기본 형식 및 함수를 정의합니다. 이 헤�
 
 ## <a name="remarks"></a>설명
 
-대부분의 함수는 조작자입니다. \<ios>에 선언된 조작자는 [ios_base](../standard-library/ios-base-class.md) 클래스의 해당 인수 개체에 저장된 값을 변경합니다. 다른 조작자는 [basic_istream](../standard-library/basic-istream-class.md) 또는 [basic_ostream](../standard-library/basic-ostream-class.md) 템플릿 클래스 중 하나의 특수화와 같이 이 클래스에서 파생된 형식의 개체에 의해 제어되는 스트림에서 작업을 수행합니다. 예를 들어 [noskipws](../standard-library/ios-functions.md#noskipws)(**str**)는 이러한 형식 중 하나일 수 있는 **str** 개체에서 형식 플래그 `ios_base::skipws`를 지웁니다.
+대부분의 함수는 조작자입니다. \<ios>에 선언된 조작자는 [ios_base](../standard-library/ios-base-class.md) 클래스의 해당 인수 개체에 저장된 값을 변경합니다. 다른 조작자는 [basic_istream](../standard-library/basic-istream-class.md) 또는 [basic_ostream](../standard-library/basic-ostream-class.md) 템플릿 클래스 중 하나의 특수화와 같이 이 클래스에서 파생된 형식의 개체에 의해 제어되는 스트림에서 작업을 수행합니다. 예를 들어 [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) 형식 플래그를 지웁니다 `ios_base::skipws` 개체의 `str`, 이러한 형식 중 하나일 수 있습니다.
 
 `ios_base`에서 파생 클래스에 대해 제공되는 특수 삽입 및 추출 작업을 통해 출력 스트림에 삽입하거나 입력 스트림에서 추출하여 조작자를 호출할 수도 있습니다. 예를 들어:
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bf12a91fc4dd1485e0129e8ce9049d3401c181c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38e076d5a8e552efa353be711d84485c96f6ffd3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844805"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962990"
 ---
 # <a name="isnothrowdefaultconstructible-class"></a>is_nothrow_default_constructible 클래스
 
@@ -36,11 +36,11 @@ struct is_nothrow_default_constructible;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 형식이 쿼리입니다.
+*Ty* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `Ty` 형식에 nothrow 기본 생성자가 있으면 true이고 그렇지 않으면 false입니다. 형식 조건자의 인스턴스는 `is_nothrow_constructible<Ty>`와 같습니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *Ty* 에 nothrow 기본 생성자, 그렇지 않으면 false입니다. 형식 조건자의 인스턴스는 `is_nothrow_constructible<Ty>`와 같습니다.
 
 ## <a name="requirements"></a>요구 사항
 

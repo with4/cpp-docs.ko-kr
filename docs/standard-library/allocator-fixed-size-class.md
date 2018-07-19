@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc1b13fefbb48ebd28b27f87e0a5622fd3cd5ec4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 94207895eb88e0d799289e2c730f99668ca32cef
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849862"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963198"
 ---
 # <a name="allocatorfixedsize-class"></a>allocator_fixed_size 클래스
 
-[max_fixed_size](../standard-library/max-fixed-size-class.md)에 의해 관리되는 길이와 함께 [cache_freelist](../standard-library/cache-freelist-class.md) 형식의 캐시를 사용하여 `Type` 형식의 개체에 대한 저장소 할당 및 해제를 관리하는 개체를 설명합니다.
+저장소 할당 및 개체 형식에 대 한 해제를 관리 하는 개체를 설명 *형식* 형식의 캐시를 사용 하 여 [cache_freelist](../standard-library/cache-freelist-class.md) 관리 하는 길이가 [max_fixed_size](../standard-library/max-fixed-size-class.md).
 
 ## <a name="syntax"></a>구문
 
@@ -41,11 +41,11 @@ class allocator_fixed_size;
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Type`|할당자에 의해 할당된 요소 형식입니다.|
+|*Type*|할당자에 의해 할당된 요소 형식입니다.|
 
 ## <a name="remarks"></a>설명
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) 매크로는 다음 문에서 이 클래스를 `name` 매개 변수로서 전달합니다. `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_fixed_size<10>), SYNC_DEFAULT, allocator_fixed_size);`
+합니다 [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) 매크로로이 클래스를 전달 합니다 *이름* 다음 문에서 매개 변수: `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_fixed_size<10>), SYNC_DEFAULT, allocator_fixed_size);`
 
 ## <a name="requirements"></a>요구 사항
 

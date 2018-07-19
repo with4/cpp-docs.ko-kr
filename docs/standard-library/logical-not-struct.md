@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d654c526e5c856431d69c045c5018d77a6fed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf93d84534671cb65c873555d70fea756036fe06
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860020"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961641"
 ---
 # <a name="logicalnot-struct"></a>logical_not 구조체
 
-인수에 대해 논리적 NOT 연산(`operator!`)을 수행하는 미리정의된 함수 개체입니다.
+논리를 수행 하는 미리 정의 된 함수 개체 not 연산을 (`operator!`) 인수에 대해 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -49,15 +49,15 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>매개 변수
 
-`Type` 지 원하는 모든 형식은 `operator!` 지정 되었거나 유추 된 형식의 피연산자를 사용 합니다.
+*형식* 지 원하는 모든 형식은 `operator!` 지정 되었거나 유추 된 형식의 피연산자를 사용 하는 합니다.
 
-`Left` 피연산자의 논리 not 연산을 합니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `Type`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.
+*왼쪽* 피연산자의 논리적 not 연산입니다. 형식의 lvalue 참조 인수를 사용 하는 특수화 되지 않은 템플릿은 *형식*합니다. 특수화 된 템플릿은 완벽 하 게 전달의 lvalue 및 rvalue 참조 인수 형식 유추 *형식*합니다.
 
 ## <a name="return-value"></a>반환 값
 
 `!Left`의 결과입니다. 특수화된 템플릿은 `operator!`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // functional_logical_not.cpp

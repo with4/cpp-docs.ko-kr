@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c078933ad35cff1a52de433b1ae5d321db1985c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f27cb2bc1a711b77006fa496cc080f546e539ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847782"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962461"
 ---
 # <a name="allocatorbase-class"></a>allocator_base 클래스
 
@@ -70,8 +70,8 @@ class allocator_base
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Type`|할당자에 의해 할당된 요소 형식입니다.|
-|`Sync`|할당자에 대한 동기화 정책, 즉 [sync_none 클래스](../standard-library/sync-none-class.md), [sync_per_container 클래스](../standard-library/sync-per-container-class.md), [sync_per_thread 클래스](../standard-library/sync-per-thread-class.md) 또는 [sync_shared 클래스](../standard-library/sync-shared-class.md)입니다.|
+|*Type*|할당자에 의해 할당된 요소 형식입니다.|
+|*동기화*|할당자에 대한 동기화 정책, 즉 [sync_none 클래스](../standard-library/sync-none-class.md), [sync_per_container 클래스](../standard-library/sync-per-container-class.md), [sync_per_thread 클래스](../standard-library/sync-per-thread-class.md) 또는 [sync_shared 클래스](../standard-library/sync-shared-class.md)입니다.|
 
 ### <a name="constructors"></a>생성자
 
@@ -95,14 +95,14 @@ class allocator_base
 
 |멤버 함수|설명|
 |-|-|
-|[_Charalloc](#charalloc)|`char` 형식의 배열에 대한 저장소를 할당합니다.|
-|[_Chardealloc](#chardealloc)|`char` 형식의 요소를 포함하는 배열에 대한 저장소를 해제합니다.|
+|[_Charalloc](#charalloc)|형식의 배열에 대 한 저장소를 할당 **char**합니다.|
+|[_Chardealloc](#chardealloc)|형식의 요소를 포함 하는 배열에 대 한 저장소를 해제 **char**합니다.|
 |[address](#address)|값이 지정된 개체의 주소를 찾습니다.|
 |[allocate](#allocate)|적어도 지정된 개수의 요소를 저장할 수 있을 만큼 큰 메모리 블록을 할당합니다.|
 |[construct](#construct)|지정된 값으로 초기화된 특정 형식의 개체를 지정된 주소에 생성합니다.|
 |[deallocate](#deallocate)|지정된 위치부터 시작하여 저장소에서 지정된 개수의 개체를 해제합니다.|
 |[destroy](#destroy)|개체가 저장된 메모리 할당을 취소하지 않고 개체 소멸자를 호출합니다.|
-|[max_size](#max_size)|사용 가능한 메모리가 모두 사용되기 전에 allocator 클래스의 개체가 할당할 수 있는 `Type` 형식의 요소 수를 반환합니다.|
+|[max_size](#max_size)|사용 가능한 메모리가 모두 사용되기 전에 allocator 클래스의 개체가 할당할 수 있는 *Type* 형식의 요소 수를 반환합니다.|
 
 ## <a name="requirements"></a>요구 사항
 
@@ -112,7 +112,7 @@ class allocator_base
 
 ## <a name="charalloc"></a>  allocator_base::_Charalloc
 
-`char` 형식의 배열에 대한 저장소를 할당합니다.
+형식의 배열에 대 한 저장소를 할당 **char**합니다.
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -122,7 +122,7 @@ char *_Charalloc(size_type count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`count`|할당할 배열의 요소 수입니다.|
+|*count*|할당할 배열의 요소 수입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -134,7 +134,7 @@ char *_Charalloc(size_type count);
 
 ## <a name="chardealloc"></a>  allocator_base::_Chardealloc
 
-`char` 형식의 요소를 포함하는 배열에 대한 저장소를 해제합니다.
+형식의 요소를 포함 하는 배열에 대 한 저장소를 해제 **char**합니다.
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -144,8 +144,8 @@ void _Chardealloc(void* ptr, size_type count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`ptr`|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
-|`count`|저장소에서 할당을 취소할 개체의 수입니다.|
+|*ptr*|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
+|*count*|저장소에서 할당을 취소할 개체의 수입니다.|
 
 ### <a name="remarks"></a>설명
 
@@ -163,7 +163,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>매개 변수
 
-`val` 에 대 한 주소가 검색 되는 개체의 const 또는 nonconst 값입니다.
+*val* 해당 주소가 검색 되는 개체의 const 또는 nonconst 값입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -188,8 +188,8 @@ pointer allocate(size_type _Nx);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`_Nx`|할당할 배열의 요소 수입니다.|
-|`_Hint`|이 매개 변수는 무시됩니다.|
+|*_Nx*|할당할 배열의 요소 수입니다.|
+|*_Hint*|이 매개 변수는 무시됩니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -214,7 +214,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`right`|복사할 할당자 개체입니다.|
+|*right*|복사할 할당자 개체입니다.|
 
 ### <a name="remarks"></a>설명
 
@@ -248,8 +248,8 @@ void construct(pointer ptr, const Type& val);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`ptr`|개체를 생성할 위치에 대한 포인터입니다.|
-|`val`|생성되는 개체를 초기화할 값입니다.|
+|*ptr*|개체를 생성할 위치에 대한 포인터입니다.|
+|*val*|생성되는 개체를 초기화할 값입니다.|
 
 ### <a name="remarks"></a>설명
 
@@ -267,8 +267,8 @@ void deallocate(pointer ptr, size_type _Nx);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`ptr`|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
-|`_Nx`|저장소에서 할당을 취소할 개체의 수입니다.|
+|*ptr*|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
+|*_Nx*|저장소에서 할당을 취소할 개체의 수입니다.|
 
 ### <a name="remarks"></a>설명
 
@@ -286,7 +286,7 @@ void destroy(pointer ptr);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`ptr`|소멸될 개체의 주소를 지정하는 포인터입니다.|
+|*ptr*|소멸될 개체의 주소를 지정하는 포인터입니다.|
 
 ### <a name="remarks"></a>설명
 

@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 740ebe26dd36dd89786806c3960e6184b117daeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 607a200230e1dfb167707e785f7f8fbbde118587
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860257"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964784"
 ---
 # <a name="submatch-class"></a>sub_match 클래스
 
@@ -65,7 +65,8 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-`BidIt` 부분 일치에 대 한 반복기 형식입니다.
+*BidIt*  
+ 부분 일치에 대한 반복기 형식입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -97,11 +98,14 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 비교할 부분 일치 합니다.
+*right*  
+ 비교할 부분 일치입니다.
 
-`str` 비교할 문자열입니다.
+*str*  
+ 비교할 문자열입니다.
 
-`ptr` 비교할 null로 끝나는 시퀀스입니다.
+*ptr*  
+ 비교할 null 종료 시퀀스입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -115,7 +119,7 @@ int compare(const value_type *ptr) const;
 
 그렇지 않으면 양수 값
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__sub_match_compare.cpp
@@ -180,7 +184,7 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 typedef는 `iterator_traits<BidIt>::difference_type`의 동의어입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__sub_match_difference_type.cpp
@@ -245,7 +249,7 @@ typedef BidIt iterator;
 
 typedef는 템플릿 형식 인수 `Bidit`의 동의어입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__sub_match_iterator.cpp
@@ -310,7 +314,7 @@ difference_type length() const;
 
 멤버 함수는 일치하는 시퀀스의 길이 또는 일치하는 시퀀스가 없는 경우 0을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__sub_match_length.cpp
@@ -373,9 +377,9 @@ bool matched;
 
 ### <a name="remarks"></a>설명
 
-멤버는 `true` 와 연결된 캡처 그룹이 정규식 일치의 일부인 경우에만 `*this` 입니다.
+멤버는 **true** 캡처 그룹과 연결 된 경우에 `*this` 정규식 일치 항목의 일부입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__sub_match_matched.cpp
@@ -440,7 +444,7 @@ operator basic_string<value_type>() const;
 
 멤버 연산자는 `str()`을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__sub_match_operator_str.cpp
@@ -505,7 +509,7 @@ basic_string<value_type> str() const;
 
 멤버 함수는 `basic_string<value_type>(first, second)`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__sub_match_str.cpp
@@ -570,7 +574,7 @@ typedef typename iterator_traits<BidIt>::value_type value_type;
 
 typedef는 `iterator_traits<BidIt>::value_type`의 동의어입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__sub_match_value_type.cpp

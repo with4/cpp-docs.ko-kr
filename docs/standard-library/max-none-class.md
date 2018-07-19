@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97cb713eda7a11874893bc9fc8a13b3b0784f29a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 44981141be5bfb4f18cb278e724ab905aebcc5cf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854030"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964173"
 ---
 # <a name="maxnone-class"></a>max_none 클래스
 
@@ -48,7 +48,7 @@ class max_none
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Max`|`freelist`에 저장할 요소의 최대 수를 결정하는 max 클래스입니다.|
+|*Max*|`freelist`에 저장할 요소의 최대 수를 결정하는 max 클래스입니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
@@ -78,11 +78,11 @@ void allocated(std::size_t _Nx = 1);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`_Nx`|증분 값입니다.|
+|*_Nx*|증분 값입니다.|
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 아무 작업도 수행하지 않습니다. 이 멤버 함수는 `cache_freelist::allocate`에서 `new` 연산자를 성공적으로 호출할 때마다 호출됩니다. `_Nx` 인수는 청크에서 `new` 연산자가 할당한 메모리 블록의 수입니다.
+이 멤버 함수는 아무 작업도 수행하지 않습니다. 성공적으로 호출할 때마다 호출 됩니다 `cache_freelist::allocate` 운영자에 게 **새**합니다. 인수 *_Nx* 연산자가 할당 하는 청크에서 메모리 블록 수가 **새**합니다.
 
 ## <a name="deallocated"></a>  max_none::deallocated
 
@@ -96,11 +96,11 @@ void deallocated(std::size_t _Nx = 1);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`_Nx`|증분 값입니다.|
+|*_Nx*|증분 값입니다.|
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 아무 작업도 수행하지 않습니다. 이 멤버 함수는 `cache_freelist::deallocate`에서 `delete` 연산자를 호출할 때마다 호출됩니다. `_Nx` 인수는 청크에서 `delete` 연산자가 할당 취소한 메모리 블록의 수입니다.
+멤버 함수는 아무 작업도 수행하지 않습니다. 이 멤버 함수는 호출할 때마다 호출 됩니다 `cache_freelist::deallocate` 운영자에 게 **삭제**합니다. 인수 *_Nx* 연산자가 할당 취소 하는 청크에서 메모리 블록 수가 **삭제**합니다.
 
 ## <a name="full"></a>  max_none::full
 
@@ -112,11 +112,11 @@ bool full();
 
 ### <a name="return-value"></a>반환 값
 
-이 멤버 함수는 항상 `true`를 반환합니다.
+이 멤버 함수는 항상 반환 **true**합니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 `cache_freelist::deallocate`에서 호출됩니다. 호출에서 `true`를 반환하는 경우 `deallocate`는 메모리 블록을 사용 가능한 목록에 넣고, false를 반환하는 경우 `deallocate`는 `delete` 연산자를 호출하여 블록을 할당 취소합니다.
+이 멤버 함수는 `cache_freelist::deallocate`에서 호출됩니다. 호출 반환 하는 경우 **true**를 `deallocate` false를 반환 하는 경우 사용 가능한 목록;에서 메모리 블록을 배치 `deallocate` 호출 연산자 **삭제** 할당을 취소 하려면 블록입니다.
 
 ## <a name="released"></a>  max_none::released
 

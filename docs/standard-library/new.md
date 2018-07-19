@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2039da5462d360648f83ebd8890de2f2beba884
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 03d4019f86f99c73ccb25c5cf570637dbf0d7753
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864431"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966510"
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
 
@@ -42,7 +42,7 @@ ms.locfileid: "33864431"
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|**new** 및 **delete**의 `nothrow` 버전에 대한 인수로 사용할 개체를 제공합니다.|
+|[nothrow](../standard-library/new-functions.md#nothrow)|에 대 한 인수로 사용할 개체를 제공 합니다 **nothrow** 버전의 **새** 하 고 **삭제**합니다.|
 
 ### <a name="typedefs"></a>형식 정의
 
@@ -52,7 +52,7 @@ ms.locfileid: "33864431"
 
 ### <a name="functions"></a>함수
 
-|함수|설명|
+|기능|설명|
 |-|-|
 |[set_new_handler](../standard-library/new-functions.md#set_new_handler)|new가 메모리 할당 시도에 실패할 때 호출되는 사용자 함수를 설치합니다.|
 

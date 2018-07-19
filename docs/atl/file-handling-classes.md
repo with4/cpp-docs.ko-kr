@@ -14,21 +14,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99430bc26754023bf7f23511546328e31b6be265
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: adff92e4b5c849c7fab151e716561e163cd59fff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353952"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962347"
 ---
-# <a name="file-handling-classes"></a>파일 클래스를 처리 합니다.
-이러한 클래스는 파일과 임시 파일, 메모리 매핑된 파일을 처리 하기 위한 메서드를 제공 합니다.  
+# <a name="file-handling-classes"></a>파일 처리 클래스
+이러한 클래스는 파일, 임시 파일 및 메모리 매핑된 파일을 처리 하기 위한 메서드를 제공 합니다.  
   
 -   [CAtlFile](../atl/reference/catlfile-class.md) 이 클래스는 파일 처리 API는 Windows에 대 한 씬 래퍼를 제공 합니다.  
   
--   [CAtlFileMapping](../atl/reference/catlfilemapping-class.md) 이 클래스는 캐스트 연산자의 메서드에 추가 메모리 매핑된 파일을 나타냅니다. [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md)합니다.  
+-   [CAtlFileMapping](../atl/reference/catlfilemapping-class.md) 이 클래스의 메서드에 캐스트 연산자를 추가, 메모리 매핑된 파일을 나타냅니다 [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md)합니다.  
   
--   [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md) 메모리 매핑된 파일을이 클래스를 나타냅니다.  
+-   [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md) 이 클래스는 메모리 매핑된 파일을 나타냅니다.  
   
 -   [CAtlTemporaryFile](../atl/reference/catltemporaryfile-class.md) 이 클래스는 만들고 임시 파일을 사용 하기 위한 메서드를 제공 합니다.  
   

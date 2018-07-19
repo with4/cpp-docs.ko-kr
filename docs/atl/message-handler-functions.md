@@ -23,17 +23,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 437ae282efd4b21f294e26890f16130b7a89a55f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c247874f96fa3b91af8f5b03840f716b6eb6516
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355609"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963974"
 ---
 # <a name="message-handler-functions"></a>메시지 처리기 함수
-ATL 세 가지 유형의 메시지 처리기 함수를 제공합니다.  
+ATL은 세 가지 유형의 메시지 처리기 함수를 제공 합니다.  
   
-|메시지 처리기의 유형|해당 메시지 매크로|  
+|메시지 처리기의 형식|해당 메시지 매크로|  
 |-----------------------------|---------------------------------|  
 |[MessageHandler](../atl/messagehandler.md)|[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)|  
 |[CommandHandler](../atl/commandhandler.md)|[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)|  

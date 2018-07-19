@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f11e1ce8b016ab8c6e8af04e351e80307b2189e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 424fcf5b960182326dc1192d8d60f168ead59d98
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843446"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965417"
 ---
 # <a name="isnothrowassignable-class"></a>is_nothrow_assignable 클래스
 
-`From` 형식의 값을 `To` 형식에 할당할 수 있는지 여부와 할당이 throw되지 않는 것으로 알려져 있는지를 테스트합니다.
+값이 있는지 여부를 테스트 *에서* 형식에 할당할 수 있습니다 *하려면* 유형 및 할당은 throw 되지 않는 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -37,13 +37,13 @@ struct is_nothrow_assignable;
 
 ### <a name="parameters"></a>매개 변수
 
-할당을 받는 개체의 형식입니다.
+ 할당을 받는 개체의 형식입니다.
 
-값을 제공 하는 개체의 형식입니다.
+ 값을 제공 하는 개체의 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-`declval<To>() = declval<From>()` 식은 올바른 형식이어야 하며 throw되지 않는 것으로 컴파일러에 알려져 있어야 합니다. `From`과 `To`는 둘 다 완전한 형식이거나, `void`이거나, 범위를 알 수 없는 배열이어야 합니다.
+`declval<To>() = declval<From>()` 식은 올바른 형식이어야 하며 throw되지 않는 것으로 컴파일러에 알려져 있어야 합니다. 둘 다 *에서* 하 고 *에* 완전 한 형식 이어야 합니다 **void**, 또는 범위를 알 수 없는 배열입니다.
 
 ## <a name="requirements"></a>요구 사항
 

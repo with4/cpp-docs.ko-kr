@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f619554db0a85ee8aafbdb8792d8fe233cc392a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f104736d1c8f9d0ed60f2afd374345ab227300b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843017"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964914"
 ---
 # <a name="collatebyname-class"></a>collate_byname 클래스
 
@@ -49,13 +49,13 @@ protected:
 
 ### <a name="parameters"></a>매개 변수
 
-`_Locname` 명명 된 로캘입니다.
+*_Locname* 명명 된 로캘입니다.
 
-`_Refs` 초기 참조 수입니다.
+*_Refs* 초기 참조 개수입니다.
 
 ## <a name="remarks"></a>설명
 
-이 템플릿 클래스는 [collate](../standard-library/collate-class.md#collate)\<CharType> 형식의 [로캘 패싯](../standard-library/locale-class.md#facet_class)으로 사용할 수 있는 개체를 설명합니다. 해당 동작은 [명명된](../standard-library/locale-class.md#name) 로캘 `_Locname`에 따라 결정됩니다. 각 생성자는 [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`)를 통해 해당 기본 개체를 초기화합니다.
+이 템플릿 클래스는 [collate](../standard-library/collate-class.md#collate)\<CharType> 형식의 [로캘 패싯](../standard-library/locale-class.md#facet_class)으로 사용할 수 있는 개체를 설명합니다. 해당 동작은에 의해 결정 됩니다 합니다 [라는](../standard-library/locale-class.md#name) 로캘 *_Locname*합니다. 각 생성자는 [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`)를 통해 해당 기본 개체를 초기화합니다.
 
 ## <a name="requirements"></a>요구 사항
 

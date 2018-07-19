@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0515bc45f0791960b3eb62ada243f792ba48922d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01a3d5aa898dccd680ea575a5753bc5cc3b8abf9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848715"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962831"
 ---
 # <a name="bitset-class"></a>bitset 클래스
 
@@ -64,13 +64,13 @@ class bitset
 
 ### <a name="parameters"></a>매개 변수
 
-*N* 형식의 0이 아닌 정수를 사용 하 여 bitset 개체의 비트 수를 지정 **size_t** 컴파일 타임에 알 수 있어야 합니다.
+*N* 형식의 0이 아닌 정수를 사용 하 여 bitset 개체의 비트 수를 지정 `size_t` 컴파일 시간에 알 수 있어야 합니다.
 
 ## <a name="remarks"></a>설명
 
-유사한 [vector\<bool> 클래스](../standard-library/vector-bool-class.md)와 달리 bitset 클래스는 반복기가 없으며 표준 템플릿 라이브러리 컨테이너가 아닙니다. 또한 **bitset\<N\>** 이 선언되었을 때 템플릿 매개 변수 **N**으로 지정된 크기에 따라 컴파일 시 고정되어 있는 일부 특정 크기가 됨으로써 vector\<bool>과도 다릅니다.
+유사한 [vector\<bool> 클래스](../standard-library/vector-bool-class.md)와 달리 bitset 클래스는 반복기가 없으며 표준 템플릿 라이브러리 컨테이너가 아닙니다. 또한 **bitset\<N\>** 이 선언되었을 때 템플릿 매개 변수 *N*으로 지정된 크기에 따라 컴파일 시 고정되어 있는 일부 특정 크기가 됨으로써 vector\<bool>과도 다릅니다.
 
-비트는 값이 1이면 설정되고, 값이 0이면 재설정 합니다. 비트를 대칭 이동하거나 반전한다는 것은 값을 1에서 0 또는 0에서 1로 변경하는 것입니다. bitset의 **N** 비트는 0에서 **N**-1 범위의 정수 값으로 인덱싱되며, 여기서 0은 첫 번째 비트 위치를 인덱싱하고 **N**-1은 최종 비트 위치를 인덱싱합니다.
+비트는 값이 1이면 설정되고, 값이 0이면 재설정 합니다. 비트를 대칭 이동하거나 반전한다는 것은 값을 1에서 0 또는 0에서 1로 변경하는 것입니다. bitset의 *N* 비트는 0에서 *N*-1 범위의 정수 값으로 인덱싱되며, 여기서 0은 첫 번째 비트 위치를 인덱싱하고 *N*-1은 최종 비트 위치를 인덱싱합니다.
 
 ### <a name="constructors"></a>생성자
 
@@ -82,13 +82,13 @@ class bitset
 
 |형식 이름|설명|
 |-|-|
-|[element_type](#element_type)|데이터 형식 `bool`의 동의어이고 `bitset`에서 요소 비트를 참조하는 데 사용할 수 있는 형식입니다.|
+|[element_type](#element_type)|데이터 형식에 대 한 동의어 형식을 **bool** 에서 요소 비트를 참조 하는 데 사용 될 수 있습니다 하 고는 `bitset`합니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
 |멤버 함수|설명|
 |-|-|
-|[all](#all)|이 `bitset`에 있는 모든 비트를 테스트하여 모두 `true`로 설정되었는지 여부를 확인합니다.|
+|[all](#all)|이 테스트의 모든 비트 `bitset` 모두 설정 지 여부를 결정할 **true**합니다.|
 |[any](#any)|멤버 함수는 시퀀스의 모든 비트가 1로 설정되었는지 여부를 테스트합니다.|
 |[count](#count)|멤버 함수는 비트 시퀀스에 설정된 비트 수를 반환합니다.|
 |[flip](#flip)|`bitset`에 있는 모든 비트의 값을 반전하거나 지정된 위치에서 단일 비트를 반전합니다.|
@@ -98,8 +98,8 @@ class bitset
 |[size](#size)|`bitset` 개체의 비트 수를 반환합니다.|
 |[test](#test)|`bitset`에서 지정된 위치의 비트가 1로 설정되어 있는지 테스트합니다.|
 |[to_string](#to_string)|`bitset` 개체를 문자열 표현으로 변환합니다.|
-|[to_ullong](#to_ullong)|`bitset`에 있는 비트 값의 합을 `unsigned long long`로 반환합니다.|
-|[to_ulong](#to_ulong)|`bitset` 개체를 `bitset`을 초기화하는 데 사용되는 경우 포함된 비트 시퀀스를 생성할 `unsigned long`로 변환합니다.|
+|[to_ullong](#to_ullong)|비트 값의 합계를 반환 합니다 `bitset` 으로 **부호 없는 long long**합니다.|
+|[to_ulong](#to_ulong)|변환를 `bitset` 개체를 **부호 없는 long** 초기화 하는 데 사용 하는 경우 포함 된 비트 시퀀스를 생성 하는 `bitset`합니다.|
 
 ### <a name="member-classes"></a>멤버 클래스
 
@@ -153,7 +153,7 @@ bool any() const;
 
 bitset의 비트가 1로 설정된 경우 **true**, 비트가 0인 경우 **false**입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_any.cpp
@@ -237,19 +237,19 @@ explicit bitset(
 
 ### <a name="parameters"></a>매개 변수
 
-`val` 기본 두 개의 표현의 생성 되 고 bitset의 비트를 초기화 하는 부호 없는 정수입니다.
+*val* 인 두 개의 기본 표현이 생성 중인 bitset의 비트를 초기화 하는 부호 없는 정수입니다.
 
-`str` 0과 bitset의 비트 값을 초기화 하는 데 사용 되는 1의 문자열입니다.
+*str* 문자열 0과 bitset 비트 값을 초기화 하는 데 사용 하는 것입니다.
 
-`_CStr` 에 오는 0 및 bitset의 비트 값을 초기화 하는 데 사용 되는 C 스타일 문자열입니다.
+*_CStr* 0과 bitset 비트 값을 초기화 하는 데 1의 C 스타일 문자열입니다.
 
-`_Pos` 왼쪽에서 오른쪽으로 계산 및 첫 번째 bitset의 비트를 초기화 하는 데 사용 하는 0부터 시작 하는 문자열에서 문자 위치입니다.
+*_Pos* bitset의 첫 번째 비트를 초기화 하는 것을 데 왼쪽에서 오른쪽에 0을 시작으로 계산한 문자열에서 문자의 위치입니다.
 
-`count` Bitset의 비트에 대 한 초기 값을 제공 하는 데 사용 되는 문자열에 있는 문자의 수입니다.
+*개수* bitset의 비트에 초기 값을 제공 하는 데 사용 되는 문자열의 문자 수입니다.
 
-`_Zero` 0을 나타내는 데 사용 되는 문자입니다. 기본값은 ‘0’입니다.
+*_Zero* 0을 나타내는 데 사용 되는 문자입니다. 기본값은 ‘0’입니다.
 
-`_One` 나타내는 데 사용 되는 문자입니다. 기본값은 ‘1’입니다.
+*(_O)* 1을 나타내는 데 사용 되는 문자입니다. 기본값은 ‘1’입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -257,17 +257,17 @@ explicit bitset(
 
 - 첫 번째 생성자는 매개 변수를 허용하지 않고, `bitset\<N>` 클래스의 개체를 생성하며, 모든 N 비트를 기본값 0으로 초기화합니다.
 
-- 두 번째 생성자는 `bitset\<N>` 클래스의 개체를 생성하고 단일 `unsigned long long` 매개 변수를 사용하여 비트를 초기화합니다.
+- 두 번째 생성자는 클래스의 개체를 생성 `bitset\<N>` 단일을 사용 하 여 비트를 초기화 하 고 **부호 없는 long long** 매개 변수입니다.
 
 - 세 번째 생성자는 `bitset\<N>` 클래스의 개체를 생성하여, 0과 1의 C 스타일 문자열로 제공된 문자에 해당하는 값으로 N 비트를 초기화합니다. 문자열을 `bitset<5> b5("01011");` 문자열 형식으로 전환하지 않고 생성자를 호출합니다.
 
 제공된 두 개의 생성자 템플릿이 있습니다.
 
-- 첫 번째 생성자 템플릿은 `bitset\<N>` 클래스의 개체를 구성하고 0과 1의 문자열로 제공된 문자에서 비트를 초기화합니다. 문자열에 0 또는 1이 아닌 문자가 있는 경우 생성자는 [잘못된 인수](../standard-library/invalid-argument-class.md) 클래스의 개체를 throw합니다. 지정된 위치(`_Pos`)가 문자열의 길이를 벗어나는 경우 생성자는 [out_of_range](../standard-library/out-of-range-class.md) 클래스의 개체를 throw합니다. 생성자는 `_Pos + j` 위치에 있는 문자열의 문자가 1인 bitset에서 *j* 위치에 있는 비트만 설정합니다. 기본적으로 `_Pos`는 0입니다.
+- 첫 번째 생성자 템플릿은 `bitset\<N>` 클래스의 개체를 구성하고 0과 1의 문자열로 제공된 문자에서 비트를 초기화합니다. 문자열에 0 또는 1이 아닌 문자가 있는 경우 생성자는 [잘못된 인수](../standard-library/invalid-argument-class.md) 클래스의 개체를 throw합니다. 위치를 지정 하는 경우 (*_Pos*) 클래스의 개체를 throw 하는 생성자가 문자열의 길이 초과 [out_of_range](../standard-library/out-of-range-class.md)합니다. 생성자는 `_Pos + j` 위치에 있는 문자열의 문자가 1인 bitset에서 *j* 위치에 있는 비트만 설정합니다. 기본적으로 *_Pos* 은 0입니다.
 
-- 두 번째 생성자 템플릿은 첫 번째와 유사하지만, 초기화할 비트 수를 지정하는 데 사용되는 추가 매개 변수(`count`)를 포함합니다. 또한 `_Zero`와 `_One`이라는 두 개의 선택적 매개 변수를 가지고 있는데, 이는 `str`의 문자가 각각 0비트와 1비트를 의미하는 것으로 해석됨을 나타냅니다.
+- 두 번째 생성자 템플릿은 첫 번째 유사 하지만 추가 매개 변수를 포함 (*개수*) 초기화 하는 비트 수를 지정 하는 데 사용 되는 합니다. 역시 두 개의 선택적 매개 변수 *_Zero* 및 *(_o)* 의 문자가 나타내는 *str* 각각 0 비트와 1 비트를 의미를 해석 하는 것입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_bitset.cpp
@@ -354,7 +354,7 @@ size_t count() const;
 
 비트 시퀀스에 설정된 비트 수입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 bitset::count 멤버 함수를 사용하는 방법을 보여 줍니다.
 
@@ -400,13 +400,13 @@ The number of bits in the bitset set to 1 is: 4.
 
 ## <a name="element_type"></a>  bitset::element_type
 
-데이터 형식 `bool`의 동의어이고 bitset에서 요소 비트를 참조하는 데 사용할 수 있는 형식입니다.
+데이터 형식에 대 한 동의어 형식을 **bool** 고 bitset에서 요소 비트를 참조 하는 데 사용 될 수 있습니다.
 
 ```cpp
 typedef bool element_type;
 ```
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_elem_type.cpp
@@ -465,7 +465,7 @@ bitset\<N>& flip(size_t _Pos);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Pos` 값이 반전 비트 위치입니다.
+*_Pos* 값이 반전 될 비트의 위치입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -473,9 +473,9 @@ bitset\<N>& flip(size_t _Pos);
 
 ### <a name="remarks"></a>설명
 
-두 번째 멤버 함수에서 throw 한 [out_of_range](../standard-library/out-of-range-class.md) 매개 변수로 지정 된 위치가 크기 보다 큰 경우 예외 *N* 의 **bitset\<***N***  >**  비트가 반전 되었습니다.
+두 번째 멤버 함수는 [out_of_range](../standard-library/out-of-range-class.md) 예외를 매개 변수로 지정 된 위치 크기 보다 크면 *N* 의 합니다 **bitset\<***N***  >**  비트가 반전 된 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_flip.cpp
@@ -538,7 +538,7 @@ bool none() const;
 
 bitset의 비트 중 1로 설정된 것이 없으면 **true**, 하나라도 1로 설정된 것이 있으면 **false**입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_none.cpp
@@ -593,7 +593,7 @@ bool operator!=(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 대상 bitset 같지 않음을 비교할 수 있는 bitset 합니다.
+*오른쪽* 를 대상 bitset와 다른 지 비교할 bitset입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -603,7 +603,7 @@ bitset가 다르면 **true**, 같으면 **false**입니다.
 
 멤버 연산자 함수로 다른지를 테스트하려면 두 bitset의 크기가 같아야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_op_NE.cpp
@@ -646,7 +646,7 @@ Bitset b1 is different from bitset b3.
 
 ## <a name="op_and_eq"></a>  bitset::operator&amp;=
 
-논리적 **AND** 연산으로 bitset의 비트 조합을 수행합니다.
+논리적 `AND` 작업과 bitsets의 비트 조합을 수행합니다.
 
 ```cpp
 bitset\<N>& operator&=(const bitset\<N>& right);
@@ -654,19 +654,19 @@ bitset\<N>& operator&=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 대상 bitset 비트 결합할 수 있는 bitset 합니다.
+*오른쪽* 를 대상 bitset와 비트 결합할 bitset입니다.
 
 ### <a name="return-value"></a>반환 값
 
-매개 변수로 지정된 bitset와 비트 **AND** 연산을 수행한 결과인 수정된 대상 bitset입니다.
+수정 된 대상 bitset와 비트 얻은 `AND` 매개 변수로 지정 된 bitset 사용 하 여 작업 합니다.
 
 ### <a name="remarks"></a>설명
 
-**AND** 연산자로 결합된 두 비트는 각 비트가 참인 경우 **true**를 반환하고, 아닌 경우 **false**를 반환합니다.
+사용 하 여 결합 된 두 비트는 `AND` 연산자 반환 **true** 각 비트가 참인 경우, 해당 조합 그렇지 **false**합니다.
 
-멤버 연산자 함수를 이용해 **AND** 연산자와 비트로 결합하려면 두 bitset의 크기가 같아야 합니다.
+Bitset와 비트 결합할에 동일한 크기 여야 합니다는 `AND` 멤버 연산자 함수로 연산자입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_op_bitwise.cpp
@@ -720,7 +720,7 @@ bitset\<N> operator<<(size_t _Pos) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`_Pos` Bitset의 비트를 이동할는 왼쪽에 있는 위치의 수입니다.
+*_Pos* bitset의 비트를 이동할 수 있는 왼쪽에 있는 위치의 수입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -730,7 +730,7 @@ bitset\<N> operator<<(size_t _Pos) const;
 
 멤버 연산자 함수는 **bitset**( **\*this**) **<<= pos,** 를 반환합니다. 여기서 [<<=](#op_lshift_eq)는 bitset의 비트를 지정된 위치 수만큼 왼쪽으로 이동하고 결과를 대상 bitset로 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_op_LS.cpp
@@ -771,7 +771,7 @@ bitset\<N>& operator<<=(size_t _Pos);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Pos` Bitset의 비트를 이동할는 왼쪽에 위치 수입니다.
+*_Pos* bitset의 비트가 이동 해야 할 왼쪽에 있는 위치의 수입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -781,7 +781,7 @@ bitset\<N>& operator<<=(size_t _Pos);
 
 위치로 이동할 요소가 없으면 함수는 비트를 0 값으로 지웁니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_op_LSE.cpp
@@ -817,7 +817,7 @@ bool operator==(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 대상 bitset 같은지 비교할 수 있는 bitset 합니다.
+*오른쪽* 를 대상 bitset와 같은지를 비교할 bitset입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -827,7 +827,7 @@ bitset가 같으면 **true**, 다르면 **false**입니다.
 
 멤버 연산자 함수로 같은지를 테스트하려면 두 bitset의 크기가 같아야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_op_EQ.cpp
@@ -877,13 +877,13 @@ bitset\<N> operator>>(size_t _Pos) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`_Pos` Bitset의 비트를 이동할는 오른쪽 위치 수입니다.
+*_Pos* bitset의 비트가 이동 해야 할 오른쪽 위치 수입니다.
 
 ### <a name="return-value"></a>반환 값
 
 대상 bitset를 기준으로 비트가 필요한 위치 수만큼 오른쪽으로 이동한 새 bitset입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_op_RS.cpp
@@ -929,7 +929,7 @@ bitset\<N>& operator>>=(size_t _Pos);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Pos` Bitset의 비트를 이동할는 오른쪽 위치 수입니다.
+*_Pos* bitset의 비트가 이동 해야 할 오른쪽 위치 수입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -939,7 +939,7 @@ bitset\<N>& operator>>=(size_t _Pos);
 
 위치로 이동할 요소가 없으면 함수는 비트를 0 값으로 지웁니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_op_RSE.cpp
@@ -977,13 +977,13 @@ reference operator[](size_t _Pos);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Pos` 찾기 내 된 bitset의 비트 위치입니다.
+*_Pos* bitset 내 비트를 찾는 위치입니다.
 
 ### <a name="remarks"></a>설명
 
 빌드에서 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md)을 1 또는 2로 지정하면 bitset 경계를 벗어난 요소에 액세스하려고 할 경우 실행 파일에 런타임 오류가 발생합니다. 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_op_REF.cpp
@@ -1019,7 +1019,7 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 대상 bitset 비트 결합할 수 있는 bitset 합니다.
+*오른쪽* 를 대상 bitset와 비트 결합할 bitset입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -1031,7 +1031,7 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 
 멤버 연산자 함수를 이용해 배타적 `OR` 연산자와 비트로 결합하려면 두 bitset의 크기가 같아야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_op_bitwiseOR.cpp
@@ -1084,7 +1084,7 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 대상 bitset 비트 결합할 수 있는 bitset 합니다.
+*오른쪽* 를 대상 bitset와 비트 결합할 bitset입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -1096,7 +1096,7 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 
 멤버 연산자 함수를 이용해 포괄적 `OR` 연산자와 비트로 결합하려면 두 bitset의 크기가 같아야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_op_BIO.cpp
@@ -1152,7 +1152,7 @@ bitset\<N> operator~() const;
 
 대상 bitset에 대해 모든 비트가 반전된 bitset입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_op_invert.cpp
@@ -1203,9 +1203,9 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-`val` 형식의 개체의 값 `bool` bitset의 비트에 할당할 수 있습니다.
+*val* 형식의 개체의 값을 **bool** bitset의 비트를 할당할 수 있습니다.
 
-`_Bitref` 폼의 참조 *x [i]* 위치의 비트에 *i* bitset의 *x*합니다.
+*_Bitref* 형식의 참조 *x [i]* 위치의 비트 *있나요* bitset의 *x*합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -1213,17 +1213,17 @@ public:
 
 ### <a name="remarks"></a>설명
 
-`reference` 클래스는 `operator[]` bitset에 대한 도우미 클래스로서만 존재합니다. 멤버 클래스는 bitset 내 개별 비트에 액세스할 수 있는 개체를 설명합니다. Let *b* 형식의 개체 수 `bool`, *x* 및 *y* 유형의 개체 **bitset\<***N*** >** , 및 *i* 및 *j* 이러한 개체 내에서 유효한 위치입니다. *x [i]* 표기법은 *x* bitset 내 *i* 위치에 있는 비트를 참조합니다. `reference` 클래스의 멤버 함수는 다음 연산을 차례로 제공합니다.
+`reference` 클래스는 `operator[]` bitset에 대한 도우미 클래스로서만 존재합니다. 멤버 클래스는 bitset 내 개별 비트에 액세스할 수 있는 개체를 설명합니다. 수 있도록 *b* 형식의 개체 여야 **bool**를 *x* 고 *y* 형식의 개체 **bitset\<***N***  >** , 및 *합니까* 하 고 *j* 그러한 개체 내 유효한 위치 합니다. *x [i]* 표기법은 *x* bitset 내 *i* 위치에 있는 비트를 참조합니다. `reference` 클래스의 멤버 함수는 다음 연산을 차례로 제공합니다.
 
 |작업|정의|
 |---------------|----------------|
-|*x*[*i*] = *b*|`bool` 값 *b*를 *x* bitset 내 *i* 비트 위치에 저장합니다.|
+|*x*[*i*] = *b*|저장소 **bool** 값 *b* 비트 위치의 *합니까* bitset 내에서 *x*.|
 |*x*[*i*] = *y*[*j*]|*y*[ *j*] 비트의 값을 *x* bitset 내 *i* 비트 위치에 저장합니다.|
-|*b* = ~ *x*[*i*]|*x*[ *i*] 비트의 대칭 이동된 값을 `bool` *b*에 저장합니다.|
-|*b* = *x*[*i*]|*x*[ *i*] 비트의 값을 `bool` *b*에 저장합니다.|
+|*b* = ~ *x*[*i*]|비트의 대칭 이동 된 값을 저장 *x*[ *합니까*]에서 **bool** *b*합니다.|
+|*b* = *x*[*i*]|비트의 값을 저장 *x*[ *합니까*]에서 **bool** *b*합니다.|
 |*x*[*i*]. `flip`( )|*x*[ *i*] 비트의 대칭 이동된 값을 *x* 내 *i* 비트 위치에 다시 저장합니다.|
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_reference.cpp
@@ -1316,7 +1316,7 @@ bitset\<N>& reset(size_t _Pos);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Pos` 0으로 다시 설정 될 bitset의 비트 위치입니다.
+*_Pos* 0으로 다시 설정할 bitset 내 비트의 위치입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -1326,7 +1326,7 @@ bitset\<N>& reset(size_t _Pos);
 
 지정된 위치가 bitset의 크기보다 큰 경우 두 번째 멤버 함수는 [out_of_range](../standard-library/out-of-range-class.md) 예외를 throw합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_reset.cpp
@@ -1378,9 +1378,9 @@ bitset\<N>& set(
 
 ### <a name="parameters"></a>매개 변수
 
-`_Pos` 로 설정 해야 bitset의 비트 위치 할당 값.
+*_Pos* 설정할 bitset 내 비트의 위치 값을 할당 합니다.
 
-`val` 지정 된 위치의 비트에 할당할 값입니다.
+*val* 지정 된 위치의 비트에 할당할 값입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -1390,7 +1390,7 @@ bitset\<N>& set(
 
 지정된 위치가 bitset의 크기보다 큰 경우 두 번째 멤버 함수는 [out_of_range](../standard-library/out-of-range-class.md) 예외를 throw합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_set.cpp
@@ -1440,7 +1440,7 @@ size_t size() const;
 
 bitset\<N>의 비트 수 *N*입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 bitset::size 멤버 함수를 사용하는 방법을 보여 줍니다.
 
@@ -1482,7 +1482,7 @@ bool test(size_t _Pos) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`_Pos` 해당 값에 대해 테스트할 bitset의 비트 위치입니다.
+*_Pos* 해당 값에 대해 테스트할 bitset 내 비트의 위치입니다.
 
 ### <a name="return-value"></a>반환 값
 

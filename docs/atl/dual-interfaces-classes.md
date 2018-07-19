@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e2acbad92f3da16342de41bb422a75d0304a59f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 07bc54ebecf0b8d1267ac510c7792c38088280d1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354324"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961612"
 ---
 # <a name="dual-interfaces-classes"></a>이중 인터페이스 클래스
 다음 클래스에는 이중 인터페이스에 대 한 지원을 제공합니다.  
   
--   [IDispatchImpl](../atl/reference/idispatchimpl-class.md) 구현 하는 `IDispatch` 이중 인터페이스의 부분입니다. 자세한 내용은 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)을 참조하십시오.  
+-   [IDispatchImpl](../atl/reference/idispatchimpl-class.md) 구현 된 `IDispatch` 이중 인터페이스의 일부입니다. 자세한 내용은 [IDispatch 인터페이스 구현](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../atl/atl-class-overview.md)

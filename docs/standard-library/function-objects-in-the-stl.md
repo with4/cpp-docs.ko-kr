@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa2694e9f5bb477447d08ab976cac60634ef3b60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 09123f4b8d0200d133ae04244d38b615640f7d30
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845455"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964929"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 표준 라이브러리의 함수 개체
 
@@ -58,7 +58,7 @@ template <class Key,
 class set
 ```
 
-두 번째 템플릿 인수는 함수 개체 `less`입니다. 이 함수 개체는 전달된 첫 번째 매개 변수가 전달된 두 번째 매개 변수보다 작은 경우 `true` 를 반환합니다. 일부 컨테이너는 해당 요소를 정렬하므로 두 요소를 비교하는 방법이 필요하며 함수 개체를 사용하여 이를 수행합니다. 함수 개체를 만들고 컨테이너에 대한 템플릿 목록에서 지정하여 컨테이너의 고유한 정렬 기준을 정의할 수 있습니다.
+두 번째 템플릿 인수는 함수 개체 `less`입니다. 이 함수 개체를 반환 **true** 첫 번째 매개 변수를 전달할 경우 작은 두 번째 매개 변수 보다 전달 합니다. 일부 컨테이너는 해당 요소를 정렬하므로 두 요소를 비교하는 방법이 필요하며 함수 개체를 사용하여 이를 수행합니다. 함수 개체를 만들고 컨테이너에 대한 템플릿 목록에서 지정하여 컨테이너의 고유한 정렬 기준을 정의할 수 있습니다.
 
 ## <a name="function-objects-and-algorithms"></a>함수 개체 및 알고리즘
 
@@ -72,7 +72,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-`remove_if` 에 대한 마지막 인수는 부울 값을 반환하는 개체 함수( *predicate*)입니다. 함수 개체의 결과가 `true`인 경우 반복기 `first` 및 `last`가 액세스하고 있는 컨테이너에서 요소가 제거됩니다. 인수 `pred`에 대한 [\<functional>](../standard-library/functional.md) 헤더에 선언된 함수 개체를 사용하거나 직접 만들 수 있습니다.
+`remove_if` 에 대한 마지막 인수는 부울 값을 반환하는 개체 함수( *predicate*)입니다. 함수 개체의 결과가 **true**, 요소는 반복기가 액세스 하는 컨테이너에서 제거 됩니다 `first` 고 `last`입니다. 인수 `pred`에 대한 [\<functional>](../standard-library/functional.md) 헤더에 선언된 함수 개체를 사용하거나 직접 만들 수 있습니다.
 
 ## <a name="see-also"></a>참고자료
 

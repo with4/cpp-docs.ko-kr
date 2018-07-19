@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a5da108c082dc4199a216d36f51d41e1748ada
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e5b2c9237c7f17217d28e489edef4ab65863b54b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844291"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964117"
 ---
 # <a name="isdestructible-class"></a>is_destructible 클래스
 
@@ -37,11 +37,11 @@ struct is_destructible;
 
 ### <a name="parameters"></a>매개 변수
 
-`T` 형식이 쿼리입니다.
+*T* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `T` 형식이 소멸 가능한 형식인 경우 true이고 그렇지 않은 경우 false입니다. 소멸 가능한 형식은 참조 형식, 개체 형식 및 `U` 와 같은 일부 `remove_all_extents_t<T>` 형식의 경우 확인되지 않은 피연산자 `std::declval<U&>.~U()` 가 올바르게 구성되는 경우의 형식입니다. 불완전한 형식, `void`, 및 함수 형식을 비롯한 기타 형식은 소멸 가능한 형식이 아닙니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *T* 형식이 소멸 가능한, 그렇지 않으면 false입니다. 소멸 가능한 형식은 참조 형식, 개체 형식 및 `U` 와 같은 일부 `remove_all_extents_t<T>` 형식의 경우 확인되지 않은 피연산자 `std::declval<U&>.~U()` 가 올바르게 구성되는 경우의 형식입니다. 다른 형식, 불완전 한 형식 포함 **void**, 함수 형식, 소멸 가능한 형식이 아닌 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
