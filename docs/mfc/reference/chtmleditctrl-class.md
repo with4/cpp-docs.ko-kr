@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 4cc8cdc389edc8abbc424ec8277f759e7f3d81bb
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338570"
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl 클래스
 MFC 창에서 WebBrowser ActiveX 컨트롤의 기능을 제공합니다.  
@@ -53,12 +53,12 @@ class CHtmlEditCtrl: public CWnd,
   
 |이름|설명|  
 |----------|-----------------|  
-|[CHtmlEditCtrl::Create](#create)|WebBrowser ActiveX 컨트롤을 만들고에 연결 된 `CHtmlEditCtrl` 개체입니다. 이 함수는 자동으로 편집 모드로 WebBrowser ActiveX 컨트롤을 넣습니다.|  
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|검색 된 [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) 포함 된 WebBrowser 컨트롤에 현재 로드 된 문서에 대 한 인터페이스입니다.|  
-|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|기본 문서에 포함 된 WebBrowser 컨트롤에서 로드할 URL을 검색 합니다.|  
+|[CHtmlEditCtrl::Create](#create)|WebBrowser ActiveX 컨트롤을 만들고이에 연결 된 `CHtmlEditCtrl` 개체입니다. 자동으로이 함수는 WebBrowser ActiveX 컨트롤을 편집 모드에 넣습니다.|  
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|검색 된 [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) 포함된 WebBrowser 컨트롤에 현재 로드 된 문서에 대 한 인터페이스입니다.|  
+|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|기본 문서에 포함 된 WebBrowser 컨트롤을 로드 하려면 URL을 검색 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 만든 후 편집 모드를 호스팅된 WebBrowser 컨트롤에 자동으로 추가 됩니다.  
+ 만들어진 후 모드를 편집 하는 호스 티 드 WebBrowser 컨트롤에 자동으로 배치 됩니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,7 +82,7 @@ CHtmlEditCtrl();
 ```  
   
 ##  <a name="create"></a>  CHtmlEditCtrl::Create  
- WebBrowser ActiveX 컨트롤을 만들고에 연결 된 `CHtmlEditCtrl` 개체입니다. 이 함수에 의해 편집 모드를 WebBrowser ActiveX 컨트롤에서 기본 문서를 자동으로 탐색 하 고 다음에 배치 됩니다.  
+ WebBrowser ActiveX 컨트롤을 만들고이에 연결 된 `CHtmlEditCtrl` 개체입니다. 이 함수에서 편집 모드를 WebBrowser ActiveX 컨트롤에서 기본 문서를 자동으로 탐색 하 고 다음에 배치 됩니다.  
   
 ```  
 virtual BOOL Create(
@@ -105,19 +105,19 @@ virtual BOOL Create(
  컨트롤의 크기와 위치를 지정합니다.  
   
  *pParentWnd*  
- 컨트롤의 부모 창을 지정합니다. 않아야 **NULL**합니다.  
+ 컨트롤의 부모 창을 지정합니다. NULL이 아니어야 합니다.  
   
  *nID*  
- 컨트롤의 ID를 지정 합니다.  
+ 컨트롤의 ID를 지정합니다.  
   
  *pContext*  
  이 매개 변수는 사용되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 **FALSE** 실패 합니다.  
+ 성공 하면 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument  
- 검색 된 [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) 포함 된 WebBrowser 컨트롤에 현재 로드 된 문서에서 인터페이스  
+ 검색 된 [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) 포함된 WebBrowser 컨트롤에 현재 로드 된 문서에는 인터페이스  
   
 ```  
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;  
@@ -128,7 +128,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  문서 인터페이스입니다.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  
- 기본 문서에 포함 된 WebBrowser 컨트롤에서 로드할 URL을 검색 합니다.  
+ 기본 문서에 포함 된 WebBrowser 컨트롤을 로드 하려면 URL을 검색 합니다.  
   
 ```  
 virtual LPCTSTR GetStartDocument();

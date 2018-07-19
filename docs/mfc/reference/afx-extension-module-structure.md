@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e741f172d0dfe528a166fad087460fd9ae18c0f3
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 65f1f2a6416ef93395f7ec73b27a89bf44e2d885
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339386"
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE 구조체
-`AFX_EXTENSION_MODULE` MFC 확장 Dll의 초기화 동안 MFC 확장 DLL 모듈의 상태를 저장 하는 데 사용 됩니다.  
+`AFX_EXTENSION_MODULE` MFC 확장명 Dll의 초기화 하는 동안 MFC 확장명 DLL 모듈의 상태를 저장 하는 데 사용 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,10 +41,10 @@ struct AFX_EXTENSION_MODULE
   
 #### <a name="parameters"></a>매개 변수  
  *bInitialized*  
- **True 이면** DLL 모듈으로 초기화 된 경우 `AfxInitExtensionModule`합니다.  
+ DLL 모듈을 사용 하 여 초기화 되었으면 TRUE `AfxInitExtensionModule`합니다.  
   
  *hModule*  
- DLL 모듈의 핸들을 지정 합니다.  
+ DLL 모듈 핸들을 지정 합니다.  
   
  *hResource*  
  DLL 사용자 지정 리소스 모듈의 핸들을 지정 합니다.  
@@ -56,17 +56,17 @@ struct AFX_EXTENSION_MODULE
  DLL 모듈의 첫 번째 개체 팩터리에 대 한 포인터 (한 `COleObjectFactory` 개체). 클래스 팩터리 목록의 시작 부분을 제공 하는 데 사용 합니다.  
   
 ## <a name="remarks"></a>설명  
- MFC 확장 Dll 두 가지를 수행 해야 자신의 `DllMain` 함수:  
+ MFC 확장명 Dll에서 두 가지를 수행 해야 해당 `DllMain` 함수:  
   
 -   호출 [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule) 반환 값을 확인 합니다.  
   
--   만들기는 `CDynLinkLibrary` DLL를 내보내는 경우 개체 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 자체 사용자 지정 리소스 또는 개체입니다.  
+-   만들기는 `CDynLinkLibrary` DLL를 내보내는 경우 개체 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 개체 또는 고유한 사용자 지정 리소스가 있습니다.  
   
- `AFX_EXTENSION_MODULE` 구조는 MFC 확장 DLL 모듈 상태를 실행 하기 전에 일반적인 정적 개체 생성의 일부로 MFC 확장 DLL에서 초기화 된 런타임 클래스 개체의 복사본을 포함 하 여의 복사본을 저장 하는 데 사용 되 `DllMain` 은 입력합니다. 예를 들어:  
+ 합니다 `AFX_EXTENSION_MODULE` 구조는 MFC 확장명 DLL 모듈 상태를 실행 하기 전에 일반적인 정적 개체 생성의 일부로 MFC 확장 DLL에 의해 초기화 된 런타임 클래스 개체의 복사본을 포함 하 여의 복사본을 저장 하는 데 사용 됩니다 `DllMain` 는 입력 합니다. 예를 들어:  
   
  [!code-cpp[NVC_MFC_DLL#2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
   
- 에 저장 된 모듈 정보는 `AFX_EXTENSION_MODULE` 구조를 복사할 수는 `CDynLinkLibrary` 개체입니다. 예를 들어:  
+ 저장 된 모듈 정보를 `AFX_EXTENSION_MODULE` 구조를 복사할 수는 `CDynLinkLibrary` 개체입니다. 예를 들어:  
   
  [!code-cpp[NVC_MFC_DLL#5](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
   

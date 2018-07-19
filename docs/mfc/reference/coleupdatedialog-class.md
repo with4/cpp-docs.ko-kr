@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0208a24b69c1884d72c0ae525ce95b3d3258271
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: fc5d51bfeb18b51be5a54c51046e3cd420fb1cb8
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079976"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852109"
 ---
 # <a name="coleupdatedialog-class"></a>COleUpdateDialog 클래스
 OLE 편집 링크 대화 상자의 특별한 경우에 사용됩니다. 예를 들어, 문서에서 기존에 연결되거나 포함된 개체만 업데이트할 경우에 사용해야 합니다.  
@@ -48,10 +48,10 @@ class COleUpdateDialog : public COleLinksDialog
   
 |이름|설명|  
 |----------|-----------------|  
-|[COleUpdateDialog::DoModal](#domodal)|표시는 **편집 링크** 업데이트 모드에서 대화 상자.|  
+|[COleUpdateDialog::DoModal](#domodal)|표시 된 **연결 편집** 업데이트 모드에서 대화 상자.|  
   
 ## <a name="remarks"></a>설명  
- 특정 대화 상자에 대 한 자세한 정보에 대 한 문서를 참조 [OLE의 대화 상자](../../mfc/dialog-boxes-in-ole.md)합니다.  
+ OLE 관련 대화 상자에 대 한 자세한 내용은 문서 참조 [OLE의 대화 상자](../../mfc/dialog-boxes-in-ole.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -85,8 +85,8 @@ explicit COleUpdateDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- *pDoc*  
- 업데이트 해야 할 수 있는 링크를 포함 하는 문서를 가리킵니다.  
+ *입력*  
+ 업데이트 하는 데 필요할 수 있는 링크를 포함 하는 문서를 가리킵니다.  
   
  *bUpdateLinks*  
  연결 된 개체를 업데이트할 수 있는지 여부를 결정 하는 플래그입니다.  
@@ -95,13 +95,13 @@ explicit COleUpdateDialog(
  포함 된 개체를 업데이트할 수 있는지 여부를 결정 하는 플래그입니다.  
   
  *pParentWnd*  
- 부모 또는 소유자 창 개체를 가리키는 (형식의 `CWnd`) 대화 상자 개체 속해 있는 합니다. 이 경우 **NULL**, 대화 상자의 부모 창 주 응용 프로그램 창으로 설정 됩니다.  
+ 부모 또는 소유자 창 개체 (형식의 `CWnd`) 대화 상자 개체 속한 합니다. NULL 인 경우 대화 상자의 부모 창 주 응용 프로그램 창에 설정 됩니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수가 구성 된 `COleUpdateDialog` 개체입니다. 대화 상자를 표시 하려면 호출 [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)합니다. 이 클래스를 대신 사용 해야 `COleLinksDialog` 기존 업데이트 하려는 경우 연결 항목 또는 포함 합니다.  
+ 이 함수가 구성만 `COleUpdateDialog` 개체입니다. 대화 상자를 표시 하려면 호출 [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)합니다. 이 클래스를 대신 사용 해야 `COleLinksDialog` 만 기존 업데이트 하려는 경우 연결 또는 항목을 포함 합니다.  
   
 ##  <a name="domodal"></a>  COleUpdateDialog::DoModal  
- 모드를 업데이트 하는 링크 편집 대화 상자에 표시 합니다.  
+ 모드를 업데이트 하는 링크 편집 대화 상자에 표시 됩니다.  
   
 ```  
 virtual INT_PTR DoModal();
@@ -110,14 +110,14 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>반환 값  
  대화 상자에 대 한 완료 상태입니다. 다음 값 중 하나입니다.  
   
-- **IDOK** 대화 상자에서 성공적으로 반환 하는 경우.  
+- IDOK 대화 상자에서 성공적으로 반환 하는 경우입니다.  
   
-- **IDCANCEL** 업데이트가 필요한 현재 문서에서 연결 되거나 포함 된 항목이 없는 경우.  
+- 현재 문서에서 연결 되거나 포함 된 항목이 없는 경우 IDCANCEL 업데이트 해야 합니다.  
   
-- **IDABORT** 오류가 발생 합니다. 경우 **IDABORT** 은 호출 반환 되는 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) 형식 발생 한 오류에 대 한 자세한 정보를 보려면 멤버 함수입니다. 가능한 오류 목록을 참조 하십시오.는 [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) Windows SDK에는 함수입니다.  
+- IDABORT 오류가 발생 합니다. IDABORT 반환 되 면 호출 된 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) 발생 한 오류 유형에 대 한 자세한 정보를 보려면 멤버 함수입니다. 목록을 가능한 오류에 대 한 참조를 [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) Windows SDK에는 함수입니다.  
   
 ### <a name="remarks"></a>설명  
- 모든 링크 및/또는 포함 된 사용자가 취소 단추를 선택 하지 않으면 업데이트 됩니다.  
+ 사용자가 취소 단추를 선택 하지 않는 한 모든 링크 및/또는 포함 업데이트 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [MFC 샘플 OCLIENT](../../visual-cpp-samples.md)   

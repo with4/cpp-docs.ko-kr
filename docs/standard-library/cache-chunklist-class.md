@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71b6a45dbdb882cc666c72296938f970bba52ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 808340df89bb548fee57604f25409c117933cc4e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844948"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953262"
 ---
 # <a name="cachechunklist-class"></a>cache_chunklist 클래스
 
@@ -42,13 +42,13 @@ class cache_chunklist
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Sz`|할당할 배열의 요소 수입니다.|
+|*sz*|할당할 배열의 요소 수입니다.|
 
 ## <a name="remarks"></a>설명
 
-이 템플릿 클래스는 `operator new`를 사용하여 원시 메모리의 청크를 할당하고, 필요한 경우 메모리 블록에 대한 저장소를 할당할 블록을 하위 할당합니다. 또한 각 청크에 대한 별도의 사용 가능한 목록에 할당 취소된 메모리 블록을 저장하고, 사용 중인 메모리 블록이 없는 청크의 경우 `operator delete`를 사용하여 할당 취소합니다.
+이 템플릿 클래스를 사용 하 여 **new 연산자** 원시 메모리의 청크를 할당 하려면 필요한 경우 메모리 블록에 대 한 저장소를 할당할 블록 고; 각 청크에 대 한 별도 사용 가능한 목록에서 할당 취소 된 메모리 블록을 저장 하 고 를사용하여**delete 연산자** 사용 중인 메모리 블록이 없는 경우 청크를 할당 취소 합니다.
 
-각 메모리 블록은 `Sz` 바이트의 사용 가능한 메모리 및 해당 블록이 속해 있는 청크에 대한 포인터를 포함합니다. 각 청크는 `operator new`와 `operator delete`에서 필요로 하는 `Nelts` 메모리 블록, 세 가지 포인터, int 및 데이터를 포함합니다.
+각 메모리 블록 보유 *Sz* 바이트의 사용 가능한 메모리 및 속해 있는 청크에 대 한 포인터입니다. 각 청크를 보유 `Nelts` 메모리 블록, 세 가지 포인터, int 및 데이터는 **new 연산자** 하 고 **delete 연산자** 필요 합니다.
 
 ### <a name="constructors"></a>생성자
 
@@ -81,7 +81,7 @@ void *allocate(std::size_t count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`count`|할당할 배열의 요소 수입니다.|
+|*count*|할당할 배열의 요소 수입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -111,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`ptr`|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
-|`count`|저장소에서 할당을 취소할 개체의 수입니다.|
+|*ptr*|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
+|*count*|저장소에서 할당을 취소할 개체의 수입니다.|
 
 ### <a name="remarks"></a>설명
 

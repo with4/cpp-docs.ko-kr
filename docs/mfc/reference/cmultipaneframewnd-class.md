@@ -90,15 +90,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c95fbe88f91f3eaf0787fa9762d507a49f231c4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 544b6ef8887ab9d6f5e5063fcee435c64e355645
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039208"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852350"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd 클래스
-`CMultiPaneFrameWnd` 클래스 확장 [CPaneFrameWnd 클래스](../../mfc/reference/cpaneframewnd-class.md)합니다. 여러 창을 지원합니다. 컨트롤 막대에 포함 된 단일 핸들 대신 `CMultiPaneFrameWnd` 포함 한 [CPaneContainerManager 클래스](../../mfc/reference/cpanecontainermanager-class.md) 하나 도킹할 수 있는 개체 `CMultiPaneFrameWnd` 간에 이동 하 고 동적으로 만들 여러 부동, 탭 창입니다.  
+합니다 `CMultiPaneFrameWnd` 클래스를 확장 [CPaneFrameWnd 클래스](../../mfc/reference/cpaneframewnd-class.md)합니다. 여러 창을 지원합니다. 컨트롤 막대에 포함 된 단일 핸들 대신 `CMultiPaneFrameWnd` 포함을 [CPaneContainerManager 클래스](../../mfc/reference/cpanecontainermanager-class.md) 하나를 도킹 하 사용할 수 있는 개체 `CMultiPaneFrameWnd` 간 및 동적으로 만드는 여러 부동, 탭 windows입니다.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -119,7 +119,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::AdjustLayout](#adjustlayout)|미니 프레임 창의 레이아웃을 조정합니다. (재정의 [CPaneFrameWnd::AdjustLayout](../../mfc/reference/cpaneframewnd-class.md#adjustlayout).)|  
 |[CMultiPaneFrameWnd::AdjustPaneFrames](#adjustpaneframes)|(재정의 [CPaneFrameWnd::AdjustPaneFrames](../../mfc/reference/cpaneframewnd-class.md#adjustpaneframes).)|  
 |[CMultiPaneFrameWnd::CalcExpectedDockedRect](#calcexpecteddockedrect)|도킹 된 창의 예상된 사각형을 계산합니다. (재정의 [CPaneFrameWnd::CalcExpectedDockedRect](../../mfc/reference/cpaneframewnd-class.md#calcexpecteddockedrect).)|  
-|[CMultiPaneFrameWnd::CanBeAttached](#canbeattached)|현재 창을 다른 창이 나 프레임 창으로 도킹 여부를 결정 합니다. (재정의 [CPaneFrameWnd::CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached).)|  
+|[CMultiPaneFrameWnd::CanBeAttached](#canbeattached)|현재 창을 다른 창이 나 프레임 창에 도킹할 수 있는지 여부를 결정 합니다. (재정의 [CPaneFrameWnd::CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached).)|  
 |[CMultiPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|미니 프레임 창을 창에 도킹할 수 있는지 여부를 결정 합니다. (재정의 [CPaneFrameWnd::CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane).)|  
 |[CMultiPaneFrameWnd::CheckGripperVisibility](#checkgrippervisibility)|(재정의 [CPaneFrameWnd::CheckGripperVisibility](../../mfc/reference/cpaneframewnd-class.md#checkgrippervisibility).)|  
 |[CMultiPaneFrameWnd::CloseMiniFrame](#closeminiframe)|(`CPaneFrameWnd::CloseMiniFrame`를 재정의합니다.)|  
@@ -137,7 +137,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::LoadState](#loadstate)|레지스트리에서 창의 상태를 로드합니다. (재정의 [CPaneFrameWnd::LoadState](../../mfc/reference/cpaneframewnd-class.md#loadstate).)|  
 |[CMultiPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|가장 최근 위치에 미니 프레임 창을 도킹합니다. (재정의 [CPaneFrameWnd::OnDockToRecentPos](../../mfc/reference/cpaneframewnd-class.md#ondocktorecentpos).)|  
 |[CMultiPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|롤업 타이머를 중지합니다. (재정의 [CPaneFrameWnd::OnKillRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onkillrolluptimer).)|  
-|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|미니 프레임 창 안에 창 레이아웃을 조정합니다. (재정의 [CPaneFrameWnd::OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout).)|  
+|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|미니 프레임 창 내에서 창 레이아웃을 조정합니다. (재정의 [CPaneFrameWnd::OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout).)|  
 |[CMultiPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|롤업 타이머를 설정합니다. (재정의 [CPaneFrameWnd::OnSetRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onsetrolluptimer).)|  
 |[CMultiPaneFrameWnd::OnShowPane](#onshowpane)|미니 프레임 창의 창이 숨겨지거나 표시될 때 프레임워크에서 호출됩니다. (재정의 [CPaneFrameWnd::OnShowPane](../../mfc/reference/cpaneframewnd-class.md#onshowpane).)|  
 |[CMultiPaneFrameWnd::PaneFromPoint](#panefrompoint)|미니 프레임 창 안에 사용자가 제공한 지점을 포함하는 경우 창을 반환합니다. (재정의 [CPaneFrameWnd::PaneFromPoint](../../mfc/reference/cpaneframewnd-class.md#panefrompoint).)|  
@@ -153,16 +153,16 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|(재정의 [CPaneFrameWnd::StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo).)|  
   
 ## <a name="remarks"></a>설명  
- 이 클래스의 메서드는 대부분의 메서드 재정의 [CPaneFrameWnd 클래스](../../mfc/reference/cpaneframewnd-class.md) 클래스입니다.  
+ 이 클래스의 메서드 중 대부분의 메서드를 재정의 합니다 [CPaneFrameWnd 클래스](../../mfc/reference/cpaneframewnd-class.md) 클래스입니다.  
   
- 창을 사용 하는 경우는 `AFX_CBRS_AUTO_ROLLUP` 스타일과 사용자 다중 창 프레임 창에 해당 창 도킹, 사용자 수의 다른 도킹 된 창 스타일 설정에 관계 없이 창을 롤업 합니다.  
+ 창을 AFX_CBRS_AUTO_ROLLUP 스타일을 사용 하는 경우 사용자 다중 창 프레임 창에 해당 창 도킹 창을 도킹 된 창 스타일 설정에 관계 없이 사용자 롤백할 수입니다.  
   
- 프레임 워크에서 자동으로 만듭니다는 `CMultiPaneFrameWnd` 사용자를 사용 하는 창을 부동 하는 경우 개체는 `CBRS_FLOAT_MULTI` 스타일입니다.  
+ 프레임 워크에서 자동으로 만듭니다는 `CMultiPaneFrameWnd` 사용자 CBRS_FLOAT_MULTI 스타일을 사용 하는 창을 부동 하는 경우 개체입니다.  
   
- 클래스를 파생 하는 방법에 대 한 내용은 `CPaneFrameWnd` 클래스 및 동적으로 만들기, 참조 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)합니다.  
+ 클래스를 파생 하는 방법에 대 한 정보에 대 한 합니다 `CPaneFrameWnd` 클래스 및 동적으로 만들기를 참조 하세요 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)합니다.  
   
 ## <a name="example"></a>예  
- 다음 예제에 대 한 포인터를 검색 하는 방법을 보여 줍니다는 `CMultiPaneFrameWnd` 개체입니다. 이 코드 조각은의 일부인는 [창 크기 설정 샘플](../../visual-cpp-samples.md)합니다.  
+ 다음 예제에 대 한 포인터를 검색 하는 방법에 설명 된 `CMultiPaneFrameWnd` 개체입니다. 이 코드 조각은의 일부인 합니다 [창 크기 설정 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_SetPaneSize#4](../../mfc/reference/codesnippet/cpp/cmultipaneframewnd-class_1.cpp)]  
   
@@ -384,7 +384,7 @@ CPaneContainerManager& GetPaneContainerManager();
  내부 컨테이너 관리자 개체에 대 한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 내부 액세스 데 사용할 수 [CPaneContainerManager 클래스](../../mfc/reference/cpanecontainermanager-class.md) 개체입니다.  
+ 내부 액세스 하려면이 메서드를 사용할 수 있습니다 [CPaneContainerManager 클래스](../../mfc/reference/cpanecontainermanager-class.md) 개체입니다.  
   
 ##  <a name="getpanecount"></a>  CMultiPaneFrameWnd::GetPaneCount  
 

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b264b2366ce4fb7234d5906222fb4f8aa750212
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f0a3f632f2da327dea698722177ba6a3b3ebe42d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339789"
 ---
 # <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty 클래스
 비동기적으로 전송되고 메모리 파일에 캐싱되는 OLE 컨트롤 속성을 구현합니다.  
@@ -51,13 +51,13 @@ class CCachedDataPathProperty : public CDataPathProperty
 |[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile` 데이터를 캐시 하는 개체입니다.|  
   
 ## <a name="remarks"></a>설명  
- 메모리 파일 아닌 디스크에 RAM에 저장 됩니다 및 빠른 임시 전송에 유용 합니다.  
+ 메모리 파일을 RAM 대신 디스크에 저장 됩니다 및 빠른 임시 전송에 유용 합니다.  
   
- 와 함께 `CAysncMonikerFile` 및 `CDataPathProperty`, `CCachedDataPathProperty` OLE 컨트롤에서 비동기 모니커를 사용 하기 위한 기능을 제공 합니다. 와 `CCachedDataPathProperty` URL 또는 파일 원본에서 데이터를 비동기적으로 전송 하 고를 통해 메모리 파일에 저장할 수 있는 개체는 `m_Cache` 공용 변수입니다. 모든 데이터는 메모리 파일에 저장 되 고 재정의할 필요가 없습니다 [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) 알림에 대 한 감시 하 고 응답 하는 경우가 있습니다. 예를 들어, 대용량 전송 하는 경우. GIF 파일 및 필요에 더 많은 데이터가 도착 하 고 자체를 그려야 컨트롤에 알리기 위해 재정의 `OnDataAvailable` 알림을 합니다.  
+ 와 함께 `CAysncMonikerFile` 하 고 `CDataPathProperty`, `CCachedDataPathProperty` OLE 컨트롤의 비동기 모니커를 사용 하기 위한 기능을 제공 합니다. 사용 하 여 `CCachedDataPathProperty` 개체를 통해 메모리 파일에 저장 하 고 URL 또는 파일 원본에서 데이터를 비동기적으로 전송 수는 `m_Cache` 공용 변수입니다. 모든 데이터의 메모리 파일에 저장 되 고 재정의 하지 않아도 됩니다 [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) 알림을 감시 하 고 대응 하는 경우가 있습니다. 예를 들어 큰를 전송 하는 경우. GIF 파일을 더 많은 데이터 도착을 자체 그리면 컨트롤에 알리기 위해 재정의 `OnDataAvailable` 알림을 확인 합니다.  
   
  클래스 `CCachedDataPathProperty` 에서 파생 된 `CDataPathProperty`합니다.  
   
- 인터넷 응용 프로그램에서 비동기 모니커 및 ActiveX 컨트롤을 사용 하는 방법에 대 한 자세한 내용은 다음 항목을 참조 합니다.  
+ 인터넷 응용 프로그램에서 비동기 모니커 및 ActiveX 컨트롤을 사용 하는 방법에 대 한 자세한 내용은 다음 항목을 참조 하세요.  
   
 - [인터넷 첫 번째 단계: ActiveX 컨트롤](../../mfc/activex-controls-on-the-internet.md)  
   
@@ -98,10 +98,10 @@ CCachedDataPathProperty(
  이 연결 될 ActiveX 컨트롤 개체에 대 한 포인터 `CCachedDataPathProperty` 개체입니다.  
   
  *lpszPath*  
- 절대 또는 상대 수 있는 경로를 실제 속성의 절대 위치를 참조 하는 비동기 모니커를 만드는 데 사용 합니다. `CCachedDataPathProperty` Url, 하지 파일 이름을 사용합니다. 원하는 경우는 `CCachedDataPathProperty` 개체 파일에 대 한, file:// 경로 앞에 추가 합니다.  
+ 경로 절대 또는 상대 수 있는 속성의 절대 실제 위치를 참조 하는 비동기 모니커를 만드는 데 했습니다. `CCachedDataPathProperty` 하지 파일 이름, Url을 사용합니다. 원하는 경우는 `CCachedDataPathProperty` 파일에 대 한 개체, file:// 경로 앞에 추가 합니다.  
   
 ### <a name="remarks"></a>설명  
- `COleControl` 가리키는 개체 *pControl* ´ â [열려](../../mfc/reference/cdatapathproperty-class.md#open) 되 고 파생된 클래스에서 검색 합니다. 경우 *pControl* 은 **NULL**를 사용 하는 컨트롤 `Open` 으로 설정할지 [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol)합니다. 경우 *lpszPath* 은 **NULL**, 되는 경로에 전달할 수 있습니다 `Open` 사용 하 여 설정 하거나 [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath)합니다.  
+ `COleControl` 가리키는 개체 *pControl* 에서 사용 됩니다 [열기](../../mfc/reference/cdatapathproperty-class.md#open) 파생된 클래스에서 검색 합니다. 하는 경우 *pControl* 가 null 인 경우 사용 하 여 사용 하는 컨트롤 `Open` 으로 설정 해야 [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol)합니다. 하는 경우 *lpszPath* 가 null 인 경우 경로 통해 전달할 수 있습니다 `Open` 사용 하 여 설정 하거나 [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath)합니다.  
   
 ##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache  
  데이터가 캐시 된 메모리 파일의 클래스 이름을 포함 합니다.  
@@ -111,7 +111,7 @@ CMemFile m_Cache;
 ```  
   
 ### <a name="remarks"></a>설명  
- 메모리 파일은 RAM에 아닌 디스크에 저장 됩니다.  
+ 메모리 파일을 RAM 대신 디스크에 저장 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CDataPathProperty 클래스](../../mfc/reference/cdatapathproperty-class.md)   

@@ -1,5 +1,5 @@
 ---
-title: 기본 클래스 팩터리와 집계 모델 변경 | Microsoft Docs
+title: 기본 클래스 팩터리 및 집계 모델 변경 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,27 +22,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce64f2162aa0d5cdf5bcf5e16b56b6989fcaf1ee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db2e684565589eb736b135db3460ed8b83d382b1
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355241"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850880"
 ---
-# <a name="changing-the-default-class-factory-and-aggregation-model"></a>기본 클래스 팩터리와 집계 모델 변경
-ATL 사용 하 여 [CComCoClass](../atl/reference/ccomcoclass-class.md) 개체에 대 한 기본 클래스 팩터리와 집계 모델을 정의할 수 있습니다. `CComCoClass` 다음 두 매크로 지정합니다.  
+# <a name="changing-the-default-class-factory-and-aggregation-model"></a>기본 클래스 팩터리 및 집계 모델 변경
+ATL 사용 [CComCoClass](../atl/reference/ccomcoclass-class.md) 개체에 대 한 기본 클래스 팩터리 및 집계 모델을 정의할 수 있습니다. `CComCoClass` 다음 두 매크로 지정합니다.  
   
--   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory) 되려면 클래스 팩터리 선언 [CComClassFactory](../atl/reference/ccomclassfactory-class.md)합니다.  
+-   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory) 선언 되도록 클래스 팩터리 [CComClassFactory](../atl/reference/ccomclassfactory-class.md)합니다.  
   
 -   [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable) 개체를 집계할 수 있도록 선언 합니다.  
   
- 클래스 정의에서 다른 매크로 지정 하 여 이러한 기본값 중 하나를 재정의할 수 있습니다. 예를 들어, 사용 하도록 [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) 대신 `CComClassFactory`, 지정 된 [DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2) 매크로:  
+ 클래스 정의에서 다른 매크로 지정 하 여 이러한 기본값 중 하나를 재정의할 수 있습니다. 예를 사용 하려면 [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) 대신 `CComClassFactory`를 지정 합니다 [DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2) 매크로:  
   
  [!code-cpp[NVC_ATL_COM#2](../atl/codesnippet/cpp/changing-the-default-class-factory-and-aggregation-model_1.h)]  
   
- 클래스 팩터리를 정의 하는 다른 두 매크로 [DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) 및 [DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton)합니다.  
+ 클래스 팩터리를 정의 하는 다른 두 매크로 [DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) 하 고 [DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton)합니다.  
   
- ATL 또한 사용 하 여는 `typedef` 기본 동작을 구현 하는 메커니즘입니다. 예를 들어는 `DECLARE_AGGREGATABLE` 사용 하 여 매크로 `typedef` 호출 형식을 정의 하려면 **_CreatorClass**, 다음 ATL. 전반에 걸쳐 되는 파생된 클래스에서는 `typedef` 기본 클래스와 동일한 이름을 사용 하 여 `typedef` atl 프로그램 정의 사용 하 고 기본 동작 재정의 합니다.  
+ ATL 사용 합니다 **typedef** 기본 동작을 구현 하는 메커니즘입니다. 예를 들어 DECLARE_AGGREGATABLE 매크로 사용 하 여 **typedef** 라는 형식을 정의 하려면 `_CreatorClass`, ATL. 전체에서 참조 되는 파생된 클래스에서를 **typedef** 기본 클래스의 동일한 이름을 사용 하 여 **typedef** ATL 프로그램 정의 사용 하 고 기본 동작 재정의에서 발생 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ATL COM 개체의 기본 사항](../atl/fundamentals-of-atl-com-objects.md)   

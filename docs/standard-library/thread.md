@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5558f1e7998cca1efd64fbc5ee0ad39cc40ee2a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef5470d7c7e83c260f44d723665d5d9c0a5ad061
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858616"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953031"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
-표준 헤더를 포함 \<스레드 >는 클래스를 정의 하려면 `thread` 및 다양 한 지원 기능입니다.
+표준 헤더 포함 \<스레드 > 클래스를 정의 하 **스레드** 및 다양 한 지원 기능입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -34,9 +34,9 @@ ms.locfileid: "33858616"
 ## <a name="remarks"></a>설명
 
 > [!NOTE]
-> 사용 하 여 컴파일된 코드에서 **/clr**,이 헤더 ï ´ ù.
+> 코드를 사용 하 여 컴파일된 **/clr**,이 헤더가 차단 됩니다.
 
-`__STDCPP_THREADS__` 매크로 스레드가이 헤더에 의해 지원 되는 표시에 0이 아닌 값으로 정의 됩니다.
+`__STDCPP_THREADS__` 매크로가 스레드가이 헤더에 의해 지원 되는 표시에 0이 아닌 값으로 정의 됩니다.
 
 ## <a name="members"></a>멤버
 
@@ -50,16 +50,16 @@ ms.locfileid: "33858616"
 
 |이름|설명|
 |----------|-----------------|
-|[hash 구조체(C++ 표준 라이브러리)](../standard-library/hash-structure-stl.md)|고유 하 게 의해 결정 되는 값을 반환 하는 멤버 함수 정의 `thread::id`합니다. 멤버 함수 정의 [해시](../standard-library/hash-class.md) 적합 한 종류의 매핑이 값에 대 한 함수 `thread::id` 인덱스 값의 분포를 합니다.|
+|[hash 구조체(C++ 표준 라이브러리)](../standard-library/hash-structure-stl.md)|고유 하 게 결정 되는 값을 반환 하는 멤버 함수는 `thread::id`합니다. 멤버 함수 정의 [해시](../standard-library/hash-class.md) 매핑 값 형식에 적합 한 함수 `thread::id` 인덱스 값의 분포에 있습니다.|
 
 ### <a name="public-functions"></a>공용 함수
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |[get_id](../standard-library/thread-functions.md#get_id)|현재 실행 스레드를 고유하게 식별합니다.|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|호출 스레드를 차단합니다.|
 |[sleep_until](../standard-library/thread-functions.md#sleep_until)|최소한 지정된 시간까지 호출 스레드를 차단합니다.|
-|[swap](../standard-library/thread-functions.md#swap)|두 개의 상태 교환 `thread` 개체입니다.|
+|[swap](../standard-library/thread-functions.md#swap)|두 개의 상태 교환 **스레드** 개체입니다.|
 |[yield](../standard-library/thread-functions.md#yield)|정상적인 경우라면 현재 스레드가 계속 실행되더라도 운영 체제에 다른 스레드를 실행할 것을 알립니다.|
 
 ### <a name="public-operators"></a>Public 연산자
@@ -70,7 +70,7 @@ ms.locfileid: "33858616"
 |[연산자 > 연산자](../standard-library/thread-operators.md#op_gt)|하나의 `thread::id` 개체가 다른 개체보다 큰지를 확인합니다.|
 |[연산자 < = 연산자](../standard-library/thread-operators.md#op_lt_eq)|하나의 `thread::id` 개체가 다른 개체보다 작거나 같은지를 확인합니다.|
 |[연산자 < 연산자](../standard-library/thread-operators.md#op_lt)|하나의 `thread::id` 개체가 다른 개체보다 작은지를 확인합니다.|
-|[operator! = 연산자](../standard-library/thread-operators.md#op_neq)|두 `thread::id` 개체가 다른지 비교합니다.|
+|[연산자! = 연산자](../standard-library/thread-operators.md#op_neq)|두 `thread::id` 개체가 다른지 비교합니다.|
 |[연산자 = = 연산자](../standard-library/thread-operators.md#op_eq_eq)|두 `thread::id` 개체가 같은지 비교합니다.|
 |[연산자 << 연산자](../standard-library/thread-operators.md#op_lt_lt)|`thread::id` 개체의 텍스트 표현을 스트림에 삽입합니다.|
 

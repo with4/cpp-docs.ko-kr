@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39db2ead78a123c3274405e3560bca1c67cf1f5c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 10c01fcc7c75fb3ea9abf5803f5f17d3bd378333
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854144"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953903"
 ---
 # <a name="timeputbyname-class"></a>time_put_byname 클래스
 
@@ -50,13 +50,15 @@ protected:
 
 ### <a name="parameters"></a>매개 변수
 
-`_Locname` 로캘 이름입니다.
+*_Locname*  
+ 로캘 이름
 
-`_Refs` 초기 참조 수입니다.
+*_Refs*  
+ 초기 참조 개수입니다.
 
 ## <a name="remarks"></a>설명
 
-해당 동작은 [명명된](../standard-library/locale-class.md#name) 로캘 `_Locname`에 의해 결정됩니다. 각 생성자는 [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator>( `_Refs`)를 통해 해당 기준 개체를 초기화합니다.
+해당 동작은에 의해 결정 됩니다 합니다 [라는](../standard-library/locale-class.md#name) 로캘 *_Locname*합니다. 각 생성자를 통해 해당 기준 개체를 초기화 [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`).
 
 ## <a name="requirements"></a>요구 사항
 

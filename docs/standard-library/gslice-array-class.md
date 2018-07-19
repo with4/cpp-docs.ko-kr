@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff9718a98244379fccde78b18fa70ef46c7e7a76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff44a91b4916092e319c7acc0520c49aeb9a5fa4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845647"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953077"
 ---
 # <a name="gslicearray-class"></a>gslice_array 클래스
 
@@ -76,15 +76,15 @@ public:
 
 ## <a name="remarks"></a>설명
 
-이 클래스는 **valarray\<Type>** 개체에서 선택할 요소의 시퀀스를 설명하는 [gslice](../standard-library/gslice-class.md) 클래스의 **gs** 개체와 함께 [valarray](../standard-library/valarray-class.md)**\<Type>** 클래스의 **va** 개체에 대한 참조를 저장하는 개체를 설명합니다.
+개체에 대 한 참조를 저장 하는 개체를 설명 하는 클래스 `va` 클래스의 [valarray](../standard-library/valarray-class.md)**\<유형 >**, 개체와 함께 `gs` 클래스의 [ gslice](../standard-library/gslice-class.md) 에서 선택할 요소의 시퀀스를 설명 하는 `valarray<Type>` 개체입니다.
 
-**gslice_array\<Type>** 개체를 생성하려면 [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at) 형식의 식을 작성해야 합니다. 그러면 gslice_array 클래스의 멤버 함수는 선택한 요소의 시퀀스에만 영향을 준다는 점만 제외하고 **valarray\<Type>** 에 대해 정의된 해당하는 함수 시그니처처럼 동작합니다.
+생성 하는 `gslice_array<Type>` 개체 형식의 식을 작성 해야만 [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at)합니다. Gslice_array 클래스의 멤버 함수에 대해 정의 된 해당 함수 시그니처 처럼 동작 `valarray<Type>`에 선택한 요소의 시퀀스에만 영향을 제외 하 고, 합니다.
 
 템플릿 클래스는 특정 valarray 작업에 의해 간접적으로 생성되며 프로그램에서 직접 사용할 수는 없습니다. 내부 보조 템플릿 클래스는 다음과 같은 조각 아래 첨자 연산자에서 사용됩니다.
 
 `gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]`(**constgslice&**).
 
-**gslice_array\<Type>** 개체를 생성하려면 valarray **va**의 조각 **gsl**에 대한 **va[gsl]** 형식의 식을 작성해야 합니다. 그러면 gslice_array 클래스의 멤버 함수는 선택한 요소의 시퀀스에만 영향을 준다는 점만 제외하고 **valarray\<Type>** 에 대해 정의된 해당하는 함수 시그니처처럼 동작합니다. gslice_array에 의해 제어되는 시퀀스는 조각 생성자의 3개 매개 변수(첫 번째 조각의 첫 번째 요소 인덱스, 각 조각의 요소 수 및 각 조각에 있는 요소 간 거리)로 정의됩니다.
+생성을 `gslice_array<Type>` 개체 형식의 식을 작성 해야만 `va[gsl]`, 분할 영역에 대 한 `gsl` valarray의 `va`합니다. Gslice_array 클래스의 멤버 함수에 대해 정의 된 해당 함수 시그니처 처럼 동작 `valarray<Type>`에 선택한 요소의 시퀀스에만 영향을 제외 하 고, 합니다. gslice_array에 의해 제어되는 시퀀스는 조각 생성자의 3개 매개 변수(첫 번째 조각의 첫 번째 요소 인덱스, 각 조각의 요소 수 및 각 조각에 있는 요소 간 거리)로 정의됩니다.
 
 다음 예제에서는
 
@@ -99,7 +99,7 @@ const valarray<size_t> len(lv, 2), str(dv, 2);
 
 인덱스가 유효해야 프로시저도 유효합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 slice_array를 선언하고 사용하는 방법의 예제는 [gslice::gslice](../standard-library/gslice-class.md#gslice)의 예제를 참조하세요.
 

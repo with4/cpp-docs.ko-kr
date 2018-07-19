@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f224def5d91d47cad0cb61938f1ce9a538109014
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039045"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852983"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty 클래스
 `CMFCPropertyGridFileProperty` 클래스 글꼴 선택 대화 상자를 여는 속성 목록 컨트롤 항목을 지원 합니다.  
@@ -53,8 +53,8 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 |----------|-----------------|  
 |`CMFCPropertyGridFontProperty::FormatProperty`|속성 값의 텍스트 표현에 서식을 지정합니다. (재정의 [cmfcpropertygridproperty:: Formatproperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|  
 |[CMFCPropertyGridFontProperty::GetColor](#getcolor)|글꼴 대화 상자에서 사용자가 선택한 글꼴 색을 검색 합니다.|  
-|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|글꼴 대화 상자에서 사용자가 선택한 글꼴을 가져옵니다.|  
-|`CMFCPropertyGridFontProperty::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에서는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식과 연결 된 개체입니다.|  
+|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|글꼴 대화 상자에서 사용자가 선택한 글꼴을 검색 합니다.|  
+|`CMFCPropertyGridFontProperty::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에 의해 합니다 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식과 연결 된 개체입니다.|  
 |`CMFCPropertyGridFontProperty::OnClickButton`|사용자가 속성에 포함된 단추를 클릭하면 프레임워크에서 호출됩니다. (재정의 [cmfcpropertygridproperty:: Onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
   
 ## <a name="remarks"></a>설명  
@@ -90,22 +90,22 @@ CMFCPropertyGridFontProperty(
  글꼴의 특성을 지정 하는 논리 글꼴 구조입니다.  
   
  [in] *dwFontDialogFlags*  
- 속성 값 드롭다운 단추를 클릭할 때 표시 되는 글꼴 대화 상자에 적용 되는 스타일입니다. 기본값은 CF_EFFECTS 및 CF_SCREENFONTS의 비트 조합 (OR)입니다. 자세한 내용은 참조는 *플래그* 의 매개 변수는 [CHOOSEFONT 구조](http://msdn.microsoft.com/library/windows/desktop/ms646832)합니다.  
+ 속성 값 드롭다운 단추를 클릭할 때 표시 되는 글꼴 대화 상자에 적용 되는 스타일입니다. 기본값은 CF_EFFECTS 및 CF_SCREENFONTS의 비트 조합 (OR)입니다. 자세한 내용은 참조는 *플래그* 의 매개 변수를 [CHOOSEFONT 구조](http://msdn.microsoft.com/library/windows/desktop/ms646832)합니다.  
   
  [in] *lpszDescr*  
- Font 속성의 설명입니다. 기본값은 `NULL`입니다.  
+ Font 속성의 설명입니다. 기본값은 NULL입니다.  
   
  [in] *dwData*  
- 정수 또는 속성에 연관 된 다른 데이터에 대 한 포인터 등 응용 프로그램별 데이터입니다. 기본값은 0입니다.  
+ 응용 프로그램별 데이터, 정수 등의 속성을 사용 하 여 연결 된 다른 데이터에 대 한 포인터입니다. 기본값은 0입니다.  
   
  [in] *색*  
  글꼴의 색입니다. 기본값은 기본 색입니다.  
   
 ### <a name="remarks"></a>설명  
- A `CMFCPropertyGridFontProperty` 개체 속성 표 글꼴 컨트롤의 글꼴 속성을 나타냅니다.  
+ `CMFCPropertyGridFontProperty` 개체 속성 표 글꼴 컨트롤의 글꼴 속성을 나타냅니다.  
   
 ### <a name="example"></a>예  
- 다음 예제에서는의 개체를 구성 하는 방법을 `CMFCPropertyGridFontProperty` 클래스입니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
+ 다음 예제에서는 개체를 생성 하는 방법은 `CMFCPropertyGridFontProperty` 클래스입니다. 이 예제는의 일부를 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]  
   
@@ -117,19 +117,19 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 선택한 글꼴 색을 나타내는 RGB 색상 값입니다.  
+ 선택한 글꼴 색을 나타내는 RGB 색 값입니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="getlogfont"></a>  CMFCPropertyGridFontProperty::GetLogFont  
- 글꼴 대화 상자에서 사용자가 선택한 글꼴을 가져옵니다.  
+ 글꼴 대화 상자에서 사용자가 선택한 글꼴을 검색 합니다.  
   
 ```  
 LPLOGFONT GetLogFont();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) 선택한 글꼴을 설명 하는 구조입니다.  
+ 에 대 한 포인터를 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) 선택한 글꼴을 설명 하는 구조입니다.  
   
 ### <a name="remarks"></a>설명  
   

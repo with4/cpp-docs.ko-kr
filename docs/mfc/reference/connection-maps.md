@@ -16,43 +16,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28a82cc55e1cbf782603c7b34368fbc3d4ebe4c4
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 015dce59058f776269c3c793b195a323eae2f652
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079204"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850604"
 ---
 # <a name="connection-maps"></a>연결 맵
-OLE 컨트롤은 다른 응용 프로그램에 대 한 인터페이스를 노출할 수 있습니다. 이러한 인터페이스는이 컨트롤에는 컨테이너에서의 액세스만을 허용 합니다. OLE 컨트롤을 다른 OLE 개체의 외부 인터페이스에 액세스 하려는 경우 한 연결 지점을 설정 되어야 합니다. 이 연결점에는 나가는 이벤트 맵 또는 알림 함수 등의 외부 디스패치 맵에 대 한 액세스를 제어할 수 있습니다.  
+OLE 컨트롤 다른 응용 프로그램에 대 한 인터페이스를 노출할 수 있습니다. 이러한 인터페이스를 제어 하는 컨테이너에서의 액세스만을 허용 합니다. OLE 컨트롤에서 다른 OLE 개체의 외부 인터페이스에 액세스 하려는 경우 연결점을 설정 해야 합니다. 이 연결점에는 나가는 이벤트 맵 또는 알림 함수와 같은 외부 디스패치 맵에 대 한 액세스를 제어할 수 있습니다.  
   
- Microsoft Foundation Class 라이브러리는 프로그래밍 모델을 지 원하는 연결 지점을 제공 합니다. 이 모델에서는 "연결 매핑되 는" 인터페이스 또는 OLE 컨트롤에 대 한 연결점을 나타내는 데 사용 됩니다. 연결 맵 각 연결 지점에 대 한 매크로 포함합니다. 연결 맵에 자세한 내용은 참조는 [CConnectionPoint](../../mfc/reference/cconnectionpoint-class.md) 클래스입니다.  
+ Microsoft Foundation Class 라이브러리는 연결점을 지 원하는 프로그래밍 모델을 제공 합니다. 이 모델에서 "연결 매핑됩니다" 인터페이스 또는 OLE 컨트롤에 대 한 연결점을 지정 하는 데 사용 됩니다. 연결 맵 각 연결 지점에 대 한 매크로 포함 합니다. 연결 맵에 대 한 자세한 내용은 참조는 [CConnectionPoint](../../mfc/reference/cconnectionpoint-class.md) 클래스입니다.  
   
- 일반적으로 컨트롤에서 두 개의 연결 지점 지원 됩니다: 이벤트 속성 알림입니다. 이러한 작업으로 구현 됩니다는 `COleControl` 기본 클래스 및 컨트롤 기록기에 의해 추가 작업이 필요 합니다. 클래스에서 구현 하려는 모든 추가 연결 지점은 수동으로 추가 해야 합니다. 연결 맵 및 포인트를 지원 하려면 MFC 다음 매크로 제공 합니다.  
+ 일반적으로 컨트롤에서 지원 되 두 연결 지점: 이벤트 및 속성 알림을 하나입니다. 이러한 구현한는 `COleControl` 기본 클래스 및 컨트롤 작성기에 의해 추가 작업이 필요 합니다. 클래스에서 구현 하려는 모든 추가 연결 지점은 수동으로 추가 해야 합니다. 연결 맵 및 포인트를 지원 하려면 MFC 다음 매크로 제공 합니다.  
   
 ### <a name="connection-map-declaration-and-demarcation"></a>연결 맵 선언 및 구분  
   
 |||  
 |-|-|  
-|[BEGIN_CONNECTION_PART](#begin_connection_part)|(클래스 선언에 사용 해야 합니다)는 추가 연결 지점을 구현 하는 포함 된 클래스를 선언 합니다.|  
-|[END_CONNECTION_PART](#end_connection_part)|(클래스 선언에 사용 해야 합니다) 연결 지점의 선언을 종료 합니다.|  
+|[BEGIN_CONNECTION_PART](#begin_connection_part)|(클래스 선언에서 사용 해야 합니다)는 추가 연결 지점을 구현 하는 포함 된 클래스를 선언 합니다.|  
+|[END_CONNECTION_PART](#end_connection_part)|(클래스 선언에서 사용 해야 합니다) 연결 지점의 선언을 종료 합니다.|  
 |[CONNECTION_IID](#connection_iid)|컨트롤의 연결 지점의 인터페이스 ID를 지정합니다.|  
-|[DECLARE_CONNECTION_MAP](#declare_connection_map)|연결 맵이 클래스 (클래스 선언에 사용 해야 합니다)에서 사용 되는 선언 합니다.|  
+|[DECLARE_CONNECTION_MAP](#declare_connection_map)|연결 맵이 (클래스 선언에서 사용 해야 합니다) 클래스에서 사용 되는 선언 합니다.|  
 |[BEGIN_CONNECTION_MAP](#begin_connection_map)|(클래스 구현에 사용 해야 합니다) 연결 맵의 정의 시작 합니다.|  
 |[END_CONNECTION_MAP](#end_connection_map)|(클래스 구현에 사용 해야 합니다) 연결 맵의 정의 종료 합니다.|  
-|[CONNECTION_PART](#connection_part)|컨트롤의 연결 맵을 연결점을 지정합니다.|  
+|[CONNECTION_PART](#connection_part)|컨트롤의 연결 구조의 연결점을 지정합니다.|  
   
- 다음 함수는 싱크 설정 하 고 연결 지점을 사용 하 여 연결을 끊기 지원:  
+ 다음 함수를 설정 하 고 연결 지점을 사용 하 여 연결을 끊기 싱크 지원:  
   
 ### <a name="initializationtermination-of-connection-points"></a>연결 지점의 초기화/종료  
   
 |||  
 |-|-|  
 |[AfxConnectionAdvise](#afxconnectionadvise)|원본 및 싱크 간에 연결을 설정 합니다.|  
-|[AfxConnectionUnadvise](#afxconnectionunadvise)|원본 서버와 싱크 간의 연결을 중단합니다.|  
+|[AfxConnectionUnadvise](#afxconnectionunadvise)|원본 및 싱크 간의 연결을 중단합니다.|  
   
 ##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART  
- 사용 하 여는 `BEGIN_CONNECTION_PART` 매크로를 추가 연결 지점 이벤트와 속성 알림 연결 지점 외의 정의 시작 합니다.  
+ BEGIN_CONNECTION_PART 매크로 사용 하 여 추가 연결 지점 속성과 이벤트 알림 연결 지점 외의 정의 시작 합니다.  
   
 ```   
 BEGIN_CONNECTION_PART(theClass, localClass)   
@@ -66,7 +66,7 @@ BEGIN_CONNECTION_PART(theClass, localClass)
  연결 지점을 구현하는 로컬 클래스의 이름을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
- 클래스 멤버 함수를 정의 하는 선언 (.h) 파일에서 시작 연결점 BEGIN_CONNECTION_PART 매크로와 다음 CONNECTION_IID 매크로 다른 멤버 함수를 구현 하려면 추가 하 고 연결을 완료 END_CONNECTION_PART 매크로와 지도 가리킵니다.  
+ 클래스 멤버 함수를 정의 하는 선언 (.h) 파일에서 연결점 BEGIN_CONNECTION_PART 매크로 사용 하 여 다음 CONNECTION_IID 매크로 및 다른 멤버 함수를 구현 하려는 모든 추가 시작한 연결 완료 END_CONNECTION_PART 매크로 사용 하 여 지도 가리킵니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
@@ -86,7 +86,7 @@ END_CONNECTION_PART(localClass)
   **헤더** afxdisp.h  
   
 ##  <a name="connection_iid"></a>  CONNECTION_IID  
- OLE 컨트롤에서 지 원하는 연결 지점에 대 한 인터페이스 ID를 정의 하려면 매크로 BEGIN_CONNECTION_PART 사이의 END_CONNECTION_PART 사용.  
+ BEGIN_CONNECTION_PART 사이의 END_CONNECTION_PART 매크로 정의에 사용할 OLE 컨트롤에서 지 원하는 연결 지점의 인터페이스 ID.  
   
 ```   
 CONNECTION_IID(iid)   
@@ -97,24 +97,24 @@ CONNECTION_IID(iid)
  연결 지점에서 호출 하는 인터페이스의 인터페이스 ID입니다.  
   
 ### <a name="remarks"></a>설명  
- *iid* 인수는 ID에 해당 연결 된 싱크 연결점은 호출 하는 인터페이스를 식별 하는 데 사용 하는 인터페이스입니다. 예를 들어:  
+ 합니다 *iid* 인수 ID에 연결 된 해당 싱크 연결점은 호출 하는 인터페이스를 식별 하는 데 인터페이스입니다. 예를 들어:  
   
  [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]  
   
- 호출 하는 연결 지점을 지정는 `ISinkInterface` 인터페이스입니다.  
+ 호출 되는 연결 지점을 지정 합니다 `ISinkInterface` 인터페이스입니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
   
 ##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP  
- 각 `COleControl`-프로그램의 파생된 클래스를 지 원하는 컨트롤 추가 연결 지점을 지정 하 고 연결 맵을 제공할 수 있습니다.  
+ 각 `COleControl`-프로그램에서 파생 된 클래스에는 컨트롤을 지 원하는 추가 연결 지점을 지정 하기 위해 연결 맵을 제공할 수 있습니다.  
   
 ```   
 DECLARE_CONNECTION_MAP() 
 ```  
   
 ### <a name="remarks"></a>설명  
- 컨트롤에 추가 점을 지원 클래스 선언의 끝 DECLARE_CONNECTION_MAP 매크로 사용 합니다. 그런 다음 클래스에 대 한 멤버 함수를 정의 하는.cpp 파일에서 사용 하 여 BEGIN_CONNECTION_MAP 매크로, 각 컨트롤의 연결 지점에 대 한 CONNECTION_PART 매크로 및 END_CONNECTION_MAP 매크로 연결 맵의 끝을 선언 하 합니다.  
+ 컨트롤 추가 요소를 지 원하는 경우 클래스 선언의 끝 DECLARE_CONNECTION_MAP 매크로 사용 합니다. 그런 다음 클래스의 멤버 함수를 정의 하는.cpp 파일에서 사용 BEGIN_CONNECTION_MAP 매크로, 각 컨트롤의 연결 지점에 대 한 CONNECTION_PART 매크로 및 END_CONNECTION_MAP 매크로 연결 맵 종료를 선언 합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
@@ -134,7 +134,7 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
  기본 클래스의 이름을 지정 *theClass*합니다.  
   
 ### <a name="remarks"></a>설명  
- 구현에서 (합니다. 클래스에 대 한 cpp) 멤버를 정의 하는 함수, BEGIN_CONNECTION_MAP 매크로 사용 하 여 연결 맵을 시작 하 고 사용 하 여 연결 지점의 각각에 대해 매크로 항목을 추가 [CONNECTION_PART](#connection_part) 매크로입니다. 마지막으로 연결 맵을 완료 합니다.는 [END_CONNECTION_MAP](#end_connection_map) 매크로입니다.  
+ 구현에서 (합니다. 클래스에 대 한 cpp) 멤버를 정의 하는 함수, BEGIN_CONNECTION_MAP 매크로 사용 하 여 연결 맵을 시작한 다음 각 연결 포인트를 사용 하 여에 대해 매크로 항목을 추가 합니다 [CONNECTION_PART](#connection_part) 매크로입니다. 마지막으로 사용 하 여 연결 맵을 완료 합니다 [END_CONNECTION_MAP](#end_connection_map) 매크로입니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
@@ -171,13 +171,13 @@ CONNECTION_PART(theClass, iid, localClass)
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]  
   
- 호출 하는 연결 지점과 연결 맵을 구현 하는 `IID_ISinkInterface` 인터페이스입니다.  
+ 호출 하는 연결점을 사용 하 여 연결 맵을 구현 하는 `IID_ISinkInterface` 인터페이스입니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
   
 ##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise  
- 로 지정 된 원본 사이의 연결을 설정 하려면이 함수를 호출 *pUnkSrc*를 및로 지정 된 싱크 *pUnkSink*합니다.  
+ 지정 된 소스, 사이의 연결을 설정 하려면이 함수를 호출 *pUnkSrc*, 및 지정 된 싱크가 *pUnkSink*합니다.  
   
 ```   
 BOOL AFXAPI AfxConnectionAdvise(
@@ -199,13 +199,13 @@ BOOL AFXAPI AfxConnectionAdvise(
  연결의 인터페이스 ID입니다.  
   
  *bRefCount*  
- **True 이면** 연결을 만드는의 참조 횟수를 인해 해야 함을 나타냅니다 *pUnkSink* 증가 합니다. **FALSE** 참조 횟수를 증가 하지 되 나타냅니다.  
+ TRUE 이면 연결을 만드는 참조 횟수를 인해 해야 함을 *pUnkSink* 증가 수입니다. FALSE 이면 참조 횟수를 증가 하지는 합니다.  
   
  *pdwCookie*  
- 에 대 한 포인터는 `DWORD` 연결 식별자 반환 됩니다. 이 값으로 전달 해야는 *dwCookie* 매개 변수를 `AfxConnectionUnadvise` 연결의 연결을 끊을 때.  
+ 연결 식별자를이 반환 하는 DWORD에 대 한 포인터입니다. 이 값으로 전달 해야 합니다 *dwCookie* 매개 변수를 `AfxConnectionUnadvise` 연결 연결을 끊을 때.  
   
 ### <a name="return-value"></a>반환 값  
- 연결이 설정 되었습니다. 0이 아닌 그렇지 않으면 0입니다.  
+ 연결이 설정 된; 경우 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="example"></a>예  
  [!code-cpp[NVC_MFCConnectionPoints#8](../../mfc/codesnippet/cpp/connection-maps_3.cpp)]  
@@ -214,7 +214,7 @@ BOOL AFXAPI AfxConnectionAdvise(
  **헤더:** afxctl.h 
 
 ##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise  
- 로 지정 된 소스 간에 연결을 끊거나이 함수를 호출 *pUnkSrc*를 및로 지정 된 싱크 *pUnkSink*합니다.  
+ 지정 된 소스, 간의 연결을 끊거나이 함수를 호출 *pUnkSrc*, 및 지정 된 싱크가 *pUnkSink*합니다.  
   
 ```   
 BOOL AFXAPI AfxConnectionUnadvise(
@@ -236,13 +236,13 @@ BOOL AFXAPI AfxConnectionUnadvise(
  연결 지점 인터페이스의 인터페이스 ID입니다.  
   
  *bRefCount*  
- **True 이면** 는 연결을 끊기의 참조 횟수를 인해 해야 함을 나타냅니다 *pUnkSink* 감소 됩니다. **FALSE** 참조 횟수 감소 하지 않아야 나타냅니다.  
+ TRUE 이면 연결 끊기 참조 횟수를 인해 해야 함을 *pUnkSink* 감소 됩니다. FALSE는 참조 횟수는 감소 되지 않습니다 나타냅니다.  
   
  *dwCookie*  
  반환 된 연결 식별자 `AfxConnectionAdvise`합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 0이 아닌 경우에 대 한 연결이 끊어졌습니다. 그렇지 않으면 0입니다.  
+ 0이 아닌 경우 연결의 연결이 해제 되었습니다. 그렇지 않으면 0입니다.  
   
 ### <a name="example"></a>예  
  [!code-cpp[NVC_MFCConnectionPoints#9](../../mfc/codesnippet/cpp/connection-maps_4.cpp)]  

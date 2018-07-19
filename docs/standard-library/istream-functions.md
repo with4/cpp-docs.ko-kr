@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6310281aa86c48ae0a8b0fb313e79994d0b9b538
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1193e7ab65c49f0f79aeae52ca6563310296116d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863893"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953650"
 ---
 # <a name="ltistreamgt-functions"></a>&lt;istream&gt; 함수
 
@@ -42,9 +42,9 @@ void swap(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 스트림입니다.
+*왼쪽* 스트림입니다.
 
-`right` 스트림입니다.
+*오른쪽* 스트림입니다.
 
 ## <a name="ws"></a>  ws
 
@@ -56,7 +56,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="parameters"></a>매개 변수
 
-`_Istr` 스트림입니다.
+*_Istr* 스트림입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -66,9 +66,9 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 이 조작자는 모든 `ch` 요소(이 요소의 경우 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**)가 true임)를 추출하고 삭제합니다.
 
-함수는 요소를 추출하는 동안 파일 끝에 도달하면 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)를 호출합니다. `_Istr`를 반환합니다.
+함수는 요소를 추출하는 동안 파일 끝에 도달하면 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)를 호출합니다. 반환 *_Istr*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `ws` 사용 예제는 [operator>>](../standard-library/istream-operators.md#op_gt_gt)를 참조하세요.
 

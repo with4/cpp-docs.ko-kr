@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4179ddae0506d21ca3969559b05c618ab4d73e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0585396d2cacc2bb41abf364e3d01ca81629146f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846547"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953556"
 ---
 # <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; 클래스
 
-`void` 형식에 대한 템플릿 클래스 할당자의 특수화로, 이 컨텍스트에 맞는 형식을 정의합니다.
+형식으로 템플릿 클래스 할당자의 특수화 **void**를이 컨텍스트에서 의미가 있는 형식을 정의 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -51,7 +51,7 @@ class allocator<void> {
 
 ## <a name="remarks"></a>설명
 
-이 클래스는 *void* 형식에 대한 [allocator](../standard-library/allocator-class.md) 템플릿 클래스를 명시적으로 특수화합니다. 해당 생성자 및 대입 연산자는 템플릿 클래스에 대해 동일하게 동작하지만 다음 형식만 정의합니다.
+클래스는 템플릿 클래스를 명시적으로 특수화 [할당자](../standard-library/allocator-class.md) 형식용 **void**합니다. 해당 생성자 및 대입 연산자는 템플릿 클래스에 대해 동일하게 동작하지만 다음 형식만 정의합니다.
 
 - [const_pointer](../standard-library/allocator-class.md#const_pointer).
 

@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77e158605deeae859132243ab624d4a1638973b8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3cbcf6a1a48f32f5976483d5bb70e7c2e3f1d469
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861489"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954853"
 ---
 # <a name="wstringconvert-class"></a>wstring_convert 클래스
 
@@ -52,9 +52,11 @@ class wstring_convert
 
 ### <a name="parameters"></a>매개 변수
 
-`Codecvt` [로캘](../standard-library/locale-class.md) 패싯 변환 개체를 나타내는입니다.
+*Codecvt*  
+ 변환 개체를 나타내는 [locale](../standard-library/locale-class.md) 패싯입니다.
 
-`Elem` 와이드 문자 요소 형식입니다.
+*Elem*  
+ 와이드 문자 요소 형식입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -145,11 +147,11 @@ wide_string from_bytes(const char* first, const char* last);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Byte`|변환할 단일 요소 바이트 시퀀스입니다.|
-|`ptr`|변환할 C 스타일의 null 종료 문자 시퀀스입니다.|
-|`Bstr`|변환할 [byte_string](#byte_string)입니다.|
-|`first`|변환할 문자 범위의 첫 문자입니다.|
-|`last`|변환할 문자 범위의 마지막 문자입니다.|
+|*Byte*|변환할 단일 요소 바이트 시퀀스입니다.|
+|*ptr*|변환할 C 스타일의 null 종료 문자 시퀀스입니다.|
+|*bstr*|변환할 [byte_string](#byte_string)입니다.|
+|*first*|변환할 문자 범위의 첫 문자입니다.|
+|*last*|변환할 문자 범위의 마지막 문자입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -157,7 +159,7 @@ wide_string from_bytes(const char* first, const char* last);
 
 ### <a name="remarks"></a>설명
 
-[변환 상태](../standard-library/wstring-convert-class.md) 개체가 명시적 값을 사용하여 생성되지 `not` 경우 기본값(초기 변환 상태)으로 설정된 후에 변환이 시작됩니다. 그렇지 않으면 변경되지 않습니다.
+경우는 [변환 상태](../standard-library/wstring-convert-class.md) 개체가 *하지* 기본값 (초기 변환 상태)으로 설정 되어 명시적 값을 사용 하 여 생성, 변환이 시작 됩니다. 그렇지 않으면 변경되지 않습니다.
 
 성공적으로 변환된 입력 요소 수는 변환 개수 개체에 저장됩니다. 변환 오류가 발생하지 않는 경우 멤버 함수는 변환된 와이드 문자열을 반환합니다. 오류가 발생하는 경우, 와이드 문자열 오류 메시지에 대한 이니셜라이저를 사용하여 생성된 개체라면 멤버 함수는 와이드 문자열 오류 메시지 개체를 반환합니다. 그렇지 않으면 구성원 함수가 [range_error](../standard-library/range-error-class.md) 클래스의 개체를 발생시킵니다.
 
@@ -214,15 +216,15 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Char`|변환할 와이드 문자입니다.|
-|`Wptr`|변환할 null로 끝나는 시퀀스로, `wptr`에서 시작되며 C 스타일입니다.|
-|`Wstr`|변환할 [wide_string](#wide_string)입니다.|
-|`first`|변환할 요소의 범위에서 첫 번째 요소입니다.|
-|`last`|변환할 요소의 범위에서 마지막 요소입니다.|
+|*Char*|변환할 와이드 문자입니다.|
+|*Wptr*|변환할 null로 끝나는 시퀀스로, `wptr`에서 시작되며 C 스타일입니다.|
+|*Wstr*|변환할 [wide_string](#wide_string)입니다.|
+|*first*|변환할 요소의 범위에서 첫 번째 요소입니다.|
+|*last*|변환할 요소의 범위에서 마지막 요소입니다.|
 
 ### <a name="remarks"></a>설명
 
-[변환 상태](../standard-library/wstring-convert-class.md) 개체가 명시적 값을 사용하여 생성되지 `not` 경우 기본값(초기 변환 상태)으로 설정된 후에 변환이 시작됩니다. 그렇지 않으면 변경되지 않습니다.
+경우는 [변환 상태](../standard-library/wstring-convert-class.md) 개체가 *하지* 기본값 (초기 변환 상태)으로 설정 되어 명시적 값을 사용 하 여 생성, 변환이 시작 됩니다. 그렇지 않으면 변경되지 않습니다.
 
 성공적으로 변환된 입력 요소 수는 변환 개수 개체에 저장됩니다. 변환 오류가 발생하지 않는 경우 멤버 함수는 변환된 바이트 문자열을 반환합니다. 오류가 발생하는 경우, 바이트 문자열 오류 메시지에 대한 이니셜라이저를 사용하여 생성된 개체라면 멤버 함수는 바이트 문자열 오류 메시지 개체를 반환합니다. 그렇지 않으면 구성원 함수가 [range_error](../standard-library/range-error-class.md) 클래스의 개체를 발생시킵니다.
 
@@ -252,10 +254,10 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`*Pcvt`|변환을 수행할 `Codecvt` 형식의 개체입니다.|
-|`_State`|변환 상태를 나타내는 [state_type](#state_type) 형식의 개체입니다.|
-|`_Berr`|오류 시에 표시할 [byte_string](#byte_string)입니다.|
-|`Werr`|오류 시에 표시할 [wide_string](#wide_string)입니다.|
+|*\*Pcvt*|변환을 수행할 `Codecvt` 형식의 개체입니다.|
+|*_State*|변환 상태를 나타내는 [state_type](#state_type) 형식의 개체입니다.|
+|*_Berr*|오류 시에 표시할 [byte_string](#byte_string)입니다.|
+|*Werr*|오류 시에 표시할 [wide_string](#wide_string)입니다.|
 
 ### <a name="remarks"></a>설명
 

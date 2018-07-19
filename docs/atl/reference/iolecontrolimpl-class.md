@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a54067f53e83d78f063ae5f3694460452e24b26
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34bdb0af5965b300e77a02858af3708c90fa63d0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361800"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879285"
 ---
 # <a name="iolecontrolimpl-class"></a>IOleControlImpl 클래스
-이 클래스의 기본 구현을 제공는 **IOleControl** 인터페이스와 구현 **IUnknown**합니다.  
+이 클래스의 기본 구현을 제공 합니다 `IOleControl` 인터페이스와 구현 `IUnknown`합니다.  
   
 > [!IMPORTANT]
 >  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
@@ -42,8 +42,8 @@ class IOleControlImpl
 ```   
   
 #### <a name="parameters"></a>매개 변수  
- `T`  
- 파생 된 클래스에 `IOleControlImpl`합니다.  
+ *T*  
+ 클래스에서 파생 된 `IOleControlImpl`합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -51,13 +51,13 @@ class IOleControlImpl
   
 |이름|설명|  
 |----------|-----------------|  
-|[IOleControlImpl::FreezeEvents](#freezeevents)|컨테이너를 무시 또는 컨트롤에서 이벤트를 수신 여부를 나타냅니다.|  
-|[IOleControlImpl::GetControlInfo](#getcontrolinfo)|컨트롤의 키보드 동작에 대 한 정보를 채웁니다. ATL 구현은 **E_NOTIMPL**합니다.|  
-|[IOleControlImpl::OnAmbientPropertyChange](#onambientpropertychange)|컨테이너의 앰비언트 속성 중 하나 이상이 변경 된 컨트롤에 알립니다. ATL 구현은 `S_OK`합니다.|  
-|[IOleControlImpl::OnMnemonic](#onmnemonic)|사용자가 지정 된 키를 눌렀습니다 컨트롤에 알립니다. ATL 구현은 **E_NOTIMPL**합니다.|  
+|[IOleControlImpl::FreezeEvents](#freezeevents)|컨테이너를 무시 하거나 컨트롤에서 이벤트를 수신 여부를 나타냅니다.|  
+|[IOleControlImpl::GetControlInfo](#getcontrolinfo)|컨트롤의 키보드 동작에 대 한 정보를 채웁니다. ATL 구현 E_NOTIMPL을 반환합니다.|  
+|[IOleControlImpl::OnAmbientPropertyChange](#onambientpropertychange)|컨테이너의 앰비언트 속성 중 하나 이상이 변경 된 컨트롤에 알립니다. ATL 구현은 S_OK를 반환 합니다.|  
+|[IOleControlImpl::OnMnemonic](#onmnemonic)|사용자가 지정 된 키를 눌렀음을 컨트롤에 알립니다. ATL 구현 E_NOTIMPL을 반환합니다.|  
   
 ## <a name="remarks"></a>설명  
- 클래스 `IOleControlImpl` 의 기본 구현을 제공는 [IOleControl](http://msdn.microsoft.com/library/windows/desktop/ms694320) 인터페이스와 구현 **IUnknown** 디버그에서 장치 정보 덤프를 전송 하 여 빌드합니다.  
+ 클래스 `IOleControlImpl` 의 기본 구현을 제공 합니다 [IOleControl](http://msdn.microsoft.com/library/windows/desktop/ms694320) 인터페이스와 구현 `IUnknown` 장치에서 디버그 덤프에 정보를 전송 하 여 작성 합니다.  
   
  **관련 문서** [ATL 자습서](../../atl/active-template-library-atl-tutorial.md), [ATL 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)  
   
@@ -70,16 +70,16 @@ class IOleControlImpl
  **헤더:** atlctl.h  
   
 ##  <a name="freezeevents"></a>  IOleControlImpl::FreezeEvents  
- ATL의 구현에서 `FreezeEvents` 컨트롤 클래스를 증가 시킵니다. `m_nFreezeEvents` 데이터 멤버 경우 `bFreeze` 은 **TRUE**, 하 고 감소 `m_nFreezeEvents` 경우 `bFreeze` 은 **FALSE**.  
+ ATL의 구현에서는 `FreezeEvents` control 클래스의 증가 `m_nFreezeEvents` 데이터 멤버 경우 `bFreeze` TRUE 이며 감소 `m_nFreezeEvents` 경우 `bFreeze` 은 FALSE입니다.  
   
 ```
 HRESULT FreezeEvents(BOOL bFreeze);
 ```  
   
 ### <a name="remarks"></a>설명  
- `FreezeEvents` 그런 다음 반환 `S_OK`합니다.  
+ `FreezeEvents` S_OK를 반환합니다.  
   
- 참조 [IOleControl::FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) in the Windows SDK입니다.  
+ 참조 [IOleControl::FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) Windows SDK에에서 있습니다.  
   
 ##  <a name="getcontrolinfo"></a>  IOleControlImpl::GetControlInfo  
  컨트롤의 키보드 동작에 대 한 정보를 채웁니다.  
@@ -89,10 +89,10 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ```  
   
 ### <a name="remarks"></a>설명  
- 참조 [IOleControl:GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730) in the Windows SDK입니다.  
+ 참조 [IOleControl:GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730) Windows SDK에에서 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반환 **E_NOTIMPL**합니다.  
+ E_NOTIMPL 반환.  
   
 ##  <a name="onambientpropertychange"></a>  IOleControlImpl::OnAmbientPropertyChange  
  컨테이너의 앰비언트 속성 중 하나 이상이 변경 된 컨트롤에 알립니다.  
@@ -102,23 +102,23 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK`를 반환합니다.  
+ S_OK 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
- 참조 [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) in the Windows SDK입니다.  
+ 참조 [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) Windows SDK에에서 있습니다.  
   
 ##  <a name="onmnemonic"></a>  IOleControlImpl::OnMnemonic  
- 사용자가 지정 된 키를 눌렀습니다 컨트롤에 알립니다.  
+ 사용자가 지정 된 키를 눌렀음을 컨트롤에 알립니다.  
   
 ```
 HRESULT OnMnemonic(LPMSG pMsg);
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 반환 **E_NOTIMPL**합니다.  
+ E_NOTIMPL 반환.  
   
 ### <a name="remarks"></a>설명  
- 참조 [IOleControl::OnMnemonic](http://msdn.microsoft.com/library/windows/desktop/ms680699) in the Windows SDK입니다.  
+ 참조 [IOleControl::OnMnemonic](http://msdn.microsoft.com/library/windows/desktop/ms680699) Windows SDK에에서 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [IOleObjectImpl 클래스](../../atl/reference/ioleobjectimpl-class.md)   

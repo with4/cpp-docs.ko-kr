@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cff637f9e307f2714cd351f3c6bcaf1e4b78342e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b822a76cf98acb38cd5b785a868b989a96b96a12
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363861"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879441"
 ---
 # <a name="ccomsafedeletecriticalsection-class"></a>CComSafeDeleteCriticalSection 클래스
-이 클래스는 가져오는 임계 영역 개체의 소유권을 해제 하기 위한 메서드를 제공 합니다.  
+이 클래스는 가져오기 및 임계 영역 개체의 소유권을 해제 하기 위한 메서드를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,14 +59,14 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
   
 |||  
 |-|-|  
-|[m_bInitialized](#m_binitialized)|플래그 여부는 내부 **CRITICAL_SECTION** 개체가 초기화 되었습니다.|  
+|[m_bInitialized](#m_binitialized)|플래그 있는지 여부를 내부 `CRITICAL_SECTION` 개체가 초기화 되었습니다.|  
   
 ## <a name="remarks"></a>설명  
- `CComSafeDeleteCriticalSection` 클래스에서 파생 [클래스](../../atl/reference/ccomcriticalsection-class.md)합니다. 그러나 `CComSafeDeleteCriticalSection` 추가 안전 메커니즘을 통해 [클래스](../../atl/reference/ccomcriticalsection-class.md)합니다.  
+ `CComSafeDeleteCriticalSection` 클래스에서 파생 [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)합니다. 그러나 `CComSafeDeleteCriticalSection` 를 통해 보안 강화 메커니즘을 제공 [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)합니다.  
   
- 인스턴스가 `CComSafeDeleteCriticalSection` 범위를 벗어나거나 명시적으로 메모리에서 삭제 된 기본 임계 영역 개체 자동으로 정리 됩니다 여전히 유효한 경우. 또한는 [CComSafeDeleteCriticalSection::Term](#term) 메서드는 기본 임계 영역 개체 아직 할당 되지 않은 또는 메모리에서 이미 해제 하는 경우 정상적으로 종료 됩니다.  
+ 인스턴스가 `CComSafeDeleteCriticalSection` 범위를 벗어날 또는 명시적으로 메모리에서 삭제 기본 임계 영역 개체를 자동으로 정리 됩니다 여전히 유효 합니다. 또한 합니다 [CComSafeDeleteCriticalSection::Term](#term) 메서드는 기본 임계 영역 개체 아직 할당 되지 않은 또는 이미 메모리에서 해제 하는 경우 정상적으로 종료 됩니다.  
   
- 참조 [클래스](../../atl/reference/ccomcriticalsection-class.md) 임계 영역 도우미 클래스에 대 한 자세한 내용은 합니다.  
+ 참조 [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) 임계 도우미 클래스에 대 한 자세한 내용은 합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)  
@@ -84,7 +84,7 @@ CComSafeDeleteCriticalSection();
 ```  
   
 ### <a name="remarks"></a>설명  
- 설정의 [m_bInitialized](#m_binitialized) 데이터 멤버를 **false**합니다.  
+ 설정 된 [m_bInitialized](#m_binitialized) FALSE 데이터 멤버입니다.  
   
 ##  <a name="dtor"></a>  CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
  소멸자입니다.  
@@ -94,17 +94,17 @@ CComSafeDeleteCriticalSection();
 ```  
   
 ### <a name="remarks"></a>설명  
- 내부 해제 **CRITICAL_SECTION** 경우 메모리에서 개체는 [m_bInitialized](#m_binitialized) 데이터 멤버가로 설정 된 **true**합니다.  
+ 내부 해제 `CRITICAL_SECTION` 하는 경우 메모리에서 개체를 [m_bInitialized](#m_binitialized) 데이터 멤버를 TRUE로 설정 합니다.  
   
 ##  <a name="init"></a>  CComSafeDeleteCriticalSection::Init  
- 기본 클래스 구현을 호출 [Init](/visualstudio/debugger/init) 설정 [m_bInitialized](#m_binitialized) 를 **true** 성공 하는 경우.  
+ 기본 클래스 구현을 호출 [Init](/visualstudio/debugger/init) 집합과 [m_bInitialized](#m_binitialized) 성공한 경우 TRUE로 합니다.  
   
 ```
 HRESULT Init() throw();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 결과 반환 [CComCriticalSection::Init](../../atl/reference/ccomcriticalsection-class.md#init)합니다.  
+ 결과 반환 합니다 [CComCriticalSection::Init](../../atl/reference/ccomcriticalsection-class.md#init)합니다.  
   
 ##  <a name="lock"></a>  CComSafeDeleteCriticalSection::Lock  
 기본 클래스 구현을 호출 [잠금](ccomcriticalsection-class.md#lock)합니다.  
@@ -115,36 +115,36 @@ HRESULT Lock();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 결과 반환 [CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock)합니다.  
+ 결과 반환 합니다 [CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock)합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드에서 [m_bInitialized](#m_binitialized) 데이터 멤버가로 설정 된 **true** 시작 시. 어설션을은이 condidtion이 충족 되지 않으면 디버그 빌드에 생성 됩니다.  
+ 이 메서드에서 [m_bInitialized](#m_binitialized) 데이터 멤버를 항목으로 TRUE로 설정 합니다. 어설션은이 condidtion 충족 되지 않으면 디버그 빌드에서 생성 됩니다.  
   
  함수 동작에 자세한 내용은를 참조 [CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock)합니다.  
   
 ##  <a name="m_binitialized"></a>  CComSafeDeleteCriticalSection::m_bInitialized  
- 플래그 여부는 내부 **CRITICAL_SECTION** 개체가 초기화 되었습니다.  
+ 플래그 있는지 여부를 내부 `CRITICAL_SECTION` 개체가 초기화 되었습니다.  
   
 ```
 bool m_bInitialized;
 ```  
   
 ### <a name="remarks"></a>설명  
- **m_bInitialized** 데이터 멤버는 기본의 유효성을 추적 하는 데 **CRITICAL_SECTION** 연관 된 개체는 [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) 클래스입니다. 내부 **CRITICAL_SECTION** 이 플래그 설정 하지 않으면 메모리에서 해제 될 개체 시도 되지 것입니다 **true**합니다.  
+ 합니다 `m_bInitialized` 데이터 멤버의 내부 유효성을 추적 하는 `CRITICAL_SECTION` 연관 된 개체를 [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) 클래스입니다. 기본 `CRITICAL_SECTION` 개체가이 플래그가 TRUE로 설정 하지 않으면 메모리에서 해제를 시도 되지 것입니다.  
   
 ##  <a name="term"></a>  CComSafeDeleteCriticalSection::Term  
- 기본 클래스 구현을 호출 [CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term) 경우 내부 **CRITICAL_SECTION** 개체는 유효 합니다.  
+ 기본 클래스 구현을 호출 [CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term) 하는 경우 내부 `CRITICAL_SECTION` 개체는 유효 합니다.  
   
 ```
 HRESULT Term() throw();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 결과 반환 [CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term), 또는 **S_OK** 경우 [m_bInitialized](#m_binitialized) 로 설정 된 **false** 시작 시.  
+ 결과 반환 합니다 [CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term), 또는 s_ok이 고, 경우 [m_bInitialized](#m_binitialized) 진입할 때 FALSE로 설정 되었습니다.  
   
 ### <a name="remarks"></a>설명  
- 경우에도이 메서드는 내부 호출 해도 안전 **CRITICAL_SECTION** 개체가 잘못 되었습니다. 이 클래스의 소멸자가이 메서드를 호출 하는 경우는 [m_bInitialized](#m_binitialized) 데이터 멤버가로 설정 된 **true**합니다.  
+ 내부 경우에도이 메서드를 호출 하지 않아도 안전 합니다 `CRITICAL_SECTION` 개체가 잘못 되었습니다. 이 클래스의 소멸자는 경우이 메서드를 호출 합니다 [m_bInitialized](#m_binitialized) 데이터 멤버를 TRUE로 설정 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [클래스 클래스](../../atl/reference/ccomcriticalsection-class.md)   
+ [CComCriticalSection 클래스](../../atl/reference/ccomcriticalsection-class.md)   
  [클래스 개요](../../atl/atl-class-overview.md)

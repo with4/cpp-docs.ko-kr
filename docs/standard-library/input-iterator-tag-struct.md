@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 797bc6353bd7396d409de073cc412480a803117f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 95e2713f3c73a3dc35c11be8d245ede94b2c3bba
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844343"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953981"
 ---
 # <a name="inputiteratortag-struct"></a>input_iterator_tag 구조체
 
-입력 반복기를 나타내는 **iterator category** 함수에 반환 형식을 제공하는 클래스입니다.
+에 대 한 반환 형식을 제공 하는 클래스 `iterator_category` 는 입력된 반복기를 나타내는 함수입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -36,11 +36,11 @@ input_iterator_tag 구조체 {};
 
 범주 태그 클래스는 알고리즘 선택을 위한 컴파일 태그로 사용됩니다. 템플릿 함수는 컴파일 시간에서 가장 효율적인 알고리즘을 사용할 수 있도록 해당 반복기 인수의 가장 구체적인 범주를 찾아야 합니다. `Iterator` 형식의 모든 반복기에 대해 `iterator_traits`< `Iterator`> **::iterator_category**는 반복기 동작을 설명하는 가장 구체적인 범주 태그로 정의되어야 합니다.
 
-**Iter**가 입력 반복기로 사용될 수 있는 개체를 설명할 경우 이 형식은 **iterator**\< **Iter**> **::iterator_category**와 같습니다.
+형식은 동일 **반복기** \< **Iter**> **:: iterator_category** 때 `Iter` 으로 사용할 수 있는 개체에 설명 합니다.는 입력된 반복기입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-**iterator_tag** 사용 방법에 대한 예제는 [iterator_traits](../standard-library/iterator-traits-struct.md) 또는 [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)를 참조하세요.
+참조 [iterator_traits](../standard-library/iterator-traits-struct.md) 하거나 [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) 사용 하는 방법의 예 `iterator_tag`s입니다.
 
 ## <a name="requirements"></a>요구 사항
 

@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fd2bfdfc2a55dc1723fb72ab8de64a46c3c612f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d20a887c5fa056ef697b087fdaf91b94702d0c0f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846079"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953236"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution 클래스
 
@@ -80,7 +80,7 @@ public:
 
 ## <a name="remarks"></a>설명
 
-클래스는 베르누이 분포 이산 확률 함수에 따라 분포된 `bool` 형식의 값을 생성하는 분포를 나타냅니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
+형식의 값을 생성 하는 분포를 설명 하는 클래스 **bool**베르누이 분포 이산 확률 함수에 따라 분산 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
 ||||
 |-|-|-|
@@ -101,7 +101,7 @@ public:
 
 베르누이 분포 이산 확률 함수에 대한 자세한 내용은 Wolfram MathWorld 문서 [베르누이 분포](http://go.microsoft.com/fwlink/p/?linkid=398467)를 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // compile with: /EHsc /W4
@@ -178,9 +178,9 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>매개 변수
 
-*p* 는 저장 된 `p` 분포 매개 변수입니다.
+*p* 저장 된 `p` 분포 매개 변수입니다.
 
-*매개 변수* 는 `param_type` 분포를 생성 하는 데 사용 되는 구조입니다.
+*parm* 는 `param_type` 분포를 생성 하는 데 사용 되는 구조입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -194,13 +194,13 @@ explicit bernoulli_distribution(const param_type& parm);
 
 분포의 매개 변수를 포함합니다.
 
-구조체 param_type {bernoulli_distribution distribution_type typedef; param_type (p를 두 번 = 0.5); const; p()를 두 번
+구조체 param_type {typedef bernoulli_distribution distribution_type; param_type (p를 두 번 = 0.5); p() const;를 두 번
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>매개 변수
 
-*p* 는 저장 된 `p` 분포 매개 변수입니다.
+*p* 저장 된 `p` 분포 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 

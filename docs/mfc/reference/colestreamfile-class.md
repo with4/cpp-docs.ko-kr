@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bbd2b19e85f70ae9e61044ccd5a6c369e61b296
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 9304c4e3dfd559b296c69b274c1462f2f973a04d
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041447"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852760"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile 클래스
-데이터 스트림을 나타냅니다 ( `IStream`) OLE 구조적 저장소의 일부로 복합 파일입니다.  
+OLE 구조적 저장소의 일부로 복합 파일의 데이터 스트림(`IStream`)을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,21 +58,21 @@ class COleStreamFile : public CFile
   
 |이름|설명|  
 |----------|-----------------|  
-|[COleStreamFile::Attach](#attach)|스트림을 개체와 연결 합니다.|  
-|[COleStreamFile::CreateMemoryStream](#creatememorystream)|전역 메모리에서 스트림을 만드는 개체에 연결 합니다.|  
-|[COleStreamFile::CreateStream](#createstream)|스트림을 만들어지고 개체와 연결 됩니다.|  
+|[COleStreamFile::Attach](#attach)|개체를 사용 하 여 스트림을 연결 합니다.|  
+|[COleStreamFile::CreateMemoryStream](#creatememorystream)|전역 메모리에서 스트림을 만들고 개체를 사용 하 여 연결 합니다.|  
+|[COleStreamFile::CreateStream](#createstream)|스트림을 만들고 개체를 사용 하 여 연결 합니다.|  
 |[COleStreamFile::Detach](#detach)|스트림을 개체에서 연결을 끊습니다.|  
 |[COleStreamFile::GetStream](#getstream)|현재 스트림을 반환합니다.|  
-|[COleStreamFile::OpenStream](#openstream)|안전 하 게 되는 스트림을 엽니다 하 고 개체와 연결 합니다.|  
+|[COleStreamFile::OpenStream](#openstream)|안전 하 게 되는 스트림을 엽니다 및 개체와 연결 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `IStorage` 열거나 메모리 스트림을 경우가 아니라면를 만들 수 있는 스트림 수 전에 개체가 존재 해야 합니다.  
+ `IStorage` 열거나 아니면 메모리 스트림을 만든 스트림의 수 전에 개체가 존재 해야 합니다.  
   
  `COleStreamFile` 개체와 똑같이 조작 [CFile](../../mfc/reference/cfile-class.md) 개체입니다.  
   
  스트림 및 저장소를 조작 하는 방법에 대 한 자세한 내용은 문서 참조 [컨테이너: 복합 파일](../../mfc/containers-compound-files.md)...  
   
- 자세한 내용은 참조 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) 및 [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) Windows sdk에서입니다.  
+ 자세한 내용은 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) 하 고 [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) Windows SDK의 합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -85,7 +85,7 @@ class COleStreamFile : public CFile
  **헤더:** afxole.h  
   
 ##  <a name="attach"></a>  COleStreamFile::Attach  
- 사용 하 여 제공 된 OLE 스트림을 연결의 `COleStreamFile` 개체입니다.  
+ 제공 된 OLE 스트림을 사용 하 여 연결 된 `COleStreamFile` 개체입니다.  
   
 ```  
 void Attach(LPSTREAM lpStream);
@@ -93,12 +93,12 @@ void Attach(LPSTREAM lpStream);
   
 ### <a name="parameters"></a>매개 변수  
  *lpStream*  
- OLE 스트림 가리키는 ( `IStream`) 개체와 연결 되도록 합니다. 일 수 없습니다 **NULL**합니다.  
+ OLE 스트림 가리키는 (`IStream`) 개체와 연결 되도록 합니다. NULL일 수 없습니다.  
   
 ### <a name="remarks"></a>설명  
- 개체가 이미 아니어야 OLE 스트림와 연결 합니다.  
+ 개체가 이미 아니어야 OLE 스트림과 함께 연결 합니다.  
   
- 자세한 내용은 참조 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows sdk에서입니다.  
+ 자세한 내용은 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK에 있습니다.  
   
 ##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
  
@@ -113,12 +113,12 @@ COleStreamFile(LPSTREAM lpStream = NULL);
  개체와 연결 될 OLE 스트림에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 *lpStream* 은 **NULL**, 개체가 OLE 스트림과 연결 된, 제공 된 OLE 스트림과 연결 된 개체가 그렇지 않은 경우.  
+ 하는 경우 *lpStream* 가 null 인 경우 개체는 OLE 스트림과 연결 되지, 제공 된 OLE 스트림과 연결 된 개체가 고, 그렇지 합니다.  
   
- 자세한 내용은 참조 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows sdk에서입니다.  
+ 자세한 내용은 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK에 있습니다.  
   
 ##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
- 안전 하 게 오류는 일반, 예상 조건 공유, 글로벌 메모리 부족 새 스트림을 만듭니다.  
+ 안전 하 게 여기서 오류는 일반적으로 필요한 조건을 전역 공유 메모리에서 새 스트림을 만듭니다.  
   
 ```  
 BOOL CreateMemoryStream(CFileException* pError = NULL);
@@ -126,18 +126,18 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
 ### <a name="parameters"></a>매개 변수  
  *pError*  
- 가리키는 [CFileException](../../mfc/reference/cfileexception-class.md) 개체 또는 **NULL** 만들기 작업의 완료 상태를 나타내는입니다. 스트림을 만들기를 시도 하 여 생성 된 가능한 예외를 모니터링 하려는 경우이 매개 변수를 제공 합니다.  
+ 가리키는 [CFileException](../../mfc/reference/cfileexception-class.md) 개체 또는 만들기 작업의 완료 상태를 나타내는 NULL입니다. 스트림을 만들기를 시도 하 여 생성 가능한 예외를 모니터링 하려는 경우이 매개 변수를 제공 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 스트림이 성공적으로 만들어지면 0이 아닌 그렇지 않으면 0입니다.  
+ 스트림이 성공적으로 만들어지면 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 메모리 OLE 하위 시스템에 의해 할당 됩니다.  
+ 메모리는 OLE 하위 시스템에 의해 할당 됩니다.  
   
- 자세한 내용은 참조 [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) Windows sdk에서입니다.  
+ 자세한 내용은 [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) Windows SDK에 있습니다.  
   
 ##  <a name="createstream"></a>  COleStreamFile::CreateStream  
- 오류는 일반, 예상 조건 제공 되는 저장소 개체에 새 스트림을 안전 하 게 만듭니다.  
+ 여기서 오류는 일반적으로 필요한 조건을 제공 되는 저장소 개체의 새 스트림을 안전 하 게 만듭니다.  
   
 ```  
 BOOL CreateStream(
@@ -149,39 +149,39 @@ BOOL CreateStream(
   
 ### <a name="parameters"></a>매개 변수  
  *lpStorage*  
- 만들 스트림의 포함 하는 OLE 저장소 개체를 가리킵니다. 일 수 없습니다 **NULL**합니다.  
+ 만들려는 stream을 포함 하는 OLE 저장소 개체를 가리킵니다. NULL일 수 없습니다.  
   
  *lpszStreamName*  
- 만들 스트림의 이름입니다. 일 수 없습니다 **NULL**합니다.  
+ 만들 스트림의 이름입니다. NULL일 수 없습니다.  
   
  *nOpenFlags*  
- 스트림을 열 때 사용할 액세스 모드입니다. 전용, 읽기/쓰기가 가능 하며 모드 만들 기본적으로 사용 됩니다. 사용 가능한 모드의 전체 목록은 참조 하십시오. [CFile::CFile](../../mfc/reference/cfile-class.md#cfile)합니다.  
+ 스트림을 열 때 사용할 액세스 모드입니다. 단독, 읽기/쓰기가 가능 하며 모드 만들기 기본적으로 사용 됩니다. 사용 가능한 모드의 전체 목록은 참조 하세요. [CFile::CFile](../../mfc/reference/cfile-class.md#cfile)합니다.  
   
  *pError*  
- 가리키는 [CFileException](../../mfc/reference/cfileexception-class.md) 개체 또는 **NULL**합니다. 스트림을 만들기를 시도 하 여 생성 된 가능한 예외를 모니터링 하려는 경우이 매개 변수를 제공 합니다.  
+ 가리키는 [CFileException](../../mfc/reference/cfileexception-class.md) 개체 또는 NULL입니다. 스트림을 만들기를 시도 하 여 생성 가능한 예외를 모니터링 하려는 경우이 매개 변수를 제공 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 스트림이 성공적으로 만들어지면 0이 아닌 그렇지 않으면 0입니다.  
+ 스트림이 성공적으로 만들어지면 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 열기 작업이 실패 하는 경우 파일 예외가 throw 됩니다 및 *pError* 않습니다 **NULL**합니다.  
+ 열기에 실패 하는 경우 파일 예외가 throw 됩니다 하 고 *pError* NULL이 아닙니다.  
   
- 자세한 내용은 참조 [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) Windows sdk에서입니다.  
+ 자세한 내용은 [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) Windows SDK에 있습니다.  
   
 ##  <a name="detach"></a>  COleStreamFile::Detach  
- 스트림을 닫지 않고 스트림을 개체에서 연결을 끊습니다.  
+ 스트림을 닫지 않고 스트림에 개체의 연결을 끊습니다.  
   
 ```  
 LPSTREAM Detach();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 스트림에 대 한 포인터 ( `IStream`)를이 개체와 연결 합니다.  
+ 스트림에 대 한 포인터 (`IStream`) 된 개체와 연결 합니다.  
   
 ### <a name="remarks"></a>설명  
- 스트림을은 프로그램을 종료 하기 전에 다른 방식으로 닫아야 합니다.  
+ 프로그램을 종료 하기 전에 스트림은 다른 방식으로 닫아야 합니다.  
   
- 자세한 내용은 참조 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows sdk에서입니다.  
+ 자세한 내용은 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK에 있습니다.  
   
 ##  <a name="getstream"></a>  COleStreamFile::GetStream  
  현재 스트림에 대 한 포인터를 반환 하려면이 함수를 호출 합니다.  
@@ -206,24 +206,24 @@ BOOL OpenStream(
   
 ### <a name="parameters"></a>매개 변수  
  *lpStorage*  
- 스트림을 열 수를 포함 하는 OLE 저장소 개체를 가리킵니다. 일 수 없습니다 **NULL**합니다.  
+ 열려는 스트림이 포함 된 OLE 저장소 개체를 가리킵니다. NULL일 수 없습니다.  
   
  *lpszStreamName*  
- 열 스트림의 이름입니다. 일 수 없습니다 **NULL**합니다.  
+ 열 스트림의 이름입니다. NULL일 수 없습니다.  
   
  *nOpenFlags*  
- 스트림을 열 때 사용할 액세스 모드입니다. 전용 및 읽기/쓰기 모드는 기본적으로 사용 됩니다. 사용 가능한 모드 목록은 전체 참조 [CFile::CFile](../../mfc/reference/cfile-class.md#cfile)합니다.  
+ 스트림을 열 때 사용할 액세스 모드입니다. 전용 및 읽기/쓰기 모드는 기본적으로 사용 됩니다. 사용 가능한 모드의 전체 목록은 참조 하세요 [CFile::CFile](../../mfc/reference/cfile-class.md#cfile)합니다.  
   
  *pError*  
- 가리키는 [CFileException](../../mfc/reference/cfileexception-class.md) 개체 또는 **NULL**합니다. 가능한 예외 스트림을 열을 모니터링 하려는 경우이 매개 변수를 제공 합니다.  
+ 가리키는 [CFileException](../../mfc/reference/cfileexception-class.md) 개체 또는 NULL입니다. 스트림을 여는 데 시도 하 여 생성 가능한 예외를 모니터링 하려는 경우이 매개 변수를 제공 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 스트림이 성공적으로 열릴 경우 0이 아닌 그렇지 않으면 0입니다.  
+ 스트림이 성공적으로 열리는 경우 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 열기 작업이 실패 하는 경우 파일 예외가 throw 됩니다 및 *pError* 않습니다 **NULL**합니다.  
+ 열기에 실패 하는 경우 파일 예외가 throw 됩니다 하 고 *pError* NULL이 아닙니다.  
   
- 자세한 내용은 참조 [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) Windows sdk에서입니다.  
+ 자세한 내용은 [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) Windows SDK에 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CFile 클래스](../../mfc/reference/cfile-class.md)   

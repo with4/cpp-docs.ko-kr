@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb4cba5ef2eafa27a26c945f8754eb1a0ab0315
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 03c5346a59ea52ca6b2428652d5da69aacf6ea5b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37077957"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849096"
 ---
 # <a name="coloradjustment-structure"></a>COLORADJUSTMENT 구조체
-`COLORADJUSTMENT` 구조 정의 Windows에서 사용 되는 색 조정 값 `StretchBlt` 및 `StretchDIBits` 함수 때는 `StretchBlt` 모드는 **하프톤**합니다.  
+`COLORADJUSTMENT` 구조는 Windows에서 사용 하는 색 조정 값을 정의 `StretchBlt` 하 고 `StretchDIBits` 함수 때는 `StretchBlt` 모드가 하프톤 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,67 +50,67 @@ typedef struct  tagCOLORADJUSTMENT {    /* ca */
  구조체의 크기를 바이트 단위로 지정 합니다.  
   
  *caFlags*  
- 출력 이미지를 준비 하는 방식을 지정 합니다. 이 멤버는로 설정할 수 있습니다 **NULL** 또는 다음 값을 조합 합니다.  
+ 출력 이미지를 준비 하는 방식을 지정 합니다. 이 멤버는 NULL 또는 다음 값의 조합을 설정할 수 있습니다.  
   
-- **CA_NEGATIVE** 원본 이미지의 음수를 표시 하도록 지정 합니다.  
+- CA_NEGATIVE 원본 이미지의 음수를 표시 해야 함을 지정 합니다.  
   
-- **CA_LOG_FILTER** 출력 색의 최종 밀도에 로그 함수를 적용 해야 하는지 지정 합니다. 이렇게 하면 광도 부족할 때 색상 대비를 늘어납니다.  
+- CA_LOG_FILTER 최종 출력 색의 밀도를 로그 하는 함수를 적용 해야 하는지 지정 합니다. 이렇게 하면 광도 낮은 경우 색상 대비를 늘어납니다.  
   
  *caIlluminantIndex*  
  이미지 개체를 볼 광원의 광도 지정 합니다. 이 멤버는 다음 값 중 하나로 설정할 수 있습니다.  
   
-- **ILLUMINANT_EQUAL_ENERGY**  
+- ILLUMINANT_EQUAL_ENERGY  
   
-- **ILLUMINANT_A**  
+- ILLUMINANT_A  
   
-- **ILLUMINANT_B**  
+- ILLUMINANT_B  
   
-- **ILLUMINANT_C**  
+- ILLUMINANT_C  
   
-- **ILLUMINANT_D50**  
+- ILLUMINANT_D50  
   
-- **ILLUMINANT_D55**  
+- ILLUMINANT_D55  
   
-- **ILLUMINANT_D65**  
+- ILLUMINANT_D65  
   
-- **ILLUMINANT_D75**  
+- ILLUMINANT_D75  
   
-- **ILLUMINANT_F2**  
+- ILLUMINANT_F2  
   
-- **ILLUMINANT_TURNGSTEN**  
+- ILLUMINANT_TURNGSTEN  
   
-- **ILLUMINANT_DAYLIGHT**  
+- ILLUMINANT_DAYLIGHT  
   
-- **ILLUMINANT_FLUORESCENT**  
+- ILLUMINANT_FLUORESCENT  
   
-- **ILLUMINANT_NTSC**  
+- ILLUMINANT_NTSC  
   
  *caRedGamma*  
- 소스 색의 빨간색 기본 데이터베이스에 n 번째 전원 감마 보정 값을 지정합니다. 2,500 65000 사이의 값 이어야 합니다. 값이 10, 000 없는 감마 보정을 의미합니다.  
+ 소스 색의 빨강 주의 n 번째 power 감마 보정 값을 지정합니다. 65000 2,500 사이의 값 이어야 합니다. 값이 10,000 없습니다 감마 보정을 의미합니다.  
   
  *caGreenGamma*  
- 소스 색의 녹색 기본 데이터베이스에 n 번째 전원 감마 보정 값을 지정합니다. 2,500 65000 사이의 값 이어야 합니다. 값이 10, 000 없는 감마 보정을 의미합니다.  
+ 소스 색의 녹색 주의 n 번째 power 감마 보정 값을 지정합니다. 65000 2,500 사이의 값 이어야 합니다. 값이 10,000 없습니다 감마 보정을 의미합니다.  
   
  *caBlueGamma*  
- 소스 색의 파란색 기본 데이터베이스에 n 번째 전원 감마 보정 값을 지정합니다. 2,500 65000 사이의 값 이어야 합니다. 값이 10, 000 없는 감마 보정을 의미합니다.  
+ 소스 색의 파랑 원색의 n 번째 power 감마 보정 값을 지정합니다. 65000 2,500 사이의 값 이어야 합니다. 값이 10,000 없습니다 감마 보정을 의미합니다.  
   
  *caReferenceBlack*  
- 원본 색상에 대 한 검은색 참조를 지정합니다. 이 보다 더 어두운 색은 검정으로 처리 됩니다. 값 0 4, 000 개 범위에 있어야 합니다.  
+ 소스 색에 대 한 검정 참조를 지정합니다. 이보다 음영이 짙을 수록 된 모든 색은 검정으로 처리 됩니다. 값을 0에서 4,000 사이에 있어야 합니다.  
   
  *caReferenceWhite*  
- 원본 색상에 대 한 흰색 참조를 지정합니다. 모든 색 보다 밝은 흰색으로 처리 됩니다. 10, 000으로 6, 000 까지의 범위에 값 이어야 합니다.  
+ 소스 색에 대 한 흰색 참조를 지정합니다. 이 보다 밝은 색은 흰색으로 처리 됩니다. 6,000 10,000 사이의 값 이어야 합니다.  
   
  *caContrast*  
- 원본 개체에 적용 될 수 대비 양을 지정 합니다. 값은 100에서 100 사이의 범위에 있어야 합니다. 값이 0 대비 조정이 없음을 의미합니다.  
+ 원본 개체에 적용할 대비 양을 지정 합니다. 값은 100부터 100 사이 여야 합니다. 값이 0 의미 없는 대비 조정 합니다.  
   
  *caBrightness*  
- 원본 개체에 적용 될 밝기를 지정 합니다. 값은 100에서 100 사이의 범위에 있어야 합니다. 값이 0 밝기 조정이 없음을 의미합니다.  
+ 원본 개체에 적용할 밝기를 지정 합니다. 값은 100부터 100 사이 여야 합니다. 값이 0 의미 없는 밝기 조정 합니다.  
   
  *caColorfulness*  
- 원본 개체에 적용 될 colorfulness 양을 지정 합니다. 값은 100에서 100 사이의 범위에 있어야 합니다. 값이 0 colorfulness 조정이 없음을 의미합니다.  
+ 원본 개체에 적용할 colorfulness 양을 지정 합니다. 값은 100부터 100 사이 여야 합니다. 값이 0 의미 없는 colorfulness 조정 합니다.  
   
  *caRedGreenTint*  
- 원본 개체에 적용 될 조정 빨간색 또는 녹색 tint 양을 지정 합니다. 값은 100에서 100 사이의 범위에 있어야 합니다. 양수는 빨간색으로 조정한 음수 녹색 쪽으로 조정 합니다. A 0 tint 조정이 없음을 의미합니다.  
+ 원본 개체에 적용할 빨간색 또는 녹색 색조 조정의 양을 지정 합니다. 값은 100부터 100 사이 여야 합니다. 양수는 빨간색으로 조정한 음수 녹색으로 조정 합니다. 0 없습니다 tint 조정을 의미합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** wingdi.h  

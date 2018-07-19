@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9a8bf702f4373040a6f7255d67f551b5dbfa60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05354361bd460f64daced16684e9f8b70de94898
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846963"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954114"
 ---
 # <a name="freelist-class"></a>freelist 클래스
 
@@ -43,12 +43,12 @@ class freelist
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Sz`|할당할 배열의 요소 수입니다.|
-|`Max`|사용 가능 목록에 저장할 최대 요소 수를 나타내는 최대 클래스입니다. 최대 클래스는 [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) 또는 [max_variable_size](../standard-library/max-variable-size-class.md)가 될 수 있습니다.|
+|*sz*|할당할 배열의 요소 수입니다.|
+|*Max*|사용 가능 목록에 저장할 최대 요소 수를 나타내는 최대 클래스입니다. 최대 클래스는 [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) 또는 [max_variable_size](../standard-library/max-variable-size-class.md)가 될 수 있습니다.|
 
 ## <a name="remarks"></a>설명
 
-이 템플릿 클래스는 `Max`에 전달된 최대 클래스를 통해 결정된 목록의 최대 길이를 사용하여 크기가 `Sz`인 메모리 블록의 목록을 관리합니다.
+이 템플릿 클래스는 크기의 메모리 블록의 목록을 관리 *Sz* 전달 된 최대 클래스에 의해 결정 된 목록의 최대 길이 사용 하 여 *Max*합니다.
 
 ### <a name="constructors"></a>생성자
 
@@ -93,7 +93,7 @@ void *pop();
 
 ### <a name="remarks"></a>설명
 
-목록이 비어 있으면 멤버 함수는 `NULL`을 반환합니다. 그렇지 않으면 목록에서 첫 번째 메모리 블록을 제거합니다.
+멤버 함수는 목록이 비어 있으면 NULL을 반환 합니다. 그렇지 않으면 목록에서 첫 번째 메모리 블록을 제거합니다.
 
 ## <a name="push"></a>  freelist::push
 
@@ -107,15 +107,15 @@ bool push(void* ptr);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`ptr`|사용 가능 목록에 추가할 메모리 블록의 포인터입니다.|
+|*ptr*|사용 가능 목록에 추가할 메모리 블록의 포인터입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-최대 클래스의 `full` 함수가 `false`를 반환하면 `true`이고, 그렇지 않으면 `push` 함수가 `false`를 반환합니다.
+**true** 경우는 `full` 최대 클래스의 반환 **false**이 고, 그렇지 않으면 합니다 `push` 함수에서 반환 **false**합니다.
 
 ### <a name="remarks"></a>설명
 
-최대 클래스의 `full` 함수가 `false`를 반환하면 이 멤버 함수는 `ptr`가 가리키는 메모리 블록을 목록의 시작 부분에 추가합니다.
+경우는 `full` max 클래스의 반환 **false**를 가리키는 메모리 블록을 추가 하는이 멤버 함수 *ptr* 목록 헤드에 합니다.
 
 ## <a name="see-also"></a>참고자료
 

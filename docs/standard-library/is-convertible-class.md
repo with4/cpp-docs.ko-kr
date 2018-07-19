@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fbc0003db72d6a72e31a7d79de786476c946188
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 350fd6007ab6b89064ed6d0a7070a21e57427018
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845416"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956324"
 ---
 # <a name="isconvertible-class"></a>is_convertible 클래스
 
@@ -37,15 +37,15 @@ struct is_convertible;
 
 ### <a name="parameters"></a>매개 변수
 
-`From` 변환할 원본 형식입니다.
+ 에서 변환할 대상 형식입니다.
 
-`Ty` 변환할 대상 형식입니다.
+*Ty* 를 변환할 대상 형식입니다.
 
 ## <a name="remarks"></a>설명
 
 형식 조건자의 인스턴스는 식 `To to = from;`이 올바른 형식인 경우 true입니다(여기서 `from`은 `From` 형식의 개체임).
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__is_convertible.cpp

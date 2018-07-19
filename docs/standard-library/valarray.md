@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 578dd43f747eddbf37f76c41a2fa35df8edca658
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98ee264d019e89ef3fbdf299a58c972ad895caed
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862159"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954801"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -40,7 +40,7 @@ ms.locfileid: "33862159"
 
 ### <a name="functions"></a>함수
 
-|함수|설명|
+|기능|설명|
 |-|-|
 |[abs](../standard-library/valarray-functions.md#abs)|입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 절대값과 같은 valarray를 반환합니다.|
 |[acos](../standard-library/valarray-functions.md#acos)|입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 아크코사인과 같은 valarray를 반환합니다.|
@@ -66,8 +66,8 @@ ms.locfileid: "33862159"
 |-|-|
 |[operator!=](../standard-library/valarray-operators.md#op_neq)|크기가 같은 두 valarray의 해당 요소가 서로 같지 않은지 또는 valarray의 모든 요소가 valarray 요소 형식의 지정된 값과 같지 않은지 테스트합니다.|
 |[operator%](../standard-library/valarray-operators.md#op_mod)|크기가 같은 두 valarray의 해당 요소를 나눈 나머지 또는 valarray를 valarray 요소 형식의 지정된 값으로 나누거나 지정된 값을 valarray로 나눈 나머지를 가져옵니다.|
-|[operator&](../standard-library/valarray-operators.md#op_amp)|크기가 같은 두 valarray의 해당 요소 간이나 valarray와 요소 형식의 지정된 값 간에 비트 **AND**를 가져옵니다.|
-|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|크기가 같은 두 valarray의 해당 요소 간이나 valarray와 valarray 요소 형식의 지정된 값 간에 논리적 **AND**를 가져옵니다.|
+|[operator&](../standard-library/valarray-operators.md#op_amp)|크기가 같은 두 valarray의 해당 요소 간이나 valarray와 요소 형식의 지정된 값 간에 비트 `AND`을 가져옵니다.|
+|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|크기가 같은 두 valarray의 해당 요소 간이나 valarray와 valarray 요소 형식의 지정된 값 간에 논리적 `AND`을 가져옵니다.|
 |[operator>](../standard-library/valarray-operators.md#op_gt)|한 valarray의 요소가 크기가 같은 valarray의 요소보다 큰지 또는 valarray의 모든 요소가 valarray 요소 형식의 지정된 값보다 크거나 작은지 테스트합니다.|
 |[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|한 valarray의 요소가 크기가 같은 valarray의 요소보다 크거나 같은지 또는 valarray의 모든 요소가 지정된 값보다 크거나 같거나 작거나 같은지 테스트합니다.|
 |[operator>>](../standard-library/valarray-operators.md#op_gt_gt)|valarray의 각 요소에 대한 비트를 지정된 위치 수 또는 두 번째 valarray에 지정된 요소 양만큼 오른쪽으로 이동합니다.|
@@ -93,13 +93,13 @@ ms.locfileid: "33862159"
 |[mask_array 클래스](../standard-library/mask-array-class.md)|하위 집합 배열 간의 작업을 제공하여 부울 식으로 지정된 부모 valarray의 하위 집합인 개체를 지원하는 내부 보조 템플릿 클래스입니다.|
 |[slice 클래스](../standard-library/slice-class.md)|valarray의 벡터와 유사한 1차원 하위 집합을 정의하는 데 사용되는 valarray에 대한 유틸리티 클래스입니다.|
 |[slice_array 클래스](../standard-library/slice-array-class.md)|valarray의 조각으로 정의된 하위 집합 배열 간의 작업을 제공하여 조각 개체를 지원하는 내부 보조 템플릿 클래스입니다.|
-|[valarray 클래스](../standard-library/valarray-class.md)|템플릿 클래스는 배열로 저장되어 고속 수치 연산을 수행하도록 설계되고 컴퓨팅 성능에 최적화된 **Type** 형식의 요소 시퀀스를 제어하는 개체를 설명합니다.|
+|[valarray 클래스](../standard-library/valarray-class.md)|형식의 요소 시퀀스를 제어 하는 개체를 설명 하는 템플릿 클래스 `Type` 배열로 저장 되 고 컴퓨팅 성능에 최적화 되어 고속 수치 연산을 수행 하도록 설계 되어 있습니다.|
 
 ### <a name="specializations"></a>특수화
 
 |||
 |-|-|
-|[valarray\<bool> 클래스](../standard-library/valarray-bool-class.md)|`bool` 형식의 요소에 대한 템플릿 클래스 valarray\<**Type**>의 특수 버전입니다.|
+|[valarray\<bool> 클래스](../standard-library/valarray-bool-class.md)|템플릿 클래스 valarray의 특수 버전\<**형식을**> 형식의 요소에 **bool**합니다.|
 
 ## <a name="see-also"></a>참고자료
 

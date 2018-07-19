@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 149d255dd82d0dff2d2ddb1101b38bf05c69673a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a53b865d054948d9ee22acbfbec0b6ddf807ec0c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861918"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954762"
 ---
 # <a name="priorityqueue-class"></a>priority_queue 클래스
 
@@ -52,15 +52,15 @@ class priority_queue
 
 *형식* priority_queue에 저장 되는 요소 데이터 형식입니다.
 
-`Container` Priority_queue를 구현 하는 데 기본 컨테이너의 형식입니다.
+*컨테이너* priority_queue를 구현 하는 데 사용 된 기본 컨테이너의 형식입니다.
 
-*비교* priority_queue에서 해당 상대 순서를 결정 하는 정렬 키로 두 요소 값을 비교할 수 있는 함수 개체를 제공 하는 형식입니다. 이 인수는 선택적 이며 이진 조건자 **적은***\<*** typename** *컨테이너 ***:: value_type*** >* 기본값입니다.
+*비교* priority_queue에서 상대적인 순서를 결정 하는 정렬 키로 두 요소 값을 비교할 수 있는 함수 개체를 제공 하는 형식입니다. 이 인수는 선택적 이며 이진 조건자 **적은***\<*** typename** *컨테이너 ***:: value_type*** >* 기본값입니다.
 
 ## <a name="remarks"></a>설명
 
-스택 개체의 첫 번째 템플릿 매개 변수에 규정된 클래스 **Type** 의 요소는 [value_type](#value_type)과 같고, 두 번째 템플릿 매개 변수로 규정된 기본 컨테이너 클래스 **Container**에 있는 요소의 형식과 일치해야 합니다. **Type**은 해당 형식의 개체를 복사하고 해당 형식의 변수에 값을 할당할 수 있도록 할당 가능해야 합니다.
+클래스의 요소 `Type` 첫 번째 템플릿에서 규정 된 큐 개체의 매개 변수는 [value_type](#value_type) 기본 컨테이너 클래스에 있는 요소의 형식과 일치 해야 `Container` 에서 규정 합니다 두 번째 템플릿 매개 변수입니다. `Type` 해당 형식의 개체를 복사 하 고 해당 형식의 변수에 값을 할당할 수 있도록 할당할 수 있어야 합니다.
 
-priority_queue는 **Traits** 클래스의 저장된 함수 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 일반적으로, 이 순서를 정하려면 요소의 크기를 비교할 수 있어야 합니다. 즉, 제공된 어떤 두 요소에서 두 요소가 동일하거나(어떤 것도 다른 것보다 작지 않음) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 기술적으로 설명하면, 비교 함수는 표준 함수의 의미에서 엄밀히 약한 정렬을 수행하는 이진 조건자입니다.
+Priority_queue 클래스의 저장 된 함수 개체를 호출 하 여 제어 하는 시퀀스를 정렬 `Traits`합니다. 일반적으로, 이 순서를 정하려면 요소의 크기를 비교할 수 있어야 합니다. 즉, 제공된 어떤 두 요소에서 두 요소가 동일하거나(어떤 것도 다른 것보다 작지 않음) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 기술적으로 설명하면, 비교 함수는 표준 함수의 의미에서 엄밀히 약한 정렬을 수행하는 이진 조건자입니다.
 
 priority_deque에 적합한 기본 컨테이너 클래스에는 `front`, `push_back`, `pop_back` 및 임의 액세스 반복기의 작업을 지원하는 [deque 클래스](../standard-library/deque-class.md) 및 기본 [vector 클래스](../standard-library/vector-class.md) 또는 기타 시퀀스 컨테이너가 포함됩니다. 기본 컨테이너 클래스는 제한된 시퀀스 컨테이너 멤버 함수 집합만 공용 인터페이스로 표시하는 컨테이너 어댑터 내에서 캡슐화되어 있습니다.
 
@@ -118,7 +118,7 @@ typedef Container container_type;
 
 `Container`에 대한 자세한 내용은 [priority_queue 클래스](../standard-library/priority-queue-class.md) 항목의 설명 섹션을 참조하세요.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `container_type`을 선언하고 사용하는 방법에 대한 예제는 [priority_queue](#priority_queue)의 예제를 참조하세요.
 
@@ -134,7 +134,7 @@ bool empty() const;
 
 priority_queue가 비어 있으면 **true**이고 비어 있지 않으면 **false**입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // pqueue_empty.cpp
@@ -180,7 +180,7 @@ void pop();
 
 멤버 함수를 적용하려면 priority_queue는 비어 있지 않아야 합니다. priority_queue의 최상위 위치에는 항상 컨테이너에서 가장 큰 요소가 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // pqueue_pop.cpp
@@ -249,25 +249,25 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 
 ### <a name="parameters"></a>매개 변수
 
-*_ comp* 유형의 비교 함수 **constTraits** 비교 함수는 기본 컨테이너의 기본 설정 된 priority_queue의 요소를 정렬 하는 데 사용 합니다.
+*_ comp* 형식의 비교 함수로 **constTraits** 비교 함수는 기본 컨테이너의 기본값은 priority_queue에서 요소를 정렬 하는 데 사용 합니다.
 
-`_Cont` 복사본으로 생성 된 priority_queue는를 포함 하는 기본 컨테이너입니다.
+*_Cont* 는 생성 된 priority_queue가 복사본이 되는 기본 컨테이너입니다.
 
-`right` 복사본으로 생성 된 집합은 priority_queue 합니다.
+*오른쪽* 의 복사본으로 생성 된 집합은 priority_queue입니다.
 
-`first` 복사할 요소 범위에서 첫 번째 요소의 위치입니다.
+*첫 번째* 복사할 요소 범위에서 첫 번째 요소의 위치입니다.
 
-`last` 복사할 요소 범위를 벗어나는 첫 번째 요소의 위치입니다.
+*마지막* 복사할 요소 범위를 벗어나는 첫 번째 요소의 위치입니다.
 
 ### <a name="remarks"></a>설명
 
-처음 3개 생성자는 각각 빈 초기 priority_queue를 정의합니다. 두 번째 생성자는 요소의 순서를 설정하는 데 사용할 비교 함수( `comp`)의 형식도 지정하며, 세 번째 생성자는 사용할 `container_type`( `_Cont`)을 명시적으로 지정합니다. **explicit** 키워드를 사용하는 경우 특정 종류의 자동 형식 변환이 수행되지 않습니다.
+처음 3 개 생성자 중 각각 지정 하는 두 번째 형식도 지정 비교 함수는 빈 초기 priority_queue (`comp`) 요소 및 세 번째 순서를 명시적으로 설정 하는 데 사용할 지정 된 `container_type`(`_Cont`) 사용할 수 있습니다. **explicit** 키워드를 사용하는 경우 특정 종류의 자동 형식 변환이 수행되지 않습니다.
 
-네 번째 생성자는 priority_queue `right`의 복사본을 지정합니다.
+네 번째 생성자는 priority_queue의 복사본을 지정 *오른쪽*합니다.
 
-범위를 복사 하는 마지막 세 명의 생성자 [* 첫 번째, 마지막 *) 일부 컨테이너의 값을 사용 하는 클래스의 비교 함수의 유형을 지정 하는 명시적인의 증가 따라 priority_queue 초기화 **특성** 및 `container_type`.
+마지막 3 개 생성자는 범위를 복사 [* 먼저 마지막 *) 일부 컨테이너의 값을 사용 하 여 클래스의 비교 함수 형식을 지정할 때 명 시도가 향상 priority_queue를 초기화 **Traits** 및 `container_type`.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // pqueue_ctor.cpp
@@ -388,13 +388,13 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>매개 변수
 
-`val` Priority_queue 위쪽에 추가 하는 요소입니다.
+*val* priority_queue의 맨 위에 추가 되는 요소입니다.
 
 ### <a name="remarks"></a>설명
 
 priority_queue의 최상위 위치에는 컨테이너에서 가장 큰 요소가 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // pqueue_push.cpp
@@ -438,7 +438,7 @@ size_type size() const;
 
 priority_queue의 현재 길이입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // pqueue_size.cpp
@@ -479,7 +479,7 @@ typedef typename Container::size_type size_type;
 
 이 형식은 priority_queue에 의해 조정되는 기본 컨테이너의 `size_type`과 동일한 의미입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)에 대한 예제를 참조하세요.
 
@@ -493,13 +493,13 @@ const_reference top() const;
 
 ### <a name="return-value"></a>반환 값
 
-가장 큰 요소에 대한 참조로, priority_queue의 개체인 **Traits** 함수로 결정됩니다.
+기준으로 가장 큰 요소에 대 한 참조를 `Traits` 함수, priority_queue의 개체인 합니다.
 
 ### <a name="remarks"></a>설명
 
 멤버 함수를 적용하려면 priority_queue는 비어 있지 않아야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // pqueue_top.cpp
@@ -543,7 +543,7 @@ typedef typename Container::value_type value_type;
 
 이 형식은 priority_queue에 의해 조정되는 기본 컨테이너의 `value_type`과 동일한 의미입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // pqueue_value_type.cpp

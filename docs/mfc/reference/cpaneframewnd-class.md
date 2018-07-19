@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c17c81fb39d4397c58b4baba7124de2bda646db7
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 3e25fda2f6d30ea13882ae3b40875fb3d4ec61c7
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079696"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854124"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd 클래스
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -240,16 +240,16 @@ class CPaneFrameWnd : public CWnd
   
 |name|설명|  
 |----------|-----------------|  
-|[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|`CS_SAVEBITS` 클래스 스타일을 사용하여 창 클래스를 등록할지 여부를 지정합니다.|  
+|[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|CS_SAVEBITS 클래스 스타일을 사용 하 여 창 클래스를 등록할지 여부를 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
  창이 도킹된 상태에서 부동 상태로 전환되면 프레임워크에서 자동으로 `CPaneFrameWnd` 개체를 만듭니다.  
   
- 내용을 표시(즉시 도킹)하거나 끌기 사각형을 사용하여(표준 도킹) 미니 프레임 창을 끌 수 있습니다. 미니 프레임 컨테이너 창의 도킹 모드에 따라 미니 프레임의 끌기 동작이 결정됩니다. 자세한 내용은 참조 [cbasepane:: Getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode)합니다.  
+ 내용을 표시(즉시 도킹)하거나 끌기 사각형을 사용하여(표준 도킹) 미니 프레임 창을 끌 수 있습니다. 미니 프레임 컨테이너 창의 도킹 모드에 따라 미니 프레임의 끌기 동작이 결정됩니다. 자세한 내용은 [cbasepane:: Getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode)합니다.  
   
- 미니 프레임 창에 포함된 창 스타일에 따라 캡션에 단추가 표시됩니다. 창을 닫을 수 있는 경우 ( [cbasepane:: Canbeclosed](../../mfc/reference/cbasepane-class.md#canbeclosed)), 닫기 단추를 표시 합니다. 창에 `AFX_CBRS_AUTO_ROLLUP` 스타일이 있는 경우 핀이 표시됩니다.  
+ 미니 프레임 창에 포함된 창 스타일에 따라 캡션에 단추가 표시됩니다. 창을 닫을 수 있는 경우 ( [cbasepane:: Canbeclosed](../../mfc/reference/cbasepane-class.md#canbeclosed)), 닫기 단추를 표시 합니다. 창 스타일을 AFX_CBRS_AUTO_ROLLUP 있으면 핀이 표시 됩니다.  
   
- `CPaneFrameWnd`에서 클래스를 파생하는 경우 프레임워크에 만드는 방법을 알려야 합니다. 재정의 하 여 클래스를 만들거나 [cpane:: Createdefaultminiframe](../../mfc/reference/cpane-class.md#createdefaultminiframe), 설정 또는 `CPane::m_pMiniFrameRTC` 멤버를 클래스에 대 한 런타임 클래스 정보를 가리킵니다.  
+ `CPaneFrameWnd`에서 클래스를 파생하는 경우 프레임워크에 만드는 방법을 알려야 합니다. 재정의 하 여 클래스를 만들거나 [cpane:: Createdefaultminiframe](../../mfc/reference/cpane-class.md#createdefaultminiframe)를 설정 또는 `CPane::m_pMiniFrameRTC` 멤버는 클래스에 대 한 런타임 클래스 정보를 가리킵니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -285,13 +285,13 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
   
 ### <a name="parameters"></a>매개 변수  
  [in] *pWnd*  
- 추가 또는 제거 하는 창입니다.  
+ 추가 하거나 제거 하려면 창입니다.  
   
  [in] *추가*  
- 0이 아닌 경우 창에 추가 합니다. 0 인 경우, 창을 제거 합니다.  
+ 0이 아닌 경우에 창에 추가 합니다. 0 인 경우 창을 제거 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+ 메서드가 성공 하면 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ##  <a name="adjustlayout"></a>  CPaneFrameWnd::AdjustLayout  
  미니 프레임 창의 레이아웃을 조정합니다.  
@@ -310,7 +310,7 @@ virtual void AdjustPaneFrames();
 ### <a name="remarks"></a>설명  
   
 ##  <a name="calcbordersize"></a>  CPaneFrameWnd::CalcBorderSize  
- 미니 프레임 창의 테두리 크기를 계산합니다.  
+ 미니 프레임 창의 테두리의 크기를 계산 합니다.  
   
 ```  
 virtual void CalcBorderSize(CRect& rectBorderSize) const;  
@@ -318,10 +318,10 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
   
 ### <a name="parameters"></a>매개 변수  
  [out] *rectBorderSize*  
- 미니 프레임 창의 테두리를 픽셀 단위로 크기를 포함합니다.  
+ 미니 프레임 창의 테두리의 픽셀에서 크기를 포함합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 미니 프레임 창의 테두리의 크기를 계산 하기 위해 프레임 워크에서 호출 됩니다. 미니 프레임 창 도구 모음 포함 인지에 따라 달라 집니다 반환 되는 크기 [CDockablePane](../../mfc/reference/cdockablepane-class.md)합니다.  
+ 이 메서드는 미니 프레임 창의 테두리의 크기를 계산 하기 위해 프레임 워크에서 호출 됩니다. 미니 프레임 창 도구 모음 포함 여부는 반환 되는 크기에 따라 다릅니다 [CDockablePane](../../mfc/reference/cdockablepane-class.md)합니다.  
   
 ##  <a name="calcexpecteddockedrect"></a>  CPaneFrameWnd::CalcExpectedDockedRect  
  도킹된 창의 예상 사각형을 계산합니다.  
@@ -337,7 +337,7 @@ virtual void CalcExpectedDockedRect(
   
 ### <a name="parameters"></a>매개 변수  
  [in] *pWndToDock*  
- 도킹 창에 대 한 포인터입니다.  
+ 창 도킹에 대 한 포인터입니다.  
   
  [in] *ptMouse*  
  마우스 위치입니다.  
@@ -346,13 +346,13 @@ virtual void CalcExpectedDockedRect(
  계산 된 사각형입니다.  
   
  [out] *bDrawTab*  
- 경우 `TRUE`, 탭을 그립니다. 경우 `FALSE`, 탭 그리지 않습니다.  
+ TRUE 인 경우 탭을 그립니다. FALSE 인 경우 탭을 그리지 않습니다.  
   
  [out] *ppTargetBar*  
  대상 창에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 사용자로 지정 된 지점에 창을 끌 경우는 창이 차지 하는 사각형을 계산 *ptMouse* 있습니다 도킹 하 고 있습니다.  
+ 이 메서드를 사용자 지정 된 지점에 창을 끌 경우 창이 차지 하는 사각형을 계산 *ptMouse* 있습니다 도킹 하 고 있습니다.  
   
 ##  <a name="canbeattached"></a>  CPaneFrameWnd::CanBeAttached  
  현재 창을 다른 창이나 프레임 창에 도킹할 수 있는지 여부를 결정합니다.  
@@ -362,7 +362,7 @@ virtual BOOL CanBeAttached() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 창에서 다른 창이 나 프레임 창에 도킹할 수 있는 경우 그렇지 않으면 `FALSE`합니다.  
+ 창의 다른 창이 나 프레임 창에 도킹할 수 있는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ##  <a name="canbedockedtopane"></a>  CPaneFrameWnd::CanBeDockedToPane  
  미니 프레임 창을 창에 도킹할 수 있는지 여부를 결정합니다.  
@@ -395,7 +395,7 @@ virtual void ConvertToTabbedDocument();
 ```  
   
 ##  <a name="create"></a>  CPaneFrameWnd::Create  
- 미니 프레임 창을 만들고에 연결 된 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) 개체입니다.  
+ 미니 프레임 창을 만들고에 연결 합니다 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) 개체입니다.  
   
 ```  
 virtual BOOL Create(
@@ -411,25 +411,25 @@ virtual BOOL Create(
  미니 프레임 창에 표시할 텍스트를 지정 합니다.  
   
  [in] *dwStyle*  
- 창 스타일을 지정합니다. 자세한 내용은 참조 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles)합니다.  
+ 창 스타일을 지정합니다. 자세한 내용은 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles)합니다.  
   
  [in] *rect*  
- 초기 크기와 미니 프레임 창의 위치를 지정합니다.  
+ 초기 크기와 미니 프레임 창의 위치를 지정 합니다.  
   
  [in] [out] *pParentWnd*  
- 미니 프레임 창의 부모 프레임을 지정합니다. 이 값이 아니어야 `NULL`합니다.  
+ 미니 프레임 창의 부모 프레임을 지정합니다. 이 값에 NULL이 아니어야 합니다.  
   
  [in] [out] *pContext*  
  사용자 정의 컨텍스트를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 창 성공적으로 만들어진 경우 그렇지 않으면 `FALSE`합니다.  
+ 창 성공적으로 만들어진 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 미니 프레임 창은 두 단계에서 만들어집니다. 첫째, 프레임 워크 만듭니다는 `CPaneFrameWnd` 개체입니다. 둘째, 호출 `Create` Windows 미니 프레임 창을 만들고에 연결 하는 `CPaneFrameWnd` 개체입니다.  
+ 미니 프레임 창은 두 단계에서 만들어집니다. 먼저, 프레임 워크를 만들어는 `CPaneFrameWnd` 개체입니다. 둘째, 호출 `Create` Windows 미니 프레임 창을 만들고에 연결 하는 `CPaneFrameWnd` 개체입니다.  
   
 ##  <a name="createex"></a>  CPaneFrameWnd::CreateEx  
- 미니 프레임 창을 만들고에 연결 된 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) 개체입니다.  
+ 미니 프레임 창을 만들고에 연결 합니다 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) 개체입니다.  
   
 ```  
 virtual BOOL CreateEx(
@@ -443,28 +443,28 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>매개 변수  
  [in] *dwStyleEx*  
- 확장된 창 스타일을 지정합니다. 자세한 내용은 참조 [확장 창 스타일](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
+ 확장된 창 스타일을 지정합니다. 자세한 내용은 참조 하세요. [확장 창 스타일](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
  [in] *lpszWindowName*  
  미니 프레임 창에 표시할 텍스트를 지정 합니다.  
   
  [in] *dwStyle*  
- 창 스타일을 지정합니다. 자세한 내용은 참조 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles)합니다.  
+ 창 스타일을 지정합니다. 자세한 내용은 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles)합니다.  
   
  [in] *rect*  
- 초기 크기와 미니 프레임 창의 위치를 지정합니다.  
+ 초기 크기와 미니 프레임 창의 위치를 지정 합니다.  
   
  [in] [out] *pParentWnd*  
- 미니 프레임 창의 부모 프레임을 지정합니다. 이 값이 아니어야 `NULL`합니다.  
+ 미니 프레임 창의 부모 프레임을 지정합니다. 이 값에 NULL이 아니어야 합니다.  
   
  [in] [out] *pContext*  
  사용자 정의 컨텍스트를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 창 성공적으로 만들어진 경우 그렇지 않으면 `FALSE`합니다.  
+ 창 성공적으로 만들어진 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 미니 프레임 창은 두 단계에서 만들어집니다. 첫째, 프레임 워크 만듭니다는 `CPaneFrameWnd` 개체입니다. 둘째, 호출 `Create` Windows 미니 프레임 창을 만들고에 연결 하는 `CPaneFrameWnd` 개체입니다.  
+ 미니 프레임 창은 두 단계에서 만들어집니다. 먼저, 프레임 워크를 만들어는 `CPaneFrameWnd` 개체입니다. 둘째, 호출 `Create` Windows 미니 프레임 창을 만들고에 연결 하는 `CPaneFrameWnd` 개체입니다.  
   
 ##  <a name="dockpane"></a>  CPaneFrameWnd::DockPane  
  창을 도킹합니다.  
@@ -475,10 +475,10 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
   
 ### <a name="parameters"></a>매개 변수  
  [out] *bWasDocked*  
- `TRUE` 창이 도킹 있는 경우가 이미 있습니다. 그렇지 않으면 `FALSE`합니다.  
+ 창 도킹 되어 이미; 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 작업에 성공 하면는 `CDockablePane` 하 고, 그렇지 않으면 창에서 도킹 되어 있는지 `NULL`합니다.  
+ 작업이 성공한 경우의 `CDockablePane` 창에 도킹 된 되었으면 NULL는 합니다.  
   
 ##  <a name="findfloatingpanebyid"></a>  CPaneFrameWnd::FindFloatingPaneByID  
  부동 창의 전역 목록에서 지정된 컨트롤 ID를 가진 창을 찾습니다.  
@@ -489,13 +489,13 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
   
 ### <a name="parameters"></a>매개 변수  
  [in] *nID*  
- 찾을 창의 컨트롤 ID를 나타냅니다.  
+ 검색할 창의 컨트롤 ID를 나타냅니다.  
   
 ### <a name="return-value"></a>반환 값  
- 지정 된 컨트롤 ID; 인 창 그렇지 않으면 `NULL`없는 창 포함 하는 지정 된 컨트롤 id입니다.  
+ 지정 된 컨트롤 ID; 인 창 그렇지 않은 경우 NULL을 없는 창에 지정 된 컨트롤 id입니다.  
   
 ##  <a name="framefrompoint"></a>  CPaneFrameWnd::FrameFromPoint  
- 지정된 된 지점이 포함 된 미니 프레임 창을 찾습니다.  
+ 지정 된 지점이 포함 된 미니 프레임 창을 찾습니다.  
   
 ```  
 static CPaneFrameWnd* __stdcall FrameFromPoint(
@@ -506,20 +506,20 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] *pt*  
- 화면 좌표 점입니다.  
+ [in] *(태평양 표준시)*  
+ 화면 좌표 지점입니다.  
   
  [in] *nSensitivity*  
- 이 크기에 따라 미니 프레임 창의 검색 영역을 늘립니다. 미니 프레임 창이 지정된 된 점을 증가 된 영역에 해당 하는 경우 검색 조건을 충족 합니다.  
+ 이 크기에 따라 미니 프레임 창의 검색 영역을 늘립니다. 미니 프레임 창을 지정 된 증가 된 영역에 해당 하는 경우 검색 조건을 충족 합니다.  
   
  [in] *pFrameToExclude*  
  검색에서 제외할 미니 프레임 창을 지정 합니다.  
   
  [in] *bFloatMultiOnly*  
- 경우 `TRUE`만 있는 미니 프레임 창을 검색는 `CBRS_FLOAT_MULTI` 스타일입니다. 경우 `FALSE`, 모든 미니 프레임 창을 검색 합니다.  
+ TRUE 이면 CBRS_FLOAT_MULTI 스타일이 적용 된 미니 프레임 창을 검색 합니다. FALSE 이면 모든 미니 프레임 창을 검색 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 포함 된 미니 프레임 창에 대 한 포인터 *pt*고, 그렇지 않으면 `NULL`합니다.  
+ 포함 된 미니 프레임 창에 대 한 포인터 *pt*그렇지 않으면 NULL입니다.  
   
 ##  <a name="getcaptionheight"></a>  CPaneFrameWnd::GetCaptionHeight  
  미니 프레임 창 캡션의 높이를 반환합니다.  
@@ -529,10 +529,10 @@ virtual int GetCaptionHeight() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 미니 프레임 창을 픽셀 단위로 높이입니다.  
+ 미니 프레임 창의 픽셀 높이입니다.  
   
 ### <a name="remarks"></a>설명  
- 미니 프레임 창의 높이 확인 하려면이 메서드를 호출 합니다. 기본적으로는 높이가 설정 `SM_CYSMCAPTION`합니다. 자세한 내용은 참조 [GetSystemMetrics 함수](http://msdn.microsoft.com/library/windows/desktop/ms724385)합니다.  
+ 미니 프레임 창의 높이 확인 하려면이 메서드를 호출 합니다. 기본적으로 높이 SM_CYSMCAPTION에 설정 됩니다. 자세한 내용은 [GetSystemMetrics 함수](http://msdn.microsoft.com/library/windows/desktop/ms724385)합니다.  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  미니 프레임 창 캡션의 경계 사각형을 계산합니다.  
@@ -543,7 +543,7 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
   
 ### <a name="parameters"></a>매개 변수  
  [out] *rectCaption*  
- 크기와 화면 좌표에 미니 프레임 창 캡션의 위치를 포함합니다.  
+ 화면 좌표에 미니 프레임 창 캡션의 위치와 크기를 포함합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 미니 프레임 창 캡션의 경계 사각형을 계산 하기 위해 프레임 워크에서 호출 됩니다.  
@@ -582,11 +582,11 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 ### <a name="return-value"></a>반환 값  
  도킹 모드입니다. 다음 값 중 하나입니다.  
   
-- `DT_STANDARD`  
+- DT_STANDARD  
   
-- `DT_IMMEDIATE`  
+- DT_IMMEDIATE  
   
-- `DT_SMART`  
+- DT_SMART  
   
 ##  <a name="getfirstvisiblepane"></a>  CPaneFrameWnd::GetFirstVisiblePane  
  미니 프레임 창에 포함된 첫 번째 표시 창을 반환합니다.  
@@ -596,7 +596,7 @@ virtual CWnd* GetFirstVisiblePane() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 미니 프레임 창에서 첫 번째 창 또는 `NULL` 경우 미니 프레임 창에 창이 없습니다.  
+ 미니 프레임 창 또는 미니 프레임 창 없는 창을 포함 하는 경우 NULL의 첫 번째 창입니다.  
   
 ##  <a name="gethotpoint"></a>  CPaneFrameWnd::GetHotPoint  
 
@@ -617,7 +617,7 @@ virtual CWnd* GetPane() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 미니 프레임에 포함 된 창을 또는 `NULL` 경우 미니 프레임 창에 창이 없습니다.  
+ 미니 프레임 창 없는 창을 포함 하는 경우 NULL을 미니 프레임에 포함 된 창입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -629,7 +629,7 @@ virtual int GetPaneCount() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 미니 프레임 창의 창 수를 지정 합니다. 이 값은 0 일 수 있습니다.  
+ 미니 프레임 창의 창이 횟수입니다. 이 값은 0 일 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -689,27 +689,27 @@ virtual LRESULT HitTest(
   
 ### <a name="parameters"></a>매개 변수  
  [in] *지점*  
- 테스트 지점입니다.  
+ 테스트할 점입니다.  
   
  [in] *bDetectCaption*  
- 경우 `TRUE`, 캡션에 대해 지점을 확인 합니다. 경우 `FALSE`, 캡션을 무시 합니다.  
+ TRUE 이면 캡션에 대해 시점을 확인 합니다. FALSE 이면 캡션을 무시 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  다음 값 중 하나입니다.  
   
 |값|의미|  
 |-----------|-------------|  
-|`HTNOWHERE`|미니 프레임 창 외부에서는 지점이입니다.|  
-|`HTCLIENT`|클라이언트 영역에 점이 의미 합니다.|  
-|`HTCAPTION`|캡션을 점은입니다.|  
-|`HTTOP`|점은 위쪽에 있습니다.|  
-|`HTTOPLEFT`|점은 왼쪽 위에 있습니다.|  
-|`HTTOPRIGHT`|오른쪽 상단에 점이 의미 합니다.|  
-|`HTLEFT`|점은 왼쪽에 있습니다.|  
-|`HTRIGHT`|점은 오른쪽에 있습니다.|  
-|`HTBOTTOM`|점은 맨 아래에 있습니다.|  
-|`HTBOTTOMLEFT`|점은 왼쪽 아래에 있습니다.|  
-|`HTBOTTOMRIGHT`|점은 오른쪽 아래에 있습니다.|  
+|HTNOWHERE|미니 프레임 창 외부 점은입니다.|  
+|HTCLIENT|클라이언트 영역에 점이 합니다.|  
+|HTCAPTION|캡션에 점은입니다.|  
+|HTTOP|맨 위에 있는 점은입니다.|  
+|HTTOPLEFT|점은 맨 왼쪽에 있습니다.|  
+|HTTOPRIGHT|오른쪽 맨 위에 있는 점은입니다.|  
+|HTLEFT|점은 왼쪽에 있습니다.|  
+|HTRIGHT|점은 오른쪽에 있습니다.|  
+|HTBOTTOM|점은 맨 아래에 있습니다.|  
+|HTBOTTOMLEFT|점은 왼쪽 아래에 있습니다.|  
+|HTBOTTOMRIGHT|점은 오른쪽 아래에 있습니다.|  
   
 ##  <a name="iscaptured"></a>  CPaneFrameWnd::IsCaptured  
 
@@ -741,12 +741,12 @@ virtual BOOL IsRollDown() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 미니 프레임 창을; 아래로 떨어질 경우 그렇지 않으면 `FALSE`합니다.  
+ 미니 프레임 창을 아래로; 롤포워드해야 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 미니 프레임 창을 롤 다운 되어야 하는지 여부를 결정 하는 프레임 워크에서 호출 됩니다. 포함 된 하나 이상의 창이 포함 된 미니 프레임 창에 대 한에서는 롤업/롤 다운 기능이 사용 되는 `AFX_CBRS_AUTO_ROLLUP` 플래그입니다. 이 플래그는 창 만들어질 때 설정 됩니다. 자세한 내용은 참조 [cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)합니다.  
+ 이 메서드는 미니 프레임 창을 롤 다운 되어야 하는지 여부를 확인 하기 위해 프레임 워크에서 호출 됩니다. 롤업/롤 다운 기능 AFX_CBRS_AUTO_ROLLUP 플래그가 있는 하나 이상의 창을 포함 하는 경우 미니 프레임 창에 대 한 활성화 됩니다. 이 플래그는 창이 만들어질 때 설정 됩니다. 자세한 내용은 [cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)합니다.  
   
- 기본적으로 프레임 워크는 창이 롤 다운 있는지 여부를 확인 하기 위해 미니 프레임 창 경계 사각형 안에 마우스 포인터 인지 확인 합니다. 파생된 클래스에서이 동작을 재정의할 수 있습니다.  
+ 기본적으로 프레임 창이 롤 다운 되어야 하는지 여부를 확인 하는 미니 프레임 창 경계 사각형 안에 마우스 포인터 인지 여부를 확인 합니다. 파생된 클래스에서이 동작을 재정의할 수 있습니다.  
   
 ##  <a name="isrollup"></a>  CPaneFrameWnd::IsRollUp  
  미니 프레임 창이 롤업되어야 하는지 여부를 결정합니다.  
@@ -756,12 +756,12 @@ virtual BOOL IsRollUp() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 미니 프레임 창을; 롤포워드해야 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ 미니 프레임 창을; 롤포워드해야 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 확인 여부 미니 프레임 창이 롤업 되어야 하는 프레임 워크에서 호출 됩니다. 포함 된 하나 이상의 창이 포함 된 미니 프레임 창에 대 한에서는 롤업/롤 다운 기능이 사용 되는 `AFX_CBRS_AUTO_ROLLUP` 플래그입니다. 이 플래그는 창 만들어질 때 설정 됩니다. 자세한 내용은 참조 [cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)합니다.  
+ 이 메서드는 지 여부를 미니 프레임 창이 롤업 되어야 확인 하기 위해 프레임 워크에서 호출 됩니다. 롤업/롤 다운 기능 AFX_CBRS_AUTO_ROLLUP 플래그가 있는 하나 이상의 창을 포함 하는 경우 미니 프레임 창에 대 한 활성화 됩니다. 이 플래그는 창이 만들어질 때 설정 됩니다. 자세한 내용은 [cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)합니다.  
   
- 기본적으로 프레임 워크는 겹쳐서 창에 있는지 여부를 결정 하는 미니 프레임 창 경계 사각형 안에 마우스 포인터 인지 확인 합니다. 파생된 클래스에서이 동작을 재정의할 수 있습니다.  
+ 기본적으로 프레임 창이 롤업 되어야 하는지 여부를 확인 하는 미니 프레임 창 경계 사각형 안에 마우스 포인터 인지 여부를 확인 합니다. 파생된 클래스에서이 동작을 재정의할 수 있습니다.  
   
 ##  <a name="killdockingtimer"></a>  CPaneFrameWnd::KillDockingTimer  
  도킹 타이머를 중지합니다.  
@@ -784,20 +784,20 @@ virtual BOOL LoadState(
  프로필 이름입니다.  
   
  [in] *uiID*  
- 창 id입니다.  
+ 창 ID  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 창 상태를 성공적으로 로드 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ 창 상태를 성공적으로 로드 된 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ##  <a name="m_busesavebits"></a>  CPaneFrameWnd::m_bUseSaveBits  
- 창 클래스를 등록할지 여부를 지정 된 `CS_SAVEBITS` 클래스 스타일입니다.  
+ CS_SAVEBITS 클래스 스타일이 적용 된 창 클래스를 등록할지 여부를 지정 합니다.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bUseSaveBits;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 정적 멤버를 설정 `TRUE` 있는 미니 프레임 창 클래스를 등록 하는 `CS_SAVEBITS` 스타일입니다. 사용자가 미니 프레임 창을 끌 때 깜빡임 줄이기 하는 데 도움이 될 수 있습니다.  
+ 이 정적 멤버 CS_SAVEBITS 스타일이 적용 된 미니 프레임 창 클래스를 등록 하려면 true를 설정 합니다. 이 줄일 수 있습니다 미니 프레임 창을 끌 때 깜박임 합니다.  
   
 ##  <a name="onbeforedock"></a>  CPaneFrameWnd::OnBeforeDock  
  도킹 가능한지 여부를 결정합니다.  
@@ -807,7 +807,7 @@ virtual BOOL OnBeforeDock();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 도킹 하는 것이 가능 합니다. 그렇지 않으면 `FALSE`합니다.  
+ 도킹 가능한; 이면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ##  <a name="oncheckrollstate"></a>  CPaneFrameWnd::OnCheckRollState  
  미니 프레임 창이 롤업 또는 롤다운되어야 하는지를 결정합니다.  
@@ -817,9 +817,9 @@ virtual void OnCheckRollState();
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 미니 프레임 창 위로 또는 아래로 롤오버 되어야 하는지 여부를 결정 하는 프레임 워크에서 호출 됩니다.  
+ 이 메서드는 위나 아래로 미니 프레임 창을 롤백할 수 있는지 여부를 확인 하기 위해 프레임 워크에서 호출 됩니다.  
   
- 기본적으로 프레임 워크에서 호출 [CPaneFrameWnd::IsRollUp](#isrollup) 및 [CPaneFrameWnd::IsRollDown](#isrolldown) 하 고 방금 확장 또는 미니 프레임 창을 복원 합니다. 다른 시각적 효과 사용 하는 파생된 클래스에서이 메서드를 재정의할 수 있습니다.  
+ 기본적으로 프레임 워크는 다음과 같이 호출 됩니다. [CPaneFrameWnd::IsRollUp](#isrollup) 하 고 [CPaneFrameWnd::IsRollDown](#isrolldown) 및 방금 확장 또는 미니 프레임 창을 복원 합니다. 다른 시각 효과 사용 하 여 파생된 클래스에서이 메서드를 재정의할 수 있습니다.  
   
 ##  <a name="ondocktorecentpos"></a>  CPaneFrameWnd::OnDockToRecentPos  
  가장 최근 위치에 미니 프레임 창을 도킹합니다.  
@@ -837,10 +837,10 @@ virtual void OnDrawBorder(CDC* pDC);
   
 ### <a name="parameters"></a>매개 변수  
  [in] *pDC*  
- 테두리를 그리는 데 사용 되는 장치 컨텍스트.  
+ 테두리를 그리는 데 디바이스 컨텍스트입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 미니 프레임 창의 테두리를 그리는 프레임 워크에서 호출 됩니다.  
+ 이 메서드는 미니 프레임 창의 테두리를 그리는 데 프레임 워크에서 호출 됩니다.  
   
 ##  <a name="onkillrolluptimer"></a>  CPaneFrameWnd::OnKillRollUpTimer  
  롤업 타이머를 중지합니다.  
@@ -860,22 +860,22 @@ virtual void OnMovePane(
   
 ### <a name="parameters"></a>매개 변수  
  [in] *pBar*  
- (무시 됨) 창에 대 한 포인터입니다.  
+ 창 (무시 됨)에 대 한 포인터입니다.  
   
  [in] *ptOffset*  
- 창을 이동 하는 기준인 오프셋입니다.  
+ 창을 이동에 사용 되는 오프셋입니다.  
   
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
- 미니 프레임 창 안에 창 레이아웃을 조정합니다.  
+ 미니 프레임 창 내에서 창 레이아웃을 조정합니다.  
   
 ```  
 virtual void OnPaneRecalcLayout();
 ```  
   
 ### <a name="remarks"></a>설명  
- 미니 프레임 창 안에 창 레이아웃을 조정 해야 하는 경우이 메서드를 호출 하는 프레임 워크입니다.  
+ 미니 프레임 창 내에서 창 레이아웃을 조정 해야 하는 경우이 메서드를 호출 하는 프레임 워크입니다.  
   
- 기본적으로는 창에 미니 프레임 창의 전체 클라이언트 영역을 채우는 데 배치 됩니다.  
+ 기본적으로 창에는 미니 프레임 창의 전체 클라이언트 영역에 배치 됩니다.  
   
 ##  <a name="onsetrolluptimer"></a>  CPaneFrameWnd::OnSetRollUpTimer  
  롤업 타이머를 설정합니다.  
@@ -898,10 +898,10 @@ virtual void OnShowPane(
  되는 창 표시 또는 숨겨집니다.  
   
  [in] *bShow*  
- `TRUE` 창; 표시 됨 `FALSE` 창에서이 숨겨진 경우.  
+ 창으로 표시 되는 경우 TRUE입니다. 창에는 숨겨진 경우 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 미니 프레임 창에 창 크기를 표시 하거나 숨길 때 프레임 워크에서 호출 됩니다. 기본 구현은 아무 작업도 수행하지 않습니다.  
+ 미니 프레임 창의 창이 표시 하거나 숨길 때 프레임 워크에서 호출 됩니다. 기본 구현은 아무 작업도 수행하지 않습니다.  
   
 ##  <a name="pin"></a>  CPaneFrameWnd::Pin  
 
@@ -927,16 +927,16 @@ virtual CBasePane* PaneFromPoint(
   
 ### <a name="parameters"></a>매개 변수  
  [in] *지점*  
- 지점 화면 좌표에서 사용자가 클릭 합니다.  
+ 지점을 화면 좌표에서 사용자를 클릭 합니다.  
   
  [in] *nSensitivity*  
  이 매개 변수는 사용되지 않습니다.  
   
  [in] *bCheckVisibility*  
- `TRUE` 표시 창에만 반환 되어야 함을;를 지정 하려면 그렇지 않으면 `FALSE`합니다.  
+ 표시 창만 반환 되어야 함을;을 지정 하려면 TRUE 그렇지 않으면 FALSE입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 사용자를 클릭 하는 창 또는 `NULL` 없는 창 해당 위치에 있는 경우.  
+ 사용자가 클릭 하 고 창 또는 없습니다 창의 해당 위치에 있는 경우 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
  지정된 된 점을 포함 하는 창을 가져오려면이 메서드를 호출 합니다.  
@@ -970,16 +970,16 @@ virtual void RemovePane(
   
 ### <a name="parameters"></a>매개 변수  
  [in] *pWnd*  
- 제거 하 고 창에 대 한 포인터입니다.  
+ 제거할 창에 대 한 포인터입니다.  
   
  [in] *bDestroy*  
- 미니 프레임 창을 처리 방식을 지정 합니다. 경우 *bDestroy* 은 `TRUE`,이 메서드는 미니 프레임 창을 즉시 삭제 합니다. 이 경우 `FALSE`,이 메서드는 특정 지연 후 미니 프레임 창을 삭제 합니다.  
+ 미니 프레임 창을 처리 방식을 지정 합니다. 하는 경우 *bDestroy* 가 TRUE 이면이 메서드 즉시 미니 프레임 창을 소멸 시킵니다. FALSE 인 경우이 메서드를 특정 지연 후 미니 프레임 창을 소멸 시킵니다.  
   
  [in] *bNoDelayedDestroy*  
- 경우 `TRUE`지연 된, 소멸을 사용할 수 없습니다. 경우 `FALSE`지연 된, 소멸 사용 하도록 설정 합니다.  
+ TRUE 이면 지연된 소멸 비활성화 됩니다. FALSE 인 경우 지연 된 소멸 사용 됩니다.  
   
 ### <a name="remarks"></a>설명  
- 프레임 워크는 즉시 또는 특정 지연 후 미니 프레임 창을 손상 될 수 있습니다. 미니 프레임 창 소멸을 연기 하려는 경우 전달 `FALSE` 에 *bNoDelayedDestroy* 매개 변수입니다. 지연 된 소멸 프레임 워크를 처리할 때이 발생 하는 `AFX_WM_CHECKEMPTYMINIFRAME` 메시지입니다.  
+ 프레임 워크는 특정 지연 후 즉시 또는 미니 프레임 창을 손상 될 수 있습니다. 미니 프레임 창 소멸을 지연 하려는 경우 FALSE를 전달 합니다 *bNoDelayedDestroy* 매개 변수입니다. 지연 된 소멸 프레임 워크 AFX_WM_CHECKEMPTYMINIFRAME 메시지를 처리할 때 발생 합니다.  
   
 ##  <a name="replacepane"></a>  CPaneFrameWnd::ReplacePane  
  한 창을 다른 창으로 대체합니다.  
@@ -1011,10 +1011,10 @@ virtual BOOL SaveState(
  프로필 이름입니다.  
   
  [in] *uiID*  
- 창 id입니다.  
+ 창 ID  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 창 상태를 성공적으로 저장 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ TRUE 이면 창 상태를 저장 했습니다. 그렇지 않으면 FALSE입니다.  
   
 ##  <a name="setcaptionbuttons"></a>  CPaneFrameWnd::SetCaptionButtons  
  캡션 단추를 설정합니다.  
@@ -1027,13 +1027,13 @@ virtual void SetCaptionButtons(DWORD dwButtons);
  [in] *dwButtons*  
  다음 값의 비트 OR 조합 합니다.  
   
-- `AFX_CAPTION_BTN_CLOSE`  
+- AFX_CAPTION_BTN_CLOSE  
   
-- `AFX_CAPTION_BTN_PIN`  
+- AFX_CAPTION_BTN_PIN  
   
-- `AFX_CAPTION_BTN_MENU`  
+- AFX_CAPTION_BTN_MENU  
   
-- `AFX_CAPTION_BTN_CUSTOMIZE`  
+- AFX_CAPTION_BTN_CUSTOMIZE  
   
 ##  <a name="setdelayshow"></a>  CPaneFrameWnd::SetDelayShow  
 
@@ -1068,7 +1068,7 @@ void SetDockingTimer(UINT nTimeOut);
   
 ### <a name="parameters"></a>매개 변수  
  [in] *nTimeOut*  
- 제한 시간 값 (밀리초)입니다.  
+ 시간 제한 값 (밀리초)입니다.  
   
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState  
  도킹 상태를 설정합니다.  
@@ -1107,11 +1107,11 @@ virtual BOOL SetPreDockState(
  [in] *preDockState*  
  가능한 값:  
   
-- `PDS_NOTHING`,  
+- PDS_NOTHING,  
   
-- `PDS_DOCK_REGULAR`,  
+- PDS_DOCK_REGULAR,  
   
-- `PDS_DOCK_TO_TAB`  
+- PDS_DOCK_TO_TAB  
   
  [in] *pBarToDock*  
  도킹 창에 대 한 포인터입니다.  
@@ -1120,17 +1120,17 @@ virtual BOOL SetPreDockState(
  도킹 메서드입니다. (이 매개 변수가 무시 됩니다.)  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 미니 프레임 창이 도킹; 되지 않은 경우 `FALSE` 고정 되어 있는 경우.  
+ TRUE 이면 미니 프레임 창을 도킹; 되지 않습니다. 고정 되어 있는 경우 FALSE입니다.  
   
 ##  <a name="sizetocontent"></a>  CPaneFrameWnd::SizeToContent  
- 포함 된 창에 해당 하는 미니 프레임 창의 크기를 조정 합니다.  
+ 미니 프레임 창의 크기를 조정 하는 포함 된 창에 해당 하는 것입니다.  
   
 ```  
 virtual void SizeToContent();
 ```  
   
 ### <a name="remarks"></a>설명  
- 포함 된 창 크기에 미니 프레임 창의 크기를 조정 하려면이 메서드를 호출 합니다.  
+ 포함 된 창의 크기를 미니 프레임 창의 크기를 조정 하려면이 메서드를 호출 합니다.  
   
 ##  <a name="starttearoff"></a>  CPaneFrameWnd::StartTearOff  
  메뉴를 분리합니다.  
@@ -1144,7 +1144,7 @@ BOOL StartTearOff(CMFCPopu* pMenu);
  메뉴에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 메서드가 성공했으면 `TRUE`이고, 실패했으면 `FALSE`입니다.  
+ 메서드가 성공 하면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ##  <a name="storerecentdocksiteinfo"></a>  CPaneFrameWnd::StoreRecentDockSiteInfo  
 

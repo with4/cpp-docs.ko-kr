@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::initializer_list::size
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3941464c80d254b6675e1982dac952c3f29a0f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11014748dcbfa105d111e9e2a8d83fc57d0cb405
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847041"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954056"
 ---
 # <a name="initializerlist-class"></a>initializer_list 클래스
 
@@ -44,7 +44,7 @@ class initializer_list
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Type`|`initializer_list`에 저장되는 요소 데이터 형식입니다.|
+|*Type*|`initializer_list`에 저장되는 요소 데이터 형식입니다.|
 
 
 ## <a name="remarks"></a>설명
@@ -127,14 +127,14 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`First`|복사할 요소의 범위에서 첫 번째 요소의 위치입니다.|
-|`Last`|복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.|
+|*첫 번째*|복사할 요소의 범위에서 첫 번째 요소의 위치입니다.|
+|*마지막*|복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.|
 
 ### <a name="remarks"></a>설명
 
 `initializer_list`는 지정된 형식의 개체 배열을 기반으로 합니다. `initializer_list`를 복사하면 동일한 개체를 가리키는 목록의 두 번째 인스턴스가 생성되고 기본 개체는 복사되지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // initializer_list_class.cpp

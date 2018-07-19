@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 161551747455bae1347e5059ec3afffd2649294c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e5f7a4d5ad1d7991e69a5092333974ec3a8ade07
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845299"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956624"
 ---
 # <a name="isarithmetic-class"></a>is_arithmetic 클래스
 
@@ -37,13 +37,13 @@ struct is_arithmetic;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 형식이 쿼리입니다.
+*Ty* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `Ty` 형식이 산술 형식, 즉 정수 형식이나 부동 소수점 형식 또는 이러한 형식 중 하나의 `cv-qualified` 형태인 경우 true이고 그렇지 않은 경우 false입니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *Ty* 는 산술 형식, 즉 정수 계열 형식 또는 부동 소수점 형식 또는 `cv-qualified` 형태의 그 중 하나, 그렇지 않으면 false입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__is_arithmetic.cpp

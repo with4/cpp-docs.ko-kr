@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a410dae35771d89b9d9ae72c8221501f051d10e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f58622230541b0eedf4e7c73d12e81c36ea70fc9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846573"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953477"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
-포함 된 `iostreams` 표준 헤더 \<iomanip > 여러 조작자를 정의 하는 각 단일 인수입니다.
+포함 된 `iostreams` 표준 헤더 \<iomanip > 여러 조작자를 정의 하는 단일 인수입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -37,7 +37,7 @@ ms.locfileid: "33846573"
 
 ## <a name="remarks"></a>설명
 
-이러한 각 조작자는 **T1**부터 **T10**까지라는 지정되지 않은 형식을 반환하며, 이 형식은 `basic_istream`\<**Elem**, **Tr**>`::`[operator>>](../standard-library/istream-operators.md#op_gt_gt) 및 `basic_ostream`\<**Elem**, **Tr**>`::`[operator<<](../standard-library/ostream-operators.md#op_lt_lt)를 모두 오버로드합니다.
+호출 하는 지정 되지 않은 형식, 반환 각 이러한 조작자 `T1` 를 통해 `T10`를 둘 다 오버 로드는 `basic_istream` \< **Elem**, **Tr** > `::` [연산자 >>](../standard-library/istream-operators.md#op_gt_gt) 하 고 `basic_ostream` \< **Elem**하십시오 **Tr** > `::` [연산자 <<](../standard-library/ostream-operators.md#op_lt_lt)합니다.
 
 ### <a name="manipulators"></a>조작자
 

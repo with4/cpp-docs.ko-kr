@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acdf63e062aab1407daee461e22f00f5d3c59cee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daf1565c2fe2d7a4620f83b765671fea80502102
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335817"
 ---
 # <a name="hseversioninfo-structure"></a>HSE_VERSION_INFO 구조체
-이 구조에 의해 지정 된 `pVer` 에서 매개 변수는 `CHttpServer::GetExtensionVersion` 멤버 함수입니다. ISA 버전 번호 및는 ISA.에 대 한 텍스트 설명을 제공합니다  
+이 구조는 가리키는 합니다 *pVer* 에 매개 변수는 `CHttpServer::GetExtensionVersion` 멤버 함수입니다. ISA 버전 번호 및 텍스트는 ISA. 설명은 제공  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +40,7 @@ typedef struct _HSE_VERSION_INFO {
  ISA.의 버전 번호  
   
  *lpszExtensionDesc*  
- ISA.의 텍스트 설명 기본 구현은 개체 틀 텍스트를 제공합니다. 재정의 `CHttpServer::GetExtensionVersion` 고유한 설명을 제공 합니다.  
+ 텍스트에 대 한 설명은 ISA. 기본 구현은 자리 표시자 텍스트를 제공합니다. 재정의 `CHttpServer::GetExtensionVersion` 고유한 설명을 제공 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** httpext.h  

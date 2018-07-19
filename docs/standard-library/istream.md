@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3e55aaa8cfc659672632a897efc7543effaf26
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7000bd30e34836466e9f662f9b6b0dd8f2ecde4c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852379"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956556"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -40,8 +40,8 @@ iostreams에 대한 추출을 중재하는 템플릿 클래스 basic_istream 및
 
 |형식 이름|설명|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|`char`에서 특수화된 `basic_iostream` 형식입니다.|
-|[istream](../standard-library/istream-typedefs.md#istream)|`char`에서 특수화된 `basic_istream` 형식입니다.|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|형식 `basic_iostream` 에서 특수화 된 **char**합니다.|
+|[istream](../standard-library/istream-typedefs.md#istream)|형식 `basic_istream` 에서 특수화 된 **char**합니다.|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|**wchar**에서 특수화된 `basic_iostream` 형식입니다.|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|**wchar**에서 특수화된 `basic_istream` 형식입니다.|
 
@@ -63,7 +63,7 @@ iostreams에 대한 추출을 중재하는 템플릿 클래스 basic_istream 및
 |클래스|설명|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|입력과 출력을 둘 다 수행할 수 있는 스트림 클래스입니다.|
-|[basic_istream](../standard-library/basic-istream-class.md)|이 템플릿 클래스는 문자 특성이 **Tr** 클래스([traits_type](../standard-library/basic-ios-class.md#traits_type)이라고도 함)에 의해 결정되는 **Elem**([char_type](../standard-library/basic-ios-class.md#char_type)이라고도 함) 형식의 요소가 있는 스트림 버퍼에서 요소 및 인코드된 개체의 추출을 제어하는 개체를 설명합니다.|
+|[basic_istream](../standard-library/basic-istream-class.md)|요소의 추출을 제어 하는 개체 및 형식의 요소가 있는 스트림 버퍼에서 인코딩된 개체를 설명 하는 템플릿 클래스 `Elem`이 라고도 [char_type](../standard-library/basic-ios-class.md#char_type), 문자 특성이 클래스에 의해 결정 됩니다 `Tr`이 라고도 [traits_type](../standard-library/basic-ios-class.md#traits_type)합니다.|
 
 ## <a name="see-also"></a>참고자료
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb1e42bf61c1fa70ee74063cd6857d842ee87de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92dce97754eccc8cd4f618db3ac3e23574fb54ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846495"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956584"
 ---
 # <a name="hashcompare-class"></a>hash_compare 클래스
 
@@ -33,17 +33,17 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 
 ## <a name="remarks"></a>설명
 
-각 해시 연관 컨테이너는 **Traits**(템플릿 매개 변수) 형식의 해시 특성 개체를 저장합니다. hash_compare 특수화에서 클래스를 파생시켜 특정 함수 및 개체를 선택적으로 재정의하거나, 최소한의 특정 요구를 충족하는 경우 이 클래스의 고유한 버전을 제공할 수 있습니다. 특히 **hash_compare\<Key, Traits>** 형식의 개체 hash_comp에서는 위의 컨테이너에 다음과 같은 동작이 필요합니다.
+각 해시 연관 컨테이너 형식의 해시 특성 개체를 저장 `Traits` (템플릿 매개 변수). hash_compare 특수화에서 클래스를 파생시켜 특정 함수 및 개체를 선택적으로 재정의하거나, 최소한의 특정 요구를 충족하는 경우 이 클래스의 고유한 버전을 제공할 수 있습니다. 형식의 개체 hash_comp에 대 한 특히 `hash_compare<Key, Traits>`, 위의 컨테이너에 다음과 같은 동작이 필요 합니다.
 
-- **Key** 형식의 모든 값 `key`에 대해 **hash_comp**(`key`) 호출은 **size_t** 형식의 값 분포를 생성하는 해시 함수 역할을 합니다. hash_compare에서 제공하는 함수는 `key`를 반환합니다.
+- 모든 값에 대 한 `key` 형식의 `Key`를 호출 **hash_comp**(`key`) 형식의 값 분포를 생성 하는 해시 함수로 `size_t`합니다. hash_compare에서 제공하는 함수는 `key`를 반환합니다.
 
-- 시퀀스에서 `key2` 앞에 오고 동일한 해시 값(해시 함수에서 반환된 값)을 가진 **Key** 형식의 모든 값 `key1`에 대해 **hash_comp**(`key2`, `key1`)는 false입니다. 함수가 **Key** 형식의 값에 전체 순서 지정을 적용해야 합니다. hash_compare에서 제공하는 함수는 *comp*(`key2`, `key1`)을 반환합니다. 여기서`,`*comp*는 개체 hash_comp를 생성할 때 지정할 수 있는 **Traits** 형식의 저장된 개체입니다. 기본 **Traits** 매개 변수 형식 **less\<Key>** 에 대해 정렬 키 값은 결코 감소하지 않습니다.
+- 모든 값에 대 한 `key1` 형식의 `Key` 앞에 오는 `key2` 시퀀스의 동일 하 고 해시 값 (해시 함수에서 반환 된 값)을 **hash_comp**(`key2`, `key1`)은 false입니다. 함수는 전체 형식의 값에 순서 지정을 적용 해야 합니다 `Key`합니다. Hash_compare에서 제공 하는 함수 반환 *comp*(`key2`, `key1`) `,` 여기서 *comp* 형식의 저장된 된 개체는 `Traits` 시기를 지정할 수 있습니다 개체 hash_comp를 생성 합니다. 기본 `Traits` 매개 변수 형식 `less<Key>`, 정렬 키 값 결코 감소 합니다.
 
-- 정수 상수 **bucket_size**는 컨테이너가 초과하지 않도록 해야 하는 "버킷당"(해시 테이블 항목) 평균 요소 수를 지정합니다. 0보다 커야 합니다. hash_compare에서 제공하는 값은 4입니다.
+- 정수 상수 `bucket_size` "버킷 당" (해시 테이블 항목) 컨테이너를 초과 하지는 요소의 평균 수를 지정 합니다. 0보다 커야 합니다. hash_compare에서 제공하는 값은 4입니다.
 
-- 정수 상수 **min_buckets**는 해시 테이블에서 유지할 최소 버킷 수를 지정합니다. 0보다 큰 2의 거듭제곱이어야 합니다. hash_compare에서 제공하는 값은 8입니다.
+- 정수 상수 `min_buckets` 해시 테이블을 유지 하기 위해 버킷 최소 수를 지정 합니다. 0보다 큰 2의 거듭제곱이어야 합니다. hash_compare에서 제공하는 값은 8입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 hash_compare를 선언 및 사용하는 방법의 예제는 [hash_map::hash_map](../standard-library/hash-map-class.md#hash_map), [hash_multimap::hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap), [hash_set::hash_set](../standard-library/hash-set-class.md#hash_set) 및 [hash_multiset::hash_multiset](../standard-library/hash-multiset-class.md#hash_multiset)에 대한 예제를 참조하세요.
 

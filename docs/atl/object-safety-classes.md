@@ -1,5 +1,5 @@
 ---
-title: 개체 안전 클래스 (ATL) | Microsoft Docs
+title: 개체 보안 클래스 (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f46d7297f1f66ac1eccb08fba1dff2a897d54e2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69caa94136268ef29258b11b324dbda86e3cf270
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355622"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953706"
 ---
-# <a name="object-safety-classes"></a>보안 개체 클래스
+# <a name="object-safety-classes"></a>개체 보안 클래스
 다음 클래스 개체 보안에 대 한 지원을 제공합니다.  
   
--   [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md) 개체가 초기화에 안전 또는 스크립트로 표시 될 수 있도록 합니다.  
+-   [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md) 개체가 초기화에 대 한 안전한 또는 스크립트에 대 한 안전 하 게 표시할 수 있도록 합니다.  
   
 ## <a name="related-articles"></a>관련 문서  
  [ATL 자습서](../atl/active-template-library-atl-tutorial.md)  

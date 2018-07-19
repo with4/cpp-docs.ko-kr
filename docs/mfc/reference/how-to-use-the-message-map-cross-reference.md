@@ -1,5 +1,5 @@
 ---
-title: '방법: 메시지 맵 상호 참조를 사용 하 여 | Microsoft Docs'
+title: '방법: 메시지 맵 상호 참조 사용 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d59d0bfc75f654cd9f8f15ff851ad42a619e271f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf76d8f7bb86bf3325a072df80a45e2f0a3ad985
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338900"
 ---
 # <a name="how-to-use-the-message-map-cross-reference"></a>방법: 메시지 맵 상호 참조 사용
-레이블이 지정 된 항목에 \<memberFxn >, 파생에 대 한 직접 멤버 함수를 작성 [CWnd](../../mfc/reference/cwnd-class.md) 클래스입니다. 함수 이름은 원하는 대로 지정 합니다. 와 같은 다른 함수 `OnActivate`, 클래스의 멤버 함수는 `CWnd`합니다. 에 메시지를 전달 하 고 호출 하는 경우는 `DefWindowProc` Windows 함수입니다. Windows 알림 메시지를 처리 하려면 해당 재정의 `CWnd` 파생된 클래스에는 함수입니다. 함수는 기본 클래스를 사용 하려면 기본 클래스에서 재정의 된 함수를 호출 해야 하 고 Windows 메시지에 응답 합니다.  
+레이블이 지정 된 항목의 \<memberFxn >에서 파생된 된 고유한 멤버 함수가 작성 [CWnd](../../mfc/reference/cwnd-class.md) 클래스. 원하는 어떤 이름도 함수를 제공 합니다. 와 같은 다른 함수 `OnActivate`, 클래스의 멤버 함수는 `CWnd`합니다. 메시지를 전달 하 고 호출 하는 경우는 `DefWindowProc` Windows 함수입니다. Windows 알림 메시지를 처리 하려면 해당 재정의 `CWnd` 파생된 클래스의 함수입니다. 함수는 기본 클래스를 사용 하려면 기본 클래스에서 재정의 된 함수를 호출 해야 하 고 Windows 메시지에 응답 합니다.  
   
- 모든 경우에는 함수 프로토타입에 배치 된 `CWnd`-파생된 클래스 헤더 및 메시지 맵 항목 표시 된 것 처럼 코드.  
+ 모든 경우에는 함수 프로토타입에 배치 된 `CWnd`-파생된 클래스 헤더 및 코드와 같이 메시지 맵 항목입니다.  
   
  다음과 같은 용어가 사용 됩니다.  
   
 |용어|정의|  
 |----------|----------------|  
-|ID|모든 사용자 지정 메뉴 항목 ID (**WM_COMMAND** 메시지) 또는 ID (자식 창 알림 메시지)를 제어 합니다.|  
-|"message"와 "wNotifyCode"|WINDOWS에 정의 된 대로 windows Id를 메시지입니다. 8.|  
-|nMessageVariable|반환 값이 포함 된 변수의 이름을 **RegisterWindowMessage** Windows 함수입니다.|  
+|ID|모든 사용자 정의 메뉴 항목 ID (WM_COMMAND 메시지) 또는 컨트롤 ID (자식 창 알림 메시지).|  
+|"message"와 "wNotifyCode"|WINDOWS에 정의 된 대로 Windows Id의 메시지입니다. 8.|  
+|nMessageVariable|반환 값이 포함 된 변수의 이름을 `RegisterWindowMessage` Windows 함수입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [메시지 맵](../../mfc/reference/message-maps-mfc.md)

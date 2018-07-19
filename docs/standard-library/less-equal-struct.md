@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b034b0179985d684df93575cc8ff934e5381554b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cfe7f0c579e0e22e3de98a9e5edf3abee6cfc2b3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852310"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953171"
 ---
 # <a name="lessequal-struct"></a>less_equal 구조체
 
-인수에서 작거나 같음 연산(`operator<=`)을 수행하는 이진 조건자입니다.
+작음-보다-또는-같음 연산을 수행 하는 이진 조건자 (`operator<=`) 인수에 대해 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -49,11 +49,11 @@ struct less_equal<void>
 
 ### <a name="parameters"></a>매개 변수
 
-`Type``T`, `U` 지 원하는 모든 형식은 `operator<=` 지정 되었거나 유추 된 형식의 피연산자를 사용 하는 합니다.
+*형식*, *T*합니다 *U* 지 원하는 모든 형식은 `operator<=` 지정 되었거나 유추 된 형식의 피연산자를 사용 하는 합니다.
 
-`Left` 작음 보다-또는-같음 연산의 왼쪽된 피연산자. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `T`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.
+*왼쪽* 없는 보다-또는-같음 연산의 왼쪽된 피연산자. 형식의 lvalue 참조 인수를 사용 하는 특수화 되지 않은 템플릿은 *형식*합니다. 특수화 된 템플릿은 완벽 하 게 전달의 lvalue 및 rvalue 참조 인수 형식 유추 *T*합니다.
 
-`Right` 작음 보다-또는-같음 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `U`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.
+*오른쪽* 없는 보다-또는-같음 연산의 오른쪽 피연산자입니다. 형식의 lvalue 참조 인수를 사용 하는 특수화 되지 않은 템플릿은 *형식*합니다. 특수화 된 템플릿은 완벽 하 게 전달의 lvalue 및 rvalue 참조 인수 형식 유추 *U*합니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -61,9 +61,9 @@ struct less_equal<void>
 
 ## <a name="remarks"></a>설명
 
-이진 조건자 `less_equal`< `Type`>은 이 형식이 표준 수학 요구 사항을 충족하는 경우에만 동등 클래스에 `Type` 형식 요소 값 집합의 엄격하고 약한 순서를 제공하여 그렇게 정렬되도록 합니다. 고유한 값의 모든 요소가 서로를 기준으로 정렬된다는 점에서 모든 포인터 형식에 대한 특수화는 요소의 전체 순서 지정을 생성합니다.
+이진 조건자 `less_equal` <  `Type`> 형식의 요소 값의 집합이 엄밀히 약한 정렬을 제공 *형식* 동등 클래스에이 이와 같은 수치는 표준 충족 하는 경우에 하 여 그렇게 정렬에 대 한 요구 사항입니다. 고유한 값의 모든 요소가 서로를 기준으로 정렬된다는 점에서 모든 포인터 형식에 대한 특수화는 요소의 전체 순서 지정을 생성합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // functional_less_equal.cpp

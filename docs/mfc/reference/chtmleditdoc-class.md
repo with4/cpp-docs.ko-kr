@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86d8cf9b3011865fac58515fb3429a363dd5946f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0d6d8f5f8fa3867e1a9e38dc6bf919d57ead72de
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335606"
 ---
 # <a name="chtmleditdoc-class"></a>CHtmlEditDoc 클래스
-와 [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), MFC 문서 뷰 아키텍처 컨텍스트 내에서 WebBrowser 편집 플랫폼의 기능을 제공 합니다.  
+사용 하 여 [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), MFC 문서 뷰 아키텍처 컨텍스트 내에서 WebBrowser 편집 플랫폼의 기능을 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,8 +52,8 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
   
 |이름|설명|  
 |----------|-----------------|  
-|[CHtmlEditDoc::GetView](#getview)|검색 된 `CHtmlEditView` 개체는이 문서에 연결 합니다.|  
-|[CHtmlEditDoc::IsModified](#ismodified)|관련된 보기 WebBrowser 컨트롤은 사용자가 수정 된 문서에 포함 되는지 여부를 반환 합니다.|  
+|[CHtmlEditDoc::GetView](#getview)|검색 된 `CHtmlEditView` 이 문서에 연결 된 개체입니다.|  
+|[CHtmlEditDoc::IsModified](#ismodified)|사용자가 수정 된 문서 관련된 보기의 WebBrowser 컨트롤에 포함 되는지 여부를 반환 합니다.|  
 |[CHtmlEditDoc::OpenURL](#openurl)|URL을 엽니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
@@ -69,24 +69,24 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
  **헤더:** afxhtml.h  
   
 ##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc  
- 생성 된 **CHtmlEditDoc** 개체입니다.  
+ `CHtmlEditDoc` 개체를 생성합니다.  
   
 ```  
 CHtmlEditDoc();
 ```  
   
 ##  <a name="getview"></a>  CHtmlEditDoc::GetView  
- 검색 된 [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) 개체는이 문서에 연결 합니다.  
+ 검색 된 [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) 이 문서에 연결 된 개체입니다.  
   
 ```  
 virtual CHtmlEditView* GetView() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 다음은 문서에 대 한 포인터를 반환 **CHtmlEditView** 개체입니다.  
+ 문서에 대 한 포인터를 반환 합니다. `CHtmlEditView` 개체입니다.  
   
 ##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified  
- 관련된 보기 WebBrowser 컨트롤은 사용자가 수정 된 문서에 포함 되는지 여부를 반환 합니다.  
+ 사용자가 수정 된 문서 관련된 보기의 WebBrowser 컨트롤에 포함 되는지 여부를 반환 합니다.  
   
 ```  
 virtual BOOL IsModified();
@@ -104,7 +104,7 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
  열려는 URL입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 **FALSE** 실패 합니다.  
+ 성공 하면 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [HTMLEdit 샘플](../../visual-cpp-samples.md)   

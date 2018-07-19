@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe02890ce8d8dcde099f4b91b23c770b2e36c96d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847948"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956868"
 ---
 # <a name="duration-class"></a>duration 클래스
 
@@ -87,7 +87,7 @@ class duration <duration<Rep, Period1>, Period2>;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<c h >
+**헤더:** \<chrono >
 
 **네임스페이스:** std::chrono
 
@@ -120,25 +120,25 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>매개 변수
 
-`Rep2` 틱 수를 나타내는 데 사용 되는 산술 형식입니다.
+*Rep2* 틱 수를 나타내는 산술 형식입니다.
 
-`Period2` A `std::ratio` 템플릿 특수화를 초 단위로 틱 기간을 나타내는입니다.
+*Period2* 는 `std::ratio` 틱 기간 단위 시간 (초)을 나타내는 템플릿 특수화입니다.
 
-`R` 기본 기간은의 틱 수입니다.
+*R* 기본 기간의 틱 수입니다.
 
-`Dur` 에 지정 된 기간의 틱 수가 `Period2`합니다.
+*기간* 으로 지정 된 기간의 틱 수 *Period2*합니다.
 
 ### <a name="remarks"></a>설명
 
 기본 생성자는 초기화되지 않은 개체를 생성합니다. 빈 중괄호를 사용한 값 초기화는 0 클록 틱의 시간 간격을 나타내는 개체를 초기화합니다.
 
-두 번째 하나의 템플릿 인수 생성자는 `std::ratio<1>`의 기본 기간을 사용하여 `R` 클록 팁의 시간 간격을 나타내는 개체를 생성합니다. 틱 개수 반올림을 방지하려는 경우, `duration::rep`를 부동 소수점 형식으로 처리할 수 없을 때 부동 소수점 형식으로 처리 가능한 표현 형식`Rep2`에서 기간 개체를 생성하는 것은 오류입니다.
+시간 간격을 나타내는 두 번째, 하나의 템플릿 인수 생성자는 개체를 생성 *R* 클록 틱의 기본 기간을 사용 하 여 `std::ratio<1>`입니다. 표현 형식에서 기간 개체를 생성 하는 오류를 방지 하기 위해 반올림 틱 개수 것 *Rep2* 부동 소수점으로 처리 될 수 있는 경우 입력 `duration::rep` 부동 소수점 형식으로 처리할 수 없습니다.
 
-세 번째 두 개의 템플릿 인수 생성자는 `Dur`로 지정되는 시간 간격과 같은 길이를 가진 시간 간격을 나타내는 개체를 생성합니다. 틱 개수 잘림을 방지하려는 경우, 대상 형식과 *전혀 다른* 형식을 가진 다른 기간 개체에서 기간 개체를 생성하는 것은 오류입니다.
+세 번째 두 템플릿 인수 생성자에 지정 된 시간 간격 길이가 시간 간격을 나타내는 개체를 생성 *기간*합니다. 틱 개수 잘림을 방지하려는 경우, 대상 형식과 *전혀 다른* 형식을 가진 다른 기간 개체에서 기간 개체를 생성하는 것은 오류입니다.
 
 `D2`를 부동 소수점 형식으로 처리할 수 없으며 [ratio_divide\<D1::period, D2::period>::type::den](../standard-library/ratio.md)이 1이 아닌 경우 기간 형식 `D1`은 또 다른 기간 형식 `D2`와 *전혀 다른* 형식입니다.
 
-`Rep2`가 암시적으로 `rep`로 변환 가능하고 `treat_as_floating_point<rep>`*가 true를 포함*하거나 `treat_as_floating_point<Rep2>`*가 false를 포함*할 경우 두 번째 생성자가 오버로드 확인에 참여하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.
+경우가 아니면 *Rep2* 암시적으로 변환할 수 `rep` 고 `treat_as_floating_point<rep>` *마찬가지* 하거나 `treat_as_floating_point<Rep2>` *false*, 두 번째 생성자는 오버 로드 확인에 참여 하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.
 
 오버플로가 변환에서 유도되고 `treat_as_floating_point<rep>`*가 true를 포함*하거나, `ratio_divide<Period2, period>::den`가 1과 같고 `treat_as_floating_point<Rep2>`*가 false를 포함*할 경우 세 번째 생성자는 오버로드 확인에 참여하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.
 
@@ -202,7 +202,7 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>매개 변수
 
-`Div` 첫 번째 방법에 대 한 `Div` 틱 수를 나타냅니다. 두 번째 메서드의 경우 `Div`는 틱 개수가 포함된 `duration` 개체입니다.
+*Div* 첫 번째 방법의 경우 *Div* 틱 수를 나타냅니다. 두 번째 방법의 경우 *Div* 되는 `duration` 틱 수를 포함 하는 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -218,7 +218,7 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>매개 변수
 
-`Mult` 지정 된 형식의 값 `duration::rep`합니다.
+*Mult* 으로 지정 된 형식의 값 `duration::rep`합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -234,7 +234,7 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>매개 변수
 
-`Div` 지정 된 형식의 값 `duration::rep`합니다.
+*Div* 으로 지정 된 형식의 값 `duration::rep`합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -274,7 +274,7 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>매개 변수
 
-`Dur` A `duration` 개체입니다.
+*기간* 는 `duration` 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -290,7 +290,7 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>매개 변수
 
-`Dur` A `duration` 개체입니다.
+*기간* 는 `duration` 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -314,7 +314,7 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>매개 변수
 
-`Div` Divisor 기간 개체 또는 틱 수를 나타내는 값입니다.
+*Div* 기간 개체 또는 틱 수를 나타내는 값입니다. 제 수입니다.
 
 ### <a name="remarks"></a>설명
 

@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 278a9e33fb305b73c2919c455f55b816de644e4b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af6d3ce3beca7d9bb3b14ee9c9373a8505623376
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843394"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954007"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-형식의 개체의 정렬된 된 쌍을 저장 하는 개체에 설명 **float ** 는 먼저 복소수와 두 번째 실수 부분을 나타내는 허수 부분을 나타내는입니다.
+형식의 개체의 정렬된 된 쌍을 저장 하는 개체에 설명 합니다 **float ** 는 먼저 복소수와 두 번째 실수 부분을 나타내는 허수 부분입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -51,11 +51,11 @@ constexpr complex(
 
 ### <a name="parameters"></a>매개 변수
 
-`_RealVal` 형식의 값 **float** 생성 되 고 복소수의 실수 부분에 대 한 합니다.
+*_RealVal* 형식의 값을 **float** 생성 되 고 있는 복소수의 실수 부분에 대 한 합니다.
 
-`_ImagVal` 형식의 값 **float** 생성 되 고 복소수의 허수 부분에 대 한 합니다.
+*_ImagVal* 형식의 값을 **float** 생성 되 고 있는 복소수의 허수 부분에 대 한 합니다.
 
-`complexNum` 형식의 복소수입니다 **double** 또는 형식의 `long double` 실수 및 허수 부분으로 이루어진 형식의 복소수를 초기화할 때 사용 되 **float** 생성 되 고 있습니다.
+*complexNum* 형식의 복소수 **이중** 형식이 나 형식 **long double** 실수부와 허수부 형식의 복소수를 초기화할 때 사용할 **float**생성 되 고 있습니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -63,11 +63,11 @@ constexpr complex(
 
 ## <a name="remarks"></a>설명
 
-**float** 형식의 complex 클래스에 대한 템플릿 클래스 complex의 명시적 특수화는 해당 특수화가 정의하는 생성자에서만 템플릿 클래스와 다릅니다. **float**에서 **double**로의 변환은 암시적일 수 있지만 **float**에서 `long double`로의 덜 안전한 변환은 **명시적**이어야 합니다. **명시적**의 사용은 할당 구문을 사용하는 형식 변환의 시작을 배제합니다.
+**float** 형식의 complex 클래스에 대한 템플릿 클래스 complex의 명시적 특수화는 해당 특수화가 정의하는 생성자에서만 템플릿 클래스와 다릅니다. 변환 **float** 하 **double** 암시적 일 수 있지만에서 덜 안전한 변환은 **float** 에 **long double** 는 필요가 **명시적**합니다. **명시적**의 사용은 할당 구문을 사용하는 형식 변환의 시작을 배제합니다.
 
 템플릿 클래스 `complex`에 대한 자세한 내용은 [complex 클래스](../standard-library/complex-class.md)를 참조하세요. 템플릿 클래스 `complex`의 멤버 목록은 다음을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // complex_comp_flt.cpp

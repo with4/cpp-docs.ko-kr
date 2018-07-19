@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82d64f4f44eeeee2d4780e61571355f8047b1bcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bb3337ffa82bf65ba0d4ff010d0b70afd7a99d7
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355415"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848212"
 ---
 # <a name="introduction-to-com-and-atl"></a>COM 및 ATL 소개
 이 섹션에서는 COM 및 ATL에 대해 간략히 소개합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [COM 소개](../atl/introduction-to-com.md)  
- 구성 요소 개체 모델(COM)의 개요를 제공합니다. 인터페이스를 비롯한 **IUnknown**, 참조 횟수, `QueryInterface`, 마샬링 및 집계에 대한 기본적인 개념을 설명합니다.  
+ 구성 요소 개체 모델의 (COM)에 대해 간략하게 인터페이스를 포함 하 여 기본 개념 `IUnknown`, 참조 횟수를 `QueryInterface`, 마샬링 및 집계 합니다.  
   
  [ATL 소개](../atl/introduction-to-atl.md)  
  액티브 템플릿 라이브러리(ATL)의 설계와 템플릿 라이브러리 그리고 ATL 버전 번호에 대해 간략하게 설명합니다. ATL 및 MFC 중에 선택 권장 사항이 포함되어 있습니다.  
@@ -41,5 +41,5 @@ ms.locfileid: "32355415"
  액티브 템플릿 라이브러리를 사용하여 프로그래밍하는 방법에 대한 개념 항목의 링크를 제공합니다.  
   
  [ATL 클래스 개요](../atl/atl-class-overview.md)  
- 참조 정보를 제공 하는 ATL 클래스에 연결 합니다.
+ ATL 클래스에 대 한 링크 및 참조 정보를 제공합니다.
 

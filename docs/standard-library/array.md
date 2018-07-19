@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2bf0a2dc049e2c3ac236af3591fddce82704b0b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9dcf61895e884eeb16a6461e91675a3f1688d91d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849849"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955951"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
-컨테이너 템플릿 클래스 `array` 및 다양한 지원 템플릿을 정의합니다.
+컨테이너 템플릿 클래스를 정의 **배열** 및 여러 지원 템플릿을입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -54,7 +54,7 @@ ms.locfileid: "33849849"
 
 ### <a name="functions"></a>함수
 
-|함수|설명|
+|기능|설명|
 |-|-|
 |[get](../standard-library/array-functions.md#get)|지정된 배열 요소를 가져옵니다.|
 |[swap](../standard-library/array-functions.md#swap)|한 배열의 내용을 다른 배열의 내용과 교환합니다.|

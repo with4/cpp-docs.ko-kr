@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25315121d3004601914c5b8872b496e57acec99f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c3886e710d0262068848304d9f2419c835b67c2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417205"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954195"
 ---
 # <a name="c-language-reference"></a>C++ 언어 참조
-이 참조는 Microsoft Visual C++에서 구현되는 것처럼 C++ 프로그래밍 언어를 설명합니다. 조직에 따라 *The Annotated c + + Reference Manual* 구성은 Margaret Ellis와 Bjarne Stroustrup이 만든 및 ANSI/ISO c + + 국제 표준 (FDIS ISO/IEC 14882). C++ 언어 기능의 Microsoft 전용 구현이 포함되어 있습니다.  
+이 참조는 Microsoft Visual C++에서 구현되는 것처럼 C++ 프로그래밍 언어를 설명합니다. 기반으로 *The Annotated c + + Reference Manual* 구성은 Margaret Ellis와 Bjarne Stroustrup 및 ANSI/ISO c + + 국제 표준 (ISO/IEC FDIS 14882). C++ 언어 기능의 Microsoft 전용 구현이 포함되어 있습니다.  
 
-최신 c + + 프로그래밍 방법의 개요를 참조 하십시오. [진화 c + +](welcome-back-to-cpp-modern-cpp.md)합니다.
+최신 c + + 프로그래밍 방법의 개요를 참조 하세요 [진화 c + +](welcome-back-to-cpp-modern-cpp.md)합니다.
   
  키워드 또는 연산자를 빠르게 찾으려면 다음 표를 참조하십시오.  
   
@@ -61,16 +61,13 @@ ms.locfileid: "32417205"
  [선언 및 정의](declarations-and-definitions-cpp.md)  
  저장소 클래스 지정자, 함수 정의, 초기화, 열거형, 클래스, 구조체 및 공용 구조체 선언 및 typedef 선언입니다. 또한 인라인 함수, const 키워드, 네임스페이스입니다.  
   
- [선언 자](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)  
- 개체, 형식 또는 함수의 이름을 지정하는 선언문의 일부입니다. 추상 선언자, 형식 이름, 이니셜라이저, 함수 선언 및 정의, 배열, 참조입니다.  
-  
  [클래스, 구조체 및 공용 구조체](../cpp/classes-and-structs-cpp.md)  
  클래스, 구조체 및 공용 구조체에 대한 소개입니다. 또한 멤버 함수, 특수 멤버 함수, 데이터 멤버, 비트 필드,이 포인터, 중첩된 클래스입니다.  
   
  [파생된 클래스](../cpp/inheritance-cpp.md)  
- 단일 및 다중 상속, 가상 함수, 여러 기본 클래스, 추상 클래스 및 범위 규칙입니다. 또한 __super 및 \__interface 키워드입니다.  
+ 단일 및 다중 상속, 가상 함수, 여러 기본 클래스, 추상 클래스 및 범위 규칙입니다. __Super 또한 및 \_(_i) 키워드입니다.  
   
- [멤버 액세스 제어](../cpp/member-access-control-cpp.md)  
+ [멤버 Access Control](../cpp/member-access-control-cpp.md)  
  public, private 및 protected 키워드를 사용하여 클래스 멤버에 대한 액세스를 제어합니다. Friend 함수 및 클래스입니다.  
   
  [오버 로드](operator-overloading.md)  
@@ -80,7 +77,7 @@ ms.locfileid: "32417205"
  C++ 예외 처리, SEH(구조적 예외 처리), 예외 처리 문을 작성하는 데 사용되는 키워드입니다.  
   
  [어설션 및 사용자 제공 메시지](../cpp/assertion-and-user-supplied-messages-cpp.md)  
- `#error` 지시문, `static_assert` 키워드, `assert` 매크로입니다.  
+ `#error` 지시문을 **static_assert** 키워드를 `assert` 매크로입니다.  
   
  [템플릿](../cpp/templates-cpp.md)  
  템플릿 지정, 함수 템플릿, 클래스 템플릿, typename 키워드, 템플릿 및 매크로, 템플릿 및 스마트 포인터입니다.  
@@ -103,7 +100,7 @@ ms.locfileid: "32417205"
  [비표준 동작](../cpp/nonstandard-behavior.md)  
  Visual C++ 컴파일러의 비표준 동작에 대한 정보입니다.  
 
- [C + +를 다시 시작](welcome-back-to-cpp-modern-cpp.md) 안전 하 고 효율적인 올바른 프로그램을 작성 하는 것에 대 한 사례 최신 c + + 프로그래밍에 대 한 개요입니다.
+ [C + +를 다시 시작](welcome-back-to-cpp-modern-cpp.md) 안전 하 고, 올바른 효율적인 프로그램을 작성 하는 것에 대 한 최신 c + + 프로그래밍 개요 사례입니다.
   
 ## <a name="related-sections"></a>관련 단원  
  [런타임 플랫폼용 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)  

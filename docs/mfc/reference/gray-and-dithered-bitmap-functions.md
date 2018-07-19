@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de887cdbe80642925bc935eb48726a59850f6f96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46a1607b0d69be21e38cace117ec2c0e248827be
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339399"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>회색 및 디더링된 비트맵 함수
 **회색 비트맵 함수**  
@@ -62,7 +62,7 @@ void AFXAPI AfxDrawGrayBitmap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  대상 DC를 가리킵니다.  
   
  *x*  
@@ -71,10 +71,10 @@ void AFXAPI AfxDrawGrayBitmap(
  *y*  
  대상 y 좌표입니다.  
   
- `rSrc`  
+ *rSrc*  
  소스 비트맵입니다.  
   
- `crBackground`  
+ *crBackground*  
  새 배경색(일반적으로 회색, 예: COLOR_MENU)입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -82,7 +82,7 @@ void AFXAPI AfxDrawGrayBitmap(
   
  ![회색 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
@@ -99,13 +99,13 @@ void AFXAPI AfxGetGrayBitmap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rSrc`  
+ *rSrc*  
  소스 비트맵입니다.  
   
- `pDest`  
+ *pDest*  
  대상 비트맵입니다.  
   
- `crBackground`  
+ *crBackground*  
  새 배경색(일반적으로 회색, 예: COLOR_MENU)입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -113,14 +113,14 @@ void AFXAPI AfxGetGrayBitmap(
   
  ![회색 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
 ##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap  
- 배경이 디더링된 (checker) 패턴으로 바꾸기 비트맵을 그립니다.  
+ 비트맵 배경이 디더링된 (검사기) 패턴을 사용 하 여 대체를 그립니다.  
   
 ```   
 void AFXAPI AfxDrawDitheredBitmap(
@@ -133,7 +133,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  대상 DC를 가리킵니다.  
   
  *x*  
@@ -142,21 +142,21 @@ void AFXAPI AfxDrawDitheredBitmap(
  *y*  
  대상 y 좌표입니다.  
   
- `rSrc`  
+ *rSrc*  
  소스 비트맵입니다.  
   
- `cr1`  
- 두 개의 디더링 색상 중 하나로 일반적으로 흰색 개입니다.  
+ *cr1*  
+ 두 디더링 색상 중 하나로 일반적으로 흰색입니다.  
   
- `cr2`  
+ *인 cr2*  
  다른 디더링 색, 일반적으로 밝은 회색 (: COLOR_MENU)입니다.  
   
 ### <a name="remarks"></a>설명  
- 두 가지 색을 사용 하 여 대상 DC에서 소스 비트맵을 그릴 ( `cr1` 및 `cr2`) 바둑판된 패턴 비트맵의 배경을 대체 합니다. 소스 비트맵의 배경은 흰색 픽셀 및 모든 픽셀 비트맵의 왼쪽 위 모서리에 있는 픽셀의 색으로 정의 됩니다.  
+ 두 가지 색을 사용 하 여 대상 DC에서 소스 비트맵을 그릴 (*cr1* 하 고 *인 cr2*) 체크 무늬 패턴 비트맵의 배경을 대체 합니다. 소스 비트맵의 배경은 흰색 픽셀 및 모든 픽셀 비트맵의 왼쪽 위 모서리에 있는 픽셀의 색으로 정의 됩니다.  
   
  ![디더링된 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
@@ -164,7 +164,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 
 ##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap  
- 배경이 디더링된 (checker) 패턴으로 바꾸기 비트맵에 복사 합니다.  
+ 배경이 디더링된 (검사기) 패턴을 사용 하 여 대체 비트맵을 복사 합니다.  
   
 ```   
 void AFXAPI AfxGetDitheredBitmap(
@@ -175,24 +175,24 @@ void AFXAPI AfxGetDitheredBitmap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rSrc`  
+ *rSrc*  
  소스 비트맵입니다.  
   
- `pDest`  
+ *pDest*  
  대상 비트맵입니다.  
   
- `cr1`  
- 두 개의 디더링 색상 중 하나로 일반적으로 흰색 개입니다.  
+ *cr1*  
+ 두 디더링 색상 중 하나로 일반적으로 흰색입니다.  
   
- `cr2`  
+ *인 cr2*  
  다른 디더링 색, 일반적으로 밝은 회색 (: COLOR_MENU)입니다.  
   
 ### <a name="remarks"></a>설명  
- 소스 비트맵을 두 색으로 대상 비트맵에 복사 됩니다 ( `cr1` 및 `cr2`) 소스 비트맵의 배경을 바꾸기 바둑판된 패턴입니다. 소스 비트맵의 배경은 흰색 픽셀 및 모든 픽셀 비트맵의 왼쪽 위 모서리에 있는 픽셀의 색으로 정의 됩니다.  
+ 소스 비트맵을 2 가지를 사용 하 여 대상 비트맵에 복사 됩니다 (*cr1* 하 고 *인 cr2*) 소스 비트맵의 배경을 대체 체크 무늬 패턴입니다. 소스 비트맵의 배경은 흰색 픽셀 및 모든 픽셀 비트맵의 왼쪽 위 모서리에 있는 픽셀의 색으로 정의 됩니다.  
   
  ![디더링된 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  

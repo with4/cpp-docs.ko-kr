@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4f013589b509781d217e521b680f1d529189a0a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338583"
 ---
 # <a name="cclientdc-class"></a>CClientDC 클래스
 Windows 함수 호출을 맡고 [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) 생성 시 및 [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) 소멸 시.  
@@ -42,18 +42,18 @@ class CClientDC : public CDC
   
 |이름|설명|  
 |----------|-----------------|  
-|[CClientDC::CClientDC](#cclientdc)|생성 된 `CClientDC` 에 연결 된 개체는 `CWnd`합니다.|  
+|[CClientDC::CClientDC](#cclientdc)|생성을 `CClientDC` 에 연결 하는 개체는 `CWnd`합니다.|  
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
 |name|설명|  
 |----------|-----------------|  
-|[CClientDC::m_hWnd](#m_hwnd)|`HWND` 이 대 한 창의 `CClientDC` 유효 합니다.|  
+|[CClientDC::m_hWnd](#m_hwnd)|이 창의 HWND `CClientDC` 유효 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 즉, 연결 된 장치 컨텍스트는 `CClientDC` 개체는 창의 클라이언트 영역입니다.  
+ 즉, 연결 된 장치 컨텍스트는 `CClientDC` 개체가 창의 클라이언트 영역입니다.  
   
- 대 한 자세한 내용은 `CClientDC`, 참조 [장치 컨텍스트](../../mfc/device-contexts.md)합니다.  
+ 에 대 한 자세한 `CClientDC`를 참조 하세요 [장치 컨텍스트](../../mfc/device-contexts.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -66,7 +66,7 @@ class CClientDC : public CDC
  **헤더:** afxwin.h  
   
 ##  <a name="cclientdc"></a>  CClientDC::CClientDC  
- 생성 된 `CClientDC` 의 클라이언트 영역에 액세스 하는 개체는 [CWnd](../../mfc/reference/cwnd-class.md) 가리키는 *pWnd*합니다.  
+ 생성을 `CClientDC` 의 클라이언트 영역에 액세스 하는 개체를 [CWnd](../../mfc/reference/cwnd-class.md) 가리키는 *pWnd*합니다.  
   
 ```  
 explicit CClientDC(CWnd* pWnd);
@@ -74,18 +74,18 @@ explicit CClientDC(CWnd* pWnd);
   
 ### <a name="parameters"></a>매개 변수  
  *pWnd*  
- 창 디바이스 컨텍스트 개체에 액세스할 클라이언트 영역입니다.  
+ 창의 장치 컨텍스트 개체를 액세스 하는 클라이언트 영역입니다.  
   
 ### <a name="remarks"></a>설명  
  Windows 함수를 호출 하는 생성자 [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)합니다.  
   
- 예외 (형식의 `CResourceException`) 하는 경우 throw 되는 Windows `GetDC` 호출이 실패 합니다. 장치 컨텍스트에 Windows 이미 할당 된 모든 사용 가능한 장치 컨텍스트에서 사용할 수 있는 수 있습니다. Windows에서 언제 든 지 사용할 수 있는 5 개의 일반적인 디스플레이 컨텍스트를 위한 응용 프로그램 완료 합니다.  
+ 예외 (형식의 `CResourceException`) 하는 경우 throw 되는 Windows `GetDC` 호출이 실패 합니다. 장치 컨텍스트에 Windows에 이미 할당 모든 사용 가능한 장치 컨텍스트에서 사용할 수 있습니다. 응용 프로그램 Windows 아래에서 언제 든 지 사용할 수 있는 5 개의 일반적인 표시 컨텍스트에 대해 경합 합니다.  
   
 ### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CClientDC::m_hWnd  
- `HWND` 의 `CWnd` 포인터 생성에 사용 되는 `CClientDC` 개체입니다.  
+ `HWND` 의 합니다 `CWnd` 생성 하는 데 대 한 포인터를 `CClientDC` 개체입니다.  
   
 ```  
 HWND m_hWnd;  
@@ -95,10 +95,10 @@ HWND m_hWnd;
  *m_hWnd* 보호 된 변수입니다.  
   
 ### <a name="example"></a>예  
-  예를 참조 [CClientDC::CClientDC](#cclientdc)합니다.  
+  예를 참조 하세요 [CClientDC::CClientDC](#cclientdc)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [MDI MFC 샘플](../../visual-cpp-samples.md)   
+ [MFC 샘플 MDI](../../visual-cpp-samples.md)   
  [CDC 클래스](../../mfc/reference/cdc-class.md)   
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   
  [CDC 클래스](../../mfc/reference/cdc-class.md)

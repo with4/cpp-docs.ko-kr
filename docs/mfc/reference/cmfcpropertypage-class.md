@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2081053f406d9985d722da7d4cd9f3dad56f061c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042084"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848738"
 ---
 # <a name="cmfcpropertypage-class"></a>CMFCPropertyPage 클래스
 `CMFCPropertyPage` 클래스 속성 페이지에서 팝업 메뉴의 표시를 지원 합니다.  
@@ -48,14 +48,14 @@ class CMFCPropertyPage : public CPropertyPage
 |이름|설명|  
 |----------|-----------------|  
 |`CMFCPropertyPage::CreateObject`|프레임워크에서 이 클래스 형식의 동적 인스턴스를 만드는 데 사용합니다.|  
-|`CMFCPropertyPage::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에서는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식과 연결 된 개체입니다.|  
+|`CMFCPropertyPage::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에 의해 합니다 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식과 연결 된 개체입니다.|  
 |`CMFCPropertyPage::OnSetActive`|이 멤버 함수는 페이지는 사용자가 선택 되 고 활성 페이지가 됩니다 때 프레임 워크에서 호출 됩니다. (재정의 [CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|  
-|`CMFCPropertyPage::PreTranslateMessage`|창 메시지를 변환 하 여 디스패치 되기 전에 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) 및 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 함수입니다. 자세한 내용 및 메서드 구문에 대 한 참조 [cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)합니다. (`CPropertyPage::PreTranslateMessage`를 재정의합니다.)|  
+|`CMFCPropertyPage::PreTranslateMessage`|디스패치 되기 전에 창 메시지를 변환 합니다 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) 하 고 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 함수입니다. 자세한 내용 및 메서드 구문 참조 [cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)합니다. (`CPropertyPage::PreTranslateMessage`를 재정의합니다.)|  
   
 ## <a name="remarks"></a>설명  
- `CMFCPropertyPage` 클래스 속성 시트 (탭 대화 상자 라고도)의 개별 페이지를 나타냅니다.  
+ `CMFCPropertyPage` 클래스 탭 대화 상자 라고도 하는 속성 시트의 개별 페이지를 나타냅니다.  
   
- 사용 하 여는 `CMFCPropertyPage` 와 함께 클래스는 [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) 클래스입니다. 메뉴 속성 페이지를 사용 하려면 모든 항목을 바꿉니다는 `CPropertyPage` 클래스와 `CMFCPropertyPage` 클래스입니다.  
+ 사용 된 `CMFCPropertyPage` 와 함께 클래스를 [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) 클래스. 메뉴에서 속성 페이지를 사용 하려면 모든 일치 항목을 바꾸려면 합니다 `CPropertyPage` 클래스는 `CMFCPropertyPage` 클래스입니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -89,18 +89,18 @@ CMFCPropertyPage(
   
 ### <a name="parameters"></a>매개 변수  
  *nIDTemplate*  
- 이 페이지에 대 한 서식 파일의 리소스 ID입니다.  
+ 이 페이지에 대 한 템플릿의 리소스 ID입니다.  
   
  *nIDCaption*  
- 이 페이지에 대 한 탭에 레이블 리소스 ID입니다. 0 인 경우,이 페이지에 대 한 대화 상자 템플릿에에서 이름을 가져옵니다. 기본값은 0입니다.  
+ 이 페이지의 탭에 삽입할 레이블의 리소스 ID입니다. 0 인 경우이 페이지에 대 한 대화 상자 템플릿에에서 이름을 가져옵니다. 기본값은 0입니다.  
   
  *lpszTemplateName*  
- 이 페이지에 대 한 서식 파일의 이름 가리킵니다. 일 수 없습니다 `NULL`합니다.  
+ 이 페이지에 대 한 템플릿의 이름 가리킵니다. NULL일 수 없습니다.  
   
 ### <a name="return-value"></a>반환 값  
   
 ### <a name="remarks"></a>설명  
- 생성자 매개 변수에 대 한 자세한 내용은 참조 [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)합니다.  
+ 생성자 매개 변수에 대 한 자세한 내용은 참조 하세요. [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 311f4f26b1f63c089c1771e36ac70060fab6b894
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d841428be45ae47eee94bec8c2f40d42e65e29a7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852125"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953249"
 ---
 # <a name="isnothrowmoveassignable-class"></a>is_nothrow_move_assignable 클래스
 
@@ -36,11 +36,11 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 형식이 쿼리입니다.
+*Ty* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `Ty` 형식에 nothrow 이동 할당 연산자가 있는 경우 true이고, 그렇지 않은 경우 false입니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *Ty* 에 nothrow 이동 할당 연산자, 그렇지 않으면 false입니다.
 
 ## <a name="requirements"></a>요구 사항
 

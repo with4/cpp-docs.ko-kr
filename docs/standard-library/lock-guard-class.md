@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcbd0f17392c69b09d6f9f3c8123dfcf8b543fa4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f53732fee62906da19a5771c8598cce51fc6331
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852353"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953760"
 ---
 # <a name="lockguard-class"></a>lock_guard 클래스
 
@@ -70,13 +70,13 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>매개 변수
 
-`Mtx` A *뮤텍스 형식* 개체입니다.
+*Mtx* A *뮤텍스 형식* 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 `lock_guard` 형식의 개체를 생성하고 `Mtx`를 잠급니다. `Mtx`가 재귀 뮤텍스가 아니면 이 생성자를 호출할 때 잠금이 해제되어 있어야 합니다.
+첫 번째 생성자는 형식의 개체를 생성 `lock_guard` 및 잠금 *Mtx*합니다. 하는 경우 *Mtx* 재귀 뮤텍스가 없는 잠금 해제 해야이 생성자를 호출할 때.
 
-두 번째 생성자는 `Mtx`를 잠그지 않습니다. 이 생성자를 호출할 때 `Mtx`가 잠겨 있어야 합니다. 생성자는 예외를 throw하지 않습니다.
+두 번째 생성자는 잠그지 않음 *Mtx*합니다. *Mtx* 이 생성자를 호출할 때 잠겨 있어야 합니다. 생성자는 예외를 throw하지 않습니다.
 
 ## <a name="dtorlock_guard_destructor"></a>  lock_guard::~lock_guard 소멸자
 

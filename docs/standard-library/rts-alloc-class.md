@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8bd1ec1436b960a0637a79cb04982a953636a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c4bff519ea12646e94e92cde219fa38e4009a767
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856302"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956459"
 ---
 # <a name="rtsalloc-class"></a>rts_alloc 클래스
 
@@ -44,7 +44,7 @@ class rts_alloc
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Cache`|배열에 포함된 캐시 인스턴스의 형식입니다. [cache_chunklist Class](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) 또는 [cache_suballoc](../standard-library/cache-suballoc-class.md)일 수 있습니다.|
+|*캐시*|배열에 포함된 캐시 인스턴스의 형식입니다. [cache_chunklist Class](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) 또는 [cache_suballoc](../standard-library/cache-suballoc-class.md)일 수 있습니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -76,7 +76,7 @@ void *allocate(std::size_t count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`count`|할당할 배열의 요소 수입니다.|
+|*count*|할당할 배열의 요소 수입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -84,7 +84,7 @@ void *allocate(std::size_t count);
 
 ### <a name="remarks"></a>설명
 
-구성원 함수는 `caches[_IDX].allocate(count)`를 반환합니다. 여기서 인덱스 `_IDX`는 요청한 블록 크기 `count`에 따라 결정되거나, `count`가 너무 크면 cache 개체를 나타내는 `operator new(count)`. `cache`를 반환합니다.
+멤버 함수는 반환 `caches[_IDX].allocate(count)`여기서 인덱스 `_IDX` 요청한 블록 크기에 따라 결정 됩니다 *개수*, 또는 *개수* 너무 크면 반환 `operator new(count)`합니다. `cache`를 반환합니다.
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -98,12 +98,12 @@ void deallocate(void* ptr, std::size_t count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`ptr`|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
-|`count`|저장소에서 할당을 취소할 개체의 수입니다.|
+|*ptr*|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
+|*count*|저장소에서 할당을 취소할 개체의 수입니다.|
 
 ### <a name="remarks"></a>설명
 
-구성원 함수는 `caches[_IDX].deallocate(ptr, count)`를 반환합니다. 여기서 인덱스 `_IDX`는 요청한 블록 크기 `count`에 따라 결정되거나, `count`가 너무 크면 `operator delete(ptr)`를 반환합니다.
+멤버 함수 호출 `caches[_IDX].deallocate(ptr, count)`여기서 인덱스 `_IDX` 요청한 블록 크기에 따라 결정 됩니다 *개수*, 또는 *개수* 너무 크면 반환 `operator delete(ptr)`합니다.
 
 ## <a name="equals"></a>  rts_alloc::equals
 
@@ -117,12 +117,12 @@ bool equals(const sync<_Cache>& _Other) const;
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`_Cache`|필터와 연결된 캐시 개체입니다.|
-|`_Other`|같은지 비교할 캐시 개체입니다.|
+|*_Cache*|필터와 연결된 캐시 개체입니다.|
+|*_Other*|같은지 비교할 캐시 개체입니다.|
 
 ### <a name="remarks"></a>설명
 
-결과가 `caches[0].equals(other.caches[0])`이면 `true`이고 그렇지 않으면 `false`입니다. `caches`는 캐시 개체의 배열을 나타냅니다.
+**true 이면** 경우의 결과 `caches[0].equals(other.caches[0])`이 고, 그렇지 않으면 **false**합니다. `caches`는 캐시 개체의 배열을 나타냅니다.
 
 ## <a name="see-also"></a>참고자료
 

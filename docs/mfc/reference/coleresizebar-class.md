@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3046fa4c9446afeba45fd41a6b571ccf58f2cfb
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3706521108d848535742bf2314142fedf46f1746
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040118"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852714"
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar 클래스
 내부 OLE 항목의 크기 변경을 지원하는 컨트롤 막대의 한 종류입니다.  
@@ -48,12 +48,12 @@ class COleResizeBar : public CControlBar
   
 |이름|설명|  
 |----------|-----------------|  
-|[COleResizeBar::Create](#create)|및 Windows 자식 창을 초기화 만들어지고 연결 하는 `COleResizeBar` 개체입니다.|  
+|[COleResizeBar::Create](#create)|만들고 초기화 한 Windows 자식 창을 연결 하는 `COleResizeBar` 개체입니다.|  
   
 ## <a name="remarks"></a>설명  
- `COleResizeBar` 로 표시 된 개체는 [CRectTracker](../../mfc/reference/crecttracker-class.md) 빗금된 테두리가 있는 및 외부 크기 조정 핸들입니다.  
+ `COleResizeBar` 로 표시 된 개체를 [CRectTracker](../../mfc/reference/crecttracker-class.md) 외부 및 빗금된 테두리가 있는 크기 조정 핸들입니다.  
   
- `COleResizeBar` 개체는 프레임 창 개체에서 파생 된 일반적으로 포함 된 멤버는 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) 클래스입니다.  
+ `COleResizeBar` 개체는 일반적으로 포함 된 멤버에서 파생 된 프레임 창 개체를 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) 클래스입니다.  
   
  자세한 내용은 문서 참조 [활성화](../../mfc/activation-cpp.md)합니다.  
   
@@ -79,10 +79,10 @@ COleResizeBar();
 ```  
   
 ### <a name="remarks"></a>설명  
- 호출 **만들기** 크기 조정 막대 개체를 만듭니다.  
+ 호출 `Create` 크기 조정 막대 개체를 만듭니다.  
   
 ##  <a name="create"></a>  COleResizeBar::Create  
- 자식 창을 만들고 변수와 연결 된 `COleResizeBar` 개체입니다.  
+ 자식 창을 만들고 사용 하 여 연결 된 `COleResizeBar` 개체입니다.  
   
 ```  
 virtual BOOL Create(
@@ -102,7 +102,7 @@ virtual BOOL Create(
  크기 조정 막대의 자식 창 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 크기 조정 막대 만들어진 경우 0이 아닌 그렇지 않으면 0입니다.  
+ 크기 조정 막대 만들어진 경우 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [MFC 샘플 SUPERPAD](../../visual-cpp-samples.md)   

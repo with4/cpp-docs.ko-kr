@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed73314d5cef6849c84a8e1019e1fd2d6c8ead86
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 43f4aec5796db6a277b6bfb1edecdcd2e7f5c455
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845390"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954619"
 ---
 # <a name="isbaseof-class"></a>is_base_of 클래스
 
@@ -37,15 +37,15 @@ struct is_base_of;
 
 ### <a name="parameters"></a>매개 변수
 
-`Base` 테스트 하기 위해 기본 클래스입니다.
+*기본* 테스트 하기 위해 기본 클래스입니다.
 
-`Derived` 파생된 형식에 대 한 테스트입니다.
+*파생 된* 파생된 형식에 대 한 테스트입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `Base` 형식이 `Derived` 형식의 기본 클래스인 경우 true이고, 그렇지 않은 경우 false입니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *기본* 형식의 기본 클래스인 *파생*, 그렇지 않으면 false입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 #include <type_traits>

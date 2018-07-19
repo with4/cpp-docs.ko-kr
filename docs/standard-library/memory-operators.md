@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fe61112e5b36c8341e4a3209a9bec335549736
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad33ff04c688ab79fa4a73234829d3e13fd1b44d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857193"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954237"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 연산자
 
@@ -56,13 +56,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 같지 않음을 테스트할 개체 중 하나입니다.
+*왼쪽* 같지 않은지 테스트할 개체 중 하나입니다.
 
-`right` 같지 않음을 테스트할 개체 중 하나입니다.
+*오른쪽* 같지 않은지 테스트할 개체 중 하나입니다.
 
-`Ty1` 왼쪽된 공유 포인터로 제어 되는 형식입니다.
+*Ty1* 왼쪽에서 제어 되는 형식 포인터를 공유 합니다.
 
-`Ty2` 오른쪽 공유 포인터로 제어 되는 형식입니다.
+*Ty2* 오른쪽에서 제어 되는 형식 포인터를 공유 합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -74,7 +74,7 @@ bool operator!=(
 
 두 번째 및 세 번째 템플릿 연산자는 `!(left == right)`을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // memory_op_me.cpp
@@ -103,7 +103,7 @@ int main( )
 The allocator objects Alloc & v1Alloc are equal.
 ```
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__memory__operator_ne.cpp
@@ -154,25 +154,25 @@ bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 같음에 대해 테스트할 개체 중 하나입니다.
+*왼쪽* 같은지 테스트할 개체 중 하나입니다.
 
-`right` 같음에 대해 테스트할 개체 중 하나입니다.
+*오른쪽* 같은지 테스트할 개체 중 하나입니다.
 
-`Ty1` 왼쪽된 공유 포인터로 제어 되는 형식입니다.
+*Ty1* 왼쪽에서 제어 되는 형식 포인터를 공유 합니다.
 
-`Ty2` 오른쪽 공유 포인터로 제어 되는 형식입니다.
+*Ty2* 오른쪽에서 제어 되는 형식 포인터를 공유 합니다.
 
 ### <a name="return-value"></a>반환 값
 
-개체가 같으면 `true`이고, 같지 않으면 `false`입니다.
+**true 이면** 개체가 같으면 **false** 개체 같지 않은 경우.
 
 ### <a name="remarks"></a>설명
 
 첫 번째 템플릿 연산자는 true를 반환합니다. (모든 기본 할당자가 같습니다.)
 
-두 번째 및 세 번째 템플릿 연산자는 ` left.get() ==  right.get()`을 반환합니다.
+두 번째 및 세 번째 템플릿 연산자는 `left.get() ==  right.get()`을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // memory_op_eq.cpp
@@ -212,7 +212,7 @@ The allocator objects cv1Alloc & v1Alloc are equal.
 The allocator objects cAlloc & Alloc are equal.
 ```
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__memory__operator_eq.cpp
@@ -258,17 +258,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 개체를 비교할 수 중 하나입니다.
+*왼쪽* 비교할 개체 중 하나입니다.
 
-`right` 개체를 비교할 수 중 하나입니다.
+*오른쪽* 비교할 개체 중 하나입니다.
 
-`Ty1` 왼쪽된 공유 포인터로 제어 되는 형식입니다.
+*Ty1* 왼쪽에서 제어 되는 형식 포인터를 공유 합니다.
 
-`Ty2` 오른쪽 공유 포인터로 제어 되는 형식입니다.
+*Ty2* 오른쪽에서 제어 되는 형식 포인터를 공유 합니다.
 
 ### <a name="remarks"></a>설명
 
-템플릿 연산자는 반환 `left.get() >= right.get()`합니다.
+템플릿 연산자 반환 `left.get() >= right.get()`합니다.
 
 ## <a name="op_lt"></a>  operator&lt;
 
@@ -288,13 +288,13 @@ bool operator<(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 개체를 비교할 수 중 하나입니다.
+*왼쪽* 비교할 개체 중 하나입니다.
 
-`right` 개체를 비교할 수 중 하나입니다.
+*오른쪽* 비교할 개체 중 하나입니다.
 
-`Ty1` 왼쪽된 포인터에 의해 제어 되는 형식입니다.
+*Ty1* 왼쪽된 포인터에 의해 제어 되는 형식입니다.
 
-`Ty2` 오른쪽 포인터에 의해 제어 되는 형식입니다.
+*Ty2* 오른쪽 포인터에 의해 제어 되는 형식입니다.
 
 ## <a name="op_lt_eq"></a>  operator&lt;=
 
@@ -314,17 +314,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 개체를 비교할 수 중 하나입니다.
+*왼쪽* 비교할 개체 중 하나입니다.
 
-`right` 개체를 비교할 수 중 하나입니다.
+*오른쪽* 비교할 개체 중 하나입니다.
 
-`Ty1` 왼쪽된 공유 포인터로 제어 되는 형식입니다.
+*Ty1* 왼쪽에서 제어 되는 형식 포인터를 공유 합니다.
 
-`Ty2` 오른쪽 공유 포인터로 제어 되는 형식입니다.
+*Ty2* 오른쪽에서 제어 되는 형식 포인터를 공유 합니다.
 
 ### <a name="remarks"></a>설명
 
-템플릿 연산자는 반환 `left.get() <= right.get()`
+템플릿 연산자 반환 `left.get() <= right.get()`
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -344,13 +344,13 @@ bool operator>(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 개체를 비교할 수 중 하나입니다.
+*왼쪽* 비교할 개체 중 하나입니다.
 
-`right` 개체를 비교할 수 중 하나입니다.
+*오른쪽* 비교할 개체 중 하나입니다.
 
-`Ty1` 왼쪽된 공유 포인터로 제어 되는 형식입니다.
+*Ty1* 왼쪽에서 제어 되는 형식 포인터를 공유 합니다.
 
-`Ty2` 오른쪽 공유 포인터로 제어 되는 형식입니다.
+*Ty2* 오른쪽에서 제어 되는 형식 포인터를 공유 합니다.
 
 ## <a name="op_lt_lt"></a>  operator&lt;&lt;
 
@@ -364,21 +364,21 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>매개 변수
 
-`Elem` 스트림 요소의 형식입니다.
+*Elem* 스트림 요소의 형식입니다.
 
-`Tr` 형식을 스트림 요소 특성입니다.
+*Tr* 형식을 스트림 요소 특성입니다.
 
-`Ty` 공유 포인터에 의해 제어 되는 형식입니다.
+*Ty* 공유 포인터에 의해 제어 되는 형식입니다.
 
-`out` 출력 스트림입니다.
+*out* 출력 스트림에 합니다.
 
-`sp` 공유 포인터입니다.
+*sp* 공유 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
 템플릿 함수가 `out << sp.get()`을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__memory__operator_sl.cpp

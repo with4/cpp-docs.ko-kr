@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03cd10d3efac16521cf826f3d9081ec533b9abec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861781"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954866"
 ---
 # <a name="weakptr-class"></a>weak_ptr 클래스
 
@@ -77,7 +77,8 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 약한 포인터에 의해 제어 되는 형식입니다.
+*Ty*  
+ 약한 포인터에 의해 제어되는 형식입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -104,7 +105,7 @@ public:
 |[element_type](#element_type)|요소의 형식입니다.|
 |[expired](#expired)|소유권이 만료되었는지 테스트합니다.|
 |[lock](#lock)|리소스의 단독 소유권을 가져옵니다.|
-|[owner_before](#owner_before)|이 `weak_ptr`이 제공된 포인터 앞에 정렬(또는 보다 작음)되는 경우 `true`를 반환합니다.|
+|[owner_before](#owner_before)|반환 **true** 이 `weak_ptr` 앞에 정렬 됩니다 (또는 미만) 제공 된 포인터입니다.|
 |[reset](#reset)|소유하는 리소스를 해제합니다.|
 |[swap](#swap)|두 `weak_ptr` 개체를 교환합니다.|
 |[use_count](#use_count)|지정된 `shared_ptr` 개체 수를 계산합니다.|
@@ -133,7 +134,7 @@ typedef Ty element_type;
 
 이 형식은 템플릿 매개 변수 `Ty`의 동의어입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__memory__weak_ptr_element_type.cpp
@@ -168,9 +169,9 @@ bool expired() const;
 
 ### <a name="remarks"></a>설명
 
-구성원 함수는 `*this`가 만료된 경우 `true`를 반환하고 그렇지 않으면 `false`를 반환합니다.
+멤버 함수는 반환 **true** 하는 경우 `*this` 그렇지 않은 경우 만료 되었습니다 **false**합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__memory__weak_ptr_expired.cpp
@@ -226,9 +227,9 @@ shared_ptr<Ty> lock() const;
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 빈 shared_ptr 개체를 반환 하는 경우 `*this` 만료 되 면 그렇지 않으면 반환는 [shared_ptr 클래스](../standard-library/shared-ptr-class.md)\<Ty > 리소스를 소유 하는 개체 `*this` 를 가리킵니다.
+멤버 함수는 빈 shared_ptr 개체를 반환 하는 경우 `*this` 만료 되 면 그렇지 않으면 반환를 [shared_ptr 클래스](../standard-library/shared-ptr-class.md)\<Ty >는 리소스를 소유 하는 개체 `*this` 가리킵니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__memory__weak_ptr_lock.cpp
@@ -289,17 +290,20 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>매개 변수
 
-`Other` 인수 공유/약한 포인터에 의해 제어 되는 형식입니다.
+*기타*  
+ 인수 공유/취약 포인터에 의해 제어되는 형식입니다.
 
-`wp` 복사할 약한 포인터입니다.
+*wp*  
+ 복사할 취약 포인터입니다.
 
-`sp` 복사할 공유 포인터입니다.
+*sp*  
+ 복사할 공유 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
 모든 연산자는 현재 `*this`가 가리키는 리소스를 해제하고 피연산자 시퀀스로 이름이 지정된 리소스의 소유권을 `*this`에 할당합니다. 연산자 실행이 실패하면 `*this`는 변경되지 않은 상태로 유지됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__memory__weak_ptr_operator_as.cpp
@@ -333,7 +337,7 @@ int main()
 
 ## <a name="owner_before"></a>  owner_before
 
-이 `weak_ptr`이 제공된 포인터 앞에 정렬(또는 보다 작음)되는 경우 `true`를 반환합니다.
+반환 **true** 이 `weak_ptr` 앞에 정렬 됩니다 (또는 미만) 제공 된 포인터입니다.
 
 ```cpp
 template <class Other>
@@ -345,11 +349,12 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>매개 변수
 
-`ptr` `lvalue` 중 하나에 대 한 참조는 `shared_ptr` 또는 `weak_ptr`합니다.
+*ptr*  
+ `shared_ptr` 또는 `weak_ptr`에 대한 `lvalue` 참조입니다.
 
 ### <a name="remarks"></a>설명
 
-템플릿 멤버 함수를 반환 `true` 경우 `*this` 은 `ordered before` `ptr`합니다.
+템플릿 구성원 함수 반환 **true** 하는 경우 `*this` 됩니다 `ordered before` `ptr`합니다.
 
 ## <a name="reset"></a>  reset
 
@@ -363,7 +368,7 @@ void reset();
 
 구성원 함수는 `*this`가 가리키는 리소스를 해제하고 `*this`를 빈 weak_ptr 개체로 변환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__memory__weak_ptr_reset.cpp
@@ -404,13 +409,14 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>매개 변수
 
-`wp` 작동이 약한 포인터입니다.
+*wp*  
+ 교환할 취약 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-구성원 함수는 원래 `*this`가 가리켰다가 이후에 `wp`가 가리킨 리소스 및 원래 `wp`가 가리켰다가 이후에 `*this`가 가리킨 리소스를 남겨 둡니다. 함수는 두 리소스의 참조 개수를 변경하지 않으며 예외도 throw하지 않습니다.
+멤버 함수에서 원래 가리키는 리소스를 남겨 둡니다 `*this` 리 켰다가 이후에 *wp*, 및 원래에서 가리키는 리소스 *wp* 리 켰다가 이후에 `*this`. 함수는 두 리소스의 참조 개수를 변경하지 않으며 예외도 throw하지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__memory__weak_ptr_swap.cpp
@@ -476,7 +482,7 @@ long use_count() const;
 
 구성원 함수는 `*this`가 가리키는 리소스를 소유한 `shared_ptr` 개체의 수를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__memory__weak_ptr_use_count.cpp
@@ -523,17 +529,20 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>매개 변수
 
-`Other` 인수 공유/약한 포인터에 의해 제어 되는 형식입니다.
+*기타*  
+ 인수 공유/취약 포인터에 의해 제어되는 형식입니다.
 
-`wp` 복사할 약한 포인터입니다.
+*wp*  
+ 복사할 취약 포인터입니다.
 
-`sp` 복사할 공유 포인터입니다.
+*sp*  
+ 복사할 공유 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
 각 생성자는 피연산자 시퀀스에 의해 이름이 지정되는 리소스를 가리키는 개체를 생성합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__memory__weak_ptr_construct.cpp

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c844416151874714aa86a2ffe9762949c6a62a3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33a251b2b9bf9b010367a88a4c9f566a73acb544
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856100"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956783"
 ---
 # <a name="sample-container-members"></a>샘플 컨테이너 멤버
 
@@ -40,7 +40,7 @@ ms.locfileid: "33856100"
 |[reference](../standard-library/container-class-reference.md)|제어되는 시퀀스의 요소에 대한 참조로 사용될 수 있는 개체를 설명합니다.|
 |[reverse_iterator](../standard-library/container-class-reverse-iterator.md)|제어되는 시퀀스의 역방향 반복기로 사용될 수 있는 개체를 설명합니다.|
 |[size_type](../standard-library/container-class-size-type.md)|제어되는 시퀀스의 길이를 나타낼 수 있는 개체를 설명합니다.|
-|[value_type](../standard-library/container-class-value-type.md)|템플릿 매개 변수 **Ty**와 동일한 의미로 사용됩니다.|
+|[value_type](../standard-library/container-class-value-type.md)|템플릿 매개 변수에 대 한 동의어 `Ty`합니다.|
 
 ## <a name="member-functions"></a>멤버 함수
 
