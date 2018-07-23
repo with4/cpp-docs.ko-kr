@@ -54,19 +54,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd62d95e971ac5fd927cce1b7b4eb600ebcf7df6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db26c60badceab6c1422146a32de3d6dd2ecb8bd
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415880"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181135"
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
 문자열에서 지정된 문자 집합의 문자를 검색합니다.
 
 > [!IMPORTANT]
-> **_mbspbrk** 및 **_mbspbrk_l** 는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
+> Windows 런타임에서 실행되는 응용 프로그램에서는 `_mbspbrk` 및 `_mbspbrk_l`을 사용할 수는 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -137,40 +137,40 @@ Null 종료 문자 집합입니다.
 
 ## <a name="return-value"></a>반환 값
 
-첫 번째 문자를 앞에 대 한 포인터를 반환 *strCharSet* 에 *str*, 또는 **NULL** 포인터 두 문자열 인수 서로 공통 문자가 없는 경우.
+모든 문자가 처음 나오는 경우에 대 한 포인터를 반환 *strCharSet* 에서 *str*, 또는 두 문자열 인수는 NULL 포인터 공통 된 문자가 있습니다.
 
 ## <a name="remarks"></a>설명
 
-**strpbrk** 함수는 첫 번째 앞에 문자에 대 한 포인터를 반환 *str* 의 문자 집합에 속하는 *strCharSet*합니다. 종료 null 문자는 검색에 포함되지 않습니다.
+합니다 `strpbrk` 함수에 있는 문자의 처음 나오는 경우에 대 한 포인터를 반환 *str* 의 문자 집합에 속하는 *strCharSet*합니다. 종료 null 문자는 검색에 포함되지 않습니다.
 
-**wcspbrk** 및 **_mbspbrk** 와이드 문자 및 멀티 바이트 문자 버전의 **strpbrk**합니다. 인수 및 반환 값이 **wcspbrk** 은 와이드 문자열이 고 **_mbspbrk** 는 멀티 바이트 문자 문자열입니다.
+`wcspbrk` 및 `_mbspbrk`는 `strpbrk`의 와이드 문자 및 멀티바이트 문자 버전입니다. `wcspbrk`의 인수 및 반환 값은 와이드 문자열이며 `_mbspbrk`의 인수와 반환 값은 멀티바이트 문자열입니다.
 
-**_mbspbrk** 해당 매개 변수의 유효성을 검사 합니다. 경우 *str* 또는 *strCharSet* 은 **NULL**에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 하도록 허용 된 경우 **_mbspbrk** 반환 **NULL** 설정 **errno** 를 **EINVAL**합니다. **strpbrk** 및 **wcspbrk** 매개 변수를 확인 하지 않습니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
+`_mbspbrk`는 매개 변수의 유효성을 검사합니다. 하는 경우 *str* 하거나 *strCharSet* 가 null 인 경우에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 하도록 허용 된 경우 `_mbspbrk` NULL을 반환 하 고 설정 `errno` EINVAL 하 합니다. `strpbrk` 및 `wcspbrk`는 매개 변수의 유효성을 검사하지 않습니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
-**_mbspbrk** 비슷합니다 **_mbscspn** 점을 제외 하 고 **_mbspbrk** 형식의 값이 아닌 포인터를 반환 [size_t](../../c-runtime-library/standard-types.md)합니다.
+`_mbspbrk`는 [size_t](../../c-runtime-library/standard-types.md) 형식의 값이 아닌 포인터를 반환한다는 점을 제외하면 `_mbspbrk`는 `_mbscspn`과 유사합니다.
 
-C에서 이러한 함수는 사용 된 * * const * * 첫 번째 인수에 대 한 포인터입니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. 에 대 한 포인터를 수행 하는 오버 로드 * * const * *에 대 한 포인터를 반환 **const **;에 대 한 포인터를 사용 하는 비-하는 버전**const * *에 대 한 포인터를 반환 하는 비-** const **합니다. 매크로 **_CRT_CONST_CORRECT_OVERLOADS** 모두 정의 된는 **const * * 및 비-** const * * 이러한 함수의 버전을 사용할 수 있습니다. 필요 하면 비**const * * 기호를 정의 하는 두 c + + 오버 로드에 대 한 동작 **_CONST_RETURN**합니다.
+C에서 이러한 함수는 다음과 같이 사용 됩니다.는 **const** 첫 번째 인수에 대 한 포인터입니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. 에 대 한 포인터를 갖는 오버 로드 **상수** 에 대 한 포인터를 반환 **const**;는 버전에 대 한 포인터를은 비**const** 에 대 한 포인터를 반환 하는 비-**const** . 매크로 _CRT_CONST_CORRECT_OVERLOADS 모두 정의 되는 **const** 및 비-**const** 이러한 함수의 버전은 사용할 수 있습니다. 필요 하면 이외**const** 두 c + + 오버 로드에 대 한 동작 기호 _CONST_RETURN을 정의 합니다.
 
-출력 값은의 설정에 영향을 **LC_CTYPE** 범주 참조 로캘의 자세한 정보에 대 한 설정을 [setlocale](setlocale-wsetlocale.md)합니다. 없는 이러한 함수 버전은 **_l** 이 로캘 종속 동작에 대 한 현재 로캘 사용 접미사; 하 여 버전으로는 **_l** 로캘 매개 변수를 사용 하 여 접미사는 동일 대신에 전달 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+출력 값은 로캘의; LC_CTYPE 범주 설정을 영향 자세한 내용은 [setlocale](setlocale-wsetlocale.md)합니다. 없는 이러한 함수 버전을 **_l** 이 로캘 종속 동작에 현재 로캘 접미사 사용, 사용 하 여 버전은 **_l** 로캘 매개 변수를 사용 하 여 접미사 동일 합니다. 대신 전달 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcspbrk**|**strpbrk**|**_mbspbrk**|**wcspbrk**|
-|**n/a**|**n/a**|**_mbspbrk_l**|**n/a**|
+|`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|
+|**n/a**|**n/a**|`_mbspbrk_l`|**n/a**|
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴|필수 헤더|
+|루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
-|**strpbrk**|\<string.h>|
-|**wcspbrk**|\<string.h> 또는 \<wchar.h>|
-|**_mbspbrk**, **_mbspbrk_l**|\<mbstring.h>|
+|`strpbrk`|\<string.h>|
+|`wcspbrk`|\<string.h> 또는 \<wchar.h>|
+|`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h>|
 
 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```C
 // crt_strpbrk.c
