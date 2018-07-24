@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 98c8bd78f465054e4d86a1bd16450aba9a0d8258
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271398"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209055"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ~ 2015의 새로운 기능
 
@@ -1494,7 +1494,7 @@ Microsoft Visual C++ 컴파일러에서 지원하는 ISO C++11 언어 기능은 
 - 별칭 템플릿
 - 삭제된 함수
 - NSDMI(비정적 데이터 멤버 이니셜라이저)
-- 기본값으로 설정된 함수 *
+- 기본값으로 설정된 함수 \*
 - 다음과 같은 ISO C99 언어 기능을 지원합니다.
 - _Bool
 - 복합 리터럴
