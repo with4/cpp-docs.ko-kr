@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7abcfcfe6aec722fa3540ad974017ab47e6cf71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885453"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209224"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 클래스
 이 클래스는 COM 기반 메모리 루틴을 사용 하 여 스마트 포인터 클래스에 대 한 기반을 제공 합니다.  
@@ -77,7 +77,7 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|캐스트 연산자입니다.|  
 |[CComPtrBase::operator!](#operator_not)|NOT 연산자입니다.|  
 |[CComPtrBase::operator &](#operator_amp)|& 연산자입니다.|  
-|[CComPtrBase::operator *](#operator_star)|* 연산자입니다.|  
+|[CComPtrBase::operator *](#operator_star)|\* 연산자|  
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|작음-than 연산자입니다.|  
 |[CComPtrBase::operator = =](#operator_eq_eq)|같음 연산자입니다.|  
 |[CComPtrBase::operator->](#operator_ptr)|멤버에 대 한 포인터 연산자입니다.|  
@@ -246,8 +246,8 @@ T** operator&() throw();
 ### <a name="return-value"></a>반환 값  
  가리키는 개체의 주소를 반환 합니다 `CComPtrBase` 개체입니다.  
   
-##  <a name="operator_star"></a>  CComPtrBase::operator *  
- * 연산자입니다.  
+##  <a name="operator_star"></a>  CComPtrBase::operator \*  
+ \* 연산자  
   
 ```
 T& operator*() const throw();
@@ -300,7 +300,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>반환 값  
  포인터를 현재 개체에 의해 관리 되는 경우 true를 반환을 사용 하면 비교 되는 포인터 보다 작습니다.  
   
-##  <a name="operator_t_star"></a>  CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*  
  캐스트 연산자입니다.  
   
 ```  

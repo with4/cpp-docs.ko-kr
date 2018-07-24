@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a465ca74af72a5114eac949439ab8493f89bcb39
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b6e20c6395337113088aa51d8ba75744421922
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406266"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207522"
 ---
 # <a name="scalb-scalbf"></a>_scalb, _scalbf
 
@@ -77,11 +77,11 @@ float _scalbf(
 
 ## <a name="remarks"></a>설명
 
-**_scalb** 의 값을 계산 하는 함수 *x* * 2<sup>*exp*</sup>합니다.
+합니다 **_scalb** 의 값을 계산 하는 함수 *x* \* 2<sup>*exp*</sup>합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴|필수 헤더|
+|루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |**_scalb**, **_scalbf**|\<float.h>|
 

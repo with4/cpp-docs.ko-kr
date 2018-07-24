@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5acccf52d3738985c7a83432342952af03bf78b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcc109fe3ccf06e0461deed449517850271a2024
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302869"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209393"
 ---
 # <a name="linker-tools-warning-lnk4237"></a>링커 도구 경고 LNK4237
-지정한 'dll';에서 가져올 때 /subsystem: native가 : Console 또는 /SUBSYSTEM을 사용 합니다.  
+'Dll';에서 가져올 때 지정한 /SUBSYSTEM:NATIVE /Subsystem: console 또는 /subsystem: windows를 사용 합니다.  
   
- [/Subsystem: native가](../../build/reference/subsystem-specify-subsystem.md) (Win32) windows 응용 프로그램을 작성 하는 직접 사용 하는 경우 다음 중 하나 이상을 지정 되었습니다.  
+ [/SUBSYSTEM:NATIVE](../../build/reference/subsystem-specify-subsystem.md) Win32 windows 응용 프로그램을 빌드하는 직접 사용 하는 경우 다음 중 하나 이상 지정 되었습니다.  
   
 -   kernel32.dll  
   
@@ -34,6 +34,6 @@ ms.locfileid: "33302869"
   
 -   user32.dll  
   
--   msvcrt * dll 중 하나입니다.  
+-   하나는 msvcrt\* dll입니다.  
   
- 지정 하 여이 경고를 해결 **/subsystem: native가**합니다.
+ 지정 하지 않는 하 여이 경고를 해결할 **/SUBSYSTEM:NATIVE**합니다.

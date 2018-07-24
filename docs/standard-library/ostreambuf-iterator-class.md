@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6693fe0c4e34ce4749feef05bf0a1fe0213ac866
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958255"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207723"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator 클래스
 
@@ -78,7 +78,7 @@ ostreambuf_iterator 클래스는 출력 반복기에 대한 요구 사항을 충
 
 |연산자|설명|
 |-|-|
-|[operator*](#op_star)|출력 반복기 식 * `i` = `x`을 구현하는 데 사용된 역참조 연산자.|
+|[operator*](#op_star)|출력 반복기 식을 구현 하는 데 사용 된 역참조 연산자 \* `i`  =  `x`합니다.|
 |[operator++](#op_add_add)|연산이 호출되기 전에 주소 지정한 동일한 개체에 `ostreambuf_iterator`를 반환한 비함수 증분 연산자.|
 |[operator=](#op_eq)|연산자가 연결된 스트림 버퍼에 문자를 삽입합니다.|
 
@@ -189,7 +189,7 @@ No insertions failed.
 *\
 ```
 
-## <a name="op_star"></a>  ostreambuf_iterator::operator*
+## <a name="op_star"></a>  ostreambuf_iterator:: operator\*
 
 출력 반복기 식 \* *i* = *x*를 구현하는 데 사용되는 작동하지 않는 역참조 연산자입니다.
 

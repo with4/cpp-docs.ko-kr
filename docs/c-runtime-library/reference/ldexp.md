@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 012315e11ccf2dbe63e32c6208487f324ef29289
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ead91ce542ce547f9453f52455dc76d61045b87
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401423"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208417"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -90,23 +90,23 @@ long double ldexpl(
 
 ## <a name="return-value"></a>반환 값
 
-**ldexp** 의 값을 반환 하는 함수 *x* * 2<sup>*exp* </sup> 성공 하는 경우. 부호에 따라 오버플로 켜고 *x*, **ldexp** + /-반환 **HUGE_VAL**; **errno** 값으로 설정 되어 **ERANGE** .
+합니다 **ldexp** 의 값을 반환 하는 함수 *x* \* 2<sup>*exp* </sup> 성공 합니다. 부호에 따라 오버플로 켜고 *x*, **ldexp** + /-반환 **HUGE_VAL**; **errno** 값으로 설정 됩니다 **ERANGE** .
 
-에 대 한 자세한 내용은 **errno** 및 반환 값, 참조 가능한 오류 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)합니다.
+에 대 한 자세한 내용은 **errno** 및 가능한 오류 반환 값을 참조 하십시오 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)합니다.
 
 ## <a name="remarks"></a>설명
 
-C + +는 오버 로딩을 허용 하기 때문에 오버 로드를 호출할 수 있습니다 **ldexp** 사용 하는 **float** 또는 **긴** **double** 형식입니다. C 프로그램에서 **ldexp** 항상 약간의 **double** 및 **int** 반환는 **double**합니다.
+C + +에서는 오버 로드 하므로 오버 로드를 호출할 수 있습니다 **ldexp** 사용 하는 **float** 하거나 **긴** **double** 형식입니다. C 프로그램에서 **ldexp** 는 항상 사용을 **double** 및 **int** 반환을 **double**합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴|C 헤더|C++ 헤더|
+|루틴에서 반환된 값|C 헤더|C++ 헤더|
 |-------------|--------------|------------------|
-|**ldexp**, **ldexpf**, **ldexpl**|\<math.h>|\<cmath>|
+|**ldexp**하십시오 **ldexpf**, **ldexpl**|\<math.h>|\<cmath>|
 
 호환성에 대한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```C
 // crt_ldexp.c

@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa0067e3054972ccc60253bb7205dc7a4f1fe4bd
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7e6210f8c1b1fd1bd19efb74ca68c7a1bed3f7f1
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337449"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209133"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 클래스
 단일 사용자가 로그인부터 로그인까지 암호로 보호되고 명명된 데이터베이스 세션을 관리합니다.  
@@ -745,7 +745,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
 ### <a name="parameters"></a>매개 변수  
  *lpszDefaultUser*  
- 기본 사용자 이름입니다. 사용자 이름 수 1 ~ 20 자 길이 여야 하며 영문자, 악센트 부호가 있는 문자, 숫자, 공백 및 기호를 제외 하 고 포함: "(따옴표 포함), / (슬래시), \ (백슬래시) \[ \] (대괄호): (콜론), &#124; ( 파이프), \< (작은-기호), > (큰-기호), + (더하기 기호) = (같음 기호); (세미콜론), (쉼표), (물음표) * (별표)를 앞에 공백 및 제어 문자 (ASCII 00 ASCII 31). 관련된 내용은 DAO 도움말의 "사용자 이름 속성" 항목을 참조 합니다.  
+ 기본 사용자 이름입니다. 사용자 이름 수 1 ~ 20 자 길이 여야 하며 영문자, 악센트 부호가 있는 문자, 숫자, 공백 및 기호를 제외 하 고 포함: "(따옴표 포함), / (슬래시), \ (백슬래시) \[ \] (대괄호): (콜론), &#124; ( 파이프), \< (작은-기호), > (큰-기호), + (더하기 기호) = (같음 기호); (세미콜론), (쉼표), (물음표) \* (별표)를 앞에 공백 및 제어 문자 (ASCII 00 ASCII 31). 관련된 내용은 DAO 도움말의 "사용자 이름 속성" 항목을 참조 합니다.  
   
 ### <a name="remarks"></a>설명  
  설정 하는 기본 사용자 이름은 호출 후 만든 새 작업 영역에 적용 됩니다. 후속 작업 영역을 만든 경우에 사용자 이름을 지정 필요가 없습니다 합니다 [만들기](#create) 호출 합니다.  

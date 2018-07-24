@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9292e4d5ff9bf0f6f829c14dd0ee11e77a641d2d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 05bae03a94eac7a783f4ccb7248c8699729a006d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027656"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208691"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 클래스
 Microsoft Foundation Class 라이브러리 메시지 맵 아키텍처에 대 한 기본 클래스입니다.  
@@ -326,7 +326,7 @@ HRESULT GetTypeInfoOfGuid(
  에 대 한 포인터에 대 한 포인터를 `ITypeInfo` 인터페이스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 호출의 성공 여부를 나타내는 HRESULT입니다. 성공 하면 * *ppTypeInfo* 형식 정보 인터페이스를 가리킵니다.  
+ 호출의 성공 여부를 나타내는 HRESULT입니다. 성공 하면 \* *ppTypeInfo* 형식 정보 인터페이스를 가리킵니다.  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  형식 라이브러리에 대 한 포인터를 가져옵니다.  
@@ -345,7 +345,7 @@ virtual HRESULT GetTypeLib(
  에 대 한 포인터에 대 한 포인터를 `ITypeLib` 인터페이스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 호출의 성공 여부를 나타내는 HRESULT입니다. 성공 하면 * *ppTypeLib* 형식 라이브러리 인터페이스를 가리킵니다.  
+ 호출의 성공 여부를 나타내는 HRESULT입니다. 성공 하면 \* *ppTypeLib* 형식 라이브러리 인터페이스를 가리킵니다.  
   
 ### <a name="remarks"></a>설명  
  파생된 클래스에서이 멤버 함수를 재정의 해야 (재정의 되지 않으면 `GetTypeLib` TYPE_E_CANTLOADLIBRARY 반환). 사용 합니다 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) 도 구현 하는 매크로 `GetTypeInfoCount` 및 `GetTypeLibCache`합니다.  
@@ -437,10 +437,10 @@ virtual BOOL OnCmdMsg(
   
 |*nCode* 값|*pExtra* 값|  
 |-------------------|--------------------|  
-|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
-|CN_EVENT|AFX_EVENT *|  
-|CN_UPDATE_COMMAND_UI|CCmdUI *|  
-|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)*|  
+|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|  
+|CN_EVENT|AFX_EVENT\*|  
+|CN_UPDATE_COMMAND_UI|CCmdUI\*|  
+|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|  
 |CN_OLE_UNREGISTER|NULL|  
   
 ### <a name="example"></a>예  

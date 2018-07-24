@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0756875a799aacaf7308c406d98cbbf3a9a2a2
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2047938e25ed235d04b7a851a21a44090194660a
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027968"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209120"
 ---
 # <a name="arm-exception-handling"></a>ARM 예외 처리
 
@@ -248,25 +248,25 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 |바이트 1|바이트 2|바이트 3|바이트 4|Opsize|설명|
 |------------|------------|------------|------------|------------|-----------------|
-|00-7F||||16|`add   sp,sp,#X`<br /><br /> 여기서 X는 (코드 & 0x7F) * 4입니다.|
+|00-7F||||16|`add   sp,sp,#X`<br /><br /> 여기서 X는 (코드 & 0x7F) \* 4|
 |80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> 여기서 코드 & 0x1FFF에 해당 비트가 설정된 경우 코드 & 0x2000과 r0-r12가 표시되면 LR이 표시됩니다.|
 |C0-CF||||16|`mov   sp,rX`<br /><br /> 여기서 X는 코드 & 0x0F입니다.|
 |D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> 여기서 X는 (코드 & 0x03) + 4이며, 코드 & 0x04인 경우에는 LR이 표시됩니다.|
 |D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> 여기서 X는 (코드 & 0x03) + 8이며, 코드 & 0x04인 경우에는 LR이 표시됩니다.|
 |E0-E7||||32|`vpop  {d8-dX}`<br /><br /> 여기서 X는 (코드 & 0x07) + 8입니다.|
-|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> 여기서 X는 (코드 & 0x03FF) * 4입니다.|
+|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> 여기서 X는 (코드 & 0x03FF) \* 4|
 |EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> 여기서 코드 & 0x00FF에 해당 비트가 설정된 경우 코드 & 0x0100과 r0-r7이 표시되면 LR이 표시됩니다.|
 |EE|00-0F|||16|Microsoft 전용|
 |EE|10-FF|||16|사용 가능|
-|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> 여기서 X는 (코드 & 0x000F) * 4입니다.|
+|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> 여기서 X는 (코드 & 0x000F) \* 4|
 |EF|10-FF|||32|사용 가능|
 |F0-F4||||-|사용 가능|
 |F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> 여기서 S는 (코드 & 0x00F0) >> 4이고 E는 코드 & 0x000F입니다.|
 |F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> 여기서 S는 ((코드 & 0x00F0) >> 4) + 16이고 E는 (코드 & 0x000F) + 16입니다.|
-|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> 여기서 X는 (코드 & 0x00FFFF) * 4입니다.|
-|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> 여기서 X는 (코드 & 0x00FFFFFF) * 4입니다.|
-|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> 여기서 X는 (코드 & 0x00FFFF) * 4입니다.|
-|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> 여기서 X는 (코드 & 0x00FFFFFF) * 4입니다.|
+|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> 여기서 X는 (코드 & 0x00FFFF) \* 4|
+|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> 여기서 X는 (코드 & 0x00FFFFFF) \* 4|
+|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> 여기서 X는 (코드 & 0x00FFFF) \* 4|
+|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> 여기서 X는 (코드 & 0x00FFFFFF) \* 4|
 |FB||||16|nop(16비트)|
 |FC||||32|nop(32비트)|
 |FD||||16|에필로그의 종료 + 16비트 nop|
@@ -751,3 +751,4 @@ Function:
 
 [ARM ABI 규칙 개요](../build/overview-of-arm-abi-conventions.md)  
 [일반적인 Visual C++ ARM 마이그레이션 문제](../build/common-visual-cpp-arm-migration-issues.md)  
+

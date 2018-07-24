@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 34089ec501934f5d6aa8408acded821a67f67502
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5882a2fc31d5c9369429cdc39fb86a1c08e0c828
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958480"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208834"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 함수
 
@@ -141,7 +141,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>매개 변수
 
-*str* 는 std:: string, char *, 문자열 리터럴, 원시 문자열 리터럴 또는 이러한의 다양 한 버전 (예: std:: wstring, wchar_t\*).
+*str* std:: string, char\*, 리터럴, 원시 문자열 리터럴 또는 이러한의 다양 한 버전 문자열 (예: std:: wstring, wchar_t\*).
 
 *구분 기호* 는 사용자 지정 문자 또는 와이드 문자 문자열의 시작과 끝에 대 한 구분 기호로 사용입니다.
 
