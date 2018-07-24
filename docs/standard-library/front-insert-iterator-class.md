@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e94b9f748924c9711c814f0f823467b313affcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e709ce37d60281bbc56a0e8ecf3cc7eafef5b0ee
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964387"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207613"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator 클래스
 
@@ -63,9 +63,9 @@ class front_insert_iterator;
 
 |연산자|설명|
 |-|-|
-|[operator*](#op_star)|전면 삽입을 위해 출력 반복기 식을 구현하는 데 사용된 역참조 연산자 * `i` = `x`|
+|[operator*](#op_star)|출력 반복기 식을 구현 하는 데 사용 된 역참조 연산자 \* `i`  =  `x` 전면 삽입을 위해.|
 |[operator++](#op_add_add)|값을 저장할 다음 위치에 `front_insert_iterator`를 증가시킵니다.|
-|[operator=](#op_eq)|전면 삽입을 위해 출력 반복기 식을 구현하는 데 사용된 할당 연산자 * `i` = `x`|
+|[operator=](#op_eq)|출력 반복기 식을 구현 하는 데 사용 되는 대입 연산자 \* `i`  =  `x` 전면 삽입을 위해.|
 
 ## <a name="requirements"></a>요구 사항
 
@@ -177,7 +177,7 @@ After the front insertions, the list L is:
 *\
 ```
 
-## <a name="op_star"></a>  front_insert_iterator::operator*
+## <a name="op_star"></a>  front_insert_iterator:: operator\*
 
 주소가 지정된 요소를 반환하는 삽입 반복기를 역참조합니다.
 

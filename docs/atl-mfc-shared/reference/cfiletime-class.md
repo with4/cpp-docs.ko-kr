@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c984b2ef59e022a355d7c24915b5edbcf7f7e74d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7a1e7abe1fbbf3667999852dd1810a8a337cac79
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880949"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208665"
 ---
 # <a name="cfiletime-class"></a>CFileTime 클래스
 이 클래스는 파일과 연결 된 날짜 및 시간 값을 관리 하기 위한 메서드를 제공 합니다.  
@@ -101,11 +101,11 @@ class CFileTime :  public FILETIME
 |멤버 변수|100 나노초 간격의 수|  
 |---------------------|-----------------------------------------|  
 |Millisecond|10,000|  
-|Second|밀리초 * 1,000|  
-|Minute|두 번째 * 60|  
-|Hour|분 * 60|  
-|Day|시간 * 24|  
-|주|일 * 7|  
+|Second|밀리초 \* 1,000|  
+|Minute|두 번째 \* 60|  
+|Hour|분 \* 60|  
+|Day|시간 \* 24|  
+|주|일 \* 7|  
   
  **참고** 일부 파일 시스템 만들기를 기록할 수 및 마지막 액세스 시간 및 모든 파일 시스템에 동일한 방식으로 기록 합니다. 예제에서는 Windows NT FAT 파일 시스템 만들기에 대 한 10 밀리초 해상도 포함 하는 시간, 쓰기 시간 2 초의 해상도 가진 및 액세스 시간 1 일 (액세스 날짜)의 해상도 합니다. NTFS 액세스 시간에 1 시간의 확인을 기능이 있습니다. 또한 FAT 현지 시간으로 디스크에 대 한 번이 기록 되지만 NTFS utc에서 시간 디스크에 기록 합니다. 자세한 내용은 [파일을 시간](http://msdn.microsoft.com/library/windows/desktop/ms724290)합니다.  
   

@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f277292f413e09b9c41a87cd82e438e0e1e883a8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96d87a213029ab33e4d3c0269c4e7ba41e1aed43
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406669"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209419"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -71,23 +71,23 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 ## <a name="return-value"></a>반환 값
 
-부동 소수점 나머지 *x* / *y*합니다. 하는 경우의 값 *y* 이 0.0 인 경우 **나머지** 자동 NaN을 반환 합니다. 자동 NaN으로 표현에 대 한 내용은 **printf** 제품군, 참조 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)합니다.
+부동 소수점 나머지 *x* / *y*합니다. 경우 값 *y* 는 0.0 **나머지** quiet NaN을 반환 합니다. 자동 NaN 표현에 대 한 자세한 합니다 **printf** 제품군을 참조 하십시오 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)합니다.
 
 ## <a name="remarks"></a>설명
 
-**나머지** 함수는 부동 소수점 나머지 계산 *r* 의 *x* / *y* 되도록 *x*   =  *n* * *y* + *r*여기서 *n*되 고 값을 가장 가까운 정수 *x* / *y* 및 *n*짝수 때마다 &#124; *n*  -  *x* / *y* &#124; = 1/2입니다. 때 *r* = 0, *r* 와 동일한 기호가 *x*합니다.
+합니다 **나머지** 함수는 부동 소수점 나머지를 계산 *r* 의 *x* / *y* 되도록 *x*   =  *n* \* *y* + *r*여기서 *n*되는 정수 값에서 가장 가까운 *x* / *y* 하 고 *n*짝수 때마다 &#124; *n*  -  *x* / *y* &#124; = 1/2입니다. 때 *r* = 0 이면 *r* 와 부호가 같도록 *x*합니다.
 
-C + +는 오버 로딩을 허용 하기 때문에 오버 로드를 호출할 수 있습니다 **나머지** 사용 하 고 반환 **float** 또는 **긴** **double** 값입니다. C 프로그램에서 **나머지** 항상는 두 가지 **double** 인수 및 반환은 **double**합니다.
+C + +에서는 오버 로드 하므로 오버 로드를 호출할 수 있습니다 **나머지** 및 반환 하는 **float** 하거나 **긴** **double** 값입니다. C 프로그램에서 **나머지** 는 두 가지는 항상 **double** 인수 및 반환을 **double**합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|함수|필수 헤더(C)|필수 헤더(C++)|
+|기능|필수 헤더(C)|필수 헤더(C++)|
 |--------------|---------------------|-|
-|**나머지**, **remainderf**, **remainderl**|\<math.h>|\<cmath> 또는 \<math.h>|
+|**나머지**하십시오 **remainderf**, **remainderl**|\<math.h>|\<cmath> 또는 \<math.h>|
 
 호환성에 대한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```C
 // crt_remainder.c

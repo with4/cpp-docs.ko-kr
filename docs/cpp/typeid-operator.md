@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9646678398ff1e18d0acf45c45bc931ce37cd54a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b51d2a3861cb26073063058aa4124244d94df40b
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944875"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207454"
 ---
 # <a name="typeid-operator"></a>typeid 연산자
 ## <a name="syntax"></a>구문  
@@ -41,7 +41,7 @@ typeid(expression)
   
 -   클래스에 대한 참조  
   
--   *로 역참조되는 포인터  
+-   포인터를 사용 하 여 역참조 \*  
   
 -   첨자 포인터(예: [ ]). 일반적으로 다형 형식의 포인터에 첨자를 사용하는 것은 안전하지 않습니다.  
   

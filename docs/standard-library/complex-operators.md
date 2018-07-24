@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: b65178b171b8717096eb19206877b033a52d1e44
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2491cb859de8908bbe0710f03d12f836bbd80e2f
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957700"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208678"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; operators
 
@@ -172,7 +172,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_star"></a>  operator*
+## <a name="op_star"></a>  operator\*
 
 하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 곱합니다.
 
@@ -196,9 +196,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽* 를 곱할 복소수의 매개 변수 형식을 개수나 두 복소수 중 첫 번째는 * 작업 합니다.
+*왼쪽* 를 곱할 복소수의 매개 변수 형식을 개수나 두 복소수 중 첫 번째는 \* 작업 합니다.
 
-*오른쪽* 를 곱할 복소수의 매개 변수 형식을 개수나 두 복소수 중 두 번째는 * 작업 합니다.
+*오른쪽* 를 곱할 복소수의 매개 변수 형식을 개수나 두 복소수 중 두 번째는 \* 작업 합니다.
 
 ### <a name="return-value"></a>반환 값
 

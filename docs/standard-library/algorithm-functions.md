@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79d9492588688c7dd7e7fa754e4a4f0b0f892d05
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d905c8208bef98d584d3052c242de1ac127a4830
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027942"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209302"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 함수
 
@@ -2705,7 +2705,7 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="remarks"></a>설명
 
-이전 버전과의 호환성을 위해 C++ 표준에 포함된 **iter_swap**보다 `swap`을 먼저 사용해야 합니다. `Fit1` 및 `Fit2`가 정방향 반복기이면 `iter_swap` ( `Fit1`, `Fit2` )는 `swap` ( * `Fit1`, \* `Fit2` )와 같습니다.
+이전 버전과의 호환성을 위해 C++ 표준에 포함된 **iter_swap**보다 `swap`을 먼저 사용해야 합니다. 하는 경우 `Fit1` 및 `Fit2` 있다면 정방향 반복기 `iter_swap` ( `Fit1`, `Fit2` ), 동일 `swap` ( \* `Fit1`를 \* `Fit2` ).
 
 입력 정방향 반복기의 값 형식은 동일한 값을 가져야 합니다.
 

@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfe11313a456437fca2dd03aa8367c5f380e689
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6834e37c9f6624e231861fa28063cdbc7bec8508
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380454"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208626"
 ---
 # <a name="wildcards-and-nmake"></a>와일드카드와 NMAKE
-Nmake 파일 이름 와일드 카드 (* 및?) 종속 줄에 있습니다. 명령;에 전달 되는 명령에 지정 된 와일드 카드 NMAKE 확장 하지 않습니다.  
+Nmake 파일 이름이 와일드 카드 (\* 및?) 종속성 줄에서. 명령에 전달 되는 명령에 지정 된 와일드 카드 NMAKE 확장 하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [메이크파일의 내용](../build/contents-of-a-makefile.md)

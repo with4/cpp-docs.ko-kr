@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 143924aa3dccf00df1f5486a07d9324cea584a46
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: da9e69cd7ea5e7eabdd826e021e57dac3ba8e6aa
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884303"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208860"
 ---
 # <a name="csid-class"></a>CSid 클래스
 이 클래스는에 대 한 래퍼를 `SID` (보안 식별자) 구조입니다.  
@@ -469,7 +469,7 @@ bool operator>=(
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 *lhs* 보다 크거나 같음 *rhs*이 고, 그렇지 않으면 FALSE입니다.  
   
-##  <a name="operator_const_sid__star"></a>  CSid::operator const SID *  
+##  <a name="operator_const_sid__star"></a>  CSid::operator const SID \*  
  캐스트를 `CSid` 개체에 대 한 포인터를 `SID` (보안 식별자) 구조입니다.  
   
 ```  

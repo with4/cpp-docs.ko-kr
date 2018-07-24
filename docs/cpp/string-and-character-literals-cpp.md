@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a4d3e663c0cb8d80d3b154f23082d88b446b6f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942096"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208551"
 ---
 # <a name="string-and-character-literals--c"></a>문자열 및 문자 리터럴 (c + +)
 C++를 사용하면 다양한 문자열 및 문자 형식이 지원되며 이러한 각 형식의 리터럴 값을 표현할 수 있습니다. 소스 코드에서는 문자 집합을 사용하여 문자 및 문자열 리터럴의 내용을 표현합니다. 유니버설 문자 이름 및 이스케이프 문자를 사용하면 기본 소스 문자 집합만 사용하여 모든 문자열을 표현할 수 있습니다. 원시 문자열 리터럴을 사용하면 이스케이프 문자를 사용하지 않아도 되며 원시 문자열 리터럴을 사용하여 모든 유형의 문자열 리터럴을 표현할 수 있습니다. 또한 추가 생성이나 변환 단계를 수행하지 않고도 std:: string 리터럴을 만들 수 있습니다.  
@@ -310,7 +310,7 @@ const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);  
 ```  
   
- 있음을 `strlen()` 하 고 `wcslen()` 크기가 같은지 문자열 형식의 요소 크기를 종결 null 문자 크기를 포함 하지 않습니다: char * 문자열에서 1 바이트, wchar_t에 2 바이트\* 또는 char16_t\* 문자열 및 char32_t의 경우 4 바이트\* 문자열입니다.  
+ 있음을 `strlen()` 및 `wcslen()` 크기가 같은지 문자열 형식의 요소 크기를 종결 null 문자 크기를 포함 하지 않습니다: char에서 1 바이트\* string을 wchar_t에 2 바이트\* 또는 char16_t\*문자열 및 char32_t의 경우 4 바이트\* 문자열입니다.  
   
  문자열 리터럴의 최대 길이는 65535바이트입니다. 이 제한은 좁은 문자열 리터럴과 와이드 문자열 리터럴 모두에 적용됩니다.  
   
@@ -380,7 +380,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 ```  
   
 ### <a name="string-literals-with-universal-character-names"></a>유니버설 문자 이름을 가진 문자열 리터럴  
- 네이티브(비 원시) 문자열 리터럴은 문자열 형식에서 하나 이상의 문자로 유니버설 문자 이름을 인코드할 수 있는 한 유니버설 문자 이름을 사용하여 모든 문자를 나타낼 수 있습니다.  예를 들어 확장된 문자를 나타내는 유니버설 문자 이름은 ANSI 코드 페이지를 사용하는 좁은 문자열로 인코드할 수 없지만 일부 멀티바이트 코드 페이지의 좁은 문자열, UTF-8 문자열 또는 와이드 문자열로 인코드할 수 있습니다. C++11에서는 유니코드 지원이 char16_t * 및 char32_t 확장 됩니다\* 문자열 형식:  
+ 네이티브(비 원시) 문자열 리터럴은 문자열 형식에서 하나 이상의 문자로 유니버설 문자 이름을 인코드할 수 있는 한 유니버설 문자 이름을 사용하여 모든 문자를 나타낼 수 있습니다.  예를 들어 확장된 문자를 나타내는 유니버설 문자 이름은 ANSI 코드 페이지를 사용하는 좁은 문자열로 인코드할 수 없지만 일부 멀티바이트 코드 페이지의 좁은 문자열, UTF-8 문자열 또는 와이드 문자열로 인코드할 수 있습니다. char16_t 여 c++11에서는 유니코드 지원이 확장 됩니다\* 및 char32_t\* 문자열 형식:  
   
 ```cpp  
 // ASCII smiling face  
