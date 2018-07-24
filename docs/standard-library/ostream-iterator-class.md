@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 308254fded0ac38a794233fb3f4eacd4d7d6fd19
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963526"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207921"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator 클래스
 
@@ -68,9 +68,9 @@ ostream_iterator 클래스는 출력 반복기에 대한 요구 사항을 충족
 
 |연산자|설명|
 |-|-|
-|[operator*](#op_star)|출력 반복기 식 * `i` = `x`을 구현하는 데 사용된 역참조 연산자.|
+|[operator*](#op_star)|출력 반복기 식을 구현 하는 데 사용 된 역참조 연산자 \* `i`  =  `x`합니다.|
 |[operator++](#op_add_add)|연산이 호출되기 전에 주소 지정한 동일한 개체에 `ostream_iterator`를 반환한 비함수 증분 연산자.|
-|[operator=](#op_eq)|출력 스트림을 작성하기 위해 출력 반복기 식 * `i` = `x`을 구현하는 데 사용된 할당 연산자.|
+|[operator=](#op_eq)|출력 반복기 식을 구현 하는 데 사용 되는 대입 연산자 \* `i`  =  `x` 출력 스트림에 작성 합니다.|
 
 ## <a name="requirements"></a>요구 사항
 
@@ -228,7 +228,7 @@ Elements written to output stream:
 
 ## <a name="op_eq"></a>  ostream_iterator::operator=
 
-출력 스트림을 작성하기 위해 출력 반복기 식 * `i` = `x`을 구현하는 데 사용된 할당 연산자입니다.
+출력 반복기 식을 구현 하는 데 사용 되는 할당 연산자 \* `i`  =  `x` 출력 스트림에 작성 합니다.
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
@@ -240,11 +240,11 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="return-value"></a>반환 값
 
-연산자 삽입 *val* 뒤에 지정 된 구분 기호를 개체에 연결 된 출력 스트림에 [ostream_iterator 생성자](#ostream_iterator) (있는 경우), 다음을 에대한참조를반환합니다`ostream_iterator`.
+연산자 삽입 *val* 뒤에 지정 된 구분 기호를 개체에 연결 된 출력 스트림에 [ostream_iterator 생성자](#ostream_iterator) (있는 경우), 다음을 에대한참조를반환합니다 `ostream_iterator`.
 
 ### <a name="remarks"></a>설명
 
-`ostream_iterator`가 충족해야 하는 출력 반복기에 대한 요구 사항은 * `ii` = `t` 식만 유효해야 한다는 것과 해당 반복기 자체는 operator 또는 operator=에 대해 어떤 정보도 제공하지 않아야 한다는 것입니다. 이 구성원 연산자는 `*this`를 반환합니다.
+출력 반복기에 대 한 요구 사항을 하는 `ostream_iterator` 충족 해야 합니다 식만 \* `ii`  =  `t` 유효 하 고 연산자 또는 연산자에 대해 아무런 언급이 자체적으로 =. 이 구성원 연산자는 `*this`를 반환합니다.
 
 ### <a name="example"></a>예
 
