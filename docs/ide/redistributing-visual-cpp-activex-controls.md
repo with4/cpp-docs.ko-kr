@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: dc319c2da652cd1c43f23c13456b32f978595199
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33331021"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207959"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Visual C++ ActiveX 컨트롤 재배포
 Visual C++ 6.0은 다시 배포할 응용 프로그램에서 사용할 수 있는 ActiveX 컨트롤을 제공합니다. 이러한 컨트롤은 더 이상 Visual C++에 포함되지 않습니다. Visual C++ 6.0에 대한 사용권 계약에 따라 Visual C++에서 개발된 응용 프로그램으로 이러한 컨트롤을 재배포할 수 있습니다.  
@@ -34,11 +34,11 @@ Visual C++ 6.0은 다시 배포할 응용 프로그램에서 사용할 수 있�
   
 -   Asycfilt.dll  
   
--   Comcat.dll *  
+-   Comcat.dll \*  
   
--   Oleaut32.dll *  
+-   Oleaut32.dll \*  
   
--   Olepro32.dll *  
+-   Olepro32.dll \*  
   
 -   Stdole2.tlb  
   
