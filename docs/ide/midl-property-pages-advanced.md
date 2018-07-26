@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330806"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207762"
 ---
 # <a name="midl-property-pages-advanced"></a>MIDL 속성 페이지: 고급
 **MIDL** 폴더의 **고급** 속성 페이지에서 다음 MIDL 컴파일러 옵션을 지정합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "33330806"
   
 -   스텁 데이터 검사([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   매개 변수 유효성 검사([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
+-   매개 변수 유효성 검사([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
 -   구조체 멤버 맞춤([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
   

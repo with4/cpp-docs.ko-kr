@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe65dfec3befa15ffebde3d074081ee11364f4d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e4d22df877ab757134ee6da86a5ff22ec106f958
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337576"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208577"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Visual C++ 문서 태그의 구분 기호
 문서 태그를 사용하려면 문서 주석이 시작되고 끝나는 위치를 컴파일러에 알리는 구분 기호가 필요합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "33337576"
     /** <summary>text</summary> */  
     ```  
   
--   컴파일러는 " * " 패턴을 적용하여 두 번째 및 세 번째 줄의 시작 부분에서 무시합니다.  
+-   컴파일러는 " \* " 패턴을 적용하여 두 번째 및 세 번째 줄의 시작 부분에서 무시합니다.  
   
     ```  
     /**  
