@@ -7,27 +7,51 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - IRowsetLocateImpl
+- ATL.IRowsetLocateImpl.Compare
+- IRowsetLocateImpl::Compare
+- IRowsetLocateImpl.Compare
+- ATL::IRowsetLocateImpl::Compare
+- GetRowsAt
+- IRowsetLocateImpl.GetRowsAt
+- ATL::IRowsetLocateImpl::GetRowsAt
+- IRowsetLocateImpl::GetRowsAt
+- ATL.IRowsetLocateImpl.GetRowsAt
+- IRowsetLocateImpl::GetRowsByBookmark
+- IRowsetLocateImpl.GetRowsByBookmark
+- GetRowsByBookmark
+- IRowsetLocateImpl::Hash
+- IRowsetLocateImpl.Hash
+- m_rgBookmarks
+- IRowsetLocateImpl::m_rgBookmarks
+- ATL.IRowsetLocateImpl.m_rgBookmarks
+- ATL::IRowsetLocateImpl::m_rgBookmarks
+- IRowsetLocateImpl.m_rgBookmarks
 dev_langs:
 - C++
 helpviewer_keywords:
 - providers, bookmarks
 - IRowsetLocateImpl class
 - bookmarks, OLE DB
+- Compare method
+- GetRowsAt method
+- GetRowsByBookmark method
+- Hash method
+- m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: db8d0b5d81a53a71413998b39947eb71a1bd508a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 986626fa391971ce342f8d80b9e3e7f8ec979b63
+ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111031"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39322178"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl 클래스
-OLE DB 구현 [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) 인터페이스에는 행 집합에서 임의의 행을 인출 합니다.  
+OLE DB 구현 [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx) 인터페이스 행 집합에서 임의의 행을 인출 합니다.  
   
 ## <a name="syntax"></a>구문
 
@@ -47,27 +71,30 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
        MapClass>  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T`  
- 클래스에서 파생 `IRowsetLocateImpl`합니다.  
+### <a name="parameters"></a>매개 변수  
+ *T*  
+ 파생 된 클래스 `IRowsetLocateImpl`합니다.  
   
- `RowsetInterface`  
- 클래스에서 파생 `IRowsetImpl`합니다.  
+ *RowsetInterface*  
+ 파생 된 클래스 `IRowsetImpl`합니다.  
   
- `RowClass`  
- 에 대 한 저장소 단위는 **HROW**합니다.  
+ *RowClass*  
+ 에 대 한 저장소 단위는 `HROW`합니다.  
   
- `MapClass`  
+ *MapClass*  
  공급자가 보유 하는 모든 행 핸들에 대 한 저장소 단위입니다.  
   
- `BookmarkKeyType`  
- 책갈피, LONG 또는 문자열 등의 형식입니다. 일반 책갈피 최소한 2 바이트의 길이 있어야 합니다. (OLE DB에 대 한 단일 바이트 길이 예약 되어 [표준 책갈피](https://msdn.microsoft.com/en-us/library/ms712954.aspx)**DBBMK_FIRST**, **DBBMK_LAST**, 및 **DBBMK_INVALID**.)  
+ *BookmarkKeyType*  
+ 긴 문자열 등 책갈피의 형식입니다. 일반 책갈피에는 최소한 2 바이트 길이의 있어야 합니다. (OLE DB에 대 한 싱글바이트 길이 이기 [표준 책갈피](https://msdn.microsoft.com/library/ms712954.aspx)`DBBMK_FIRST`를 `DBBMK_LAST`, 및 `DBBMK_INVALID`.)  
   
- `BookmarkType`  
- 책갈피-데이터 관계를 유지 관리 하기 위한 매핑 메커니즘입니다.  
+ *BookmarkType*  
+ 책갈피-데이터 관계를 유지 관리에 대 한 매핑 메커니즘입니다.  
   
- `BookmarkMapClass`  
- 책갈피에서 보유 하는 모든 행 핸들에 대 한 저장소 단위입니다.  
+ *BookmarkMapClass*  
+ 책갈피를 소유 하는 모든 행 핸들에 대 한 저장소 단위입니다.  
+
+## <a name="requirements"></a>요구 사항  
+ **헤더**: atldb.h  
   
 ## <a name="members"></a>멤버  
   
@@ -75,32 +102,136 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
   
 |||  
 |-|-|  
-|[Compare](../../data/oledb/irowsetlocateimpl-compare.md)|두 개의 책갈피를 비교합니다.|  
-|[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|책갈피에서의 오프셋으로 지정 된 행부터 시작 하는 행을 인출 합니다.|  
-|[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|지정 된 책갈피를 일치 하는 행을 인출 합니다.|  
-|[해시](../../data/oledb/irowsetlocateimpl-hash.md)|지정 된 책갈피에 대 한 값을 해시 하는 반환 합니다.|  
+|[Compare](#compare)|두 개의 책갈피를 비교합니다.|  
+|[GetRowsAt](#getrowsat)|책갈피에서의 오프셋으로 지정 된 행부터 행을 인출 합니다.|  
+|[GetRowsByBookmark](#getrowsbybookmark)|지정한 책갈피를 일치 하는 행을 인출 합니다.|  
+|[해시](#hash)|지정 된 책갈피에 대 한 값을 해시 하는 반환 합니다.|  
   
 ### <a name="data-members"></a>데이터 멤버  
   
 |||  
 |-|-|  
-|[m_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|책갈피의 배열입니다.|  
+|[m_rgBookmarks](#rgbookmarks)|책갈피의 배열입니다.|  
   
 ## <a name="remarks"></a>설명  
- `IRowsetLocateImpl` OLE DB 템플릿 구현인는 [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) 인터페이스입니다. `IRowsetLocate` 행 집합에서 임의의 행을 인출 하는 데 사용 됩니다. 이 인터페이스를 구현 하지 않는 행 집합은 한 `sequential` 행 집합입니다. 때 `IRowsetLocate` 있으면 행 집합에 열 0이 행에 대 한 책갈피;이 열을 읽는 동일한 행에 위치를 변경 하는 데 사용할 수 있는 책갈피 값을 가져옵니다.  
+ `IRowsetLocateImpl` OLE DB 템플릿 구현 된 [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx) 인터페이스입니다. `IRowsetLocate` 행 집합에서 임의의 행을 인출 하는 데 사용 됩니다. 이 인터페이스를 구현 하지 않는 행 집합은을 `sequential` 행 집합입니다. 때 `IRowsetLocate` 가 행 집합 열 0이 행에 대 한 책갈피가;이 칼럼을 읽은 같은 행의 위치를 변경 하는 책갈피 값을 가져옵니다.  
   
- `IRowsetLocateImpl` 공급자의 책갈피 지원을 구현 하는 데 사용 됩니다. 책갈피는 자리 표시자 (인덱스 행 집합에서) 소비자는 행에 신속 하 게 반환할 수 있도록 하는 고속 데이터 액세스를 허용 합니다. 공급자 책갈피 수 있는 고유 하 게 결정 한 행을 식별 합니다. 사용 하 여 `IRowsetLocateImpl` 메서드, 책갈피를 비교할 수 있습니다, by 인출 행 오프셋, 책갈피에서 행 인출 및 책갈피에 대 한 해시 값을 반환 합니다.  
+ `IRowsetLocateImpl` 공급자에 책갈피 지원을 구현 하는 데 사용 됩니다. 책갈피는 자리 표시자 (인덱스 행 집합에서) 소비자는 행에 신속 하 게 반환할 수 있도록 하는 고속 데이터에 액세스할 수 있습니다. 공급자 책갈피 수 있는 고유 하 게 결정 한 행을 식별 합니다. 사용 하 여 `IRowsetLocateImpl` 메서드, 책갈피를 비교할 수 있습니다, fetch 행에서 오프셋을 책갈피 행 인출 및 책갈피에 대 한 해시 값을 반환 합니다.  
   
- 행 집합에 OLE DB 책갈피를 지원 하려면이 클래스에서 상속 하는 행 집합을 확인 합니다.  
+ 행 집합의 OLE DB 책갈피를 지원 하려면이 클래스에서 상속 하는 행 집합을 확인 합니다.  
   
- 책갈피 지원 구현에 대 한 자세한 내용은 참조 하십시오. [공급자의 책갈피 지원](../../data/oledb/provider-support-for-bookmarks.md) 에 *Visual c + + 프로그래머 가이드* 및 [책갈피](https://msdn.microsoft.com/en-us/library/ms709728.aspx) 는 에서*OLE DB Programmer's Reference* 플랫폼 SDK에에서 있습니다.  
+ 책갈피 지원 구현에 대 한 정보를 참조 하세요. [책갈피에 대 한 공급자 지원](../../data/oledb/provider-support-for-bookmarks.md) 에 *Visual c + + 프로그래머 가이드* 및 [책갈피](https://msdn.microsoft.com/library/ms709728.aspx) 합니다 에서*OLE DB Programmer's Reference* 플랫폼 SDK에에서 있습니다.  
+
+## <a name="compare"></a> Irowsetlocateimpl:: Compare
+두 개의 책갈피를 비교합니다.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더**: atldb.h  
+### <a name="syntax"></a>구문  
+  
+```cpp
+      STDMETHOD (Compare )(HCHAPTER /* hReserved */,  
+   DBBKMARK cbBookmark1,  
+   const BYTE* pBookmark1,  
+   DBBKMARK cbBookmark2,  
+   const BYTE* pBookmark2,  
+   DBCOMPARE* pComparison);  
+```  
+  
+#### <a name="parameters"></a>매개 변수  
+ 참조 [IRowsetLocate::Compare](https://msdn.microsoft.com/library/ms709539.aspx) 에 *OLE DB Programmer's Reference*합니다.  
+  
+### <a name="remarks"></a>설명  
+ 중 책갈피 표준 수 OLE DB 정의 [표준 책갈피](https://msdn.microsoft.com/library/ms712954.aspx) (`DBBMK_FIRST`를 `DBBMK_LAST`, 또는 `DBBMK_INVALID`). 반환 된 값 `pComparison` 두 책갈피 간의 관계를 나타냅니다.  
+  
+-   DBCOMPARE_LT (`cbBookmark1` 하기 전에 `cbBookmark2`.)  
+  
+-   DBCOMPARE_EQ (`cbBookmark1` 값과 같음 `cbBookmark2`.)  
+  
+-   DBCOMPARE_GT (`cbBookmark1` 후 `cbBookmark2`.)  
+  
+-   DBCOMPARE_NE (책갈피는 같음 및 정렬 되지 않습니다.)  
+  
+-   DBCOMPARE_NOTCOMPARABLE (책갈피를 비교할 수 없습니다.) 
+
+## <a name="getrowsat"></a> Irowsetlocateimpl:: Getrowsat
+책갈피에서의 오프셋으로 지정 된 행부터 행을 인출 합니다.  
+  
+### <a name="syntax"></a>구문  
+  
+```cpp
+      STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,  
+   HCHAPTER hReserved2,  
+   DBBKMARK cbBookmark,  
+   const BYTE* pBookmark,  
+   DBROWOFFSET lRowsOffset,  
+   DBROWCOUNT cRows,  
+   DBCOUNTITEM* pcRowsObtained,  
+   HROW** prghRows);  
+```  
+  
+#### <a name="parameters"></a>매개 변수  
+ 참조 [irowsetlocate:: Getrowsat](https://msdn.microsoft.com/library/ms723031.aspx) 에 *OLE DB Programmer's Reference*합니다.  
+  
+### <a name="remarks"></a>설명  
+ 대신 인출할 커서 위치에서 사용 하 여 [IRowset::GetRowsAt](https://msdn.microsoft.com/library/ms723031.aspx)합니다.  
+  
+ `IRowsetLocateImpl::GetRowsAt` 커서 위치를 변경 하지 않습니다. 
+
+## <a name="getrowsbybookmark"></a> Irowsetlocateimpl:: Getrowsbybookmark
+지정한 책갈피를 일치 하는 하나 이상의 행을 인출 합니다.  
+  
+### <a name="syntax"></a>구문  
+  
+```cpp
+      STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,  
+   DBCOUNTITEM cRows,  
+   const DBBKMARK rgcbBookmarks[],  
+   const BYTE* rgpBookmarks,  
+   HROW rghRows[],  
+   DBROWSTATUS* rgRowStatus[]);  
+```  
+  
+#### <a name="parameters"></a>매개 변수  
+ *hReserved*  
+ [in] 에 해당 *hChapter* 매개 변수를 [irowsetlocate:: Getrowsbybookmark](https://msdn.microsoft.com/library/ms725420.aspx)합니다.  
+  
+ 다른 매개 변수를 참조 하세요 [irowsetlocate:: Getrowsbybookmark](https://msdn.microsoft.com/library/ms725420.aspx) 에 *OLE DB Programmer's Reference*합니다.  
+  
+### <a name="remarks"></a>설명  
+ 책갈피는 정의한 값 또는 OLE DB 수 [표준 책갈피](https://msdn.microsoft.com/library/ms712954.aspx) (`DBBMK_FIRST` 또는 `DBBMK_LAST`). 커서 위치를 변경 하지 않습니다.  
+
+## <a name="hash"></a> Irowsetlocateimpl:: Hash
+지정 된 책갈피에 대 한 값을 해시 하는 반환 합니다.  
+  
+### <a name="syntax"></a>구문  
+  
+```cpp
+      STDMETHOD (Hash )(HCHAPTER /* hReserved */,  
+   DBBKMARK cbBookmarks,  
+   const DBBKMARK* rgcbBookmarks[],  
+   const BYTE* rgpBookmarks[],  
+   DBHASHVALUE rgHashValues[],  
+   DBROWSTATUS rgBookmarkStatus[]);  
+```  
+  
+#### <a name="parameters"></a>매개 변수  
+ *hReserved*  
+ [in] 에 해당 *hChapter* 매개 변수를 [IRowsetLocate::Hash](https://msdn.microsoft.com/library/ms709697.aspx)합니다.  
+  
+ 다른 매개 변수를 참조 하세요 [IRowsetLocate::Hash](https://msdn.microsoft.com/library/ms709697.aspx) 에 *OLE DB Programmer's Reference*합니다.  
+
+## <a name="rgbookmarks"></a> Irowsetlocateimpl:: M_rgbookmarks
+책갈피의 배열입니다.  
+  
+### <a name="syntax"></a>구문  
+  
+```cpp
+CAtlArray<DBROWCOUNT> m_rgBookmarks;  
+  
+```  
   
 ## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)   
- [IRowsetLocate:IRowset](https://msdn.microsoft.com/en-us/library/ms721190.aspx)   
+ [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/ms721190.aspx)   
  [공급자의 책갈피 지원](../../data/oledb/provider-support-for-bookmarks.md)   
- [책갈피](https://msdn.microsoft.com/en-us/library/ms709728.aspx)
+ [책갈피](https://msdn.microsoft.com/library/ms709728.aspx)
