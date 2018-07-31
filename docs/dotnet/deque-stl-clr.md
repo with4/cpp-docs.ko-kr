@@ -108,21 +108,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 881db763518f31d9682ba050e460d4a3f7b39317
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 3d5db6c886de547abd94ec0390f1056efef0091e
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079827"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376198"
 ---
 # <a name="deque-stlclr"></a>deque(STL/CLR)
-템플릿 클래스는 임의 액세스를 가진 요소의 다양 한 길이의 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `deque` 인접 한 블록 저장소의 처럼 보입니다. 하지만 늘리거나 모든 나머지 요소를 복사할 필요 없이 양쪽 끝 줄일 수 있는 요소의 시퀀스를 관리할 수 있습니다. 따라서 구현할 수 있는 효율적으로 한 `double-ended queue`합니다. (따라서 이름입니다.)  
+템플릿 클래스는 임의 액세스 권한이 있는 요소의 다양 한 길이의 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `deque` 는 저장소의 연속 블록 보이지만 확장 하거나 나머지 요소를 복사할 필요 없이 한쪽 끝에서 축소할 수 있는 요소의 시퀀스를 관리할 수 있습니다. 따라서 구현할 수 있습니다 효율적으로 `double-ended queue`합니다. (따라서 이름입니다.)  
   
- 아래 설명에 `GValue` 동일 `Value` 후자 형식인 ref 하지 않는 한 경우에서 이기 `Value^`합니다.  
+ 아래 설명에서 `GValue` 같습니다 `Value` 후자는 참조 형식, 하지 않는 한이 경우에서는 `Value^`합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value>  
     ref class deque  
         :   public  
@@ -137,14 +137,14 @@ template<typename Value>
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- GValue  
- 제어 된 시퀀스의 요소는 제네릭 형식입니다.  
+ *GValue*  
+ 제네릭 형식 제어 된 시퀀스의 요소입니다.  
   
- 값  
+ *Value*  
  제어되는 시퀀스의 요소 형식입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** \<cliext/q u e >  
+ **헤더:** \<cliext/deque >  
   
  **Namespace:** cliext  
 
@@ -158,8 +158,8 @@ template<typename Value>
 |[deque::difference_type(STL/CLR)](#difference_type)|두 요소 사이의 부호가 있는 거리의 형식입니다.|  
 |[deque::generic_container(STL/CLR)](#generic_container)|컨테이너에 대 한 제네릭 인터페이스의 형식입니다.|  
 |[deque::generic_iterator(STL/CLR)](#generic_iterator)|컨테이너에 대 한 제네릭 인터페이스에 대 한 반복기의 형식입니다.|  
-|[deque::generic_reverse_iterator(STL/CLR)](#generic_reverse_iterator)|컨테이너에 대 한 제네릭 인터페이스에 대 한 반대 반복기의 형식입니다.|  
-|[deque::generic_value(STL/CLR)](#generic_value)|컨테이너에 대 한 제네릭 인터페이스에 대 한 요소의 형식입니다.|  
+|[deque::generic_reverse_iterator(STL/CLR)](#generic_reverse_iterator)|컨테이너에 대 한 제네릭 인터페이스에 대 한 역방향 반복기의 형식입니다.|  
+|[deque::generic_value(STL/CLR)](#generic_value)|제네릭 인터페이스에 대 한 컨테이너 요소 형식입니다.|  
 |[deque::iterator(STL/CLR)](#iterator)|제어되는 시퀀스에 대한 반복기의 형식입니다.|  
 |[deque::reference(STL/CLR)](#reference)|요소에 대한 참조의 형식입니다.|  
 |[deque::reverse_iterator(STL/CLR)](#reverse_iterator)|제어되는 시퀀스에 대한 반대 반복기의 형식입니다.|  
@@ -179,16 +179,16 @@ template<typename Value>
 |[deque::erase(STL/CLR)](#erase)|지정된 위치에 있는 요소를 제거합니다.|  
 |[deque::front(STL/CLR)](#front)|첫 번째 요소에 액세스합니다.|  
 |[deque::insert(STL/CLR)](#insert)|지정된 된 위치에 요소를 추가합니다.|  
-|[deque::pop_back(STL/CLR)](#pop_back)|마지막 요소를 제거 합니다.|  
+|[deque::pop_back(STL/CLR)](#pop_back)|마지막 요소를 제거합니다.|  
 |[deque::pop_front(STL/CLR)](#pop_front)|첫 번째 요소를 제거합니다.|  
-|[deque::push_back(STL/CLR)](#push_back)|새 마지막 요소를 추가 합니다.|  
-|[deque::push_front(STL/CLR)](#push_front)|새 첫 번째 요소를 추가 합니다.|  
+|[deque::push_back(STL/CLR)](#push_back)|새 마지막 요소를 추가합니다.|  
+|[deque::push_front(STL/CLR)](#push_front)|새 첫 번째 요소를 추가합니다.|  
 |[deque::rbegin(STL/CLR)](#rbegin)|제어되는 역방향 시퀀스의 시작을 지정합니다.|  
 |[deque::rend(STL/CLR)](#rend)|제어되는 역방향 시퀀스의 끝을 지정합니다.|  
-|[deque::resize(STL/CLR)](#resize)|요소의 수를 변경합니다.|  
+|[deque::resize(STL/CLR)](#resize)|요소 수를 변경합니다.|  
 |[deque::size(STL/CLR)](#size)|요소 수를 계산합니다.|  
 |[deque::swap(STL/CLR)](#swap)|두 컨테이너의 내용을 바꿉니다.|  
-|[deque::to_array(STL/CLR)](#to_array)|제어 되는 새 배열에 복사합니다.|  
+|[deque::to_array(STL/CLR)](#to_array)|제어 되는 시퀀스를 새 배열에 복사합니다.|  
   
 |속성|설명|  
 |--------------|-----------------|  
@@ -197,37 +197,37 @@ template<typename Value>
   
 |연산자|설명|  
 |--------------|-----------------|  
-|[deque::operator!=(STL/CLR)](#op_neq)|두 개 결정 `deque` 개체가 같지 않습니다.|  
+|[deque::operator!=(STL/CLR)](#op_neq)|두 경우를 결정 `deque` 개체가 같지 않습니다.|  
 |[deque::operator(STL/CLR)](#operator)|지정된 위치에 있는 요소에 액세스합니다.|  
-|[operator< (deque)(STL/CLR)](#op_lt)|있는지 여부를 확인 한 `deque` 개체를 사용 하면 다른 노드보다 작은지 `deque` 개체입니다.|  
-|[operator<= (deque)(STL/CLR)](#op_lteq)|있는지 여부를 확인 한 `deque` 개체 보다 작거나 같으면 다른 `deque` 개체입니다.|  
+|[operator< (deque)(STL/CLR)](#op_lt)|확인을 `deque` 개체를 사용 하면 다른 노드보다 작은지 `deque` 개체입니다.|  
+|[operator<= (deque)(STL/CLR)](#op_lteq)|확인을 `deque` 개체 보다 작거나 같으면 다른 `deque` 개체입니다.|  
 |[operator= (deque)(STL/CLR)](#op_as)|제어되는 시퀀스를 바꿉니다.|  
-|[operator== (deque)(STL/CLR)](#op_eq)|있는지 여부를 확인 한 `deque` 개체는 다른 `deque` 개체입니다.|  
-|[operator> (deque)(STL/CLR)](#op_gt)|있는지 여부를 확인 한 `deque` 개체가 다른 노드보다 큰지 `deque` 개체입니다.|  
-|[operator>= (deque)(STL/CLR)](#op_gteq)|있는지 여부를 확인 한 `deque` 개체는 다른 보다 크거나 `deque` 개체입니다.|  
+|[operator== (deque)(STL/CLR)](#op_eq)|확인을 `deque` 다른 개체가 같은지 `deque` 개체입니다.|  
+|[operator> (deque)(STL/CLR)](#op_gt)|확인을 `deque` 개체가 다른 인스턴스보다 큰지를 `deque` 개체입니다.|  
+|[operator>= (deque)(STL/CLR)](#op_gteq)|있는지 여부를 확인 한 `deque` 보다 크거나 같은 다른 개체가 `deque` 개체입니다.|  
   
 ## <a name="interfaces"></a>인터페이스  
   
 |인터페이스|설명|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|개체를 복제 합니다.|  
-|<xref:System.Collections.IEnumerable>|요소를 통해 시퀀스입니다.|  
-|<xref:System.Collections.ICollection>|요소의 그룹을 유지 합니다.|  
+|<xref:System.Collections.IEnumerable>|요소 시퀀스입니다.|  
+|<xref:System.Collections.ICollection>|요소 그룹을 유지 합니다.|  
 |<xref:System.Collections.Generic.IEnumerable%601>|형식화 된 요소 시퀀스입니다.|  
-|<xref:System.Collections.Generic.ICollection%601>|형식화 된 요소의 그룹을 유지 합니다.|  
+|<xref:System.Collections.Generic.ICollection%601>|형식화 된 요소 그룹을 유지 합니다.|  
 |<xref:System.Collections.Generic.IList%601>|형식화 된 요소의 순서가 지정 된 그룹을 유지 합니다.|  
 |IDeque < 값\>|제네릭 컨테이너를 유지 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 개체 할당 및 제어 블록을 지정 하는 핸들의 배열을 저장 하는 시퀀스에 대 한 저장소를 해제 `Value` 요소입니다. 배열 요구에 맞게 증가 합니다. 증가 앞에 추가 하거나 새 요소를 추가 비용은 일정 한 시간 및 남은 요소가 없으면 방해를 받지 하는 방식으로 발생 합니다. 일정 한 시간에서 및 나머지 요소를 방해 하지 않고 한쪽 끝에 있는 요소를 제거할 수도 있습니다. 따라서는 q u e는 적합 한 템플릿 클래스에 대 한 기본 컨테이너 [queue (STL/CLR)](../dotnet/queue-stl-clr.md) 또는 템플릿 클래스 [stack (STL/CLR)](../dotnet/stack-stl-clr.md)합니다.  
+ 개체를 할당 하 고 블록을 지정 하는 핸들의 저장된 배열을 통해 제어 하는 시퀀스에 대 한 저장소를 해제 `Value` 요소입니다. 배열 요구에 맞게 증가 합니다. 증가 새 요소를 추가 또는 앞에 추가 비용은 분할 상수 시간 및 남은 요소가 없으면 방해를 받지 하는 방식으로 발생 합니다. 나머지 요소를 방해 하지 않고 분할 상수 시간에 끝 요소를 제거할 수도 있습니다. 따라서 deque는 템플릿 클래스에 대 한 기본 컨테이너에 대 한 좋은 후보 [queue (STL/CLR)](../dotnet/queue-stl-clr.md) 또는 템플릿 클래스 [stack (STL/CLR)](../dotnet/stack-stl-clr.md)합니다.  
   
- A `deque` 개체가 첫 번째 (전면) 요소에 대 한 0에서 계산한 직접 숫자의 위치를 지정 하는 요소를 참조할 수 의미 하는 임의 액세스 반복기 지원 [deque:: size (STL/CLR)](#size) `() - 1` 에 대 한 마지막 (뒤로) 요소입니다. 또한는 q u e에 적합 한 템플릿 클래스에 대 한 기본 컨테이너 임을 의미 [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)합니다.  
+ A `deque` 개체가 계산 (전면) 첫 번째 요소의 0부터 직접 숫자의 위치를 지정 하는 요소를 참조할 수를 의미 하는 임의 액세스 반복기 지원 [deque:: size (STL/CLR)](#size) `() - 1` 마지막으로 (뒤로) 요소입니다. Deque에 적합 한 템플릿 클래스에 대 한 기본 컨테이너 임을 의미 [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)합니다.  
   
- Deque 반복기를 지정 하는 요소에 대 한 바이어스 함께 해당 관련된 e q u e 개체에 대 한 핸들을 저장 합니다. 반복기의 관련된 컨테이너 개체와만 사용할 수 있습니다. Deque 요소의 바이어스는 `not` 같지의 위치입니다. 삽입 하는 첫 번째 요소의 0 바이어스, 다음 추가 된 요소에 1, 바이어스를 갖지만 다음 앞에 추가 요소에는-1 바이어스.  
+ Deque 반복기를 지정 하는 요소에 대 한 바이어스와 함께 해당 연결된 deque 개체에 대 한 핸들을 저장 합니다. 반복기는 연결 된 컨테이너 개체에만 사용할 수 있습니다. deque 요소에 대 한 바이어스 *되지* 해당 위치와 반드시 동일 합니다. 삽입할 첫 번째 요소가 바이어스 0, 다음 추가 요소에 1, 편차 되었지만 다음 앞에 붙은 요소 바이어스-1입니다.  
   
- 삽입 또는 양쪽 끝 요소를 지운지 않습니다 `not` 유효한 편향을에 저장 된 요소 값을 변경 합니다. 하지만 삽입 또는 제거 내부 요소 `can` 반복기에서 지정 된 값도 변경할 수 있도록 지정된 바이어스에 저장 된 요소 값을 변경 합니다. (컨테이너 요소를 복사 또는 삽입 하기 전에 구멍을 생성 또는 삭제 한 후 구멍을 채울 아래쪽에 있을 수 있습니다.) 그럼에도 불구 하 고 유효한 요소를 지정 하는 해당 바이어스도 e q u e 반복기 유효 합니다. 또한 유효한 반복기 dereferencable 남아-액세스 또는으로 해당 바이어스에서 반환 된 반복기에 대 한 바이어스 같지 않습니다.-지정 된 요소 값을 변경 하려면 사용할 수 있습니다 `end()`합니다.  
+ 삽입 또는 양쪽 끝 요소를 지운지 않습니다 *되지* 유효한 편향을에 저장 된 요소의 값을 변경 합니다. 그러나 삽입 또는 내부 요소를 지운 *수* 반복기가 지정 된 값을 변경할 수도 있으므로 지정된 된 바이어스에 저장 된 요소 값을 변경 합니다. (컨테이너 구성 요소를 복사 또는 삽입 하기 전에 구멍을 생성 하려면 또는 지우기 후 구멍에 맞게 아래쪽에 있을 수 있습니다.) 그럼에도 불구 하 고 유효한 요소를 지정 하는 해당 바이어스 하기만 하는 deque 반복기 유효 합니다. 또한 유효한 반복기를 역 유지 됩니다. 즉 액세스 하거나 해당 바이어스에서 반환 된 반복기에 대 한 바이어스와 같지 않습니다. 하기만 지정-요소 값을 변경 하는 데 사용할 수 있습니다 `end()`합니다.  
   
- 지우거 나 요소를 제거 합니다. 저장된 된 값에 대 한 소멸자를 호출 합니다. 컨테이너를 제거 합니다. 모든 요소를 지웁니다. 따라서 요소 형식이 ref 클래스는 컨테이너 보다 수명이 깁니다 컨테이너 요소가 있는지 확인 합니다. 단, 핸들의 컨테이너 하다 `not` 해당 요소를 제거 합니다.  
+ 지우거 나 요소를 제거 합니다. 저장된 된 값에 대 한 소멸자를 호출 합니다. 모든 요소를 지웁니다 컨테이너를 제거 합니다. 따라서 요소 형식인 ref 클래스는 컨테이너 보다 수명이 길 컨테이너 요소가 있는지 확인 합니다. 단, 핸들의 컨테이너에는 *되지* 해당 요소를 제거 합니다.  
  
 ## <a name="members"></a>멤버
 
@@ -236,7 +236,7 @@ template<typename Value>
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void assign(size_type count, value_type val);  
 template<typename InIt>  
     void assign(InIt first, InIt last);  
@@ -244,27 +244,27 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `count`  
+ *count*  
  삽입할 요소의 수입니다.  
   
- `first`  
- 삽입할 범위의의 시작입니다.  
+ *first*  
+ 삽입할 범위의 시작입니다.  
   
- `last`  
+ *last*  
  삽입할 범위의 끝입니다.  
   
- `right`  
- 삽입 하는 열거형입니다.  
+ *right*  
+ 삽입할 열거형입니다.  
   
- `val`  
+ *val*  
  삽입할 요소의 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 첫 번째 멤버 함수는 반복 된 제어 되는 시퀀스 바꿉니다 `count` 값의 요소 `val`합니다. 하면을 채우는 데 사용할 컨테이너 요소와 동일한 값이 모두 포함 합니다.  
+ 첫 번째 멤버 함수는 반복 된 제어 된 시퀀스로 바꿉니다 *개수* 값의 요소나 *val*합니다. 사용 하 여 해당 요소를 사용 하 여 컨테이너를 채우도록 모든 동일한 값을 갖는.  
   
- 경우 `InIt` 정수 형식, 두 번째 멤버 함수는 동일 하 게 동작 `assign((size_type)first, (value_type)last)`합니다. 제어 되는 순서와 대체 그렇지 않으면 [`first`, `last`). 사용할 있습니다 제어 된 시퀀스 복사본 되도록 다른 시퀀스.  
+ 하는 경우 `InIt` 가 정수 형식이 두 번째 멤버 함수는 동일 하 게 동작 `assign((size_type)first, (value_type)last)`합니다. 제어 되는 시퀀스는 시퀀스를 사용 하 여 대체이 고, 그렇지 [`first`, `last`). 사용할 있습니다 복사본 시퀀스를 제어 하도록 다른 순서.  
   
- 열거자에 지정 된 시퀀스와 제어 된 시퀀스를 대체 하는 세 번째 멤버 함수 `right`합니다. 제어 되는 시퀀스의 사본을 열거형에서 설명 하는 순서를 사용 합니다.  
+ 열거자에서 지정 된 시퀀스를 사용 하 여 제어 되는 시퀀스를 대체 하는 세 번째 멤버 함수 *오른쪽*합니다. 사용 하 여 제어 되는 열거자에 설명 된 시퀀스의 복사본을 만듭니다.  
   
 ### <a name="example"></a>예  
   
@@ -301,7 +301,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -315,16 +314,16 @@ a b c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 reference at(size_type pos);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 위치  
+ *pos*  
  액세스할 요소의 위치입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 위치에서 제어 된 시퀀스의 요소에 대 한 참조를 반환 `pos`합니다. 읽기 또는 쓰기 요소 위치를 알아야 합니다.  
+ 멤버 함수는 위치에서 제어 된 시퀀스의 요소에 대 한 참조를 반환 *pos*합니다. 읽기 또는 쓰기 요소 위치를 알 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -365,12 +364,12 @@ a x c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 reference back();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 마지막 요소에 대 한 참조를 반환 합니다. 존재 하는 것을 알고 있는 경우 마지막 요소를 액세스 하려면 사용 합니다.  
+ 멤버 함수는 비어 있지 않아야 하는 제어 된 시퀀스의 마지막 요소에 대 한 참조를 반환 합니다. 있는 경우 마지막 요소를 액세스 하려면 사용 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -401,7 +400,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -415,12 +413,12 @@ back() = c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 property value_type back_item;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 비어 있는 제어 된 시퀀스의 마지막 요소를 액세스 하는 속성입니다. 읽기 또는 존재 하는 것을 알고 있는 경우 마지막 요소를 쓰기 사용 합니다.  
+ 비어 있지 않아야 하는 제어 된 시퀀스의 마지막 요소를 액세스 하는 속성입니다. 읽거나 존재를 알고 있는 경우 마지막 요소를 작성 하는 데 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -465,12 +463,12 @@ back_item = c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 제어 되는 시퀀스 또는 빈 시퀀스의 끝 바로 다음 첫 번째 요소를 지정 하는 임의 액세스 반복기를 반환 합니다. 지정 하는 반복기를 사용 하면는 `current` 제어 된 시퀀스의 길이가 변경 하는 경우의 상태 제어 된 시퀀스의 시작 부분을 변경할 수 있습니다.  
+ 멤버 함수는 제어 된 시퀀스 또는 빈 시퀀스의 끝 바로 다음 첫 번째 요소를 지정 하는 임의 액세스 반복기를 반환 합니다. 지정 하는 반복기를 사용 하면는 `current` 상태가 제어 된 시퀀스의 시작 부분 제어 된 시퀀스의 길이가 변경 되 면 변경할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -504,7 +502,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -519,12 +516,12 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void clear();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수 시그니처 [deque:: erase (STL/CLR)](#erase) `(` [deque:: begin (STL/CLR)](#begin) `(),` [deque:: end (STL/CLR)](#end) `())`. 제어 되는 시퀀스 비어 있는지 확인 하려면 사용 합니다.  
+ 멤버 함수는 효과적으로 호출한 [deque:: erase (STL/CLR)](#erase) `(` [deque:: begin (STL/CLR)](#begin) `(),` [deque:: end (STL/CLR)](#end) `())`. 제어 되는 시퀀스 비어 있는지 확인 하는 데 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -560,7 +557,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -575,12 +571,12 @@ size() = 0
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef T2 const_iterator;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 지정 되지 않은 형식의 개체를 설명 `T2` 제어 되는 시퀀스에 대 한 상수 임의 액세스 반복기로 사용할 수 있는 합니다.  
+ 이 형식은 지정 되지 않은 형식의 개체를 설명 `T2` 제어 되는 시퀀스의 상수 임의 액세스 반복기로 사용할 수 있는 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -603,7 +599,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -615,12 +610,12 @@ a b c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 요소에 대 한 상수 참조를 설명 합니다.  
+ 형식 요소에 대 한 상수 참조를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -646,7 +641,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -654,16 +648,16 @@ a b c
 ```  
   
 ## <a name="const_reverse_iterator"></a> deque:: const_reverse_iterator (STL/CLR)
-제어 되는 시퀀스에 대 한 상수 역방향 반복기의 형식입니다.  
+제어 되는 시퀀스의 상수 역방향 반복기의 형식...  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef T4 const_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 지정 되지 않은 형식의 개체를 설명 `T4` 제어 되는 시퀀스에 대 한 상수 역방향 반복기로 사용할 수 있는 합니다.  
+ 이 형식은 지정 되지 않은 형식의 개체를 설명 `T4` 제어 되는 시퀀스의 상수 역방향 반복기로 사용할 수 있는 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -687,7 +681,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -699,7 +692,7 @@ c b a
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 deque();  
 deque(deque<Value>% right);  
 deque(deque<Value>^ right);  
@@ -711,19 +704,19 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `count`  
+ *count*  
  삽입할 요소의 수입니다.  
   
- `first`  
- 삽입할 범위의의 시작입니다.  
+ *first*  
+ 삽입할 범위의 시작입니다.  
   
- `last`  
+ *last*  
  삽입할 범위의 끝입니다.  
   
- `right`  
+ *right*  
  삽입할 개체 또는 범위입니다.  
   
- `val`  
+ *val*  
  삽입할 요소의 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -731,31 +724,31 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `deque();`  
   
- 요소가 없는 제어 되는 시퀀스를 초기화합니다. 초기는 빈 제어 시퀀스를 지정 하려면 사용 합니다.  
+ 요소가 없는 제어 되는 시퀀스를 초기화합니다. 빈 초기 제어 되는 시퀀스를 지정 하는 데 사용할 수 있습니다.  
   
  생성자:  
   
  `deque(deque<Value>% right);`  
   
- 순서와 제어 된 시퀀스를 초기화 합니다. [`right.begin()`, `right.end()`). Deque 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `right`합니다. 반복기에 대 한 자세한 내용은 참조 하십시오. [deque:: begin (STL/CLR)](#begin) 및 [deque:: end (STL/CLR)](#end)합니다.  
+ 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. [`right.begin()`, `right.end()`). Deque 개체에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 된 시퀀스를 지정 하려면 사용할 *오른쪽*합니다. 반복기에 대 한 자세한 내용은 참조 하세요. [deque:: begin (STL/CLR)](#begin) 하 고 [deque:: end (STL/CLR)](#end)합니다.  
   
  생성자:  
   
  `deque(deque<Value>^ right);`  
   
- 순서와 제어 된 시퀀스를 초기화 합니다. [`right->begin()`, `right->end()`). 핸들은 e q u e 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `right`합니다.  
+ 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. [`right->begin()`, `right->end()`). 핸들이 deque 개체에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 된 시퀀스를 지정 하려면 사용할 *오른쪽*합니다.  
   
  생성자:  
   
  `explicit deque(size_type count);`  
   
- 이 있는 제어 된 시퀀스를 초기화 `count` 각 요소 값을 가진 `value_type()`합니다. 있습니다을 채우는 데 사용할 컨테이너 요소와 모든 기본 값이 포함 됩니다.  
+ 사용 하 여 제어 되는 시퀀스를 초기화 *개수* 각 요소가 값을 사용 하 여 `value_type()`입니다. 사용 하 여 해당 요소를 사용 하 여 컨테이너를 채우도록 모든 기본 값이 있는.  
   
  생성자:  
   
  `deque(size_type count, value_type val);`  
   
- 이 있는 제어 된 시퀀스를 초기화 `count` 각 요소 값을 가진 `val`합니다. 하면을 채우는 데 사용할 컨테이너 요소와 동일한 값이 모두 포함 합니다.  
+ 사용 하 여 제어 되는 시퀀스를 초기화 *개수* 각 요소가 값을 사용 하 여 *val*합니다. 사용 하 여 해당 요소를 사용 하 여 컨테이너를 채우도록 모든 동일한 값을 갖는.  
   
  생성자:  
   
@@ -763,13 +756,13 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `deque(InIt first, InIt last);`  
   
- 순서와 제어 된 시퀀스를 초기화 합니다. [`first`, `last`). 제어 되는 시퀀스의 사본을 다른 시퀀스를 사용 합니다.  
+ 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. [`first`, `last`). 사용 하 여 제어 되는 시퀀스를 다른 시퀀스의 복사본을 만듭니다.  
   
  생성자:  
   
  `deque(System::Collections::Generic::IEnumerable<Value>^ right);`  
   
- 열거자에 지정 된 시퀀스와 제어 된 시퀀스를 초기화 `right`합니다. 제어 되는 시퀀스의 사본을 열거자에서 설명 하는 다른 시퀀스를 사용 합니다.  
+ 열거자에서 지정 된 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 *오른쪽*합니다. 제어 되는 시퀀스의 복사본 열거자에서 설명 하는 다른 순서를 사용 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -824,7 +817,6 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -842,12 +834,12 @@ size() = 0
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식은 부호 있는 요소 수를 설명 합니다.  
+ 형식에 부호 있는 요소 수를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -881,7 +873,6 @@ int main()
     System::Console::WriteLine("begin()-end() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -895,12 +886,12 @@ begin()-end() = -3
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. 동일 [deque:: size (STL/CLR)](#size)`() == 0`합니다. Deque 비어 있는지 여부를 테스트 하려면 사용 합니다.  
+ 멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. 에 해당 하는 것 [deque:: size (STL/CLR)](#size)`() == 0`합니다. Deque가 비어 있는지 여부를 테스트 하려면 사용 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -929,7 +920,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -945,12 +935,12 @@ empty() = True
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 제어 된 시퀀스의 끝 바로 다음을 가리키는 임의 액세스 반복기를 반환합니다. 지정 하는 반복기를 사용 하면는 `current` 제어 된 시퀀스의 길이가 변경 하는 경우의 상태 제어 된 시퀀스의 끝을 변경할 수 있습니다.  
+ 멤버 함수는 제어 된 시퀀스의 끝 바로 다음을 가리키는 임의 액세스 반복기를 반환합니다. 지정 하는 반복기를 사용 하면는 `current` 상태가 제어 된 시퀀스의 끝은 제어 된 시퀀스의 길이가 변경 되 면 변경할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -985,7 +975,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1000,29 +989,29 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `first`  
- 범위를 지우려면의 시작입니다.  
+ *first*  
+ 지울 범위의 시작입니다.  
   
- `last`  
- 범위를 지우려면의 끝입니다.  
+ *last*  
+ 지울 범위의 끝입니다.  
   
- `where`  
+ *where*  
  지울 요소입니다.  
   
 ### <a name="remarks"></a>설명  
- 첫 번째 멤버 함수는 `where`로 지정된 제어 시퀀스의 요소를 제거합니다. 단일 요소를 제거 하려면 사용 합니다.  
+ 가 가리키는 제어 되는 시퀀스의 요소를 제거 하는 첫 번째 멤버 함수 *여기서*합니다. 단일 요소를 제거 하려면 사용 합니다.  
   
  두 번째 멤버 함수는 [`first`, `last`]의 범위에서 제어되는 시퀀스의 요소를 제거합니다. 0 개 이상의 연속 요소를 제거 하려면 사용 합니다.  
   
- 제거 된 요소 뒤에 남은 첫 번째 요소를 지정 하는 반복기를 반환 하는 두 멤버 함수 또는 [deque:: end (STL/CLR)](#end) `()` 이러한 요소가 없을 경우.  
+ 두 멤버 함수는 모두 제거 된 요소 뒤에 남은 첫 번째 요소를 지정 하는 반복기를 반환 하거나 [deque:: end (STL/CLR)](#end) `()` 이러한 요소가 없는 경우.  
   
- 요소를 지운 경우에 요소 복사본의 수는 시퀀스의 할수록 끝과 여 지우기의 끝 간 요소 수에 비례 합니다. (시퀀스의 끝에 하나 이상의 요소를 지우는 중 요소 복사본이 발생 합니다.)  
+ 요소를 지운 요소 매수 지우기 끝 사이의 가까운 끝 시퀀스의 요소 수에 비례 합니다. (시퀀스의 한쪽 끝에서 하나 이상의 요소를 지운 경우 요소 복사본이 발생 합니다.)  
   
 ### <a name="example"></a>예  
   
@@ -1061,7 +1050,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1077,12 +1065,12 @@ size() = 1
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 reference front();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 첫 번째 요소에 대 한 참조를 반환 합니다. 읽기 또는 존재 하는 것을 알고 있는 경우 첫 번째 요소를 쓰기를 사용 합니다.  
+ 멤버 함수는 비어 있지 않아야 하는 제어 된 시퀀스의 첫 번째 요소에 대 한 참조를 반환 합니다. 읽거나 존재를 알고 있는 경우 첫 번째 요소를 작성 하는 데 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -1113,7 +1101,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1127,12 +1114,12 @@ front() = a
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 property value_type front_item;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 비어 있는 제어 된 시퀀스의 첫 번째 요소를 액세스 하는 속성입니다. 읽기 또는 존재 하는 것을 알고 있는 경우 첫 번째 요소를 쓰기를 사용 합니다.  
+ 비어 있지 않아야 하는 제어 된 시퀀스의 첫 번째 요소를 액세스 하는 속성입니다. 읽거나 존재를 알고 있는 경우 첫 번째 요소를 작성 하는 데 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -1163,7 +1150,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1177,14 +1163,14 @@ front_item = a
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::  
     IDeque<generic_value>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스를 설명 합니다.  
+ 형식은이 템플릿 컨테이너 클래스에 대 한 제네릭 인터페이스를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1227,7 +1213,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1238,17 +1223,17 @@ a b c d e
 ```  
 
 ## <a name="generic_iterator"></a> deque:: generic_iterator (STL/CLR)
-컨테이너에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 반복기의 형식입니다.  
+컨테이너에 대 한 제네릭 인터페이스를 사용 하 여 사용에 대 한 반복기의 형식입니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerRandomAccessIterator<generic_value> generic_iterator;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식은이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스와 함께 사용할 수 있는 일반 반복기를 설명 합니다.  
+ 형식에이 템플릿 컨테이너 클래스에 대 한 제네릭 인터페이스를 사용 하 여 사용할 수 있는 일반 반복기를 설명 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1284,7 +1269,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1294,17 +1278,17 @@ a a c
 ```  
 
 ## <a name="generic_reverse_iterator"></a> deque:: generic_reverse_iterator (STL/CLR)
-컨테이너에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 한 반대 반복기의 형식입니다.  
+컨테이너에 대 한 제네릭 인터페이스를 사용 하 여 사용에 대 한 역방향 반복기의 형식입니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseRandomAccessIterator<generic_value> generic_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식은이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스와 함께 사용할 수 있는 제네릭 역방향 반복기를 설명 합니다.  
+ 형식에는이 템플릿 컨테이너 클래스에 대 한 제네릭 인터페이스를 사용 하 여 사용할 수 있는 제네릭 역방향 반복기를 설명 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1340,7 +1324,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1350,16 +1333,16 @@ a c c
 ```  
 
 ## <a name="generic_value"></a> deque:: generic_value (STL/CLR)
-컨테이너에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 요소의 형식입니다.  
+컨테이너에 대 한 제네릭 인터페이스를 사용 하 여 사용에 대 한 요소의 형식입니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 형식의 개체를 설명 `GValue` 이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 저장 된 요소 값을 설명 하는 합니다.  
+ 이 형식은 형식의 개체를 설명 `GValue` 는이 템플릿 컨테이너 클래스에 대 한 제네릭 인터페이스를 사용 하 여 사용 하 여 저장 된 요소 값에 설명 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1395,7 +1378,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1409,7 +1391,7 @@ a a c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 iterator insert(iterator where, value_type val);  
 void insert(iterator where, size_type count, value_type val);  
 template<typename InIt>  
@@ -1419,36 +1401,36 @@ void insert(iterator where,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `count`  
+ *count*  
  삽입할 요소의 수입니다.  
   
- `first`  
- 삽입할 범위의의 시작입니다.  
+ *first*  
+ 삽입할 범위의 시작입니다.  
   
- `last`  
+ *last*  
  삽입할 범위의 끝입니다.  
   
- `right`  
- 삽입 하는 열거형입니다.  
+ *right*  
+ 삽입할 열거형입니다.  
   
- `val`  
+ *val*  
  삽입할 요소의 값입니다.  
   
- `where`  
+ *where*  
  앞에 삽입 하는 컨테이너의 위치입니다.  
   
 ### <a name="remarks"></a>설명  
- 가 가리키는 요소 앞의 삽입, 함수는 멤버의 각 `where` 제어 된 시퀀스의 시퀀스는 나머지 피연산자에서 지정 합니다.  
+ 각 멤버 함수 삽입으로 가리키는 요소 앞 *여기서* 제어 된 시퀀스의 나머지 피연산자로 지정 된 시퀀스입니다.  
   
- 첫 번째 멤버 함수는 값을 가진 요소를 삽입 `val` 새로 삽입된 된 요소를 지정 하는 반복기를 반환 합니다. 반복기에서 지정 하는 장소 하기 전에 단일 요소를 삽입 하려면 사용 합니다.  
+ 첫 번째 멤버 함수는 값을 사용 하 여 요소를 삽입 *val* 새로 삽입된 된 요소를 지정 하는 반복기를 반환 합니다. 반복기가 지정 된 위치 앞에 단일 요소를 삽입 하는 데 사용할 수 있습니다.  
   
- 두 번째 멤버 함수는 `val` 값의 `count` 요소 반복을 삽입합니다. 같은 값의 모든 복사본 인 0 개 이상의 연속 요소를 삽입 하려면 사용 합니다.  
+ 반복을 삽입 하는 두 번째 멤버 함수 *개수* 값의 요소나 *val*합니다. 동일한 값의 모든 복사본에는 0 개 이상의 연속 요소를 삽입 하는 데 사용할 수 있습니다.  
   
- `InIt`가 정수 형식이면 세 번째 멤버 함수는 `insert(where, (size_type)first, (value_type)last)`와 동일하게 동작합니다. 시퀀스를 삽입, 그렇지 않으면 [`first`, `last`). 다른 시퀀스에서 복사 된 0 개 이상의 연속 요소를 삽입 하려면 사용 합니다.  
+ `InIt`가 정수 형식이면 세 번째 멤버 함수는 `insert(where, (size_type)first, (value_type)last)`와 동일하게 동작합니다. 그렇지 않으면 시퀀스를 삽입 [`first`, `last`). 다른 시퀀스에서 복사 된 0 개 이상의 연속 된 요소를 삽입 하는 데 사용할 수 있습니다.  
   
- 로 지정 된 시퀀스를 삽입 하는 네 번째 멤버 함수는 `right`합니다. 열거자에서 설명 하는 시퀀스를 삽입 하려면 사용 합니다.  
+ 로 지정 된 시퀀스를 삽입 하는 네 번째 멤버 함수는 *오른쪽*합니다. 열거자에서 설명 하는 시퀀스를 삽입 하는 데 사용할 수 있습니다.  
   
- 단일 요소를 삽입할 경우에 요소 복사본의 수는 삽입 지점와 떨어진 끝 시퀀스의 요소 수에 비례 합니다. (시퀀스의 끝에 하나 이상의 요소를 삽입할 경우 요소 복사본이 발생 합니다.) 경우 `InIt` 입력 반복기, 세 번째 멤버 함수는 시퀀스의 각 요소에 대 한 단일 삽입을 효과적으로 수행 합니다. 삽입할 때 그렇지 `N` 요소, 요소 복사본 수에 비례는 `N` 삽입 포인터와 떨어진 시퀀스의 끝 간 요소 수를 더한 값입니다.  
+ 단일 요소를 삽입할 때 요소의 복사본의 수는 삽입 지점 사이의 가까운 끝 시퀀스의 요소 수에 비례 합니다. (시퀀스의 한쪽 끝에서 하나 이상의 요소를 삽입할 때 요소 복사본이 발생 합니다.) 경우 `InIt` 는 입력 반복기, 세 번째 멤버 함수는 시퀀스의 각 요소에 대 한 단일 삽입을 효율적으로 수행 합니다. 삽입 하는 경우 그러지 `N` 요소인 요소 복사본의 수에 비례 `N` 삽입 지점 사이의 가까운 끝 시퀀스의 요소 수입니다.  
   
 ### <a name="example"></a>예  
   
@@ -1499,7 +1481,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1516,12 +1497,12 @@ insert(begin()+1, L'x') = x
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp 
 typedef T1 iterator;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 지정 되지 않은 형식의 개체를 설명 `T1` 제어 되는 시퀀스에 대 한 임의 액세스 반복기로 사용할 수 있는 합니다.  
+ 이 형식은 지정 되지 않은 형식의 개체를 설명 `T1` 제어 되는 시퀀스의 임의 액세스 반복기로 사용할 수 있는 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1551,7 +1532,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1560,25 +1540,25 @@ x b c
 ```  
 
 ## <a name="op_neq"></a> deque:: operator! = (STL/CLR)
-Deque에 같지 비교 합니다.  
+Deque 같지 않은지 비교 합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator!=(deque<Value>% left,  
         deque<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `left`  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- `right`  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `!(left == right)`합니다. 테스트를 사용 하는지 여부를 `left` 동일 정렬 되지 않은 `right` 두 deque 경우 요소 별로 비교 합니다.  
+ 연산자 함수 반환 `!(left == right)`합니다. 테스트를 사용 하는지 여부를 *왼쪽* 동일 정렬 되지 않은 *오른쪽* 두 deque의 요소 별로 비교 되 면 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1616,7 +1596,6 @@ int main()
         c1 != c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1631,16 +1610,16 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 reference operator[](size_type pos);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 위치  
+ *pos*  
  액세스할 요소의 위치입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 연산자는 referene 위치에 요소를 반환 `pos`합니다. 요소를 알면 해당 위치에 액세스 사용 합니다.  
+ 멤버 연산자는 referene 위치에서 요소를 반환 *pos*합니다. 알고 위치가 요소 액세스를 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -1668,7 +1647,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1677,16 +1655,16 @@ a x c
 ```  
 
 ## <a name="pop_back"></a> deque:: pop_back (STL/CLR)
-마지막 요소를 제거 합니다.  
+마지막 요소를 제거합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void pop_back();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 마지막 요소를 제거 합니다. 뒤에 한 요소 deque를 줄이기 위해 사용 합니다.  
+ 멤버 함수는 비어 있지 않아야 하는 제어 된 시퀀스의 마지막 요소를 제거 합니다. 한 요소 뒤에는 deque를 단축 하는 데 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -1714,7 +1692,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1727,12 +1704,12 @@ a b
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void pop_front();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 첫 번째 요소를 제거 합니다. 앞에 한 요소 deque를 줄이기 위해 사용 합니다.  
+ 멤버 함수는 비어 있지 않아야 하는 제어 된 시퀀스의 첫 번째 요소를 제거 합니다. 앞에 한 요소를 deque를 단축 하는 데 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -1760,7 +1737,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1769,16 +1745,16 @@ b c
 ```  
   
 ## <a name="push_back"></a> deque:: push_back (STL/CLR)
-새 마지막 요소를 추가 합니다.  
+새 마지막 요소를 추가합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void push_back(value_type val);  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 값을 가진 요소를 삽입 `val` 제어 된 시퀀스의 끝입니다. Deque에 다른 요소를 추가 하려면 사용 합니다.  
+ 멤버 함수는 값을 사용 하 여 요소를 삽입 `val` 제어 된 시퀀스의 끝입니다. Deque에 다른 요소를 추가 하는 데 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -1800,7 +1776,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1808,16 +1783,16 @@ a b c
 ```  
 
 ## <a name="push_front"></a> deque:: push_front (STL/CLR)
-새 첫 번째 요소를 추가 합니다.  
+새 첫 번째 요소를 추가합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void push_front(value_type val);  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 값을 가진 요소를 삽입 `val` 제어 된 시퀀스의 시작 부분에 있습니다. Deque에 다른 요소 앞에 사용 합니다.  
+ 멤버 함수는 값을 사용 하 여 요소를 삽입 `val` 제어 된 시퀀스의 시작 부분에 있습니다. Deque에 다른 요소 앞에 추가 하는 데 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -1839,7 +1814,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1851,12 +1825,12 @@ c b a
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 reverse_iterator rbegin();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 빈 시퀀스의 시작 부분 바로 다음 또는 제어 된 시퀀스의 마지막 요소를 지정 하는 역방향 반복기를 반환 합니다. 따라서을 지정 된 `beginning` 역방향 시퀀스의 합니다. 지정 하는 반복기를 사용 하면는 `current` 제어 된 시퀀스를 역순으로 표시 하지만 해당 상태의 시작 부분 제어 된 시퀀스의 길이가 변경 되 면 변경할 수 있습니다.  
+ 멤버 함수는 제어 된 시퀀스 또는 빈 시퀀스의 시작 부분 바로 뒤의 마지막 요소를 지정 하는 역방향 반복기를 반환 합니다. 따라서 지정 된 `beginning` 역방향 시퀀스의 합니다. 지정 하는 반복기를 사용 하면는 `current` 제어 된 시퀀스를 역순으로 표시 되지만 해당 상태에 대 한 부분 제어 된 시퀀스의 길이가 변경 되 면 변경할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -1890,7 +1864,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1905,12 +1878,12 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 요소에 대 한 참조를 설명 합니다.  
+ 형식 요소에 대 한 참조를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1946,7 +1919,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1959,12 +1931,12 @@ A B C
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 reverse_iterator rend();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 제어 된 시퀀스의 시작 부분 바로 다음 가리키는 역방향 반복기를 반환합니다. 따라서을 지정 된 `end` 역방향 시퀀스의 합니다. 지정 하는 반복기를 사용 하면는 `current` 제어 된 시퀀스를 역순으로 표시 하지만 해당 상태의 끝 제어 된 시퀀스의 길이가 변경 되 면 변경할 수 있습니다.  
+ 멤버 함수는 제어 된 시퀀스의 시작 부분 바로 다음 가리키는 역방향 반복기를 반환합니다. 따라서 지정 된 `end` 역방향 시퀀스의 합니다. 지정 하는 반복기를 사용 하면는 `current` 제어 된 시퀀스를 역순으로 표시 되지만 해당 상태에 대 한 끝 제어 된 시퀀스의 길이가 변경 되 면 변경할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -1999,7 +1971,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2010,24 +1981,24 @@ int main()
 ```  
 
 ## <a name="resize"></a> deque:: resize (STL/CLR)
-요소의 수를 변경합니다.  
+요소 수를 변경합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void resize(size_type new_size);  
 void resize(size_type new_size, value_type val);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- new_size  
+ *new_size*  
  제어 된 시퀀스의 새 크기입니다.  
   
- Val  
- 안쪽 여백 요소의 값입니다.  
+ *val*  
+ 패딩 요소의 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 두 멤버 함수를 확인 하는 [deque:: size (STL/CLR)](#size) `()` 예측이 반환 `new_size`합니다. 제어되는 시퀀스 길이를 늘려야 할 경우 첫 번째 멤버 함수는 값이 `value_type()`인 요소를 추가하지만, 두 번째 멤버 함수는 값이 `val`인 요소를 추가합니다. 더 짧은 제어 되는 시퀀스를 두 멤버 함수는 효과적으로 지울 마지막 요소 [deque:: size (STL/CLR)](#size) `() -` `new_size` 시간입니다. 제어 되는 시퀀스의 크기가을 사용 하면 `new_size`, 트리밍 하거나 현재 제어 되는 시퀀스를 패딩 하 여 합니다.  
+ 멤버 함수는 모두 했는지 [deque:: size (STL/CLR)](#size) `()` 예측이 반환 *new_size*합니다. 제어 된 시퀀스를 더 늘려야 할 경우 첫 번째 멤버 함수 값을 사용 하 여 요소를 추가 하는 `value_type()`인 두 번째 멤버 함수는 값을 사용 하 여 요소를 추가 하는 반면 *val*합니다. 짧은 제어 되는 시퀀스를 위해 두 멤버 함수는 효과적으로 마지막 요소를 지웁니다 [deque:: size (STL/CLR)](#size) `() -` `new_size` 시간입니다. 제어 되는 크기를 갖도록 하는 데 사용할 있습니다 *new_size*, 잘라내기 또는 현재 제어 되는 시퀀스를 패딩 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -2057,7 +2028,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2072,7 +2042,7 @@ size() = 0
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef T3 reverse_iterator;  
 ```  
   
@@ -2107,7 +2077,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2120,12 +2089,12 @@ x b a
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 제어 되는 시퀀스의 현재 요소 수를 확인 하려면 사용 합니다. 모든 경우에 중요 한 여부 시퀀스 크기가 0이 아닌 참조 [deque:: empty (STL/CLR)](#empty)`()`합니다.  
+ 멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 현재 제어 되는 시퀀스의에서 요소 수를 확인 하려면 사용 합니다. 모든 경우에 중요 한 여부 시퀀스 크기가 0이 아닌 참조 [deque:: empty (STL/CLR)](#empty)`()`합니다.  
   
 ### <a name="example"></a>예  
   
@@ -2157,7 +2126,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2172,12 +2140,12 @@ size() = 2 after adding 2
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식은은 음수가 아닌 요소 수를 설명 합니다.  
+ 형식에는 음수가 아닌 요소 수를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -2203,7 +2171,6 @@ int main()
     System::Console::WriteLine("end()-begin() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2216,16 +2183,16 @@ end()-begin() = 3
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void swap(deque<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 오른쪽  
+ *right*  
  콘텐츠와 바꿀 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 `*this` 와 `right`간에 제어되는 시퀀스를 교환합니다. 일정 한 시간에 작업을 수행 하 고 예외가 throw 됩니다. 두 컨테이너의 내용을 교환에 신속 하 게 사용 합니다.  
+ 멤버 함수 간에 제어 된 시퀀스를 교환 `*this` 하 고 *오른쪽*합니다. 일정 한 시간에 수행 하 고 예외가 throw 됩니다. 두 컨테이너의 콘텐츠를 교환 하는 빠른 방법으로 사용 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -2263,7 +2230,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2274,16 +2240,16 @@ a b c
 ```  
 
 ## <a name="to_array"></a> deque:: to_array (STL/CLR)
-제어 되는 새 배열에 복사합니다.  
+제어 되는 시퀀스를 새 배열에 복사합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 cli::array<Value>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 제어 되는 시퀀스를 포함 하는 배열을 반환 합니다. 배열 형식으로 제어 되는 시퀀스의 복사본을 사용 하면 됩니다.  
+ 멤버 함수는 제어 되는 시퀀스를 포함 하는 배열을 반환 합니다. 배열 형식에서 제어 된 시퀀스의 복사본을 가져와야 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -2313,7 +2279,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2326,12 +2291,12 @@ a b c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 `Value`의 동의어입니다.  
+ 형식은 템플릿 매개 변수에 대 한 동의어 *값*합니다.  
   
 ### <a name="example"></a>예  
   
@@ -2358,7 +2323,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2366,25 +2330,25 @@ a b c
 ```  
 
 ## <a name="op_lt"></a> 연산자&lt; (deque) (STL/CLR)
-Deque 비교 보다 작아야 합니다.  
+Deque 비교 미만입니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator<(deque<Value>% left,  
         deque<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 이면 true를 반환, 가장 낮은 위치에 대 한 `i` 를 `!(right[i] < left[i])` 도 true 하는 것이 `left[i] < right[i]`합니다. 그렇지 않으면 반환 `left->size() < right->size()` 테스트를 사용 하는지 여부를 `left` 앞에 정렬 `right` 두 deque 요소 별로 비교를 하는 경우.  
+ 연산자 함수 경우 true를 반환, 가장 낮은 위치에 대 한 `i` 는 `!(right[i] < left[i])` 수도 있는 true는 `left[i] < right[i]`합니다. 를 반환 합니다 `left->size() < right->size()` 테스트에 사용할 여부 *왼쪽* 앞에 정렬 되 *오른쪽* 두 deque의 요소 별로 비교 되 면 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -2422,7 +2386,6 @@ int main()
         c1 < c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2433,25 +2396,25 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> 연산자&lt;= (deque) (STL/CLR)
-Deque 작은 보다 짧거나 비교 합니다.  
+보다 작거나 같으면 Deque 비교 합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator<=(deque<Value>% left,  
         deque<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `!(right < left)`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 되지 않은 `right` 두 deque 경우 요소 별로 비교 합니다.  
+ 연산자 함수 반환 `!(right < left)`합니다. 테스트에 사용할 여부 *왼쪽* 후 정렬 되지 않은 *오른쪽* 두 deque의 요소 별로 비교 되 면 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -2489,7 +2452,6 @@ int main()
         c2 <= c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2504,16 +2466,16 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 deque<Value>% operator=(deque<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 오른쪽  
+ *right*  
  복사할 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 연산자 복사본 `right` 개체에 반환 `*this`합니다. 이를 사용하여 제어되는 시퀀스를 `right`의 제어되는 시퀀스 복사본으로 대체합니다.  
+ 멤버 연산자 복사본 *오른쪽* 개체를 반환 `*this`합니다. 제어 되는 시퀀스에서 제어 된 시퀀스의 복사본으로 대체 하는 데 사용할 있습니다 *오른쪽*합니다.  
   
 ### <a name="example"></a>예  
   
@@ -2542,7 +2504,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2555,21 +2516,21 @@ Deque 같은지 비교 합니다.
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator==(deque<Value>% left,  
         deque<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수는 시퀀스에 의해 제어 하는 경우에 true를 반환 `left` 및 `right` 동일한 길이 및 각 위치에 대 한 `i`, `left[i] ==` `right[i]`합니다. 테스트를 사용 하는지 여부를 `left` 와 동일 하 게 정렬 되 `right` 두 deque 경우 요소 별로 비교 합니다.  
+ 연산자 함수는 시퀀스에 의해 제어 하는 경우에 true를 반환 *왼쪽* 하 고 *오른쪽* 동일한 길이 및 각 위치에 대 한 `i`, `left[i] ==` `right[i]`합니다. 테스트에 사용할 여부를 *왼쪽* 와 동일 하 게 정렬 됩니다 *오른쪽* 두 deque 요소 별로 비교를 하는 경우.  
   
 ### <a name="example"></a>예  
   
@@ -2607,7 +2568,6 @@ int main()
         c1 == c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2618,25 +2578,25 @@ int main()
 ```  
 
 ## <a name="op_gt"></a> 연산자&gt; (deque) (STL/CLR)
-Deque 비교 보다 큽니다.  
+Deque 보다 큰지 비교 합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator>(deque<Value>% left,  
         deque<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `right` `<` `left`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 `right` 두 deque 요소 별로 비교를 하는 경우.  
+ 연산자 함수 반환 `right` `<` `left`합니다. 테스트에 사용할 여부 *왼쪽* 후 정렬 되 *오른쪽* 두 deque의 요소 별로 비교 되 면 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -2674,7 +2634,6 @@ int main()
         c2 > c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2689,21 +2648,21 @@ Deque 보다 크거나 같은지 비교 합니다.
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator>=(deque<Value>% left,  
         deque<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `!(left` `<` `right)`합니다. 테스트를 사용 하는지 여부를 `left` 하기 전에 정렬 되지 않은 `right` 두 deque 경우 요소 별로 비교 합니다.  
+ 연산자 함수 반환 `!(left` `<` `right)`합니다. 테스트에 사용할 여부 *왼쪽* 하기 전에 정렬 되지 않은 *오른쪽* 두 deque의 요소 별로 비교 되 면.  
   
 ### <a name="example"></a>예  
   
@@ -2741,7 +2700,6 @@ int main()
         c1 >= c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2750,4 +2708,3 @@ int main()
 [a b c] >= [a b c] is True  
 [a b c] >= [a b d] is False  
 ``` 
- 

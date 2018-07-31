@@ -73,21 +73,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1ae23bf845e3fa78a1971def6ea0034c94b57991
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: adf65c4af70b0ba6bc1f089576d69160ab21a5b6
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079709"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375999"
 ---
 # <a name="queue-stlclr"></a>queue(STL/CLR)
-이 템플릿 클래스는 다양 한 길이의 요소 시퀀스를 선입 선출 액세스 권한이 있는 제어 하는 개체를 설명 합니다. 컨테이너 어댑터를 사용 하 여 `queue` 큐로는 기본 컨테이너를 관리할 수 있습니다.  
+이 템플릿 클래스는 선입 선출 액세스 권한이 있는 요소의 다양 한 길이의 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너 어댑터를 사용 하 여 `queue` 큐로 기본 컨테이너를 관리할 수 있습니다.  
   
- 아래 설명에 `GValue` 동일 `Value` 후자 형식인 ref 하지 않는 한 경우에서 이기 `Value^`합니다. 마찬가지로, `GContainer` 동일 `Container` 후자 형식인 ref 하지 않는 한 경우에서 이기 `Container^`합니다.  
+ 아래 설명에서 `GValue` 같습니다 *값* 후자는 참조 형식, 하지 않는 한이 경우에서는 `Value^`합니다. 마찬가지로 `GContainer` 같습니다 *컨테이너* 후자는 참조 형식, 하지 않는 한이 경우에서는 `Container^`합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     ref class queue  
@@ -98,14 +98,14 @@ template<typename Value,
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- 값  
+ *Value*  
  제어되는 시퀀스의 요소 형식입니다.  
   
- 컨테이너  
+ *컨테이너*  
  기본 컨테이너의 형식입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** \<cliext/queue >  
+ **헤더:** \<cliext/큐 >  
   
  **Namespace:** cliext  
 
@@ -130,10 +130,10 @@ template<typename Value,
 |[queue::front(STL/CLR)](#front)|첫 번째 요소에 액세스합니다.|  
 |[queue::get_container(STL/CLR)](#get_container)|기본 컨테이너에 액세스합니다.|  
 |[queue::pop(STL/CLR)](#pop)|첫 번째 요소를 제거합니다.|  
-|[queue::push(STL/CLR)](#push)|새 마지막 요소를 추가 합니다.|  
+|[queue::push(STL/CLR)](#push)|새 마지막 요소를 추가합니다.|  
 |[queue::queue(STL/CLR)](#queue)|컨테이너 개체를 만듭니다.|  
 |[queue::size(STL/CLR)](#size)|요소 수를 계산합니다.|  
-|[queue::to_array(STL/CLR)](#to_array)|제어 되는 새 배열에 복사합니다.|  
+|[queue::to_array(STL/CLR)](#to_array)|제어 되는 시퀀스를 새 배열에 복사합니다.|  
   
 |속성|설명|  
 |--------------|-----------------|  
@@ -143,22 +143,22 @@ template<typename Value,
 |연산자|설명|  
 |--------------|-----------------|  
 |[queue::operator=(STL/CLR)](#op_as)|제어되는 시퀀스를 바꿉니다.|  
-|[operator!= (queue)(STL/CLR)](#op_neq)|있는지 여부를 확인 한 `queue` 개체가 다른과 같지 않습니다. `queue` 개체입니다.|  
-|[operator< (queue)(STL/CLR)](#op_lt)|있는지 여부를 확인 한 `queue` 개체를 사용 하면 다른 노드보다 작은지 `queue` 개체입니다.|  
-|[operator<= (queue)(STL/CLR)](#op_lteq)|있는지 여부를 확인 한 `queue` 개체 보다 작거나 같으면 다른 `queue` 개체입니다.|  
-|[operator== (queue)(STL/CLR)](#op_eq)|있는지 여부를 확인 한 `queue` 개체는 다른 `queue` 개체입니다.|  
-|[operator> (queue)(STL/CLR)](#op_gt)|있는지 여부를 확인 한 `queue` 개체가 다른 노드보다 큰지 `queue` 개체입니다.|  
-|[operator>= (queue)(STL/CLR)](#op_gteq)|있는지 여부를 확인 한 `queue` 개체는 다른 보다 크거나 `queue` 개체입니다.|  
+|[operator!= (queue)(STL/CLR)](#op_neq)|확인을 `queue` 다른 개체가 같지 `queue` 개체입니다.|  
+|[operator< (queue)(STL/CLR)](#op_lt)|확인을 `queue` 개체를 사용 하면 다른 노드보다 작은지 `queue` 개체입니다.|  
+|[operator<= (queue)(STL/CLR)](#op_lteq)|확인을 `queue` 개체 보다 작거나 같으면 다른 `queue` 개체입니다.|  
+|[operator== (queue)(STL/CLR)](#op_eq)|확인을 `queue` 다른 개체가 같은지 `queue` 개체입니다.|  
+|[operator> (queue)(STL/CLR)](#op_gt)|확인을 `queue` 개체가 다른 인스턴스보다 큰지를 `queue` 개체입니다.|  
+|[operator>= (queue)(STL/CLR)](#op_gteq)|있는지 여부를 확인 한 `queue` 보다 크거나 같은 다른 개체가 `queue` 개체입니다.|  
   
 ## <a name="interfaces"></a>인터페이스  
   
 |인터페이스|설명|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|개체를 복제 합니다.|  
-|IQueue\<값, 컨테이너 >|제네릭 컨테이너 어댑터를 유지 합니다.|  
+|IQueue\<값이 고, 컨테이너 >|제네릭 컨테이너 어댑터를 유지 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 개체 할당 및 형식의 기본 컨테이너를 통해 제어 하는 시퀀스에 대 한 저장소를 해제 `Container`, 저장 하는 `Value` 요소 및 필요에 따라 증가 합니다. 첫 번째 요소를 하나만 개체 액세스를 제한 하 고 (FIFO 큐 또는 큐 단순히 라고도 함) 큐 선입 선출 구현 마지막 요소를 팝 합니다.  
+ 개체를 할당 하 고 형식의 기본 컨테이너를 통해 제어 하는 시퀀스에 대 한 저장소를 해제 `Container`를 저장 하는 `Value` 요소 및 필요에 따라 증가 합니다. 방금 첫 번째 요소를 액세스를 제한 하는 개체 및 (라고도: FIFO 큐 또는 단순히 큐) 큐는 선입 선출 구현 마지막 요소를 팝 합니다.  
   
 ## <a name="members"></a>멤버
 
@@ -167,12 +167,12 @@ template<typename Value,
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void assign(queue<Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 오른쪽  
+ *right*  
  삽입할 컨테이너 어댑터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -206,7 +206,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -219,12 +218,12 @@ a b c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 reference back();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 마지막 요소에 대 한 참조를 반환 합니다. 존재 하는 것을 알고 있는 경우 마지막 요소를 액세스 하려면 사용 합니다.  
+ 멤버 함수는 비어 있지 않아야 하는 제어 된 시퀀스의 마지막 요소에 대 한 참조를 반환 합니다. 있는 경우 마지막 요소를 액세스 하려면 사용 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -256,7 +255,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -270,12 +268,12 @@ back() = c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 property value_type back_item;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 비어 있는 제어 된 시퀀스의 마지막 요소를 액세스 하는 속성입니다. 읽기 또는 존재 하는 것을 알고 있는 경우 마지막 요소를 쓰기 사용 합니다.  
+ 비어 있지 않아야 하는 제어 된 시퀀스의 마지막 요소를 액세스 하는 속성입니다. 읽거나 존재를 알고 있는 경우 마지막 요소를 작성 하는 데 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -307,7 +305,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -321,12 +318,12 @@ back_item = c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 요소에 대 한 상수 참조를 설명 합니다.  
+ 형식 요소에 대 한 상수 참조를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -352,7 +349,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -364,7 +360,7 @@ a b c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Container value_type;  
 ```  
   
@@ -393,7 +389,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -405,12 +400,12 @@ a b c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식은 음수 수 있는 요소 수를 설명 합니다.  
+ 형식 음수 수 있는 요소 수를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -448,7 +443,6 @@ int main()
     System::Console::WriteLine("popping 3 = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -462,12 +456,12 @@ popping 3 = 3
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. 동일 [queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`합니다. 큐가 비어 있는지 여부를 테스트 사용 합니다.  
+ 멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. 에 해당 하는 것 [queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`합니다. 큐가 비어 있는지 여부를 테스트 하려면 사용 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -499,7 +493,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -515,12 +508,12 @@ empty() = True
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 reference front();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 첫 번째 요소에 대 한 참조를 반환 합니다. 존재 하는 것을 알고 있는 경우 첫 번째 요소를 액세스할 수 사용 합니다.  
+ 멤버 함수는 비어 있지 않아야 하는 제어 된 시퀀스의 첫 번째 요소에 대 한 참조를 반환 합니다. 있는 경우 첫 번째 요소에 액세스를 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -552,7 +545,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -566,12 +558,12 @@ front() = a
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 property value_type front_item;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 비어 있는 제어 된 시퀀스의 첫 번째 요소를 액세스 하는 속성입니다. 읽기 또는 존재 하는 것을 알고 있는 경우 첫 번째 요소를 쓰기를 사용 합니다.  
+ 비어 있지 않아야 하는 제어 된 시퀀스의 첫 번째 요소를 액세스 하는 속성입니다. 읽거나 존재를 알고 있는 경우 첫 번째 요소를 작성 하는 데 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -603,7 +595,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -617,13 +608,13 @@ front_item = a
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::IQueue<Value>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은이 템플릿 컨테이너 어댑터 클래스에 대 한 제네릭 인터페이스를 설명 합니다.  
+ 형식은이 템플릿 컨테이너 어댑터 클래스에 대 한 제네릭 인터페이스를 설명 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -664,7 +655,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -675,16 +665,16 @@ a b c d e
 ```  
 
 ## <a name="generic_value"></a> queue:: generic_value (STL/CLR)
-컨테이너에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 요소의 형식입니다.  
+컨테이너에 대 한 제네릭 인터페이스를 사용 하 여 사용에 대 한 요소의 형식입니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 형식의 개체를 설명 `GValue` 이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 저장 된 요소 값을 설명 하는 합니다. (`GValue` 있거나 `value_type` 또는 `value_type^` 경우 `value_type` ref 형식입니다.)  
+ 이 형식은 형식의 개체를 설명 `GValue` 는이 템플릿 컨테이너 클래스에 대 한 제네릭 인터페이스를 사용 하 여 사용 하 여 저장 된 요소 값에 설명 합니다. (`GValue` 중 하나는 `value_type` 또는 `value_type^` 경우 `value_type` ref 형식입니다.)  
   
 ### <a name="example"></a>예  
   
@@ -722,7 +712,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -736,12 +725,12 @@ a b c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 container_type^ get_container();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 기본 컨테이너를 반환합니다. 컨테이너 래퍼가 설정 된 제한을 사용 하지 않으려면 사용 합니다.  
+ 멤버 함수는 기본 컨테이너를 반환합니다. 컨테이너 래퍼에서 지정한 제한을 무시할 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -764,7 +753,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -776,16 +764,16 @@ a b c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 queue <Value, Container>% operator=(queue <Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 오른쪽  
+ *right*  
  복사할 컨테이너 어댑터입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 연산자 복사본 `right` 개체에 반환 `*this`합니다. 이를 사용하여 제어되는 시퀀스를 `right`의 제어되는 시퀀스 복사본으로 대체합니다.  
+ 멤버 연산자 복사본 *오른쪽* 개체를 반환 `*this`합니다. 제어 되는 시퀀스에서 제어 된 시퀀스의 복사본으로 대체 하는 데 사용할 있습니다 *오른쪽*합니다.  
   
 ### <a name="example"></a>예  
   
@@ -814,8 +802,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -824,20 +811,20 @@ a b c
 ```  
 
 ## <a name="pop"></a> queue:: pop (STL/CLR)
-마지막 요소를 제거 합니다.  
+마지막 요소를 제거합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void pop();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 마지막 요소를 제거 합니다. 뒤에 한 요소 하 여 큐를 축소를 사용 합니다.  
+ 멤버 함수는 비어 있지 않아야 하는 제어 된 시퀀스의 마지막 요소를 제거 합니다. 한 요소 뒤에 큐를 단축 하는 데 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
-```  
+```cpp  
 // cliext_queue_pop.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -862,7 +849,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -871,16 +857,16 @@ b c
 ```  
 
 ## <a name="push"></a> queue:: push (STL/CLR)
-새 마지막 요소를 추가 합니다.  
+새 마지막 요소를 추가합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void push(value_type val);  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 값을 가진 요소를 추가 `val` 큐의 끝에 있습니다. 큐에 요소를 추가 하려면 사용 합니다.  
+ 값을 사용 하 여 요소를 추가 하는 멤버 함수 `val` 큐의 끝입니다. 큐에 요소를 추가 하는 데 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -903,7 +889,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -911,11 +896,11 @@ a b c
 ```  
 
 ## <a name="queue"></a> queue:: queue (STL/CLR)
-컨테이너 어댑터 개체를 만듭니다.  
+컨테이너 어댑터 개체를 생성합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 queue();  
 queue(queue<Value, Container>% right);  
 queue(queue<Value, Container>^ right);  
@@ -923,36 +908,36 @@ explicit queue(container_type% wrapped);
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 오른쪽  
+ *right*  
  복사할 개체입니다.  
   
- 래핑  
- 래핑된 컨테이너를 사용 합니다.  
+ *래핑*  
+ 사용 하 여 래핑된 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
  생성자:  
   
  `queue();`  
   
- 빈 래핑된 컨테이너를 만듭니다. 초기는 빈 제어 시퀀스를 지정 하려면 사용 합니다.  
+ 빈 래핑된 컨테이너를 만듭니다. 빈 초기 제어 되는 시퀀스를 지정 하는 데 사용할 수 있습니다.  
   
  생성자:  
   
  `queue(queue<Value, Container>% right);`  
   
- 복사본 인 래핑된 컨테이너를 만들고 `right.get_container()`합니다. 큐 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `right`합니다.  
+ 복사본 인 래핑된 컨테이너를 만듭니다. `right.get_container()`합니다. 큐 개체에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 된 시퀀스를 지정 하려면 사용할 *오른쪽*합니다.  
   
  생성자:  
   
  `queue(queue<Value, Container>^ right);`  
   
- 복사본 인 래핑된 컨테이너를 만들고 `right->get_container()`합니다. 큐 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `*right`합니다.  
+ 복사본 인 래핑된 컨테이너를 만듭니다. `right->get_container()`합니다. 큐 개체에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 된 시퀀스를 지정 하려면 사용할 `*right`합니다.  
   
  생성자:  
   
  `explicit queue(container_type wrapped);`  
   
- 기존 컨테이너를 사용 하 여 `wrapped` 래핑된 컨테이너로 합니다. 기존 컨테이너에서 큐를 생성 하는 데 사용할 수 있습니다.  
+ 기존 컨테이너를 사용 하 여 *래핑된* 래핑된 컨테이너입니다. 기존 컨테이너에서 큐를 생성 하는 데 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -991,7 +976,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1006,12 +990,12 @@ size() = 0
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 요소에 대 한 참조를 설명 합니다.  
+ 형식 요소에 대 한 참조를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1041,7 +1025,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1054,12 +1037,12 @@ a b x
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 제어 되는 시퀀스의 현재 요소 수를 확인 하려면 사용 합니다. 모든 경우에 중요 한 여부 시퀀스 크기가 0이 아닌 참조 [queue:: empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`합니다.  
+ 멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 현재 제어 되는 시퀀스의에서 요소 수를 확인 하려면 사용 합니다. 모든 경우에 중요 한 여부 시퀀스 크기가 0이 아닌 참조 [queue:: empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1092,7 +1075,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1107,12 +1089,12 @@ size() = 4 after adding 2
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식은은 음수가 아닌 요소 수를 설명 합니다.  
+ 형식에는 음수가 아닌 요소 수를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1142,7 +1124,6 @@ int main()
     System::Console::WriteLine("size difference = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1151,20 +1132,20 @@ size difference = 2
 ```  
 
 ## <a name="to_array"></a> queue:: to_array (STL/CLR)
-제어 되는 새 배열에 복사합니다.  
+제어 되는 시퀀스를 새 배열에 복사합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 cli::array<Value>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 제어 되는 시퀀스를 포함 하는 배열을 반환 합니다. 배열 형식으로 제어 되는 시퀀스의 복사본을 사용 하면 됩니다.  
+ 멤버 함수는 제어 되는 시퀀스를 포함 하는 배열을 반환 합니다. 배열 형식에서 제어 된 시퀀스의 복사본을 가져와야 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
-```  
+```cpp  
 // cliext_queue_to_array.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -1191,7 +1172,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1204,12 +1184,12 @@ a b c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 `Value`의 동의어입니다.  
+ 형식은 템플릿 매개 변수에 대 한 동의어 *값*합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1235,20 +1215,19 @@ int main()
         }   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
 a b c  
 ```  
 
-## <a name="op_neq"></a> operator! = (queue) (STL/CLR)
-같지 않음 비교 큐에 넣습니다.  
+## <a name="op_neq"></a> 연산자! = (queue) (STL/CLR)
+큐 같지 않은지 비교 합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator!=(queue<Value, Container>% left,  
@@ -1256,14 +1235,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `!(left == right)`합니다. 테스트를 사용 하는지 여부를 `left` 동일 정렬 되지 않은 `right` 때 두 개의 큐는 요소 별로 비교 합니다.  
+ 연산자 함수 반환 `!(left == right)`합니다. 테스트에 사용할 여부를 *왼쪽* 동일 정렬 되지 않은 *오른쪽* 두 큐 때 요소 별로 비교 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1302,7 +1281,6 @@ int main()
         c1 != c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1317,7 +1295,7 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<(queue<Value, Container>% left,  
@@ -1325,14 +1303,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 이면 true를 반환, 가장 낮은 위치에 대 한 `i` 를 `!(right[i] < left[i])` 도 true 하는 것이 `left[i] < right[i]`합니다. 그렇지 않으면 반환 `left->` [queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()` 테스트를 사용 하는지 여부를 `left` 앞에 정렬 `right` 때 두 개의 큐는 요소 별로 비교 합니다.  
+ 연산자 함수 경우 true를 반환, 가장 낮은 위치에 대 한 `i` 는 `!(right[i] < left[i])` 수도 있는 true는 `left[i] < right[i]`합니다. 그렇지 `left->` [queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()` 테스트를 사용 하는지 여부를 *왼쪽* 앞에 정렬 되 *오른쪽* 두 개의 큐 때 요소 별로 비교 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1370,8 +1348,7 @@ int main()
     System::Console::WriteLine("[a b c] < [a b d] is {0}",   
         c1 < c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1382,11 +1359,11 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> 연산자&lt;= (queue) (STL/CLR)
-보다 작거나 같은 큐 비교 합니다.  
+큐 보다 작거나 같은지 비교 합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<=(queue<Value, Container>% left,  
@@ -1394,14 +1371,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `!(right < left)`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 되지 않은 `right` 때 두 개의 큐는 요소 별로 비교 합니다.  
+ 연산자 함수 반환 `!(right < left)`합니다. 테스트에 사용할 여부를 *왼쪽* 후 정렬 되지 않은 *오른쪽* 두 큐 때 요소 별로 비교 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1439,8 +1416,7 @@ int main()
     System::Console::WriteLine("[a b d] <= [a b c] is {0}",   
         c2 <= c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1455,7 +1431,7 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator==(queue<Value, Container>% left,  
@@ -1463,14 +1439,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수는 시퀀스에 의해 제어 하는 경우에 true를 반환 `left` 및 `right` 동일한 길이 및 각 위치에 대 한 `i`, `left[i] ==` `right[i]`합니다. 테스트를 사용 하는지 여부를 `left` 와 동일 하 게 정렬 되 `right` 때 두 개의 큐는 요소 별로 비교 합니다.  
+ 연산자 함수는 시퀀스에 의해 제어 하는 경우에 true를 반환 *왼쪽* 하 고 *오른쪽* 동일한 길이 및 각 위치에 대 한 `i`, `left[i] ==` `right[i]`합니다. 테스트에 사용할 여부를 *왼쪽* 와 동일 하 게 정렬 됩니다 *오른쪽* 두 큐 때 요소 별로 비교 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1508,8 +1484,7 @@ int main()
     System::Console::WriteLine("[a b c] == [a b d] is {0}",   
         c1 == c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1520,11 +1495,11 @@ int main()
 ```  
 
 ## <a name="op_gt"></a> 연산자&gt; (queue) (STL/CLR)
-비교에 보다 큰 큐입니다.  
+큐 보다 큰지 비교 합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>(queue<Value, Container>% left,  
@@ -1532,14 +1507,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `right` `<` `left`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 `right` 때 두 개의 큐는 요소 별로 비교 합니다.  
+ 연산자 함수 반환 `right` `<` `left`합니다. 테스트에 사용할 여부를 *왼쪽* 후에 정렬 되 *오른쪽* 경우 두 개의 큐는 요소 별로 비교 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1577,8 +1552,7 @@ int main()
     System::Console::WriteLine("[a b d] > [a b c] is {0}",   
         c2 > c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1593,7 +1567,7 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>=(queue<Value, Container>% left,  
@@ -1601,14 +1575,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `!(left < right)`합니다. 테스트를 사용 하는지 여부를 `left` 하기 전에 정렬 되지 않은 `right` 때 두 개의 큐는 요소 별로 비교 합니다.  
+ 연산자 함수 반환 `!(left < right)`합니다. 테스트에 사용할 여부를 *왼쪽* 하기 전에 정렬 되지 않은 *오른쪽* 두 큐 때 요소 별로 비교 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1646,8 +1620,7 @@ int main()
     System::Console::WriteLine("[a b c] >= [a b d] is {0}",   
         c1 >= c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  

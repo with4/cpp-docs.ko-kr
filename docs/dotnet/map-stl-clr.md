@@ -109,15 +109,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 51570171fbd8de9919bcba5dabb47c26d8e1c748
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 99a809753b244f442bf2eb321c58f4a07c5ba546
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079905"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376354"
 ---
 # <a name="map-stlclr"></a>map(STL/CLR)
-이 템플릿 클래스는 다양 한 길이의 요소 시퀀스를 양방향 액세스할 수 있는 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `map` 하나의 요소 저장 하 고 각 노드의 정렬 된 나무를 균형 있게 (거의)으로 요소의 시퀀스를 관리할 수 있습니다. 요소 순서는 시퀀스와 경험해를 따라 이동 하는 매핑된 값에 대 한 키를 구성 됩니다.  
+템플릿 클래스는 요소의 양방향 액세스할 수 있는 다양 한 길이의 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 `map` 각각 한 개의 요소 저장 노드 (거의) 분산 된 순서가 지정 된 트리로 요소의 시퀀스를 관리할 수 있습니다. 요소는 시퀀스 및 경험해를 따라 이동 하는 매핑된 값을 정렬 키가 구성 됩니다.  
   
  아래 설명에 `GValue` 와 같습니다.  
   
@@ -125,13 +125,13 @@ ms.locfileid: "37079905"
   
  다음은 각 문자에 대한 설명입니다.  
   
- `GKey` 동일 `Key` 후자 형식인 ref 하지 않는 한 경우에서 이기 `Key^`  
+ `GKey` 동일 *키* 후자는 참조 형식, 하지 않는 한이 경우에서는 `Key^`  
   
- `GMapped` 동일 `Mapped` 후자 형식인 ref 하지 않는 한 경우에서 이기 `Mapped^`  
+ `GMapped` 동일 *매핑된* 후자는 참조 형식, 하지 않는 한이 경우에서는 `Mapped^`  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     ref class map  
@@ -148,14 +148,14 @@ template<typename Key,
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- Key  
- 형식 제어 된 시퀀스의 요소의 핵심 구성 요소입니다.  
+ *키*  
+ 제어 된 시퀀스의 요소 키 구성 요소의 형식입니다.  
   
- 매핑된  
+ *매핑된*  
  제어 된 시퀀스의 요소의 추가 구성 요소 형식입니다.  
 
 ## <a name="requirements"></a>요구 사항  
- **헤더:** \<cliext/매핑 >  
+ **헤더:** \<cliext/맵을 >  
   
  **Namespace:** cliext  
   
@@ -166,93 +166,93 @@ template<typename Key,
 |[map::const_iterator(STL/CLR)](#const_iterator)|제어되는 시퀀스에 대한 상수 반복기의 형식입니다.|  
 |[map::const_reference(STL/CLR)](#const_reference)|요소에 대한 상수 참조의 형식입니다.|  
 |[map::const_reverse_iterator(STL/CLR)](#const_reverse_iterator)|제어되는 시퀀스에 대한 상수 역방향 반복기의 형식입니다.|  
-|[map::difference_type(STL/CLR)](#difference_type)|두 요소 사이의 거리 (서명 된 가능)의 형식입니다.|  
+|[map::difference_type(STL/CLR)](#difference_type)|두 요소 사이의 (가능한 경우 부호 있는) 거리의 형식입니다.|  
 |[map::generic_container(STL/CLR)](#generic_container)|컨테이너에 대 한 제네릭 인터페이스의 형식입니다.|  
 |[map::generic_iterator(STL/CLR)](#generic_iterator)|컨테이너에 대 한 제네릭 인터페이스에 대 한 반복기의 형식입니다.|  
-|[map::generic_reverse_iterator(STL/CLR)](#generic_reverse_iterator)|컨테이너에 대 한 제네릭 인터페이스에 대 한 반대 반복기의 형식입니다.|  
-|[map::generic_value(STL/CLR)](#generic_value)|컨테이너에 대 한 제네릭 인터페이스에 대 한 요소의 형식입니다.|  
+|[map::generic_reverse_iterator(STL/CLR)](#generic_reverse_iterator)|컨테이너에 대 한 제네릭 인터페이스에 대 한 역방향 반복기의 형식입니다.|  
+|[map::generic_value(STL/CLR)](#generic_value)|제네릭 인터페이스에 대 한 컨테이너 요소 형식입니다.|  
 |[map::iterator(STL/CLR)](#iterator)|제어되는 시퀀스에 대한 반복기의 형식입니다.|  
-|[map::key_compare(STL/CLR)](#key_compare)|두 키에 대 한 순서 지정 하는 대리자입니다.|  
+|[map::key_compare(STL/CLR)](#key_compare)|두 키의 순서 지정 대리자입니다.|  
 |[map::key_type(STL/CLR)](#key_type)|정렬 키의 형식입니다.|  
 |[map::mapped_type(STL/CLR)](#mapped_type)|각 키와 연결 된 매핑된 값의 형식입니다.|  
 |[map::reference(STL/CLR)](#reference)|요소에 대한 참조의 형식입니다.|  
 |[map::reverse_iterator(STL/CLR)](#reverse_iterator)|제어되는 시퀀스에 대한 반대 반복기의 형식입니다.|  
 |[map::size_type(STL/CLR)](#size_type)|두 요소 사이의 (음수가) 거리의 형식입니다.|  
-|[map::value_compare(STL/CLR)](#value_compare)|두 요소 값에 대 한 순서 지정 하는 대리자입니다.|  
+|[map::value_compare(STL/CLR)](#value_compare)|두 요소 값의 순서 지정 대리자입니다.|  
 |[map::value_type(STL/CLR)](#value_type)|요소의 형식입니다.|  
   
 |멤버 함수|설명|  
 |---------------------|-----------------|  
 |[map::begin(STL/CLR)](#begin)|제어되는 시퀀스의 시작을 지정합니다.|  
 |[map::clear(STL/CLR)](#clear)|모든 요소를 제거합니다.|  
-|[map::count(STL/CLR)](#count)|지정된 된 키와 일치 하는 요소 수를 계산 합니다.|  
+|[map::count(STL/CLR)](#count)|지정된 된 키와 일치 하는 요소를 계산 합니다.|  
 |[map::empty(STL/CLR)](#empty)|요소가 있는지 여부를 테스트합니다.|  
 |[map::end(STL/CLR)](#end)|제어되는 시퀀스의 끝을 지정합니다.|  
 |[map::equal_range(STL/CLR)](#equal_range)|지정된 키와 일치하는 범위를 찾습니다.|  
 |[map::erase(STL/CLR)](#erase)|지정된 위치에 있는 요소를 제거합니다.|  
 |[map::find(STL/CLR)](#find)|지정된 키와 일치하는 요소를 찾습니다.|  
 |[map::insert(STL/CLR)](#insert)|요소를 추가합니다.|  
-|[map::key_comp(STL/CLR)](#key_comp)|두 키에 대 한 순서 지정 대리자를 복사합니다.|  
+|[map::key_comp(STL/CLR)](#key_comp)|두 개의 키에 대 한 순서 지정 대리자를 복사합니다.|  
 |[map::lower_bound(STL/CLR)](#lower_bound)|지정된 된 키와 일치 하는 범위의 시작 부분을 찾습니다.|  
-|[map::make_value(STL/CLR)](#make_value)|값 개체를 만듭니다.|  
+|[map::make_value(STL/CLR)](#make_value)|값 개체를 생성합니다.|  
 |[map::map(STL/CLR)](#map)|컨테이너 개체를 만듭니다.|  
 |[map::rbegin(STL/CLR)](#rbegin)|제어되는 역방향 시퀀스의 시작을 지정합니다.|  
 |[map::rend(STL/CLR)](#rend)|제어되는 역방향 시퀀스의 끝을 지정합니다.|  
 |[map::size(STL/CLR)](#size)|요소 수를 계산합니다.|  
 |[map::swap(STL/CLR)](#swap)|두 컨테이너의 내용을 바꿉니다.|  
-|[map::to_array(STL/CLR)](#to_array)|제어 되는 새 배열에 복사합니다.|  
+|[map::to_array(STL/CLR)](#to_array)|제어 되는 시퀀스를 새 배열에 복사합니다.|  
 |[map::upper_bound(STL/CLR)](#upper_bound)|지정된 된 키와 일치 하는 범위의 끝을 찾습니다.|  
 |[map::value_comp(STL/CLR)](#value_comp)|두 요소 값에 대 한 순서 지정 대리자를 복사합니다.|  
   
 |연산자|설명|  
 |--------------|-----------------|  
 |[map::operator=(STL/CLR)](#op_as)|제어되는 시퀀스를 바꿉니다.|  
-|[map::operator(STL/CLR)](#op)|키를 연결 된 매핑된 값에 매핑합니다.|  
-|[operator!= (map)(STL/CLR)](#op_neq)|있는지 여부를 확인 한 `map` 개체가 다른과 같지 않습니다. `map` 개체입니다.|  
-|[operator< (map)(STL/CLR)](#op_lt)|있는지 여부를 확인 한 `map` 개체를 사용 하면 다른 노드보다 작은지 `map` 개체입니다.|  
-|[operator<= (map)(STL/CLR)](#op_lteq)|있는지 여부를 확인 한 `map` 개체 보다 작거나 같으면 다른 `map` 개체입니다.|  
-|[operator== (map)(STL/CLR)](#op_eq)|있는지 여부를 확인 한 `map` 개체는 다른 `map` 개체입니다.|  
-|[operator> (map)(STL/CLR)](#op_gt)|있는지 여부를 확인 한 `map` 개체가 다른 노드보다 큰지 `map` 개체입니다.|  
-|[operator>= (map)(STL/CLR)](#op_gteq)|있는지 여부를 확인 한 `map` 개체는 다른 보다 크거나 `map` 개체입니다.|  
+|[map::operator(STL/CLR)](#op)|키가 관련된 매핑된 값에 매핑됩니다.|  
+|[operator!= (map)(STL/CLR)](#op_neq)|확인을 `map` 다른 개체가 같지 `map` 개체입니다.|  
+|[operator< (map)(STL/CLR)](#op_lt)|확인을 `map` 개체를 사용 하면 다른 노드보다 작은지 `map` 개체입니다.|  
+|[operator<= (map)(STL/CLR)](#op_lteq)|확인을 `map` 개체 보다 작거나 같으면 다른 `map` 개체입니다.|  
+|[operator== (map)(STL/CLR)](#op_eq)|확인을 `map` 다른 개체가 같은지 `map` 개체입니다.|  
+|[operator> (map)(STL/CLR)](#op_gt)|확인을 `map` 개체가 다른 인스턴스보다 큰지를 `map` 개체입니다.|  
+|[operator>= (map)(STL/CLR)](#op_gteq)|있는지 여부를 확인 한 `map` 보다 크거나 같은 다른 개체가 `map` 개체입니다.|  
   
 ## <a name="interfaces"></a>인터페이스  
   
 |인터페이스|설명|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|개체를 복제 합니다.|  
-|<xref:System.Collections.IEnumerable>|요소를 통해 시퀀스입니다.|  
-|<xref:System.Collections.ICollection>|요소의 그룹을 유지 합니다.|  
+|<xref:System.Collections.IEnumerable>|요소 시퀀스입니다.|  
+|<xref:System.Collections.ICollection>|요소 그룹을 유지 합니다.|  
 |<xref:System.Collections.Generic.IEnumerable%601>|형식화 된 요소 시퀀스입니다.|  
-|<xref:System.Collections.Generic.ICollection%601>|형식화 된 요소의 그룹을 유지 합니다.|  
-|<xref:System.Collections.Generic.IDictionary%602>|{키, 값을 (를)의 그룹을 유지 관리 쌍입니다.|  
+|<xref:System.Collections.Generic.ICollection%601>|형식화 된 요소 그룹을 유지 합니다.|  
+|<xref:System.Collections.Generic.IDictionary%602>|{0} 키, 값} 그룹을 유지 관리 쌍입니다.|  
 |ITree < 키, 값 >|제네릭 컨테이너를 유지 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 개체 할당 및 개별 노드로 제어 하는 시퀀스에 대 한 저장소를 해제 합니다. 다른 한 노드의 콘텐츠를 복사 하 여 되지 노드 간의 링크를 변경 하 여 순서가 지정 된 보관 하는 나무를 균형 있게 (거의)에 요소를 삽입 합니다. 즉, 삽입 하 고 나머지 요소를 방해 하지 않고 자유롭게 요소를 제거할 수 있습니다.  
+ 개체를 할당 하 고 개별 노드로 제어 하는 시퀀스에 대 한 저장소를 해제 합니다. 유지 되지 다른 한 노드의 콘텐츠를 복사 하 여 노드 간 링크를 변경 하 여 정렬 된 트리를 균형된 (거의)에 요소를 삽입 합니다. 즉, 삽입 하 고 나머지 요소를 방해 하지 않고 자유롭게 요소를 제거할 수 있습니다.  
   
- 형식의 개체를 저장된 하는 대리자를 호출 하 여 제어 하는 시퀀스를 정렬 하는 개체 [map:: key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md)합니다. 지도; 생성할 때 저장된 대리자 개체를 지정할 수 있습니다. 기본값은 비교 없는 대리자 개체를 지정 하면 `operator<(key_type, key_type)`합니다. 멤버 함수를 호출 하 여이 저장 된 개체를 액세스할 [map:: key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md)`()`합니다.  
+ 개체 형식의 저장 된 대리자 개체를 호출 하 여 제어 하는 시퀀스를 정렬 [map:: key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md)합니다. 가 맵을 생성 하는 경우 저장 된 대리자 개체를 지정할 수 있습니다. 기본값은 비교 없는 대리자 개체를 지정 하면 `operator<(key_type, key_type)`합니다. 멤버 함수를 호출 하 여이 저장 된 개체를 액세스할 [map:: key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md)`()`합니다.  
   
- 이러한 대리자 개체 유형의 키에 대해 엄밀히 약한 정렬을 적용 해야 합니다 [map:: key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)합니다. 모든 두 개의 키 즉 `X` 및 `Y`:  
+ 이러한 대리자 개체 형식의 키에 대해 엄밀히 약한 정렬을 적용 해야 합니다 [map:: key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)합니다. 즉, 두 개의 키에 대 한 `X` 고 `Y`:  
   
- `key_comp()(X, Y)` 동일한 부울 결과를 반환 모든 호출 합니다.  
+ `key_comp()(X, Y)` 호출할 때마다 동일한 부울 결과 반환.  
   
- 경우 `key_comp()(X, Y)` 가 true 이면 `key_comp()(Y, X)` false 이어야 합니다.  
+ 하는 경우 `key_comp()(X, Y)` 가 true 이면 `key_comp()(Y, X)` false 여야 합니다.  
   
- 경우 `key_comp()(X, Y)` 가 true 이면 `X` 앞에 정렬를 라고 `Y`합니다.  
+ 하는 경우 `key_comp()(X, Y)` 가 true 이면 `X` 앞에 정렬 되어 있다고는 `Y`합니다.  
   
- 경우 `!key_comp()(X, Y) && !key_comp()(Y, X)` 가 true 이면 `X` 및 `Y` 순서 지정이 동일할에 있다고 합니다.  
+ 하는 경우 `!key_comp()(X, Y) && !key_comp()(Y, X)` 가 true 이면 `X` 및 `Y` 동일 하 게 정렬 하 라고 합니다.  
   
- 모든 요소에 대해 `X` 앞에 `Y` 제어 된 시퀀스의 `key_comp()(Y, X)` 은 false입니다. (기본 대리자 개체에 대 한 키는 결코 감소 값입니다.) 템플릿 클래스와 달리 [지도](../dotnet/map-stl-clr.md)를 템플릿 클래스의 개체 `map` 모든 요소에 대 한 키가 고유한 지 필요 하지 않습니다. (키가 두 개 이상 있을 수 있음 순서 지정이 동일할.)  
+ 모든 요소에 대 한 `X` 앞에 오는 `Y` 제어 된 시퀀스에서 `key_comp()(Y, X)` 은 false입니다. (기본 대리자 개체에 대 한 키 결코 감소 값입니다.) 템플릿 클래스와 달리 [지도](../dotnet/map-stl-clr.md)를 템플릿 클래스의 개체 `map` 모든 요소에 대 한 키가 고유한 지 필요 하지 않습니다. (두 개 이상의 키 수 동일 하 게 정렬 됩니다.)  
   
- 각 요소에는 별도 키와 매핑된 값을 포함 합니다. 시퀀스는 시퀀스 (에 오면 로그 시간)에 조회, 삽입 및 수의 요소 수 로그에 비례 하는 작업의 임의 요소 제거를 허용 하는 방식으로 표시 됩니다. 또한, 요소를 삽입할 경우 어떤 반복기도 무효화되지 않으며, 요소를 제거할 경우 제거된 요소를 가리키고 있는 반복기만 무효화됩니다.  
+ 각 요소는 별도 키 및 매핑된 값을 포함합니다. 시퀀스는 시퀀스 (로그 시간)를에서 조회, 삽입 및 임의 요소 수의 요소 수의 로그에 비례 하는 작업을 사용 하 여 제거를 허용 하는 방식으로 표시 됩니다. 또한, 요소를 삽입할 경우 어떤 반복기도 무효화되지 않으며, 요소를 제거할 경우 제거된 요소를 가리키고 있는 반복기만 무효화됩니다.  
   
- 지도 제어 된 시퀀스의 요소를 지정 하는 반복기를 제공 하는 인접 요소를 실행할 수를 의미 있는 양방향 반복기 지원 합니다. 반환 된 반복기에 해당 하는 특수 헤드 노드 [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`합니다. 있는 경우이 반복기는 제어 되는 시퀀스에서 마지막 요소를 연결할를 감소 시킬 수 있습니다. 헤드 노드에 도달 하는 지도 반복기를 증가 시킬 수 있습니다 및 같음 비교 다음 `end()`합니다. 반환 된 반복기를 역 참조할 수 없습니다 하지만 `end()`합니다.  
+ 지도 제어 된 시퀀스의 요소를 지정 하는 반복기를 제공 하는 인접 요소를 실행할 수 있습니다 의미 있는 양방향 반복기를 지원 합니다. 반환 된 반복기에 해당 하는 특수 헤드 노드 [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`합니다. 있는 경우에 제어 된 시퀀스에서 마지막 요소를 연결할이 반복기를 감소 시킬 수 있습니다. 헤드 노드에 도달 하는 지도 반복기를 증가 시킬 수 있습니다 및 같음 비교 다음 `end()`합니다. 반환 된 반복기를 역 참조할 수 없습니다 있지만 `end()`합니다.  
   
- 참조할 수 없습니다. 직접 임의 액세스 반복기를 필요로 하는 숫자 위치가-지정 된 지도 요소는 참고 사항  
+ 참조할 수 없습니다. 직접 임의 액세스 반복기를 필요로 하는 숫자 위치-지정 된 지도 요소는 참고 합니다.  
   
- 지도 반복기에 대 한 핸들에 연결 된 컨테이너에 대 한 핸들을 저장 하는 해당 관련된 맵 노드를 저장 합니다. 반복기의 관련된 컨테이너 개체와만 사용할 수 있습니다. 지도 반복기도 해당 관련된 맵 노드 일부 지도와 연결 된 유효한 상태를 유지 합니다. 유효한 반복기 dereferencable 연결은 액세스 또는 같지 않은 것으로 지정-요소 값을 변경 하려면 사용할 수 또한 `end()`합니다.  
+ 지도 반복기에 연결 된 해당 컨테이너에 대 한 핸들을 저장 하는 해당 연결된 맵 노드에 대 한 핸들을 저장 합니다. 반복기는 연결 된 컨테이너 개체에만 사용할 수 있습니다. 지도 반복기도 해당 연결된 맵을 노드가 일부 맵과 사용 하 여 연결 된 유효한 상태로 유지 됩니다. 또한 유효한 반복기는 역-액세스 또는 같지 않은 하기만-지정 된 요소 값을 변경 하는 데 사용할 수 있습니다 `end()`합니다.  
   
- 지우거 나 요소를 제거 합니다. 저장된 된 값에 대 한 소멸자를 호출 합니다. 컨테이너를 제거 합니다. 모든 요소를 지웁니다. 따라서 요소 형식이 ref 클래스는 컨테이너 보다 수명이 깁니다 컨테이너 요소가 있는지 확인 합니다. 단, 핸들의 컨테이너 하다 `not` 해당 요소를 제거 합니다.  
+ 지우거 나 요소를 제거 합니다. 저장된 된 값에 대 한 소멸자를 호출 합니다. 모든 요소를 지웁니다 컨테이너를 제거 합니다. 따라서 요소 형식인 ref 클래스는 컨테이너 보다 수명이 길 컨테이너 요소가 있는지 확인 합니다. 단, 핸들의 컨테이너에는 *되지* 해당 요소를 제거 합니다.  
   
 ## <a name="members"></a>멤버
 
@@ -261,12 +261,12 @@ template<typename Key,
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 제어 되는 시퀀스 또는 빈 시퀀스의 끝 바로 다음의 첫 번째 요소를 지정 하는 양방향 반복기를 반환 합니다. 지정 하는 반복기를 사용 하면는 `current` 제어 된 시퀀스의 길이가 변경 하는 경우의 상태 제어 된 시퀀스의 시작 부분을 변경할 수 있습니다.  
+ 멤버 함수는 제어 된 시퀀스 또는 빈 시퀀스의 끝 바로 다음 첫 번째 요소를 지정 하는 양방향 반복기를 반환 합니다. 지정 하는 반복기를 사용 하면는 `current` 상태가 제어 된 시퀀스의 시작 부분 제어 된 시퀀스의 길이가 변경 되 면 변경할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -297,7 +297,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -311,12 +310,12 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void clear();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수 시그니처 [map:: erase (STL/CLR)](../dotnet/map-erase-stl-clr.md) `(` [map:: begin (STL/CLR)](../dotnet/map-begin-stl-clr.md) `(),` [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `())`. 제어 되는 시퀀스 비어 있는지 확인 하려면 사용 합니다.  
+ 멤버 함수는 효과적으로 호출한 [map:: erase (STL/CLR)](../dotnet/map-erase-stl-clr.md) `(` [map:: begin (STL/CLR)](../dotnet/map-begin-stl-clr.md) `(),` [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `())`. 제어 되는 시퀀스 비어 있는지 확인 하는 데 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -353,7 +352,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -368,12 +366,12 @@ size() = 0
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef T2 const_iterator;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 지정 되지 않은 형식의 개체를 설명 `T2` 제어 되는 시퀀스에 대 한 양방향 상수 반복기로 사용할 수 있는 합니다.  
+ 이 형식은 지정 되지 않은 형식의 개체를 설명 `T2` 제어 되는 시퀀스의 상수 양방향 반복기로 사용할 수 있는 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -397,7 +395,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -409,12 +406,12 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 요소에 대 한 상수 참조를 설명 합니다.  
+ 형식 요소에 대 한 상수 참조를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -441,7 +438,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -449,16 +445,16 @@ int main()
 ```  
 
 ## <a name="const_reverse_iterator"></a> map:: const_reverse_iterator (STL/CLR)
-제어 되는 시퀀스에 대 한 상수 역방향 반복기의 형식입니다.  
+제어 되는 시퀀스의 상수 역방향 반복기의 형식...  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef T4 const_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 지정 되지 않은 형식의 개체를 설명 `T4` 제어 되는 시퀀스에 대 한 상수 역방향 반복기로 사용할 수 있는 합니다.  
+ 이 형식은 지정 되지 않은 형식의 개체를 설명 `T4` 제어 되는 시퀀스의 상수 역방향 반복기로 사용할 수 있는 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -482,7 +478,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -494,16 +489,16 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 size_type count(key_type key);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- key  
+ *key*  
  검색할 키 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 사용 순서 지정이 동일할 제어 된 시퀀스의 요소 수를 반환 `key`합니다. 지정된 된 키와 일치 하는 제어 되는 시퀀스의 현재 요소 수를 확인 하려면 사용 합니다.  
+ 멤버 함수는 동일 하 게 정렬 된 제어 된 시퀀스의 요소 수를 반환 *키*합니다. 지정된 된 키와 일치 하는 현재 제어 된 시퀀스의에서 요소 수를 확인 하려면 사용 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -530,7 +525,6 @@ int main()
     System::Console::WriteLine("count(L'C') = {0}", c1.count(L'C'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -545,12 +539,12 @@ count(L'C') = 0
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식은 음수 수 있는 요소 수를 설명 합니다.  
+ 형식 음수 수 있는 요소 수를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -585,7 +579,6 @@ int main()
     System::Console::WriteLine("begin()-end() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -599,12 +592,12 @@ begin()-end() = -3
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. 동일 [map:: size (STL/CLR)](../dotnet/map-size-stl-clr.md)`() == 0`합니다. 맵이 비어 있는 여부를 테스트 하려면 사용 합니다.  
+ 멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. 에 해당 하는 것 [map:: size (STL/CLR)](../dotnet/map-size-stl-clr.md)`() == 0`합니다. Map이 비어 있는지 여부를 테스트 하려면 사용 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -634,7 +627,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -650,12 +642,12 @@ empty() = True
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 제어 된 시퀀스의 끝 바로 다음을 가리키는 양방향 반복기를 반환합니다. 제어 된 시퀀스의 끝을 지정 하는 반복기를 가져올 사용 해당 상태 대상이 제어 된 시퀀스의 길이가 변경 하는 경우 변경 되지 않습니다.  
+ 멤버 함수는 제어 된 시퀀스의 끝 바로 다음을 가리키는 양방향 반복기를 반환합니다. 제어 된 시퀀스의 끝을 지정 하는 반복기를 사용 하면 해당 상태 만들어지고 제어 된 시퀀스의 길이가 변경 되 면 변경 되지 않습니다.  
   
 ### <a name="example"></a>예  
   
@@ -688,7 +680,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
 
 ## <a name="equal_range"></a> map:: equal_range (STL/CLR)
@@ -696,16 +687,16 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- key  
+ *key*  
  검색할 키 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 한 쌍의 반복기를 반환 `cliext::pair<iterator, iterator>(` [map:: lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md) `(key),` [map:: upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)`(key))`합니다. 지정된 된 키와 일치 하는 제어 된 시퀀스의 현재 요소의 범위를 확인 하려면 사용 합니다.  
+ 반복기의 쌍을 반환 하는 멤버 함수 `cliext::pair<iterator, iterator>(` [map:: lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md) `(key),` [map:: upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)`(key))`합니다. 지정된 된 키와 일치 하는 제어 되는 시퀀스에서 현재 요소의 범위를 확인 하려면 사용 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -741,7 +732,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -755,33 +745,33 @@ equal_range(L'x') empty = True
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 bool erase(key_type key)  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 첫 번째  
- 범위를 지우려면의 시작입니다.  
+ *first*  
+ 지울 범위의 시작입니다.  
   
- key  
- 지우기 키 값입니다.  
+ *key*  
+ 지울 키 값입니다.  
   
- last  
- 범위를 지우려면의 끝입니다.  
+ *last*  
+ 지울 범위의 끝입니다.  
   
- 형식에 대한 설명  
+ *where*  
  지울 요소입니다.  
   
 ### <a name="remarks"></a>설명  
- 가 가리키는 제어 된 시퀀스의 요소를 제거 하는 첫 번째 멤버 함수 `where`를 제거 하는 요소 뒤에 남은 첫 번째 요소를 지정 하는 반복기를 반환 하 고 또는 [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `()` 이러한 요소가 없을 경우. 단일 요소를 제거 하려면 사용 합니다.  
+ 가 가리키는 제어 되는 시퀀스의 요소를 제거 하는 첫 번째 멤버 함수 *여기서*를 제거 하는 요소 뒤에 남은 첫 번째 요소를 지정 하는 반복기를 반환 합니다. 또는 [map:: end (STL/CLR) ](../dotnet/map-end-stl-clr.md) `()` 이러한 요소가 없는 경우. 단일 요소를 제거 하려면 사용 합니다.  
   
- 범위에서 제어 된 시퀀스의 요소를 제거 하는 두 번째 멤버 함수 [`first`, `last`), 제거 된 요소 뒤에 남은 첫 번째 요소를 지정 하는 반복기를 반환 하거나 `end()` 요소가 없는 경우 있습니다. 0 개 이상의 연속 요소를 제거 하려면 사용 합니다.  
+ 두 번째 멤버 함수 범위에서 제어 된 시퀀스의 요소를 제거 합니다. [`first`, `last`), 제거 된 요소 뒤에 남은 첫 번째 요소를 지정 하는 반복기를 반환 합니다. 또는 `end()` 이러한 요소가 없는 경우 존재 하 고... 0 개 이상의 연속 요소를 제거 하려면 사용 합니다.  
   
- 해당 키가 동일 하 게 정렬 된 제어 된 시퀀스의 모든 요소를 제거 하는 세 번째 멤버 함수를 `key`, 제거 된 요소의 수를 반환 합니다. 제거 하 고 계산 된 지정 된 키와 일치 하는 모든 요소를 사용 합니다.  
+ 키에 동일한 순서 제어 된 시퀀스의 모든 요소를 제거 하는 세 번째 멤버 함수를 *키*, 제거 된 요소의 개수를 반환 합니다. 제거 하 고 지정된 된 키와 일치 하는 모든 요소를 계산 하는 데 사용할 수 있습니다.  
   
- 각 요소 삭제 시간이의 요소 수 로그에 비례 제어 된 시퀀스의 됩니다.  
+ 각 요소 지우기 제어 되는 시퀀스의 요소 수 로그에 비례한 시간을 사용합니다.  
   
 ### <a name="example"></a>예  
   
@@ -828,7 +818,6 @@ int main()
     System::Console::WriteLine("erase(L'e') = {0}", c1.erase(L'e'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -846,16 +835,16 @@ erase(L'e') = 1
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 iterator find(key_type key);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- key  
+ *key*  
  검색할 키 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 동일 하 게 정렬 된 제어 되는 시퀀스에 요소가 하나 이상 있으면 `key`, 이러한 요소 중 하나를 지정 하는 반복기를 반환 하는 멤버 함수, 그렇지 않으면 반환 [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`합니다. 지정된 된 키와 일치 하는 제어 된 시퀀스의 현재 요소를 찾을 수 사용 합니다.  
+ 사용 하 여 해당 순서 제어 된 시퀀스의 요소를 하나 이상 있으면 *키*, 멤버 함수는 이러한 요소 중 하나를 지정 하는 반복기를 반환, 그렇지 않으면 반환 [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`. 지정된 된 키와 일치 하는 제어 된 시퀀스의 요소를 현재 찾으려고 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -888,7 +877,6 @@ int main()
         L'C', c1.find(L'C') != c1.end());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -903,14 +891,14 @@ find C = False
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::  
     ITree<GKey, GValue>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스를 설명 합니다.  
+ 형식은이 템플릿 컨테이너 클래스에 대 한 제네릭 인터페이스를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -951,7 +939,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -962,18 +949,18 @@ int main()
 ```  
 
 ## <a name="generic_iterator"></a> map:: generic_iterator (STL/CLR)
-컨테이너에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 반복기의 형식입니다.  
+컨테이너에 대 한 제네릭 인터페이스를 사용 하 여 사용에 대 한 반복기의 형식입니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerBidirectionalIterator<generic_value>  
     generic_iterator;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식은이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스와 함께 사용할 수 있는 일반 반복기를 설명 합니다.  
+ 형식에이 템플릿 컨테이너 클래스에 대 한 제네릭 인터페이스를 사용 하 여 사용할 수 있는 일반 반복기를 설명 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1008,7 +995,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1018,18 +1004,18 @@ int main()
 ```  
 
 ## <a name="generic_reverse_iterator"></a> map:: generic_reverse_iterator (STL/CLR)
-컨테이너에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 한 반대 반복기의 형식입니다.  
+컨테이너에 대 한 제네릭 인터페이스를 사용 하 여 사용에 대 한 역방향 반복기의 형식입니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseRandomAccessIterator<generic_value>  
     generic_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식은이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스와 함께 사용할 수 있는 제네릭 역방향 반복기를 설명 합니다.  
+ 형식에는이 템플릿 컨테이너 클래스에 대 한 제네릭 인터페이스를 사용 하 여 사용할 수 있는 제네릭 역방향 반복기를 설명 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1063,7 +1049,6 @@ int main()
     System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1073,16 +1058,16 @@ int main()
 ```  
 
 ## <a name="generic_value"></a> map:: generic_value (STL/CLR)
-컨테이너에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 요소의 형식입니다.  
+컨테이너에 대 한 제네릭 인터페이스를 사용 하 여 사용에 대 한 요소의 형식입니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 형식의 개체를 설명 `GValue` 이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 저장 된 요소 값을 설명 하는 합니다.  
+ 이 형식은 형식의 개체를 설명 `GValue` 는이 템플릿 컨테이너 클래스에 대 한 제네릭 인터페이스를 사용 하 여 사용 하 여 저장 된 요소 값에 설명 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1116,7 +1101,6 @@ int main()
     System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1130,7 +1114,7 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 cliext::pair<iterator, bool> insert(value_type val);  
 iterator insert(iterator where, value_type val);  
 template<typename InIter>  
@@ -1139,33 +1123,33 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 첫 번째  
- 삽입할 범위의의 시작입니다.  
+ *first*  
+ 삽입할 범위의 시작입니다.  
   
- last  
+ *last*  
  삽입할 범위의 끝입니다.  
   
- 오른쪽  
- 삽입 하는 열거형입니다.  
+ *right*  
+ 삽입할 열거형입니다.  
   
- Val  
+ *val*  
  삽입할 키 값입니다.  
   
- 형식에 대한 설명  
- (힌트에만 해당)를 삽입할 컨테이너의 위치입니다.  
+ *where*  
+ (힌트에만 해당)를 삽입할 컨테이너에서 위치입니다.  
   
 ### <a name="remarks"></a>설명  
  각 멤버 함수는 나머지 피연산자에서 지정 된 시퀀스를 삽입 합니다.  
   
- 첫 번째 멤버 함수는 값을 가진 요소를 삽입할 노력 `val`, 한 쌍의 값을 반환 하 고 `X`합니다. 경우 `X.second` 가 true 이면 `X.first` 새로 삽입된 된 요소를 지정 고, 그렇지 않으면 `X.first` 해당 키와 요소를 지정 순서 이미 존재 하 고 새 요소가 삽입 됩니다. 단일 요소를 삽입 하려면 사용 합니다.  
+ 첫 번째 멤버 함수에서 값을 사용 하 여 요소를 삽입 하려고 *val*, 한 쌍의 값을 반환 하 고 `X`입니다. 경우 `X.second` 가 true 이면 `X.first` 새로 삽입된 된 요소를 지정 하 고, 그렇지 않으면 `X.first` 지정 요소를 동일한 순서는 이미 존재 하며 새 요소가 삽입 되 합니다. 단일 요소를 삽입 하는 데 사용할 수 있습니다.  
   
- 두 번째 멤버 함수는 값을 가진 요소를 삽입 `val`를 사용 하 여 `where` (성능을 향상 시키기) 힌트로 새로 삽입된 된 요소를 지정 하는 반복기를 반환 합니다. 알고 있는 요소에 인접 한 될 수 있는 단일 요소를 삽입 하려면 사용 합니다.  
+ 두 번째 멤버 함수는 값을 사용 하 여 요소를 삽입 *val*를 사용 하 여 *여기서* (성능을 향상 시키기 위해) 힌트를 새로 삽입된 된 요소를 지정 하는 반복기를 반환 합니다. 알고 있는 요소에 인접 한 될 수 있는 단일 요소를 삽입 하는 데 사용할 수 있습니다.  
   
- 세 번째 멤버 함수는 시퀀스를 삽입 [`first`, `last`). 다른 시퀀스에서 복사 된 0 개 이상의 요소를 삽입 하려면 사용 합니다.  
+ 세 번째 멤버 함수는 시퀀스를 삽입 합니다. [`first`, `last`). 다른 시퀀스에서 복사 된 0 개 이상의 요소를 삽입 하는 데 사용할 수 있습니다.  
   
- 로 지정 된 시퀀스를 삽입 하는 네 번째 멤버 함수는 `right`합니다. 열거자에서 설명 하는 시퀀스를 삽입 하려면 사용 합니다.  
+ 로 지정 된 시퀀스를 삽입 하는 네 번째 멤버 함수는 *오른쪽*합니다. 열거자에서 설명 하는 시퀀스를 삽입 하는 데 사용할 수 있습니다.  
   
- 제어 된 시퀀스의 요소 수 로그 비례 하는 시간을 사용 하는 각 요소를 삽입 합니다. 그러나 삽입 발생할 수 있습니다 분할 상환된 상수 시간에 삽입 지점에 인접 하는 요소를 지정 하는 힌트를 제공 합니다.  
+ 제어 되는 시퀀스의 요소 수 로그에 비례한 시간을 사용 하는 각 요소를 삽입 합니다. 그러나 삽입에서에서 발생할 수 있습니다 분할 상환된 상수 시간 삽입 지점에 인접 한 요소를 지정 하는 힌트를 지정 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1229,7 +1213,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1248,12 +1231,12 @@ insert(begin(), [L'y' 25]) = [y 25]
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef T1 iterator;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 지정 되지 않은 형식의 개체를 설명 `T1` 제어 되는 시퀀스에 대 한 양방향 반복기로 사용할 수 있는 합니다.  
+ 이 형식은 지정 되지 않은 형식의 개체를 설명 `T1` 제어 되는 시퀀스는 양방향 반복기로 사용할 수 있는 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1277,7 +1260,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1286,16 +1268,16 @@ int main()
   
 
 ## <a name="key_comp"></a> map:: key_comp (STL/CLR)
-두 키에 대 한 순서 지정 대리자를 복사합니다.  
+두 개의 키에 대 한 순서 지정 대리자를 복사합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 key_compare^key_comp();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 제어 되는 시퀀스를 정렬 하는 데 사용 되는 정렬 대리자를 반환 합니다. 두 키를 비교할를 사용 합니다.  
+ 멤버 함수는 제어 되는 시퀀스를 정렬 하는 데 사용 하는 순서 지정 대리자를 반환 합니다. 두 키 비교에 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -1330,7 +1312,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1344,17 +1325,17 @@ compare(L'b', L'a') = True
 ```  
 
 ## <a name="key_compare"></a> map:: key_compare (STL/CLR)
-두 키에 대 한 순서 지정 하는 대리자입니다.  
+두 키의 순서 지정 대리자입니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
     key_compare;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식은 키 해당 인수의 순서를 결정 하는 대리자에 대 한 동의어입니다.  
+ 형식은 키 인수의 순서를 결정 하는 대리자에 대 한 동의어입니다.  
   
 ### <a name="example"></a>예  
   
@@ -1389,7 +1370,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1407,12 +1387,12 @@ compare(L'b', L'a') = True
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Key key_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 `Key`의 동의어입니다.  
+ 형식은 템플릿 매개 변수에 대 한 동의어 *키*합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1439,7 +1419,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1451,16 +1430,16 @@ a b c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 iterator lower_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- key  
+ *key*  
  검색할 키 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 첫 번째 요소를 결정 `X` 과 순서가 제어 된 시퀀스의 `key`합니다. 이러한 요소가 있는 경우 반환 [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; 그렇지 않으면 지정 하는 반복기를 반환 `X`합니다. 지정된 된 키와 일치 하는 제어 된 시퀀스의 요소 시퀀스의 시작 부분을 현재 찾을 사용 합니다.  
+ 첫 번째 요소를 결정 하는 멤버 함수 `X` 과 순서가 있는 제어 되는 시퀀스 *키*합니다. 이러한 요소가 없으면 반환 [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; 그렇지 않으면 지정 하는 반복기를 반환 `X`합니다. 지정된 된 키와 일치 하는 제어 된 시퀀스의 요소 시퀀스의 시작 부분을 현재 찾으려고 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -1493,7 +1472,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1504,23 +1482,23 @@ lower_bound(L'x')==end() = True
 ```  
 
 ## <a name="make_value"></a> map:: make_value (STL/CLR)
-값 개체를 만듭니다.  
+값 개체를 생성합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 static value_type make_value(key_type key, mapped_type mapped);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- key  
+ *key*  
  사용할 키 값입니다.  
   
- 매핑된  
- 매핑된 검색할 값입니다.  
+ *매핑된*  
+ 검색할 매핑된 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수가 반환 하는 `value_type` 개체 키가 `key` 고 매핑된 값이 `mapped`합니다. 여러 다른 멤버 함수 사용에 적합 한 개체를 작성 하려면 사용 합니다.  
+ 멤버 함수가 반환 하는 `value_type` 키가 있는 개체 *키* 매핑된 값 이며 *매핑된*합니다. 적합 한 몇 가지 다른 멤버 함수를 사용 하 여 사용 하 여 개체를 작성 하는 데 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -1543,7 +1521,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1555,7 +1532,7 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 map();  
 explicit map(key_compare^ pred);  
 map(map<Key, Mapped>% right);  
@@ -1571,16 +1548,16 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 첫 번째  
- 삽입할 범위의의 시작입니다.  
+ *first*  
+ 삽입할 범위의 시작입니다.  
   
- last  
+ *last*  
  삽입할 범위의 끝입니다.  
   
- pred  
+ *pred*  
  제어 되는 시퀀스에 대 한 조건자를 정렬 합니다.  
   
- 오른쪽  
+ *right*  
  삽입할 개체 또는 범위입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1588,49 +1565,49 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
   
  `map();`  
   
- 기본 조건자를 정렬 된 요소가 없는 제어 되는 시퀀스를 초기화 `key_compare()`합니다. 기본 조건자를 정렬 된는 빈 초기 제어 시퀀스를 지정 하려면 사용 합니다.  
+ 조건자 순서 기본값을 사용 하 여 아무런 요소도 갖고 제어 되는 시퀀스 초기화 `key_compare()`합니다. 기본값은 조건자를 순서는 빈 초기 제어 되는 시퀀스를 지정 하려면 사용할 수 있습니다.  
   
  생성자:  
   
  `explicit map(key_compare^ pred);`  
   
- 정렬 조건자가 있는 요소가 없는 제어 되는 시퀀스를 초기화 `pred`합니다. 지정 된 정렬 조건부와 함께 빈 초기 제어 시퀀스를 지정 하려면 사용 합니다.  
+ 순서 지정 조건자를 사용 하 여 요소가 없는 제어 되는 시퀀스를 초기화 *pred*합니다. 지정된 된 순서 지정 조건자를 사용 하 여 빈 초기 제어 된 시퀀스를 지정 하는 데 사용할 수 있습니다.  
   
  생성자:  
   
  `map(map<Key, Mapped>% right);`  
   
- 순서와 제어 된 시퀀스를 초기화 합니다. [`right.begin()`, `right.end()`), 조건자 순서 기본값입니다. 지도 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `right`, 조건자 순서 기본값입니다.  
+ 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. [`right.begin()`, `right.end()`), 조건자 정렬 기본값을 사용 하 여 합니다. Map 개체에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 된 시퀀스를 지정 하려면 사용할 *오른쪽*, 조건자 정렬 기본값을 사용 하 여 합니다.  
   
  생성자:  
   
  `map(map<Key, Mapped>^ right);`  
   
- 순서와 제어 된 시퀀스를 초기화 합니다. [`right->begin()`, `right->end()`), 조건자 순서 기본값입니다. 지도 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `right`, 조건자 순서 기본값입니다.  
+ 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. [`right->begin()`, `right->end()`), 조건자 정렬 기본값을 사용 하 여 합니다. Map 개체에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 된 시퀀스를 지정 하려면 사용할 *오른쪽*, 조건자 정렬 기본값을 사용 하 여 합니다.  
   
  생성자:  
   
  `template<typename InIter> map(InIter first, InIter last);`  
   
- 순서와 제어 된 시퀀스를 초기화 합니다. [`first`, `last`), 조건자 순서 기본값입니다. 기본 조건자를 정렬 된 제어 되는 다른 시퀀스의 복사본을 확인을 사용 합니다.  
+ 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. [`first`, `last`), 조건자 정렬 기본값을 사용 하 여 합니다. 사용 하 여 조건자 정렬 기본값을 사용 하 여 제어 되는 다른 시퀀스의 복사본을 만듭니다.  
   
  생성자:  
   
  `template<typename InIter> map(InIter first, InIter last, key_compare^ pred);`  
   
- 순서와 제어 된 시퀀스를 초기화 합니다. [`first`, `last`), 정렬 조건부와 함께 `pred`합니다. 제어 되는 시퀀스의 사본을 지정 된 정렬 조건부와 함께 다른 시퀀스를 사용 합니다.  
+ 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. [`first`, `last`), 순서 지정 조건자를 사용 하 여 *pred*합니다. 사용 하 여이 제어 되는 지정된 된 순서 지정 조건자를 사용 하 여 다른 시퀀스의 복사본을 만듭니다.  
   
  생성자:  
   
  `map(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- 열거자에 지정 된 시퀀스와 제어 된 시퀀스를 초기화 `right`, 조건자 순서 기본값입니다. 제어 되는 시퀀스의 사본을 설명 하는 열거자에 따라 기본 조건자를 정렬 하는 다른 시퀀스를 사용 합니다.  
+ 열거자에서 지정 된 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 *오른쪽*, 조건자 정렬 기본값을 사용 하 여 합니다. 제어 되는 시퀀스의 복사본 조건자 정렬 기본값을 사용 하 여 열거자를 설명 하는 다른 순서를 사용 합니다.  
   
  생성자:  
   
  `map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- 열거자에 지정 된 시퀀스와 제어 된 시퀀스를 초기화 `right`, 정렬 조건부와 함께 `pred`합니다. 제어 되는 시퀀스에서 지정 된 정렬 조건부와 함께 열거자를 설명 하는 다른 시퀀스의 복사본 수 있도록 사용 합니다.  
+ 열거자에서 지정 된 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 *오른쪽*, 순서 지정 조건자를 사용 하 여 *pred*합니다. 사용 하 여 제어 되는 시퀀스에서 지정된 된 순서 지정 조건자를 사용 하 여 열거자를 설명 하는 다른 시퀀스의 복사본을 만듭니다.  
   
 ### <a name="example"></a>예  
   
@@ -1705,7 +1682,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1726,12 +1702,12 @@ size() = 0
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Mapped mapped_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 `Mapped`의 동의어입니다.  
+ 형식은 템플릿 매개 변수에 대 한 동의어 *매핑된*합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1758,7 +1734,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1770,16 +1745,16 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 map<Key, Mapped>% operator=(map<Key, Mapped>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 오른쪽  
+ *right*  
  복사할 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 연산자 복사본 `right` 개체에 반환 `*this`합니다. 이를 사용하여 제어되는 시퀀스를 `right`의 제어되는 시퀀스 복사본으로 대체합니다.  
+ 멤버 연산자 복사본 *오른쪽* 개체를 반환 `*this`합니다. 제어 되는 시퀀스에서 제어 된 시퀀스의 복사본으로 대체 하는 데 사용할 있습니다 *오른쪽*합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1810,7 +1785,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1819,20 +1793,20 @@ int main()
 ```  
 
 ## <a name="op"></a> map::operator(STL/CLR)
-키를 연결 된 매핑된 값에 매핑합니다.  
+키가 관련된 매핑된 값에 매핑됩니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 mapped_type operator[](key_type key);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- key  
+ *key*  
  검색할 키 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 해당 하는 순서를 가진 요소를 찾으려고 노력 `key`합니다. 연결된 된 매핑된 값 반환, 발견 되 면 삽입, `value_type(key, mapped_type())` 하 고 연결 된 반환 (기본값) 매핑된 값입니다. 사용 하 여 것는 관련 된 키를 지정 된 매핑된 값을 조회 하거나 없는 경우 키에 대 한 항목이 있는지 확인 합니다.  
+ 멤버 함수는 해당 순서를 가진 요소를 찾으려고 노력 *키*합니다. 를 찾으면 연결된 매핑된 값 반환 삽입이 고, 그렇지 `value_type(key, mapped_type())` 연결을 반환 합니다 (기본값) 매핑된 값입니다. 사용 하 여 것 연관 된 키를 지정 된 매핑된 값을 조회 하거나 찾을 수 없으면 키에 대 한 항목이 있는지 확인 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1872,7 +1846,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1888,12 +1861,12 @@ c1[b] = 2
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 reverse_iterator rbegin();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 빈 시퀀스의 시작 부분 바로 다음 또는 제어 된 시퀀스의 마지막 요소를 지정 하는 역방향 반복기를 반환 합니다. 따라서을 지정 된 `beginning` 역방향 시퀀스의 합니다. 지정 하는 반복기를 사용 하면는 `current` 제어 된 시퀀스를 역순으로 표시 하지만 해당 상태의 시작 부분 제어 된 시퀀스의 길이가 변경 되 면 변경할 수 있습니다.  
+ 멤버 함수는 제어 된 시퀀스 또는 빈 시퀀스의 시작 부분 바로 뒤의 마지막 요소를 지정 하는 역방향 반복기를 반환 합니다. 따라서 지정 된 `beginning` 역방향 시퀀스의 합니다. 지정 하는 반복기를 사용 하면는 `current` 제어 된 시퀀스를 역순으로 표시 되지만 해당 상태에 대 한 부분 제어 된 시퀀스의 길이가 변경 되 면 변경할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -1924,7 +1897,6 @@ int main()
         rit->first, rit->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1938,12 +1910,12 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 요소에 대 한 참조를 설명 합니다.  
+ 형식 요소에 대 한 참조를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1970,7 +1942,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1982,12 +1953,12 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 reverse_iterator rend();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 제어 된 시퀀스의 시작 부분 바로 다음 가리키는 역방향 반복기를 반환합니다. 따라서을 지정 된 `end` 역방향 시퀀스의 합니다. 지정 하는 반복기를 사용 하면는 `current` 제어 된 시퀀스를 역순으로 표시 하지만 해당 상태의 끝 제어 된 시퀀스의 길이가 변경 되 면 변경할 수 있습니다.  
+ 멤버 함수는 제어 된 시퀀스의 시작 부분 바로 다음 가리키는 역방향 반복기를 반환합니다. 따라서 지정 된 `end` 역방향 시퀀스의 합니다. 지정 하는 반복기를 사용 하면는 `current` 제어 된 시퀀스를 역순으로 표시 되지만 해당 상태에 대 한 끝 제어 된 시퀀스의 길이가 변경 되 면 변경할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -2020,7 +1991,6 @@ int main()
         rit->first, rit->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2063,7 +2033,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2075,12 +2044,12 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 제어 되는 시퀀스의 현재 요소 수를 확인 하려면 사용 합니다. 모든 경우에 중요 한 여부 시퀀스 크기가 0이 아닌 참조 [map:: empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)`()`합니다.  
+ 멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 현재 제어 되는 시퀀스의에서 요소 수를 확인 하려면 사용 합니다. 모든 경우에 중요 한 여부 시퀀스 크기가 0이 아닌 참조 [map:: empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)`()`합니다.  
   
 ### <a name="example"></a>예  
   
@@ -2112,7 +2081,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2126,12 +2094,12 @@ size() = 2 after adding 2
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식은은 음수가 아닌 요소 수를 설명 합니다.  
+ 형식에는 음수가 아닌 요소 수를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -2160,7 +2128,6 @@ int main()
     System::Console::WriteLine("end()-begin() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2173,16 +2140,16 @@ end()-begin() = 3
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void swap(map<Key, Mapped>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 오른쪽  
+ *right*  
  콘텐츠와 바꿀 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 `this` 와 `right`간에 제어되는 시퀀스를 교환합니다. 일정 한 시간에 작업을 수행 하 고 예외가 throw 됩니다. 두 컨테이너의 내용을 교환에 신속 하 게 사용 합니다.  
+ 멤버 함수 간에 제어 된 시퀀스를 교환 `this` 하 고 *오른쪽*합니다. 일정 한 시간에 수행 하 고 예외가 throw 됩니다. 두 컨테이너의 콘텐츠를 교환 하는 빠른 방법으로 사용 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -2224,7 +2191,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2235,16 +2201,16 @@ int main()
 ```  
 
 ## <a name="to_array"></a> map:: to_array (STL/CLR)
-제어 되는 새 배열에 복사합니다.  
+제어 되는 시퀀스를 새 배열에 복사합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 cli::array<value_type>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 제어 되는 시퀀스를 포함 하는 배열을 반환 합니다. 배열 형식으로 제어 되는 시퀀스의 복사본을 사용 하면 됩니다.  
+ 멤버 함수는 제어 되는 시퀀스를 포함 하는 배열을 반환 합니다. 배열 형식에서 제어 된 시퀀스의 복사본을 가져와야 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -2275,7 +2241,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2288,16 +2253,16 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 iterator upper_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- key  
+ *key*  
  검색할 키 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 마지막 요소를 결정 `X` 과 순서가 제어 된 시퀀스의 `key`합니다. 이러한 요소가 존재 하거나 `X` 는 제어 된 시퀀스의 마지막 요소 반환 [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; 의첫번째요소를지정하는반복기를반환하지않으면`X`. 지정된 된 키와 일치 하는 제어 된 시퀀스의 현재 요소 시퀀스의 끝으로 이동 하려면 사용 합니다.  
+ 마지막 요소를 결정 하는 멤버 함수 `X` 과 순서가 있는 제어 되는 시퀀스 *키*합니다. 이러한 요소가 없으면 여부나 `X` 는 제어 된 시퀀스에서 마지막 요소 반환 [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; 그렇지 않으면 의첫번째요소를지정하는반복기를반환`X`. 지정된 된 키와 일치 하는 제어 된 시퀀스의 요소 시퀀스의 끝을 현재 찾으려고 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -2330,7 +2295,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2345,12 +2309,12 @@ upper_bound(L'x')==end() = True
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 value_compare^ value_comp();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 제어 되는 시퀀스를 정렬 하는 데 사용 되는 정렬 대리자를 반환 합니다. 두 요소 값 비교를 사용 합니다.  
+ 멤버 함수는 제어 되는 시퀀스를 정렬 하는 데 사용 하는 순서 지정 대리자를 반환 합니다. 두 요소 값을 비교 하는 데 사용할 수 있습니다.  
   
 ### <a name="example"></a>예  
   
@@ -2377,7 +2341,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2387,17 +2350,17 @@ compare([L'b', 2], [L'a', 1]) = False
 ```  
   
 ## <a name="value_compare"></a> map:: value_compare (STL/CLR)
-두 요소 값에 대 한 순서 지정 하는 대리자입니다.  
+두 요소 값의 순서 지정 대리자입니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 유형 인수 값의 순서를 결정 하는 대리자에 대 한 동의어입니다.  
+ 형식 인수 값의 순서를 결정 하는 대리자에 대 한 동의어입니다.  
   
 ### <a name="example"></a>예  
   
@@ -2424,7 +2387,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2438,7 +2400,7 @@ compare([L'b', 2], [L'a', 1]) = False
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef generic_value value_type;  
 ```  
   
@@ -2476,12 +2438,12 @@ int main()
 [a 1] [b 2] [c 3]  
 ```  
 
-## <a name="op_neq"></a> operator! = (map) (STL/CLR)
+## <a name="op_neq"></a> 연산자! = (map) (STL/CLR)
 같지 않음 비교를 나열 합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator!=(map<Key, Mapped>% left,  
@@ -2489,14 +2451,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `!(left == right)`합니다. 테스트를 사용 하는지 여부를 `left` 동일 정렬 되지 않은 `right` 두 개의 맵이 경우 요소 별로 비교 합니다.  
+ 연산자 함수 반환 `!(left == right)`합니다. 테스트를 사용 하는지 여부를 *왼쪽* 동일 정렬 되지 않은 *오른쪽* 두 map의 요소 별로 비교 경우.  
   
 ### <a name="example"></a>예  
   
@@ -2535,7 +2497,6 @@ int main()
         c1 != c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2550,7 +2511,7 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator<(map<Key, Mapped>% left,  
@@ -2558,14 +2519,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 이면 true를 반환, 가장 낮은 위치에 대 한 `i` 를 `!(right[i] < left[i])` 도 true 하는 것이 `left[i] < right[i]`합니다. 그렇지 않으면 반환 `left->size() < right->size()` 테스트를 사용 하는지 여부를 `left` 앞에 정렬 `right` 두 개의 맵이 요소 별로 비교를 하는 경우.  
+ 연산자 함수 경우 true를 반환, 가장 낮은 위치에 대 한 `i` 는 `!(right[i] < left[i])` 수도 있는 true는 `left[i] < right[i]`합니다. 를 반환 합니다 `left->size() < right->size()` 테스트에 사용할 여부 *왼쪽* 앞에 정렬 되 *오른쪽* 두 map의 요소 별로 비교 경우.  
   
 ### <a name="example"></a>예  
   
@@ -2604,7 +2565,6 @@ int main()
         c1 < c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2619,7 +2579,7 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator<=(map<Key, Mapped>% left,  
@@ -2627,14 +2587,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `!(right < left)`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 되지 않은 `right` 두 개의 맵이 경우 요소 별로 비교 합니다.  
+ 연산자 함수 반환 `!(right < left)`합니다. 테스트에 사용할 여부 *왼쪽* 후 정렬 되지 않은 *오른쪽* 두 map의 요소 별로 비교 경우.  
   
 ### <a name="example"></a>예  
   
@@ -2673,7 +2633,6 @@ int main()
         c2 <= c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2688,7 +2647,7 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator==(map<Key, Mapped>% left,  
@@ -2696,14 +2655,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수는 시퀀스에 의해 제어 하는 경우에 true를 반환 `left` 및 `right` 동일한 길이 및 각 위치에 대 한 `i`, `left[i] ==` `right[i]`합니다. 테스트를 사용 하는지 여부를 `left` 와 동일 하 게 정렬 되 `right` 두 개의 맵이 경우 요소 별로 비교 합니다.  
+ 연산자 함수는 시퀀스에 의해 제어 하는 경우에 true를 반환 *왼쪽* 하 고 *오른쪽* 동일한 길이 및 각 위치에 대 한 `i`, `left[i] ==` `right[i]`합니다. 테스트에 사용할 여부를 *왼쪽* 와 동일 하 게 정렬 됩니다 *오른쪽* 두 map 때 요소 별로 비교 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -2742,7 +2701,6 @@ int main()
         c1 == c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2753,11 +2711,11 @@ int main()
 ```  
 
 ## <a name="op_gt"></a> 연산자&gt; (map) (STL/CLR)
-목록 비교 보다 큽니다.  
+목록 보다 큰지 비교 합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator>(map<Key, Mapped>% left,  
@@ -2765,14 +2723,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `right` `<` `left`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 `right` 두 개의 맵이 요소 별로 비교를 하는 경우.  
+ 연산자 함수 반환 `right` `<` `left`합니다. 테스트에 사용할 여부 *왼쪽* 후 정렬 되 *오른쪽* 두 map의 요소 별로 비교 경우.  
   
 ### <a name="example"></a>예  
   
@@ -2811,7 +2769,6 @@ int main()
         c2 > c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2826,7 +2783,7 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator>=(map<Key, Mapped>% left,  
@@ -2834,14 +2791,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽 컨테이너입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `!(left` `<` `right)`합니다. 테스트를 사용 하는지 여부를 `left` 하기 전에 정렬 되지 않은 `right` 두 개의 맵이 경우 요소 별로 비교 합니다.  
+ 연산자 함수 반환 `!(left` `<` `right)`합니다. 테스트에 사용할 여부를 *왼쪽* 하기 전에 정렬 되지 않은 *오른쪽* 두 map 때 요소 별로 비교 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -2880,7 +2837,6 @@ int main()
         c1 >= c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  

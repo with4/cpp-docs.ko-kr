@@ -1,5 +1,5 @@
 ---
-title: 유틸리티 (STL/CLR) | Microsoft Docs
+title: utility (STL/CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -49,19 +49,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fcc97e5037898b3a9c39a6c72ed21b2c19a4c777
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: e1150fb6d3df325fd9d5d9b4180318fa029102c3
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306023"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375918"
 ---
 # <a name="utility-stlclr"></a>utility(STL/CLR)
-STL/CLR 헤더를 포함 `<cliext/utility>` 템플릿 클래스를 정의 하려면 `pair` 및 여러 개의 지원 템플릿 함수입니다.  
+STL/CLR 헤더를 포함 `<cliext/utility>` 템플릿 클래스를 정의 하려면 `pair` 및 몇 가지 지원 템플릿 함수입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 #include <utility>  
 ```
 
@@ -79,10 +79,10 @@ STL/CLR 헤더를 포함 `<cliext/utility>` 템플릿 클래스를 정의 하려
 |연산자|설명|  
 |--------------|-----------------|  
 |[operator== (pair)(STL/CLR)](#op_eq)|쌍 같은지 비교 합니다.|  
-|[operator!= (pair)(STL/CLR)](#op_neq)|같지 않음 비교와 쌍으로 연결 합니다.|  
-|[operator< (pair)(STL/CLR)](#op_lt)|쌍 비교를 보다 작음입니다.|  
-|[연산자\<= (pair) (STL/CLR)](#op_lteq)|보다 작거나 같은 쌍으로 연결 비교 합니다.|  
-|[operator> (pair)(STL/CLR)](#op_gt)|비교에 보다 큰 쌍입니다.|  
+|[operator!= (pair)(STL/CLR)](#op_neq)|같지 않음 비교를 연결 합니다.|  
+|[operator< (pair)(STL/CLR)](#op_lt)|쌍 비교 미만입니다.|  
+|[연산자\<= (pair) (STL/CLR)](#op_lteq)|쌍 보다 작거나 같은지 비교 합니다.|  
+|[operator> (pair)(STL/CLR)](#op_gt)|쌍 보다 큰지 비교 합니다.|  
 |[operator>= (pair)(STL/CLR)](#op_gteq)|보다 큰 쌍 또는 같은지 비교 합니다.|  
   
 |함수|설명|  
@@ -92,21 +92,21 @@ STL/CLR 헤더를 포함 `<cliext/utility>` 템플릿 클래스를 정의 하려
 ## <a name="members"></a>멤버
 
 ##<a name="pair"></a> pair (STL/CLR)
-템플릿 클래스는 값의 쌍을 래핑하는 개체를 설명 합니다.  
+템플릿 클래스는 값 쌍을 래핑하는 개체를 설명 합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     ref class pair;  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 값 1  
- 첫 번째 래핑된 값의 형식입니다.  
+ *Value1*  
+ 래핑된 첫 번째 값의 형식입니다.  
   
- Value2  
+ *Value2*  
  두 번째 래핑된 값의 형식입니다.  
   
 ## <a name="members"></a>멤버  
@@ -119,11 +119,11 @@ template<typename Value1,
 |멤버 개체|설명|  
 |-------------------|-----------------|  
 |[pair::first(STL/CLR)](#first)|첫 번째 값을 저장 합니다.|  
-|[pair::second(STL/CLR)](#second)|두 번째 저장 된 값입니다.|  
+|[pair::second(STL/CLR)](#second)|두 번째 값을 저장 합니다.|  
   
 |멤버 함수|설명|  
 |---------------------|-----------------|  
-|[pair::pair(STL/CLR)](#pair_pair)|쌍 개체를 만듭니다.|  
+|[pair::pair(STL/CLR)](#pair_pair)|Pair 개체를 생성합니다.|  
 |[pair::swap(STL/CLR)](#swap)|두 쌍의 내용을 바꿉니다.|  
   
 |연산자|설명|  
@@ -131,20 +131,20 @@ template<typename Value1,
 |[pair::operator=(STL/CLR)](#op_as)|저장 된 값 쌍을을 바꿉니다.|  
   
 ## <a name="remarks"></a>설명  
- 개체는 한 쌍의 값을 저장합니다. 이 템플릿 클래스를 사용 하 여 두 값을 단일 개체로 결합 합니다. 또한 개체 `cliext::pair` (여기에서 설명) 형식에만 관리 되는 저장소; 형식을 사용 하 여 관리 되지 않는 쌍을 저장 하 `std::pair`에 선언 된 `<utility>`합니다.  
+ 개체는 한 쌍의 값을 저장합니다. 이 템플릿 클래스를 사용 하 여 두 값을 단일 개체로 결합 합니다. 또한 개체 `cliext::pair` (여기에 설명) 저장소만 관리 되는 형식; 형식을 사용 하 여 관리 되지 않는 쌍을 저장할 `std::pair`에서 선언 된 `<utility>`합니다.  
 
 
 ## <a name="first"></a> pair:: first (STL/CLR)
-첫 번째 래핑한 값입니다.  
+래핑된 첫 번째 값입니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 Value1 first;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 개체는 첫 번째 래핑된 값을 저장합니다.  
+ 개체에 래핑된 첫 번째 값을 저장합니다.  
   
 ### <a name="example"></a>예  
   
@@ -163,7 +163,6 @@ int main()
     System::Console::WriteLine("[{0}, {1}]", first_val, second_val);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -175,12 +174,12 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Value1 first_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 `Value1`의 동의어입니다.  
+ 형식은 템플릿 매개 변수에 대 한 동의어 *Value1*합니다.  
   
 ### <a name="example"></a>예  
   
@@ -198,8 +197,7 @@ int main()
     cliext::pair<wchar_t, int>::second_type second_val = c1.second;   
     System::Console::WriteLine("[{0}, {1}]", first_val, second_val);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -211,16 +209,16 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 오른쪽  
+ *right*  
  복사할 쌍입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 연산자 복사본 `right` 개체에 반환 `*this`합니다. 저장 된 쌍의 값에 있는 값의 저장 된 쌍의 복사본으로 대체를 `right`합니다.  
+ 멤버 연산자 복사본 *오른쪽* 개체를 반환 `*this`합니다. 저장 된 쌍에서 값의 복사본으로 저장 된 값 쌍을 대체 하는 데 사용할 있습니다 *오른쪽*합니다.  
   
 ### <a name="example"></a>예  
   
@@ -239,8 +237,7 @@ int main()
     c2 = c1;   
     System::Console::WriteLine("[{0}, {1}]", c2.first, c2.second);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -249,11 +246,11 @@ int main()
 ```  
 
 ## <a name="pair_pair"></a> pair:: pair (STL/CLR)
-쌍 개체를 만듭니다.  
+Pair 개체를 생성합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 pair();  
 pair(pair<Coll>% right);  
 pair(pair<Coll>^ right);  
@@ -261,37 +258,37 @@ pair(Value1 val1, Value2 val2);
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 오른쪽  
- 저장할 쌍입니다.  
+ *right*  
+ 스토어로 쌍입니다.  
   
- val1  
- 첫 번째 저장할 값입니다.  
+ *Val1*  
+ 저장할 첫 번째 값입니다.  
   
- v a l 2  
- 두 번째 저장할 값입니다.  
+ *Val2*  
+ 저장할 두 번째 값입니다.  
   
 ### <a name="remarks"></a>설명  
  생성자:  
   
  `pair();`  
   
- 기본 생성 값으로 저장된 쌍을 초기화합니다.  
+ 기본 생성 값을 사용 하 여 저장 된 쌍을 초기화합니다.  
   
  생성자:  
   
  `pair(pair<Value1, Value2>% right);`  
   
- 저장 된 쌍을 이루는 초기화 `right.` [pair:: first (STL/CLR)](../dotnet/pair-first-stl-clr.md) 및 `right.` [pair:: second (STL/CLR)](../dotnet/pair-second-stl-clr.md)합니다.  
+ 사용 하 여 저장 된 쌍 초기화 `right.` [pair:: first (STL/CLR)](../dotnet/pair-first-stl-clr.md) 하 고 `right.` [pair:: second (STL/CLR)](../dotnet/pair-second-stl-clr.md)합니다.  
   
  `pair(pair<Value1, Value2>^ right);`  
   
- 저장 된 쌍을 이루는 초기화 `right->` [pair:: first (STL/CLR)](../dotnet/pair-first-stl-clr.md) 및 `right>` [pair:: second (STL/CLR)](../dotnet/pair-second-stl-clr.md)합니다.  
+ 사용 하 여 저장 된 쌍 초기화 `right->` [pair:: first (STL/CLR)](../dotnet/pair-first-stl-clr.md) 하 고 `right>` [pair:: second (STL/CLR)](../dotnet/pair-second-stl-clr.md)합니다.  
   
  생성자:  
   
  `pair(Value1 val1, Value2 val2);`  
   
- 와 저장된 쌍으로 초기화 `val1` 및 `val2`합니다.  
+ 초기화를 사용 하 여 저장 된 쌍 *val1* 하 고 *val2*합니다.  
   
 ### <a name="example"></a>예  
   
@@ -320,8 +317,7 @@ int main()
     System::Console::WriteLine("[{0}, {1}]", c4.first, c4.second);   
   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -332,16 +328,16 @@ int main()
 ```  
 
 ## <a name="second"></a> pair:: second (STL/CLR)
-두 번째 값이 래핑됩니다.  
+두 번째 래핑된 값입니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 Value2 second;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 두 번째 래핑된 값을 저장 하는 개체입니다.  
+ 개체에 래핑된 두 번째 값을 저장합니다.  
   
 ### <a name="example"></a>예  
   
@@ -360,7 +356,6 @@ int main()
     System::Console::WriteLine("[{0}, {1}]", first_val, second_val);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -372,12 +367,12 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Value2 second_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 `Value2`의 동의어입니다.  
+ 형식은 템플릿 매개 변수에 대 한 동의어 *Value2*합니다.  
   
 ### <a name="example"></a>예  
   
@@ -395,8 +390,7 @@ int main()
     cliext::pair<wchar_t, int>::second_type second_val = c1.second;   
     System::Console::WriteLine("[{0}, {1}]", first_val, second_val);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -408,16 +402,16 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void swap(pair<Value1, Value2>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 오른쪽  
+ *right*  
  내용을 바꿀 쌍입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수 사이 값의 저장 된 쌍을 바꿉니다 `*this` 및 `right`합니다.  
+ 멤버 함수 사이 값의 저장 된 쌍을 바꿉니다 `*this` 하 고 *오른쪽*합니다.  
   
 ### <a name="example"></a>예  
   
@@ -459,8 +453,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -471,31 +464,31 @@ a b c
 ```  
 
 ## <a name="make_pair"></a> make_pair (STL/CLR)
-확인 된 `pair` 값의 쌍에서입니다.  
+확인을 `pair` 값의 쌍에서입니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     pair<Value1, Value2> make_pair(Value1 first, Value2 second);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `Value1`  
+ *Value1*  
  첫 번째 래핑된 값의 형식입니다.  
   
- `Value2`  
+ *Value2*  
  두 번째 래핑된 값의 형식입니다.  
   
- `first`  
- 첫 번째 래핑할 값입니다.  
+ *first*  
+ 래핑할 첫 번째 값입니다.  
   
- `second`  
- 두 번째 래핑할 값입니다.  
+ *second*  
+ 래핑할 두 번째 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 템플릿 함수가 `pair<Value1, Value2>(first, second)`을 반환합니다. 생성에 사용 된 `pair<Value1, Value2>` 한 쌍의 값에서 개체입니다.  
+ 템플릿 함수가 `pair<Value1, Value2>(first, second)`을 반환합니다. 생성 하는 데 사용할 있습니다를 `pair<Value1, Value2>` 값 쌍 개체입니다.  
   
 ### <a name="example"></a>예  
   
@@ -513,7 +506,6 @@ int main()
     System::Console::WriteLine("[{0}, {1}]", c1.first, c1.second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -521,12 +513,12 @@ int main()
 [y, 4]  
 ```  
 
-## <a name="op_neq"></a> operator! = (pair) (STL/CLR)
-같지 않음 비교와 쌍으로 연결 합니다.  
+## <a name="op_neq"></a> 연산자! = (pair) (STL/CLR)
+같지 않음 비교를 연결 합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator!=(pair<Value1, Value2>% left,  
@@ -534,14 +526,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽된 쌍입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 쌍입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `!(left == right)`합니다. 테스트를 사용 하는지 여부를 `left` 동일 정렬 되지 않은 `right` 때 두 쌍은 요소 별로 비교 합니다.  
+ 연산자 함수 반환 `!(left == right)`합니다. 테스트에 사용할 여부를 *왼쪽* 동일 정렬 되지 않은 *오른쪽* 두 쌍 때 요소 별로 비교 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -562,8 +554,7 @@ int main()
     System::Console::WriteLine("[x 3] != [x 4] is {0}",   
         c1 != c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -574,11 +565,11 @@ int main()
 ```  
   
 ## <a name="op_lt"></a> 연산자&lt; (pair) (STL/CLR)
-쌍 비교를 보다 작음입니다.  
+쌍 비교 미만입니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator<(pair<Value1, Value2>% left,  
@@ -586,14 +577,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽된 쌍입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 쌍입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`합니다. 테스트를 사용 하는지 여부를 `left` 정렬 되는 하기 전에 `right` 때 두 쌍은 요소 별로 비교 합니다.  
+ 연산자 함수 반환 `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`합니다. 테스트에 사용할 여부를 *왼쪽* 정렬 되는 하기 전에 *오른쪽* 두 쌍 때 요소 별로 비교 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -614,8 +605,7 @@ int main()
     System::Console::WriteLine("[x 3] < [x 4] is {0}",   
         c1 < c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -626,11 +616,11 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> 연산자&lt;= (pair) (STL/CLR)
-보다 작거나 같은 쌍으로 연결 비교 합니다.  
+쌍 보다 작거나 같은지 비교 합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator<=(pair<Value1, Value2>% left,  
@@ -638,14 +628,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽된 쌍입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 쌍입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `!(right < left)`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 되지 않은 `right` 때 두 쌍은 요소 별로 비교 합니다.  
+ 연산자 함수 반환 `!(right < left)`합니다. 테스트에 사용할 여부 *왼쪽* 후 정렬 되지 않은 *오른쪽* 두 쌍의 비교 요소 별로 때.  
   
 ### <a name="example"></a>예  
   
@@ -666,8 +656,7 @@ int main()
     System::Console::WriteLine("[x 4] <= [x 3] is {0}",   
         c2 <= c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -682,7 +671,7 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator==(pair<Value1, Value2>% left,  
@@ -690,14 +679,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽된 쌍입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 쌍입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `left.first ==` `right.first &&` `left.second ==` `right.second`합니다. 테스트를 사용 하는지 여부를 `left` 정렬 되는 동일 `right` 때 두 쌍은 요소 별로 비교 합니다.  
+ 연산자 함수 반환 `left.first ==` `right.first &&` `left.second ==` `right.second`합니다. 테스트에 사용할 여부를 *왼쪽* 와 동일 하 게 정렬 됩니다 *오른쪽* 두 쌍 때 요소 별로 비교 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -718,8 +707,7 @@ int main()
     System::Console::WriteLine("[x 3] == [x 4] is {0}",   
         c1 == c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -730,11 +718,11 @@ int main()
 ```  
 
 ## <a name="op_gt"></a> 연산자&gt; (pair) (STL/CLR)
-비교에 보다 큰 쌍입니다.  
+쌍 보다 큰지 비교 합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator>(pair<Value1, Value2>% left,  
@@ -742,14 +730,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽된 쌍입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 쌍입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `right` `<` `left`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 `right` 때 두 쌍은 요소 별로 비교 합니다.  
+ 연산자 함수 반환 `right` `<` `left`합니다. 테스트에 사용할 여부를 *왼쪽* 후 정렬 되 *오른쪽* 두 쌍 때 요소 별로 비교 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -770,8 +758,7 @@ int main()
     System::Console::WriteLine("[x 4] > [x 3] is {0}",   
         c2 > c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -786,7 +773,7 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator>=(pair<Value1, Value2>% left,  
@@ -794,14 +781,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 왼쪽  
+ *left*  
  비교할 왼쪽된 쌍입니다.  
   
- 오른쪽  
+ *right*  
  비교할 오른쪽 쌍입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산자 함수 반환 `!(left < right)`합니다. 테스트를 사용 하는지 여부를 `left` 하기 전에 정렬 되지 않은 `right` 때 두 쌍은 요소 별로 비교 합니다.  
+ 연산자 함수 반환 `!(left < right)`합니다. 테스트에 사용할 여부를 *왼쪽* 하기 전에 정렬 되지 않은 *오른쪽* 두 쌍 때 요소 별로 비교 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -822,8 +809,7 @@ int main()
     System::Console::WriteLine("[x 3] >= [x 4] is {0}",   
         c1 >= c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -831,4 +817,4 @@ int main()
 [x, 4]  
 [x 3] >= [x 3] is True  
 [x 3] >= [x 4] is False  
-```  
+``` 
