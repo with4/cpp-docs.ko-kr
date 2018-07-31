@@ -36,12 +36,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 99f6be0815572b88f7c46406262ed21eaefdb77d
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 18199a700cbc5065d987a57cc076a5d0cf670577
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181200"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340666"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 클래스
 OLE DB 템플릿의 모든 접근자가이 클래스에서 파생 됩니다. `CAccessorBase` 여러 접근자를 관리 하는 하나의 행 집합을 허용 합니다. 또한 매개 변수 및 출력 열에 대 한 바인딩을 제공합니다.  
@@ -74,7 +74,6 @@ OLE DB 템플릿의 모든 접근자가이 클래스에서 파생 됩니다. `CA
   
 ```cpp
 void Close();  
-  
 ```  
   
 ### <a name="remarks"></a>설명  
@@ -86,7 +85,7 @@ void Close();
 ### <a name="syntax"></a>구문  
   
 ```cpp
-      HACCESSOR GetHAccessor(ULONG nAccessor) const;  
+HACCESSOR GetHAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -103,7 +102,6 @@ void Close();
   
 ```cpp
 ULONG GetNumAccessors() const;  
-  
 ```  
   
 ### <a name="return-value"></a>반환 값  
@@ -115,7 +113,7 @@ ULONG GetNumAccessors() const;
 ### <a name="syntax"></a>구문  
   
 ```cpp
-      bool IsAutoAccessor(ULONG nAccessor) const;  
+bool IsAutoAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>매개 변수  

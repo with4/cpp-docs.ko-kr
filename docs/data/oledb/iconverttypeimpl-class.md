@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0dfa073226dc4ddb3cd14b2aae31375a6f6ccc25
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 57ad4c5e9f119a7c9904376db4f77c35de4290f2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269785"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337130"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl 클래스
 구현을 제공 합니다 [IConvertType](https://msdn.microsoft.com/library/ms715926.aspx) 인터페이스입니다.  
@@ -67,7 +67,7 @@ class ATL_NO_VTABLE IConvertTypeImpl
 ### <a name="syntax"></a>구문  
   
 ```cpp
-      STDMETHOD(CanConvert)(DBTYPE wFromType,   
+STDMETHOD(CanConvert)(DBTYPE wFromType,   
    DBTYPE wToType,   
    DBCONVERTFLAGS dwConvertFlags);  
 ```  

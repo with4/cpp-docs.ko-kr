@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6275b07cd06c82d2b9531c3b206b81eedef10db
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 0836a09adac92300a8438a0433fda874e78bcb25
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233427"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339219"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor 클래스
 사용한 [CEnumerator](../../data/oledb/cenumerator-class.md) 열거자 행 집합에서 데이터를 액세스할 수 있습니다.  
@@ -89,7 +89,6 @@ class CEnumeratorAccessor
   
 ```cpp
 VARIANT_BOOL m_bIsParent;  
-  
 ```  
   
 ### <a name="remarks"></a>설명  
@@ -102,7 +101,6 @@ VARIANT_BOOL m_bIsParent;
   
 ```cpp
 USHORT m_nType;  
-  
 ```  
   
 ### <a name="remarks"></a>설명  
@@ -115,7 +113,6 @@ USHORT m_nType;
   
 ```cpp
 WCHAR m_szDescription[129];  
-  
 ```  
   
 ### <a name="remarks"></a>설명  
@@ -128,7 +125,6 @@ WCHAR m_szDescription[129];
   
 ```cpp
 WCHAR m_szName[129];  
-  
 ```  
   
 ### <a name="remarks"></a>설명  
@@ -141,7 +137,6 @@ WCHAR m_szName[129];
   
 ```cpp
 WCHAR m_szParseName[129];  
-  
 ```  
   
 ### <a name="remarks"></a>설명  

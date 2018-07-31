@@ -68,12 +68,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b5ea9bfefc8f061b1c5af618f13c1390a25df1d8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 5c3bd275c189e7c99bbc275caf31436b5f5a1d5e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208378"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340087"
 ---
 # <a name="cdatasource-class"></a>CDataSource 클래스
 데이터 원본에 공급자를 통해 연결을 나타내는 OLE DB 데이터 원본 개체에 해당 합니다.  
@@ -115,7 +115,6 @@ class CDataSource
   
 ```cpp
 void Close() throw();  
-  
 ``` 
 
 ## <a name="getinitializationstring"></a> Cdatasource:: Getinitializationstring
@@ -205,7 +204,7 @@ HRESULT Open(const CLSID& clsid,
    LPCTSTR pUserName = NULL,  
    LPCTSTR pPassword = NULL,  
    long nInitMode = 0) throw();HRESULT Open(LPCTSTR szProgID,  
-  DBPROPSET* pPropSet = NULL,  
+   DBPROPSET* pPropSet = NULL,  
    ULONG nPropertySets = 1) throw();HRESULT Open(LPCTSTR szProgID,  
    LPCTSTR pName,  LPCTSTR pUserName = NULL,  
    LPCTSTR pPassword = NULL,  
@@ -225,7 +224,7 @@ HRESULT Open(HWND hWnd = GetActiveWindow(),
    DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_WIZARDSHEET) throw();
 
 HRESULT Open(LPCWSTR szProgID,   
-  DBPROPSET* pPropSet = NULL,   
+   DBPROPSET* pPropSet = NULL,   
    ULONG nPropertySets = 1) throw();
 
 HRESULT Open(LPCSTR szProgID,   
@@ -363,7 +362,6 @@ oledb32.dll에서 서비스 구성 요소를 사용하여 데이터 원본 개�
 HRESULT OpenWithServiceComponents (const CLSID clsid,  
    DBPROPSET* pPropset = NULL,  
    ULONG ulPropSets = 1);  
-
 
 HRESULT OpenWithServiceComponents (LPCSTR szProgID,  
    DBPROPSET* pPropset = NULL,  

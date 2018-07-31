@@ -55,12 +55,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0a219024c56bd1b976682c7262d84ce26bce0930
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 5bab5334cec33a84abe6b28dc40bd57bf8da432b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208613"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337478"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo 클래스
 OLE DB를 사용 하 여 OLE DB 오류 처리에 대 한 지원 제공 [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) 인터페이스입니다.  
@@ -143,7 +143,7 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
   
 ```cpp
 HRESULT GetBasicErrorInfo(ULONG ulRecordNum,   
-  ERRORINFO* pErrorInfo) const throw();  
+   ERRORINFO* pErrorInfo) const throw();  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -191,7 +191,7 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
   
 ```cpp
 HRESULT GetErrorParameters(ULONG ulRecordNum,   
-  DISPPARAMS* pdispparams) const throw();  
+   DISPPARAMS* pdispparams) const throw();  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -209,7 +209,6 @@ HRESULT GetErrorParameters(ULONG ulRecordNum,
 HRESULT GetErrorRecords(IUnknown* pUnk,   
    const IID& iid,   
    ULONG* pcRecords) throw();  
-
 
 HRESULT GetErrorRecords(ULONG* pcRecords) throw();  
 ```  

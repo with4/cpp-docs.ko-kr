@@ -138,12 +138,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 072820f556f8e4d43a88daaeb8b50ac56db9ab5d
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: a4a1b08d82e915780817a47abddcf417fe5ab715
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233388"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338248"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor 클래스
 데이터베이스 스키마(데이터베이스의 내부 구조)에 대해 모를 때 데이터 소스에 액세스할 수 있습니다.  
@@ -216,7 +216,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 ### <a name="syntax"></a>구문  
   
 ```cpp
-      CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
+CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
    DBLENGTH nBlobSize = 8000);  
 ```  
   
@@ -239,7 +239,6 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
   
 ```cpp
 void Close() throw();  
-  
 ```  
 
 ## <a name="getblobhandling"></a> Cdynamicaccessor:: Getblobhandling
@@ -249,7 +248,6 @@ BLOB 처리 현재 행에 대 한 값을 검색 합니다.
   
 ```cpp
 const DBBLOBHANDLINGENUM GetBlobHandling() const;  
-  
 ```  
   
 ### <a name="remarks"></a>설명  
@@ -262,7 +260,6 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
   
 ```cpp
 const DBLENGTH GetBlobSizeLimit() const;  
-  
 ```  
   
 ### <a name="remarks"></a>설명  
@@ -294,7 +291,6 @@ HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();
   
 ```cpp
 DBORDINAL GetColumnCount() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>반환 값  
@@ -307,7 +303,7 @@ DBORDINAL GetColumnCount() const throw();
   
 ```cpp
 bool GetColumnFlags(DBORDINAL nColumn,   
-  DBCOLUMNFLAGS* pFlags) const throw();  
+   DBCOLUMNFLAGS* pFlags) const throw();  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -360,7 +356,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 ### <a name="syntax"></a>구문  
   
 ```cpp
-      LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();  
+LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -377,7 +373,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
   
 ```cpp
 bool GetColumnType(DBORDINAL nColumn,   
-  DBTYPE* pType) const throw();  
+   DBTYPE* pType) const throw();  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -397,7 +393,7 @@ bool GetColumnType(DBORDINAL nColumn,
   
 ```cpp
 bool GetLength(DBORDINAL nColumn,   
-  DBLENGTH* pLength) const throw();  
+   DBLENGTH* pLength) const throw();  
 
 bool GetLength(const CHAR* pColumnName,   
    DBLENGTH* pLength) const throw();  
@@ -428,7 +424,7 @@ bool GetLength(const WCHAR* pColumnName,
 ### <a name="syntax"></a>구문  
   
 ```cpp
-      bool GetOrdinal(const CHAR* pColumnName,  
+bool GetOrdinal(const CHAR* pColumnName,  
    DBORDINAL* pOrdinal) const throw();  
 
 bool GetOrdinal(const WCHAR* pColumnName,  
@@ -452,7 +448,7 @@ bool GetOrdinal(const WCHAR* pColumnName,
   
 ```cpp
 bool GetStatus(DBORDINAL nColumn,   
-  DBSTATUS* pStatus) const throw();  
+   DBSTATUS* pStatus) const throw();  
 
 bool GetStatus(const CHAR* pColumnName,  
    DBSTATUS* pStatus) const throw();  
@@ -525,7 +521,7 @@ BLOB 처리 현재 행에 대 한 값을 설정 합니다.
 ### <a name="syntax"></a>구문  
   
 ```cpp
-      bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);  
+bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -549,7 +545,7 @@ BLOB 처리 현재 행에 대 한 값을 설정 합니다.
 ### <a name="syntax"></a>구문  
   
 ```cpp
-      void SetBlobSizeLimit(DBLENGTH nBlobSize);  
+void SetBlobSizeLimit(DBLENGTH nBlobSize);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  

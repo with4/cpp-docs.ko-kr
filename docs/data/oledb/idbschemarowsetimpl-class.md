@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d8146a5c0c4dd9d3e58733f080f7b4ad7d670247
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: eaea6922f7755295535c0e81d6b9023a10c1317a
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269575"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339616"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl 클래스
 스키마 행 집합에 대한 구현을 제공합니다.  
@@ -181,7 +181,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
   
 ```cpp
 void SetRestrictions(ULONG cRestrictions,  
-  GUID* /* rguidSchema */,  
+   GUID* /* rguidSchema */,  
    ULONG* rgRestrictions);  
 ```  
   
@@ -212,7 +212,7 @@ void SetRestrictions(ULONG cRestrictions,
 ### <a name="syntax"></a>구문  
   
 ```cpp
-      STDMETHOD (GetRowset)(IUnknown *pUnkOuter,  
+STDMETHOD (GetRowset)(IUnknown *pUnkOuter,  
    REFGUID rguidSchema,  
    ULONG cRestrictions,  
    const VARIANT rgRestrictions[],  
@@ -258,7 +258,7 @@ void SetRestrictions(ULONG cRestrictions,
 ### <a name="syntax"></a>구문  
   
 ```cpp
-      STDMETHOD (GetSchema s )(ULONG * pcSchemas,  
+STDMETHOD (GetSchema s )(ULONG * pcSchemas,  
    GUID ** prgSchemas,  
    ULONG** prgRest);  
 ```  

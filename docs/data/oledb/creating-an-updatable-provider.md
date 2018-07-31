@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbcd69168b70e8d85bf2b90c3f456f79cd1c228c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e9ee36d2300ed1e86c1f867012ed54c85692f5bd
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954586"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340640"
 ---
 # <a name="creating-an-updatable-provider"></a>업데이트 가능 공급자 만들기
 
@@ -30,7 +30,7 @@ ms.locfileid: "38954586"
   
  이 항목에서는 작업 공급자를 사용 하 여 시작 한다고 가정 합니다. 업데이트 가능 공급자 만들기에 다음과 같은 두 단계가 있습니다. 어떻게 공급자는 변경 하는 데이터 저장소를 먼저 결정 해야 합니다. 특히, 변경 내용을 즉시 수행 해야 하는 여부를 update 명령이 실행 될 때까지 지연 합니다. 섹션 "[공급자 업데이트할 수 있도록](#vchowmakingprovidersupdatable)" 변경 내용과 공급자 코드에서 작업을 수행 하는 데 필요한 설정을 설명 합니다.  
   
- 그런 다음 공급자 소비자가 요청 하는 아무 것도 지원 하기 위한 모든 기능이 포함 되어 있는지 확인 해야 합니다. 소비자를 데이터 저장소를 업데이트 하려는 경우 공급자는 데이터 저장소의 데이터를 유지 하는 코드를 포함 해야 합니다. 예를 들어, 데이터 원본에 따라 이러한 작업을 수행 하는 C 런타임 라이브러리 또는 MFC를 사용할 수 있습니다. 섹션 "[데이터 원본에 쓸](#vchowwritingtothedatasource)" 데이터 원본에 쓰기를 처리 하는 방법에 설명 합니다 `NULL` 기본값 및 열 플래그 설정 합니다.  
+ 그런 다음 공급자 소비자가 요청 하는 아무 것도 지원 하기 위한 모든 기능이 포함 되어 있는지 확인 해야 합니다. 소비자를 데이터 저장소를 업데이트 하려는 경우 공급자는 데이터 저장소의 데이터를 유지 하는 코드를 포함 해야 합니다. 예를 들어, 데이터 원본에 따라 이러한 작업을 수행 하는 C 런타임 라이브러리 또는 MFC를 사용할 수 있습니다. 섹션 "[데이터 원본에 작성](#vchowwritingtothedatasource)" 데이터 원본에 작성, NULL이 고 기본 값을 처리 및 열 플래그를 설정 하는 방법을 설명 합니다.  
   
 > [!NOTE]
 >  UpdatePV는 업데이트할 수 있는 공급자의 예시입니다. UpdatePV는 MyProv로 업데이트할 수 있는 지원과 동일합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "38954586"
   
      추가 `IRowsetChangeImpl` 이 형식을 사용 하 여 사용자가 상속 체인을 합니다.  
   
-    ```  
+    ```cpp  
     IRowsetChangeImpl< rowset-name, storage-name >  
     ```  
   
@@ -65,7 +65,7 @@ ms.locfileid: "38954586"
   
      추가 `IRowsetUpdate` 이 형식을 사용 하 여 사용자가 상속 체인을 합니다.  
   
-    ```  
+    ```cpp  
     IRowsetUpdateImpl< rowset-name, storage>  
     ```  
   
@@ -88,7 +88,7 @@ ms.locfileid: "38954586"
   
 4.  사용자 속성 집합 구조의 포함 해야 다음 설정 중 모든 아래 나타나는:  
   
-    ```  
+    ```cpp  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
       DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
     PROPERTY_INFO_ENTRY_VALUE(CHANGEINSERTEDROWS, VARIANT_TRUE)  

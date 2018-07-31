@@ -1083,12 +1083,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6c7b2cd83c9c0ce5dcaa32f04257bbbbe9618ca6
-ms.sourcegitcommit: 0bf5f6634d66ed92fffb32291ad9f854d9895b17
+ms.openlocfilehash: 02d0787ebb40379ac438880ab7a23aa36a0b0f56
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39250656"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338300"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>스키마 행 집합 클래스 및 Typedef 클래스
 스키마를 소유 하거나 특정 사용자가 만든 데이터베이스 개체의 컬렉션인 합니다. 카탈로그를 하나 이상의 스키마를 포함할 수 있습니다 하지만 항상 호출 INFORMATION_SCHEMA 뷰 및 정보 스키마의 도메인을 포함 하는 스키마를 포함 해야 합니다. OLE DB의 스키마 정보는 미리 정의 된 스키마 행 집합을 사용 하 여 검색 하 고 형식, 테이블, 열, 인덱스, 뷰, 어설션 및 제약 조건, 통계, 문자 집합, 데이터 정렬 및 도메인을 포함 합니다.  

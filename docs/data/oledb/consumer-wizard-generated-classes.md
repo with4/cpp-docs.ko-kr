@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 030445a8e6b46afb9f893e21bceb221f7f9e89a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b63713dd57695a54a58ce3d57b295cd57cdf393d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091987"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338744"
 ---
 # <a name="consumer-wizard-generated-classes"></a>소비자 마법사 생성 클래스
 ATL OLE DB 소비자 마법사를 사용하여 소비자를 생성하는 경우 OLE DB 템플릿 또는 OLE DB 특성을 사용하도록 선택할 수 있습니다. 두 경우 모두 마법사에서 명령 클래스 및 사용자 레코드 클래스를 생성합니다. 명령 클래스는 마법사에서 지정한 데이터 원본 및 행 집합을 여는 코드를 포함합니다. 사용자 레코드 클래스는 선택한 데이터베이스 테이블에 대한 열 맵을 포함합니다. 그러나 생성된 코드는 각각의 경우마다 다릅니다.  
@@ -47,9 +47,9 @@ ATL OLE DB 소비자 마법사를 사용하여 소비자를 생성하는 경우 
 >  사용자 레코드 클래스를 수정하거나 사용자 고유의 소비자를 작성하는 경우 데이터 변수가 상태 및 길이 변수 앞에 와야 합니다.  
   
 > [!NOTE]
->  ATL OLE DB 소비자 마법사는 **DB_NUMERIC** 형식을 사용하여 숫자 데이터 형식을 바인딩합니다. 공식적으로 **DBTYPE_VARNUMERIC** ( **DB_VARNUMERIC** 형식에서 설명된 형식, Oledb.h 참조)을 사용했습니다. 마법사를 사용하여 소비자를 만들지 않는 경우 **DB_NUMERIC**을 사용하는 것이 좋습니다.  
+>  ATL OLE DB 소비자 마법사를 사용 하는 `DB_NUMERIC` 숫자 데이터 형식에 바인딩하는 형식입니다. 사용 하 던 것 `DBTYPE_VARNUMERIC` (형식에서 설명한는 `DB_VARNUMERIC` 형식, Oledb.h 참조). 소비자를 만드는 마법사를 사용 하지 않는 것이 좋습니다를 사용 하는 `DB_NUMERIC`합니다.  
   
-```  
+```cpp  
 // Products.H : Declaration of the CProducts class  
   
 class CProductsAccessor  
@@ -95,7 +95,7 @@ public:
 ### <a name="rowset-properties"></a>행 집합 속성  
  다음에는 마법사에서 행 집합 속성을 설정합니다. ATL OLE DB 소비자 마법사에서 **변경**, **삽입**또는 **삭제** 를 선택한 경우 여기서 해당 속성이 설정됩니다(DBPROP_IRowsetChange는 항상 설정되고 DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT 및/또는 DBPROPVAL_UP_DELETE 중 하나 이상이 각각 설정됨).  
   
-```  
+```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
 {  
    pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
@@ -108,7 +108,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ### <a name="command-or-table-class"></a>명령 또는 테이블 클래스  
  명령 클래스를 지정하면 마법사에서 명령 클래스를 선언합니다. 템플릿 기반 코드의 경우 명령은 다음과 같습니다.  
   
-```  
+```cpp  
 DEFINE_COMMAND_EX(CProductsAccessor, L" \  
 SELECT \  
    ProductID, \  
@@ -146,7 +146,7 @@ SELECT \
 ### <a name="class-declaration"></a>클래스 선언  
  마지막으로, 마법사는 다음과 같은 명령 클래스 선언을 생성합니다.  
   
-```  
+```cpp  
 class CProducts : public CCommand<CAccessor<CProductsAccessor>>  
 ```  
   
@@ -157,7 +157,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
   
  다음 예제에서 마법사는 `COrders`클래스에 대한 선언을 생성하지만 사용자 레코드 클래스 `COrdersAccessor` 는 특성을 통해 삽입되기 때문에 표시되지 않습니다.  
   
-```  
+```cpp  
 #define _ATL_ATTRIBUTES  
 #include <atlbase.h>  
 #include <atldbcli.h>  

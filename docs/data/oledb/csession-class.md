@@ -51,12 +51,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e60c08a982fe90b36c81e87b2bcc212ea11f5ed0
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 72ac1a5be4f2e114e5b90b65542b09733c43d174
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233700"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338865"
 ---
 # <a name="csession-class"></a>CSession 클래스
 단일 데이터베이스 액세스 세션을 나타냅니다.  
@@ -110,7 +110,6 @@ HRESULT Abort(BOID* pboidReason = NULL,
   
 ```cpp
 void Close() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>설명  
