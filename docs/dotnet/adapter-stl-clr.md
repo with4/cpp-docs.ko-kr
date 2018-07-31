@@ -1,5 +1,5 @@
 ---
-title: 어댑터 (STL/CLR) | Microsoft Docs
+title: adapter (STL/CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2018
 ms.technology:
@@ -59,19 +59,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a472284df67993a65de98df7db698ea533451ea3
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: f87ea6791144b7ce40f4e2d71a2ca7f031adbedf
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079438"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376110"
 ---
 # <a name="adapter-stlclr"></a>adapter(STL/CLR)
-STL/CLR 헤더 `<cliext/adapter>` 두 템플릿 클래스 지정 (`collection_adapter` 및 `range_adapter`), 및 템플릿 함수 `make_collection`합니다.  
+STL/CLR 헤더 `<cliext/adapter>` 두 템플릿 클래스를 지정 합니다 (`collection_adapter` 하 고 `range_adapter`), 및 템플릿 함수 `make_collection`합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 #include <cliext/adapter>  
 ```  
 
@@ -84,7 +84,7 @@ STL/CLR 헤더 `<cliext/adapter>` 두 템플릿 클래스 지정 (`collection_ad
   
 |클래스|설명|  
 |-----------|-----------------|  
-|[collection_adapter(STL/CLR)](#collection_adapter)|클래스 라이브러리 BCL (기본) 컬렉션으로를 범위를 래핑합니다.|  
+|[collection_adapter(STL/CLR)](#collection_adapter)|클래스 라이브러리 (BCL (기본) 컬렉션으로를 범위를 래핑합니다.|  
 |[range_adapter(STL/CLR)](#range_adapter)|BCL 컬렉션으로 범위를 래핑합니다.|  
 
 |기능|설명|  
@@ -94,11 +94,11 @@ STL/CLR 헤더 `<cliext/adapter>` 두 템플릿 클래스 지정 (`collection_ad
 ## <a name="members"></a>멤버
 
 ## <a name="collection_adapter"></a> collection_adapter (STL/CLR)
-STL/CLR 컨테이너로 사용 하기 위해.NET 컬렉션을 래핑합니다. A `collection_adapter` 간단한 STL/CLR 컨테이너 개체를 설명 하는 템플릿 클래스입니다. 클래스 라이브러리 BCL (기본) 인터페이스를 래핑하고 제어 되는 시퀀스를 조작 하는 데 사용 하는 반복기 쌍을 반환 합니다.  
+STL/CLR 컨테이너로 사용 하기 위해.NET 컬렉션을 래핑합니다. `collection_adapter` 는 간단한 STL/CLR 컨테이너 개체를 설명 하는 템플릿 클래스입니다. 클래스 라이브러리 (BCL (기본) 인터페이스를 래핑하고 제어 되는 시퀀스를 조작 하는 데 사용 하는 반복기 쌍을 반환 합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Coll>  
     ref class collection_adapter;  
   
@@ -129,8 +129,8 @@ template<typename Key,
         System::Collections::Generic::IDictionary<Key, Value>>;  
 ```  
   
-##### <a name="parameters"></a>매개 변수  
- C o l l  
+#### <a name="parameters"></a>매개 변수  
+ *Coll*  
  래핑된 컬렉션의 형식입니다.  
   
 ### <a name="specializations"></a>특수화  
@@ -138,13 +138,13 @@ template<typename Key,
 |특수화|설명|  
 |--------------------|-----------------|  
 |IEnumerable|요소를 통해 순서입니다.|  
-|ICollection|요소의 그룹을 유지 관리합니다.|  
-|IList|요소의 정렬된 된 그룹을 유지 관리합니다.|  
-|IDictionary|{키, 값} 집합 유지 관리 쌍입니다.|  
-|IEnumerable\<값 >|형식화 된 요소를 통해 순서입니다.|  
-|ICollection\<값 >|형식화 된 요소의 그룹을 유지 관리합니다.|  
-|IList\<값 >|형식화 된 요소의 정렬된 된 그룹을 유지 관리합니다.|  
-|IDictionary\<값 >|형식화 된 {키의 값을 (를) 집합을 유지 관리 쌍입니다.|  
+|ICollection|요소 그룹을 유지 관리합니다.|  
+|IList|요소의 순서가 지정 된 그룹을 유지 관리합니다.|  
+|IDictionary|{0} 키, 값} 집합을 유지 관리 쌍입니다.|  
+|IEnumerable\<값 >|형식화 된 요소 시퀀스입니다.|  
+|ICollection\<값 >|형식화 된 요소 그룹을 유지 관리합니다.|  
+|IList\<값 >|형식화 된 요소의 순서가 지정 된 그룹을 유지 관리합니다.|  
+|IDictionary\<값 >|형식의 {0} 키의 값을 (를) 집합을 유지 관리 쌍입니다.|  
   
 ### <a name="members"></a>멤버  
   
@@ -172,19 +172,19 @@ template<typename Key,
 |[collection_adapter::operator=(STL/CLR)](#op_eq)|저장된 BCL 핸들을 대체합니다.|  
   
 ### <a name="remarks"></a>설명  
- 이 템플릿 클래스를 사용 하 여 STL/CLR 컨테이너로 BCL 컨테이너를 조작 합니다. `collection_adapter` 차례로 요소의 시퀀스를 제어 하는 BCL 인터페이스에 대 한 핸들을 저장 합니다. A `collection_adapter` 개체 `X` 입력된 반복기의 쌍을 반환 `X.begin()` 및 `X.end()` 요소, 순서 대로 방문 하 여 사용 하는 합니다. 특수화의 일부도 작성할 수 `X.size()` 제어 된 시퀀스의 길이 확인 하 합니다.  
+ 이 템플릿 클래스를 사용 하 여 STL/CLR 컨테이너로 BCL 컨테이너를 조작 합니다. `collection_adapter` 차례로 요소의 시퀀스를 제어 하는 BCL 인터페이스에 대 한 핸들을 저장 합니다. A `collection_adapter` 개체 `X` 입력된 반복기의 쌍을 반환 `X.begin()` 고 `X.end()` 순서로 요소를 방문 하는 데 사용 하는 합니다. 특수화의 일부도 쓸 수 `X.size()` 제어 된 시퀀스의 길이를 결정 합니다.  
 
 ## <a name="base"></a> collection_adapter:: base (STL/CLR)
 래핑된 BCL 인터페이스를 지정합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 Coll^ base();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 저장된 BCL 인터페이스 핸들을 반환 합니다.  
+ 멤버 함수는 저장된 BCL 인터페이스 핸들을 반환합니다.  
   
 ### <a name="example"></a>예  
   
@@ -209,7 +209,6 @@ int main()
     System::Console::WriteLine("base() same = {0}", c1.base() == %c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -222,12 +221,12 @@ base() same = True
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 제어 되는 시퀀스 또는 빈 시퀀스의 끝 바로 다음 첫 번째 요소를 지정 하는 입력된 반복기를 반환 합니다.  
+ 멤버 함수는 제어 된 시퀀스 또는 빈 시퀀스의 끝 바로 다음 첫 번째 요소를 지정 하는 입력된 반복기를 반환 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -258,7 +257,6 @@ int main()
     System::Console::WriteLine("*++begin() = {0}", *++it);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -272,7 +270,7 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 collection_adapter();  
 collection_adapter(collection_adapter<Coll>% right);  
 collection_adapter(collection_adapter<Coll>^ right);  
@@ -280,10 +278,10 @@ collection_adapter(Coll^ collection);
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 컬렉션  
+ *collection*  
  래핑할 BCL 핸들입니다.  
   
- 오른쪽  
+ *right*  
  복사할 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -291,25 +289,25 @@ collection_adapter(Coll^ collection);
   
  `collection_adapter();`  
   
- 저장 된 핸들을 초기화 `nullptr`합니다.  
+ 사용 하 여 저장 된 핸들을 초기화 `nullptr`합니다.  
   
  생성자:  
   
  `collection_adapter(collection_adapter<Coll>% right);`  
   
- 저장 된 핸들을 초기화 `right.` [collection_adapter:: base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`합니다.  
+ 사용 하 여 저장 된 핸들을 초기화 `right.` [collection_adapter:: base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`합니다.  
   
  생성자:  
   
  `collection_adapter(collection_adapter<Coll>^ right);`  
   
- 저장 된 핸들을 초기화 `right->` [collection_adapter:: base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`합니다.  
+ 사용 하 여 저장 된 핸들을 초기화 `right->` [collection_adapter:: base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`합니다.  
   
  생성자:  
   
  `collection_adapter(Coll^ collection);`  
   
- 사용 된 저장된 핸들 초기화 `collection`합니다.  
+ 사용 하 여 사용 하 여 저장 된 핸들을 초기화 `collection`합니다.  
   
 ### <a name="example"></a>예  
   
@@ -349,7 +347,6 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -364,12 +361,12 @@ base() null = True
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식은 부호 있는 요소 수를 설명 합니다.  
+ 형식에 부호 있는 요소 수를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -415,7 +412,7 @@ end()-begin() = 3
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
@@ -459,12 +456,12 @@ a b c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef T1 iterator;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 지정 되지 않은 형식의 개체를 설명 `T1` 제어 되는 시퀀스에 대 한 입력된 반복기로 사용 될 수 있는 합니다.  
+ 이 형식은 지정 되지 않은 형식의 개체를 설명 `T1` 제어 되는 시퀀스에 대 한 입력된 반복기로 사용할 수 있는 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -491,7 +488,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -503,12 +499,12 @@ a b c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Key key_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식은 템플릿 매개 변수에 대 한 동의어 `Key`에 대 한 특수화에 `IDictionary` 또는 `IDictionary<Value>`; 정의 되지 않은 그렇지 않은 경우.  
+ 형식은 템플릿 매개 변수에 대 한 동의어 `Key`에 대 한 특수화에 `IDictionary` 또는 `IDictionary<Value>`; 그렇지 않으면 정의 되지 않은 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -540,7 +536,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -552,12 +547,12 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Value mapped_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식은 템플릿 매개 변수에 대 한 동의어 `Value`에 대 한 특수화에 `IDictionary` 또는 `IDictionary<Value>`; 정의 되지 않은 그렇지 않은 경우.  
+ 형식은 템플릿 매개 변수에 대 한 동의어 `Value`에 대 한 특수화에 `IDictionary` 또는 `IDictionary<Value>`; 그렇지 않으면 정의 되지 않은 합니다.  
   
 ### <a name="example"></a>예  
   
@@ -589,7 +584,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -601,16 +595,16 @@ int main()
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 오른쪽  
+ *right*  
  복사할 어댑터입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 연산자 복사본 `right` 개체에 반환 `*this`합니다. 에 저장 된 BCL 핸들의 복사본이 저장된 BCL 핸들 바꿉니다 사용 `right`합니다.  
+ 멤버 연산자 복사본 *오른쪽* 개체를 반환 `*this`합니다. 저장된 BCL 핸들의 복사본이 저장된 BCL 핸들을 대체 하는 데 사용할 있습니다 *오른쪽*합니다.  
   
 ### <a name="example"></a>예  
   
@@ -643,7 +637,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -656,12 +649,12 @@ a b c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 요소에 대 한 참조를 설명 합니다.  
+ 형식 요소에 대 한 참조를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -691,7 +684,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -703,12 +695,12 @@ a b c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 에 대 한 특수화에 정의 되지 않은 `IEnumerable` 또는 `IEnumerable<Value>`합니다.  
+ 멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 에 대 한 특수화에서 정의 되지 않은 `IEnumerable` 또는 `IEnumerable<Value>`합니다.  
   
 ### <a name="example"></a>예  
   
@@ -732,7 +724,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -745,12 +736,12 @@ size() = 6
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식은은 음수가 아닌 요소 수를 설명 합니다.  
+ 형식에는 음수가 아닌 요소 수를 설명합니다.  
   
 ### <a name="example"></a>예  
   
@@ -776,7 +767,6 @@ int main()
     System::Console::WriteLine("size() = {0}", size);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -789,16 +779,16 @@ size() = 6
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void swap(collection_adapter<Coll>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 오른쪽  
+ *right*  
  콘텐츠와 바꿀 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 저장된 BCL 핸들 사이 바꿉니다 `*this` 및 `right`합니다.  
+ 멤버 함수 간에 저장된 BCL 핸들을 바꿉니다 `*this` 하 고 *오른쪽*합니다.  
   
 ### <a name="example"></a>예  
   
@@ -841,7 +831,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -856,12 +845,12 @@ a b c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식은 템플릿 매개 변수에 대 한 동의어 `Value`, 특수화;에 있는 그렇지 않은 경우에 대 한 동의어 `System::Object^`합니다.  
+ 형식은 템플릿 매개 변수에 대 한 동의어 *값*, 특수화;에 있는 경우이 고, 그렇지 것에 대 한 동의어 `System::Object^`합니다.  
   
 ### <a name="example"></a>예  
   
@@ -892,7 +881,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -900,27 +888,27 @@ a b c
 ```  
 
 ## <a name="make_collection"></a> make_collection (STL/CLR)
-확인 된 `range_adapter` 반복기 쌍에서입니다.  
+확인을 `range_adapter` 는 반복기 쌍.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Iter>  
     range_adapter<Iter> make_collection(Iter first, Iter last);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `Iter`  
+ *Iter*  
  래핑된 반복기의 형식입니다.  
   
- `first`  
+ *first*  
  래핑할 첫 번째 반복기입니다.  
   
- `last`  
- 줄 바꿈 두 번째 반복기입니다.  
+ *last*  
+ 래핑할 두 번째 반복기입니다.  
   
 ### <a name="remarks"></a>설명  
- 템플릿 함수가 `gcnew range_adapter<Iter>(first, last)`을 반환합니다. 생성에 사용 된 `range_adapter<Iter>` 반복기의 쌍에서 개체입니다.  
+ 템플릿 함수가 `gcnew range_adapter<Iter>(first, last)`을 반환합니다. 생성 하는 데 사용할 있습니다를 `range_adapter<Iter>` 반복기의 쌍 개체입니다.  
   
 ### <a name="example"></a>예  
   
@@ -964,7 +952,6 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -976,11 +963,11 @@ SyncRoot not nullptr = True
 ```  
 
 ## <a name="range_adapter"></a> range_adapter (STL/CLR)
-여러 클래스 라이브러리 BCL (기본) 인터페이스를 구현 하는 데 사용 되는 반복기의 쌍을 래핑하는 템플릿 클래스입니다. BCL 컬렉션 하는 경우 STL/CLR 범위를 조작 하는 range_adapter를 사용 합니다.  
+여러 클래스 라이브러리 (BCL (기본) 인터페이스를 구현 하는 데 사용 되는 반복기의 쌍을 래핑하는 템플릿 클래스입니다. BCL 컬렉션인 것 처럼 STL/CLR 범위를 조작 하는 range_adapter를 사용 합니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename Iter>  
     ref class range_adapter  
         :   public  
@@ -992,7 +979,7 @@ template<typename Iter>
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- Iter  
+ *Iter*  
  래핑된 반복기와 관련 된 형식입니다.  
   
 ### <a name="members"></a>멤버  
@@ -1009,29 +996,29 @@ template<typename Iter>
   
 |인터페이스|설명|  
 |---------------|-----------------|  
-|<xref:System.Collections.IEnumerable>|컬렉션의 요소를 반복 합니다.|  
-|<xref:System.Collections.ICollection>|요소의 그룹을 유지 관리합니다.|  
+|<xref:System.Collections.IEnumerable>|컬렉션의 요소를 반복합니다.|  
+|<xref:System.Collections.ICollection>|요소 그룹을 유지 관리합니다.|  
 |<xref:System.Collections.Generic.IEnumerable%601>|컬렉션에서 형식화 된 요소를 반복...|  
-|<xref:System.Collections.Generic.ICollection%601>|형식화 된 요소의 그룹을 유지 관리합니다.|  
+|<xref:System.Collections.Generic.ICollection%601>|형식화 된 요소 그룹을 유지 관리합니다.|  
   
 ### <a name="remarks"></a>설명  
- range_adapter 차례로 요소의 시퀀스를 구분 하는 반복기 쌍을 저장 합니다. 개체는 요소, 순서 대로 반복할 수 있는 4 개의 BCL 인터페이스를 구현 합니다. 이 템플릿 클래스를 사용 하 여 STL/CLR 범위 BCL 컨테이너 매우 유사 하 게 조작할 수 있습니다.  
+ range_adapter 차례로 요소의 시퀀스를 구분 하는 반복기의 쌍을 저장 합니다. 순서로 요소를 반복할 수 있도록 하는 네 가지 BCL 인터페이스를 구현 하는 개체입니다. 이 템플릿 클래스를 사용 하 여 STL/CLR 범위 BCL 컨테이너 매우 유사 하 게 조작할 수 있습니다.  
 
 ## <a name="range_adapter_op_eq"></a> range_adapter:: operator = (STL/CLR)
 저장 된 반복기 쌍을 바꿉니다.  
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 range_adapter<Iter>% operator=(range_adapter<Iter>% right);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 오른쪽  
+ *right*  
  복사할 어댑터입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 연산자 복사본 `right` 개체에 반환 `*this`합니다. 에 저장 된 반복기 쌍의 복사본으로 저장 된 반복기 쌍을 대체 하는 데 사용할 있습니다 `right`합니다.  
+ 멤버 연산자 복사본 *오른쪽* 개체를 반환 `*this`합니다. 저장 된 반복기 쌍에 저장 된 반복기 쌍의 복사본으로 대체 하는 데 사용할 있습니다 *오른쪽*합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1064,7 +1051,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1077,7 +1063,7 @@ a b c
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 range_adapter();  
 range_adapter(range_adapter<Iter>% right);  
 range_adapter(range_adapter<Iter>^ right);  
@@ -1085,13 +1071,13 @@ range_adapter(Iter first, Iter last);
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- 첫 번째  
+ *first*  
  래핑할 첫 번째 반복기입니다.  
   
- last  
- 줄 바꿈 두 번째 반복기입니다.  
+ *last*  
+ 래핑할 두 번째 반복기입니다.  
   
- 오른쪽  
+ *right*  
  복사할 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1099,25 +1085,25 @@ range_adapter(Iter first, Iter last);
   
  `range_adapter();`  
   
- 저장 된 반복기 쌍을 생성할 기본 반복기를 초기화합니다.  
+ 생성 된 기본 반복기를 사용 하 여 저장 된 반복기 쌍을 초기화합니다.  
   
  생성자:  
   
  `range_adapter(range_adapter<Iter>% right);`  
   
- 에 저장 된 쌍을 복사 하 여 저장 된 반복기 쌍을 초기화 합니다. `right`합니다.  
+ 저장 된 반복기 쌍에 저장 된 쌍을 복사 하 여 초기화 *오른쪽*합니다.  
   
  생성자:  
   
  `range_adapter(range_adapter<Iter>^ right);`  
   
- 에 저장 된 쌍을 복사 하 여 저장 된 반복기 쌍을 초기화 합니다. `*right`합니다.  
+ 저장 된 반복기 쌍에 저장 된 쌍을 복사 하 여 초기화 `*right`합니다.  
   
  생성자:  
   
  `range_adapter(Iter^ first, last);`  
   
- 저장 된 반복기 쌍으로 초기화 `first` 및 `last`합니다.  
+ 사용 하 여 저장 된 반복기 쌍 초기화 *첫 번째* 하 고 *마지막*합니다.  
   
 ### <a name="example"></a>예  
   
@@ -1159,7 +1145,6 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
