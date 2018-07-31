@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5e77b92822ac82a4fbea06fe354952c9dbd79378
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 111b5ea4f6c25aab2abc4897c9e4bda2a14362a9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207587"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336942"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet 클래스
 상속 되는 `DBPROPIDSET` 구조체 및 키 필드를 초기화 하는 생성자를 추가 뿐만 [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) 메서드에 액세스 합니다.  
@@ -88,7 +88,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 ### <a name="syntax"></a>구문  
   
 ```cpp
-      bool AddPropertyID(DBPROPID propid) throw();  
+bool AddPropertyID(DBPROPID propid) throw();  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -101,7 +101,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 ### <a name="syntax"></a>구문  
   
 ```cpp
-      CDBPropIDSet(const GUID& guid);  
+CDBPropIDSet(const GUID& guid);  
 
 CDBPropIDSet(const CDBPropIDSet& propidset);  
 
@@ -121,7 +121,7 @@ GUID 필드 설정 된 `DBPROPIDSET` 구조입니다.
 ### <a name="syntax"></a>구문  
   
 ```cpp
-      void SetGUID(const GUID& guid) throw();  
+void SetGUID(const GUID& guid) throw();  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -137,7 +137,7 @@ GUID 필드 설정 된 `DBPROPIDSET` 구조입니다.
 ### <a name="syntax"></a>구문  
   
 ```cpp
-      CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();  
+CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

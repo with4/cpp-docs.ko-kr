@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d211277a8354d94f1892b97ea8f808cc0b22c30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c55b2e10112c38835bb1f230970db56a6f53d4e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33095322"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341064"
 ---
 # <a name="ccolumnaccessor-class"></a>CColumnAccessor 클래스
 삽입 된 소비자 코드를 생성합니다.  
@@ -36,7 +36,7 @@ class CColumnAccessor : public CAccessorBase
 ```  
   
 ## <a name="remarks"></a>설명  
- 삽입 된 코드에서 모든 열은 별도 접근자로 바인딩됩니다. 삽입된 된 코드에서이 클래스는 사용 알고 있어야 (예를 들어 발생할 수 있습니다를 디버깅할 때), 하지만 일반적으로 필요가 또는 해당 메서드를 직접 사용 합니다.  
+ 삽입 된 코드에서 모든 열은 별도 접근자로 바인딩됩니다. 이 클래스는 삽입된 된 코드에서 사용 해야 (예를 들어, 발생할 수 있는 것을 디버깅할 때) 하지만 일반적으로 필요가 또는 해당 메서드를 직접 사용 합니다.  
   
  `CColumnAccessor` 다른 접근자 클래스 메서드를 기능에 해당 하는 각각 다음 스텁 메서드를 구현 합니다.  
   
@@ -44,15 +44,15 @@ class CColumnAccessor : public CAccessorBase
   
 -   `CreateAccessor` 바인딩 구조 열에 대 한 메모리를 할당 하 고 열 데이터 멤버를 초기화 합니다.  
   
--   **BindColumns** 접근자 열을 바인딩합니다.  
+-   `BindColumns` 접근자에 열을 바인딩합니다.  
   
--   **SetParameterBuffer** 매개 변수에 대 한 버퍼를 할당 합니다.  
+-   `SetParameterBuffer` 매개 변수에 대 한 버퍼를 할당합니다.  
   
--   `AddParameter` 매개 변수 항목 구조를 매개 변수 항목을 추가합니다.  
+-   `AddParameter` 매개 변수 입력 구조에 매개 변수 항목을 추가합니다.  
   
--   **HasOutputColumns** 접근자에 출력 열 있는지 여부를 결정 합니다.  
+-   `HasOutputColumns` 접근자에 출력 열 여부를 결정 합니다.  
   
--   **HasParameters** 접근자 매개 변수가 있는지 여부를 결정 합니다.  
+-   `HasParameters` 접근자에 매개 변수가 있는지 여부를 결정 합니다.  
   
 -   `BindParameters` 열에 생성된 된 매개 변수를 바인딩합니다.  
   

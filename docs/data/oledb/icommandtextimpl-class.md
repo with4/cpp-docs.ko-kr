@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2223958f2f5dbacb7c86bf2735c1de3a85d9d488
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 2b54d0db22181089a8470c540ccd72f85c717fbe
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269493"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340295"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl 클래스
 에 대 한 구현을 제공 합니다 [ICommandText](https://msdn.microsoft.com/library/ms714914.aspx) 인터페이스입니다.  
@@ -53,7 +53,7 @@ class ATL_NO_VTABLE ICommandTextImpl
   
 ### <a name="parameters"></a>매개 변수  
  *T*  
- 명령 클래스에서 파생 **ICommandTextImpl**합니다. 
+ 명령 클래스에서 파생 된 `ICommandTextImpl`합니다. 
 
 ## <a name="requirements"></a>요구 사항  
  **헤더:** altdb.h  
@@ -82,7 +82,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 ### <a name="syntax"></a>구문  
   
 ```cpp
-      STDMETHOD(GetCommandText)(GUID * pguidDialect,   
+STDMETHOD(GetCommandText)(GUID * pguidDialect,   
    LPOLESTR * ppwszCommand);  
 ```  
   
@@ -95,7 +95,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 ### <a name="syntax"></a>구문  
   
 ```cpp
-      STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
+STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
    LPCOLESTR pwszCommand);  
 ```  
   
@@ -109,7 +109,6 @@ class ATL_NO_VTABLE ICommandTextImpl
   
 ```cpp
 CComBSTR m_strCommandText;  
-  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

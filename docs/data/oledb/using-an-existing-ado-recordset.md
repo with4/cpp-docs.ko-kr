@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36c74ec0d17c296707334930736d0cf237ecfe7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be948293947d4f007d151e4a89e0ff87fc897bbd
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103566"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338940"
 ---
 # <a name="using-an-existing-ado-recordset"></a>기존 ADO 레코드 집합 사용
-OLE DB 소비자 템플릿 및 현재 데이터 개체 (ADO)를 혼합 하려면 ADO를 사용 하 여 레코드 집합 (OLE DB 소비자 템플릿의 행 집합에 해당)을 엽니다. 레코드 집합을 사용 하는 경우에 OLE DB 행 집합에 연결 하려면 다음을 수행 합니다.  
+OLE DB 소비자 템플릿 및 현재 데이터 개체 (ADO)를 혼합 하려면 (OLE DB 소비자 템플릿 행 집합에 해당) 레코드 집합을 열려고 ADO를 사용 합니다. 레코드 집합에 있는 경우에 OLE DB 행 집합에 연결 하려면 다음을 수행 합니다.  
   
-1.  호출 `QueryInterface` 에 대 한는 `IRowset` 및 `IAccessor` 포인터입니다.  
+1.  호출 `QueryInterface` 에 대 한 합니다 `IRowset` 고 `IAccessor` 포인터입니다.  
   
-    ```  
+    ```cpp  
     IRowset* lpRowset = NULL;  
     IAccessor* lpAccessor = NULL;  
     lpUnk->QueryInterface(IID_IRowset, (void**)&lpRowset);  
@@ -37,11 +37,11 @@ OLE DB 소비자 템플릿 및 현재 데이터 개체 (ADO)를 혼합 하려면
     ```  
   
     > [!NOTE]
-    >  *lpUnk* 가리키는 **IUnknown** ADO 레코드 집합의 개체입니다.  
+    >  *lpUnk* 가리키는 `IUnknown` ADO 레코드 집합의 개체입니다.  
   
-2.  접근자 및 행 집합의 적절 한 OLE DB 소비자 템플릿 클래스에 연결 합니다.  
+2.  적절 한 OLE DB 소비자 템플릿 클래스에 접근자 및 행 집합을 연결 합니다.  
   
-    ```  
+    ```cpp  
     CRowset rs;  
     CAccessor accessor;  
   
