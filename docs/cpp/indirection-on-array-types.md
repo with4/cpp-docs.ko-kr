@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ae5f97d0136ecf86506d03a63b9bb92aa28daa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3593e218418d946cee471c501db5d5746fbe9a43
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418841"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406161"
 ---
 # <a name="indirection-on-array-types"></a>배열 형식에 대한 간접 참조
-간접 참조 연산자를 사용 (**\***)에 *n*-차원 배열 형식에서 생성 한 *n*-1 차원 배열입니다. 경우 *n* 는 1, 스칼라 (또는 배열 요소)가 생성 됩니다.  
+간접 참조 연산자를 사용 (**\***)에 *n*-차원 배열 형식 생성을 *n*-1 차원 배열입니다. 하는 경우 *n* 1은 스칼라 (또는 배열 요소)가 생성 됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [배열](../cpp/arrays-cpp.md)

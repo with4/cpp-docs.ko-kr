@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d2fc42021a01a1260b57f9516e53c439c8e604
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: adc8f9c456d28089d57bc1f13b61ad8efa10b6b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944785"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402922"
 ---
 # <a name="mutable-data-members-c"></a>변경할 수 있는 데이터 멤버 (C++)
 이 키워드는 클래스의 비정적 데이터 멤버 중에서 const가 아닌 멤버에만 적용할 수 있습니다. 데이터 멤버가 선언 된 경우 **변경할 수**에서이 데이터 멤버에 값을 할당할 수는 것을 **const** 멤버 함수입니다.  
@@ -29,7 +29,6 @@ ms.locfileid: "37944785"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 mutable member-variable-declaration;  
 ```  
   
@@ -56,5 +55,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [키워드](../cpp/keywords-cpp.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 697f4a83cb0b5f9aabb7ce477c4664cb39fb7f97
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f8e25564d89eaf665baa473d7725ab69e2355ccb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944872"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406307"
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast 연산자
 피연산자를 변환 `expression` 형식의 개체에 `type-id`입니다.  
@@ -29,7 +29,6 @@ ms.locfileid: "37944872"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 dynamic_cast < type-id > ( expression )  
 ```  
   
@@ -296,6 +295,6 @@ in GlobalTest
 Can't cast to C  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [캐스팅 연산자](../cpp/casting-operators.md)   
  [키워드](../cpp/keywords-cpp.md)

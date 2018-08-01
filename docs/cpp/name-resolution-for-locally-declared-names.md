@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6347f3b0b71dc35544f22101479de23bb4efd686
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f87d5083839b99e4b94beb2ceb3a4cba9615ea4d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420045"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408270"
 ---
 # <a name="name-resolution-for-locally-declared-names"></a>로컬로 선언된 이름에 대한 이름 확인
 
 템플릿 인수를 사용하거나 사용하지 않고 템플릿 이름 자체를 참조할 수 있습니다. 클래스 템플릿의 범위에서 이름 자체는 템플릿을 나타냅니다. 템플릿 특수화 또는 부분 특수화의 범위에서 이름만 특수화 또는 부분 특수화를 참조합니다. 템플릿의 다른 특수화나 부분 특수화도 해당 템플릿 인수와 함께 참조될 수 있습니다.  
   
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
  다음 코드는 클래스 템플릿의 이름 A가 특수화 또는 부분 특수화의 범위에서 다르게 해석된다는 것을 보여 줍니다.  
   
@@ -45,7 +45,7 @@ template<> class A<int> {
 };  
 ```  
   
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
  템플릿 매개 변수와 다른 개체 사이에 이름이 충돌할 경우 템플릿 매개 변수를 숨길 수도 있고 숨기지 않을 수도 있습니다. 다음 규칙은 우선 순위를 결정하는 데 도움이 됩니다.  
   
@@ -65,7 +65,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
  템플릿의 멤버 함수를 클래스 템플릿 외부에서 정의할 때 다른 템플릿 매개 변수 이름을 사용할 수 있습니다. 템플릿 멤버 함수 정의가 선언이 템플릿 매개 변수에 대해 사용하는 이름과 다른 이름을 사용하고 정의에 사용된 이름이 선언의 다른 멤버와 충돌하는 경우 템플릿 선언의 멤버가 우선합니다.  
   
@@ -100,7 +100,7 @@ int main() {
 Z::Z()  
 ```  
   
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
  템플릿 함수 또는 멤버 함수를 템플릿을 선언한 네임스페이스 외부에서 정의할 때 템플릿 인수는 네임스페이스의 다른 멤버 이름보다 우선합니다.  
   
@@ -134,7 +134,7 @@ int main() {
 C<T>::g  
 ```  
   
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
  템플릿 클래스 선언 외부 정의에서 템플릿 클래스에 템플릿 인수에 종속되지 않는 기본 클래스가 있고 기본 클래스 또는 해당 멤버 중 하나가 템플릿 인수와 같은 이름을 가진 경우 기본 클래스 또는 멤버 이름은 템플릿 인수를 숨깁니다.  
   
@@ -172,6 +172,5 @@ Base
 1  
 ```  
   
-## <a name="see-also"></a>참고 항목
-
+## <a name="see-also"></a>참고자료
  [이름 확인](../cpp/templates-and-name-resolution.md)

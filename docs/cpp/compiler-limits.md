@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecf3351180fbff4d6872c7027eee90b92e560059
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 01260500a564e6cb18b4477a423ce1ef70444201
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938901"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402187"
 ---
 # <a name="compiler-limits"></a>컴파일러 한계
 C++ 표준에서는 다양한 언어 구문에 대한 한도를 권장합니다. 다음은 Visual C++ 컴파일러에서 권장된 한도를 구현하지 않은 경우의 목록입니다. 첫 번째 수는 ISO C++ 11 표준(INCITS/ISO/IEC 14882-2011[2012], Annex B)으로 설정된 한도이고 두 번째 수는 Visual C++로 구현된 한도입니다.  
@@ -42,5 +42,5 @@ C++ 표준에서는 다양한 언어 구문에 대한 한도를 권장합니다.
   
 -   표준 c + +-템플릿 선언의 템플릿 인수: 1024, Visual c + + 컴파일러: 2046 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [비표준 동작](../cpp/nonstandard-behavior.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61531ad8471a7409a42fdd2d55b27a82d08ba340
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e5f4a05c193ec471c0b8dd11d34961a46ead7660
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941030"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406216"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>어설션 및 사용자 제공 메시지 (C++)
 C + + 언어에서는 세 가지 오류 처리 메커니즘 도움이 되는 응용 프로그램 디버그: 합니다 [#error 지시문](../preprocessor/hash-error-directive-c-cpp.md), [static_assert](../cpp/static-assert.md) 키워드 및 [assert 매크로, _assert, _ wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) 매크로입니다. 세 가지 메커니즘 모두 오류 메시지를 제공하고 두 메커니즘은 소프트웨어 어설션도 테스트합니다. 소프트웨어 어설션은 프로그램의 특정 지점에서 true가 될 조건을 지정합니다. 컴파일 타임 어설션이 실패하는 경우 컴파일러에서 진단 메시지와 컴파일 오류를 생성합니다. 런타임 어설션이 실패하는 경우에는 운영 체제에서 진단 메시지를 제공하고 응용 프로그램을 닫습니다.  
@@ -38,7 +38,7 @@ C + + 언어에서는 세 가지 오류 처리 메커니즘 도움이 되는 응
   
 -   합니다 [assert 매크로, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) 매크로 실행된 시간에 적용 됩니다. 이 매크로는 사용자 지정 식을 계산하며, 결과가 0인 경우 진단 메시지가 제공되고 응용 프로그램이 닫힙니다. 대부분의 다른 매크로 같은[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) _ASSERTE,이 매크로 유사 하지만 다양 한 시스템 정의 또는 사용자 정의 진단 메시지를 실행 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [#error 지시문 (C/c + +)](../preprocessor/hash-error-directive-c-cpp.md)   
  [assert Macro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)   
  [_ASSERT, _ASSERTE, _ASSERT_EXPR 매크로](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)   

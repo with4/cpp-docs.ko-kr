@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d16ed882b1037123963f105b1a78bf8e1023d332
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ff47c9a1b5aed197381a0d3ab0f24456fe75bad4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944800"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405151"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>Lvalue 참조 선언 자: &amp;
 개체의 주소를 보유하지만 구문상 개체처럼 동작합니다.  
@@ -30,7 +30,6 @@ ms.locfileid: "37944800"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 type-id & cast-expression  
 ```  
   
@@ -79,7 +78,7 @@ int main()
 Bill is 40  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [참조](../cpp/references-cpp.md)   
  [참조 형식 함수 인수](../cpp/reference-type-function-arguments.md)   
  [참조 형식 함수 반환](../cpp/reference-type-function-returns.md)   

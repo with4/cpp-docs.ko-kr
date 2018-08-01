@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3bd43c9ceb4f0a0f73b86e3a4ecf4d851d504b3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 058979420e5bb1426879522e70ec8b1ac768d9cc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939314"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407405"
 ---
 # <a name="bool-c"></a>bool (C++)
 
@@ -61,6 +61,5 @@ if (condexpr1) statement1;
  합니다 **bool** 형식은 정수 계열 확장에 참여 합니다. 형식의 r-value **bool** 형식의 r-value로 변환할 수 있습니다 **int**FALSE 되는 것으로, 0 및 1 TRUE입니다. 고유 형식으로 **bool** 오버 로드 확인에 참여 합니다.  
   
 ## <a name="see-also"></a>참고자료
-
-[키워드](../cpp/keywords-cpp.md)<br/>
-[기본 형식](../cpp/fundamental-types-cpp.md)<br/>
+[키워드](../cpp/keywords-cpp.md)  
+[기본 형식](../cpp/fundamental-types-cpp.md)  

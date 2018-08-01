@@ -53,12 +53,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d91971b7d96b09fe1fd0d14a2a711f7771503a6a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6a5bd344744de39e73cd389c5592ff6794eb47c7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941478"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405008"
 ---
 # <a name="fundamental-types--c"></a>기본 형식 (C++)
 C++의 기본 형식은 정수 계열, 부동 소수점 및 void의 세 가지 범주로 구분됩니다. 정수 계열 형식은 정수를 처리할 수 있습니다. 부동 소수점 형식은 소수 부분이 있을 수 있는 값을 지정할 수 있습니다.  
@@ -108,5 +108,5 @@ C++의 기본 형식은 정수 계열, 부동 소수점 및 void의 세 가지 �
   
  형식 변환에 대한 자세한 내용은 [표준 변환](../cpp/standard-conversions.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [데이터 형식 범위](../cpp/data-type-ranges.md)

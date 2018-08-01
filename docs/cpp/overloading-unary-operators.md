@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f20268e9d67ed59e52f3716e9203dadd2a2715d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c00f9d40fedd084afa2da6e2e7bfaf0ee831b3a9
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941693"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401882"
 ---
 # <a name="overloading-unary-operators"></a>단항 연산자 오버로드
 오버로드할 수 있는 단항 연산자는 다음과 같습니다.  
@@ -68,5 +68,5 @@ ms.locfileid: "37941693"
 > [!NOTE]
 >  단항 연산자의 반환 형식에 대한 제한은 없습니다. 예를 들어 논리 NOT(`!`)에서 정수 계열 값을 반환하는 것이 적합하지만 이는 적용되지 않습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [연산자 오버로드](../cpp/operator-overloading.md)

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80efab13dfe28c7ecec2da1d3d932ed90d46f0f8
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: b22bbcfd2055a362a3ee9b3fcfd4498cdb089586
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026911"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407958"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>방법: CComPtr 및 CComQIPtr 인스턴스 만들기 및 사용
 클래식 Windows 프로그래밍에서 라이브러리는 종종 COM 개체(보다 정확하게는 COM 서버)로 구현됩니다. 많은 Windows 운영 체제 구성 요소가 COM 서버로 구현되므로 많은 참가자가 이 형식의 라이브러리를 제공합니다. COM의 기본 사항에 대 한 정보를 참조 하세요 [구성 요소 개체 모델 (COM)](http://msdn.microsoft.com/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)합니다.  
@@ -41,5 +41,5 @@ ms.locfileid: "39026911"
   
  [!code-cpp[COM_smart_pointers#03](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_3.cpp)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [스마트 포인터](../cpp/smart-pointers-modern-cpp.md)

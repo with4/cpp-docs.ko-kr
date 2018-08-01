@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af1220cbb6b872ebd0370cfa526aba47338e70e6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 33ed35d02547acdbc9a08928a6e698c3e039d745
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028153"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405573"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>이동 생성자 및 이동 할당 연산자(C++)
 이 항목에서는 작성 하는 방법에 설명 합니다는 *이동 생성자* 와 c + + 클래스에 대 한 이동 할당 연산자입니다. 이동 생성자는 rvalue lvalue로 복사 하지 않고 이동 될 개체를 소유한 리소스 수 있습니다. 이동 의미 체계에 대 한 자세한 내용은 참조 하세요. [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)합니다.  
@@ -250,7 +250,7 @@ int main()
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```Output  
 In MemoryBlock(size_t). length = 25.  
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.  
 In ~MemoryBlock(). length = 0.  
@@ -273,7 +273,7 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  Visual Studio 2010 이전이 예제에서는 다음과 같은 출력이 생성 됩니다.  
   
-```  
+```Output  
 In MemoryBlock(size_t). length = 25.  
 In MemoryBlock(const MemoryBlock&). length = 25. Copying resource.  
 In ~MemoryBlock(). length = 25. Deleting resource.  
@@ -304,7 +304,6 @@ In ~MemoryBlock(). length = 75. Deleting resource.
  사용자 클래스에 이동 생성자와 이동 할당 연산자를 둘 다 제공하는 경우 이동 할당 연산자를 호출하는 이동 생성자를 작성하여 중복 코드를 제거할 수 있습니다. 다음 예제에서는 이동 할당 연산자를 호출하는 이동 생성자의 수정된 버전을 보여 줍니다.  
   
 ```cpp
-  
 // Move constructor.  
 MemoryBlock(MemoryBlock&& other)  
    : _data(nullptr)  
@@ -316,6 +315,6 @@ MemoryBlock(MemoryBlock&& other)
   
  합니다 [std:: move](../standard-library/utility-functions.md#move) 변수의 rvalue 속성을 유지 하는 함수는 *다른* 매개 변수입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
  [\<유틸리티 > 이동](http://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

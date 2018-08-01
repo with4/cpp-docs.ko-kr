@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73b70a68226be14b7e99afe125b3dcd8b6784601
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 673bceb5042a91361ece00360c4d9c5b140e4d00
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034818"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402701"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>방법: weak_ptr 인스턴스 만들기 및 사용
 개체의 기본 개체에 액세스 하는 방법을 저장 해야 경우에 따라는 `shared_ptr` 참조 횟수를 증가 시킬 없이 합니다. 사이 순환 참조가 있는 경우 이러한 상황이 발생 하는 일반적으로 `shared_ptr` 인스턴스.  
@@ -90,5 +90,5 @@ Press any key
 
  삼아 벡터를 수정 `others` 되도록를 `vector<shared_ptr<Controller>>`, 그리고 출력에서 없는 소멸자를 호출 하는 경우 `TestRun` 반환 합니다.  
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [스마트 포인터](../cpp/smart-pointers-modern-cpp.md)

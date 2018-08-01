@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594bc432cb12b63c76172b06ee078d5b0f72de55
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f28ae7b7cb8bdcf335757c58d5e744974f4c7cad
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943164"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405959"
 ---
 # <a name="final-specifier"></a>final 지정자
 사용할 수는 **최종** 파생된 클래스에서 재정의할 수 없는 가상 함수를 지정 하는 키워드입니다. 상속할 수 없는 클래스를 지정하기 위해 해당 키워드를 사용할 수도 있습니다.  
@@ -29,7 +29,6 @@ ms.locfileid: "37943164"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 function-declaration final;  
 class class-name final base-classes  
 ```  
@@ -70,6 +69,6 @@ class DerivedClass: public BaseClass // compiler error: BaseClass is
 };  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [키워드](../cpp/keywords-cpp.md)   
  [override 지정자](../cpp/override-specifier.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71bb3985fe870b29d06ebc01d0b7dab4712f1797
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c871ae13e333d8d3f7fa1bf0cce29bc1309d0c62
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941069"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403367"
 ---
 # <a name="function-templates"></a>함수 템플릿
 클래스 템플릿은 인스턴스화할 때 클래스에 전달되는 형식 인수를 기반으로 하는 관련 클래스 패밀리를 정의합니다. 함수 템플릿은 클래스 템플릿과 유사하지만 함수 패밀리를 정의합니다. 함수 템플릿을 사용하면 동일한 코드를 기반으로 하지만 서로 다른 형식이나 클래스에서 작동하는 함수 집합을 지정할 수 있습니다. 다음 함수 템플릿은 두 항목을 바꿉니다.  
@@ -66,7 +66,7 @@ int main(int j) {
   
  템플릿 인수가 명시적으로 지정되면 함수 인수를 해당 함수 템플릿 매개 변수의 형식으로 변환하기 위해 표준 암시적 변환이 수행됩니다. 위의 예제에서 컴파일러는 변환 `char j` 입력할 **int**합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [템플릿](../cpp/templates-cpp.md)   
  [함수 템플릿 인스턴스화](../cpp/function-template-instantiation.md)   
  [명시적 인스턴스화](../cpp/explicit-instantiation.md)   

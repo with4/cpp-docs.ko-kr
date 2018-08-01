@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75344e8fef933b493177f812b06edd3c187046f6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48f9328ef6a862ffc8888b99b16764978b0005c2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944818"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406255"
 ---
 # <a name="enumerations-c"></a>열거형(C++)
 열거형은 열거자라는 명명된 정수 상수 집합으로 구성된 사용자 정의 형식입니다.  
@@ -98,12 +98,11 @@ namespace CardGame_NonScoped
   
 ```cpp  
 enum Suit { Diamonds = 1, Hearts, Clubs, Spades };  
-  
 ```  
   
  `Diamonds` 열거자에 값 `1`이 할당됩니다. 명시적인 값이 지정되지 않은 경우 다음 열거자는 이전 열거자에 1을 더한 값을 받습니다. 앞의 예제에서 `Hearts`의 값은 2, `Clubs`의 값은 3 등이 될 수 있습니다.  
   
- 모든 열거자는 상수로 처리되며 `enum`이 정의되는 범위 내에(범위가 지정되지 않은 열거형의 경우) 또는 열거형 자체에(범위가 지정된 열거형의 경우) 고유한 이름이 있어야 합니다. 이름에 지정되는 값은 고유하지 않아도 됩니다. 예를 들어, 범위가 지정되지 않은 열거형 `Suit`의 선언이 다음과 같은 경우  
+ 모든 열거자는 상수로 처리 되 고 범위 내에서 고유한 이름이 있어야 위치는 **열거형** (범위가 지정 되지 않은 열거형의 경우)에 대해 정의 된 또는 합니다 **열거형** (범위가 지정 된 열거형)에 대 한 자체. 이름에 지정되는 값은 고유하지 않아도 됩니다. 예를 들어, 범위가 지정되지 않은 열거형 `Suit`의 선언이 다음과 같은 경우  
   
 ```cpp  
 enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };  
@@ -119,7 +118,6 @@ enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
 int account_num = 135692;  
 Suit hand;  
 hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'  
-  
 ```  
   
  캐스트를 변환 해야 합니다.는 **int** 또는 범위가 지정 되지 않은 열거자입니다. 캐스팅하지 않고 범위가 지정된 열거자를 정수 값으로 승격할 수 있습니다.  
@@ -147,7 +145,6 @@ namespace ScopedEnumConversions
         account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'  
         account_num = static_cast<int>(Suit::Hearts); // OK  
 }  
-  
 ```  
   
  선 `hand = account_num;`은 앞에서 보았듯이 범위가 지정되지 않은 열거형에 발생하는 오류를 초래합니다. 명시적 캐스트로 허용됩니다. 그러나 범위가 지정된 열거형을 사용하여 다음 문 `account_num = Suit::Hearts;`에서 시도된 변환은 명시적 캐스트 없이는 더 이상 허용되지 않습니다. 
@@ -190,6 +187,6 @@ int main()
 }
 ``` 
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C 열거형 선언](../c-language/c-enumeration-declarations.md)   
  [키워드](../cpp/keywords-cpp.md)

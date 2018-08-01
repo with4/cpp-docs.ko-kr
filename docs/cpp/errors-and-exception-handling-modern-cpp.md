@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee05e7008795056ee197ce45f68084e6c633f23c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f9d9d21514b0ea90021c9b0543cd742ed6a6206f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939743"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407236"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>오류 및 예외 처리(최신 C++)
 대부분의 시나리오에서 최신 c + +의 보고 및 논리 오류 및 런타임 오류를 처리 하는 기본 방법은 예외를 사용 합니다. 스택의 오류를 감지 하는 함수 및 처리 하는 방법을 확인 하기 위한 컨텍스트가 있는 함수 간의 몇 가지 함수 호출 포함 될 수 있습니다 하는 경우 특히 그렇습니다. 예외 호출 스택 정보를 전달 하는 오류를 감지 하는 코드에 대 한 정식, 잘 정의 된 방법을 제공 합니다.  
@@ -68,7 +68,6 @@ int main()
    //...  
    return 0;  
 }  
-  
 ```  
   
  C + +에서 예외를 사용 하면 C# 및 Java와 같은 언어에서 비슷합니다. 에 **시도** 예외인 경우 차단 *발생* 됩니다 *포착* 첫 번째 연결 **catch** 블록 형식이 일치는 예외입니다. 실행에서 이동 하는 즉, 합니다 **throw** 문을 합니다 **catch** 문입니다. 사용할 수 있는 catch 블록이 없는 있으면 `std::terminate` 호출 되 고 프로그램이 종료 합니다. C + +에서는 형식일 throw 될 수 있습니다. 하지만 직접 또는 간접적으로 파생 되는 형식을 throw 하는 권장 `std::exception`합니다. 이전 예제에서는 예외 유형 [invalid_argument](../standard-library/invalid-argument-class.md)에서 표준 라이브러리에 정의 된를 [ \<stdexcept >](../standard-library/stdexcept.md) 헤더 파일입니다. C + +는 제공 하지 않으며 필요 하지 않습니다는 **마지막** 블록 예외가 throw 되 면 모든 리소스가 해제 되도록 합니다. Resource는 초기화 (RAII) 관용구 스마트 포인터를 사용 하는 리소스 정리에 필요한 기능을 제공 합니다. 자세한 내용은 [방법: 예외 안전성을 위한 디자인](../cpp/how-to-design-for-exception-safety.md)합니다. C + + 스택 언 와인딩 메커니즘에 대 한 자세한 내용은 [예외 및 스택 해제](../cpp/exceptions-and-stack-unwinding-in-cpp.md)합니다.  
@@ -97,14 +96,14 @@ int main()
  예외 어설션 프로그램에서 런타임 오류를 감지 하는 것에 대 한 두 가지 메커니즘이 있습니다. 어설션을 사용 하 여 개발에 모든 코드가 정확할 경우 true 않아야 하는 동안 조건을 테스트 합니다. 오류 수정에 코드에서 무언가 나타내기 때문에 예외를 사용 하 여 이러한 오류를 처리에 포인터가 없는 프로그램에서 런타임 시 복구 해야 하는 조건을 나타내지는 합니다. Assert; 디버거에서 프로그램 상태를 검사할 수 있도록 문에서 실행을 중지 예외는 첫 번째 적절 한 catch 처리기에서 실행을 계속합니다. 예외를 사용 하 여도 올바르면 코드, 예를 들어 "파일 not found" 또는 "메모리 부족 합니다." 실행 시 발생할 수 있는 오류 조건 확인 방금 복구 로그에 메시지를 출력 한 프로그램을 종료 하는 경우에 이러한 상황에서 복구 하려는 경우. 항상 예외를 사용 하 여 public 함수에 대 한 인수를 확인 합니다. 함수를 오류가 없는 경우에 사용자를 전달할 수 있는 인수를 완전히 제어가 없을 수 있습니다.  
   
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>Windows SEH 예외와 c + + 예외  
- C 및 c + + 프로그램에는 구조적된 예외 처리 (SEH) 메커니즘이 Windows 운영 체제에서 사용할 수 있습니다. SEH의 개념 유사 c + + 예외를 제외 하 고 사용 하 여 SEH를 `__try`, `__except`, 및 `__finally` 대신 생성 **시도** 하 고 **catch**. Visual c + +, c + + 예외는 SEH에 대해 구현 됩니다. 그러나 c + + 코드를 작성할 때 c + + 예외 구문을 사용 합니다.  
+ C 및 c + + 프로그램에는 구조적된 예외 처리 (SEH) 메커니즘이 Windows 운영 체제에서 사용할 수 있습니다. SEH의 개념 유사 c + + 예외를 제외 하 고 SEH를 사용 합니다 **__try**를 **__except**, 및 **__finally** 대신 생성 **시도** 하 고 **catch**합니다. Visual c + +, c + + 예외는 SEH에 대해 구현 됩니다. 그러나 c + + 코드를 작성할 때 c + + 예외 구문을 사용 합니다.  
   
  SEH에 대 한 자세한 내용은 참조 하세요. [구조적 예외 처리 (C/c + +)](../cpp/structured-exception-handling-c-cpp.md)합니다.  
   
 ## <a name="exception-specifications-and-noexcept"></a>예외 사양 및 noexcept  
  예외 사양은 함수가 throw 할 수 있는 예외를 지정 하는 방법으로 c + +에 도입 되었습니다. 그러나 예외 사양 실제로 문제가 입증 및 c+11 초안 표준에서 사용 되지 않습니다. 제외 하 고 예외 사양을 사용 하지 않는 것이 좋습니다 `throw()`, 함수 예외가 이스케이프를 허용 하는지 나타냅니다. 형식의 예외 사양을 사용 해야 하는 경우 `throw(` *형식을*`)`, Visual c + + 표준에서 다양 한 방식으로 분리 하는 알고 있어야 합니다. 자세한 내용은 [예외 사양 (throw)](../cpp/exception-specifications-throw-cpp.md)합니다. 합니다 `noexcept` 지정자를 안으로 c++11에서 도입 된 `throw()`합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [방법: 예외 및 비 예외 코드 간 인터페이스](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)   
  [C + +의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C++ 언어 참조](../cpp/cpp-language-reference.md)   

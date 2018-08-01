@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ee32e9c94f9bd9d1da4e3d3beaf9bfa0039b8cf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939073"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403828"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Microsoft 전용**  
   
- `_com_ptr_t` 개체를 생성합니다.  
+ 생성 된 **_com_ptr_t** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -150,10 +150,10 @@ explicit _com_ptr_t(
  TRUE 이면 `AddRef` 캡슐화 된 인터페이스 포인터의 참조 횟수를 증가 하기 위해 호출 됩니다.  
   
  *cp*  
- `_com_ptr_t` 개체입니다.  
+ A **_com_ptr_t** 개체입니다.  
   
  *p*  
- 이 `_com_ptr_t` 개체의 스마트 포인터 형식과 다른 형식의 원시 인터페이스 포인터입니다.  
+ 원시 인터페이스 포인터를이 스마트 포인터 형식에서 다른 형식의 **_com_ptr_t** 개체입니다.  
   
  *varSrc*  
  `_variant_t` 개체입니다.  
@@ -170,5 +170,5 @@ explicit _com_ptr_t(
  *pOuter*  
  에 대 한 알 수 없는 외부 [집계](http://msdn.microsoft.com/library/windows/desktop/ms686558)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_com_ptr_t 클래스](../cpp/com-ptr-t-class.md)

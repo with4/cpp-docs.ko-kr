@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f60a0a8a53d77c2d8aa111ce812bf64ab11c4910
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a4fddaa53aed54fd33afee9205fcc9a3819f1b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944248"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406869"
 ---
 # <a name="event-handling-in-com"></a>COM에서 이벤트 처리
 COM 이벤트 처리를 설정한 이벤트 소스와 이벤트 수신기를 사용 하는 [event_source](../windows/event-source.md) 하 고 [event_receiver](../windows/event-receiver.md) 특성에 각각 지정 `type` = `com`. 적용되는 클래스가 COM 연결 지점을 통해 이벤트를 발생시키고 처리할 수 있도록 이러한 특성은 사용자 지정, 디스패치 및 이중 인터페이스에 대한 적절한 코드를 삽입합니다.  
   
 ## <a name="declaring-events"></a>이벤트 선언  
- 이벤트 소스 클래스를 사용 합니다 [__event](../cpp/event.md) 이벤트와 해당 인터페이스의 메서드를 선언 하는 인터페이스 선언에서 키워드입니다. 해당 인터페이스의 이벤트는 이를 인터페이스 메서드로 호출할 때 발생합니다. 이벤트 인터페이스의 메서드는 0 개 이상의 매개 변수를 가질 수 있습니다 (모든 야 `in` 매개 변수). 반환 형식은 void 또는 모든 정수 계열 형식이 될 수 있습니다.  
+ 이벤트 소스 클래스를 사용 합니다 [__event](../cpp/event.md) 이벤트와 해당 인터페이스의 메서드를 선언 하는 인터페이스 선언에서 키워드입니다. 해당 인터페이스의 이벤트는 이를 인터페이스 메서드로 호출할 때 발생합니다. 이벤트 인터페이스의 메서드는 0 개 이상의 매개 변수를 가질 수 있습니다 (모든 야 *에서* 매개 변수). 반환 형식은 void 또는 모든 정수 계열 형식이 될 수 있습니다.  
   
 ## <a name="defining-event-handlers"></a>이벤트 처리기 정의  
  이벤트 수신기 클래스에서는 처리될 이벤트와 일치하는 시그니처(반환 형식, 호출 규칙 및 인수)가 포함된 메서드인 이벤트 처리기를 정의합니다. COM 이벤트에 대 한 호출 규칙 수행 일치할 필요는 없습니다. 참조 [레이아웃 종속 COM 이벤트](#vcconeventhandlingincomanchorlayoutdependentcomevents) 아래 세부 정보에 대 한 합니다.  
@@ -216,5 +216,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [이벤트 처리](../cpp/event-handling.md)

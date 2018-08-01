@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73c1d560f0e2adfbecb72fe9df96d981d0bb93af
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 610e98e15e4e7bd20802d39a70354a20076ce1a5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957950"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407909"
 ---
 # <a name="abstract-classes-c"></a>추상 클래스 (C++)
 
@@ -97,5 +97,4 @@ int main() {
 > 앞의 예제에서 순수 가상 함수인 `base::~base`는 `derived::~derived`에서 암시적으로 호출됩니다. 명시적으로 전체 정규화된 멤버 함수 이름을 사용하여 순수 가상 함수를 호출할 수도 있습니다.
 
 ## <a name="see-also"></a>참고자료
-
-- [상속](../cpp/inheritance-cpp.md)
+[상속](../cpp/inheritance-cpp.md)  

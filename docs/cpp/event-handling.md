@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d27ff977bf3e4132f7782c0ffcb85bebefd42d68
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 91fded4380875515da81b87c5ffd74665df01b21
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961443"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408029"
 ---
 # <a name="event-handling"></a>이벤트 처리
 이벤트 처리는 주로 COM 클래스에 대 한 지원 (대개 ATL 클래스를 사용 하 여 COM 개체를 구현 하는 c + + 클래스와 [coclass](../windows/coclass.md) 특성).  자세한 내용은 [COM에서 이벤트 처리](../cpp/event-handling-in-com.md)합니다.  
@@ -41,6 +41,6 @@ ms.locfileid: "38961443"
 |[__hook](../cpp/hook.md)|처리기 메서드를 이벤트와 연결합니다.|  
 |[__unhook](../cpp/unhook.md)|처리기 메서드를 이벤트에서 분리합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [키워드](../cpp/keywords-cpp.md)   

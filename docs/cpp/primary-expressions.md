@@ -18,18 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4356e15d1b74508b7fc2606b45b5fb2bc9a435eb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3a178510c02cd7ae0238686c6ff6634466715ddf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966946"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408348"
 ---
 # <a name="primary-expressions"></a>기본 식
 기본 식은 더 복잡한 식의 구성 요소이며 리터럴, 이름 및 범위 결정 연산자(`::`)로 정규화된 이름입니다.  기본 식의 형식은 다음 중 하나입니다.  
   
 ```  
-  
 literal  
 this
 name  
@@ -84,5 +83,5 @@ A::B   // a qualified name
 A<int> // a template id  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [식의 형식](../cpp/types-of-expressions.md)

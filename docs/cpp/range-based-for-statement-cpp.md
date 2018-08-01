@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1284e4f6e096ab8021c597b841a8e983673561bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 0edf350289d04824dc2e06e4e11144a4f3141770
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944557"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407035"
 ---
 # <a name="range-based-for-statement-c"></a>범위 기반 for 문(C++)
 `statement`의 각 요소에 대해 `expression`를 반복적 및 순차적으로 실행합니다.  
@@ -25,7 +25,6 @@ ms.locfileid: "37944557"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 for ( for-range-declaration : expression )  
    statement   
 ```  
@@ -90,7 +89,6 @@ int main()
     cout << endl;  
     cout << "end of vector test" << endl;  
 }  
-  
 ```  
   
  다음과 같이 출력됩니다.  
@@ -121,7 +119,7 @@ int main()
   
 -   기타 항목에 대해 `begin()` 및 `end()` 인수 종속성 조회를 사용합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [자동](../cpp/auto-cpp.md)   
  [반복 문](../cpp/iteration-statements-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)   

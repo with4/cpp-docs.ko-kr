@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9301d4fdb09c63b7dc8e875e2b03a4990acec054
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 78808ba4ce8d54ecc8e88516ae5f9b2521f50979
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941160"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403981"
 ---
 # <a name="expressions-with-unary-operators"></a>단항 연산자가 있는 식
 단항 연산자는 하나의 식에서 하나의 피연산자에 대해서만 작동합니다. 단항 연산자의 종류는 다음과 같습니다.  
@@ -86,5 +86,5 @@ ms.locfileid: "37941160"
   
  합니다 *할당 식* 가리킵니다 합니다 **새** 연산자입니다. 합니다 *할당 취소 식* 가리킵니다 합니다 **삭제** 연산자. 자세한 내용은 이 항목의 앞부분에 나오는 링크를 참조하십시오.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [식의 형식](../cpp/types-of-expressions.md)

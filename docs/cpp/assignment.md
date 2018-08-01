@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27e78f7429c4d2a0f83ff7184460eb2ae69df129
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c6343d7be23e633fe383343bd7f154d5cc9bb234
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960988"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407613"
 ---
 # <a name="assignment"></a>할당
 대입 연산자 (**=**)는 엄밀 하, 이항 연산자입니다. 할당 연산자의 선언은 다음을 제외하고 다른 모든 이항 연산자와 동일합니다.  
@@ -62,5 +62,5 @@ int main()
 pt1 = pt2 = pt3;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [연산자 오버로드](../cpp/operator-overloading.md)

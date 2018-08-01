@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495f0fe9faf0c75257f2ac7bbe0a3457438ffdf9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6e632faddb3b4f59733710a915ed121a12f4e0c6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942044"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404865"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>C(구조적) 및 C++ 예외 혼합
 이식성이 높은 코드를 작성하려는 경우 C++ 프로그램에서 구조화된 예외 처리를 사용하지 않는 것이 좋습니다. 그러나 경우가 있습니다 사용 하 여 컴파일하도록 **/EHa** 구조적된 예외와 c + + 소스 코드를 조합 하 고 두 종류의 예외를 처리 하기 위한 일부 기능이 필요 합니다. C + + 코드에서 throw 된 예외를 처리할 수 없는 구조적된 예외 처리기 개체 또는 형식화 된 예외의 개념이 있어 그러나 c + + **catch** 처리기는 구조화 된 예외를 처리할 수 있습니다. 같은 c + + 예외 처리 구문을으로 (**시도**, **throw**합니다 **catch**)는 C 컴파일러의 경우 구조적된 예외 처리 구문을에서 허용 되지 않습니다 (**__try** 하십시오 **__except**, **__finally**) c + + 컴파일러에서 지원 됩니다.  
@@ -46,5 +46,5 @@ ms.locfileid: "37942044"
   
 -   [SEH와 c + + EH의 차이점](../cpp/exception-handling-differences.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C++ 예외 처리](../cpp/cpp-exception-handling.md)

@@ -1,5 +1,5 @@
 ---
-title: 기반 주소 지정 | Microsoft Docs
+title: 기반 주소 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b0fecf99e62932ca363dffc23ac594c37916f84
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ad6f120c3b271cf5b12af06258f133cb0518d64
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408008"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407795"
 ---
 # <a name="based-addressing"></a>기반 주소
 이 단원에 포함된 항목은 다음과 같습니다.  
@@ -30,5 +30,5 @@ ms.locfileid: "32408008"
   
 -   [기반 포인터](../cpp/based-pointers-cpp.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [Microsoft 전용 한정자](../cpp/microsoft-specific-modifiers.md)

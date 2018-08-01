@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5b1843331afc6fa686446e7b3d7515d8701b9cf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 24f9e4e5b3d157f23c18d46f2857b29e6960e82e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026213"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405758"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>복사 생성자 및 복사 할당 연산자(C++)
 > [!NOTE]
@@ -94,4 +94,3 @@ int main()
  의미는 복사 생성자의 의미와 비슷합니다. 인수 형식이 없는 경우 **const**에서 할당을 **const** 개체에 오류가 발생 합니다. 성립 되지: 경우는 **상수** 값이 아닌 값으로 할당 **const**, 할당 성공 합니다.  
   
  오버 로드 된 할당 연산자에 대 한 자세한 내용은 참조 하세요. [할당](../cpp/assignment.md)합니다.  
-  

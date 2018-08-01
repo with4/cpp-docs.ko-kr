@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ad061dc2be090abbcfbc147f1ea5fbddb8ae6a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f4f563a424fd5a019b2094f931236f4af6f0ecb4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944233"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407730"
 ---
 # <a name="delete-operator-c"></a>delete 연산자 (C++)
 메모리 블록을 할당 취소합니다.  
@@ -97,8 +97,7 @@ int main()
   
  아닌 개체의 클래스 형식 ([클래스](../cpp/class-cpp.md)를 [구조체](../cpp/struct-cpp.md), 또는 [union](../cpp/unions.md)), 전역 delete 연산자가 호출 됩니다. 클래스 형식 개체의 경우에는 삭제 식이 단항 범위 확인 연산자(::)로 시작되면 할당 해제 함수의 이름이 전역 범위에서 확인됩니다. 그렇지 않으면 delete 연산자가 메모리 할당을 해제하기 전에 개체에 대한 소멸자를 호출합니다(포인터가 null이 아닌 경우). delete 연산자는 클래스별로 정의될 수 있습니다. 지정된 클래스에 이러한 정의가 없는 경우 전역 delete 연산자가 호출됩니다. 삭제 식을 사용하여 정적 형식이 가상 소멸자인 클래스 개체를 할당 해제하는 경우, 할당 해제 함수는 개체의 동적 형식에 대한 가상 소멸자를 통해 확인됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [new 및 delete 연산자](../cpp/new-and-delete-operators.md)   
- 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c2fc99d4349a158bc4ce944be96e9c6141700cf
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b39a6889dfd8a28d65aebcab04881d4bc28ce1e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944266"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403669"
 ---
 # <a name="inline-functions-c"></a>인라인 함수(C++)
 클래스 선언의 본문에 정의된 함수는 인라인 함수입니다.  
@@ -235,7 +235,6 @@ int main() {
 }  
 //  Sample Input:  xyz  
 // Sample Output:  Z  
-  
 ```  
   
  식의 의도 `toupper(getc(stdin))` 문자를 콘솔 장치에서 읽어야 하는 (`stdin`) 및 필요한 경우 대문자로 변환 합니다.  
@@ -265,6 +264,6 @@ Sample Input: a
 Sample Output: A  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [noinline](../cpp/noinline.md)   
  [auto_inline](../preprocessor/auto-inline.md)

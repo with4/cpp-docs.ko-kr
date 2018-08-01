@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f38a0d97b90f1512e5f16b3bd147bda3e0614e4f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 54cb2183bccc45446cd68b8d5d6d2753f571009b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944476"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408091"
 ---
 # <a name="comraiseerror"></a>_com_raise_error
 **Microsoft 전용**  
@@ -31,7 +31,6 @@ ms.locfileid: "37944476"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 void __stdcall _com_raise_error(  
    HRESULT hr,  
    IErrorInfo* perrinfo = 0  
@@ -46,11 +45,11 @@ void __stdcall _com_raise_error(
  `IErrorInfo` 개체  
   
 ## <a name="remarks"></a>설명  
- `_com_raise_error`에 정의 되어 있는 \<comdef.h >에서 동일한 이름과 프로토타입의 사용자 작성 버전으로 대체할 수 있습니다. 이는 `#import`를 사용하고 C++ 예외 처리는 사용하지 않으려는 경우 실행할 수 있습니다. 경우 사용자 버전에서 `_com_raise_error` 하기로 결정할 수는 `longjmp` 또는 메시지 상자를 표시 하 고 중지 합니다. 컴파일러 COM 지원 코드가 반환을 예상하고 있지 않기 때문에 사용자 버전은 반환할 수 없습니다.  
+ **_com_raise_error**에 정의 되어 있는 \<comdef.h >에서 동일한 이름과 프로토타입의 사용자 작성 버전으로 대체할 수 있습니다. 이는 `#import`를 사용하고 C++ 예외 처리는 사용하지 않으려는 경우 실행할 수 있습니다. 경우 사용자 버전에서 **_com_raise_error** 하기로 결정할 수는 `longjmp` 또는 메시지 상자를 표시 하 고 중지 합니다. 컴파일러 COM 지원 코드가 반환을 예상하고 있지 않기 때문에 사용자 버전은 반환할 수 없습니다.  
   
  사용할 수도 있습니다 [_set_com_error_handler](../cpp/set-com-error-handler.md) 기본 오류 처리 함수를 교체할 수 있습니다.  
   
- 기본적으로 `_com_raise_error`는 다음과 같이 정의됩니다.  
+ 기본적으로 **_com_raise_error** 다음과 같이 정의 됩니다.  
   
 ```cpp  
 void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {  
@@ -65,6 +64,6 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
   
  **Lib:** 경우는 **wchar_t is Native Type** 컴파일러 옵션이 설정 되어 있는 경우 comsuppw.lib 또는 comsuppwd.lib를 사용 합니다. 하는 경우 **wchar_t is Native Type** 해제가 comsupp.lib를 사용 합니다. 자세한 내용은 [/Zc:wchar_t(wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [컴파일러 COM 전역 함수](../cpp/compiler-com-global-functions.md)   
  [_set_com_error_handler](../cpp/set-com-error-handler.md)

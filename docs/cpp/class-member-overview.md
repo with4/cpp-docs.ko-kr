@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee52b42c65a34316454ea6653447938712590327
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1c454872a3f8d1c7f41ba2f6cea7d81402b6327f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944854"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403471"
 ---
 # <a name="class-member-overview"></a>클래스 멤버 개요
 클래스 또는 구조체는 멤버로 구성됩니다. 클래스가 수행하는 작업은 해당 멤버 함수에 의해 수행됩니다. 클래스가 유지하는 상태는 해당 데이터 멤버에 저장됩니다. 생성자 및 메모리와 같은 정리 작업에서 멤버의 초기화가 수행 하 고 소멸자에서 이루어지는 리소스 해제 합니다. C++11 이상에서는 선언 지점에 데이터 멤버를 초기화할 수 있으며 일반적으로 초기화해야 합니다.  
@@ -124,7 +124,6 @@ int TestRun::_instances{ 0 };
  C++11 이상에서는 비정적 멤버 선언자에 이니셜라이저를 포함할 수 있습니다.  
   
 ```cpp 
-  
 class CanInit  
 {  
 public:  
@@ -174,5 +173,5 @@ int CanInit2::j = i;
 > [!NOTE]
 >  정의할 `CanInit2`가 `i` 클래스의 멤버가 되도록 지정하려면 클래스 이름 `i`가 `CanInit2` 앞에 와야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [클래스 및 구조체](../cpp/classes-and-structs-cpp.md)

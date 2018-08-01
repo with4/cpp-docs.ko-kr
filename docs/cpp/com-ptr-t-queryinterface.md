@@ -17,22 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c455ce81a869d64b3a9019088028e384c6a06217
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 20d22fac89b151a28e856ac4eaf61021faa6bfd5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943148"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407434"
 ---
 # <a name="comptrtqueryinterface"></a>_com_ptr_t::QueryInterface
 **Microsoft 전용**  
   
- 호출 된 `QueryInterface` 멤버 함수 `IUnknown` 캡슐화 된 인터페이스 포인터에 대 한 합니다.  
+ 호출 된 **QueryInterface** 멤버 함수 `IUnknown` 캡슐화 된 인터페이스 포인터에 대 한 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 template<typename _InterfaceType> HRESULT QueryInterface (  
    const IID& iid,  
    _InterfaceType*& p   
@@ -55,5 +54,5 @@ template<typename _InterfaceType> HRESULT QueryInterface (
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_com_ptr_t 클래스](../cpp/com-ptr-t-class.md)

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2858807816178115dd34c05d6c88c3dd6fecdee3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 426709857447d972365aa034059bcd34305d6d40
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421749"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402512"
 ---
 # <a name="overview-of-c-statements"></a>C++문 개요
 C++ 문은 식 문, 선택 문, 반복 문 또는 점프 문이 해당 시퀀스를 특정하게 수정하는 경우를 제외하고 순차적으로 실행됩니다.  
@@ -27,7 +27,6 @@ C++ 문은 식 문, 선택 문, 반복 문 또는 점프 문이 해당 시퀀스
  문은 다음과 같은 형식일 수 있습니다.  
   
 ```  
-  
 labeled-statement  
 expression-statement  
 compound-statement  
@@ -36,10 +35,9 @@ iteration-statement
 jump-statement  
 declaration-statement  
 try-throw-catch  
-  
 ```  
   
- 대부분의 경우에서 c + + 문 구문은 ANSI C의와 동일 둘 사이의 주요 차이점은 c에서를 선언은; 블록의 시작 에서만 허용 됩니다. 추가 하는 c + +는 *선언 문의*,이 제한이 사실상 제거 되었다는입니다. 이에 따라 미리 계산된 초기화 값이 계산될 수 있는 프로그램의 지점에 변수를 도입할 수 있습니다.  
+ 대부분의 경우, c + + 문 구문은 ANSI C의와 동일 둘 사이의 주요 차이점에는 C 선언 된 블록의 시작 에서만 허용 됩니다. C + + 추가 합니다 *선언문*를 효과적으로 제거 하는이 제한 합니다. 이에 따라 미리 계산된 초기화 값이 계산될 수 있는 프로그램의 지점에 변수를 도입할 수 있습니다.  
   
  블록 내에 변수를 선언하면 해당 변수의 범위와 수명을 정확하게 제어할 수 있습니다.  
   
@@ -54,5 +52,5 @@ try-throw-catch
 |[default](../cpp/switch-statement-cpp.md)|[__finally](../cpp/structured-exception-handling-c-cpp.md)|[switch](../cpp/switch-statement-cpp.md)||  
 |[do](../cpp/do-while-statement-cpp.md)|[if](../cpp/if-else-statement-cpp.md)|[throw](../cpp/try-throw-and-catch-statements-cpp.md)||  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [문](../cpp/statements-cpp.md)

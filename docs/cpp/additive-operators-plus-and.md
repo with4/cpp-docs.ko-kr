@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89fc0f122f0859e6fc891ddfccd4bc99e7034bfe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 313e4602c06c1baf090ed7a66c51b308a3f6f586
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944830"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402752"
 ---
 # <a name="additive-operators--and--"></a>가감 연산자: + 및 -
 ## <a name="syntax"></a>구문  
@@ -115,11 +115,11 @@ for( int i = 0; i < 10; ++i )
 >  `pIntArray = pIntArray + 1` 형태의 코드는 C++ 프로그램에서 거의 발견되지 않습니다. 증분을 수행하려면 `pIntArray++` 또는 `pIntArray += 1` 형태를 사용하는 것이 좋습니다.  
   
 ## <a name="pointer-subtraction"></a>포인터 빼기  
- 두 피연산자가 모두 포인터인 경우 빼기의 결과는 피연산자 간 배열 요소의 차이입니다. 빼기 식 형식의 부호 있는 정수 계열 결과 **ptrdiff_t** (표준 포함 파일에 정의 된 \<stddef.h >).  
+ 두 피연산자가 모두 포인터인 경우 빼기의 결과는 피연산자 간 배열 요소의 차이입니다. 빼기 식 형식의 부호 있는 정수 계열 결과 `ptrdiff_t` (표준 포함 파일에 정의 된 \<stddef.h >).  
   
  피연산자 중 하나가 두 번째 피연산자라면 정수 계열 형식이 될 수 있습니다. 빼기 결과는 원래 포인터와 동일한 형식입니다. 빼기의 값이에 대 한 포인터는 (*n* - *있나요*) 번째 배열 요소에 있는 *n* 이 요소가 가리키는 원래 포인터와 *있습니까* 두 번째 피연산자의 정수 값입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [이항 연산자가 있는 식](../cpp/expressions-with-binary-operators.md)   
  [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 가감 연산자](../c-language/c-additive-operators.md)

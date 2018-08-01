@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6116baca2303807748a4d282acda81233ed32957
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28f0cedbe20ebea21b3b10e5016605c1bce51383
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957389"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407389"
 ---
 # <a name="member-access-control-c"></a>멤버 Access Control(C++)
 액세스 제어를 사용 하면 분리할 수는 [공개](../cpp/public-cpp.md) 에서 클래스의 인터페이스는 [개인](../cpp/private-cpp.md) 구현 세부 정보 및 [보호](../cpp/protected-cpp.md) 멤버에 대해서만 사용 하 여 파생된 클래스입니다. 액세스 지정자는 다음 액세스 지정자가 나타날 때까지 해당 액세스 지정자 뒤에 선언된 모든 멤버에 적용됩니다.  
@@ -42,7 +42,6 @@ private:                 // Declare private state variables.
 protected:      // Declare protected function for derived classes only.  
     Point ToWindowCoords();  
 };  
-  
 ``` 
   
  기본 액세스가 **사설** 클래스에서 및 **공용** 구조체 또는 공용 구조체에서. 클래스의 액세스 지정자는 순서에 관계없이 여러 번 사용할 수 있습니다. 클래스 형식 개체의 저장소 할당은 구현에 따라 다르지만 액세스 지정자 사이의 더 높은 메모리 주소가 연속적으로 멤버에 할당됩니다.  
@@ -229,5 +228,5 @@ int main()
   
  그림에서 클래스 `VBase`에 선언된 이름은 언제나 클래스 `RightPath`를 통해 도달됩니다.  `RightPath`는 `VBase`를 공용 기본 클래스로 선언하지만, `LeftPath`는 `VBase`를 비공개로 선언합니다. 따라서, 오른쪽 경로를 보다 쉽게 액세스할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C++ 언어 참조](../cpp/cpp-language-reference.md)

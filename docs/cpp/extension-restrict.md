@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e402fc9a32b92960f251796365199a608d6d1137
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b1ed49662b28f2ac84fc8c53f677b2deada974d3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944857"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403507"
 ---
 # <a name="restrict"></a>__restrict
 같은 **__declspec ( [제한](../cpp/restrict.md) )** 한정자를 **__restrict** 키워드 기호가 현재 범위에 별칭이 지정 아님을 나타냅니다. 합니다 **__restrict** 에서 다른 키워드는 `__declspec ( restrict )` 다음과 같이 한정자:  
@@ -63,5 +63,5 @@ union z {
 };  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [키워드](../cpp/keywords-cpp.md)

@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f95423f2e5489676c18a5e8535f1fcd7a9d2d7aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bcac41ca04fbba6eeef74c9170f0eb8ef4f534fe
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408571"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401999"
 ---
 # <a name="comptrt-member-functions"></a>_com_ptr_t Member 함수
-에 대 한 내용은 `_com_ptr_t` 멤버 함수는 참조 [_com_ptr_t 클래스](../cpp/com-ptr-t-class.md)합니다.  
+에 대 한 자세한 합니다 **_com_ptr_t** 멤버 함수를 참조 하십시오 [_com_ptr_t 클래스](../cpp/com-ptr-t-class.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_com_ptr_t 클래스](../cpp/com-ptr-t-class.md)

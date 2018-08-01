@@ -18,25 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bda87a0241e61cfc3fa26d4829f0504b784e8ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7b333d42f5e5e309ffa17e8c267dcb22ec30e6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409448"
 ---
 # <a name="explicit-overrides-c"></a>명시적 재정의 (C++)
 **Microsoft 전용**  
   
- 두 개 이상에 동일한 가상 함수를 선언 하는 경우 [인터페이스](../cpp/interface.md) 이러한 인터페이스에서 파생 된 클래스는 경우 각 가상 함수 명시적으로 재정의할 수 있습니다.  
+ 두 개 이상에서 사용 하는 동일한 가상 함수가 선언 된 경우 [인터페이스](../cpp/interface.md) 클래스는 이러한 인터페이스에서 파생 하는 경우 각 가상 함수 명시적으로 재정의할 수 있습니다.  
   
- 새 관리 되는 구문을 사용 하 여 관리 코드에서 명시적에 대 한 정보를 재정의 대 한 참조 [명시적으로 재정의](../windows/explicit-overrides-cpp-component-extensions.md)합니다.  
+ 새 관리 되는 구문을 사용 하 여 관리 코드에서 명시적 방법은 재정의 참조 하세요 [명시적으로 재정의](../windows/explicit-overrides-cpp-component-extensions.md)합니다.  
   
  **Microsoft 전용 종료**  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 명시적 재정의를 사용하는 방법을 보여 줍니다.  
   
-```  
+```cpp 
 // deriv_ExplicitOverrides.cpp  
 // compile with: /GR  
 extern "C" int printf_s(const char *, ...);  
@@ -126,5 +127,5 @@ In CMyClass::IMyInt2::mf2()
 In CMyClass::IMyInt2::mf2(int)  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [상속](../cpp/inheritance-cpp.md)

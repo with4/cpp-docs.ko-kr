@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223bf6996d5142cbe8d3521c65596beb40312f2c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5a68a0a67748e79fe4379cb5f820cca0c845f392
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941187"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405485"
 ---
 # <a name="namespaces-c"></a>네임스페이스 (C++)
 네임스페이스는 내부 식별자(형식, 함수, 변수 등의 이름)에 범위를 제공하는 선언적 영역입니다. 네임스페이스는 코드를 논리 그룹으로 구성하고 특히 코드베이스에 여러 라이브러리가 포함된 경우 발생할 수 있는 이름 충돌을 방지하는 데 사용됩니다. 네임스페이스 범위에 있는 모든 식별자는 한정 없이 서로에게 표시됩니다. 네임 스페이스 외부 식별자 예를 들어 각 식별자의 정규화 된 이름을 사용 하 여 멤버에 액세스할 수 있습니다 `std::vector<std::string> vec;`, 또는 [선언을 사용 하 여](../cpp/using-declaration.md) 는 단일 식별자에 대 한 (`using std::string`), 또는 [using 지시문](../cpp/namespaces-cpp.md#using_directives) 네임 스페이스의 모든 식별자에 대 한 (`using namespace std;`). 헤더 파일의 코드는 항상 정규화된 네임스페이스 이름을 사용해야 합니다.  
@@ -59,7 +59,6 @@ ContosoData::Func(mgr);
 using ContosoData::ObjectManager;  
 ObjectManager mgr;  
 mgr.DoSomething();  
-  
 ```  
   
  using 지시문을 사용하여 네임스페이스의 모든 식별자를 범위로 가져오기:  
@@ -70,7 +69,6 @@ using namespace ContosoData;
 ObjectManager mgr;  
 mgr.DoSomething();  
 Func(mgr);  
-  
 ```  
   
 ## <a id="using_directives"></a> using 지시문  
@@ -91,11 +89,10 @@ namespace ContosoDataServer
 {  
     void Foo();  
     int Bar();  
-  
 }  
 ```  
   
- Contosodata.cpp의 함수 구현은 배치 하는 경우에 정규화 된 이름을 사용 해야는 `using` 파일의 맨 위에 있는 지시문:  
+ Contosodata.cpp의 함수 구현은 배치 하는 경우에 정규화 된 이름을 사용 해야는 **를 사용 하 여** 파일의 맨 위에 있는 지시문:  
   
 ```cpp  
 #include "contosodata.h"  
@@ -154,7 +151,6 @@ namespace ContosoDataServer
   
     int Bar(){...};  
     int Baz(int i) { return Details::CountImpl; }      
-  
 }  
 ```  
   
@@ -211,7 +207,6 @@ namespace Parent
      template<>  
      class C<int> {};  
 }  
-  
 ```  
   
  인라인 네임스페이스를 버전 관리 메커니즘으로 사용하여 라이브러리의 공용 인터페이스에 대한 변경 내용을 관리할 수 있습니다. 예를 들어 단일 부모 네임스페이스를 만들고 인터페이스의 각 버전을 부모 안에 중첩된 자체 네임스페이스에 캡슐화할 수 있습니다. 가장 최근 버전이나 기본 설정 버전을 보유한 네임스페이스는 인라인으로 한정되므로 부모 네임스페이스의 직접 멤버인 것처럼 노출됩니다. Parent::Class를 호출하는 클라이언트 코드는 자동으로 새 코드에 바인딩합니다. 이전 버전을 사용하려는 클라이언트는 해당 코드가 있는 중첩된 네임스페이스의 정규화된 경로를 사용하여 계속 액세스할 수 있습니다.  
@@ -252,7 +247,6 @@ namespace Contoso
       };  
     }  
 }  
-  
 ```  
   
 ## <a id="namespace_aliases"></a> Namespace 별칭  
@@ -262,7 +256,6 @@ namespace Contoso
 namespace a_very_long_namespace_name { class Foo {}; }  
 namespace AVLNN = a_very_long_namespace_name;  
 void Bar(AVLNN::Foo foo){ }  
-  
 ```  
   
 ## <a name="anonymous-or-unnamed-namespaces"></a>익명 또는 명명되지 않은 네임스페이스  
@@ -277,5 +270,5 @@ namespace
   
  이 명명 되지 않은 또는 익명 네임 스페이스 라고 하며 다른 파일에 변수 선언을 코드에 표시 되지 않도록 하려는 경우 유용 (즉, 내부 연결 제공)를 명명된 된 네임 스페이스를 만들 필요 없이 합니다. 동일한 파일의 모든 코드에서 명명되지 않은 네임스페이스의 식별자를 볼 수 있지만, 해당 파일 외부 또는 보다 정확히 말해 변환 단위 외부에서는 네임스페이스 자체와 함께 식별자를 볼 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [선언 및 정의](declarations-and-definitions-cpp.md)

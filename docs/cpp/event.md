@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abfda38c6c35c3e7172b187c89fa78bed5ee7616
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 74b79edb24396896a6c8a50965081e9466720ca4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944518"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407827"
 ---
 # <a name="event"></a>__event
 이벤트를 선언합니다.  
@@ -31,7 +31,6 @@ ms.locfileid: "37944518"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 __event method-declarator;  
 __event __interface interface-specifier;  
 __event member-declarator;  
@@ -67,7 +66,7 @@ __event HRESULT OnClick(int* b, char* s);
  참조 [네이티브 c + +에서 이벤트 처리](../cpp/event-handling-in-native-cpp.md) 샘플 코드에 대 한 합니다.  
   
 ## <a name="com-events"></a>COM 이벤트  
- COM 이벤트는 인터페이스입니다. 이벤트 소스 인터페이스의 메서드 매개 변수 여야 `in` 매개 변수 (그러나 엄격 하 게 적용 되지) 때문에 `out` 매개 변수는 멀티 캐스팅 시 유용 하지 않습니다. 사용 하는 경우는 수준 1 경고가 발행 됩니다는 `out` 매개 변수입니다.  
+ COM 이벤트는 인터페이스입니다. 이벤트 소스 인터페이스의 메서드 매개 변수 여야 합니다 *에* 매개 변수 (그러나 엄격 하 게 적용 되지) 때문에 *out* 매개 변수는 멀티 캐스팅 시 유용 하지 않습니다. 사용 하는 경우는 수준 1 경고가 발행 됩니다는 *out* 매개 변수입니다.  
   
  반환 형식은 일반적으로 HRESULT 또는 **void**에서 정수 계열 형식일 수 있지만 포함 **열거형**합니다. 이벤트가 정수 계열 반환 형식을 사용하고 이벤트 처리기가 0이 아닌 값을 반환하는 경우는 오류 조건이며 이 경우 발생하는 이벤트가 다른 대리자에 대한 호출을 중단합니다. 컴파일러는 자동으로 이벤트 소스 인터페이스를 표시 하는 점에 유의 한 [원본](../windows/source-cpp.md) 생성된 된 IDL에서.  
   
@@ -133,7 +132,7 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [키워드](../cpp/keywords-cpp.md)   
  [이벤트 처리](../cpp/event-handling.md)   
  [event_source](../windows/event-source.md)   

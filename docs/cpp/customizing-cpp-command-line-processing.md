@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9415073630505e3cc879f53de14ed469c7e0e2ba
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e847cff10c7e17185f76b5e790beda3745732312
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939054"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406691"
 ---
 # <a name="customizing-c-command-line-processing"></a>C++ 명령줄 처리 사용자 지정
 ## <a name="microsoft-specific"></a>Microsoft 전용  
@@ -41,5 +41,5 @@ ms.locfileid: "37939054"
   
 **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [main: 프로그램 시작](../cpp/main-program-startup.md)

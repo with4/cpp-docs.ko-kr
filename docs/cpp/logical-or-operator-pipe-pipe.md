@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ce7b3085a66cf731da4373c534a95d09225d8ae
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f3c9b143ca2f156a534f7ab803974f24771b2652
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943228"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403081"
 ---
 # <a name="logical-or-operator-"></a>논리 OR 연산자: | |
 
@@ -73,7 +73,6 @@ int main() {
 ```
 
 ## <a name="see-also"></a>참고자료
-
-- [C + + 기본 제공 연산자 우선순위 및 결합성](cpp-built-in-operators-precedence-and-associativity.md)
-- [C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-- [C 논리 연산자](../c-language/c-logical-operators.md)
+ [C + + 기본 제공 연산자 우선순위 및 결합성](cpp-built-in-operators-precedence-and-associativity.md)  
+ [C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
+ [C 논리 연산자](../c-language/c-logical-operators.md)

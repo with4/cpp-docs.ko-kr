@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50cdb9899582b3e398909e4fcb7ad571025dbcf0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ce55a0eb7f6fe3861f3a5ab398e7d186449dc2e9
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941576"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402109"
 ---
 # <a name="hardware-exceptions"></a>하드웨어 예외
 운영 체제에서 인식하는 대부분의 표준 예외는 하드웨어 정의 예외입니다. Windows는 몇몇 하위 수준의 소프트웨어 예외를 인식하지만 이러한 예외는 보통 운영 체제에서 잘 처리됩니다.  
@@ -49,6 +49,6 @@ ms.locfileid: "37941576"
   
  앞의 표에 나온 예외 목록의 대부분은 디버거, 운영 체제 또는 다른 하위 수준 코드에서 처리됩니다. 정수 및 부동 소수점 오류를 제외하고 사용자 코드로 이러한 오류를 처리해서는 안 됩니다. 따라서 일반적으로 예외 처리 필터를 사용하여 예외를 무시하도록 하십시오(0으로 계산). 그러지 않으면 하위 수준 메커니즘이 적절하게 응답하지 않을 수 있습니다. 하지만 하위 수준의 오류의 잠재적 영향에 대해 적절 한 예방 조치를 수행 수 [종료 처리기 작성](../cpp/writing-a-termination-handler.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [예외 처리기 작성](../cpp/writing-an-exception-handler.md)   
  [구조적 예외 처리(C/C++)](../cpp/structured-exception-handling-c-cpp.md)

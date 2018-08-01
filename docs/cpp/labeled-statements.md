@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b54eb2757f4f58acd0339a058c8bee999b4c8b7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f5c5d626f51778782f41f4f16b7e23ad4c5acb73
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943155"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404449"
 ---
 # <a name="labeled-statements"></a>레이블 문
 레이블은 프로그램 제어를 지정된 문에 직접 전송하는 데 사용됩니다.  
@@ -60,7 +60,6 @@ int main() {
     test_label(1);  // in label1   
     test_label(2);  // in label2  
 }  
-  
 ```  
   
  **Goto 문**  
@@ -183,9 +182,8 @@ int main() {
       cerr << "At Test2 label." << endl;  
 // At Test2 label.  
 }  
-  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C + + 문 개요](../cpp/overview-of-cpp-statements.md)   
  [switch 문(C++)](../cpp/switch-statement-cpp.md)

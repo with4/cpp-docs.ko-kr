@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66371ead4c2070769b45bf5b181677431936c84
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 895a2e3a78c425511f978454d07cf9574f7d8337
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944539"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403721"
 ---
 # <a name="declarations-and-definitions-c"></a>선언 및 정의 (C++)
 선언은 프로그램에서 하는 이름, 변수, 네임 스페이스, 함수 및 클래스의 이름 예입니다. 또한, 선언은 형식 정보뿐만 아니라 선언되는 개체의 다른 특성도 지정합니다. 이름은 먼저 선언해야 사용할 수 있습니다. C++에서는 이름이 선언되는 지점에 따라 이름이 컴파일러에 표시되는지 여부가 달라집니다. 함수 또는 컴파일 단위의; 나중에 선언 된 클래스를 참조할 수 없습니다. 사용할 수 있습니다 *정방향 선언* 이 제한을 해결 하려면.  
@@ -61,7 +61,6 @@ public:
  정의가 아닌 일부 선언은 다음과 같습니다.  
   
 ```cpp 
-  
 extern int i;  
 char *strchr( const char *Str, const char Target );  
 ```  
@@ -94,6 +93,6 @@ char *strchr( const char *Str, const char Target );
     }  
     ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [기본 개념](../cpp/basic-concepts-cpp.md)   
  [선언 지점](../cpp/point-of-declaration-in-cpp.md)
