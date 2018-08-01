@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2de180d58c31f4bd6c8b15eb69076b99f8b57b0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5db832a7c6c380e43fcf5edb3f36ce1a1bf692e6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944614"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404719"
 ---
 # <a name="do-while-statement-c"></a>do-while 문(C++)
 실행을 *문* 지정된 된 종료 조건까지 반복적으로 (합니다 *식*) 계산 결과가 0 인 합니다.  
@@ -62,7 +62,7 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [반복 문](../cpp/iteration-statements-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [while 문(C++)](../cpp/while-statement-cpp.md)   

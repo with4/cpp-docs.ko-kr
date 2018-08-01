@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32558413dd0dc6f7288493067d7373a14e520e29
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1cefb6ba2fe076714b420024ec09464fd928b63d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944761"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406388"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>C++에서 예외 및 스택 해제
 C++ 예외 메커니즘에서 컨트롤은 throw 문에서 throw된 형식을 처리할 수 있는 첫 번째 catch 문으로 이동합니다. 모든 자동 변수는 throw 사이의 범위에서 및 catch 문 이라고 하는 프로세스에서 제거 됩니다 catch 문이 도달 *스택 해제*합니다. 스택 해제에서 실행은 다음과 같이 진행됩니다.  
@@ -114,5 +114,4 @@ int main()
     Exiting main.  
   
 */  
-  
 ```  

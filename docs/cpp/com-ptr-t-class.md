@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb343431a52df9fae32bb17f3303738c04385cf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 0e9e3d7f16e40d41774dd1def89ef9bdd0ba1c82
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944221"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404599"
 ---
 # <a name="comptrt-class"></a>_com_ptr_t 클래스
 **Microsoft 전용**  
   
- `_com_ptr_t` 개체는 COM 인터페이스 포인터를 캡슐화하며 "스마트" 포인터라고 합니다. 이 템플릿 클래스는 리소스 할당 및 할당 해제 함수 호출을 통해 관리 합니다 `IUnknown` 멤버 함수: `QueryInterface`, `AddRef`, 및 `Release`합니다.  
+ A **_com_ptr_t** 개체는 COM 인터페이스 포인터를 캡슐화 하 고 "스마트" 포인터 라고 합니다. 이 템플릿 클래스는 리소스 할당 및 할당 해제 함수 호출을 통해 관리 합니다 `IUnknown` 멤버 함수: `QueryInterface`, `AddRef`, 및 `Release`합니다.  
   
- 스마트 포인터는 일반적으로 _COM_SMARTPTR_TYPEDEF 매크로 의해 제공 되는 typedef 정의에서 참조 됩니다. 이 매크로는 인터페이스 이름과 IID를 사용하며 인터페이스의 이름 및 `_com_ptr_t`의 접미사로 `Ptr` 의 특수화를 선언합니다. 예를 들어:  
+ 스마트 포인터는 일반적으로 _COM_SMARTPTR_TYPEDEF 매크로 의해 제공 되는 typedef 정의에서 참조 됩니다. 이 매크로 인터페이스 이름과 IID 및의 특수화를 선언 **_com_ptr_t** 의 접미사로 인터페이스 이름의 `Ptr`합니다. 예를 들어:  
   
 ```cpp 
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
 ```  
   
- 선언 된 `_com_ptr_t` 특수화 `IMyInterfacePtr`합니다.  
+ 선언 된 **_com_ptr_t** 특수화 `IMyInterfacePtr`합니다.  
   
  집합이 [템플릿 함수](../cpp/relational-function-templates.md),이 서식 파일의 멤버가 아닌 클래스 비교 연산자의 오른쪽에 있는 스마트 포인터를 사용 하 여 지원 비교 합니다.  
   
@@ -42,7 +42,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|`_com_ptr_t` 개체를 생성합니다.|  
+|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|생성 된 **_com_ptr_t** 개체입니다.|  
   
 ### <a name="low-level-operations"></a>하위 수준 연산  
   
@@ -61,7 +61,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[operator =](../cpp/com-ptr-t-operator-equal.md)|기존 `_com_ptr_t` 개체에 새 값을 할당합니다.|  
+|[operator =](../cpp/com-ptr-t-operator-equal.md)|기존에 새 값을 할당 **_com_ptr_t** 개체입니다.|  
 |[operators ==, !=, \<, >, \<=, >=](../cpp/com-ptr-t-relational-operators.md)|스마트 포인터 개체를 다른 스마트 포인터, 원시 인터페이스 포인터를 비교 하거나 NULL.|  
 |[추출기](../cpp/com-ptr-t-extractors.md)|캡슐화된 COM 인터페이스 포인터를 추출합니다.|  
   
@@ -72,5 +72,5 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
  **Lib:** comsuppw.lib 또는 comsuppwd.lib (참조 [/zc: wchar_t (wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 자세한)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [컴파일러 COM 지원 클래스](../cpp/compiler-com-support-classes.md)

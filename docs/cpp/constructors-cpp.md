@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53a05467a876a8b305aba64e49e0763cf5690a56
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 52d1727018fd2ad214e031229945daa4d843f115
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940887"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403065"
 ---
 # <a name="constructors-c"></a>생성자 (C++)
 
@@ -30,7 +30,6 @@ ms.locfileid: "37940887"
 생성자는 멤버 init 목록을 걸릴 필요에 따라 수 있습니다. 이것이 생성자 본문의 값을 할당 하는 보다 클래스 멤버를 초기화 하는 보다 효율적인 방법입니다. 다음 예제에서는 클래스를 보여 줍니다. `Box` 3 개 생성자 오버 로드 합니다. 마지막 두 멤버 초기화 목록을 사용 하 여:
 
 ```cpp
-
 class Box {
 public:
     // Default constructor
@@ -55,13 +54,11 @@ private:
     int m_length{ 0 };
     int m_height{ 0 };
 };
-
 ```
 
 클래스의 인스턴스를 선언 하는 경우 컴파일러를 호출 하는 생성자 오버 로드 확인 규칙에 따라 선택 합니다.
 
 ```cpp
-
 int main()
 {
     Box b; // Calls Box()
@@ -73,7 +70,6 @@ int main()
     // Using function-style notation:
     Box b4(2, 4, 6); // Calls Box(int, int, int)
 }
-
 ```
 
 - 생성자로 선언할 수 있습니다 **인라인**, [명시적](#explicit_constructors)를 **friend** 하거나 [constexpr](#constexpr_constructors)합니다.
@@ -87,7 +83,6 @@ int main()
 직접 멤버 초기화 하므로 생성자의 본문에 값 할당을 통해 멤버 이니셜라이저 목록을 사용 하는 것이 좋습니다. 다음 예제에서를 보여 줍니다 멤버 이니셜라이저 목록이 모든 합니다 **identifier(argument)** 콜론 뒤 식:
 
 ```cpp
-  
     Box(int width, int length, int height)
         : m_width(width), m_length(length), m_height(height)
     {}
@@ -133,7 +128,6 @@ int main() {
     Box box1; // Invoke compiler-generated constructor
     cout << "box1.Volume: " << box1.Volume() << endl; // Outputs 0
 }
-
 ```
 
 암시적 기본 생성자를 사용 하는 경우 수 이전 예제와 같이 클래스 정의에서 멤버를 초기화 해야 합니다. 이러한 이니셜라이저 없이 멤버는 초기화 되지 않은 및 Volume() 호출 가비지 값을 생성 합니다. 일반적으로 것 암시적 기본 생성자를 사용 하지 않고도 하는 경우에이 방식으로 멤버를 초기화 하는 것이 좋습니다.
@@ -141,7 +135,6 @@ int main() {
 컴파일러는 암시적 기본 생성자로 정의 하 여 생성에서 방지할 수 있습니다 [삭제](#explicitly_defaulted_and_deleted_constructors):
 
 ```cpp
-
     // Default constructor
     Box() = delete;
 
@@ -180,14 +173,12 @@ int main(){
     Box box2{ 2, 3, 4 };
     Box box3; // C2512: no appropriate default constructor available
 }
-
 ```
 
 클래스에 기본 생성자가 없는 경우 대괄호 구문만 사용하여 해당 클래스의 개체 배열을 생성할 수 없습니다. 예를 들어 이전 코드 블록에서 다음과 같이 상자 배열을 선언할 수 없습니다.
 
 ```cpp
 Box boxes[3]; // C2512: no appropriate default constructor available
-
 ```
 
 그러나 상자 개체의 배열을 초기화할 이니셜라이저 목록 집합을 사용할 수 있습니다.
@@ -205,7 +196,6 @@ A *복사 생성자* 동일한 유형의 개체에서 멤버 값을 복사 하 �
 복사 생성자를 이러한 서명 중 하나가 있어야 있습니다.
 
 ```cpp
-
     Box(Box& other); // Avoid if possible--allows modification of other.
     Box(const Box& other);
     Box(volatile Box& other);
@@ -240,7 +230,6 @@ Box(Box&& other);
 #include <string>
 #include <algorithm>
 using namespace std;
-
 
 class Box {
 public:
@@ -298,8 +287,6 @@ int main()
     cin >> ch; // keep window open
     return 0;
 }
-
-
 ```
 
 클래스는 이동 생성자를 정의 하지 않으면, 없는 사용자가 선언한 복사 생성자, 복사 할당 연산자, 이동 할당 연산자 또는 소멸자가 없는 경우 컴파일러는 암시적 하나를 생성 합니다. 명시적 또는 암시적 이동 생성자가 없습니다.이 정의 되어 있으면 작업 그렇지 않은 경우 이동 생성자를 사용 하는 대신 복사 생성자를 사용 합니다. 클래스는 이동 생성자 또는 이동 할당 연산자를 선언 하는 경우 삭제 된 것으로 암시적으로 선언 된 복사 생성자가 정의 됩니다.
@@ -338,7 +325,6 @@ public:
 - 모든 비정적 데이터 멤버 및 기본 클래스의 하위 개체 초기화 됩니다.
 - 클래스 variant 멤버가 있는 공용 구조체 (a), (b) 익명 공용 구조체에 공용 구조체 멤버 중 하나에 초기화 됩니다.
 - 클래스 형식의 모든 비정적 데이터 멤버 및 기본 클래스의 모든 하위 개체에 constexpr 생성자
-
 
 ## <a name="init_list_constructors"></a> 이니셜라이저 목록 생성자
 
@@ -385,13 +371,11 @@ private:
 }
 //elsewhere...
     ShippingOrder so(42, 10.8);
-
 ```
 
 경우에 따라 이러한 변환은 유용할 수 있지만 코드에서 미세하지만 심각한 오류를 발생시키는 경우가 더 자주 있습니다. 일반적으로 사용 해야 합니다 **명시적** 생성자 (및 사용자 정의 연산자) 이러한 종류의 암시적 형식 변환 방지 하려면 키워드:
 
 ```cpp
-
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
@@ -412,7 +396,6 @@ explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 다음 예제에서는 파생 클래스의 생성자에서 기본 클래스 및 멤버 생성자가 호출되는 순서를 보여 줍니다. 먼저 기본 생성자를 호출하고, 기본 클래스 멤버를 클래스 선언에 표시되는 순서대로 초기화한 다음 파생된 생성자를 호출합니다.
 
 ```cpp
-
 #include <iostream>
 
 using namespace std;
@@ -450,12 +433,11 @@ private:
 int main() {
     DerivedContainer dc;
 }
-
 ```
 
 출력은 다음과 같습니다.
 
-```output
+```Output
 Contained1 ctor
 Contained2 ctor
 BaseContainer ctor
@@ -463,7 +445,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-파생 클래스 생성자는 항상 기본 클래스 생성자를 호출하므로, 완전히 생성된 기본 클래스를 통해서만 다른 작업을 수행할 수 있습니다. 기본 클래스 생성자는 파생 순서대로 호출됩니다. 예를 들어 ClassA는 ClassB에서 파생되고, ClassB는 ClassC에서 파생될 경우 ClassC 생성자, ClassB 생성자, ClassA 생성자의 순으로 호출됩니다.
+파생 클래스 생성자는 항상 기본 클래스 생성자를 호출하므로, 완전히 생성된 기본 클래스를 통해서만 다른 작업을 수행할 수 있습니다. 기본 클래스 생성자는 파생 순서 대로 호출 됩니다-예를 들어 경우 `ClassA` 에서 파생 됩니다 `ClassB`에서 파생 된 `ClassC`의 `ClassC` 생성자가 먼저 호출 하면 `ClassB` 생성자는 `ClassA` 생성자입니다.
 
 기본 클래스에 기본 생성자가 없는 경우 파생 클래스 생성자에 기본 클래스 생성자 매개 변수를 제공해야 합니다.
 
@@ -537,18 +519,15 @@ public:
 int main() {
     DerivedClass dc;
 }
-
 ```
 
 다음과 같이 출력됩니다.
 
-```output
-
+```Output
 BaseClass1 ctor
 BaseClass2 ctor
 BaseClass3 ctor
 DerivedClass ctor
-
 ```
 
 ## <a name="virtual_functions_in_constructors"></a> 생성자의 가상 함수
@@ -587,7 +566,7 @@ int main() {
 
 출력은 다음과 같습니다.
 
-```output
+```Output
 BaseClass print_it
 Derived Class print_it
 ```
@@ -666,7 +645,6 @@ Derived d1(5) calls: Base(int)
 Derived d1('c') calls: Base(char)
 Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
-
 ```
 
 using 문은 파생 클래스의 생성자와 동일한 서명을 사용하는 생성자를 제외하고 모든 생성자를 기본 클래스에서 범위로 가져옵니다. 일반적으로 파생 클래스에서 새 데이터 멤버나 생성자를 선언하지 않는 경우 상속 생성자를 사용하는 것이 가장 좋습니다.
@@ -679,7 +657,6 @@ class Derived : T {
     using T::T;   // declare the constructors from T
     // ...
 };
-
 ```
 
 파생 클래스는 다중 기본 클래스에 동일한 서명을 사용하는 생성자가 있는 경우 해당 다중 기본 클래스에서 상속할 수 없습니다.

@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50995ff1d5eb730bf6593679194d32d5300b9d7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8a37ae011ec2f06a505063678f481e6e41696c86
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943139"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401369"
 ---
 # <a name="badcast-exception"></a>bad_cast 예외
-`bad_cast` 예외는 참조 형식에 대한 실패한 캐스팅 결과로 `dynamic_cast` 연산자가 throw합니다.  
+합니다 **bad_cast** 예외를 throw 합니다 **dynamic_cast** 참조 형식에 실패 한 캐스팅 결과로 연산자.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,7 +36,7 @@ catch (bad_cast)
 ```  
   
 ## <a name="remarks"></a>설명  
- `bad_cast`의 인터페이스는 다음과 같습니다.  
+ 에 대 한 인터페이스 **bad_cast** 됩니다.  
   
 ```cpp 
 class bad_cast : public exception {  
@@ -47,7 +47,7 @@ public:
 };  
 ```  
   
- 다음 코드에는 `dynamic_cast` 예외를 throw하는 실패한 `bad_cast`의 예제가 포함되어 있습니다.  
+ 다음 코드에는 실패 한의 예가 포함 되어 있습니다. **dynamic_cast** 을 throw 합니다 **bad_cast** 예외입니다.  
   
 ```cpp 
 // expre_bad_cast_Exception.cpp  
@@ -78,7 +78,7 @@ int main() {
 }  
 ```  
   
- 캐스팅될 개체(모양)가 지정된 캐스트 형식(원)에서 파생되지 않으므로 예외가 throw됩니다. 예외를 방지 하려면 추가 이러한 선언을 **주**:  
+ 캐스팅될 개체(모양)가 지정된 캐스트 형식(원)에서 파생되지 않으므로 예외가 throw됩니다. 예외를 방지하려면 `main`에 다음과 같은 선언을 추가합니다.  
   
 ```cpp 
 Circle circle_instance;  
@@ -91,7 +91,7 @@ Circle& ref_circle = circle_instance;
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [dynamic_cast 연산자](../cpp/dynamic-cast-operator.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [C++ 예외 처리](../cpp/cpp-exception-handling.md)

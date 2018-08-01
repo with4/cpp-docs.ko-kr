@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208564"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404940"
 ---
 # <a name="overview-of-declarators"></a>선언자 개요
 선언자는 개체 또는 함수 이름을 지정하는 선언의 구성 요소입니다. 선언자는 명명된 개체가 개체, 포인터, 참조 또는 배열인지 여부도 지정합니다.  선언자는 기본 형식을 지정하지는 않지만, 포인터, 참조 및 배열과 같은 파생 형식을 지정하는 기본 형식의 형식 정보를 수정합니다.  함수에 적용되는 선언자는 형식 지정자와 함께 작동하여 개체, 포인터 또는 참조가 될 함수의 반환 형식을 완전히 지정합니다. (에 설명 된 지정자 [선언 및 정의](declarations-and-definitions-cpp.md), 형식 및 저장소 클래스와 같은 속성을 전달 합니다. 이 섹션에서 설명 된 한정자 [Microsoft 전용 한정자](../cpp/microsoft-specific-modifiers.md), 선언 자를 수정 합니다.) 다음 그림에서는 `MyFunction`의 전체 선언과 선언의 구성 요소를 보여 줍니다.  
@@ -172,13 +172,11 @@ int a, *b, c[5], **d, &e=a;
   - 포인터 연산자 선언 자   
   - (선언)  
 
-  
 - 및 *포인터 연산자* 중 하나입니다.  
   
   - \* [cv 한정자]  
   - & [cv 한정자]:: 중첩 이름 지정자 \* [cv 한정자]  
 
-  
  선언자에 선언자를 포함시킬 수 있기 때문에, 위의 규칙을 사용하여 포인터의 배열이나 함수 포인터의 배열을 반환하는 함수 같은 더욱 복잡한 파생 형식을 생성할 수 있습니다.  생성의 각 단계의 만들려면, 기본 데이터 형식을 표시하는 식별자로 시작하여 이전의 식을 `declarator`로 사용해 위의 구문 규칙을 적용해야 합니다.  구문 규칙을 적용하는 순서는 영어로 식을 만드는 방식의 반대입니다.  적용 하는 경우는 *포인터 연산자* 배열 또는 마지막 행 다음 표에서 같이 함수에 대 한 포인터를 원하는 경우 배열 또는 함수 식에 구문 규칙에서 괄호를 사용 합니다.  
   
  다음 예제에서는 "int의 10개 포인터 배열의 포인터"의 생성을 보여 줍니다.  

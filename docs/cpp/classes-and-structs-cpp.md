@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88836d93d6ce3ba4dff817c7b470e87f48f61b14
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffd822aa59af9c703d00f8fc195fe4eeb91ce833
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954179"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405472"
 ---
 # <a name="classes-and-structs-c"></a>클래스 및 구조체(C++)
 이 섹션에서는 C++ 클래스 및 구조체를 소개합니다. 구조체에서는 기본 접근성이 공용이고, 클래스에서는 기본값이 개인이라는 점을 제외하면 C++에서 두 구문이 동일합니다.  
@@ -70,5 +70,5 @@ ms.locfileid: "38954179"
 |기본 액세스가 공용임|기본 액세스가 개인임|기본 액세스가 공용임|  
 |사용 제약 조건 없음|사용 제약 조건 없음|한 번에 한 멤버만 사용|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C++ 언어 참조](../cpp/cpp-language-reference.md)

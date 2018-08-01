@@ -17,12 +17,12 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 746b0829be6f66203d22cae4072dded9f6be32d8
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 9f6950049d9bd9b9264383ab6e5e216023526880
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939704"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404767"
 ---
 # <a name="header-files-c"></a>헤더 파일 (c + +)
 
@@ -92,18 +92,24 @@ int main()
 
 ## <a name="include-guards"></a>가드를 포함 합니다.
 
-일반적으로 헤더 파일에는 *include 가드* 또는 **#pragma 번** 지시문을 단일.cpp 파일에 여러 번 없습니다 삽입할 수 있는지 확인 합니다. 
+일반적으로 헤더 파일에는 *include 가드* 또는 `#pragma once` 지시문을 단일.cpp 파일에 여러 번 없습니다 삽입할 수 있는지 확인 합니다. 
 
-my_class.h
-#<a name="ifndef-myclassh--include-guard"></a>ifndef MY_CLASS_H / include 가드 /
-#<a name="define-myclassh"></a>MY_CLASS_H 정의
+```cpp
+// my_class.h
+#ifndef MY_CLASS_H // include guard
+#define MY_CLASS_H
 
-
-네임 스페이스 N {my_class 클래스 {공용: void do_something();};
-
+namespace N
+{
+    class my_class
+    {
+    public:
+        void do_something();
+    };
 }
 
-#<a name="endif--myclassh-"></a>endif / * MY_CLASS_H * /
+#endif /* MY_CLASS_H */
+```
 
 ## <a name="what-to-put-in-a-header-file"></a>헤더 파일에 삽입할 항목에
 
@@ -129,14 +135,12 @@ my_class.h
 
 namespace N  // namespace declaration
 {
-
     inline namespace P
     {
         //...
     }
 
     enum class colors : short { red, blue, purple, azure };
-
 
     const double PI = 3.14;  // const and constexpr definitions
     constexpr int MeaningOfLife{ 42 };
@@ -153,7 +157,6 @@ namespace N  // namespace declaration
 #ifdef LOG   // conditional compilation directive
     void print_to_log();
 #endif
-
 
     class my_class   // regular class definition, 
     {                // but no non-inline function definitions
@@ -190,5 +193,5 @@ namespace N  // namespace declaration
 
     template <typename T>  // template declaration
     class value_widget;
-
 }
+```

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fccba0fe09c6e2fcc636d478824c7dfcc699d653
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 365f9196f3d482098c29bf4b04610120ecbbeec4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941553"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406044"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>개체 수명 및 리소스 관리(최신 C++)
 관리 되는 언어와 달리 c + +에는 프로그램이 실행 될 때 자동으로 아니요 긴-사용 되는 메모리 리소스를 릴리스 하는 가비지 수집 (GC)이 없습니다. C + +에서는 리소스 관리 개체 수명을 직접 관련 되어 있습니다. 이 문서에서는 c + +에서 개체 수명 및 관리 하는 방법에 영향을 주는 요인을 설명 합니다.  
@@ -42,7 +42,6 @@ auto p = make_shared<widget>(); // no leak, and exception safe
 p->draw();   
   
 } // no delete required, out-of-scope triggers smart pointer destructor  
-  
 ```  
   
  사용 하 여 `unique_ptr` 고유 소유권에 대 한 예는 *캡슐화 pimpl* 관용구 합니다. (참조 [컴파일 시간 캡슐화에 대 한 Pimpl](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) 확인을 `unique_ptr` 모두 명시적의 기본 대상이 **새** 식입니다.  
@@ -61,7 +60,6 @@ class node {
   ...  
 };  
 node::node() : parent(...) { children.emplace_back(new node(...) ); }  
-  
 ```  
   
  성능 최적화가 필요한 경우 사용 해야 할 수 있습니다 *잘 캡슐화 된* 포인터 및 삭제에 대 한 명시적 호출을 소유 합니다. 예에는 고유한 하위 수준 데이터 구조를 구현 하는 경우입니다.  
@@ -90,7 +88,7 @@ void functionUsingWidget () {
   
  정적 수명을 제한적으로 사용 (전역 정적, 로컬 정적 함수) 하므로 문제가 발생할 수 있습니다. 전역 개체의 생성자는 예외를 throw 하면 어떻게 되나요? 일반적으로 응용 프로그램 오류를 디버그 하기가 어려워질 수 있도록 합니다. 생성 순서는 정적 수명 개체에 대 한 문제가 및 동시성 안전 하지 않습니다. 뿐만 아니라 개체 생성을은 문제가 소멸 순서 다형성이 포함 하는 경우에 특히 복잡할 수 있습니다. 사용자 개체 또는 변수가 다형 아니고 없는 복잡 한 생성/소멸 순서 지정, 경우에 경우 여전히 스레드로부터 안전한 동시성 문제 안전 하 게 다중 스레드 앱 스레드 로컬 저장소, 리소스 잠금 및 기타 특별 한 주의 하지 않고도 정적 개체의 데이터를 수정할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C + +의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)

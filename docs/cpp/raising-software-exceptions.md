@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1ea4abadc3b751b8bad9f9521462d510c5227
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3eb98f0b66090a9c9e5f09b0cde3e3f94a6c0248
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944704"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405190"
 ---
 # <a name="raising-software-exceptions"></a>소프트웨어 예외 발생
 프로그램 오류의 가장 일반적인 원인 중 몇 가지는 시스템에서 예외로 플래그가 지정되지 않습니다. 예를 들어 메모리 블록을 할당하려고 시도하지만 메모리가 부족한 경우, 런타임 또는 API 함수에서 예외를 발생시키지 않지만 오류 코드를 반환합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "37944704"
 #define STATUS_FILE_BAD_FORMAT        0xE0000002  
 ```  
   
- 예외 코드를 정의한 후 예외 코드를 사용하여 예외를 발생시킬 수 있습니다. 예를 들어 다음 코드에서는 메모리 할당 문제에 대한 응답으로 STATUS_INSUFFICIENT_MEM 예외를 발생시킵니다.  
+ 예외 코드를 정의한 후 예외 코드를 사용하여 예외를 발생시킬 수 있습니다. 예를 들어, 다음 코드를 발생 시킵니다는 `STATUS_INSUFFICIENT_MEM` 메모리 할당 문제에 대 한 응답으로 예외:  
   
 ```cpp 
 lpstr = _malloc( nBufferSize );  
@@ -80,6 +80,6 @@ __except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
         GetExceptionCode() == STATUS_FILE_BAD_FORMAT )  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [예외 처리기 작성](../cpp/writing-an-exception-handler.md)   
  [구조적 예외 처리(C/C++)](../cpp/structured-exception-handling-c-cpp.md)

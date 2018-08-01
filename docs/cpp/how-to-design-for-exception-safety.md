@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dd7448d50debc54cde075b8a6879af8b1be62c9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a9eaee55c806ea2efc82300cad47cc744c0a491
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940325"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403695"
 ---
 # <a name="how-to-design-for-exception-safety"></a>방법: 예외 안전성을 위한 디자인
 예외에 대한 데이터와 함께 예외 메커니즘의 장점 중 하나는, 예외를 throw하는 문에서 이를 처리하는 첫 번째 catch 문으로 직접 이동할 수 있다는 점입니다. 처리기는 호출 스택에서 아무 상위 수준에나 있을 수 있습니다. try 문과 throw 문 사이에 호출되는 함수는 throw된 예외에 대한 정보를 알아야 할 필요가 없습니다.  하지만 예외가 위쪽으로 전파될 수 있는 어느 지점에서든 "예기치 않게" 범위 밖으로 이동할 수 있고, 부분적으로 생성된 개체, 누출된 메모리 또는 불안정한 상태의 데이터 구조를 벗어나지 않고도 그렇게 할 수 있도록 설계되어야 합니다.  
@@ -86,7 +86,6 @@ private:
 public:  
     SPShapeResourceClass() : m_p(new Circle), m_q(new Triangle) { }  
 };  
-  
 ```  
   
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>RAII 이디엄을 사용해서 리소스 관리  
@@ -119,6 +118,6 @@ public:
   
 -   예외가 소멸자로부터 벗어나도록 허용하지 않습니다. C++의 기본 원리에서는 소멸자가 호출 스택으로 예외를 전파하도록 허용해서는 안됩니다. 소멸자가 잠재적 예외를 throw할 수 있는 작업을 수행해야 하는 경우에는 try catch 블록에서 작업을 수행하고 예외를 무시해야 합니다. 표준 라이브러리에는 여기에서 정의하는 모든 소멸자에 대해 이 수준의 보증을 제공합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [오류 및 예외 처리](../cpp/errors-and-exception-handling-modern-cpp.md)   
  [방법: 예외 코드와 예외가 아닌 코드 간 인터페이스](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

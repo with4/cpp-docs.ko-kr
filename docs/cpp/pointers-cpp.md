@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: aa741a794d0e6735ae2cecea07a87481abc18cec
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944488"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404111"
 ---
 # <a name="pointers-c"></a>포인터 (c + +)
 포인터는 다음 시퀀스를 사용하여 선언합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "37944488"
 [ms-modifier] declarator ;  
 ```  
   
- 여기서 모든 유효한 포인터 선언자를 `declarator`에 사용할 수 있습니다.  단순한 포인터 선언자 구문은 다음과 같습니다.  
+ 여기서 모든 유효한 포인터 선언자를 `declarator`에 사용할 수 있습니다. 단순한 포인터 선언자 구문은 다음과 같습니다.  
   
 ```  
 * [cv-qualifiers] identifier [= expression]  
@@ -249,8 +249,7 @@ int main() {
 ```  
   
 ```Output  
-  
-      a  
+a  
 45  
 d  
 a  
@@ -268,6 +267,6 @@ node 2 = 789
 a (add node)  d (display list)  q (quit)  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [간접 참조 연산자: *](../cpp/indirection-operator-star.md)   
  [주소 연산자: &](../cpp/address-of-operator-amp.md)

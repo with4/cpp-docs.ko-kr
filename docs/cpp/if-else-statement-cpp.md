@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42174837f0f60f9a4e3ba9f19702210d6d34ccca
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943156"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405112"
 ---
 # <a name="if-else-statement-c"></a>if-else 문 (C++)
 조건부 분기를 제어 합니다. 문에서 *경우 블록* 실행 된 경우에 합니다 *if 식은* 0이 아닌 값 (또는 TRUE)으로 계산 되. 경우 값 *식* 는 0이 아니면 *문 1* 블록에 있는 다른 문이 실행 되 고 다른-블록에 있는 경우를 건너뜁니다. 경우 값 *식* 가 0 이면 다음 경우 블록을 생략 되 고 다른-블록이 있으면 실행 됩니다. 0이 아닌 값으로 계산 되는 식은
@@ -36,7 +36,6 @@ ms.locfileid: "37943156"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 if ( expression )  
 {
    statement1;
@@ -131,7 +130,6 @@ int main()
 #include <string>
 #include <algorithm>
 
-
 using namespace std;
 
 map<int, string> m;
@@ -159,13 +157,11 @@ int main()
         shared_flag = false;
     }
 
-
     string s{ "if" };
     if (auto keywords = { "if", "for", "while" }; any_of(keywords.begin(), keywords.end(), [&s](const char* kw) { return s == kw; }))
     {
         cout << "Error! Token must not be a keyword\n";
     }
-
 }
 ```
 
@@ -196,9 +192,7 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-  
- 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [선택 문](../cpp/selection-statements-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [switch 문(C++)](../cpp/switch-statement-cpp.md)

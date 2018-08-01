@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7721e617541b962994b115344f33e1ec59e4acaf
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: af8470d0ae45d1075fa8b35585225ee0c48db80b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944839"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406509"
 ---
 # <a name="hook"></a>__hook
 처리기 메서드를 이벤트와 연결합니다.  
@@ -30,7 +30,6 @@ ms.locfileid: "37944839"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 long __hook(  
    &SourceClass::EventMethod,  
    source,  
@@ -103,7 +102,7 @@ long __hook(
 ## <a name="example"></a>예  
  참조 [네이티브 c + +에서 이벤트 처리](../cpp/event-handling-in-native-cpp.md) 하 고 [COM에서 이벤트 처리](../cpp/event-handling-in-com.md) 샘플에 대 한 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [키워드](../cpp/keywords-cpp.md)   
  [이벤트 처리](../cpp/event-handling.md)   
  [event_source](../windows/event-source.md)   

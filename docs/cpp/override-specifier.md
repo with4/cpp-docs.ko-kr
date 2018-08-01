@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c95a67df03f62279b7b9c46ef41b6cafe7ff3df1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940656"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408153"
 ---
 # <a name="override-specifier"></a>override 지정자
 사용할 수는 **재정의** 키워드를 기본 클래스의 가상 함수를 재정의 하는 함수 멤버를 지정 합니다.  
@@ -27,7 +27,6 @@ ms.locfileid: "37940656"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 function-declaration override;  
 ```  
   
@@ -56,9 +55,7 @@ class DerivedClass: public BaseClass
     virtual void funcC(double = 0.0); // DerivedClass::funcC(double) has a different  
                                       // parameter type than BaseClass::funcC(int), so  
                                       // DerivedClass::funcC(double) is a new member function  
-  
 };  
-  
 ```  
   
  사용 하는 경우 **재정의**, 컴파일러는 자동으로 새 멤버 함수를 만드는 대신 오류를 생성 합니다.  
@@ -86,12 +83,10 @@ class DerivedClass: public BaseClass
     void funcD() override; // compiler error: DerivedClass::funcD() does not   
                            // override the non-virtual BaseClass::funcD()  
 };  
-  
 ```  
   
  함수를 재정의할 수 없습니다 및 클래스를 상속할 수 없습니다 지정 하려면 사용 합니다 [최종](../cpp/final-specifier.md) 키워드입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [final 지정자](../cpp/final-specifier.md)   
  [키워드](../cpp/keywords-cpp.md)   
- 

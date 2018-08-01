@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86c61792ab20bc0c10c9297d2a66588dd3c066ef
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2f6359cb50146dac6e502cf68469c877c776617b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944287"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407717"
 ---
 # <a name="nested-class-declarations"></a>중첩 클래스 선언
 클래스는 다른 클래스의 범위 내에서 선언될 수 있습니다. 이러한 클래스를 "중첩 클래스"라고 합니다. 중첩 클래스는 바깥쪽 클래스의 범위 내에 있는 것으로 간주되고 해당 범위 내에서 사용할 수 있습니다. 바로 바깥쪽 범위 이외의 범위에서 중첩 클래스를 참조하려면 정규화된 이름을 사용해야 합니다.  
@@ -212,5 +212,5 @@ int GetExtendedErrorStatus( char *message )
   
  이전의 인터페이스를 사용하면 여러 클래스에서 오류 메시지를 복사할 메모리 위치를 전달하여 이 함수의 서비스를 사용할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [클래스 및 구조체](../cpp/classes-and-structs-cpp.md)

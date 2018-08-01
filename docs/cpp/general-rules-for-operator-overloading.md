@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 80058aa22de10088c3901d0c129635288bf880b5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944260"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403458"
 ---
 # <a name="general-rules-for-operator-overloading"></a>연산자 오버로드에 대한 일반 규칙
 다음 규칙은 오버로드된 연산자를 구현하는 방법을 제한합니다. 그러나에 적용 되지 않습니다 합니다 [새](../cpp/new-operator-cpp.md) 하 고 [삭제](../cpp/delete-operator-cpp.md) 은 별도로 다루는 연산자입니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "37944260"
   
 -   오버로드된 연산자는 기본 인수를 사용할 수 없습니다.  
   
--   할당(`operator=`)을 제외한 모든 오버로드된 연산자는 파생 클래스에서 상속합니다.  
+-   오버 로드 된 모든 할당을 제외 하 고 연산자 (**연산자 =**) 파생된 클래스에서 상속 됩니다.  
   
 -   멤버 함수 오버로드된 연산자의 첫 번째 인수는 항상 연산자가 호출되는 개체의 클래스 형식입니다(연산자가 선언된 클래스 또는 해당 클래스에서 파생된 클래스). 첫 번째 인수에 대한 변환은 제공되지 않습니다.  
   
@@ -72,10 +72,10 @@ var++;
 ++var;  
 ```  
   
- 연산자를 오버로드하는 클래스 형식의 경우 이 ID에 의존할 수 없습니다. 또한 기본 형식에 대한 이러한 연산자의 사용에서 암시적인 일부 요구 사항은 오버로드된 연산자의 경우 완화됩니다. 예를 들어 `+=`라는 더하기/할당 연산자를 사용하려면 기본 형식에 적용된 경우 왼쪽 피연산자가 l-value가 되어야 합니다. 연산자가 오버로드되는 경우에는 이러한 요구 사항이 없습니다.  
+ 연산자를 오버로드하는 클래스 형식의 경우 이 ID에 의존할 수 없습니다. 또한 기본 형식에 대한 이러한 연산자의 사용에서 암시적인 일부 요구 사항은 오버로드된 연산자의 경우 완화됩니다. 예를 들어 더하기/대입 연산자 **+=** 는 왼쪽 피연산자는 l-value 이어야 기본 형식에 적용할 때 연산자 오버 로드 된 경우 이러한 요구 사항은 없습니다.  
   
 > [!NOTE]
 > 일관성을 위해 오버로드된 연산자를 정의하는 경우 기본 제공 형식의 모델을 따르는 것이 가장 좋습니다. 오버로드된 연산자의 의미 체계가 다른 컨텍스트에서의 해당 의미와 크게 다른 경우 유용하기보다 혼동을 줄 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [연산자 오버로드](../cpp/operator-overloading.md)

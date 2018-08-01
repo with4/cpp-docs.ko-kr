@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7334fdc420c096c42360dd6b75fc400b8b34f3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1369614cfd20d39fee3f2c2dd1ca7436ae742d2b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941800"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405381"
 ---
 # <a name="nonstandard-behavior"></a>비표준 동작
 다음 섹션은 Visual C++ 구현이 C++ 표준을 준수하지 않는 일부 알려진 장소를 나열합니다. 아래의 섹션 번호는 C++ 11 표준(ISO/IEC 14882:2011(E))의 섹션 번호를 나타냅니다.  
@@ -67,7 +67,6 @@ int main() {
     g('c');  
 }  
 // Output: f(char)  
-  
 ```  
   
 ## <a name="function-exception-specifiers"></a>함수 예외 지정자  
@@ -81,7 +80,7 @@ void g() throw();    // parsed and used
  예외 사양에 대 한 자세한 내용은 참조 하세요. [예외 사양](../cpp/exception-specifications-throw-cpp.md)합니다.  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- C + + 표준에서는 [char_traits:: eof](../standard-library/char-traits-struct.md#eof) 유효한에 해당 하면 안 `char_type` 값입니다. Visual c + + 컴파일러는 형식에 대 한이 제약 조건은 **char**, 형식이 아니라 `wchar_t`합니다. 이것은 C++ ISO 사양의 단원 12.1.1, 표 62의 요구 사항에 맞지 않습니다. 아래 예제에서는 이 작업을 보여 줍니다.  
+ C + + 표준에서는 [char_traits:: eof](../standard-library/char-traits-struct.md#eof) 유효한에 해당 하면 안 `char_type` 값입니다. Visual c + + 컴파일러는 형식에 대 한이 제약 조건은 **char**, 형식이 아니라 **wchar_t**합니다. 이것은 C++ ISO 사양의 단원 12.1.1, 표 62의 요구 사항에 맞지 않습니다. 아래 예제에서는 이 작업을 보여 줍니다.  
   
 ```cpp  
 #include <iostream>  

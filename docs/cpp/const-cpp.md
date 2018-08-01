@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b6fea501724b24c07ab8b2199410a369d62dc9d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 73e030ede8305db4ea05826f0ce7704420ac0400
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944593"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403403"
 ---
 # <a name="const-c"></a>const (C++)
 데이터 선언을 수정할 때 합니다 **const** 키워드는 개체 또는 변수는 수정할 수를 지정 합니다.  
@@ -29,7 +29,6 @@ ms.locfileid: "37944593"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 const declaration ;  
 member-function const ;  
 ```  
@@ -172,5 +171,5 @@ extern "C" const int x=10;
   
 -   [#define](../preprocessor/hash-define-directive-c-cpp.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [키워드](../cpp/keywords-cpp.md)

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411e1649b8d9a7f072af48103ff17af92e1a7deb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4502f4752d094805ac9e31bbd4fdcbd1b0fdbdab
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944779"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403263"
 ---
 # <a name="comptrt-relational-operators"></a>_com_ptr_t 관계형 연산자
 **Microsoft 전용**  
@@ -53,7 +53,6 @@ ms.locfileid: "37944779"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 template<typename _OtherIID>   
 bool operator==( const _com_ptr_t<_OtherIID>& p );  
   
@@ -127,5 +126,5 @@ bool operator>=( _InterfaceType* p );
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_com_ptr_t 클래스](../cpp/com-ptr-t-class.md)

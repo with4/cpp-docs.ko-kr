@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178c75efa84ebc7d27c19feb81e81314dc4c5bd7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a445e9c435f9e077899a2a473dc5862f98a36bf4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944548"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405521"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>숫자, 부울 및 포인터 리터럴 (c + +)
 리터럴은 값을 직접 나타내는 프로그램 요소입니다. 이 문서에서는 정수, 부동 소수점, 부울 및 포인터 형식의 리터럴에 대해 설명합니다. 문자열 및 문자 리터럴에 대 한 정보를 참조 하세요 [문자열 및 문자 리터럴 (c + +)](../cpp/string-and-character-literals-cpp.md)합니다. 이러한 범주; 중 하나에 따라 고유한 리터럴을 정의할 수도 있습니다. 자세한 내용은 참조 하세요. [사용자 정의 리터럴 (c + +)](../cpp/user-defined-literals-cpp.md)  
@@ -33,7 +33,6 @@ const int answer = 42; // integer literal
 double d = sin(108.87);     //floating point literal passed to sin function  
 bool b = true;              // boolean literal  
 MyClass* mc = nullptr;      // pointer literal  
-  
 ```  
   
  경우에 따라 리터럴을 해석하는 방법 또는 지정할 특정 형식을 컴파일러에 알려야 합니다. 이렇게 하려면 리터럴에 접두사나 접미사를 추가합니다. 예를 들어 접두사 0x는 해당 접두사 뒤에 오는 숫자를 16진수 값(예: 0x35)으로 해석하도록 컴파일러에 알립니다. ULL 접미사 값 처리 하도록 컴파일러에 지시를 **부호 없는 long long** 5894345ull 형식입니다. 각 리터럴 형식에 대한 접두사 및 접미사의 전체 목록을 다음 섹션을 참조하세요.  
@@ -129,7 +128,6 @@ void func( long double );
  이진 리터럴은 `0B` 또는 `0b` 접두사와 뒤에 오는 1과 0의 시퀀스를 사용하여 지정할 수 있습니다.  
   
 ```cpp 
-  
 auto x = 0B001101 ; // int  
 auto y = 0b000001 ; // int  
 ```  
@@ -140,12 +138,11 @@ auto y = 0b000001 ; // int
 ```cpp 
 if (num < 100)  
     return "Success";  
-  
 ```  
   
  이전 예제에서는 명확한 의미를 전달하는 명명된 상수(예: "MAXIMUM_ERROR_THRESHOLD")를 사용하는 것이 더 나을 수 있습니다. 또한 최종 사용자에게 "성공"이라는 반환 값이 표시되는 경우 다른 언어로 지역화할 수 있는 파일의 단일 위치에 저장할 수 있는 명명된 문자열 상수를 사용하는 것이 더 좋을 수 있습니다. 명명된 상수를 사용하면 모든 사람이 코드의 의도를 쉽게 파악할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [어휘 규칙](../cpp/lexical-conventions.md)   
  [C + + 문자열 리터럴](../cpp/string-and-character-literals-cpp.md)   
  [C + + 사용자 정의 리터럴](../cpp/user-defined-literals-cpp.md)

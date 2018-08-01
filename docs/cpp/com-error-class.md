@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d59782b62ddfb51601505be6d12f01ce14cd4f1
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 60fc445d51cfa72a6c72984ff19b877d916ded53
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026636"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407763"
 ---
 # <a name="comerror-class"></a>_com_error 클래스
 **Microsoft 전용**  
   
- `_com_error` 개체 형식 라이브러리에서 생성 된 헤더 파일의 오류 처리 래퍼 함수를 통해 또는 COM 지원 클래스 중 하나를 검색 하는 예외 상태를 나타냅니다. 합니다 `_com_error` 클래스는 HRESULT 오류 코드 및 연결 된 캡슐화 `IErrorInfo Interface` 개체입니다.  
+ A **_com_error** 개체 형식 라이브러리에서 생성 된 헤더 파일의 오류 처리 래퍼 함수를 통해 또는 COM 지원 클래스 중 하나를 검색 하는 예외 상태를 나타냅니다. 합니다 **_com_error** HRESULT 오류 코드 및 연결 된 클래스에서 캡슐화 `IErrorInfo Interface` 개체입니다.  
   
 ### <a name="construction"></a>생성  
   
 |||  
 |-|-|  
-|[_com_error](../cpp/com-error-com-error.md)|`_com_error` 개체를 생성합니다.|  
+|[_com_error](../cpp/com-error-com-error.md)|생성 된 **_com_error** 개체입니다.|  
   
 ### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[operator =](../cpp/com-error-operator-equal.md)|기존 `_com_error` 개체를 다른 개체에 할당합니다.|  
+|[operator =](../cpp/com-error-operator-equal.md)|기존 할당 **_com_error** 다른 개체입니다.|  
   
 ### <a name="extractor-functions"></a>Extractor 함수  
   
@@ -62,7 +62,7 @@ ms.locfileid: "39026636"
   
 |||  
 |-|-|  
-|[ErrorMessage](../cpp/com-error-errormessage.md)|에 저장 된 HRESULT에 대 한 문자열 메시지를 검색 합니다 `_com_error` 개체입니다.|  
+|[ErrorMessage](../cpp/com-error-errormessage.md)|에 저장 된 HRESULT에 대 한 문자열 메시지를 검색 합니다 **_com_error** 개체입니다.|  
   
 ### <a name="exepinfowcode-to-hresult-mappers"></a>HRESULT 매퍼를 ExepInfo.wCode  
   
@@ -78,6 +78,6 @@ ms.locfileid: "39026636"
   
  `Lib:` 에서는 comsuppw.lib 또는 comsuppwd.lib (참조 [/zc: wchar_t (wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 자세한)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [컴파일러 COM 지원 클래스](../cpp/compiler-com-support-classes.md)   
  [IErrorInfo 인터페이스](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)

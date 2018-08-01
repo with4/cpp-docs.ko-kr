@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff66cb2efd1f095fee18e6db428b9f29c9f7812
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: cae12ecefebe81bf73ffdbc32c0ce253e726dda2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938943"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405044"
 ---
 # <a name="lambda-expression-syntax"></a>람다 식 구문
 이 문서에서는 람다 식의 구문과 구성 요소에 대해 설명합니다. 람다 식의 설명을 참조 하세요 [람다 식](../cpp/lambda-expressions-in-cpp.md)합니다.  
@@ -84,16 +84,15 @@ int main()
 8 is even  
 9 is odd  
 There are 4 even numbers in the vector.  
-  
 ```  
   
 ### <a name="comments"></a>설명  
  예제에서는 세 번째 인수는 **for_each** 함수는 람다입니다. `[&evenCount]` 부분은 식의 캡처 절을 지정하고`(int n)`은 매개 변수 목록을 지정하고 나머지 부분은 식의 본문을 지정합니다.  
   
 ## <a name="example-2-using-a-function-object"></a>예제 2: 함수 개체 사용하기  
- 때로는 람다가 너무 비대해져서 이전 예제보다 훨씬 더 확장할 수 없습니다. 다음 예제에서는 람다 대신에 함수 개체와 함께 사용 하 여는 **for_each** 함수 예 1과 동일한 결과를 생성 합니다. 두 예제 모두 `vector` 개체에 짝수의 수를 저장합니다. 연산의 상태를 유지하기 위해 `FunctorClass` 클래스는 `m_evenCount` 변수를 멤버 변수로 참조하면서 저장합니다. 연산을 수행하려면, `FunctorClass`는 함수 호출 연산자, `operator()`를 구현합니다. Visual C++ 컴파일러는 성능과 사이즈가 예제 1의 람다 코드와 비슷한 코드를 생성합니다. 이 문서의 문제와 같은 기본적인 문제의 경우 함수 개체 디자인보다 간단한 람다 디자인이 더 좋습니다. 그러나 이 기능에 나중에 중요한 확장이 필요할 수 있다면 코드 유지 관리를 더 수월하게 할 수 있도록 함수 개체 디자인을 사용합니다.  
+ 때로는 람다가 너무 비대해져서 이전 예제보다 훨씬 더 확장할 수 없습니다. 다음 예제에서는 람다 대신에 함수 개체와 함께 사용 하 여는 **for_each** 함수 예 1과 동일한 결과를 생성 합니다. 두 예제 모두 `vector` 개체에 짝수의 수를 저장합니다. 연산의 상태를 유지하기 위해 `FunctorClass` 클래스는 `m_evenCount` 변수를 멤버 변수로 참조하면서 저장합니다. 작업을 수행할 `FunctorClass` 함수 호출 연산자를 구현 **operator ()** 합니다. Visual C++ 컴파일러는 성능과 사이즈가 예제 1의 람다 코드와 비슷한 코드를 생성합니다. 이 문서의 문제와 같은 기본적인 문제의 경우 함수 개체 디자인보다 간단한 람다 디자인이 더 좋습니다. 그러나 이 기능에 나중에 중요한 확장이 필요할 수 있다면 코드 유지 관리를 더 수월하게 할 수 있도록 함수 개체 디자인을 사용합니다.  
   
- 에 대 한 자세한 내용은 합니다 `operator()`를 참조 하세요 [함수 호출](../cpp/function-call-cpp.md). 에 대 한 자세한 내용은 합니다 **for_each** 함수를 참조 하십시오 [for_each](../standard-library/algorithm-functions.md#for_each)합니다.  
+ 에 대 한 자세한 내용은 합니다 **operator ()** 를 참조 하세요 [함수 호출](../cpp/function-call-cpp.md). 에 대 한 자세한 내용은 합니다 **for_each** 함수를 참조 하십시오 [for_each](../standard-library/algorithm-functions.md#for_each)합니다.  
   
 ### <a name="code"></a>코드  
   
@@ -150,7 +149,6 @@ int main()
     cout << "There are " << evenCount  
         << " even numbers in the vector." << endl;  
 }  
-  
 ```  
   
 ## <a name="output"></a>출력  
@@ -166,10 +164,9 @@ int main()
 8 is even  
 9 is odd  
 There are 4 even numbers in the vector.  
-  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [람다 식](../cpp/lambda-expressions-in-cpp.md)   
  [람다 식의 예](../cpp/examples-of-lambda-expressions.md)   
  [생성](../standard-library/algorithm-functions.md#generate)   

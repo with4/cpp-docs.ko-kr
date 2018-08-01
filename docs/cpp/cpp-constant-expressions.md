@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fef56154f34f645b279ffccd99915d366388cb06
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 06a07c9d37994b4214da9b2eb53d02104525d7c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026704"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408114"
 ---
 # <a name="c-constant-expressions"></a>C++ 상수 식
 A *상수* 값이 변경 되지 않습니다. C++에서는 개체를 수정할 수 없음을 나타내는 의도를 표현하고 해당 의도를 적용할 수 있는 두 가지 키워드를 제공합니다.  
@@ -53,9 +53,9 @@ const double Size = 11.0;
 char chArray[(int)Size];  
 ```  
   
-상수 식에서는 정수 계열 형식에 대한 명시적 변환이 적합합니다. `sizeof` 연산자의 피연산자로 사용되는 경우를 제외하고 다른 모든 형식과 파생 형식은 적합하지 않습니다.  
+상수 식;에 정수 계열 형식에 대 한 명시적 변환이 적합 다른 모든 형식과 파생된 형식을 피연산자로 사용 되는 경우를 제외 하 고 올바르지 않습니다.는 **sizeof** 연산자입니다.  
   
 쉼표 연산자와 할당 연산자를 상수 식에 사용할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [식의 형식](../cpp/types-of-expressions.md)

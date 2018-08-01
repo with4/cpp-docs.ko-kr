@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1057754b5c98086de42daedd5e7aab70656eba69
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3366995105f6295fd1d4d89ad85896fbb625519d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943251"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402498"
 ---
 # <a name="naked-c"></a>naked(C++)
 **Microsoft 전용**  
@@ -41,7 +41,6 @@ __declspec(naked) declarator
 
  함수는도 표시 하는 경우에 컴파일러는 naked 특성으로 표시 하는 함수에 대 한 인라인 함수를 생성할 수 없습니다는 [__forceinline](inline-functions-cpp.md) 키워드입니다.  
 
-  
  컴파일러에서 오류가 발생 하는 경우는 **naked** 특성 멤버가 아닌 메서드의 정의 이외의 값으로 적용 됩니다.  
   
 ## <a name="examples"></a>예제  
@@ -73,7 +72,7 @@ __declspec( naked ) int func();  // Error--naked attribute not permitted on func
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [__declspec](../cpp/declspec.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [Naked 함수 호출](../cpp/naked-function-calls.md)

@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17eb18438f4b39c7f07d144dad2c16db2f49553b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52e1dcd3ab6697a2d4643389d1a70cda86b04f80
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409578"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403578"
 ---
 # <a name="basic-concepts--c"></a>기본 개념 (c + +)
-이 섹션에서는 c + + 이해에 필수적인 개념을 설명 합니다. C 프로그래머 이러한 개념에 대해 잘 알고 있지만 예기치 않은 프로그램 결과 일으킬 수 있는 몇 가지 미묘한 차이가 있습니다. 주제는 다음과 같습니다.  
+이 섹션에서는 c + + 이해에 필수적인 개념을 설명 합니다. C 프로그래머는 이러한 개념을 사용 하 여 익숙할 것도 예기치 않은 프로그램 결과 일으킬 수 있는 몇 가지 미묘한 차이가 있습니다. 주제는 다음과 같습니다.  
   
 -   [선언 및 정의](../cpp/declarations-and-definitions-cpp.md)  
   
--   [범위는 c + + 개체 또는 함수](../cpp/scope-visual-cpp.md)  
+-   [C + + 개체 또는 함수의 범위](../cpp/scope-visual-cpp.md)  
   
 -   [프로그램 정 및 링크 규칙](../cpp/program-and-linkage-cpp.md)  
   
@@ -42,5 +42,5 @@ ms.locfileid: "32409578"
   
 -   [간단한 표준 레이아웃 및 POD 형식](../cpp/trivial-standard-layout-and-pod-types.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C++ 언어 참조](../cpp/cpp-language-reference.md)

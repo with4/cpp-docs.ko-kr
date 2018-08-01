@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84738fa2c99e658d4e05dc45a9f942218964eb68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7e7b426d3bc4f0913422f508279db9727f6e1f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414678"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406821"
 ---
 # <a name="expressions-with-binary-operators"></a>이항 연산자로 구성된 식
 이항 연산자는 한 식에서 두 개의 피연산자에 대해 작동합니다. 이항 연산자는 다음과 같습니다.  
@@ -66,13 +66,13 @@ ms.locfileid: "32414678"
   
     -   [비트 배타적 OR (^)](../cpp/bitwise-exclusive-or-operator-hat.md)  
   
-    -   [비트 포함 OR (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+    -   [포괄적 비트 OR (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
   
 -   논리 연산자  
   
-    -   [논리적 AND (& &)](../cpp/logical-and-operator-amp-amp.md)  
+    -   [논리 AND (& &)](../cpp/logical-and-operator-amp-amp.md)  
   
-    -   [논리적 OR (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)  
+    -   [논리 OR (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)  
   
 -   [할당 연산자](../cpp/assignment-operators.md)  
   
@@ -80,7 +80,7 @@ ms.locfileid: "32414678"
   
     -   더하기 대입(+=)  
   
-    -   빼기 할당 (-)  
+    -   빼기 대입 (-)  
   
     -   곱하기 대입(*=)  
   
@@ -96,9 +96,9 @@ ms.locfileid: "32414678"
   
     -   배타적 비트 OR 대입(^=)  
   
-    -   비트 포함 OR 대입 (&#124;=)  
+    -   포괄적 비트 OR 대입 (&#124;=)  
   
 -   [쉼표 연산자](../cpp/comma-operator.md) (,)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [식의 형식](../cpp/types-of-expressions.md)

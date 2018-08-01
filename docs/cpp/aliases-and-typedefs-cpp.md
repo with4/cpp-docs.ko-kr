@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cff0103a9debe63def6dbbcf7e3730a8e09dcbc2
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5fe9e5c1099f6c30483cdb20c48daf9c35fbed8e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944455"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404979"
 ---
 # <a name="aliases-and-typedefs-c"></a>별칭 및 typedef(C++)
 사용할 수는 *별칭 선언* 이전에 선언 된 형식에 대 한 동의어로 사용할 이름을 선언할 수 있습니다. (이 메커니즘은 라고도 비공식적으로 *형식 별칭*). 만들려면이 메커니즘을 사용할 수도 있습니다는 *별칭 템플릿*, 사용자 지정 할당자에 특히 유용할 수 있습니다.  
@@ -31,10 +31,10 @@ using identifier = type;
 ```  
   
 ## <a name="remarks"></a>설명  
- `identifier`  
+ *identifier*  
  별칭 이름입니다.  
   
- `type`  
+ *type*  
  별칭을 만들 형식 식별자입니다.  
   
  별칭은 새 형식을 사용하지 않으며 기존 형식 이름의 의미를 변경할 수 없습니다.  
@@ -177,7 +177,6 @@ int main()
 // typedef UL back in scope  
 ```  
  
-  
 ```cpp 
 // typedef_specifier1.cpp  
 typedef char FlagType;  

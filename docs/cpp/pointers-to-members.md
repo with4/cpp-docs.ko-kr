@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc84a0190430caea9592bf4eb8e47ad5bc1f6ce
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944755"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407782"
 ---
 # <a name="pointers-to-members"></a>pointers_to_members
 멤버에 대한 포인터 선언은 포인터 선언의 특별한 경우입니다.  이러한 함수는 다음 시퀀스를 사용하여 선언됩니다.  
@@ -79,7 +79,7 @@ int main()
 }  
 ```  
   
- 위의 예에서 `pwCaption` 클래스의 모든 멤버에 대 한 포인터 `Window` 하는 형식이 **char\*** 합니다. `pwCaption`의 형식은 `char * Window::* `입니다. 다음 코드에서는 `SetCaption` 및 `GetCaption` 멤버 함수에 대한 포인터를 선언합니다.  
+ 위의 예에서 `pwCaption` 클래스의 모든 멤버에 대 한 포인터 `Window` 형식이 있는 `char*`합니다. `pwCaption`의 형식은 `char * Window::* `입니다. 다음 코드에서는 `SetCaption` 및 `GetCaption` 멤버 함수에 대한 포인터를 선언합니다.  
   
 ```cpp 
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
@@ -103,7 +103,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
   
  차이 **.\***  하 고 **-> \*** 는 연산자 (멤버 포인터 연산자)를 **.\***  멤버를 선택 하는 연산자 개체 또는 개체 참조를 지정 하는 동안 합니다 **-> \*** 연산자는 포인터를 통해 멤버를 선택 합니다. (이러한 연산자에 대 한 자세한 내용은 참조 하세요 [멤버 포인터 연산자가 있는 식](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- 멤버 포인터 연산자의 결과 멤버의 형식-이때 **char \*** 합니다.  
+ 멤버 포인터 연산자의 결과 멤버의 형식,이 경우 `char *`합니다.  
   
  다음 코드에서는 멤버에 대한 포인터를 사용하여 `GetCaption` 및 `SetCaption` 멤버 함수를 호출합니다.  
   
@@ -174,6 +174,3 @@ int main()
 //Output: Print function for class Base  
 Print function for class Derived  
 ```  
-  
-## <a name="see-also"></a>참고 항목  
- 

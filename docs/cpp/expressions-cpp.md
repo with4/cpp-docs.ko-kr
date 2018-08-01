@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51da4a44f99c83ba34ec035e77173946d2327fe9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4da8ac5b6d646b1ebdd31b7007f589c78f0abbe5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953365"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404586"
 ---
 # <a name="expressions-c"></a>식 (C++)
 이 단원에서는 C++ 식에 대해 설명합니다. 식은 다음과 같은 용도 중 하나 이상으로 사용되는 일련의 연산자와 피연산자입니다.  
@@ -61,5 +61,5 @@ ms.locfileid: "38953365"
     > [!NOTE]
     >  기본 제공 형식에 대한 연산자를 오버 로드할 수 없으며 해당 동작은 미리 정의되어 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C++ 언어 참조](../cpp/cpp-language-reference.md)

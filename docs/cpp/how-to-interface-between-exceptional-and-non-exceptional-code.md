@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74805c7ecd4b4ecef71d8ac1358fd6c2014e27d5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e6c3217360f504d2433551d6ad624a378f4403af
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940120"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407974"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>방법: 예외 코드와 예외가 아닌 코드 간 인터페이스
 이 문서에서는 C++ 모듈에서 일관된 예외 처리를 구현하는 방법 및 예외 경계에서 이러한 예외를 오류 코드에서 및 오류 코드로 변환하는 방법을 설명합니다.  
@@ -161,7 +161,6 @@ int main ( int argc, char* argv[] )
         cout.copyfmt(state); // restore previous formatting  
     }  
 }  
-  
 ```  
   
 ## <a name="calling-exceptional-code-from-non-exceptional-code"></a>비예외 코드에서 예외 코드 호출  
@@ -194,7 +193,6 @@ BOOL DiffFiles2(const string& file1, const string& file2)
     }   
     return FALSE;   
 }  
-  
 ```  
   
  예외에서 오류 코드로 변환하는 경우 잠재적인 문제 하나는 대개 예외에서 저장될 수 있는 다양한 정보가 오류 코드에 포함되지 않는다는 점입니다. 이 해결 하기 위해 제공할 수 있습니다는 **catch** throw 될 수 있습니다 및 오류 코드로 변환 되기 전에 예외의 세부 정보를 기록 하도록 로깅을 수행 하는 각 특정 예외 형식에 대 한 블록입니다. 여러 함수는 모두 동일한 집합을 사용 하는 경우이 방법은 많은 코드 반복을 만들 수 있습니다 **catch** 블록입니다. 구현 하는 하나의 private 유틸리티 함수로 이러한 블록을 리팩터링 하는 코드 반복을 방지 하는 좋은 방법 합니다 **시도** 하 고 **catch** 차단 하 고는 에서호출되는함수개체를수락**시도** 블록입니다. 각 공용 함수에서 람다 식으로 유틸리티 함수에 코드를 전달합니다.  
@@ -217,7 +215,6 @@ bool Win32ExceptionBoundary(Func&& f)
     }   
     return false;   
 }  
-  
 ```  
   
  다음 예제에서는 함수를 정의하는 람다 식을 작성하는 방법을 보여 줍니다. 함수가 람다 식을 사용하여 "인라인"으로 정의될 때 명명된 함수 개체로 작성된 경우 보다 읽기가 쉽습니다.  
@@ -237,11 +234,10 @@ bool DiffFiles3(const string& file1, const string& file2)
         return true;   
     });   
 }  
-  
 ```  
   
  람다 식에 대한 자세한 내용은 [람다 식](../cpp/lambda-expressions-in-cpp.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [오류 및 예외 처리](../cpp/errors-and-exception-handling-modern-cpp.md)   
  [방법: 예외 안전성을 위한 디자인](../cpp/how-to-design-for-exception-safety.md)

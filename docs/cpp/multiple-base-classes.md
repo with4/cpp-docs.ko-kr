@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 813c90db941f2eb760c4e3a36d15eca64a293bec
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 73c15cfb08bab96acf85bc517165926faced86ad
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955467"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406193"
 ---
 # <a name="multiple-base-classes"></a>다중 기본 클래스
 클래스는 둘 이상의 기본 클래스에서 파생 될 수 있습니다. (위치: 클래스는 둘 이상의 기본 클래스에서 파생 함) 다중 상속 모델에서 기본 클래스를 사용 하 여 지정 된 된 *기본-목록* 문법 요소입니다. 예를 들어 `CollectionOfBook` 및 `Collection`에서 파생된 `Book`에 대한 클래스 선언을 지정할 수 있습니다.  
@@ -97,9 +97,9 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 > [!NOTE]
 >  가상 상속은 비가상 상속과 비교했을 때 상당한 크기의 혜택을 제공하지만, 추가 처리 오버헤드가 발생할 수 있습니다.  
   
- 파생 클래스가 가상 기본 클래스에서 상속된 가상 함수를 재정의하고 파생된 기본 클래스의 생성자 또는 소멸자가 가상 기본 클래스에 대한 포인터를 사용하여 해당 함수를 호출하는 경우, 컴파일러는 추가로 숨겨진 "vtordisp" 필드를 가상 기본 클래스에 사용할 수 있습니다. /vd0 컴파일러 옵션은 숨겨진 vtordisp 생성자/소멸자 치환 멤버의 추가를 표시하지 않습니다. 기본값인 /vd1 컴파일러 옵션은 필요할 경우 사용하도록 설정됩니다. 모든 클래스 생성자와 소멸자가 실제로 가상 함수를 호출한다고 확신하는 경우에만 vtordisps를 해제합니다.  
+ 파생 클래스가 가상 기본 클래스에서 상속된 가상 함수를 재정의하고 파생된 기본 클래스의 생성자 또는 소멸자가 가상 기본 클래스에 대한 포인터를 사용하여 해당 함수를 호출하는 경우, 컴파일러는 추가로 숨겨진 "vtordisp" 필드를 가상 기본 클래스에 사용할 수 있습니다. `/vd0` 컴파일러 옵션에는 숨겨진된 vtordisp 생성자/소멸자 치환 멤버의 추가 되지 않습니다. `/vd1` 컴파일러 옵션을 기본값인 필요한 위치에 있도록 합니다. 모든 클래스 생성자와 소멸자가 실제로 가상 함수를 호출한다고 확신하는 경우에만 vtordisps를 해제합니다.  
   
- /vd 컴파일러 옵션은 전체 컴파일 모듈에 적용됩니다. 사용 합니다 **vtordisp** pragma를 표시 하지 않고 다음-클래스 단위로 vtordisp 필드를 다시 사용 하도록 설정 합니다.  
+ `/vd` 컴파일러 옵션은 전체 컴파일 모듈에 영향을 줍니다. 사용 된 `vtordisp` pragma를 표시 하지 않고 다시 `vtordisp` 클래스-기준 필드:  
   
 ```cpp 
 #pragma vtordisp( off )  
@@ -217,5 +217,5 @@ public:
   
  이 그림에서 비가상 기본 클래스를 통해 `A` 클래스의 임의 멤버에 액세스하면 모호성이 발생합니다. 컴파일러는 `B`에 연결된 하위 개체를 사용할지, 아니면 `C`에 연결된 하위 개체를 사용할지를 설명하는 정보를 가지고 있지 않습니다. 그러나 `A`를 가상 기본 클래스로 지정하면 어느 하위 개체에 액세스할지가 분명해집니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [상속](../cpp/inheritance-cpp.md)

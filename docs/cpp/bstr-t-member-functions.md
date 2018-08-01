@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 848d4a09c0422a09d62e7e6c6e3324dd4b9d2aac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a6fd3b9959e6c029a6a0b670771e6671404739b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408194"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404137"
 ---
 # <a name="bstrt-member-functions"></a>_bstr_t 멤버 함수
-에 대 한 내용은 `_bstr_t` 멤버 함수는 참조 [_bstr_t 클래스](../cpp/bstr-t-class.md)합니다.  
+에 대 한 자세한 `_bstr_t` 멤버 함수를 참조 하세요 [_bstr_t 클래스](../cpp/bstr-t-class.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_bstr_t 클래스](../cpp/bstr-t-class.md)

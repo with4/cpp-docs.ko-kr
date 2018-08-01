@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b38b608d1d254d304c7182d5063f870e2bbfcffe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: feb14056e3054cdf0e802b16ce9ff20f67da43fe
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940821"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401576"
 ---
 # <a name="for-statement-c"></a>for 문 (C++)
 조건이 false가 될 때까지 문을 반복적으로 실행합니다. 에 범위 기반의 for 문에 대 한 내용은 참조 하세요 [범위에 대 한 문 (c + +)를 기준으로](../cpp/range-based-for-statement-cpp.md)입니다.  
@@ -137,9 +137,9 @@ for (int i = 0 ; i < 5 ; i++) {
   
  기본적으로 아래 [/Ze](../build/reference/za-ze-disable-language-extensions.md)에서 선언 된 변수를 **에 대 한** 루프까지 범위 내에 남아 합니다 **에 대 한** 루프의 바깥쪽 범위가 종료 합니다.  
   
- [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) /Za를 지정 하지 않고도 for 루프에서 선언 된 변수의 표준 동작을 설정 합니다.  
+ [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) 지정 하지 않고도 for 루프에서 선언 된 변수의 표준 동작을 활성화 `/Za`합니다.  
   
- 범위 차이 사용할 수 이기도 합니다 **에 대 한** 루프 변수를 다시 선언 /Ze에서 다음과 같이:  
+ 것도 가능의 범위 차이 사용 하는 **에 대 한** 루프에서 변수를 다시 선언 `/Ze` 다음과 같습니다.  
   
 ```cpp  
 // for_statement5.cpp  
@@ -153,7 +153,7 @@ int main(){
   
  에 선언 된 변수의 표준 동작을 더 가깝게 모방이 **에 대 한** 루프에서 선언 된 변수를 필요로 하는 **에 대 한** 루프가 완료 되 면 범위를 벗어나는 루프입니다. 변수가 선언 된 경우는 **에 대 한** 루프 컴파일러 내부적으로 승격에서 지역 변수를 **에 대 한** 루프의 안에 있는 바깥쪽 범위 변수가 이미 같은 이름의 지역 변수인 경우에 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [반복 문](../cpp/iteration-statements-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [while 문(C++)](../cpp/while-statement-cpp.md)   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a46e7d314281bd19773a5c86e70a63f3c93e14
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 25172bc44c21fcb11ec3f7c77224d3214e21c5f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940328"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404612"
 ---
 # <a name="functions-c"></a>함수(C++)
 
@@ -82,7 +82,7 @@ int sum(int a, int b)
 
 함수 선언의 선택적 요소는 다음과 같습니다.
 
-1. **constexpr**, 컴파일 시간에 계산할 수 있는 함수의 반환 값을 상수 값 임을 나타냅니다.
+1. `constexpr` - 함수의 반환 값이 컴파일 시간에 계산할 수 있는 상수 값임을 나타냅니다.
 
     ```cpp
     constexpr float exp(float x, int n)
@@ -114,7 +114,7 @@ int sum(int a, int b)
 
      자세한 내용은 [인라인 함수](../cpp/inline-functions-cpp.md)합니다.
 
-1. A **noexcept** 함수는 예외를 throw 할 수 있는지 여부를 지정 하는 식입니다. 다음 예제에서 함수는 예외를 throw 하지 경우 합니다 `is_pod` 식이 **true**합니다.
+1. `noexcept` 함수는 예외를 throw 할 수 있는지 여부를 지정 하는 식입니다. 다음 예제에서 함수는 예외를 throw 하지 경우 합니다 `is_pod` 식이 **true**합니다.
 
     ```cpp
     #include <type_traits>
@@ -127,7 +127,7 @@ int sum(int a, int b)
 
 1. (멤버 함수에만 해당) Cv 한정자에 함수 인지 여부를 지정 하는 **상수** 하거나 **volatile**합니다.
 
-1. (멤버 함수에만 해당) **가상**하십시오 **재정의**, 또는 **최종**합니다. **가상** 지정 파생된 클래스에서 함수를 재정의할 수 있습니다. **재정의** 파생된 클래스에서 함수는 가상 함수 재정의 것을 의미 합니다. **최종** 의미에서 추가 함수를 재정의할 수 없습니다. 클래스를 파생 합니다. 자세한 내용은 [가상 함수](../cpp/virtual-functions.md)합니다.
+1. (멤버 함수에만 해당) **가상**하십시오 `override`, 또는 `final`합니다. **가상** 지정 파생된 클래스에서 함수를 재정의할 수 있습니다. `override`는 파생 클래스의 함수가 가상 함수를 재정의하고 있음을 의미합니다. `final`은 이후 파생 클래스에서 함수를 재정의할 수 없음을 의미합니다. 자세한 내용은 [가상 함수](../cpp/virtual-functions.md)합니다.
 
 1. (멤버 함수에만 해당) **정적** 적용 함수 멤버 함수는 클래스의 모든 개체 인스턴스를 사용 하 여 연결을 의미 합니다.
 
@@ -170,7 +170,7 @@ A *함수 정의* 선언 하 고 함수 본문 중괄호로 묶인 변수 선언
 
 멤버 함수로 선언할 수 있습니다 **const** 함수 클래스의 모든 데이터 멤버의 값을 변경 하려면 허용 되지 않음을 지정 합니다. 멤버 함수로 선언 하 여 **상수**, 적용할 컴파일러 도움이 *const 정확성*합니다. 누군가가 실수로 하려고로 선언 된 함수를 사용 하 여 개체를 수정할 **const**, 컴파일러 오류가 발생 합니다. 자세한 내용은 [const](const-cpp.md)합니다.
 
-함수를 선언 **constexpr** 컴파일 타임에 확인할 수 값 생성 될 수 있습니다 때. Constexpr 함수는 일반적으로 일반 함수 보다 더 빠르게 실행합니다. 자세한 내용은 [constexpr](constexpr-cpp.md)합니다.
+함수를 선언 `constexpr` 컴파일 타임에 확인할 수 값 생성 될 수 있습니다 때. Constexpr 함수는 일반적으로 일반 함수 보다 더 빠르게 실행합니다. 자세한 내용은 [constexpr](constexpr-cpp.md)합니다.
 
 ## <a name="function-templates"></a>함수 템플릿
 
@@ -269,11 +269,11 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 
 함수 본문 내에서 선언 된 변수는 호출을 *지역 변수* 또는 간단히 *로컬*합니다. 비정적 지역은 함수 본문 내에만 표시되며, 스택에서 선언될 경우 함수가 종료되면 범위를 벗어납니다. 지역 변수를 생성하고 값으로 반환하는 경우 컴파일러에서 일반적으로 반환 값 최적화를 수행하여 불필요한 복사 작업을 방지합니다. 지역 변수를 참조로 반환하는 경우 해당 참조를 사용하려는 호출자의 모든 시도가 지역이 제거된 후 수행되므로 컴파일러에서 경고가 발생합니다.
 
-C++에서는 지역 변수를 정적으로 선언할 수 있습니다. 이 변수는 함수 본문 내에만 표시되지만 함수의 모든 인스턴스에 대해 변수의 단일 복사본이 존재합니다. 로 지정 된 종료 하는 동안 로컬 정적 개체 소멸 됩니다 **atexit**합니다. 프로그램의 제어 흐름이 정적 개체의 선언을 건너뛰었기 때문에 정적 개체가 생성되지 않은 경우에는 해당 개체를 제거하려고 하지 않습니다.
+C++에서는 지역 변수를 정적으로 선언할 수 있습니다. 이 변수는 함수 본문 내에만 표시되지만 함수의 모든 인스턴스에 대해 변수의 단일 복사본이 존재합니다. 로컬 정적 개체는 `atexit`로 지정된 종료 중에 소멸됩니다. 프로그램의 제어 흐름이 정적 개체의 선언을 건너뛰었기 때문에 정적 개체가 생성되지 않은 경우에는 해당 개체를 제거하려고 하지 않습니다.
 
 ##  <a name="type_deduction"></a> 반환 형식 (C + + 14)에서 형식 추론
 
-C++14에서는에서 사용할 수 있습니다 **자동** 에 후행 반환 형식을 제공 하지 않고도 함수 본문에서 반환 형식을 유추 하도록 컴파일러에 지시 합니다. 사실은 **자동** 항상는 반환 값을 추론 합니다. 사용 하 여 **자동 & &** 에 대 한 참조를 추론 하도록 컴파일러에 지시 합니다.
+C++14에서는에서 사용할 수 있습니다 **자동** 에 후행 반환 형식을 제공 하지 않고도 함수 본문에서 반환 형식을 유추 하도록 컴파일러에 지시 합니다. 사실은 **자동** 항상는 반환 값을 추론 합니다. `auto&&`를 사용하여 참조를 추론하도록 컴파일러에 지시합니다.
 
 이 예에서 **자동** lhs 및 rhs 합계의 비 const 값 복사로 추론 수 됩니다.
 
@@ -434,11 +434,10 @@ int (*myFunction(char* s))(int);
 
 앞의 선언은 위에서 typedef를 사용한 선언과 같습니다.
 
-## <a name="see-also"></a>참고 항목
-
-- [함수 오버로드](../cpp/function-overloading.md)
-- [가변 인수 목록을 사용하는 함수](../cpp/functions-with-variable-argument-lists-cpp.md)
-- [명시적으로 기본 설정 및 삭제된 함수](../cpp/explicitly-defaulted-and-deleted-functions.md)
-- [함수에 대한 인수 종속 이름(Koenig) 조회](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
-- [기본 인수](../cpp/default-arguments.md)
-- [인라인 함수](../cpp/inline-functions-cpp.md)
+## <a name="see-also"></a>참고자료
+ [함수 오버로드](../cpp/function-overloading.md)  
+ [가변 인수 목록을 사용하는 함수](../cpp/functions-with-variable-argument-lists-cpp.md)  
+ [명시적으로 기본 설정 및 삭제된 함수](../cpp/explicitly-defaulted-and-deleted-functions.md)  
+ [함수에 대한 인수 종속 이름(Koenig) 조회](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)  
+ [기본 인수](../cpp/default-arguments.md)  
+ [인라인 함수](../cpp/inline-functions-cpp.md)

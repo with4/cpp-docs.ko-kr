@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 834a71f5fd670874fd7dad5a77cb89a837119c2d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: bb2f1c14028820525748c8e770a7263eedd3099f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940617"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405203"
 ---
 # <a name="explicit-instantiation"></a>명시적 인스턴스화
 명시적 인스턴스화를 통해 코드에서 실제로 사용하지 않고 템플릿 기반 클래스 또는 함수의 인스턴스를 만들 수 있습니다. 이기 때문에 유용한 라이브러리 (.lib) 파일 배포에 대 한 템플릿을 사용 하는 만드는 경우 인스턴스화되지 않은 템플릿 정의 개체 (.obj) 파일에 포함 되지 않습니다.  
@@ -59,5 +59,5 @@ extern template MyStack<int, 6>::MyStack( void );
 > [!NOTE]
 >  합니다 **extern** 특수화에는 키워드를 클래스 본문 외부에서 정의 된 멤버 함수에만 적용 됩니다. 클래스 선언 안에 정의 된 함수가 인라인 함수 간주 되며 항상 인스턴스화됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [함수 템플릿](../cpp/function-templates.md)

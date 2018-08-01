@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ef2d370f4344e4a66c70989582da8d7ac7d5186
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8e7f9c723f605a4f66d5e2bdbb4c39f50645b58b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408748"
 ---
 # <a name="cast-operator-"></a>캐스팅 연산자: ()
 형식 캐스팅은 특정 상황에서의 개체 형식에 대한 명시적 변환을 위한 메서드를 제공합니다.  
@@ -27,9 +28,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      unary-expression  
-( type-name ) cast-expression  
+unary-expression ( type-name ) cast-expression  
 ```  
   
 ## <a name="remarks"></a>설명  
@@ -37,9 +36,9 @@ ms.lasthandoff: 05/03/2018
   
  형식 캐스팅이 만들어지면 컴파일러에서 *cast-expression*을 *type-name* 형식으로 처리합니다. 모든 스칼라 형식의 개체로 또는 다른 모든 스칼라 형식에서 변환하는 데 캐스트를 사용할 수 있습니다. 명시적 형식 캐스트는 암시적 변환 결과를 확인하는 동일한 규칙으로 제한됩니다. 캐스팅에 대한 추가 제한은 특정 형식의 실제 크기 또는 표현에서 발생할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // expre_CastOperator.cpp  
 // compile with: /EHsc  
 // Demonstrate cast operator  
@@ -57,9 +56,9 @@ int main()
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp 
 // expre_CastOperator2.cpp  
 // The following sample shows how to define and use a cast operator.   
 #include <string.h>  
@@ -127,7 +126,7 @@ Note that the cast changed the raw internal string
 Raw Bytes after cast:   Exciting  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)   
  [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [명시적 형식 변환 연산자:)](../cpp/explicit-type-conversion-operator-parens.md)   

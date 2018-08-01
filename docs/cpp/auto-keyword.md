@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9b4b9e2526d621e9e9fee1d1f8c05c5a05d3312
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a02ed2a19f44f19396038f8e41cb1c7f5a069407
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941680"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405888"
 ---
 # <a name="auto-keyword"></a>auto 키워드
 합니다 **자동** 키워드는 선언 지정자. 그러나 C++ 표준에는 이 키워드의 원래 의미와 수정된 의미가 정의되어 있습니다. Visual c + + 2010 이전를 **자동** 키워드에서 변수를 선언 합니다 *자동* 저장소 클래스, 즉 변수는 로컬 수명을 갖고입니다. Visual c + + 2010을 사용 하 여 시작 합니다 **자동** 선언의 초기화 식에서 형식이 추론 되는 변수를 선언 하는 키워드입니다. [/zc: auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md) 컴파일러 옵션의 의미를 제어 합니다 **auto** 키워드입니다.  
@@ -36,8 +36,7 @@ auto declarator initializer;
   
 -   [자동](../cpp/auto-cpp.md) 의 새 정의 설명 합니다 **자동** 키워드입니다.  
   
-  
 -   [/Zc: auto (변수 형식 추론)](../build/reference/zc-auto-deduce-variable-type.md) 는 정의 컴파일러에 알리는 컴파일러 옵션을 설명 합니다 **자동** 키워드를 사용 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [키워드](../cpp/keywords-cpp.md)
