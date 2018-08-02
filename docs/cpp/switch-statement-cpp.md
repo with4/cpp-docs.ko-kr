@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d4ab0694936fe4ad25b3c56bf286e9416e4e935
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a5a8858d48a38d42dea7fba0fdce7c3a4d407a3a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944566"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462188"
 ---
 # <a name="switch-statement-c"></a>switch 문 (C++)
 정수 계열 식의 값에 따라 코드의 여러 섹션 중에서 선택할 수 있습니다.  
@@ -164,7 +164,6 @@ int main(int argc, char *argv[])
   
  A **전환** 문은 중첩 될 수 있습니다. 이러한 경우 **사례** 또는 **기본** 레이블을 연결 가장 가까운 **전환** 바깥쪽 문을 합니다.  
 
- 
 ## <a name="microsoft-specific"></a>Microsoft 전용  
  Microsoft C의 경우 값의 수를 제한 하지 않습니다는 **전환** 문입니다. 이 수는 사용 가능한 메모리에 의해서만 제한됩니다. ANSI C 257 개 이상의 case 레이블이 허용을 **전환** 문입니다.  
   
@@ -172,7 +171,6 @@ int main(int argc, char *argv[])
   
 **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [선택 문](../cpp/selection-statements-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)   
- 

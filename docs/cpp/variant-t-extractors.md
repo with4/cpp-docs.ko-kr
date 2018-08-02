@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a8480a645728808ef4eae7a42c5080313d9fc6f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c18605c7539636e3158bc1dd9fe3a47e1d3146d6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940347"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465957"
 ---
 # <a name="variantt-extractors"></a>_variant_t Extractors
 **Microsoft 전용**  
@@ -121,5 +121,5 @@ operator unsigned __int64() const;
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_variant_t 클래스](../cpp/variant-t-class.md)

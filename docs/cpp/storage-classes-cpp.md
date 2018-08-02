@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f89651ba671bf66d7d27edb047db6d1b6b15ee06
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e8f7939d42aa246c9b7d5924979357fb6301e726
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940926"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466587"
 ---
 # <a name="storage-classes-c"></a>저장소 클래스(C++)  
   
@@ -228,7 +228,7 @@ void DoSomething()
 
 -  스레드 로컬 개체의 선언과 정의가 같은 파일에서 발생하는지, 아니면 별도의 파일에서 발생하는지와 관계없이 해당 선언과 정의 둘 다에 대해 `thread_local`을 지정해야 합니다.
 
-Windows에 온 `thread_local` 기능적으로 [__declspec (thread)](../cpp/thread.md) 점을 제외 하 고 `__declspec(thread)` 형식 정의에 적용 될 수 있으며 C 코드에서 유효 합니다. 가능한 경우 항상 C++ 표준의 일부로 포팅 가능성이 큰 `thread_local`을 사용합니다.
+Windows에 온 `thread_local` 기능적으로 [__declspec (thread)](../cpp/thread.md) 점을 제외 하 고 **__declspec (thread)** 형식 정의에 적용 될 수 있으며 C 코드에서 유효 합니다. 가능한 경우 항상 C++ 표준의 일부로 포팅 가능성이 큰 `thread_local`을 사용합니다.
 
 ##  <a name="register"></a>  register
 
@@ -321,6 +321,5 @@ Destroying: Static I3
 
 - 마지막으로 `I3`과 같은 정적 지역 변수는 프로그램 지속 시간 동안 값을 보유하지만 프로그램이 종료되면 제거됩니다.
 
-## <a name="see-also"></a>참고 항목
-
+## <a name="see-also"></a>참고자료
  [선언 및 정의](../cpp/declarations-and-definitions-cpp.md)

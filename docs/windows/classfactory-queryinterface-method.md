@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b939fdd593c031eb3e750ff6b41a275fa5685cda
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c0132ddeb7a8bfa30f95d3e4c85ec03962361f3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855990"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467094"
 ---
 # <a name="classfactoryqueryinterface-method"></a>ClassFactory::QueryInterface 메서드
 매개 변수에 의해 지정 된 인터페이스에 대 한 포인터를 검색 합니다.  
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `riid`  
+ *riid*  
  인터페이스 ID입니다.  
   
- `ppvObject`  
- 이 작업이 완료 될 때 매개 변수로 지정 된 인터페이스에 대 한 포인터 `riid`합니다.  
+ *ppvObject*  
+ 이 작업이 완료 될 때를 매개 변수로 지정 된 인터페이스에 대 한 포인터 *riid*합니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공하면 S_OK이고, 그렇지 않으면 실패를 설명하는 HRESULT가 발생합니다.  

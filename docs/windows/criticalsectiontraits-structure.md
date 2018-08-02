@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5534173d594b8fc09ceca8ec44a1c1223bc550b2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b10d130190308520771e37e97d34238f75670ad
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870553"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466685"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 구조체
-잘못 된 임계 또는 중요 한 섹션을 해제 하는 함수를 지원 하기 위해 CriticalSection 개체를 특수화입니다.  
+잘못 된 임계 또는 중요 섹션을 해제 하는 함수를 지원 하기 위해 CriticalSection 개체를 전문으로 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,14 +39,14 @@ struct CriticalSectionTraits;
   
 |이름|설명|  
 |----------|-----------------|  
-|`Type`|A `typedef` 임계 영역에 대 한 포인터를 정의 하 합니다. `Type` 로 정의 `typedef CRITICAL_SECTION* Type;`합니다.|  
+|`Type`|A **typedef** 임계 영역에 대 한 포인터를 정의 하는 합니다. `Type` 로 정의 된 `typedef CRITICAL_SECTION* Type;`합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[CriticalSectionTraits::GetInvalidValue 메서드](../windows/criticalsectiontraits-getinvalidvalue-method.md)|서식 파일 항상 유효 하지 않은 있도록 CriticalSection 템플릿을 특수화 합니다.|  
-|[CriticalSectionTraits::Unlock 메서드](../windows/criticalsectiontraits-unlock-method.md)|지정 된 임계 영역 개체의 해제 소유권 지원 되도록 CriticalSection 템플릿을 특수화입니다.|  
+|[CriticalSectionTraits::GetInvalidValue 메서드](../windows/criticalsectiontraits-getinvalidvalue-method.md)|전문적으로 다루는 `CriticalSection` 템플릿 서식 파일은 항상 유효한 수 있도록 합니다.|  
+|[CriticalSectionTraits::Unlock 메서드](../windows/criticalsectiontraits-unlock-method.md)|특수화는 `CriticalSection` 를 지정 된 임계 영역 개체의 해제 소유권 지원 하므로 템플릿.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `CriticalSectionTraits`  

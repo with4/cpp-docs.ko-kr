@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1a6f88717b8fb371c343d17a9b38608876cd900
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d49f915174383273f538c38a6ec002558601ca10
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944269"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466672"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Naked 함수의 규칙 및 제한
 ## <a name="microsoft-specific"></a>Microsoft 전용  
@@ -80,5 +80,5 @@ __declspec(naked) int __fastcall  power(int i, int j) {
   
 **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [Naked 함수 호출](../cpp/naked-function-calls.md)

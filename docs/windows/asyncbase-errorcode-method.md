@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abd3eae18d793739866b6c0dd8a1b6a994093c93
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 580df181e544ced6594b049b85d7f147bd2fe22e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859581"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464618"
 ---
 # <a name="asyncbaseerrorcode-method"></a>AsyncBase::ErrorCode 메서드
-현재 비동기 작업에 대 한 오류 코드를 검색합니다.  
+현재 비동기 작업에 대 한 오류 코드를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,8 +36,8 @@ inline void ErrorCode(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `error`  
- 이 작업을 현재 오류 코드를 저장 하는 위치입니다.  
+ *error*  
+ 이 작업에서 현재 오류 코드를 저장 하는 위치를 위치입니다.  
   
 ## <a name="remarks"></a>설명  
  이 작업은 스레드로부터 안전 합니다.  

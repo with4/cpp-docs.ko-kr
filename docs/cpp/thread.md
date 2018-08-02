@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f268dd12ca0eca55cbc91bffe5daccbc23ef4dbe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 148e42a79ef7c20b7b35c3ec570212574782c1f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940152"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462094"
 ---
 # <a name="thread"></a>스레드
 
 **Microsoft 전용**
 
-합니다 **스레드** 확장된 저장소 클래스 한정자는 스레드 지역 변수를 선언 하는 데 사용 됩니다. 이식 가능한 C + + 11 안의 이상를 사용 합니다 [thread_local](../cpp/storage-classes-cpp.md#thread_local) 이식 가능한 코드에 대 한 저장소 클래스 지정자. Windows에서 `thread_local` 로 구현 됩니다 `__declspec(thread)`합니다.
+합니다 **스레드** 확장된 저장소 클래스 한정자는 스레드 지역 변수를 선언 하는 데 사용 됩니다. 이식 가능한 C + + 11 안의 이상를 사용 합니다 [thread_local](../cpp/storage-classes-cpp.md#thread_local) 이식 가능한 코드에 대 한 저장소 클래스 지정자. Windows에서 `thread_local` 로 구현 됩니다 **__declspec (thread)** 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -96,7 +96,6 @@ __declspec( thread ) int tls_i = 1;
 **Microsoft 전용 종료**
 
 ## <a name="see-also"></a>참고자료
-
-[__declspec](../cpp/declspec.md)  
-[키워드](../cpp/keywords-cpp.md)  
-[TLS(스레드 로컬 저장소)](../parallel/thread-local-storage-tls.md)  
+ [__declspec](../cpp/declspec.md)  
+ [키워드](../cpp/keywords-cpp.md)  
+ [TLS(스레드 로컬 저장소)](../parallel/thread-local-storage-tls.md)  

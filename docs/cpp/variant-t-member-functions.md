@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b618440aa97b6890f10eccb7319a40103562c218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d910c24551c8ec47d41f5bd7a3a702853ea17ea
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420852"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465082"
 ---
 # <a name="variantt-member-functions"></a>_variant_t 멤버 함수
-에 대 한 내용은 `_variant_t` 멤버 함수는 참조 [_variant_t 클래스](../cpp/variant-t-class.md)합니다.  
+에 대 한 자세한 합니다 **_variant_t** 멤버 함수를 참조 하십시오 [_variant_t 클래스](../cpp/variant-t-class.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [_variant_t 클래스](../cpp/variant-t-class.md)

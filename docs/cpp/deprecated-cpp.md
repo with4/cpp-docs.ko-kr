@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3efc793e5030fa86c3bd1214ef4b8b408361a4ef
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 77748cd69a3424bb4b2e209a0a447d39eae25147
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409088"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466906"
 ---
 # <a name="deprecated-c"></a>사용되지 않음 (C++)
 이 항목에서는 Microsoft 전용에 대해 declspec 선언은 사용 되지 않습니다. C + + 14에 대 한 자세한 `[[deprecated]]` 특성 및 해당 특성 및 Microsoft 전용 declspec 또는 pragma를 사용 하는 경우에 대 한 지침 참조 [c + + 표준 특성](attributes.md)합니다.
 
- 아래 설명 된 예외를 사용 하 여는 **더 이상 사용 되지** 선언으로 동일한 기능을 제공 합니다 [사용 되지 않는](../preprocessor/deprecated-c-cpp.md) pragma:  
+아래 설명 된 예외를 사용 하 여는 **더 이상 사용 되지** 선언으로 동일한 기능을 제공 합니다 [사용 되지 않는](../preprocessor/deprecated-c-cpp.md) pragma:  
   
 -   합니다 **사용 되지 않는** 선언을 지정할 수 특정 형태의 함수 오버 로드를 사용 하지 않는 반면에 pragma 형태 모든 오버 로드 된 형태의 함수 이름에 적용 합니다.  
   

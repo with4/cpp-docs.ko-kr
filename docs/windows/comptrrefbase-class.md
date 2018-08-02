@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13744a1629ede5575dc992ea15b90e22961a8570
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0342500fc41c650967e17919ebdc9605d4261cb5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883582"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464245"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase 클래스
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -37,11 +37,11 @@ class ComPtrRefBase;
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `T`  
- A [ComPtr\<T >](../windows/comptr-class.md) 형식 또는 형식에서 파생 된 ComPtr이 나타내는 인터페이스 뿐만 아니라 합니다.  
+ *T*  
+ A [ComPtr\<T >](../windows/comptr-class.md) 형식 또는 형식에서 파생 하 여이 나타내는 인터페이스 뿐만 아니라는 **ComPtr**합니다.  
   
 ## <a name="remarks"></a>설명  
- 에 대 한 기본 클래스를 나타냅니다는 [ComPtrRef](../windows/comptrref-class.md) 클래스입니다.  
+ 에 대 한 기본 클래스를 나타냅니다 합니다 [ComPtrRef](../windows/comptrref-class.md) 클래스입니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -49,20 +49,20 @@ class ComPtrRefBase;
   
 |이름|설명|  
 |----------|-----------------|  
-|`InterfaceType`|템플릿 매개 변수 형식에 대 한 동의어 `T`합니다.|  
+|`InterfaceType`|템플릿 매개 변수의 형식에 대 한 동의어 *T*합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[ComPtrRefBase::operator IInspectable** 연산자](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|현재 캐스팅 [ptr_](../windows/comptrrefbase-ptr-data-member.md) 데이터 멤버를 한 포인터-에-a-포인터-IInspectable 인터페이스입니다.|  
-|[ComPtrRefBase::operator IUnknown** 연산자](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|현재 캐스팅 [ptr_](../windows/comptrrefbase-ptr-data-member.md) 는 포인터를-a-포인터-대상에 데이터 멤버는 IUnknown 인터페이스입니다.|  
+|[ComPtrRefBase::operator IInspectable** 연산자](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|현재 캐스팅 [ptr_](../windows/comptrrefbase-ptr-data-member.md) 데이터 멤버는 포인터--a-포인터-을 IInspectable 인터페이스입니다.|  
+|[ComPtrRefBase::operator IUnknown** 연산자](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|현재 캐스팅 [ptr_](../windows/comptrrefbase-ptr-data-member.md) 데이터 멤버는 포인터--a-포인터-을는 IUnknown 인터페이스입니다.|  
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
-|[ComPtrRefBase::ptr_ 데이터 멤버](../windows/comptrrefbase-ptr-data-member.md)|현재 템플릿 매개 변수에 의해 지정 된 형식에 대 한 포인터입니다.|  
+|[ComPtrRefBase::ptr_ 데이터 멤버](../windows/comptrrefbase-ptr-data-member.md)|현재 템플릿 매개 변수로 지정 된 형식에 대 한 포인터입니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `ComPtrRefBase`  

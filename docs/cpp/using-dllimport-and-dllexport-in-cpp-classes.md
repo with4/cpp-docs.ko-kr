@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c7768558b735644a8f98a9380a509098c62dfeb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: fe1454ee615f489190ec455adabcd4bdecb4e0f0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944833"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460822"
 ---
 # <a name="using-dllimport-and-dllexport-in-c-classes"></a>C++ 클래스에서 dllimport 및 dllexport 사용
 ## <a name="microsoft-specific"></a>Microsoft 전용  
@@ -79,5 +79,5 @@ class DllExport C {
   
 **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [dllexport, dllimport](../cpp/dllexport-dllimport.md)

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220c8f27aec52fe707e0482eb041ea71c5bd8291
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c4426f3d25681e3ee46bf4d5da615d185babb0f0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939379"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462364"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++의 진화(최신 C++)
 C++는 전세계적으로 가장 널리 사용되는 프로그래밍 언어 중 하나입니다. 잘 작성된 C++ 프로그램은 빠르고 효율적입니다. 이 언어는 재미있고 흥미로운 게임에서 고성능 과학 소프트웨어, 장치 드라이버, 포함 프로그램 및 Windows 클라이언트 응용 프로그램에 이르기까지 다양한 응용 프로그램을 만드는 데 사용할 수 있으며 유연성이 다른 언어보다 훨씬 더 뛰어납니다. C++는 20년 이상 이러한 문제와 기타 문제를 해결하는 데 사용되었습니다. 여러분은 모르겠지만, 오래된 C 스타일 프로그래밍을 접고 대신 최신 C++를 사용하는 C++ 프로그래머의 수가 점점 증가하고 있습니다.  
@@ -49,7 +49,6 @@ C++는 전세계적으로 가장 널리 사용되는 프로그래밍 언어 중 
  C++ 언어 자체도 발전하고 있습니다. 다음 코드 조각을 비교해 보십시오. 이 코드는 기존 C++의 방식을 보여 줍니다.  
   
 ```cpp  
-
 #include <vector>
 
 void f()
@@ -81,7 +80,6 @@ void f()
  다음은 최신 C++에서는 동일한 작업이 수행되는 방식입니다.  
   
 ```cpp
-
 #include <memory>  
 #include <vector>  
 
@@ -99,7 +97,6 @@ void f()
         }
     }
 }
-
 ```
 
  최신 C++에서는 대신 스마트 포인터를 사용할 수 있으므로 new/delete 또는 명시적 예외 처리를 사용할 필요가 없습니다. 사용 하는 경우는 **자동** 형식 추론 하 고 [람다 함수](../cpp/lambda-expressions-in-cpp.md), 밀도 있게 코드를 더 빠르게 작성할 수 있습니다 및 더 잘 이해 합니다. 및 범위 기반 **에 대 한** 루프는 깔끔하고 사용 하기 쉬우며 C 스타일 보다 의도 하지 않은 오류 발생 우려가 적은 **에 대 한** 루프입니다. 상용구와 최소한의 코드 줄을 사용하여 응용 프로그램을 작성할 수 있습니다. 해당 코드를 예외와 메모리로부터 안전하게 유지할 수 있으며 할당/할당 해제 또는 오류 코드를 처리할 필요가 없습니다.  
@@ -138,7 +135,7 @@ void f()
   
  자세한 내용은 StackOverflow 문서를 참조 하세요. [어떤 c + + 관용구는 C + + 11에서 사용 되지 않습니다](http://go.microsoft.com/fwlink/p/?linkid=402836)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [람다 식](../cpp/lambda-expressions-in-cpp.md)   
  [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)  

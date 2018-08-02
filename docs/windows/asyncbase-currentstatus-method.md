@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75b9a07fd88caa9db7f2f145069b0d8857b79fe9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 316dfea16aa129dcaff42424bef46305d2dd56b4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859692"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461431"
 ---
 # <a name="asyncbasecurrentstatus-method"></a>AsyncBase::CurrentStatus 메서드
-현재 비동기 작업의 상태를 검색 합니다.  
+현재 비동기 작업의 상태를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,8 +36,8 @@ inline void CurrentStatus(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `status`  
- 이 작업의 현재 상태를 저장 하는 위치입니다.  
+ *status*  
+ 이 작업의 현재 상태를 저장 하는 위치를 위치입니다.  
   
 ## <a name="remarks"></a>설명  
  이 작업은 스레드로부터 안전 합니다.  

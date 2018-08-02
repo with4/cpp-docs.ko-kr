@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4f4a2ac9be9dc68320e5121bc86e5a4280807
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 00939b514c243f673baf7f0997f1ca3860251626
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941043"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462653"
 ---
 # <a name="typeinfo-class"></a>type_info 클래스
-`type_info` 형식 정보를 컴파일러에 의해 프로그램 내에서 생성 하는 클래스에 설명 합니다. 이 클래스의 개체는 형식의 이름에 대한 포인터를 효과적으로 저장합니다. `type_info` 클래스에는 또한 두 형식의 비교 또는 정렬 순서에 대 한 적절 한 인코딩된 값을 저장 합니다. 형식의 인코딩 규칙 및 정렬 시퀀스는 지정되지 않으며 프로그램 간에 다를 수 있습니다.  
+합니다 **type_info** 형식 정보를 컴파일러에 의해 프로그램 내에서 생성 하는 클래스에 설명 합니다. 이 클래스의 개체는 형식의 이름에 대한 포인터를 효과적으로 저장합니다. 합니다 **type_info** 클래스에는 또한 두 형식의 비교 또는 정렬 순서에 대 한 적절 한 인코딩된 값을 저장 합니다. 형식의 인코딩 규칙 및 정렬 시퀀스는 지정되지 않으며 프로그램 간에 다를 수 있습니다.  
   
- 합니다 `<typeinfo>` 헤더 파일을 사용 하려면 포함 되어야 합니다는 `type_info` 클래스입니다. 에 대 한 인터페이스를 `type_info` 클래스는:  
+ `<typeinfo>` 헤더 파일을 사용 하려면 포함 되어야 합니다 **type_info** 클래스입니다. 에 대 한 인터페이스를 **type_info** 클래스는:  
   
 ```cpp
 class type_info {  
@@ -42,11 +42,11 @@ public:
 };  
 ```  
   
- 개체를 인스턴스화할 수 없습니다는 `type_info` 클래스에 전용 복사 생성자만 있으므로 클래스를 직접. (임시)를 생성 하는 유일한 방법은 `type_info` 개체가 사용 하 여 [typeid](../cpp/typeid-operator.md) 연산자입니다. 복사 하거나 클래스의 개체를 할당할 수 없습니다. 개인 또한 대입 연산자 이므로 `type_info`합니다.  
+ 개체를 인스턴스화할 수 없습니다는 **type_info** 클래스에 전용 복사 생성자만 있으므로 클래스를 직접. (임시)를 생성 하는 유일한 방법은 **type_info** 개체가 사용 하 여 [typeid](../cpp/typeid-operator.md) 연산자입니다. 복사 하거나 클래스의 개체를 할당할 수 없습니다. 개인 또한 대입 연산자 이므로 **type_info**합니다.  
   
- `type_info::hash_code` 형식의 값을 매핑하기에 적합 한 해시 함수를 정의 `typeinfo` 인덱스 값의 분포에 있습니다.  
+ `type_info::hash_code` 형식의 값을 매핑하기에 적합 한 해시 함수를 정의 **typeinfo** 인덱스 값의 분포에 있습니다.  
   
- 연산자 `==` 하 고 `!=` 다른 같음 또는 같지 않음을 비교할 수 `type_info` 개체를 각각.  
+ 연산자 `==` 하 고 `!=` 사용 하 여 다른 같음 또는 같지 않음을 비교할 수 있습니다 **type_info** 개체를 각각.  
   
  형식의 정렬 순서와 상속 관계 간에 링크가 없습니다. 사용 된 `type_info::before` 형식의 정렬 순서를 결정 하는 멤버 함수입니다. 보장이 `type_info::before` 다른 프로그램 또는 같은 프로그램의 다른 실행에서 동일한 결과 생성 합니다. 이런 방식으로 `type_info::before` 비슷합니다 주소 `(&)` 연산자입니다.  
   
@@ -56,5 +56,5 @@ public:
   
  경우에만 다형 클래스에 대 한 형식 정보가 생성 되는 [/GR (런타임 형식 정보 사용)](../build/reference/gr-enable-run-time-type-information.md) 컴파일러 옵션을 지정 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [런타임 형식 정보](../cpp/run-time-type-information.md)

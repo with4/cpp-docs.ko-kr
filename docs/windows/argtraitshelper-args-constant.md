@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff6ef465206ce1fac50b63dad0bed60a9c57b700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 09480168f842adbcbd9e1c50056a9d16278bccc4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855057"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465833"
 ---
 # <a name="argtraitshelperargs-constant"></a>ArgTraitsHelper::args 상수
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,7 +34,7 @@ static const int args = Traits::args;
 ```  
   
 ## <a name="remarks"></a>설명  
- 사용 하면 [argtraitshelper:: Args](../windows/argtraitshelper-args-constant.md) 대리자 인터페이스의 Invoke 메서드에 매개 변수 수를 유지 합니다.  
+ 데 도움이 됩니다 [argtraitshelper:: Args](../windows/argtraitshelper-args-constant.md) 매개 변수 개수를 유지는 `Invoke` 대리자 인터페이스의 메서드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** event.h  

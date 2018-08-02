@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35a632a6c88ed29ef5e30e942c1341246de75e71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f66f185692c200ea459b88363143c0cc1af9d55
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883500"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466012"
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>CriticalSectionTraits::Unlock 메서드
-지정 된 임계 영역 개체의 해제 소유권 지원 되도록 CriticalSection 템플릿을 특수화입니다.  
+지정 된 임계 영역 개체의 해제 소유권을 지원 하도록 해당 CriticalSection 템플릿으로 전문으로 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,13 +36,13 @@ inline static void Unlock(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `cs`  
+ *cs*  
  임계 영역 개체에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- *형식* 한정자로 정의 `typedef CRITICAL_SECTION* Type;`합니다.  
+ 합니다 *형식* 한정자로 정의 된 `typedef CRITICAL_SECTION* Type;`합니다.  
   
- 자세한 내용은 참조 하십시오. Windows API 설명서의 "동기화 함수" 섹션에서 "LeaveCriticalSection 함수"입니다.  
+ 자세한 내용은 Windows API 설명서의 "동기화 함수" 섹션에서 "LeaveCriticalSection function"입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

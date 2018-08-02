@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4a8465dd61e52425a0335e171cf516591ae589
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8171c4a57621a4f17a5f0ddb0745faa70fde6524
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863311"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465287"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType 열거형
-GetResults 메서드에서 반환되는 결과 형식을 지정합니다.  
+반환 된 결과의 형식을 지정 합니다 `GetResults()` 메서드.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,7 +39,7 @@ enum AsyncResultType;
   
 |이름|설명|  
 |----------|-----------------|  
-|`MultipleResults`|Close ()를 호출 하기 전에 그리고 시작 상태 간에 점진적으로 표시 되는 여러 결과 집합입니다.|  
+|`MultipleResults`|간에 점진적으로 제공 되는 여러 결과 집합이 `Start` 상태 전과 `Close()` 라고 합니다.|  
 |`SingleResult`|단일 결과 완료 이벤트가 발생 한 후 표시 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71257b369e7833f279c0f68ce33e0ec925ebf6b
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 895df401ab10ae85641fd2eed9f7a9654916f33f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026262"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465235"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
 **Microsoft 전용**  
@@ -34,9 +34,7 @@ ms.locfileid: "39026262"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 VARIANT Detach( );  
-  
 ```  
   
 ## <a name="return-value"></a>반환 값  
@@ -47,5 +45,5 @@ VARIANT Detach( );
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_variant_t 클래스](../cpp/variant-t-class.md)

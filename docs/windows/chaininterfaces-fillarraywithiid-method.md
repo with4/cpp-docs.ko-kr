@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e6283b86b8e225771f259df9b5377fffa3667fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bd9f899457c3a6045d7a5525c9fb560e23f10d3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855944"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461038"
 ---
 # <a name="chaininterfacesfillarraywithiid-method"></a>ChainInterfaces::FillArrayWithIid 메서드
-저장소에 정의 된 인터페이스 ID는 `I0` 인터페이스 Id의 지정된 된 배열에 지정된 된 위치에 템플릿 매개 변수입니다.  
+인터페이스 ID가 정의한 저장소 합니다 *I0* 인터페이스 Id의 지정된 된 배열에 지정된 된 위치에 템플릿 매개 변수입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,10 +37,10 @@ __forceinline static void FillArrayWithIid(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `index`  
- 에 인덱스 값에 대 한 포인터는 `iids` 배열입니다.  
+ *index*  
+ 에 인덱스 값에 대 한 포인터를 *iid* 배열입니다.  
   
- `iids`  
+ *iid*  
  인터페이스 Id의 배열입니다.  
   
 ## <a name="requirements"></a>요구 사항  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4772c62db1443beaf6a5fff962a52a71823674bc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d757c645ae131b88ffb99e571d1e08214eda8129
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944680"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462867"
 ---
 # <a name="varianttoperator-"></a>_variant_t::operator =
 **Microsoft 전용**  
@@ -31,7 +31,6 @@ ms.locfileid: "37944680"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 _variant_t& operator=(  
    const VARIANT& varSrc   
 );  
@@ -128,39 +127,39 @@ _variant_t& operator=(
 ## <a name="remarks"></a>설명  
  다음 연산자는 `_variant_t` 개체에 새 값을 할당합니다.  
   
--   **operator = (***varSrc***)** 기존 할당 `VARIANT` 에 `_variant_t` 개체입니다.      
+-   **operator = (***varSrc***)** 기존 할당 `VARIANT` 에 `_variant_t` 개체입니다.  
   
--   **operator = (***pVarSrc***)** 기존 할당 `VARIANT` 에 `_variant_t` 개체입니다.      
+-   **operator = (***pVarSrc***)** 기존 할당 `VARIANT` 에 `_variant_t` 개체입니다.  
   
 -   **operator = (***var_t_Src***)** 기존 할당 `_variant_t` 개체를 `_variant_t` 개체입니다.      
   
--   **연산자 = (***sSrc***)** 할당 된 **짧은** 정수 값을 `_variant_t` 개체입니다.      
+-   **연산자 = (***sSrc***)** 할당 된 **짧은** 정수 값을 `_variant_t` 개체입니다.  
   
--   **연산자 = (**`lSrc`**)** 할당 한 **긴** 정수 값을 `_variant_t` 개체입니다.      
+-   **연산자 = (**`lSrc`**)** 할당 한 **긴** 정수 값을 `_variant_t` 개체입니다.  
   
--   **연산자 = (***fltSrc***)** 할당 된 **float** 숫자 값을 `_variant_t` 개체입니다.      
+-   **연산자 = (***fltSrc***)** 할당 된 **float** 숫자 값을 `_variant_t` 개체입니다.  
   
--   **연산자 = (***dblSrc***)** 할당 한 **double** 숫자 값을 `_variant_t` 개체입니다.      
+-   **연산자 = (***dblSrc***)** 할당 한 **double** 숫자 값을 `_variant_t` 개체입니다.  
   
--   **operator = (***cySrc***)** 할당을 `CY` 개체를 `_variant_t` 개체.      
+-   **operator = (***cySrc***)** 할당을 `CY` 개체를 `_variant_t` 개체.  
   
--   **operator = (***bstrSrc***)** 할당을 `BSTR` 개체를 `_variant_t` 개체.      
+-   **operator = (***bstrSrc***)** 할당을 `BSTR` 개체를 `_variant_t` 개체.  
   
--   **operator = (***wstrSrc***)** 유니코드 문자열을 할당을 `_variant_t` 개체입니다.      
+-   **operator = (***wstrSrc***)** 유니코드 문자열을 할당을 `_variant_t` 개체입니다.  
   
--   **operator = (**`strSrc`**)** 멀티 바이트 문자열을 할당을 `_variant_t` 개체입니다.      
+-   **operator = (**`strSrc`**)** 멀티 바이트 문자열을 할당을 `_variant_t` 개체입니다.  
   
--   **연산자 = (** `bSrc` **)** 할당 한 **bool** 값을 `_variant_t` 개체입니다.    
+-   **연산자 = (** `bSrc` **)** 할당 한 **bool** 값을 `_variant_t` 개체입니다.  
   
--   **operator = (***pDispSrc***)** 할당을 `VT_DISPATCH` 개체를 `_variant_t` 개체.      
+-   **operator = (***pDispSrc***)** 할당을 `VT_DISPATCH` 개체를 `_variant_t` 개체.  
   
--   **operator = (***pIUnknownSrc***)** 할당을 `VT_UNKNOWN` 개체를 `_variant_t` 개체.      
+-   **operator = (***pIUnknownSrc***)** 할당을 `VT_UNKNOWN` 개체를 `_variant_t` 개체.  
   
--   **연산자 = (***decSrc***)** 할당 된 `DECIMAL` 값을 `_variant_t` 개체입니다.      
+-   **연산자 = (***decSrc***)** 할당 된 `DECIMAL` 값을 `_variant_t` 개체입니다.  
   
--   **연산자 = (** `bSrc` **)** 할당 한 `BYTE` 값을 `_variant_t` 개체입니다.    
+-   **연산자 = (** `bSrc` **)** 할당 한 `BYTE` 값을 `_variant_t` 개체입니다.  
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_variant_t 클래스](../cpp/variant-t-class.md)

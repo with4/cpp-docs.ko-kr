@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8419ea4e446c8bf2f555c680079ccb91cc26afb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3675e8bca6f62a1fbc7e30beefc6cbf6efbf197c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424131"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462744"
 ---
 # <a name="semantics-of-expressions"></a>식의 의미
-식은 해당 연산자의 그룹화 및 우선 순위에 따라 계산됩니다. ([연산자 우선순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md) 에 [어휘 규칙](../cpp/lexical-conventions.md), 연산자가 식에 적용 하는 c + + 관계를 표시 합니다.)  
+식은 해당 연산자의 그룹화 및 우선 순위에 따라 계산됩니다. ([연산자 우선순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md) 에 [어휘 규칙](../cpp/lexical-conventions.md), 연산자가 식에 적용 된 c + + 관계를 보여 줍니다.)  
   
 ## <a name="order-of-evaluation"></a>계산 순서  
  다음 예제를 고려해 보세요.  
@@ -51,12 +51,12 @@ int main()
 54  
 ```  
   
- ![식의 평가 순서](../cpp/media/vc38zv1.gif "vc38ZV1")  
+ ![식에서 계산 순서](../cpp/media/vc38zv1.gif "vc38ZV1")  
 식 계산 순서  
   
  위의 그림에 표시된 식이 계산되는 순서는 연산자의 우선 순위 및 결합성에 따라 결정됩니다.  
   
-1.  이 식에서는 곱셈(\*)의 우선 순위가 가장 높습니다. 따라서 하위 식 `b * c`가 먼저 계산됩니다.  
+1.  이 식에서는 곱셈(*)의 우선 순위가 가장 높습니다. 따라서 하위 식 `b * c`가 먼저 계산됩니다.  
   
 2.  다음으로 덧셈(+)의 우선 순위가 높으므로 `a`와 `b`를 곱한 값에 `c`가 더해집니다.  
   
@@ -70,7 +70,7 @@ int main()
  위의 그림에 있는 것과 같은 식은 전적으로 의도하지 않은 결과를 위해 계산되며, 이 경우에는 표준 출력 장치로 정보를 전송하기 위해 계산됩니다.  
   
 ## <a name="notation-in-expressions"></a>식에서의 표기법  
- C++ 언어는 피연산자를 지정할 때 특정 호환성을 지정합니다. 다음 표에 나와 피연산자의 형식을 허용 가능한 형식의 피연산자가 필요한 연산자에 *형식*합니다.  
+ C++ 언어는 피연산자를 지정할 때 특정 호환성을 지정합니다. 다음 표에서 피연산자의 형식이 허용 형식의 피연산자를 필요로 하는 운영자에 게 *형식*합니다.  
   
 ### <a name="operand-types-acceptable-to-operators"></a>연산자에 사용할 수 있는 피연산자 형식  
   
@@ -121,5 +121,5 @@ func( i, ++i );
   
 -   return 문의 식. 호출 함수로 제어가 반환되기 전에 식이 완전히 계산되고 의도하지 않은 모든 결과가 완료됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [식](../cpp/expressions-cpp.md)

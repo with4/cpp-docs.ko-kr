@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb3495f67f674f7d65e18b985295fabf9931869
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: f21256ca78a4bf5f268c4fa3d03c86bc52c91670
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407886"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461678"
 ---
 # <a name="dllexport-dllimport"></a>dllexport, dllimport
 **Microsoft 전용**  
@@ -80,7 +80,7 @@ DllExport int n;
   
 -   [C++ 클래스에서 dllimport 및 dllexport 사용](../cpp/using-dllimport-and-dllexport-in-cpp-classes.md)  
   
- **Microsoft 전용 종료**  
+**Microsoft 전용 종료**  
   
 ## <a name="see-also"></a>참고자료  
  [__declspec](../cpp/declspec.md)   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f1bae2c503f4e5f0c887a46956248184ece9a1e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e2e7b2301ae4dd38a40bdf4583e963e55a8b12d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857326"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461395"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback 함수
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -37,11 +37,11 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `activationId`  
+ *activationId*  
  런타임 클래스 이름을 지정 하는 문자열에 대 한 핸들입니다.  
   
- `ppFactory`  
- 이 작업이 완료 될 때 매개 변수에 해당 하는 활성화 팩터리 `activationId`합니다.  
+ *ppFactory*  
+ 이 작업이 완료 되 면 매개 변수에 해당 하는 활성화 팩터리 *activationId*합니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공하면 S_OK이고, 그렇지 않으면 실패를 설명하는 HRESULT가 발생합니다. 가능한 실패 Hresult는 CLASS_E_CLASSNOTAVAILABLE 및 E_INVALIDARG입니다.  
@@ -49,7 +49,7 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 ## <a name="remarks"></a>설명  
  지정 된 활성화 ID에 대 한 활성화 팩터리를 가져옵니다.  
   
- Windows 런타임에서 런타임 클래스 이름을 사용 하 여 지정 된 개체를 요청 하려면이 콜백 함수를 호출 합니다.  
+ Windows 런타임 런타임 클래스 이름을 사용 하 여 지정 된 개체를 요청 하려면이 콜백 함수를 호출 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** module.h  

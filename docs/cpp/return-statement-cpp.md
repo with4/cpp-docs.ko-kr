@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aea9999adc7089499028850017a32245bba97db6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: dda9406909f3508472c11524402c37baa17a76b0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944470"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465791"
 ---
 # <a name="return-statement-c"></a>return 문 (C++)
 함수 실행을 종료하고 컨트롤을 호출 함수(또는 `main` 함수에서 컨트롤을 이전하는 경우 운영 체제로)로 반환합니다. 호출 바로 다음 지점의 호출 함수에서 실행을 다시 시작합니다.  
@@ -64,6 +64,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [점프 문](../cpp/jump-statements-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)

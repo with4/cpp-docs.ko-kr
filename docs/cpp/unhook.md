@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 069d206418fd392e28114d977b3448f8306a3119
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 020ae54cdaaddc2f05a8c3b6e285bc2fd0403ee8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944782"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463716"
 ---
 # <a name="unhook"></a>__unhook
 처리기 메서드를 이벤트에서 분리합니다.  
@@ -31,8 +31,7 @@ ms.locfileid: "37944782"
 ## <a name="syntax"></a>구문  
   
 ```cpp 
-  
-      long  __unhook(  
+long  __unhook(  
    &SourceClass::EventMethod,  
    source,  
    &ReceiverClass::HandlerMethod  
@@ -61,11 +60,11 @@ long  __unhook(
  연결 되 고 인터페이스 이름을 *받는 사람*는 COM 이벤트 수신기에 대해서만 합니다 *layout_dependent* 의 매개 변수는 [event_receiver](../windows/event-receiver.md) 특성이 **true**합니다.  
   
  *source*  
- 이벤트 소스의 인스턴스에 대한 포인터입니다. 코드에 따라 `type` 에 지정 된 **event_receiver**합니다 *소스* 다음 중 하나일 수 있습니다.  
+ 이벤트 소스의 인스턴스에 대한 포인터입니다. 코드에 따라 `type` 에 지정 된 `event_receiver`를 *원본* 다음 중 하나일 수 있습니다.  
   
 -   네이티브 이벤트 소스 개체 포인터입니다.  
   
--   **IUnknown**-기반 포인터 (COM 소스)입니다.  
+-   `IUnknown`-기반 포인터 (COM 소스)입니다.  
   
 -   관리되는 이벤트의 관리되는 개체 포인터입니다.  
   
@@ -107,7 +106,7 @@ long  __unhook(
 ## <a name="example"></a>예  
  참조 [네이티브 c + +에서 이벤트 처리](../cpp/event-handling-in-native-cpp.md) 하 고 [COM에서 이벤트 처리](../cpp/event-handling-in-com.md) 샘플에 대 한 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [키워드](../cpp/keywords-cpp.md)   
  [event_source](../windows/event-source.md)   
  [event_receiver](../windows/event-receiver.md)   

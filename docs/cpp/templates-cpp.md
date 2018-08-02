@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 673eadf3651d15f480ee2cff9ef3f7319dee4d84
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c5a9aa15839169de846439c73af1df92d7342358
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944551"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463930"
 ---
 # <a name="templates-c"></a>템플릿 (C++)
 템플릿은 c + +의 제네릭 프로그래밍에 대 한 기준입니다. 강력한 언어와 c + +는 특정 형식 선언 프로그래머가 명시적으로 또는 컴파일러에 의해 추론 된 모든 변수가 필요 합니다. 그러나 많은 데이터 구조 및 알고리즘 확인에서 작동 하는 유형과 관계 없이 동일 합니다. 이러한 작업 형식 함수나 클래스의 작업을 정의 하 고 사용자가 어떤 구체적인을 지정할 수 있도록 하는 템플릿을 사용 하면에서 작동 해야 합니다.  
@@ -38,7 +38,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- 위의 코드는 단일 형식 매개 변수를 사용 하 여 일반 함수에 대 한 템플릿을 설명 `T`, 해당 값을 반환 하 고 호출 (lhs 및 rhs) 매개 변수는이 형식의 모든 합니다. 이름은 형식 매개 변수 규칙 단일 대문자나 소문자 문자로 아니라 등 가장 흔히 사용 됩니다. `T` 템플릿 매개 변수입니다. 합니다 **typename** 키워드 64f6eb0d이 매개 변수 자리 표시자는 형식입니다. 컴파일러의 모든 인스턴스를 대체할 함수를 호출 하면 `T` 사용자가 지정 되었거나 컴파일러에 의해 추론 된 하는 구체적인 형식 인수를 사용 하 여 합니다. 컴파일러는 클래스를 생성 하거나 템플릿에서 함수 라고 하는 프로세스 *템플릿 인스턴스화*;   `minimum<int>` 은 템플릿 인스턴스화 `minimum<T>`합니다.  
+ 위의 코드는 단일 형식 매개 변수를 사용 하 여 일반 함수에 대 한 템플릿을 설명 *T*, 해당 값을 반환 하 고 호출 (lhs 및 rhs) 매개 변수는이 형식의 모든 합니다. 이름은 형식 매개 변수 규칙 단일 대문자나 소문자 문자로 아니라 등 가장 흔히 사용 됩니다. *T* 는 템플릿 매개 변수를 **typename** 키워드 64f6eb0d이 매개 변수 형식에 대 한 자리 표시자입니다. 컴파일러의 모든 인스턴스를 대체할 함수를 호출 하면 `T` 사용자가 지정 되었거나 컴파일러에 의해 추론 된 하는 구체적인 형식 인수를 사용 하 여 합니다. 컴파일러는 클래스를 생성 하거나 템플릿에서 함수 라고 하는 프로세스 *템플릿 인스턴스화*; `minimum<int>` 은 템플릿 인스턴스화 `minimum<T>`합니다.  
   
  다른 곳에서 사용자는 int 특수화 된 템플릿의 인스턴스를 선언할 수 있습니다. Get_a()와 get_b() int를 반환 하는 함수는 가정 합니다.  
   
@@ -48,7 +48,7 @@ int b = get_b();
 int i = minimum<int>(a, b);  
 ```  
   
- 그러나 이기 때문에 함수 템플릿과 컴파일러 수의 형식을 추론할 `T` 인수에서 `a` 고 `b`는 일반 함수 처럼 호출할 수 있습니다.  
+ 그러나 이기 때문에 함수 템플릿과 컴파일러 수의 형식을 추론할 `T` 인수에서 *를* 하 고 *b*는 일반 함수 처럼 호출할 수 있습니다.  
   
 ```cpp  
 int i = minimum(a, b);  
@@ -56,9 +56,8 @@ int i = minimum(a, b);
   
  컴파일러는 마지막 문이 발견의 모든 항목에 새 함수 생성 *T* 템플릿에서 바뀝니다 **int**:  
   
-```cpp 
-  
-      int minimum(const int& lhs, const int& rhs)  
+```cpp   
+int minimum(const int& lhs, const int& rhs)  
 {  
     return lhs < rhs ? lhs : rhs;  
 }  
@@ -67,13 +66,12 @@ int i = minimum(a, b);
  컴파일러가 함수 템플릿의 형식 추론을 수행 하는 방법에 대 한 규칙은 일반 함수에 대 한 규칙을 기반으로 합니다. 자세한 내용은 [오버 로드 확인 함수 템플릿 호출](../cpp/overload-resolution-of-function-template-calls.md)합니다.  
   
 ## <a id="type_parameters"></a> 형식 매개 변수  
- 에 `minimum` 유의 위의 템플릿 형식 매개 변수 `T` const 및 참조 한정자가 추가 된 함수 호출 매개 변수에서 사용 될 때까지 어떤 방식으로 한정 되지 않습니다.  
+ 에 `minimum` 유의 위의 템플릿 형식 매개 변수 *T* const 및 참조 한정자가 추가 된 함수 호출 매개 변수에서 사용 될 때까지 어떤 방식으로 한정 되지 않습니다.  
   
  형식 매개 변수 수에 제한이 있습니다. 여러 매개 변수를 쉼표로 구분 합니다.  
   
 ```cpp  
 template <typename T, typename U, typename V> class Foo{};  
-  
 ```  
   
  키워드 **클래스** 같습니다 **typename** 이 컨텍스트에서 합니다. 이전 예제를 표현할 수 있습니다.  
@@ -108,7 +106,6 @@ int main()
     MyClass mc2 {2, L"goodbye"};  
     auto result = minimum(mc1, mc2); // Error! C2678  
 }  
-  
 ```  
   
  MyClass에 대 한 오버 로드를 제공 하지 않기 때문에 컴파일러 오류가 발생 합니다 < 연산자입니다.  
@@ -138,7 +135,6 @@ class MyArray
 public:  
     MyArray() { ... }  
 };  
-  
 ```  
   
  템플릿 선언의 구문을 note 합니다. Size_t 값에서 컴파일 타임에 템플릿 인수로 전달 되 고 상수 또는 constexpr 식 이어야 합니다. 다음과 같이 사용합니다.  
@@ -150,7 +146,7 @@ MyArray<MyClass*, 10> arr;
  다른 종류의 포인터 및 참조를 포함 하 여 값 형식이 아닌 매개 변수로 전달할 수 있습니다. 예를 들어, 함수 또는 함수 템플릿 코드 내에서 일부 작업을 사용자 지정 하는 개체에 대 한 포인터에 전달할 수 있습니다.  
   
 ## <a id="template_parameters"></a> 템플릿 매개 변수로 템플릿  
- 템플릿에 템플릿 매개 변수를 수 있습니다. 이 예제에서는 MyClass2에 두 개의 템플릿 매개 변수: typename 매개 변수 `T` 템플릿 매개 변수 및 `Arr`:  
+ 템플릿에 템플릿 매개 변수를 수 있습니다. 이 예제에서는 MyClass2에 두 개의 템플릿 매개 변수: typename 매개 변수 *T* 템플릿 매개 변수 *Arr*:  
   
 ```cpp  
 template<typename T, template<typename U, int I> class Arr>  
@@ -162,7 +158,7 @@ class MyClass2
 };  
 ```  
   
- 때문에 `Arr` 매개 변수 자체에 본문이 없습니다, 해당 매개 변수 이름이 필요 하지 않습니다. 오류가 참조 하는 것이 사실 `Arr`의 본문 내에서 있는 typename 또는 클래스 매개 변수 이름은 `MyClass2`합니다. 이러한 이유로 `Arr`의이 예제와 같이 형식 매개 변수 이름을 생략할 수 있습니다.  
+ 때문에 합니다 *Arr* 매개 변수 자체에 본문이 없습니다, 해당 매개 변수 이름이 필요 하지 않습니다. 오류가 참조 하는 것이 사실 *Arr*의 본문 내에서 있는 typename 또는 클래스 매개 변수 이름은 `MyClass2`합니다. 이러한 이유로 *Arr*의이 예제와 같이 형식 매개 변수 이름을 생략할 수 있습니다.  
   
 ```cpp  
 template<typename T, template<typename, int> class Arr>  
@@ -207,7 +203,6 @@ int main()
 {  
     Bar<> bar; // use all default type arguments  
 }  
-  
 ```  
   
 ## <a name="template-specialization"></a>템플릿 특수화  
@@ -223,9 +218,8 @@ class MyMap<string, V> {/*...*/};
 ...  
 MyMap<int, MyClass> classes; // uses original template  
 MyMap<string, MyClass> classes2; // uses the partial specialization  
-  
 ```  
   
- 서식으로 각 특수화 된 형식 매개 변수는 고유 개수에 관계 없이 특수화 있을 수 있습니다.   클래스 템플릿 부분적으로 특수화 될 수 있습니다. 템플릿의 모든 전체 및 부분 특수화는 원본 템플릿과 동일한 네임 스페이스에서 선언 되어야 합니다.  
+ 서식으로 각 특수화 된 형식 매개 변수는 고유 개수에 관계 없이 특수화 있을 수 있습니다. 클래스 템플릿 부분적으로 특수화 될 수 있습니다. 템플릿의 모든 전체 및 부분 특수화는 원본 템플릿과 동일한 네임 스페이스에서 선언 되어야 합니다.  
   
  자세한 내용은 [템플릿 특수화](../cpp/template-specialization-cpp.md)합니다.

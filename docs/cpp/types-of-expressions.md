@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a053c837b0a2064a93a019d16856712553bd7a44
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 6c9d823b74762c4b35f25fd2daa94b5fc7c0ce32
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026567"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462029"
 ---
 # <a name="types-of-expressions"></a>식의 형식
 C++ 식은 여러 범주로 나뉩니다.  
@@ -44,5 +44,5 @@ C++ 식은 여러 범주로 나뉩니다.
   
 -   [런타임 형식 정보](../cpp/run-time-type-information.md)합니다. 프로그램 실행 중 개체의 형식을 확인합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [식](../cpp/expressions-cpp.md)

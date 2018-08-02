@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b27f6f7f56604976bb1004594fc7c0ac6fdc923
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be1a94215bb13d02970462ee2e8dcb19df1ff05f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422815"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464222"
 ---
 # <a name="templates-and-name-resolution"></a>템플릿 및 이름 확인
 
@@ -83,6 +83,5 @@ ms.locfileid: "32422815"
   
  형식 종속 및 값 종속 식은 형식 또는 값에 종속되는 변수가 포함된 식입니다. 이러한 식의 의미 체계는 템플릿에 사용되는 매개 변수에 따라 달라질 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
-
+## <a name="see-also"></a>참고자료
  [템플릿](../cpp/templates-cpp.md)

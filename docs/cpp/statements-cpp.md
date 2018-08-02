@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3d3c8f5d9f08c4dce370d49dc5a43bbc45b479e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 87e2e48a7d923811e2c696f0ec8bee72e8327a13
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025759"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464404"
 ---
 # <a name="statements-c"></a>문 (C++)
 C++ 명령문은 개체 조작 방법과 순서를 제어하는 프로그램 요소입니다. 이 단원에는 다음이 포함됩니다.  
@@ -46,5 +46,5 @@ C++ 명령문은 개체 조작 방법과 순서를 제어하는 프로그램 요
   
  예외 처리문에 대 한 내용은 [예외 처리](../cpp/exception-handling-in-visual-cpp.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C++ 언어 참조](../cpp/cpp-language-reference.md)

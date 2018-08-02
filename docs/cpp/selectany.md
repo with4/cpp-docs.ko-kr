@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4f4ccd3cbfb5bb26e9f58a862eaa87dba3c538
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: dec78827ac269c91ab84facfbfa7f9dbbd2eca07
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944590"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461632"
 ---
 # <a name="selectany"></a>selectany
 **Microsoft 전용**  
@@ -96,6 +96,6 @@ int main() {
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [__declspec](../cpp/declspec.md)   
  [키워드](../cpp/keywords-cpp.md)
