@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41c5d00efa0f827b9e1c3cd7f3647c966eed67e4
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 47fb8ff09fc50557283a0f4e8ef0e159bc900e86
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943220"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460947"
 ---
 # <a name="using-exit-or-return"></a>exit 또는 return 사용
 호출 하는 경우 **종료** 하거나 실행을 **반환** 문이 `main`, 정적 개체 초기화의 역순으로 소멸 됩니다. 다음 예제에서는 이러한 초기화 및 정리가 작동하는 방법을 보여 줍니다.  
@@ -78,5 +78,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [추가 종료 고려 사항](../cpp/additional-termination-considerations.md)

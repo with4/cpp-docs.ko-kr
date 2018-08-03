@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a7a9de35e225dabadbf9f4a3731f6d57fd9e99a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e2690e52bb6145da5525c0e268c5ded8da3aa661
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940415"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466763"
 ---
 # <a name="unaligned"></a>__unaligned
 
@@ -46,5 +46,4 @@ ms.locfileid: "37940415"
 - [구조체 맞춤 예제](../build/examples-of-structure-alignment.md)
 
 ## <a name="see-also"></a>참고자료
-
-[키워드](../cpp/keywords-cpp.md)
+ [키워드](../cpp/keywords-cpp.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25569c1c8f9e5ab733c50c7be0768f64ec51f8b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f03dfeb75d11ffabe7ab9e29c29474b392dc8bda
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881925"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466802"
 ---
 # <a name="comptrrefoperator-t-operator"></a>ComPtrRef::operator T* 연산자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,7 +34,7 @@ operator T*();
 ```  
   
 ## <a name="remarks"></a>설명  
- 값을 반환 된 [ptr_](../windows/comptrrefbase-ptr-data-member.md) 현재 ComPtrRef 개체의 데이터 멤버입니다.  
+ 값을 반환 합니다 [ptr_](../windows/comptrrefbase-ptr-data-member.md) 현재 데이터 멤버 **ComPtrRef** 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

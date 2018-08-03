@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19dea3b078f894931002d186b20c1ffb85bb763b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6f931c6930a2c7e4a71e73b7998564432bcbd967
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857989"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466932"
 ---
 # <a name="aggregates"></a>집계
 개체가 CLSID에 의해 지정된 개체를 집계함을 나타냅니다.  
@@ -33,24 +33,23 @@ ms.locfileid: "33857989"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ aggregates(  
+[ aggregates(  
    clsid,  
    variable_name  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `clsid`  
+ *clsid*  
  집계할 수 있는 개체의 CLSID를 지정합니다.  
   
- `variable_name`  
- 삽입될 변수의 이름입니다. 이 변수는 집계 중인 개체의 **IUnknown** 을 포함합니다.  
+ *variable_name*  
+ 삽입될 변수의 이름입니다. 이 변수를 포함 합니다 `IUnknown` 집계 중인 개체입니다.  
   
 ## <a name="remarks"></a>설명  
  개체에 적용하는 경우는 **aggregates** C++ 특성은 집계 중인 개체에 대해 외부 래퍼를 구현합니다( `clsid`에 의해 지정됨).  
   
- 이 특성을 사용하려면 [coclass](../windows/coclass.md), [progid](../windows/progid.md)또는 [vi_progid](../windows/vi-progid.md) 특성(또는 이 중 하나를 암시하는 다른 특성)을 동일한 요소에 적용해야 합니다. 단일 특성을 사용하는 경우 다른 두 특성도 자동으로 적용됩니다. 예를 들어 **progid** 를 적용하면 **vi_progid** 및 **coclass** 도 적용됩니다.  
+ 이 특성을 사용하려면 [coclass](../windows/coclass.md), [progid](../windows/progid.md)또는 [vi_progid](../windows/vi-progid.md) 특성(또는 이 중 하나를 암시하는 다른 특성)을 동일한 요소에 적용해야 합니다. 단일 특성을 사용하는 경우 다른 두 특성도 자동으로 적용됩니다. 예를 들어 있으면 `progid` 적용 됩니다 `vi_progid` 및 `coclass` 도 적용 됩니다.  
   
  **ATL 프로젝트**  
   
@@ -62,9 +61,9 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)
   
  두 번째로 [DECLARE_GET_CONTROLLING_UNKNOWN](../atl/reference/aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) 매크로도 추가됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cpp_attr_ref_aggregates.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -95,9 +94,9 @@ struct CObject : IObject
   
 |||  
 |-|-|  
-|**적용 대상**|**class**, `struct`|  
+|**적용 대상**|**클래스**, **구조체**|  
 |**반복 가능**|예|  
-|**필수 특성**|다음 중 하나 이상: **coclass**, **progid**또는 **vi_progid**.|  
+|**필수 특성**|다음 중 하나 이상의: `coclass`, `progid`, 또는 `vi_progid`합니다.|  
 |**잘못된 특성**|없음|  
   
  특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
@@ -109,4 +108,3 @@ struct CObject : IObject
  [집계](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
  [집계할 수](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
  [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)   
- 

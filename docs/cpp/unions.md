@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 674be7ebd819b48cfdf22376565f2bea90787330
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48c9962c7a0798b9c3fd4d5d9e1af223d41ac552
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939211"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460881"
 ---
 # <a name="unions"></a>Unions
 A **union** 모든 멤버가 동일한 메모리 위치를 공유할 수 있는 사용자 정의 형식이 있습니다. 즉, 지정된 시간에 공용 구조체에는 멤버 목록의 개체가 둘 이상 포함될 수 없습니다. 또한 공용 구조체의 멤버 수에 관계없이 항상 가장 큰 멤버를 저장할 수 있을 만큼 충분한 메모리를 사용해야 합니다.  
@@ -35,7 +35,7 @@ A **union** 모든 멤버가 동일한 메모리 위치를 공유할 수 있는 
 union [name]  { member-list };  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *name*  
  공용 구조체에 지정된 형식 이름입니다.  
   
@@ -149,7 +149,6 @@ void Initialize()
     second.wind = { 204,1418859354, 14, 27 };  
     inputs.push(second);  
 }  
-  
 ```  
   
  이전 예제에서는 입력 구조체의 공용 구조체에 이름이 없습니다. 이는 익명 공용 구조체이며 해당 멤버는 구조체의 직접 멤버인 것처럼 액세스할 수 있습니다. 익명 공용 구조체에 대한 자세한 내용은 아래 섹션을 참조하세요.  
@@ -603,7 +602,6 @@ private:
         WindData wind;  
     };  
 };  
-  
 ```  
   
  공용 구조체는 참조를 저장할 수 없습니다. 공용 구조체는 상속을 지원하지 않습니다. 따라서 공용 구조체 자체를 기본 클래스로 사용하거나, 다른 클래스에서 상속하거나, 가상 함수를 가질 수 없습니다.  
@@ -633,7 +631,6 @@ int main()
  10  
  3.141600  
 */  
-  
 ```  
   
  `NumericType` 공용 구조체는 다음 그림과 같이 개념적으로 메모리에 배열됩니다.  
@@ -654,11 +651,11 @@ union  {  member-list  }
   
 -   으로 선언 해야 합니다 **정적** 파일이 나 네임 스페이스 범위에서 선언 된 경우.  
   
--   익명 공용 구조체에는 공용 멤버만 포함할 수 있으며 전용 및 보호된 멤버를 포함하면 오류가 생성됩니다.  
+-   만 가질 수 있습니다 **공용** 멤버가 있습니다. **사설** 하 고 **보호** 익명 공용 구조체의 멤버 오류를 생성 합니다.  
   
 -   멤버 함수를 사용할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [클래스 및 구조체](../cpp/classes-and-structs-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [class](../cpp/class-cpp.md)   

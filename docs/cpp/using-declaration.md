@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c40a69e9c8d584d91a1b6401ec0da57368641975
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e3c2cfb8088ec8b160abeeeda6400f9f109c1722
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941527"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462325"
 ---
 # <a name="using-declaration"></a>선언 사용
 선언을 사용 하 여 이름을는 선언적 영역에 도입 되었습니다는 선언을 사용 하 여 표시 됩니다.  
@@ -330,6 +330,6 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [네임스페이스](../cpp/namespaces-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)

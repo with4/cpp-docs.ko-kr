@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 039d210e9a204c485e2f44c39ea87b4d35089d88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a51b7095ec654c4ebb393c9a83d1e30fb52ce019
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854826"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462627"
 ---
 # <a name="asweak-function"></a>AsWeak 함수
 지정된 인스턴스에 대한 약한 참조를 가져옵니다.  
@@ -38,17 +38,17 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `T`  
- 매개 변수 형식에 대 한 포인터 `p`합니다.  
+ *T*  
+ 매개 변수의 형식에 대 한 포인터 *p*합니다.  
   
- `p`  
+ *p*  
  형식의 인스턴스입니다.  
   
- `pWeak`  
- 이 작업이 완료 될 때 매개 변수에 대 한 약한 참조에 대 한 포인터 `p`합니다.  
+ *pWeak*  
+ 이 작업이 완료 되 면 매개 변수에 대 한 약한 참조에 대 한 포인터 *p*합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 이 작업에 성공 하면 s_ok이 고 그렇지 않으면 실패의 원인을 나타내는 HRESULT 오류가 발생 합니다.  
+ 이 작업에 성공 하면 S_OK 그렇지 않으면 실패의 원인을 나타내는 HRESULT 오류가 발생 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

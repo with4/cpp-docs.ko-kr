@@ -1,5 +1,5 @@
 ---
-title: abstract (c + + 구성 요소 확장명) | Microsoft Docs
+title: abstract (c + + 구성 요소 확장) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dcaef98df96b54025cd44a52a2e27a7bc5a83545
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac043a76ab70c77bd8cdb3a2dd0c66498e409171
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857557"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463244"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract(C++ 구성 요소 확장)
-`abstract` 키워드는 다음의 하나를 선언합니다.  
+합니다 **추상** 키워드 하나를 선언 합니다.  
   
 -   형식은 기본 형식으로 사용될 수 있지만 형식 자체는 인스턴스화될 수 없습니다.  
   
@@ -36,28 +36,26 @@ ms.locfileid: "33857557"
  **구문**  
   
 ```  
-  
       class-declaration  
       class-identifier  
       abstract {}  
 virtualreturn-typemember-function-identifier() abstract ;  
-  
 ```  
   
  **주의**  
   
- 첫 번째 예제 구문에서는 클래스를 추상으로 선언합니다. *클래스 선언* 구성 요소는 네이티브 c + + 선언 될 수 있습니다 (`class` 또는 `struct`), 또는 c + + 확장 선언 (`ref class` 또는 `ref struct`) 하는 경우는 **/ZW** 또는 **/clr** 컴파일러 옵션을 지정 합니다.  
+ 첫 번째 예제 구문에서는 클래스를 추상으로 선언합니다. 합니다 *클래스-선언* 구성 요소는 네이티브 c + + 선언 될 수 있습니다 (**클래스** 하거나 **구조체**), 또는 c + + 확장명 선언 (**ref클래스** 하거나 **ref 구조체**) 하는 경우는 `/ZW` 또는 `/clr` 컴파일러 옵션을 지정 합니다.  
   
  두 번째 예제 구문에서는 가상 멤버 함수를 추상으로 선언합니다. 함수를 추상으로 선언하는 것은 함수를 순수 가상 함수로 선언하는 것과 같습니다. 멤버 함수를 추상으로 선언하면 바깥쪽 클래스가 추상으로 선언됩니다.  
   
- `abstract` 키워드는 네이티브 및 플랫폼별 코드에서 지원 됩니다; 즉, 컴파일할 수 여부에 관계 없이 **/ZW** 또는 **/clr** 컴파일러 옵션입니다.  
+ 합니다 **추상** , 컴파일할 수 있습니다 하거나 사용 하지 않고; 키워드는 네이티브 및 플랫폼별 코드에서 지원 합니다 `/ZW` 또는 `/clr` 컴파일러 옵션입니다.  
   
- 형식을 추상으로 경우 컴파일 타임에 감지할 수는 `__is_abstract(type)` 형식 특성입니다. 자세한 내용은 참조 [형식 특성에 대 한 컴파일러 지원](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)합니다.  
+ 형식을 사용 하 여 추상 이면 컴파일 시간에 감지할 수 있습니다는 `__is_abstract(type)` 형식 특성 (trait). 자세한 내용은 [형식 특성에 대 한 컴파일러 지원](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)합니다.  
   
- `abstract` 키워드는 상황에 맞는 재정의 지정자입니다. 상황에 맞는 키워드에 대 한 자세한 내용은 참조 [상황에 맞는 키워드](../windows/context-sensitive-keywords-cpp-component-extensions.md)합니다. 재정의 지정자에 대 한 자세한 내용은 참조 [하는 방법: 네이티브 컴파일에 Override 지정자 선언](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)합니다.  
+ 합니다 **추상** 키워드는 상황에 맞는 재정의 지정자입니다. 상황에 맞는 키워드에 대 한 자세한 내용은 참조 하세요. [상황에 맞는 키워드](../windows/context-sensitive-keywords-cpp-component-extensions.md)합니다. 재정의 지정자에 대 한 자세한 내용은 참조 하세요. [방법: 네이티브 컴파일에 Override 지정자 선언](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)합니다.  
   
 ## <a name="windows-runtime"></a>Windows 런타임  
- 자세한 내용은 참조 [Ref 클래스 및 구조체](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)합니다.  
+ 자세한 내용은 [Ref 클래스 및 구조체](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
  컴파일러 옵션: **/ZW**  
@@ -72,7 +70,7 @@ virtualreturn-typemember-function-identifier() abstract ;
   
  다음 코드 예제에서는 `X` 클래스가 `abstract`로 표시되기 때문에 오류가 발생하는 경우를 보여 줍니다.  
   
-```  
+```cpp  
 // abstract_keyword.cpp  
 // compile with: /clr  
 ref class X abstract {  
@@ -87,9 +85,9 @@ int main() {
   
  **예제**  
   
- 다음 코드 예제에서는 `abstract`로 표시된 네이티브 클래스를 인스턴스화하기 때문에 오류가 발생하는 경우를 보여 줍니다. 이 오류는 여부에 관계 없이 발생는 **/clr** 컴파일러 옵션입니다.  
+ 다음 코드 예제에서는 `abstract`로 표시된 네이티브 클래스를 인스턴스화하기 때문에 오류가 발생하는 경우를 보여 줍니다. 이 오류는 `/clr` 컴파일러 옵션 사용 여부와 관계없이 발생합니다.  
   
-```  
+```cpp  
 // abstract_keyword_2.cpp  
 class X abstract {  
 public:  
@@ -99,14 +97,13 @@ public:
 int main() {  
    X * MyX = new X; // C3622: 'X': a class declared as 'abstract'  
                     // cannot be instantiated. See declaration of 'X'}  
-  
 ```  
   
  **예제**  
   
  다음 예제에서는 `f` 함수가 정의를 포함하지만 `abstract`로 표시되기 때문에 오류가 발생하는 경우를 보여 줍니다. 예제의 마지막 문에서는 추상 가상 함수를 선언하는 것이 순수 가상 함수를 선언하는 것과 일치함을 보여 줍니다.  
   
-```  
+```cpp  
 // abstract_keyword_3.cpp  
 // compile with: /clr  
 ref class X {  

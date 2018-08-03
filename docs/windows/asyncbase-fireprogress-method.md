@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c2c5aab609b597c3a9ff464b868ba831889deed
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: faa2e1af556f0184fa88055bcbf154eb783e24e5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863584"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463599"
 ---
 # <a name="asyncbasefireprogress-method"></a>AsyncBase::FireProgress 메서드
 현재 진행률 이벤트 처리기를 호출합니다.  
@@ -36,11 +36,11 @@ void FireProgress(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `arg`  
- 호출할 이벤트 처리기 메서드입니다.  
+ *arg*  
+ 이벤트 처리기 메서드를 호출 합니다.  
   
 ## <a name="remarks"></a>설명  
- `ProgressTraits` 파생 된 [ArgTraitsHelper 구조체](../windows/argtraitshelper-structure.md)합니다.  
+ `ProgressTraits` 파생 됩니다 [ArgTraitsHelper 구조체](../windows/argtraitshelper-structure.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** async.h  

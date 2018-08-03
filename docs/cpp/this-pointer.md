@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d150d2419885c2f0273e376fd58750417ced6756
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f63b2d129e0eb6e9986942e4286eb1728d4be797
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944461"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462221"
 ---
 # <a name="this-pointer"></a>this 포인터
 **이** 포인터가 대 한 포인터의 비정적 멤버 함수 내 에서만 액세스할 수는 **클래스**, **구조체**, 또는 **union** 형식입니다. 멤버 함수가 호출되는 개체를 가리킵니다. 없는 정적 멤버 함수는 **이** 포인터입니다.  
@@ -31,7 +31,6 @@ ms.locfileid: "37944461"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 this   
 this->member-identifier  
 ```  
@@ -199,6 +198,5 @@ int main()
 > [!NOTE]
 >  생성자 및 소멸자로 선언할 수 없습니다 **상수** 하거나 **volatile**합니다. 그러나 될 수 있습니다 호출 **상수** 또는 **volatile** 개체입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [키워드](../cpp/keywords-cpp.md)   
- 

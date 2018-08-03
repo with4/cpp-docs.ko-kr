@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c83479434a936f32fb0f7367d8cd02c6676c74e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a845ea047682fda97ae581f4daad26775241ddf8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860696"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466841"
 ---
 # <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify 메서드
-템플릿 매개 변수 `I0`-`I9`에 의해 정의된 각 인터페이스가 IUnknown 및/또는 IInspectable에서 상속하는지, `I0`이 `I1`부터 `I9`까지 상속하는지 확인합니다.  
+템플릿 매개 변수에서 정의 된 각 인터페이스가 확인 *I0* 를 통해 *I9* IUnknown 및/또는 IInspectable, 및는 상속 *I0* 에서상속*I1* 을 통해 *I9*합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,10 +34,10 @@ WRL_NOTHROW __forceinline static void Verify();
 ```  
   
 ## <a name="remarks"></a>설명  
- 확인 작업이 실패하는 경우 `static_assert`에서 실패를 설명하는 오류 메시지를 내보냅니다.  
+ 확인 작업이 실패 하는 경우는 **static_assert** 오류를 설명 하는 오류 메시지를 내보냅니다.  
   
 ## <a name="remarks"></a>설명  
- 템플릿 매개 변수 `I0` 및 `I1` 는 필수이고, 매개 변수 `I2`부터 `I9`는 선택사항입니다.  
+ 템플릿 매개 변수 *I0* 하 고 *I1* 필요 및 매개 변수 *I2* 를 통해 *I9* 는 선택 사항입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

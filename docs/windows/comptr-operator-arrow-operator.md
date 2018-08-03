@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cb3571207f328ad044ffd3f2f9b83bcebc7677e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ff18dee2b8d951ab9233e92478eb967e4a02eb9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870187"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464300"
 ---
 # <a name="comptroperator-gt-operator"></a>Comptr:: Operator-&gt; 연산자
 현재 템플릿 매개 변수에 지정된 형식에 대한 포인터를 검색합니다.  
@@ -37,7 +37,7 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
  현재 템플릿 형식 이름으로 지정 된 형식에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 도우미 함수 STDMETHOD 매크로 사용 하 여 발생 하는 불필요 한 오버 헤드를 제거 합니다. 이 함수는 IUnknown 형식 대신 가상 개인 합니다.  
+ 이 도우미 함수 STDMETHOD 매크로 사용 하 여 발생 하는 불필요 한 오버 헤드를 제거 합니다. 이 기능을 사용 하면 `IUnknown` 형식을 **사설** 대신 **가상**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

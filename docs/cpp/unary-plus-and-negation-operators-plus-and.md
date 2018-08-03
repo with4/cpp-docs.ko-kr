@@ -21,18 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa500288ec4982ca4e1d304fac2cd577d58f4207
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 06e7f6bd089866619d82798bb220580e8a11b04b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944815"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460895"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>단항 더하기 및 부정 연산자: + 및 -
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 + cast-expression  
 - cast-expression  
 ```  
@@ -50,6 +49,6 @@ ms.locfileid: "37944815"
 ## <a name="microsoft-specific"></a>Microsoft 전용  
  부호 없는 수량의 단항 부정은 2^n에서 피연산자의 값을 빼서 수행됩니다. 여기서 n은 지정된 부호 없는 형식의 개체에 있는 비트 수입니다.
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)   
  [C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

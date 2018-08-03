@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad9af76787780ebe2a25b3fab46ce1951085b8e8
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b01e9799a1f8b03406750dca0b486c6c4d0f655
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944767"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466698"
 ---
 # <a name="staticcast-operator"></a>static_cast 연산자
 변환는 *식* 의 형식으로 *유형-id* 식에 있는 형식에만 기반 합니다.  
@@ -113,6 +113,6 @@ void f() {
   
  재배치 가비지 수집기 사용의 상단에서 확인 되지 않은 캐스팅을 수행 하는 위험으로 인해 **static_cast** 올바르게 작동 한다고 확신할 때 성능에 중요 코드에서 이어야만 합니다. 사용 해야 하는 경우 **static_cast** 릴리스 모드에서 사용 하 여 대체 [safe_cast](../windows/safe-cast-cpp-component-extensions.md) 성공을 위해 디버그 빌드의 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [캐스팅 연산자](../cpp/casting-operators.md)   
  [키워드](../cpp/keywords-cpp.md)

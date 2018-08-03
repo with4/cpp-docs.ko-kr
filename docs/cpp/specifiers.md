@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d437b70148fdaba4c8eb4d7aa855e7d75f6f2487
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3d9898dc6b918643aa8ca4ace34ce2e716344c57
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953749"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463491"
 ---
 # <a name="specifiers"></a>지정자
 이 항목에 설명 합니다 *-specifiers* (선언 지정자) 구성 요소를 [선언](declarations-and-definitions-cpp.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "38953749"
  때문에 **서명**, **부호 없는**합니다 **긴**, 및 **짧은** 의미 모든 **int**,  **typedef** 의 구성원으로 만들어진 다음이 키워드 중 하나로 다음 이름을 *declarator-list* 아닌 *-specifiers*합니다.  
   
 > [!NOTE]
->  이름은 다시 선언할 수 있기 때문에 현재 범위에서 최신 선언에 해석이 적용됩니다. 재선언은 특히 `typedef` 이름이 컴파일러에 의해 해석되는 방법에 영향을 줄 수 있습니다.  
+>  이름은 다시 선언할 수 있기 때문에 현재 범위에서 최신 선언에 해석이 적용됩니다. 재선언은 어떻게 해석 되는 컴파일러에 의해 특히 영향을 줄 수 **typedef** 이름입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [선언 및 정의](declarations-and-definitions-cpp.md)

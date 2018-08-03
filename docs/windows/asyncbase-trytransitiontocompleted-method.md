@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f628acd1424af11cab5040b2c65d528f1774dff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f2185b83a393860904903f4b82b3c3b42a2c3b33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861261"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460744"
 ---
 # <a name="asyncbasetrytransitiontocompleted-method"></a>AsyncBase::TryTransitionToCompleted 메서드
 현재 비동기 작업이 완료 되었는지 여부를 나타냅니다.  
@@ -36,7 +36,7 @@ bool TryTransitionToCompleted(
 ```  
   
 ## <a name="return-value"></a>반환 값  
- `true` 비동기 작업이 완료 된; 경우 그렇지 않으면 `false`합니다.  
+ **true 이면** 비동기 작업이 완료 되었으면;이 고, 그렇지 **false**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** async.h  

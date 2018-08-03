@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ce7c57688fae22c3bba844cff480ae3aec03785
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 4439ec167cca7a2e3314879faf4c65c842801e90
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028140"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465475"
 ---
 # <a name="summary-of-scope-rules"></a>범위 규칙의 요약
 이름은 그 범위 내(과부하가 결정되는 지점까지)에서 명확하게 사용해야 합니다. 이름이 함수를 표시할 경우 함수의 매개 변수 형식 및 숫자가 명확해야 합니다. 이름이 모호 하는 경우 [멤버 액세스](../cpp/member-access-control-cpp.md) 규칙이 적용 됩니다.  
@@ -76,5 +76,5 @@ ms.locfileid: "39028140"
   
  앞의 두 단락에서 설명한 대로 기본 매개 변수는 해당 매개 변수가 기본값으로 지정된 매개 변수의 범위에 있습니다. 그러나 이러한 인수는 지역 변수 또는 비정적 클래스 멤버에 액세스할 수 없습니다. 기본 매개 변수는 함수 호출 시 계산되지만 함수 선언의 원래 범위에서 계산됩니다. 따라서 멤버 함수에 대한 기본 매개 변수는 항상 클래스 범위에서 계산됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [상속](../cpp/inheritance-cpp.md)

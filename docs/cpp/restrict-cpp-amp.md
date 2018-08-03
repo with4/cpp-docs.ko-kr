@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 175dcbbf94ff28b1f59804eb996254e29dfef243
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 758862d5296cf0a51cc0e04d849b044b3694e087
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944581"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461890"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 제한 지정자는 함수 및 람다 선언에 적용할 수 있습니다. 제한 지정자는 C++ AMP(C++ Accelerated Massive Parallelism) 런타임을 사용하는 응용 프로그램의 함수 동작 및 함수의 코드에 제한을 적용합니다.  
@@ -93,7 +93,6 @@ ms.locfileid: "37944581"
  다음 예제에서는 사용 하는 방법의 `restrict(amp)`절.  
   
 ```cpp 
-  
 void functionAmp() restrict(amp) {}   
 void functionNonAmp() {}   
   
@@ -109,9 +108,8 @@ void callFunctions() restrict(amp)
   
     // Calling a non-amp-restricted function is not allowed.  
     // functionNonAmp();   
-  
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C++ AMP(C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)

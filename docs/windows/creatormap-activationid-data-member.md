@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c4ff889f808eda00e5b2ce426cd800678b4829f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70a331bbbf34a623b02e9d8bc9aa0b80fbee2216
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881798"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467133"
 ---
 # <a name="creatormapactivationid-data-member"></a>CreatorMap::activationId 데이터 멤버
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -37,14 +37,14 @@ union {
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- `clsid`  
+ *clsid*  
  인터페이스 ID입니다.  
   
- `getRuntimeName`  
- 개체의 Windows 런타임 이름을 검색 하는 함수입니다.  
+ *getRuntimeName*  
+ Windows 런타임 개체의 이름을 검색 하는 함수입니다.  
   
 ## <a name="remarks"></a>설명  
- 클래식 COM 클래스 ID 또는 Windows 런타임 이름에 의해 식별 되는 개체 ID를 나타냅니다.  
+ 클래식 COM 클래스 ID 또는 Windows 런타임 이름을 식별 되는 개체 ID를 나타냅니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** module.h  

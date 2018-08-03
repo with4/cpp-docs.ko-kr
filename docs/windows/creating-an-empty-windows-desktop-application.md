@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a86aead2c3c84cf6d28dd3807d9dec224770785
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: baff146be956b2e116cbbe90fe6ecb9187d55f3f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883996"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464365"
 ---
 # <a name="creating-an-empty-windows-desktop-application"></a>빈 Windows 데스크톱 응용 프로그램 만들기
 ### <a name="to-create-an-empty-windows-desktop-application"></a>빈 Windows 데스크톱 응용 프로그램을 만들려면  
   
-1.  **파일** 메뉴에서 **새 프로젝트**를 선택합니다.  
+1.  **파일** 메뉴에서 **새로 만들기** > **프로젝트**를 선택합니다.  
   
 2.  **새 프로젝트** 대화 상자의 왼쪽 창에서 **Win32** 를 클릭하고 가운데 창에서 **Win32 콘솔 응용 프로그램**을 선택합니다.  
   
@@ -43,4 +43,4 @@ ms.locfileid: "33883996"
  그러고 나서 [빈 Visual C++ 프로젝트에 파일을 추가](../windows/adding-files-to-an-empty-win32-applications.md)할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [응용 프로그램 배포](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [응용 프로그램 배포](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

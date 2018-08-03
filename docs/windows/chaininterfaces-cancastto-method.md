@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2286c347fbd68f34fac807e80facca0a0286aa6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5839edd90f61f9f4aa96ea1d921d2179660be554
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860296"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461212"
 ---
 # <a name="chaininterfacescancastto-method"></a>ChainInterfaces::CanCastTo 메서드
-지정 된 인터페이스 ID의 특수화는 기본이 아닌 템플릿 매개 변수에 의해 정의 된 각으로 캐스팅 될 수 있는지 여부를 나타냅니다.  
+각 기본이 아닌 템플릿 매개 변수를 정의한 특수화에 지정 된 인터페이스 ID 캐스팅 될 수 있는지 여부를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,14 +37,14 @@ __forceinline bool CanCastTo(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `riid`  
+ *riid*  
  인터페이스 ID입니다.  
   
- `ppv`  
+ *ppv*  
  성공적으로 캐스팅 된 마지막 인터페이스 ID에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true` 모든 캐스트 작업 성공 그렇지 않으면 `false`합니다.  
+ **true 이면** 모든 캐스트 작업이 성공 하면이 고, 그렇지 **false**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

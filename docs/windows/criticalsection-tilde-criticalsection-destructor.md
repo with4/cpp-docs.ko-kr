@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d33f8a3feb772ffe00221aeaf80892a535c2e271
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 94f3937006f1cc13d9eefd7a9a8f338df2a13aa1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881616"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465983"
 ---
 # <a name="criticalsectioncriticalsection-destructor"></a>CriticalSection::~CriticalSection 소멸자
-현재 CriticalSection 개체의 초기화를 취소하고 제거합니다.  
+초기화를 취소 하 고 현재 소멸 **CriticalSection** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   

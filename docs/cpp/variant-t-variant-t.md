@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14386e737d136b91f8864eeaa182038b62df72e0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944281"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464164"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Microsoft 전용**  
@@ -32,7 +32,6 @@ ms.locfileid: "37944281"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 _variant_t( ) throw( );  
   
 _variant_t(  
@@ -200,7 +199,7 @@ _variant_t(
  **부호 없는 int** 새에 복사할 값 `_variant_t` 개체입니다.  
   
  *i8Src*  
- __**Int64** 새에 복사할 값 `_variant_t` 개체입니다.  
+ **__int64** 새에 복사할 값 `_variant_t` 개체입니다.  
   
  *ui8Src*  
  **unsigned __int64** 새에 복사할 값 `_variant_t` 개체입니다.  
@@ -215,7 +214,7 @@ _variant_t(
   
 -   **_variant_t (_variant_t &***var_t_Src***)** 생성을 `_variant_t` 개체에서 다른 `_variant_t` 개체입니다.     변형 형식이 유지됩니다.  
   
--   **_variant_t (VARIANT &***varSrc* **, bool**`fCopy`**)** 생성 된 `_variant_t` 기존 개체 `VARIANT` 개체입니다.       경우 `fCopy` 됩니다 **false**, **VARIANT** 개체 복사본을 만들지 않고 새 개체에 연결 됩니다.  
+-   **_variant_t (VARIANT &***varSrc* **, bool**`fCopy`**)** 생성 된 `_variant_t` 기존 개체 `VARIANT` 개체입니다.       경우 *fCopy* 은 **false**의 **VARIANT** 개체 복사본을 만들지 않고 새 개체에 연결 됩니다.  
   
 -   **_variant_t (short***sSrc* **, VARTYPE**`vtSrc`**= VT_I2)** 생성을 `_variant_t` 를 에서VT_I2또는VT_BOOL형식의개체**짧은** 정수 값입니다.       다른 `VARTYPE` E_INVALIDARG 오류가 발생 합니다.  
   
@@ -245,5 +244,5 @@ _variant_t(
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_variant_t 클래스](../cpp/variant-t-class.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc826b588f133abb93c9942e7907dd8b0fce9574
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5e226fdf4f8978172a187e1bfa8d53655ce368f5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944245"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463303"
 ---
 # <a name="while-statement-c"></a>while 문 (C++)
 실행 *문을* 까지 반복 해 서 *식* 0으로 계산 합니다.  
@@ -30,7 +30,6 @@ ms.locfileid: "37944245"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 while ( expression )  
    statement  
 ```  
@@ -71,7 +70,7 @@ int main()
   
  루프의 맨 위에 있는 종료 조건이 평가 됩니다. 뒤에 밑줄이 있으면 루프 실행 하지 않습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [반복 문](../cpp/iteration-statements-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [do-while 문(C++)](../cpp/do-while-statement-cpp.md)   

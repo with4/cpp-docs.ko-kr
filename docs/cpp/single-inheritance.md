@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b06bceadf9a274253693dc8f33f3d04e6500115
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f4f0f2a82c02bcb58f89d604978d31eb01ebd1fd
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028623"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465693"
 ---
 # <a name="single-inheritance"></a>단일 상속
 일반적인 상속 형식인 "단일 상속"에서 클래스에는 기본 클래스가 하나만 포함됩니다. 다음 그림에 나와 있는 관계를 살펴보십시오.  
@@ -164,4 +164,3 @@ int main() {
   
 > [!NOTE]
 >  기본 클래스를 강제로 적용하여 `PrintNameOf`와 같은 함수를 구현하는 방식은 최적의 디자인이 아닌 경우가 많습니다. [가상 함수](../cpp/virtual-functions.md) 다른 디자인 대안을 제공 합니다.  
-  

@@ -16,20 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d1fc04a09e48ac50f6f27d4ffd3e01dbd3dac8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54444200b9a38c427a8192d1c16e6835712ff1f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467921"
 ---
 # <a name="virtual-functions"></a>가상 함수
 가상 함수는 파생 클래스에서 다시 정의할 멤버 함수입니다. 기본 클래스의 포인터나 참조를 사용하여 파생 클래스 개체를 참조할 때 해당 개체의 가상 함수를 호출하고 파생 클래스의 함수 버전을 실행할 수 있습니다.  
   
  가상 함수를 사용하면 함수 호출을 만드는 데 사용한 식과 관계없이 개체에 적합한 함수가 호출됩니다.  
   
- 로 선언 된 함수를 포함 하는 기본 클래스 가정 [가상](../cpp/virtual-cpp.md) 및 파생된 클래스는 동일한 기능을 정의 합니다. 기본 클래스의 포인터나 참조를 사용하여 호출되더라도 파생 클래스의 개체에 대해 파생 클래스의 함수가 호출됩니다. 다음 예제에서는 `PrintBalance` 함수와 파생 클래스 2개의 구현을 제공하는 기본 클래스를 보여 줍니다.  
+ 으로 선언 된 함수를 포함 하는 기본 클래스 가정 [가상](../cpp/virtual-cpp.md) 파생된 클래스가 같은 함수를 정의 하 고 있습니다. 기본 클래스의 포인터나 참조를 사용하여 호출되더라도 파생 클래스의 개체에 대해 파생 클래스의 함수가 호출됩니다. 다음 예제에서는 `PrintBalance` 함수와 파생 클래스 2개의 구현을 제공하는 기본 클래스를 보여 줍니다.  
   
-```  
+```cpp 
 // deriv_VirtualFunctions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -85,7 +86,7 @@ int main() {
   
  다음 예제에서는 포인터를 통해 호출된 가상 함수와 비가상 함수의 동작을 보여 줍니다.  
   
-```  
+```cpp 
 // deriv_VirtualFunctions2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -140,7 +141,7 @@ int main() {
   
 ### <a name="output"></a>출력  
   
-```  
+```Output  
 Derived::NameOf  
 Invoked by Base  
 Derived::NameOf  
@@ -149,15 +150,15 @@ Invoked by Derived
   
  `NameOf` 함수가 `Base`의 포인터를 통해 호출되건 `Derived`의 포인터를 통해 호출되건 관계없이 `Derived`에 대한 함수를 호출합니다. `Derived` 가 가상 함수이고 `NameOf` 및 `pBase`가 모두 `pDerived` 형식의 개체를 가리키므로 `Derived`에 대한 함수를 호출합니다.  
   
- 전역 또는 정적 함수를 선언할 수 없습니다 클래스 형식의 개체에 대해서만 가상 함수가 호출 되기 때문에 **가상**합니다.  
+ 가상 함수는 클래스 형식의 개체에 대해서만 호출 되므로, 전역 또는 정적 함수를 선언할 수 없습니다 **가상**합니다.  
   
- **가상** 필요는 없습니다 되지만 가상 함수 재정의 항상 가상 파생된 클래스에서 함수를 재정의 선언 하는 경우에 키워드를 사용할 수 있습니다.  
+ 합니다 **가상** 필요 없는 있지만 가상 함수 재정의 항상 가상 파생된 클래스에서 함수 재정의 선언 하는 경우에 키워드를 사용할 수 있습니다.  
   
- 사용 하 여 선언 된 경우가 아니면 기본 클래스의 가상 함수를 정의 해야 합니다는 *순수 지정자*합니다. (순수 가상 함수에 대 한 자세한 내용은 참조 [추상 클래스](../cpp/abstract-classes-cpp.md).)  
+ 사용 하 여 선언 된 경우가 아니면 기본 클래스의 가상 함수를 정의 해야 합니다 *순수 지정자*합니다. (순수 가상 함수에 대 한 자세한 내용은 참조 하세요. [추상 클래스](../cpp/abstract-classes-cpp.md).)  
   
  범위 결정 연산자(`::`)를 사용하여 함수 이름을 명시적으로 정규화하여 가상 함수 호출 메커니즘을 억제할 수 있습니다. `Account` 클래스가 포함된 이전의 예제를 생각해 보십시오. 기본 클래스에서 `PrintBalance`를 호출하려면 다음과 같은 코드를 사용하세요.  
   
-```  
+```cpp 
 CheckingAccount *pChecking = new CheckingAccount( 100.00 );  
   
 pChecking->Account::PrintBalance();  //  Explicit qualification.  
@@ -168,4 +169,3 @@ pAccount->Account::PrintBalance();   //  Explicit qualification.
 ```  
   
  위의 예제에서 `PrintBalance`에 대한 두 호출 모두 가상 함수 호출 메커니즘을 억제합니다.  
-  

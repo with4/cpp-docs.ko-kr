@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e08daba1e80523e7992f52ec353826bb53417682
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1365e950077a65150d8f71fd640f69d1750068c9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028361"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462312"
 ---
 # <a name="standard-conversions"></a>표준 변환
 C++ 언어에서는 기본 형식 간의 변환을 정의합니다. 또한 포인터, 참조 및 멤버 포인터 파생 형식에 대한 변환도 정의합니다. 이러한 변환을 "표준 변환"이라고 합니다. (형식, 표준 형식 및 파생된 형식에 대 한 자세한 내용은 참조 하세요. [형식](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -95,7 +95,6 @@ long_num2 = int_num * long_num2;
  부호가 있는 정수 계열 형식의 개체를 부호가 없는 해당 형식으로 변환할 수 있습니다. 이러한 변환이 발생할 때 실제 비트 패턴은 변경되지 않습니다. 그러나 데이터의 해석은 변경됩니다. 다음과 같은 코드를 생각해 볼 수 있습니다.  
   
 ```cpp 
-  
 #include <iostream>  
   
 using namespace std;  
@@ -107,7 +106,6 @@ int main()
     cout << (u = i) << "\n";  
 }  
 // Output: 65533  
-  
 ```  
   
  앞의 예제에는 **짧은 서명**, `i`가 정의 되 고 음수로 초기화 합니다. 식을 `(u = i)` 발생 `i` 변환할 수는 **unsigned short** 에 할당 되기 전에 `u`합니다.  
@@ -163,7 +161,6 @@ cout << (float)1E300 << endl;
  다음 코드에서는 표에 설명된 변환 규칙을 보여 줍니다.  
   
 ```cpp 
-  
 double dVal;  
 float fVal;  
 int iVal;  
@@ -249,12 +246,12 @@ int main()
  `pA` 포인터는 `A *` 형식이고, 이는 "`A` 형식의 개체에 대한 포인터"로 해석될 수 있습니다. 멤버인 `bObject` `(`와 같은 `BComponent` 및 `BMemberFunc`) 입력에 고유한 `B` 과 통해 액세스할 수 되지 않는 `pA`합니다. `pA` 포인터는 `A` 클래스에서 정의된 개체의 특성(멤버 함수 및 데이터)에만 액세스할 수 있습니다.  
   
 ### <a name="pointer-to-function"></a>함수 포인터  
- 함수에 대 한 포인터 형식으로 변환 될 수 있습니다 **void \*** 이면 형식 **void \***  해당 포인터를 저장할 수 있도록 충분히 큰 합니다.  
+ 함수에 대 한 포인터 형식으로 변환 될 수 있습니다 `void *`이면 형식 `void *` 해당 포인터를 저장할 수 있도록 충분히 큰 합니다.  
   
 ### <a name="pointer-to-void"></a>void 포인터  
  입력에 대 한 포인터 **void** 포인터를 다른 형식으로 하지만 명시적 형식 캐스팅과 변환할 수 있습니다 (달리 c에서). (참조 [명시적 형식 변환이 있는 식](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) 형식 캐스팅에 대 한 자세한 내용은 합니다.) 입력에 대 한 포인터 형식에 대 한 포인터를 암시적으로 변환할 **void**합니다. 형식의 incomplete 개체에 대 한 포인터에 대 한 포인터로 변환할 수 **void** (암시적으로) 하 고 다시 (명시적). 이러한 변환 결과는 원래 포인터 값과 같습니다. 개체는 선언되지 않은 경우 완료되지 않은 것으로 간주되지만 크기 또는 기본 클래스를 확인하는 데 사용할 수 있는 정보가 부족합니다.  
   
- 없는 모든 개체에 대 한 포인터 **상수** 또는 **volatile** 형식의 포인터로 암시적으로 변환할 수 있습니다 **void \*** .  
+ 없는 모든 개체에 대 한 포인터 **상수** 또는 **volatile** 형식의 포인터로 암시적으로 변환할 수 `void *`입니다.  
   
 ### <a name="const-and-volatile-pointers"></a>const 및 volatile 포인터  
  C + +의 표준 변환이 제공 하지 않는 **const** 또는 **volatile** 형식이 아닌 형식으로 **const** 또는 **volatile**합니다. 하지만 모든 종류의 변환은 명시적 형식 캐스트를 사용하여 지정할 수 있습니다(안전하지 않은 변환 포함).  
@@ -325,5 +322,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C++ 언어 참조](../cpp/cpp-language-reference.md)

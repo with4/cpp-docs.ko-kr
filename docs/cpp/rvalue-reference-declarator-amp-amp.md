@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21d1c1ad928ef61573271263a9a1112e944e2472
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e4fb22334e809215f5f00b7d06170f6a018e3312
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944524"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462390"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Rvalue 참조 선언 자: &amp;&amp;
 rvalue 식에 대한 참조를 보유합니다.  
@@ -29,7 +29,6 @@ rvalue 식에 대한 참조를 보유합니다.
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 type-id && cast-expression  
 ```  
   
@@ -41,7 +40,7 @@ type-id && cast-expression
 ## <a name="move-semantics"></a>의미 체계 이동  
  Rvalue 참조의 구현을 지원 *의미 체계 이동*, 응용 프로그램의 성능을 크게 높일 수는 있습니다. 의미 체계 이동을 사용하여 한 개체에서 다른 개체로 리소스(예: 동적으로 할당된 메모리)를 전송하는 코드를 작성할 수 있습니다. 의미 체계 이동은 리소스가 프로그램의 다른 곳에서 참조될 수 없는 임시 개체에서 전송될 수 있도록 하기 때문에 작동합니다.  
   
- 이동 의미 체계를 구현 하려면 일반적으로 제공를 *이동 생성자* 및 이동 할당 연산자를 필요에 따라 (`operator=`), 클래스에 있습니다. 이렇게 하면 해당 소스가 rvalue인 복사 및 할당 작업에서 자동으로 의미 체계 이동을 활용합니다. 기본 복사 생성자와 달리, 컴파일러는 기본 이동 생성자를 제공하지 않습니다. 이동 생성자를 작성 하는 방법 및 응용 프로그램에서 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [이동 생성자 및 이동 할당 연산자 (c + +)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)합니다.  
+ 이동 의미 체계를 구현 하려면 일반적으로 제공를 *이동 생성자* 및 이동 할당 연산자를 필요에 따라 (**연산자 =**), 클래스에 있습니다. 이렇게 하면 해당 소스가 rvalue인 복사 및 할당 작업에서 자동으로 의미 체계 이동을 활용합니다. 기본 복사 생성자와 달리, 컴파일러는 기본 이동 생성자를 제공하지 않습니다. 이동 생성자를 작성 하는 방법 및 응용 프로그램에서 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [이동 생성자 및 이동 할당 연산자 (c + +)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)합니다.  
   
  일반 함수 및 연산자를 오버로드하여 의미 체계 이동을 활용할 수도 있습니다. Visual c + + 2010에서는 c + + 표준 라이브러리에 이동 의미 체계를 소개합니다. 예를 들어 `string` 클래스는 의미 체계 이동을 수행하는 작업을 구현합니다. 여러 문자열을 연결하고 결과를 출력하는 다음 예제를 살펴보십시오.  
   
@@ -59,7 +58,7 @@ int main()
 }  
 ```  
   
- 호출할 때마다 Visual c + + 2010 이전 `operator+` 할당 하 고 새 임시 반환 `string` 개체 (rvalue). `operator+`는 소스 문자열이 lvalue인지 아니면 rvalue인지를 알 수 없으므로 한 문자열을 다른 문자열에 추가할 수 없습니다. 소스 문자열이 둘 다 lvalue인 경우 프로그램의 다른 곳에서 참조될 수 있으므로 수정되지 않아야 합니다. rvalue 참조를 사용함으로써 프로그램의 다른 곳에서 참조될 수 없는 rvalue를 사용하도록 `operator+`를 수정할 수 있습니다. 따라서 `operator+`는 이제 한 문자열을 다른 문자열에 추가할 수 있으며, 이에 따라 `string` 클래스가 수행해야 하는 동적 메모리 할당 수가 크게 줄어들 수 있습니다. 에 대 한 자세한 내용은 합니다 `string` 클래스를 참조 하십시오 [basic_string 클래스](../standard-library/basic-string-class.md)합니다.  
+ 호출할 때마다 Visual c + + 2010 이전 **operator +** 할당 하 고 새 임시 반환 `string` 개체 (rvalue). **operator +** 소스 문자열이 lvalue 또는 rvalue 되는지 여부를 알지 못하므로 다른 하나의 문자열을 추가할 수 없습니다. 소스 문자열이 둘 다 lvalue인 경우 프로그램의 다른 곳에서 참조될 수 있으므로 수정되지 않아야 합니다. Rvalue 참조를 사용 하 여 **operator +** 프로그램의 다른 곳에서 참조 될 수 없는 rvalue를 사용 하도록 수정할 수 있습니다. 따라서 **operator +** 다른 이제 문자열 하나를 추가할 수 있습니다. 이에 따라 `string` 클래스가 수행해야 하는 동적 메모리 할당 수가 크게 줄어들 수 있습니다. 에 대 한 자세한 내용은 합니다 `string` 클래스를 참조 하십시오 [basic_string 클래스](../standard-library/basic-string-class.md)합니다.  
   
  의미 체계 이동은 컴파일러에서 RVO(반환 값 최적화) 또는 NRVO(명명된 반환 값 최적화)를 사용할 수 없는 경우에도 도움이 됩니다. 이러한 경우에 컴파일러는 형식에 정의된 이동 생성자를 호출합니다. 명명 된 반환 값 최적화에 대 한 자세한 내용은 참조 하세요. [명명 된 Return Value Optimization in Visual c + + 2005](http://go.microsoft.com/fwlink/p/?linkid=131571)합니다.  
   
@@ -410,7 +409,7 @@ print_type_and_value<string&>(string& t)
 ## <a name="summary"></a>요약  
  rvalue 참조는 rvalue와 lvalue를 구별합니다. rvalue 참조는 불필요한 메모리 할당 및 복사 작업의 필요성을 제거함으로써 응용 프로그램의 성능을 높이는 데 도움을 줄 수 있습니다. rvalue 참조를 사용하면 마치 다른 함수가 직접 호출된 것처럼 임의의 인수를 받아들여 다른 함수에 전달하는 함수의 버전을 작성할 수도 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)   
  [Lvalue 참조 선언 자: &](../cpp/lvalue-reference-declarator-amp.md)   
  [Lvalue 및 Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)   

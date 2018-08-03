@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03de935ab9195cddf3ea9936b694b55ba2cec34c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 55d4fa6156c4ef2032111c0306c3cff8dce14059
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883474"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461454"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator* 연산자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,10 +34,10 @@ InterfaceType* operator *();
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 현재 ComPtrRef 개체에서이 나타내는 인터페이스에 대 한 포인터입니다.  
+ 현재이 나타내는 인터페이스에 대 한 포인터 **ComPtrRef** 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 현재 ComPtrRef 개체에서이 나타내는 인터페이스에 대 한 포인터를 검색 합니다.  
+ 현재이 나타내는 인터페이스에 포인터를 검색 **ComPtrRef** 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b37d87d5380b9d4dac69cee702654285461ead6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7222d7021665a76c7e087033f5152d2836008caa
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871629"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460934"
 ---
 # <a name="custom-c"></a>custom(C++)
 형식 라이브러리의 개체에 대 한 메타 데이터를 정의합니다.  
@@ -30,8 +30,7 @@ ms.locfileid: "33871629"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ custom(  
+[ custom(  
    uuid,   
    value  
 ) ];  
@@ -42,12 +41,12 @@ ms.locfileid: "33871629"
  고유한 ID입니다.  
   
  *값*  
- Variant로 들어갈 수 있는 값입니다.  
+ Variant로 입력할 수 있는 값입니다.  
   
 ## <a name="remarks"></a>설명  
- **사용자 지정** c + + 특성 정보를 형식 라이브러리에 배치할 수 발생 합니다. 형식 라이브러리에서 사용자 지정 값을 읽을 수 있는 도구에 필요 합니다.  
+ 합니다 **사용자 지정** c + + 특성 정보를 형식 라이브러리에 배치 하면 됩니다. 형식 라이브러리에서 사용자 지정 값을 읽는 도구를 해야 합니다.  
   
- **사용자 지정** 특성와 동일한 기능에는 [사용자 지정](http://msdn.microsoft.com/library/windows/desktop/aa366766) MIDL 특성입니다.  
+ 합니다 **사용자 지정** 특성이 동일한 기능을 합니다 [사용자 지정](http://msdn.microsoft.com/library/windows/desktop/aa366766) MIDL 특성입니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -55,7 +54,7 @@ ms.locfileid: "33871629"
   
 |||  
 |-|-|  
-|**적용 대상**|COM이 아닌 `interface`, **클래스**, `enum`s, `idl_module` 메서드, 인터페이스 멤버, 인터페이스 매개 변수 `typedef`s **union**s, `struct`s|  
+|**적용 대상**|비-COM **인터페이스**, **클래스**, **열거형**s `idl_module` 인터페이스 매개 변수, 메서드, 인터페이스 멤버 **typedef**s, **union**개이면 **구조체**s|  
 |**반복 가능**|예|  
 |**필수 특성**|**coclass** (클래스에 사용) 하는 경우|  
 |**잘못된 특성**|없음|  

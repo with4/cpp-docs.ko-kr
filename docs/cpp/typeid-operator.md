@@ -14,18 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51d2a3861cb26073063058aa4124244d94df40b
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a3941ec28efcc3639e56a62c25565f94bc941d13
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207454"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464284"
 ---
 # <a name="typeid-operator"></a>typeid 연산자
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 typeid(type-id)  
 typeid(expression)  
 ```  
@@ -99,6 +98,6 @@ T max( T arg1, T arg2 ) {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [런타임 형식 정보](../cpp/run-time-type-information.md)   
  [키워드](../cpp/keywords-cpp.md)

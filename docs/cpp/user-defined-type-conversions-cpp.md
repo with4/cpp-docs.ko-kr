@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c41e2cf0765c036715377038357d587a755196f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5040319bee3fa74319bb30ca45ff11f2f5d72720
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944842"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465934"
 ---
 # <a name="user-defined-type-conversions-c"></a>사용자 정의 형식 변환(C++)
 A *변환* 다른 형식의 값에서 일부 형식의 새 값을 생성 합니다. *표준 변환* 있으며 기본 제공 형식을 만들 수 있습니다 c + + 언어 및 지원 내장 *사용자 정의 변환은* , 또는 사용자 정의 형식 간의 변환을 수행 하 합니다.  
@@ -79,7 +79,7 @@ A *변환* 다른 형식의 값에서 일부 형식의 새 값을 생성 합니�
   
  합니다 **명시적** 키워드는 c++98 이후로, 변환 생성자를 c++11 부터는 변환 함수를 적용할 수 있습니다. 다음 섹션에서는 사용 하는 방법에 대 한 자세한 정보를 포함 합니다 **명시적** 키워드입니다.  
   
-##  <a name="ConvCTOR"></a> 변환 생성자  
+## <a name="ConvCTOR"></a> 변환 생성자  
  변환 생성자는 사용자 정의 또는 기본 제공 형식에서 사용자 정의 형식으로의 변환을 정의합니다. 다음 예제에서는 기본 제공 형식에서 변환 하는 변환 생성자 **이중** 사용자 정의 형식으로 `Money`입니다.  
   
 ```cpp 
@@ -181,7 +181,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << balance << std::endl;  
 }  
-  
 ```  
   
  멤버 변수 `amount` 개인 및 입력에 대 한 public 변환 함수가 이루어집니다 **double** 의 값을 반환 하기 위해 정의 됩니다 `amount`합니다. `display_balance` 함수에서는 스트림 삽입 연산자 `balance`를 통해 `<<`의 값이 표준 출력에 스트리밍될 때 암시적 변환이 발생합니다. 사용자 정의 형식에 대 한 스트림 삽입 연산자 정의 되어 있으므로 `Money`, 기본 제공 형식에 대 한 하나 이지만 **이중**, 컴파일러에서 변환 함수를 사용할 수 `Money` 에 **double** 스트림 삽입 연산자를 충족 하도록 합니다.  
@@ -226,8 +225,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << (double)balance << std::endl;  
 }  
-  
 ```  
   
  여기서 변환 함수 **이중 연산자** 명시적 내용이 및 형식으로 명시적 캐스트가 **double** 함수에서 도입 되었습니다 `display_balance` 변환을 수행 하기. 이 캐스트가 생략되었다면 컴파일러는 `<<` 형식에 대한 적절한 스트림 삽입 연산자 `Money`를 찾지 못하고 오류가 발생됩니다.  
-  

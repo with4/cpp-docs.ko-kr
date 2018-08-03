@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2617df132f31d63379a3bd27a49409b1599a090
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e3f05576b4122acd21f7a535172a1facd562ed4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854839"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466389"
 ---
 # <a name="activationfactoryrelease-method"></a>ActivationFactory::Release 메서드
-현재 ActivationFactory 개체의 참조 횟수를 감소 시킵니다.  
+현재 참조 횟수를 감소 **ActivationFactory** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   

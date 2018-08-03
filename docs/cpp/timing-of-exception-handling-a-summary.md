@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2ac5abb13ae700e464635efc90a91c4a5835ab
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8f45b6ee85924106e949a7487f133b8e3fbe0b9e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939418"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465011"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>예외 처리에서의 타이밍: 요약
 종료 처리기가 실행 하는 방법과 관계 없이 **__try** 문 블록 종료 됩니다. 원인의 점프,는 **__try** 블록을 `longjmp` 블록 및 예외 처리로 인 한 스택 해제 밖으로 제어를 전송 하는 문.  
@@ -56,6 +56,6 @@ ms.locfileid: "37939418"
   
     -   코드 줄에서 이 예외 처리기 끝 다음으로 제어가 전달됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [종료 처리기 작성](../cpp/writing-a-termination-handler.md)   
  [구조적 예외 처리(C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 79ec82ec00e912d597cfeda608e1b77cf08ab4e8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208551"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466945"
 ---
 # <a name="string-and-character-literals--c"></a>문자열 및 문자 리터럴 (c + +)
 C++를 사용하면 다양한 문자열 및 문자 형식이 지원되며 이러한 각 형식의 리터럴 값을 표현할 수 있습니다. 소스 코드에서는 문자 집합을 사용하여 문자 및 문자열 리터럴의 내용을 표현합니다. 유니버설 문자 이름 및 이스케이프 문자를 사용하면 기본 소스 문자 집합만 사용하여 모든 문자열을 표현할 수 있습니다. 원시 문자열 리터럴을 사용하면 이스케이프 문자를 사용하지 않아도 되며 원시 문자열 리터럴을 사용하여 모든 유형의 문자열 리터럴을 표현할 수 있습니다. 또한 추가 생성이나 변환 단계를 수행하지 않고도 std:: string 리터럴을 만들 수 있습니다.  
@@ -146,7 +146,7 @@ int main() {
   
  **Microsoft 전용**  
   
- (해당 되는 접두사 없이)는 일반 문자 리터럴 값을 만들려면 컴파일러는 32 비트 정수 내의 8 비트 값에 작은따옴표 사이의 문자 시퀀스를 문자를 변환 합니다. 리터럴의 여러 문자는 필요에 따라 상위에서 하위로 해당 바이트를 채웁니다. 만들려는 **char** 값, 컴파일러는 하위 바이트입니다. `wchar_t` 또는 `char16_t` 값을 만들기 위해 컴파일러는 하위 단어를 사용합니다. 컴파일러는 비트가 할당된 바이트 또는 단어 이상으로 설정된 경우 결과가 잘린다고 경고합니다.  
+ (해당 되는 접두사 없이)는 일반 문자 리터럴 값을 만들려면 컴파일러는 32 비트 정수 내의 8 비트 값에 작은따옴표 사이의 문자 시퀀스를 문자를 변환 합니다. 리터럴의 여러 문자는 필요에 따라 상위에서 하위로 해당 바이트를 채웁니다. 만들려는 **char** 값, 컴파일러는 하위 바이트입니다. 만들려는 **wchar_t** 또는 `char16_t` 값, 컴파일러는 하위 단어입니다. 컴파일러는 비트가 할당된 바이트 또는 단어 이상으로 설정된 경우 결과가 잘린다고 경고합니다.  
   
 ```cpp  
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'  
@@ -231,7 +231,7 @@ const char* str2 = u8"\U0001F607 is O:-)";
 ```  
   
 ### <a name="wide-string-literals"></a>와이드 문자열 리터럴  
- 와이드 문자열 리터럴은 상수 null로 끝나는 배열입니다 `wchar_t` 이 붙 '`L`' 큰따옴표 ("), 백슬래시를 제외한 모든 그래픽 문자를 포함 하 고 (\\), 또는 줄 바꿈 문자입니다. 와이드 문자열 리터럴에는 위에 나열된 이스케이프 시퀀스 및 모든 유니버설 문자 이름이 포함될 수 있습니다.  
+ 와이드 문자열 리터럴은 상수 null로 끝나는 배열입니다 **wchar_t** 이 붙 '`L`' 큰따옴표 ("), 백슬래시를 제외한 모든 그래픽 문자를 포함 하 고 (\\), 또는 줄 바꿈 문자입니다. 와이드 문자열 리터럴에는 위에 나열된 이스케이프 시퀀스 및 모든 유니버설 문자 이름이 포함될 수 있습니다.  
   
 ```cpp  
 const wchar_t* wide = L"zyxw";  
@@ -319,7 +319,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
   
  **Microsoft 전용**  
   
- Visual c + +에서 문자열 리터럴 하 여 비 const에 대 한 포인터를 초기화할 **char** 또는 `wchar_t`합니다. 이는 C99 코드에서 허용되지만 C++98에서는 더 이상 사용되지 않으며 C++11에서는 제거되었습니다. 문자열을 수정하려고 하면 다음 예제와 같이 액세스 위반이 발생합니다.  
+ Visual c + +에서 문자열 리터럴 하 여 비 const에 대 한 포인터를 초기화할 **char** 하거나 **wchar_t**합니다. 이는 C99 코드에서 허용되지만 C++98에서는 더 이상 사용되지 않으며 C++11에서는 제거되었습니다. 문자열을 수정하려고 하면 다음 예제와 같이 액세스 위반이 발생합니다.  
   
 ```cpp  
 wchar_t* str = L"hello";  
@@ -399,7 +399,7 @@ const char16_t* s4 = u"😃 = \U0001F603 is :-D";
 const char32_t* s5 = U"😎 = \U0001F60E is B-)";  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [문자 집합](../cpp/character-sets.md)   
  [숫자, 부울 및 포인터 리터럴](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [사용자 정의 리터럴](../cpp/user-defined-literals-cpp.md)

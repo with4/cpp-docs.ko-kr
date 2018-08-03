@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0bf945dd8225ca3c153d7f497ded6b83ebd022d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413bf73d5aeaef2c210be89f3c6f4ca3a4254ba4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855577"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461973"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 함수
-등록 하 고 id가 지정 된 클래스 ID에 정의 된 지정 된 형식의 인스턴스를 검색  
+등록 하 고 ID가 지정 된 클래스에 정의 된 지정 된 형식의 인스턴스를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,14 +39,14 @@ inline HRESULT ActivateInstance(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `T`  
+ *T*  
  활성화 하는 형식입니다.  
   
- `activatableClassId`  
- 매개 변수를 정의 하는 클래스 ID의 이름 `T`합니다.  
+ *activatableClassId*  
+ 매개 변수를 정의 하는 클래스 ID의 이름을 *T*합니다.  
   
- `instance`  
- 이 작업이 완료 될 때의 인스턴스에 대 한 참조 `T`합니다.  
+ *인스턴스*  
+ 이 작업이 완료 될 때, 인스턴스에 대 한 참조 *T*합니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공 하면 s_ok이 고 그렇지 않은 경우 오류의 원인을 나타내는 HRESULT 오류가 발생 합니다.  

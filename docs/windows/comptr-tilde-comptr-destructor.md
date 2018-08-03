@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5f430e11c2d213273b46b6b6d2d502407ae84ab6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70fcb38ad9ec3d18220197ad0fa44c3ad128444e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883448"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463787"
 ---
 # <a name="comptrcomptr-destructor"></a>ComPtr::~ComPtr 소멸자
-ComPtr의 인스턴스 초기화를 취소합니다.  
+인스턴스를 초기화 취소 **ComPtr**합니다.  
   
 ## <a name="syntax"></a>구문  
   
