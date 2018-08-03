@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaf0c52cc9811e84fab026e333ee3c0808d4effd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 073e642b99dea4eb6f77fd1e79731713748f1f61
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944728"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403117"
 ---
 # <a name="equality-operators--and-"></a>같음 연산자: == 및 !=
 ## <a name="syntax"></a>구문  
@@ -69,7 +69,7 @@ int main() {
   
  같음 연산자는 동일한 형식의 멤버에 대한 포인터를 비교할 수 있습니다. 이러한 비교에서는 멤버 포인터 변환이 수행 됩니다. 멤버에 대한 포인터를 0으로 계산되는 상수 식과 비교할 수도 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [이항 연산자가 있는 식](../cpp/expressions-with-binary-operators.md)   
  [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 관계 및 같음 연산자](../c-language/c-relational-and-equality-operators.md)

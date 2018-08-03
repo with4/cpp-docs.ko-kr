@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 680c1278ca2b17c7ea35e72946fb5d5030c5e7c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 724803fbbf04bd697dfc85f6576ed5706d708eae
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870873"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464443"
 ---
 # <a name="comptrcopyto-method"></a>ComPtr::CopyTo 메서드
-지정된 된 포인터를이 ComPtr과 연결 된 현재 또는 지정 된 인터페이스를 복사 합니다.  
+현재 또는 지정 된 인터페이스와 관련 된 복사 **ComPtr** 지정 된 포인터에 대 한 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,24 +46,24 @@ HRESULT CopyTo(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `U`  
+ *U*  
  형식 이름.  
   
- `ptr`  
- 이 작업이 완료 되 면 요청된 된 인터페이스에 대 한 포인터입니다.  
+ *ptr*  
+ 이 작업이 완료 될 때 요청된 된 인터페이스에 대 한 포인터입니다.  
   
- `riid`  
+ *riid*  
  인터페이스 ID입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않은 경우 암시적 QueryInterface 작업이 실패 한 이유를 나타내는 HRESULT입니다.  
+ 성공 하면 s_ok이 고 그렇지 않은 경우 이유를 나타내는 HRESULT 암시적 `QueryInterface` 작업이 실패 했습니다.  
   
 ## <a name="remarks"></a>설명  
- 첫 번째 함수는이 ComPtr과 연결 된 인터페이스에 대 한 포인터의 복사본을 반환 합니다. 이 함수는 항상 S_OK를 반환합니다.  
+ 와 연결 된 인터페이스에 대 한 포인터의 복사본을 반환 하는 첫 번째 함수 **ComPtr**합니다. 이 함수는 항상 S_OK를 반환합니다.  
   
- 으로 지정한 인터페이스에 대 한이 ComPtr과 연결 된 인터페이스에 QueryInterface 연산을 수행 하는 두 번째 함수는 `riid` 매개 변수입니다.  
+ 수행 하는 두 번째 함수는 `QueryInterface` 와 연결 된 인터페이스에 대 한 작업 **ComPtr** 으로 지정한 인터페이스에 대 한 합니다 *riid* 매개 변수입니다.  
   
- 기본 인터페이스에 대 한이 ComPtr과 연결 된 인터페이스에 QueryInterface 연산을 수행 하는 세 번째 함수는 `U` 매개 변수입니다.  
+ 수행 하는 세 번째 함수는 `QueryInterface` 와 연결 된 인터페이스에 대 한 작업 **ComPtr** 의 기본 인터페이스에 대 한 합니다 *U* 매개 변수.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

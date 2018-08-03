@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d738d6d00a3ca4c344bcea37b09db7e9c494b50b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24844588a18f269ee6f3a19286e6755b11b1c6bf
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870661"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463634"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>ComPtrRef::ComPtrRef 생성자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -36,11 +36,11 @@ ComPtrRef(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `ptr`  
- 다른 ComPtrRef 개체의 기본 값입니다.  
+ *ptr*  
+ 다른 기본 값 **ComPtrRef** 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 다른 ComPtrRef 개체를 지정된 된 포인터를 ComPtrRef 클래스의 새 인스턴스를 초기화합니다.  
+ 새 인스턴스를 초기화 합니다 **ComPtrRef** 지정 된 포인터를 클래스 **ComPtrRef** 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

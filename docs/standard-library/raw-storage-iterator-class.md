@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d259040ec5f4d7f1148b9a782479b6db8617602
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 470fb497bb52fa51fec06ac0edb3e1996aa1e5e8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954632"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208528"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator 클래스
 
@@ -69,8 +69,8 @@ class raw_storage_iterator
 
 |연산자|설명|
 |-|-|
-|[operator*](#op_star)|출력 반복기 식 * `ii` = `x`를 구현하는 데 사용되는 역참조 연산자입니다.|
-|[operator=](#op_eq)|메모리에 저장하기 위해 원시 저장소 반복기 식 * `i` = `x`를 구현하는 데 사용되는 대입 연산자입니다.|
+|[operator*](#op_star)|출력 반복기 식을 구현 하는 데 사용 되는 역참조 연산자 \* `ii`  =  `x`합니다.|
+|[operator=](#op_eq)|원시 저장소 반복기 식을 구현 하는 데 사용 되는 대입 연산자 \* `i`  =  `x` 메모리에 저장 합니다.|
 |[operator++](#op_add_add)|원시 저장소 반복기에 대한 사전 증가 및 사후 증가 연산자입니다.|
 
 ## <a name="requirements"></a>요구 사항
@@ -103,7 +103,7 @@ typedef ForwardIterator iter_type;
 
 이 형식은 템플릿 매개 변수 `ForwardIterator`의 동의어입니다.
 
-## <a name="op_star"></a>  raw_storage_iterator::operator*
+## <a name="op_star"></a>  raw_storage_iterator:: operator\*
 
 원시 저장소 반복기 식 \* *ii* = *x*를 구현하는 데 사용되는 역참조 연산자입니다.
 

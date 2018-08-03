@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7a94ee7df512262c58d7a90e3dbf461270b5d4c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 79deaacbb00638c690d052668f60d9d072a2060d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939867"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408166"
 ---
 # <a name="initializers"></a>이니셜라이저
 이니셜라이저는 변수의 초기 값을 지정합니다. 변수를 초기화할 수 있는 컨텍스트는 다음과 같습니다.  
@@ -46,7 +46,6 @@ ms.locfileid: "37939867"
     ```cpp  
     Point get_new_point(int x, int y) { return { x, y }; }  
     Point get_new_point(int x, int y) { return Point{ x, y }; }  
-  
     ```  
   
  이니셜라이저가 사용할 수 있는 폼은 다음과 같습니다.  
@@ -93,7 +92,7 @@ ms.locfileid: "37939867"
   
 -   Char 변수는 초기화 `'\0'`합니다.  
   
--   포인터는 `nullptr`로 초기화됩니다.  
+-   에 대 한 포인터 초기화 됩니다 **nullptr**합니다.  
   
 -   배열 [POD](../standard-library/is-pod-class.md) 클래스, 구조체 및 공용 구조체는 해당 멤버 값을 0으로 초기화 합니다.  
   
@@ -214,7 +213,6 @@ int main() {
     int a{};     // value of a is 0  
     double b{};  // value of b is 0.00000000000000000  
 }  
-  
 ```  
   
 ### <a name="copy-initialization"></a>복사 초기화  
@@ -533,4 +531,3 @@ int main()
   
 ### <a name="initialization-of-external-variables"></a>외부 변수 초기화  
  자동, 정적 및 외부 변수의 선언은 이니셜라이저를 포함할 수 있습니다. 그러나 통해 외부 변수 선언은 변수도 선언 되지 않은 경우에 이니셜라이저를 포함할 수 있습니다 **extern**합니다.
-  

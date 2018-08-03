@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 45bc87ec63088fe8f44411a8e86438ebab706e3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fff9e812a6946dd15de5b2d33f57358d02246dab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883487"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462481"
 ---
 # <a name="comptrswap-method"></a>ComPtr::Swap 메서드
-현재 ComPtr에서 관리하는 인터페이스를 지정된 ComPtr에서 관리하는 인터페이스와 교환합니다.  
+현재 관리 되는 인터페이스를 교환 **ComPtr** 지정 된 관리 인터페이스를 사용 하 여 **ComPtr**합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,8 +40,8 @@ void Swap(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `r`  
- ComPtr 합니다.  
+ *r*  
+ A **ComPtr**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

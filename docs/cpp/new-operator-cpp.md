@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b01a7f2ca1af2ef114347d7355fbd1be973b8af
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ae977f1f5388bd4a88c377ee8629f10130854108
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944860"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402993"
 ---
 # <a name="new-operator-c"></a>new 연산자 (C++)
 개체의 배열 또는 개체에 대 한 메모리를 할당 *형식 이름을* 무료에서 저장 하 고 개체에는 적절 한 형식의 0이 아닌 포인터를 반환 합니다.  
@@ -255,7 +255,7 @@ T *TObject =::new TObject;
   
  범위 결정 연산자 (`::`)를 사용 하면 사용의 전역 **새** 연산자입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [새 및 delete 연산자](../cpp/new-and-delete-operators.md)

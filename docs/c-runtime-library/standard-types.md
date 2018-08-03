@@ -170,12 +170,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a66b351ba03ad6d8afb9d7423a2d1833eec8e2b7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0865aaf418fb6d8624f3dec9c853c32c1e3bbc83
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418525"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208782"
 ---
 # <a name="standard-types"></a>표준 형식
 Microsoft 런타임 라이브러리는 다음과 같은 표준 형식 및 typedefs를 정의합니다.  
@@ -218,7 +218,7 @@ Microsoft 런타임 라이브러리는 다음과 같은 표준 형식 및 typede
 |`fpos_t`(대상 플랫폼에 따라 long 정수, `__int64` 또는 구조체)|[fgetpos](../c-runtime-library/reference/fgetpos.md) 및 [fsetpos](../c-runtime-library/reference/fsetpos.md)에서 파일 내의 모든 위치를 고유하게 지정하기 위한 정보를 기록하는 데 사용됩니다.|STDIO.H|  
 |`_fsize_t`(부호 없는 long 정수)|파일의 크기를 나타내는 데 사용됩니다.|IO.H,<br /><br /> WCHAR.H|  
 |`_HEAPINFO` 구조체|[_heapwalk](../c-runtime-library/reference/heapwalk.md)의 다음 힙 항목에 대한 정보가 포함됩니다.|MALLOC.H|  
-|`_HFILE`(void *)|운영 체제 파일 핸들입니다.|CRTDBG.H|  
+|`_HFILE`(void \*)|운영 체제 파일 핸들입니다.|CRTDBG.H|  
 |`imaxdiv_t`|몫과 나머지를 모두 포함하여 [imaxdiv](../c-runtime-library/reference/imaxdiv.md) 함수에서 반환되는 값의 형식입니다.|inttypes.h|  
 |`ino_t`, `_ino_t`(부호 없는 short)|상태 정보를 반환하기 위해 사용됩니다.|WCHAR.H|  
 |`intmax_t`|부호 있는 정수 형식 값을 표시할 수 있는 부호 있는 정수 형식입니다.|stdint.h|  

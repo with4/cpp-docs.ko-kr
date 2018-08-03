@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58724d2e17947c69d1aaf2ed0af66137fe20cc74
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3eeda8fd3babed4e5f9cd658ba324dfa057f66ce
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944257"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466278"
 ---
 # <a name="sizeof-operator"></a>sizeof 연산자
 형식의 크기에 따라 피연산자의 크기를 생성 **char**합니다.  
@@ -111,6 +111,6 @@ The size of the pointer is 4
 sizeof array / sizeof array[0]  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)   
  [키워드](../cpp/keywords-cpp.md)

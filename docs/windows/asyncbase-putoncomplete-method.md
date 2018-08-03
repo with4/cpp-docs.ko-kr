@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 490484a6988851565b478ef41ad16f0c722eb804
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33ca905d25fb010eb6d5c511f22ba40446ffd385
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856074"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465605"
 ---
 # <a name="asyncbaseputoncomplete-method"></a>AsyncBase::PutOnComplete 메서드
-지정된 된 값으로는 완료 이벤트 처리기의 주소를 설정합니다.  
+완료 이벤트 처리기의 주소를 지정된 된 값으로 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,7 +36,7 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `completeHandler`  
+ *completeHandler*  
  완료 이벤트 처리기에 설정 된 주소입니다.  
   
 ## <a name="return-value"></a>반환 값  

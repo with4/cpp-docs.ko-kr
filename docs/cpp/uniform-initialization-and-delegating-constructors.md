@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 26b4cbfb798e47b1add5b1d46c2ea1adb538898b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939834"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465970"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>균일 초기화 및 생성자 위임
 최신 c + +에서 사용할 수 있습니다 *중괄호 초기화* 등호 기호 없이 모든 형식에 대 한 합니다. 또한 비슷한 작업을 수행 하는 생성자를 여러 개 있는 경우 코드를 단순화 하기 위해 위임 생성자를 사용할 수 있습니다.  
@@ -50,7 +50,6 @@ int main()
     class_a c3{ "yy", 4.4 };  
     class_a c3_1("zz", 5.5);  
 }  
-  
 ```  
   
  클래스 멤버 중괄호 이니셜라이저에 나타나는 순서는 해당 매개 변수를 생성자에 나타나는 순서를 멤버 선언 되는 순서가 아니라 클래스의 기본이 아닌 생성자가 하는 경우 (마찬가지로 `class_a` 에 이전 예제)입니다. 그렇지 않으면 형식에 선언 된 생성자가 없는 경우 중괄호 이니셜라이저에 나타나는 멤버의 순서가는 선언 된 순서와 동일 이 경우 원하는 대로 모든 멤버를 건너뛸 수 없습니다 public 멤버의 만큼 초기화할 수 있습니다. 다음 예제에서는 선언 된 생성자가 없는 경우 중괄호 초기화에 사용 되는 순서를 보여 줍니다.  
@@ -97,7 +96,6 @@ int main()
 class_d* cf = new class_d{4.5};  
 kr->add_d({ 4.5 });  
 return { 4.5 };  
-  
 ```  
   
 ## <a name="initializerlist-constructors"></a>initializer_list 생성자  
@@ -117,7 +115,6 @@ initializer_list<int> ilist1{ 5, 6, 7 };
 initializer_list<int> ilist2( ilist1 );  
 if (ilist1.begin() == ilist2.begin())  
     cout << "yes" << endl; // expect "yes"  
-  
 ```  
   
  표준 라이브러리 컨테이너 클래스 및 `string`, `wstring`, 및 `regex`에 있는 `initializer_list` 생성자입니다. 다음 예제에서는 중괄호 이러한 생성자를 사용 하 여 초기화를 수행 하는 방법을 보여 줍니다.  
@@ -178,7 +175,6 @@ int main() {
   
     class_c c1{ 1, 3, 2 };  
 }  
-  
 ```  
   
  앞의 예제를 단계별로 확인 하는 생성자 `class_c(int, int, int)` 생성자를 호출 하는 먼저 `class_c(int, int)`를 호출 하 `class_c(int)`합니다. 각 생성자에는 다른 생성자에 의해 수행 되지 않는 작업을 수행 합니다.  
@@ -201,7 +197,6 @@ public:
     double m_double{ 1.0 };  
     string m_string;  
 };  
-  
 ```  
   
  다음 예제에서는 비정적 데이터 멤버 이니셜라이저를 사용 하는 방법을 보여 줍니다. 생성자는 지정 된 데이터 멤버 초기화를 하는 경우 멤버 이니셜라이저 재정의 알 수 있습니다.  

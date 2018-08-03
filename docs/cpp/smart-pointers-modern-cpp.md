@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a604ee36bf7d410f9e176278cc98a934874fbac
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939886"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462253"
 ---
 # <a name="smart-pointers-modern-c"></a>스마트 포인터(최신 C++)
 최신 c + + 프로그래밍에서 표준 라이브러리 포함 *스마트 포인터*, 프로그램이 수 있도록 하는 데 사용 되는 것은 메모리 및 리소스 누수 되며 예외 로부터 안전 합니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "37939886"
  [CAutoPtrList 클래스](../atl/reference/cautoptrlist-class.md)  
  `CAutoPtr` 노드 목록을 조작하기 위해 메서드를 캡슐화하는 클래스입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C + +의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)   

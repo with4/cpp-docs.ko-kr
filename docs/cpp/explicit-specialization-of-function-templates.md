@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e35eda35a7d2474826ce151292121be224955420
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8b6a56a0a1dce5d07007898dec486d0e3b080c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410735"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407691"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>함수 템플릿의 명시적 특수화
 함수 템플릿을 사용하면 특정 형식에 대한 함수 템플릿의 명시적 특수화(재정의)를 제공하여 해당 형식에 대한 특별한 동작을 정의할 수 있습니다. 예를 들어:  
@@ -32,9 +32,9 @@ ms.locfileid: "32410735"
 template<> void MySwap(double a, double b);  
 ```  
   
- 이 선언에 대 한 다른 함수를 정의할 수 있습니다를 사용 하면 **double** 변수입니다. 표준 형식 변환, 비템플릿 함수와 마찬가지로 (형식의 변수 승격 등 **float** 를 **double**) 적용 됩니다.  
+ 이 선언에 대 한 다른 함수를 정의할 수 있도록 메시지를 표시 합니다 **이중** 변수입니다. 비템플릿 함수를 표준 형식 변환을 처럼 (같은 형식의 변수로 승격 **float** 하 **double**) 적용 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp
 // explicit_specialization.cpp  
@@ -60,5 +60,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [함수 템플릿](../cpp/function-templates.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25bb47c0297d7e1e472f69334c17aa458aaa57b6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a84e14cbac5eb04e63f85708e3ca8ae100ec56ab
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940451"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406323"
 ---
 # <a name="keywords-c"></a>키워드 (c + +)
 키워드는 특별한 의미가 있는 미리 정의된 예약된 식별자입니다. 따라서 프로그램에서 키워드를 식별자로 사용할 수 없습니다. 다음 키워드는 Microsoft C++에서 예약되었습니다. 밑줄이 앞에 오는 이름은 Microsoft 확장입니다.  
@@ -102,6 +102,6 @@ ms.locfileid: "37940451"
   
 **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [어휘 규칙](../cpp/lexical-conventions.md)   
  [C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

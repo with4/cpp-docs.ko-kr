@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ed9c32a204bdef726a5ace88d811d2eeeb2c53
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f7cb3d05997cfe3d803f522962ed9e7382269bd3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027250"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404927"
 ---
 # <a name="bstrt-class"></a>_bstr_t 클래스
 **Microsoft 전용**  
   
- A `_bstr_t` 개체를 캡슐화 합니다 [BSTR 데이터 형식](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228)합니다. 클래스가 관리 리소스 할당 및 할당 해제 함수 호출을 통해 `SysAllocString` 하 고 `SysFreeString` 및 기타 `BSTR` 적절 한 경우 Api. `_bstr_t` 클래스는 과도한 오버헤드를 방지하기 위해 참조 가산을 사용합니다.  
+ A `_bstr_t` 개체를 캡슐화 합니다 [BSTR 데이터 형식](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228)합니다. 클래스가 관리 리소스 할당 및 할당 해제 함수 호출을 통해 `SysAllocString` 하 고 `SysFreeString` 및 기타 `BSTR` 적절 한 경우 Api. 합니다 **_bstr_t** 클래스는 과도 한 오버 헤드를 방지 하기 위해 참조 가산을 사용 합니다.  
   
 ### <a name="construction"></a>생성  
   
@@ -66,5 +66,5 @@ ms.locfileid: "39027250"
   
  **Lib:** comsuppw.lib 또는 comsuppwd.lib (참조 [/zc: wchar_t (wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 자세한)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [컴파일러 COM 지원 클래스](../cpp/compiler-com-support-classes.md)

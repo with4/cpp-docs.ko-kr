@@ -18,21 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 428e3634898f50e7737c5fc5dae2ce7d0445572e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3122cb3622469adeda3b8c0a2437fe4db7dfca62
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943180"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404215"
 ---
 # <a name="bitwise-and-operator-amp"></a>비트 AND 연산자: &amp;
 
 ## <a name="syntax"></a>구문  
   
 ```
-
 expression & expression  
-
 ```
   
 ## <a name="remarks"></a>설명  
@@ -61,7 +59,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C++ 기본 제공 연산자, 우선 순위 및 결합성](cpp-built-in-operators-precedence-and-associativity.md)  
  [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 비트 연산자](../c-language/c-bitwise-operators.md)

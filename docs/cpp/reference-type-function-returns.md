@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b86ee4505792fbc3a90d34ece8e714eb3565ff
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 47b2ce26ea9cba7f0c38d06546eb0d162332d047
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943219"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408299"
 ---
 # <a name="reference-type-function-returns"></a>참조 형식 함수 반환
 참조 형식을 반환하도록 함수를 선언할 수 있습니다. 이렇게 선언하는 데에는 다음과 같은 두 가지 이유가 있습니다.  
@@ -117,5 +117,5 @@ Foo& GetFoo()
   
  이 경우에 경고를 컴파일러가: `warning C4172: returning address of local variable or temporary`합니다. 간단한 프로그램에서는 메모리 위치를 덮어쓰기 전에 호출자가 참조에 액세스하는 경우 일반적으로 액세스 위반이 발생하지 않습니다. 이 경우는 순전히 운이 작용한 것입니다. 경고에 주의하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [참조](../cpp/references-cpp.md)

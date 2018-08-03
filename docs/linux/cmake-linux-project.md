@@ -1,7 +1,8 @@
 ---
 title: Visual Studio에서 Linux CMake 프로젝트 구성 | Microsoft Docs
+description: Visual Studio에서 Linux CMake 프로젝트를 구성하는 방법
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 07/20/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,22 +15,22 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 014d23996777d0660d4978e307b80e4f94c19686
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 743f15cdb9fe8b0233f5b59ca399c0f47704d441
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849261"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269542"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Linux CMake 프로젝트 구성
 
 **Visual Studio 2017 버전 15.4 이상**  
-Linux C++ 작업을 설치하면 Linux용 CMake 지원이 기본적으로 선택됩니다. 이제 CMake를 Visual Studio 프로젝트로 변환할 필요 없이 CMake를 사용하는 기존 코드 베이스에서 작업할 수 있습니다. 코드 베이스가 플랫폼 간 기반인 경우 Visual Studio 내에서 Windows와 Linux를 모두 대상으로 할 수 있습니다.
+Visual Studio에 대한 Linux C++ 워크로드를 설치하면 Linux용 CMake 지원이 기본적으로 선택됩니다. 이제 CMake를 Visual Studio 프로젝트로 변환할 필요 없이 CMake를 사용하는 기존 코드 베이스에서 작업할 수 있습니다. 코드 베이스가 플랫폼 간 기반인 경우 Visual Studio 내에서 Windows와 Linux를 모두 대상으로 할 수 있습니다.
 
 이 항목에서는 Visual Studio의 CMake 지원에 대한 기본 지식이 있다고 가정합니다. 자세한 내용은 [Visual C++용 CMake 도구](../ide/cmake-tools-for-visual-cpp.md)를 참조하세요. CMake 자체에 대한 자세한 내용은 [CMake를 사용하여 소프트웨어 빌드, 테스트 및 패키지](https://cmake.org/)를 참조하세요.
 
 > [!NOTE]  
-> Visual Studio에서 CMake가 지원되려면 CMake 3.8에 도입된 서버 모드 지원이 필요합니다. 패키지 관리자가 이전 버전의 CMake를 제공하는 경우 [소스로 CMake를 빌드](#build-a-supported-cmake release-from-source)하거나 공식 [CMake 다운로드 페이지](https://cmake.org/download/)에서 다운로드하여 해결할 수 있습니다.
+> Visual Studio에서 CMake가 지원되려면 CMake 3.8에 도입된 서버 모드 지원이 필요합니다. 패키지 관리자가 이전 버전의 CMake를 제공하는 경우 [소스로 CMake를 빌드](#build-a-supported-cmake release-from-source)하거나 공식 [CMake 다운로드 페이지](https://cmake.org/download/)에서 다운로드하여 해결할 수 있습니다. Visual Studio의 [CMake 대상 보기](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) 창에서 지원하는 Microsoft 제공 CMake 변형은 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)에서 미리 작성된 최신 이진 파일을 다운로드합니다.
 
 ## <a name="open-a-folder"></a>폴더 열기
 
@@ -37,13 +38,13 @@ Linux C++ 작업을 설치하면 Linux용 CMake 지원이 기본적으로 선택
 다음 예제에서는 간단한 CMakeLists.txt 파일과 .cpp 파일을 보여 줍니다.
 
 ```cpp
-// Hello.cpp
+// hello.cpp
 
-#include <iostream>;
+#include <iostream>
 
 int main(int argc, char* argv[])
 {
-    std::cout << "Hello" << std::endl;
+    std::cout << "Hello from Linux CMake" << std::endl;
 }
 ```
 

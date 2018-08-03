@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e4dfbfbc146663722eba1302b27e96812d684f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af3ec58afd69f3fde6e2eb67969f1dad8848c5de
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854391"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466724"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>ActivationFactory::GetTrustLevel 메서드
-현재 ActivationFactory 인스턴스화하는 개체의 신뢰 수준을 가져옵니다.  
+개체의 신뢰 수준을 가져옵니다 현재 **ActivationFactory** 인스턴스화합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `trustLvl`  
- 이 작업이 완료될 때 ActivationFactory가 인스턴스화하는 런타임 클래스의 신뢰 수준입니다.  
+ *trustLvl*  
+ 이 작업이 완료 되 면 런타임에서의 신뢰 수준을 클래스는 **ActivationFactory** 인스턴스화합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공하면 S_OK이고, 그렇지 않으면 어설션 오류가 발생하고 `trustLvl`이 FullTrust로 설정됩니다.  
+ 성공 하면 s_ok이 고 어설션 오류가 내보내집니다. 그렇지 않은 경우 및 *trustLvl* FullTrust로 설정 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** module.h  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a7cdd80c1d7b6b17a988d8f3581c7757f69823
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 27522cb4d3bb15912b7988e0152a121616480330
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944491"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464836"
 ---
 # <a name="reinterpretcast-operator"></a>reinterpret_cast 연산자
 포인터가 다른 포인터 형식으로 변환될 수 있도록 합니다. 또한 정수 계열 형식이 포인터 형식으로 변환될 수 있도록 하고 그 반대로도 변환될 수 있도록 합니다.  
@@ -87,6 +87,6 @@ Output:
   
  합니다 **reinterpret_cast** 포인터가 정수 계열 형식으로 처리 될 수 있습니다. 결과는 비트 이동되고 자신과 XOR 연산이 수행되어 고유한 인덱스(높은 확률로 고유함)를 생성합니다. 이 인덱스는 표준 C 스타일 캐스트를 통해 함수의 반환 형식으로 잘립니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [캐스팅 연산자](../cpp/casting-operators.md)   
  [키워드](../cpp/keywords-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 특성을 가진 데이터 액세스 단순화 | Microsoft Docs
+title: 데이터베이스 특성을 사용 하 여 데이터 액세스 단순화 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,42 +29,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e665369f292a646353d1a180661982ce4c902665
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a143badef2aec500b12d176e10c0a5eaf06b2cf4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111717"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339365"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>데이터베이스 특성을 사용하여 데이터 액세스 단순화
-이 항목에서는 데이터베이스 작업을 간소화 하기 위해 데이터베이스 특성의 사용을 보여 줍니다.  
+이 항목에서는 데이터베이스 작업을 간소화 하기 위해 데이터베이스 특성을 사용 하는 방법을 보여 줍니다.  
   
- 데이터베이스에서 정보에 액세스 하는 기본적인 방법은 데이터베이스의 명령 (또는 테이블) 클래스 및 특정 테이블에 대 한 사용자 레코드 클래스를 만드는 것입니다. 데이터베이스 특성에는 일부 이전에 사용 했던 작업을 수행 하는 템플릿 선언을 단순화 합니다.  
+ 데이터베이스에서 정보에 액세스 하는 기본 방법은 데이터베이스에서 명령 (또는 테이블) 클래스 및 특정 테이블에 대 한 사용자 레코드 클래스를 만드는 경우 데이터베이스 특성을 이전에 수행 해야 하 고 템플릿 선언의 일부를 간소화 합니다.  
   
- 데이터베이스 특성의 사용을 보여 주기 위해 다음 섹션에서는 두 개의 동일한 테이블 및 사용자 레코드 클래스 선언이 보여: 특성을 사용 하는 첫 번째 및 두 번째 OLE DB 템플릿을 사용 합니다. 이러한 선언 코드는 일반적으로 authors.h 예를 들어 테이블이 나 명령 개체에 대 한 명명 된 헤더 파일에 들어 있습니다.  
+ 데이터베이스 특성의 사용을 보여 주기 위해 다음 섹션에서는 두 개의 동일한 테이블 및 사용자 레코드 클래스 선언이 표시 합니다: 첫 번째 특성을 사용 하 고 두 번째 OLE DB 템플릿을 사용 합니다. 이러한 선언 코드는 일반적으로 authors.h 예를 들어, 테이블 또는 명령 개체에 대 한 헤더 파일에 들어 있습니다.  
   
- 두 파일을 비교 하 여 특성을 사용 하는 방법을 보다 간단 하 게 볼 수 있습니다. 차이점 중:  
+ 두 파일을 비교 하 여 특성을 사용 하는 훨씬 간단 하다 볼 수 있습니다. 차이점 중:  
   
--   특성을 사용 해야 할 하나의 클래스를 선언: `CAuthors`템플릿으로 두 개를 선언 해야 하는 반면,: `CAuthorsNoAttrAccessor` 및 `CAuthorsNoAttr`합니다.  
+-   특성을 사용 하기만 하면 하나의 클래스를 선언 합니다. `CAuthors`템플릿을 사용 하 여 두 선언 해야 하는 동안,: `CAuthorsNoAttrAccessor` 및 `CAuthorsNoAttr`.  
   
--   `db_source` 특성이 지정 된 버전에서 호출 하는 것은 `OpenDataSource()` 템플릿 선언에서 호출 합니다.  
+-   합니다 `db_source` 특성이 지정 된 버전에서 호출 하는 것은 `OpenDataSource()` 템플릿 선언에서 호출 합니다.  
   
--   **db_table** 특성이 지정 된 버전에서 호출은 다음 템플릿 선언과 같습니다.  
+-   `db_table` 호출 특성이 지정 된 버전에서 다음 템플릿 선언 하는 것:  
   
     ```  
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
--   **db_column** 호출 특성 사용된 하는 버전에서 열 지도 같습니다 (참조 `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) 템플릿 선언에 있습니다.  
+-   합니다 `db_column` 특성이 지정 된 버전에서의 호출은 열 지도에 해당 하는 (참조 `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) 템플릿 선언의 합니다.  
   
- 사용자에 대 한 사용자 레코드 클래스 선언을 삽입 합니다. 사용자 레코드 클래스에 해당 하는 `CAuthorsNoAttrAccessor` 템플릿 선언에 있습니다. 테이블 클래스 경우 `CAuthors`, 삽입 된 사용자 레코드 클래스의 이름은 `CAuthorsAccessor`, 해당 선언이 삽입 된 코드에만 볼 수 있습니다. 자세한 내용은 "특성 삽입 사용자 레코드 클래스"를 참조 [사용자 레코드](../../data/oledb/user-records.md)합니다.  
+ 사용자 레코드 클래스 선언을 삽입 합니다. 사용자 레코드 클래스는 `CAuthorsNoAttrAccessor` 템플릿 선언의 합니다. 테이블 클래스 이면 `CAuthors`에 삽입된 사용자 레코드 클래스 라고 `CAuthorsAccessor`, 삽입 된 코드에서 선언 에서만 볼 수 있습니다. 자세한 내용은 "특성 삽입 사용자 레코드 클래스"를 참조 하세요 [사용자 레코드](../../data/oledb/user-records.md)합니다.  
   
- 특성 사용와 템플릿 기반 코드에서 사용 하 여 행 집합 속성 설정 해야 합니다 `CDBPropSet::AddProperty`합니다.  
+ 특성 사용 및 템플릿 기반 코드에서 사용 하 여 행 집합 속성 설정 해야 합니다 `CDBPropSet::AddProperty`합니다.  
   
- 이 항목에서 설명 하는 특성에 대 한 정보를 참조 하십시오. [OLE DB 소비자 특성](../../windows/ole-db-consumer-attributes.md)합니다.  
+ 이 항목에서 설명 하는 특성에 대 한 정보를 참조 하세요 [OLE DB 소비자 특성](../../windows/ole-db-consumer-attributes.md)합니다.  
   
-## <a name="table-and-accessor-declaration-using-attributes"></a>테이블 및 특성을 사용 하는 접근자 선언  
- 다음 호출 코드 `db_source` 및 **db_table** 테이블 클래스에 있습니다. `db_source` 데이터 원본 및 연결을 사용할 수를 지정 합니다. **db_table** 테이블 클래스 선언에 대 한 적절 한 템플릿 코드를 삽입 합니다. **db_column** 열 지도 지정 하 고 접근자 선언에 삽입 합니다. Atl이 지원 하는 프로젝트에서 OLE DB 소비자 특성을 사용할 수 있습니다.  
+## <a name="table-and-accessor-declaration-using-attributes"></a>테이블 및 특성을 사용 하 여 접근자 선언  
+ 다음 코드 호출 `db_source` 및 `db_table` 의 테이블 클래스입니다. `db_source` 데이터 원본 및 사용 하는 연결을 지정 합니다. `db_table` 테이블 클래스 선언에 적절 한 템플릿 코드를 삽입 합니다. `db_column` 열 지도 지정 하 고 접근자 선언의 삽입 합니다. Atl이 지원 하는 프로젝트에서 OLE DB 소비자 특성을 사용할 수 있습니다.  
   
  테이블 및 접근자 선언 특성을 사용 하는 다음과 같습니다.  
   
@@ -102,7 +102,7 @@ public:
 ```  
   
 ## <a name="table-and-accessor-declaration-using-templates"></a>테이블 및 템플릿을 사용 하 여 접근자 선언  
- 템플릿을 사용 하 여 테이블 및 접근자 선언에는 다음과 같습니다.  
+ 템플릿을 사용 하 여 테이블 및 접근자 선언을 다음과 같습니다.  
   
 ```cpp
 //////////////////////////////////////////////////////////////////////  
@@ -208,4 +208,4 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
   
 ## <a name="see-also"></a>참고 항목  
  [OLE DB 소비자 특성](../../windows/ole-db-consumer-attributes.md)   
- [특성 연습](http://msdn.microsoft.com/en-us/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)
+ [특성 연습](http://msdn.microsoft.com/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)

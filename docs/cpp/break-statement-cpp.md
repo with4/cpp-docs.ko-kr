@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00a1122dffac0bdb61ba3799ce78ed3403e6d478
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 30910f6850fc3728ee101ab0662638fdebcd3775
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944497"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405446"
 ---
 # <a name="break-statement-c"></a>break 문 (C++)
 합니다 **중단** 바로 바깥쪽의 실행을 종료 하는 문을 루프 또는 표시 되는 조건문입니다. 제어는 종료된 문 뒤의 문이 있는 경우 전달됩니다.  
@@ -158,7 +158,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [점프 문](../cpp/jump-statements-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [continue 문](../cpp/continue-statement-cpp.md)

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9cfa2dd47f14053da9ef0b9620c9ce0dc05c5da
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2d202e48bbcd09c3f4071af21e942cb1353f7a6b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941982"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466243"
 ---
 # <a name="static-members-c"></a>정적 멤버(C++)
 클래스는 정적 멤버 데이터와 멤버 함수를 포함할 수 있습니다. 로 데이터 멤버는 선언 하는 경우 **정적**, 클래스의 모든 개체에 대 한 데이터의 복사본을 하나만 유지 됩니다.
@@ -86,5 +86,5 @@ long nBytes = Console.bytecount;
   
  정적 멤버의 형식은 클래스 이름으로 한정되지 않습니다. 따라서 유형을 `BufferedOutput::bytecount` 됩니다 **긴**합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [클래스 및 구조체](../cpp/classes-and-structs-cpp.md)

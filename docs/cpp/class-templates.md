@@ -1,5 +1,5 @@
 ---
-title: 클래스 템플릿과 | Microsoft Docs
+title: 템플릿 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce9ed1669d3157327f161643320f20ec5787e17d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7818836406677aa1613c757a1d688cc93ca33045
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415688"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405096"
 ---
 # <a name="class-templates"></a>클래스 템플릿
 이 항목에서는 c + + 클래스 템플릿과 관련 된 규칙을 설명 합니다.  
@@ -81,11 +81,10 @@ void X<T>::mf(const U &u)
 int main()  
 {  
 }  
-  
 ```  
   
-## <a name="nested-class-templates"></a>중첩 된 클래스 템플릿  
- 클래스 또는 클래스 템플릿 안에 템플릿을 정의할 수 있으며 이 경우 멤버 템플릿이라고 합니다. 클래스인 멤버 템플릿은 중첩된 클래스 템플릿이라고 합니다. 멤버 템플릿에 함수에 대해서는 설명 [멤버 함수 템플릿](../cpp/member-function-templates.md)합니다.  
+## <a name="nested-class-templates"></a>중첩된 클래스 템플릿  
+ 클래스 또는 클래스 템플릿 안에 템플릿을 정의할 수 있으며 이 경우 멤버 템플릿이라고 합니다. 클래스인 멤버 템플릿은 중첩된 클래스 템플릿이라고 합니다. 함수는 멤버 템플릿을에 설명 되어 [멤버 함수 템플릿](../cpp/member-function-templates.md)합니다.  
   
  중첩된 클래스 템플릿은 바깥쪽 클래스의 범위 안에 클래스 템플릿으로 선언되며 바깥쪽 클래스 안이나 밖에 정의할 수 있습니다.  
   
@@ -202,7 +201,7 @@ X<T>::Y<U>::~Y()
  지역 클래스에는 멤버 템플릿이 허용되지 않습니다.  
   
 ## <a name="template-friends"></a>템플릿 friend  
- 클래스 템플릿은 점이 [친구](friend-cpp.md)합니다. 클래스 또는 클래스 템플릿, 함수 또는 함수 템플릿은 템플릿 클래스에 대한 friend일 수 있습니다. friends는 클래스 템플릿 또는 함수 템플릿의 특수화가 될 수도 있지만 부분 특수화는 될 수 없습니다.  
+ 클래스 템플릿 있을 수 있습니다 [친구](friend-cpp.md)합니다. 클래스 또는 클래스 템플릿, 함수 또는 함수 템플릿은 템플릿 클래스에 대한 friend일 수 있습니다. friends는 클래스 템플릿 또는 함수 템플릿의 특수화가 될 수도 있지만 부분 특수화는 될 수 없습니다.  
   
  다음 예제에서 friend 함수는 클래스 템플릿 내에서 함수 템플릿으로 정의됩니다. 이 코드는 모든 템플릿 인스턴스화에 대한 friend 함수 버전을 만듭니다. 이 구문은 사용자의 friend 함수가 클래스와 같은 템플릿 매개 변수로 결정될 경우 유용합니다.  
   
@@ -418,8 +417,8 @@ A
 a  
 ```  
   
-## <a name="reuse-of-template-parameters"></a>템플릿 매개 변수를 다시 사용  
- 템플릿 매개 변수 목록에 템플릿 매개 변수를 재사용할 수 있습니다. 예를 들어 다음 코드는 허용됩니다.  
+## <a name="reuse-of-template-parameters"></a>템플릿 매개 변수 다시 사용  
+ 템플릿 매개 변수 목록에서 템플릿 매개 변수를 재사용할 수 있습니다. 예를 들어 다음 코드는 허용됩니다.  
   
 ```cpp  
 // template_specifications2.cpp  
@@ -444,5 +443,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [템플릿](../cpp/templates-cpp.md)

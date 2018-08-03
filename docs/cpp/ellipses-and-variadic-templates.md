@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37df4146b23404463ec869e00a8cf5298b7acf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 45dc0dfe85e7693cdea9c6e469ff347d75c13d57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941007"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402948"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Ellipses 및 Variadic 템플릿
 이 문서에서는 줄임표를 사용 하는 방법을 보여 줍니다 (`...`) c + + variadic 템플릿을 사용 하 여 합니다. 줄임표는 C 및 c + +에서 다양 한 용도로 했습니다. 여기에 함수에 가변 인수 목록이 포함 됩니다. `printf()` C 런타임 라이브러리에서 함수는 가장 잘 알려진 예 중 하나입니다.  
@@ -47,7 +47,7 @@ template<typename ... Arguments> class classname;
   
  이 문서에서는 첫 번째 예제에 표시된 규칙(줄임표가 `typename`에 연결)을 사용합니다.  
   
- 위의 예제에서 `Arguments`는 매개 변수 팩입니다. 클래스 `classname` 다음이 예와 같이 인수의 변수 숫자를 사용할 수 있습니다.  
+ 위의 예에서 *인수* 매개 변수 팩입니다. 클래스 `classname` 다음이 예와 같이 인수의 변수 숫자를 사용할 수 있습니다.  
   
 ```cpp  
 template<typename... Arguments> class vtclass;  
@@ -56,14 +56,12 @@ vtclass< > vtinstance1;
 vtclass<int> vtinstance2;  
 vtclass<float, bool> vtinstance3;  
 vtclass<long, std::vector<int>, std::string> vtinstance4;  
-  
 ```  
   
  Variadic 템플릿 클래스 정의 사용 하 여 하나 이상의 매개 변수가 필요할 수도 있습니다.  
   
 ```cpp  
 template <typename First, typename... Rest> class classname;  
-  
 ```  
   
  다음은 기본적인 예입니다 *variadic 템플릿 함수* 구문:  
@@ -72,7 +70,7 @@ template <typename First, typename... Rest> class classname;
 template <typename... Arguments> returntype functionname(Arguments... args);  
 ```  
   
- 합니다 `Arguments` 매개 변수 팩 사용에 대 한 확장 한 다음 다음 섹션에 표시 된 대로 **variadic 템플릿 이해**합니다.  
+ 합니다 *인수* 매개 변수 팩 사용에 대 한 확장 한 다음 다음 섹션에 표시 된 대로 **variadic 템플릿 이해**합니다.  
   
  Variadic 템플릿 함수 구문의 다른 형식을 사용할 수 있습니다-에 국한 되지 않음 이러한 예제를 포함 합니다.  
   
@@ -86,14 +84,12 @@ template <typename... Arguments> returntype functionname(Arguments*... args);
   
 ```cpp  
 template <typename... Arguments> returntype functionname(const Arguments&... args);  
-  
 ```  
   
  Variadic 템플릿 클래스 정의 하나 이상의 매개 변수가 필요한 함수를 만들 수 있습니다.  
   
 ```cpp  
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);  
-  
 ```  
   
  Variadic 템플릿 사용은 `sizeof...()` 연산자 (이전의 관련이 `sizeof()` 연산자):  
@@ -108,7 +104,6 @@ void tfunc(const Arguments&... args)
   
     helper_func(xobj, args...);  
 }  
-  
 ```  
   
 ## <a name="more-about-ellipsis-placement"></a>줄임표 배치에 대한 자세한 내용  
@@ -160,13 +155,11 @@ int main()
     print(100, 200, 300);  
     print("first", 2, "third", 3.14159);  
 }  
-  
 ```  
   
 ## <a name="output"></a>출력  
   
-```  
-  
+```Output  
 1  
 10, 20  
 100, 200, 300  
@@ -175,4 +168,3 @@ first, 2, third, 3.14159
   
 > [!NOTE]
 >  Variadic 템플릿 함수를 통합 하는 대부분의 구현은 일부 양식의 재귀를 사용 하지만 전통적인 재귀와에서 약간 다릅니다.  전통적인 재귀는 같은 서명을 사용 하 여 자신을 호출 하는 함수에 포함 됩니다. (템플릿 또는 오버 로드 된 이름일 수 있습니다 하지만 동일한 서명 될 때마다 선택 되었습니다.) Variadic 재귀 (거의 항상 감소) 다른 개수의 인수를 사용 하 여 여 줄어듦 다른 서명을 때마다 variadic 함수 템플릿을 호출 해야 합니다. "기본 사례"는 여전히 필요 하지만 재귀적 특성 다릅니다.  
-  

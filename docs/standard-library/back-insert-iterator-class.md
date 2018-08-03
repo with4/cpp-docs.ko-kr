@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6830baf3d474b80f2e7906a7aadd27d2eee27f9a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 22f96b81836a8c1a9daa971ff8fb1961edb60cfb
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958622"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209006"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator 클래스
 
@@ -63,9 +63,9 @@ class back_insert_iterator;
 
 |연산자|설명|
 |-|-|
-|[operator*](#op_star)|후면 삽입을 위해 출력 반복기 식 * `i` = `x`를 구현하는 데 사용되는 역참조 연산자입니다.|
+|[operator*](#op_star)|출력 반복기 식을 구현 하는 데 사용 된 역참조 연산자 \* `i`  =  `x` 후면 삽입을 위해.|
 |[operator++](#op_add_add)|값을 저장할 다음 위치에 `back_insert_iterator`를 증가시킵니다.|
-|[operator=](#op_eq)|후면 삽입을 위해 출력 반복기 식 * `i` = `x`를 구현하는 데 사용되는 할당 연산자입니다.|
+|[operator=](#op_eq)|출력 반복기 식을 구현 하는 데 사용 되는 대입 연산자 \* `i`  =  `x` 후면 삽입을 위해.|
 
 ## <a name="requirements"></a>요구 사항
 
@@ -191,7 +191,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="op_star"></a>  back_insert_iterator::operator*
+## <a name="op_star"></a>  back_insert_iterator:: operator\*
 
 출력 반복기 식 \* *i* = *x*을 구현하는 데 사용되는 역참조 연산자입니다.
 

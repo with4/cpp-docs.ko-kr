@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94ac32d1eac8a22603d31e23695540fe23cdd26b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72da3eeebdf99ca637708e9e493f64730a350327
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860634"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465521"
 ---
 # <a name="attributes-by-usage"></a>용도별 특성
 이 항목에서는 적용 되는 c + + 언어 요소에 따라 특성을 나열 합니다.  
   
- 특성은 특성의 범위에 있지 않은 Visual c + + 요소 뒤에 나오는 경우 특성 블록을 주석으로 처리 됩니다.  
+ 특성은 특성의 범위에 없으므로 하는 Visual c + + 요소 뒤에 나오는 특성 블록을 주석으로 처리 됩니다.  
   
 |특성|설명|  
 |---------------|-----------------|  
@@ -33,12 +33,12 @@ ms.locfileid: "33860634"
 |[인터페이스 특성](../windows/interface-attributes.md)|에 적용 된 [__interface](../cpp/interface.md) c + + 키워드입니다.|  
 |[클래스 특성](../windows/class-attributes.md)|C + + 키워드에 적용 됩니다.|  
 |[메서드 특성](../windows/method-attributes.md)|클래스, coclass 등 또는 인터페이스의 메서드에 적용 됩니다.|  
-|[매개 변수 특성](../windows/parameter-attributes.md)|클래스 또는 인터페이스에 있는 메서드의 매개 변수에 적용 됩니다.|  
+|[매개 변수 특성](../windows/parameter-attributes.md)|클래스 또는 인터페이스의 메서드 매개 변수에 적용 됩니다.|  
 |[데이터 멤버 특성](../windows/data-member-attributes.md)|클래스, coclass 등 또는 인터페이스에서 데이터 멤버에 적용 됩니다.|  
 |[Typedef, Enum, Union 및 Struct 특성](../windows/typedef-enum-union-and-struct-attributes.md)|C + + 키워드에 적용 됩니다.|  
-|[배열 특성](../windows/array-attributes.md)|배열에 적용 하거나 **SAFEARRAY**s입니다.|  
-|[독립 실행형 특성](../windows/stand-alone-attributes.md)|좀 더 코드 줄과 비슷하게 작동 하지만 c + + 키워드에서 작동 하지 않습니다. 독립 실행형 특성 문은 줄의 끝에 세미콜론이 필요합니다.|  
-|[사용자 지정 특성](../windows/custom-attributes-cpp.md)|메타 데이터를 확장할 수 있습니다.|  
+|[배열 특성](../windows/array-attributes.md)|배열에 적용 됩니다 또는 `SAFEARRAY`s입니다.|  
+|[독립 실행형 특성](../windows/stand-alone-attributes.md)|코드 줄을 비슷하게 작동 하지만 c + + 키워드에서 작동 하지 않습니다. 독립 실행형 특성 문은 줄의 끝에 세미콜론이 필요합니다.|  
+|[사용자 지정 특성](../windows/custom-attributes-cpp.md)|메타 데이터를 확장할 수가 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [C + + 특성 참조](../windows/cpp-attributes-reference.md)   

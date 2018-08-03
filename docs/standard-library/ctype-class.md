@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49329d97343cfd210a93879961b0492454be9efa
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5a65008b01262ad6252e9942444a4e80602d4292
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954775"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208639"
 ---
 # <a name="ctype-class"></a>ctype 클래스
 
@@ -275,7 +275,7 @@ virtual const CharType *do_scan_is(
 
 ### <a name="remarks"></a>설명
 
-보호된 멤버 함수는 [do_is](#do_is)( `maskVal`, * `ptr`)가 true인 [`first`, `last`) 범위의 가장 작은 포인터 `ptr`을 반환합니다.
+보호 된 멤버 함수는 가장 작은 포인터를 반환 `ptr` 범위에 [ `first`, `last`)는 [do_is](#do_is)( `maskVal`, \* `ptr`)도 마찬가지입니다.
 
 ### <a name="example"></a>예
 
@@ -306,7 +306,7 @@ virtual const CharType *do_scan_not(
 
 ### <a name="remarks"></a>설명
 
-보호된 멤버 함수는 [do_is](#do_is)( `maskVal`, * `ptr`)가 false인 [`first`, `last`) 범위의 가장 작은 포인터 `ptr`을 반환합니다.
+보호 된 멤버 함수는 가장 작은 포인터를 반환 `ptr` 범위에 [ `first`, `last`)는 [do_is](#do_is)( `maskVal`를 \* `ptr`)은 false입니다.
 
 ### <a name="example"></a>예
 

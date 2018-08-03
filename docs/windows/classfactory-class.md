@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6294634652ffc6a53a577ccd75c348ed63c502e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 97c07b5cf97578c49da9d4a72b5a232b559ec0ab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858395"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463868"
 ---
 # <a name="classfactory-class"></a>ClassFactory 클래스
-IClassFactory 인터페이스의 기본 기능을 구현합니다.  
+`IClassFactory` 인터페이스의 기본 기능을 구현합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,19 +46,19 @@ class ClassFactory : public Details::RuntimeClass<
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `I0`  
+ *I0*  
  0 번째 인터페이스입니다.  
   
- `I1`  
+ *I1*  
  첫 번째 인터페이스입니다.  
   
- `I2`  
+ *I2*  
  두 번째 인터페이스입니다.  
   
 ## <a name="remarks"></a>설명  
- 활용 `ClassFactory` 는 사용자 지정 팩터리 구현을 제공 합니다.  
+ 활용 `ClassFactory` 는 사용자 정의 팩터리 구현을 제공 합니다.  
   
- 프로그래밍 패턴을 사용 하는 방법을 보여 줍니다는 [구현](../windows/implements-structure.md) 클래스 팩터리에 세 개 이상의 인터페이스를 지정 하는 구조입니다.  
+ 프로그래밍 패턴을 사용 하는 방법에 설명 합니다 [구현](../windows/implements-structure.md) 클래스 팩터리 세 개 이상의 인터페이스를 지정 하는 구조입니다.  
   
  `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`  
   

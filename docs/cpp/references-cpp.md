@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 953c03f7c8125713afddd3b3567615be585fc9db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956595"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463150"
 ---
 # <a name="references-c"></a>참조 (C++)
 참조는 포인터와 마찬가지로, 메모리의 다른 위치에 있는 개체의 주소를 저장합니다. 하지만 포인터와는 달리, 참조는 초기화되고 나면 다른 개체를 참조하도록 설정하거나 null로 설정할 수 없습니다. 두 가지 종류의 참조: 참조 하는 명명 된 변수 및 rvalue 참조에 대 한 참조는 lvalue 참조를 [임시 개체](../cpp/temporary-objects.md)합니다. & 연산자는 lvalue 참조를 나타내고, && 연산자는 컨텍스트에 따라 rvalue 참조나 범용 참조(rvalue 또는 lvalue)를 나타냅니다.  
@@ -114,12 +114,8 @@ int main() {
 4  
 ```  
   
-## <a name="comment"></a>주석  
- 이 단원의 항목:  
-  
--   [참조 형식 함수 인수](../cpp/reference-type-function-arguments.md)  
-  
--   [참조 형식 함수 반환](../cpp/reference-type-function-returns.md)  
-  
--   [포인터에 대한 참조](../cpp/references-to-pointers.md)  
+## <a name="see-also"></a>참고자료
+ [참조 형식 함수 인수](../cpp/reference-type-function-arguments.md)  
+ [참조 형식 함수 반환](../cpp/reference-type-function-returns.md)  
+ [포인터에 대한 참조](../cpp/references-to-pointers.md)  
   

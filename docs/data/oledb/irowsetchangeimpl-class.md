@@ -9,27 +9,49 @@ f1_keywords:
 - ATL::IRowsetChangeImpl
 - IRowsetChangeImpl
 - ATL.IRowsetChangeImpl
+- ATL.IRowsetChangeImpl.DeleteRows
+- ATL::IRowsetChangeImpl::DeleteRows
+- IRowsetChangeImpl.DeleteRows
+- DeleteRows
+- IRowsetChangeImpl::DeleteRows
+- ATL.IRowsetChangeImpl.InsertRow
+- InsertRow
+- IRowsetChangeImpl.InsertRow
+- ATL::IRowsetChangeImpl::InsertRow
+- IRowsetChangeImpl::InsertRow
+- SetData
+- IRowsetChangeImpl::SetData
+- ATL.IRowsetChangeImpl.SetData
+- IRowsetChangeImpl.SetData
+- ATL::IRowsetChangeImpl::SetData
+- IRowsetChangeImpl::FlushData
+- IRowsetChangeImpl.FlushData
+- FlushData
 dev_langs:
 - C++
 helpviewer_keywords:
 - providers, updatable
 - updatable providers, immediate update
 - IRowsetChangeImpl class
+- DeleteRows method
+- InsertRow method
+- SetData method
+- FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 11435cd1372147efb14aed78448d889fd60dc5a0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f77f9a33b0cf51ea54d16f89e86ea914640f627
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106046"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339600"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 클래스
-OLE DB 템플릿 구현의 [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) OLE DB 사양에 대 한 인터페이스입니다.  
+OLE DB 템플릿 구현의 합니다 [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) OLE DB 사양에 대 한 인터페이스입니다.  
   
 ## <a name="syntax"></a>구문
 
@@ -43,21 +65,24 @@ template <
 class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T`  
- 클래스에서 파생 `IRowsetChangeImpl`합니다.  
+### <a name="parameters"></a>매개 변수  
+ *T*  
+ 파생 된 클래스 `IRowsetChangeImpl`합니다.  
   
- `Storage`  
+ *저장소*  
  사용자 레코드입니다.  
   
- `BaseInterface`  
- 기본 클래스는 인터페이스에 대 한 같은 `IRowsetChange`합니다.  
+ *BaseInterface*  
+ 와 같은 인터페이스에 대 한 기본 클래스 `IRowsetChange`합니다.  
   
- `RowClass`  
+ *RowClass*  
  행 핸들에 대 한 저장소 단위입니다.  
   
- `MapClass`  
+ *MapClass*  
  공급자가 보유 하는 모든 행 핸들에 대 한 저장소 단위입니다.  
+
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
 ## <a name="members"></a>멤버  
   
@@ -65,34 +90,95 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
   
 |||  
 |-|-|  
-|[DeleteRows](../../data/oledb/irowsetchangeimpl-deleterows.md)|행 집합에서 행을 삭제합니다.|  
-|[InsertRow](../../data/oledb/irowsetchangeimpl-insertrow.md)|행 집합에 행을 삽입 합니다.|  
-|[SetData](../../data/oledb/irowsetchangeimpl-setdata.md)|하나 이상의 열에 데이터 값을 설정합니다.|  
+|[DeleteRows](#deleterows)|행 집합에서 행을 삭제합니다.|  
+|[InsertRow](#insertrow)|행 집합에 행을 삽입 합니다.|  
+|[SetData](#setdata)|하나 이상의 열에 데이터 값을 설정 합니다.|  
   
 ### <a name="implementation-method-callback"></a>구현 메서드 (콜백)  
   
 |||  
 |-|-|  
-|[FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md)|데이터 저장소에 커밋하는 공급자에 의해 재정의 되 면입니다.|  
+|[FlushData](#flushdata)|데이터 저장소에 커밋하는 공급자가 재정의 되 면 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 인터페이스는 데이터 저장소에 즉시 쓰기 작업을 담당 합니다. "즉시" 의미는 최종 사용자 (소비자를 사용 하 여 person)를 모두 변경 하면 해당 변경 내용이 즉시 전송 됩니다 데이터 저장 (하 고은 취소할 수 없습니다).  
+ 이 인터페이스는 데이터 저장소에 즉시 쓰기 작업을 담당 합니다. "즉시"을 의미 하며 최종 사용자 (소비자를 사용 하 여 person) 변경 하면 해당 변경 내용을 즉시 전송 데이터 저장과 실행 취소할 수 없습니다.  
   
- `IRowsetChangeImpl` OLE DB 구현 `IRowsetChange` 행을 삭제 하 고 새 행을 삽입의 기존 행의 열 값의 업데이트 수 있도록 하는 인터페이스입니다.  
+ `IRowsetChangeImpl` OLE DB 구현 `IRowsetChange` 행을 삭제 하 고 새 행을 삽입의 기존 행의 열 값으로 업데이트할 수 있도록 하는 인터페이스입니다.  
   
- OLE DB 템플릿 구현은 모든 기본 메서드를 지원 (`SetData`, `InsertRow`, 및 `DeleteRows`).  
+ OLE DB 템플릿 구현에서는 모든 기본 메서드를 지원 (`SetData`하십시오 `InsertRow`, 및 `DeleteRows`).  
   
 > [!IMPORTANT]
->  공급자를 구현 하기 전에 다음 문서를 읽는 것이 가장 좋습니다.  
+>  공급자를 구현 하기 전에 다음 설명서를 참조 하는 것이 좋습니다.  
   
 -   [업데이트 가능 공급자 만들기](../../data/oledb/creating-an-updatable-provider.md)  
   
 -   6 장은 *OLE DB 프로그래머 참조*  
   
--   또한 참조 방법을 `RUpdateRowset` 클래스는 UpdatePV 샘플에서 사용  
+-   또한 참조 하는 방법을 `RUpdateRowset` 클래스 UpdatePV 샘플에서 사용 됩니다  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** atldb.h  
+## <a name="deleterows"></a> Irowsetchangeimpl:: Deleterows
+행 집합에서 행을 삭제합니다.  
+  
+### <a name="syntax"></a>구문  
+  
+```cpp
+STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,  
+   DBCOUNTITEM cRows,  
+   const HROW rghRows[],  
+   DBROWSTATUS rgRowStatus[]);  
+```  
+  
+#### <a name="parameters"></a>매개 변수  
+ 참조 [irowsetchange:: Deleterows](https://msdn.microsoft.com/library/ms724362.aspx) 에 *OLE DB Programmer's Reference*합니다. 
+
+## <a name="insertrow"></a> Irowsetchangeimpl:: Insertrow
+만들고 행 집합에 새 행을 초기화 합니다.  
+  
+### <a name="syntax"></a>구문  
+  
+```cpp
+STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,  
+   HACCESSOR hAccessor,  
+   void* pData,  
+   HROW* phRow);  
+```  
+  
+#### <a name="parameters"></a>매개 변수  
+ 참조 [irowsetchange:: Insertrow](https://msdn.microsoft.com/library/ms716921.aspx) 에 *OLE DB Programmer's Reference*합니다. 
+
+## <a name="setdata"></a> Irowsetchangeimpl:: Setdata
+하나 이상의 열에 데이터 값을 설정 합니다.  
+  
+### <a name="syntax"></a>구문  
+  
+```cpp
+STDMETHOD (SetData )(HROW hRow,  
+   HACCESSOR hAccessor,  
+   void* pSrcData);  
+```  
+  
+#### <a name="parameters"></a>매개 변수  
+ 참조 [irowsetchange:: Setdata](https://msdn.microsoft.com/library/ms721232.aspx) 에 *OLE DB Programmer's Reference*합니다. 
+
+## <a name="flushdata"></a> Irowsetchangeimpl:: Flushdata
+데이터 저장소에 커밋하는 공급자가 재정의 되 면 합니다.  
+  
+### <a name="syntax"></a>구문  
+  
+```cpp
+HRESULT FlushData(HROW hRowToFlush,  
+   HACCESSOR hAccessorToFlush);  
+```  
+  
+#### <a name="parameters"></a>매개 변수  
+ *hRowToFlush*  
+ [in] 데이터에 대 한 행에 대 한 핸들입니다. 이 행의 형식에서 결정 됩니다 합니다 *RowClass* 템플릿 인수는 `IRowsetImpl` 클래스 (`CSimpleRow` 기본적으로).  
+  
+ *hAccessorToFlush*  
+ [in] 바인딩 정보 및 형식 정보를 포함 하는 접근자에 대 한 핸들 해당 `PROVIDER_MAP` (참조 [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)).  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 HRESULT입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   

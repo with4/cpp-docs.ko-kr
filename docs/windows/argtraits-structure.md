@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 162fbdea86aef81582902340102d54777e3f861b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 667aa3d2d29e4ce541d957b20b2246380e237a6b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858044"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462045"
 ---
 # <a name="argtraits-structure"></a>ArgTraits 구조체
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -118,41 +118,41 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `TMemberFunction`  
- 어떤 Invoke 메서드 시그니처를 일치 시킬 수 없는 ArgTraits 구조체에 대 한 매개 변수를 형식 이름입니다.  
+ *TMemberFunction*  
+ Typename 매개 변수 수와 일치 하는 ArgTraits 구조체에 대 한 `Invoke` 메서드 시그니처입니다.  
   
- `TDelegateInterface`  
+ *TDelegateInterface*  
  대리자 인터페이스입니다.  
   
- `TArg1`  
- Invoke 메서드의 첫 번째 인수의 형식입니다.  
+ *TArg1*  
+ 첫 번째 인수 형식의 `Invoke` 메서드.  
   
- `TArg2`  
- Invoke 메서드의 두 번째 인수의 형식입니다.  
+ *TArg2*  
+ 형식의 두 번째 인수는 `Invoke` 메서드.  
   
- `TArg3`  
- Invoke 메서드의 세 번째 인수의 형식입니다.  
+ *TArg3*  
+ 세 번째 인수 형식의 `Invoke` 메서드.  
   
- `TArg4`  
- Invoke 메서드의 네 번째 인수의 형식입니다.  
+ *TArg4*  
+ 네 번째 인수의 형식은 `Invoke` 메서드.  
   
- `TArg5`  
- Invoke 메서드의 다섯 번째 인수의 형식입니다.  
+ *TArg5*  
+ 다섯 번째 인수의 형식은 `Invoke` 메서드.  
   
- `TArg6`  
- 형식 Invoke 메서드의 여섯 번째 인수입니다.  
+ *TArg6*  
+ 여섯 번째 인수의 형식은 `Invoke` 메서드.  
   
- `TArg7`  
- 형식 Invoke 메서드의 일곱 번째 인수입니다.  
+ *TArg7*  
+ 일곱 번째 인수의 형식은 `Invoke` 메서드.  
   
- `TArg8`  
- 형식 Invoke 메서드의 여덟 번째 인수입니다.  
+ *TArg8*  
+ 여덟 번째 인수의 형식은 `Invoke` 메서드.  
   
- `TArg9`  
- 아홉 번째 인수는 호출 메서드의 형식입니다.  
+ *TArg9*  
+ 아홉 번째 인수의 형식은 `Invoke` 메서드.  
   
 ## <a name="remarks"></a>설명  
- `ArgTraits` 구조 인터페이스 및 지정된 된 수의 매개 변수를 가진 익명 멤버 함수는 지정 된 대리자를 선언 합니다.  
+ `ArgTraits` 구조 인터페이스 및 지정 된 개수의 매개 변수를 가진 익명 멤버 함수는 지정 된 대리자를 선언 합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -174,7 +174,7 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
   
 |이름|설명|  
 |----------|-----------------|  
-|[ArgTraits::args 상수](../windows/argtraits-args-constant.md)|Invoke 메서드를 대리자 인터페이스에 대 한 매개 변수 개수의 수를 유지 합니다.|  
+|[ArgTraits::args 상수](../windows/argtraits-args-constant.md)|매개 변수 개수를 유지 합니다 `Invoke` 대리자 인터페이스의 메서드입니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `ArgTraits`  

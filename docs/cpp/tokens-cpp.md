@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2e1a6cc36e4e5f2f785c1e5dff03c6fb5e392d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 217061557acb0c8b311a91651eea2f57a8198872
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467961"
 ---
 # <a name="tokens-c"></a>토큰 (c + +)
 토큰은 컴파일러에 의미 있는 C++ 프로그램의 최소 요소입니다. C++ 파서는 식별자, 키워드, 리터럴, 연산자, 문장 부호 및 기타 구분 기호 등의 토큰을 인식합니다. 이러한 토큰의 스트림은 변환 단위를 구성합니다.  
@@ -44,13 +45,13 @@ ms.lasthandoff: 05/03/2018
   
  파서는 입력된 문자를 사용하여 왼쪽에서 오른쪽으로 검색의 긴 토큰 수를 만들어서 입력 스트림에서 토큰을 구분합니다. 이 코드 조각을 고려하세요.  
   
-```  
+```cpp 
 a = i+++j;  
 ```  
   
  코드를 작성하는 프로그래머는 다음 두 명령문을 사용하려고 했을 수 있습니다.  
   
-```  
+```cpp 
 a = i + (++j)  
   
 a = (i++) + j  
@@ -58,5 +59,5 @@ a = (i++) + j
   
  파서는 입력 스트림에서 가장 긴 토큰을 만들기 때문에 두 번째 해석을 선택하여 `i++`, `+`및 `j`토큰을 만듭니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [어휘 규칙](../cpp/lexical-conventions.md)

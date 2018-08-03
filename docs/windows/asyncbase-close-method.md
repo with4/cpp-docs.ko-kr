@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f3f36656b9316fb6ad980349a836fad31c3a9a0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9d0798a6ef593e388ce7867ee9a55763be9ae890
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860797"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463361"
 ---
 # <a name="asyncbaseclose-method"></a>AsyncBase::Close 메서드
 비동기 작업을 닫습니다.  
@@ -36,10 +36,10 @@ STDMETHOD(
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 작업을 닫거나 이미 하면 s_ok이 고; 닫힙니다. 그렇지 않으면 E_ILLEGAL_STATE_CHANGE 합니다.  
+ 작업이 이미 닫히거나 경우 s_ok이 고, 닫혀 않으면 그렇지 않으면 E_ILLEGAL_STATE_CHANGE 합니다.  
   
 ## <a name="remarks"></a>설명  
- Close (), IAsyncInfo::Close의 기본 구현을 이며 실제로 진행 되지 않습니다. 비동기 작업을 실제로 닫으려면 OnClose() 순수 가상 메서드를 재정의 합니다.  
+ **Close ()** 의 기본 구현 이며 `IAsyncInfo::Close`, 없습니다 실제 작업을 수행 합니다. 비동기 작업을 실제로 닫으려면 재정의 `OnClose()` 순수 가상 메서드가 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** async.h  

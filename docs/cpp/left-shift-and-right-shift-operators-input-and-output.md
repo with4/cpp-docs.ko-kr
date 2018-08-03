@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f38b5ec30626f73ab3681f674fb39c5492eb49
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 50a177468795ae0e288910fa51192d9cc9a24502
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939732"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403156"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>왼쪽된 시프트 및 오른쪽 시프트 연산자 (&gt; &gt; 하 고 &lt; &lt;)
 비트 시프트 연산자는 오른쪽 시프트 연산자 (>>)의 비트를 이동 하는 *시프트 식* 오른쪽 및 왼쪽 시프트 연산자 (<<)의 비트를 이동 하는 *shift-식* 왼쪽에 있습니다. <sup>1</sup>  
@@ -66,7 +66,6 @@ int main() {
     bitset<16> bitset3{short3};  
     cout << bitset3 << endl;  // 0000000000010000  
 }  
-  
 ```  
   
  부호 비트가 영향을 받도록 부호 있는 숫자를 왼쪽 시프트하면 결과가 정의되지 않습니다. 다음 예제에서는 1비트가 부호 비트 위치로 왼쪽 이동하면 Visual C++에서 어떤 일이 발생하는지 보여 줍니다.  
@@ -230,6 +229,6 @@ int main() {
   
  `E1 >> E2`의 값은 `E1` 오른쪽 이동된 `E2` 비트 위치입니다. 하는 경우 `E1` 부호 없는 형식 이거나 `E1` 부호 있는 형식이 고 음수가 아닌 값에는 결과 값의 몫의 정수 부분 **E1/2**<sup>**E2** </sup>. `E1`이 부호 있는 형식이고 음수인 경우 결과 값은 구현 시 정의됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [이항 연산자가 있는 식](../cpp/expressions-with-binary-operators.md)   
  [C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

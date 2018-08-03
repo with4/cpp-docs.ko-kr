@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3181369f492f82fca1590e07655e728dbbcd40ff
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b75140879f44423e73c343f7567cc830d97a7b5e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958600"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403130"
 ---
 # <a name="inheritance--c"></a>상속(C++)
 이 단원에서는 파생 클래스를 사용하여 확장 가능한 프로그램을 생성하는 방법을 설명합니다.  
@@ -61,5 +61,5 @@ class Derived : [virtual] [access-specifier] Base1,
   
  합니다 [__super](../cpp/super.md) 하 고 [__interface](../cpp/interface.md) 키워드가이 섹션에 설명 되어 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C++ 언어 참조](../cpp/cpp-language-reference.md)

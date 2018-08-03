@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb8f04962593dff13559f49f7f7c23014968c266
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940762"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406665"
 ---
 # <a name="new-and-delete-operators"></a>new 및 delete 연산자
 
@@ -152,11 +152,11 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- 위의 두 가지 형태 중 하나만 지정된 된 클래스에 있을 수 있습니다. 형식의 단일 인수를 사용 하는 첫 번째 형태는 **void \*** 를 할당 해제할 개체에 포인터를 포함 합니다. 두 번째 형태-할당 취소를 크기 조정-2 개 인수에는 첫 번째 할당을 취소 된 메모리 블록에 대 한 포인터 이며 두 번째는 할당 해제할 바이트 수입니다. 두 형태 모두의 반환 형식은 **void** (**delete 연산자** 값을 반환할 수 없습니다).  
+ 위의 두 가지 형태 중 하나만 지정된 된 클래스에 있을 수 있습니다. 첫 번째 폼 형식의 단일 인수 `void *`, 할당을 취소 하는 개체에 대 한 포인터를 포함 하는 합니다. 두 번째 형태-할당 취소를 크기 조정-2 개 인수에는 첫 번째 할당을 취소 된 메모리 블록에 대 한 포인터 이며 두 번째는 할당 해제할 바이트 수입니다. 두 형태 모두의 반환 형식은 **void** (**delete 연산자** 값을 반환할 수 없습니다).  
   
  두 번째 폼의 의도가 속도 삭제할 개체의 올바른 크기 범주를 검색할 수 없는 경우가 많습니다 자체 할당을 가깝게 저장 되 고 캐시 되지 않은 것입니다. 두 번째 형태는 특히 유용 프로그램 **delete 연산자** 함수 기본 클래스에서 파생된 된 클래스의 개체를 삭제 하는 합니다.  
   
- 합니다 **delete 연산자** 함수는 정적; 따라서 가상 일 수 없습니다. 합니다 `operator delete` 함수에 설명 된 대로 access control을 따릅니다 [멤버 Access Control](../cpp/member-access-control-cpp.md)합니다.  
+ 합니다 **delete 연산자** 함수는 정적; 따라서 가상 일 수 없습니다. 합니다 **delete 연산자** 함수에 설명 된 대로 access control을 따릅니다 [멤버 Access Control](../cpp/member-access-control-cpp.md)합니다.  
   
  다음 예제에서는 사용자 정의 **new 연산자** 하 고 **delete 연산자** 할당 및 메모리 할당 취소를 기록 하도록 디자인 된 함수:  
   
@@ -229,4 +229,3 @@ void f() {
    delete [] pX;  
 }  
 ```  
-

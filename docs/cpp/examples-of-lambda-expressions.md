@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d294eef323d96ddbfecad8f740826a5a038d7b4c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eae00467e2866ba8c0ff9aeb275224d1249ae361
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944272"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404963"
 ---
 # <a name="examples-of-lambda-expressions"></a>람다 식의 예
 이 문서에서는 프로그램에 람다 식을 사용하는 방법을 보여 줍니다. 람다 식의 개요를 보려면 [람다 식](../cpp/lambda-expressions-in-cpp.md)합니다. 람다 식의 구조에 대 한 자세한 내용은 참조 하세요. [람다 식 구문](../cpp/lambda-expression-syntax.md)합니다.  
@@ -204,7 +204,6 @@ int main()
     // Print the result.  
     cout << timestwoplusthree << endl;  
 }  
-  
 ```  
   
 ### <a name="output"></a>출력  
@@ -256,7 +255,6 @@ int main()
     // Print the result, which is (7+8)*2.  
     cout << answer << endl;  
 }  
-  
 ```  
   
 ### <a name="output"></a>출력  
@@ -276,7 +274,6 @@ int main()
  사용할 수는 **이** 포인터를 함수를 다음과 같이 명시적으로:  
   
 ```cpp  
-
 // capture "this" by reference
 void ApplyScale(const vector<int>& v) const  
 {  
@@ -290,7 +287,6 @@ void ApplyScale2(const vector<int>& v) const
    for_each(v.begin(), v.end(),   
       [*this](int n) { cout << n * _scale << endl; });  
 }  
-
 ```  
   
  캡처할 수도 있습니다는 **이** 포인터 암시적으로:  
@@ -344,7 +340,6 @@ int main()
     Scale s(3);  
     s.ApplyScale(values);  
 }  
-  
 ```  
   
 ### <a name="output"></a>출력  
@@ -354,7 +349,6 @@ int main()
 6  
 9  
 12  
-  
 ```  
   
 ### <a name="remarks"></a>설명  
@@ -365,7 +359,7 @@ int main()
 ##  <a name="templateLambdaExpressions"></a> 템플릿이 있는 람다 식 사용  
   
 ### <a name="example"></a>예  
- 람다 식이 형식화되기 때문에 C++ 템플릿과 함께 사용할 수 있습니다. 다음 예제에서는 `negate_all` 및 `print_all` 함수를 보여 줍니다. `negate_all` 함수는 단항 `operator-`를 `vector` 개체의 각 요소에 적용합니다. `print_all` 함수는 `vector` 개체의 각 요소를 콘솔에 인쇄합니다.  
+ 람다 식이 형식화되기 때문에 C++ 템플릿과 함께 사용할 수 있습니다. 다음 예제에서는 `negate_all` 및 `print_all` 함수를 보여 줍니다. `negate_all` 함수를 단항 적용 **operator-** 의 각 요소에는 `vector` 개체입니다. `print_all` 함수는 `vector` 개체의 각 요소를 콘솔에 인쇄합니다.  
   
 ### <a name="code"></a>코드  
   
@@ -405,7 +399,6 @@ int main()
     cout << "After negate_all():" << endl;  
     print_all(v);  
 }  
-  
 ```  
   
 ### <a name="output"></a>출력  
@@ -418,7 +411,6 @@ After negate_all():
 -34  
 43  
 -56  
-  
 ```  
   
 ### <a name="remarks"></a>설명  
@@ -502,7 +494,6 @@ int main()
         Console::WriteLine(s + Convert::ToChar(ch));   
     }("Hello");  
 }  
-  
 ```  
   
 ### <a name="output"></a>출력  
@@ -519,7 +510,7 @@ Hello!
   
  [[이 문서의 내용](#top)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [람다 식](../cpp/lambda-expressions-in-cpp.md)   
  [람다 식 구문](../cpp/lambda-expression-syntax.md)   
  [자동](../cpp/auto-cpp.md)   

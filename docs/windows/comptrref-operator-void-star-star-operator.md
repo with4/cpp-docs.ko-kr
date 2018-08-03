@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3993cb0a5ce55996ae2ff793e83453040455aa7f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbe9f077fd0d80a831d319660be26090ad5411f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887084"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463855"
 ---
-# <a name="comptrrefoperator-void-operator"></a>ComPtrRef::operator void** 연산자
+# <a name="comptrrefoperator-void-operator"></a>Comptrref:: Operator void\* \* 연산자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,7 +34,7 @@ operator void**() const;
 ```  
   
 ## <a name="remarks"></a>설명  
- 현재 ComPtrRef 개체를 삭제, 다른 이름으로 포인터-에-포인터-ComPtrRef 개체에서 나타낸 인터페이스로에 대 한 포인터 캐스팅 `void`, 캐스트 포인터를 반환 합니다.  
+ 현재 삭제 **ComPtrRef** 개체에서 나타내는 인터페이스에 대 한 포인터 캐스팅, 합니다 **ComPtrRef** 개체에 대 한 포인터--포인터-을 변수로 **void**, 차례로 캐스트 포인터를 반환합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

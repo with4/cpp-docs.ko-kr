@@ -14,17 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4acfbb5a0790dec6f7b5770832cc6b09f69a28d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e5679ce718c564ee40fb07b676756ef79344a99
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408034"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403624"
 ---
 # <a name="abort-function"></a>abort 함수
 
-**중단** 표준 포함 파일에서 선언 된 함수 \<stdlib.h >, c + + 프로그램을 종료 합니다. 차이 **종료** 및 **중단** 은 **종료** c + + 런타임 종료 처리 과정이 발생 (전역 개체 소멸자 호출)를 사용 하면 반면 **중단** 에서는 프로그램이 즉시 종료 합니다. 자세한 내용은 참조 [중단](../c-runtime-library/reference/abort.md) 에 *런타임 라이브러리 참조*합니다.
+**중단** 표준 포함 파일에도 선언 된 함수 \<b. h >, c + + 프로그램을 종료 합니다. 차이점 `exit` 하 고 **중단** 는 `exit` 수행 (전역 개체 소멸자 호출 된다는)를 c + + 런타임 종료 처리를 허용 하지만 **중단** 프로그램을 즉시 종료 됩니다. 자세한 내용은 [중단](../c-runtime-library/reference/abort.md) 에 *런타임 라이브러리 참조*합니다.
 
 ## <a name="see-also"></a>참고자료
-
 [프로그램 종료](../cpp/program-termination.md)

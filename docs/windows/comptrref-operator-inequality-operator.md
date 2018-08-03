@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d5a6e7389215452177add30b587004c312aeae1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ebe71706ce1091ee21fc6fbd63e65b201c096b5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883556"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462926"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator!= 연산자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -55,21 +55,21 @@ bool operator!=(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `a`  
- ComPtrRef 개체에 대 한 참조입니다.  
+ *a*  
+ 에 대 한 참조를 **ComPtrRef** 개체입니다.  
   
- `b`  
- 다른 ComPtrRef 개체 또는 익명 개체에 대 한 포인터에 대 한 참조 (`void*`).  
+ *b*  
+ 다른에 대 한 참조가 **ComPtrRef** 개체 또는 익명 개체에 대 한 포인터 (`void*`).  
   
 ## <a name="return-value"></a>반환 값  
- 첫 번째 연산자 수확량 `true` 경우 개체 `a` 개체과 같지 않은 `b`, 그렇지 않으면 `false`합니다.  
+ 첫 번째 연산자 생성 **true** 하는 경우 개체 *는* 개체와 같지 않은 *b*고, 그렇지 않으면 **false**합니다.  
   
- 두 번째 및 세 번째 연산자에서 생성 `true` 경우 개체 `a` 과 같지 않은 `nullptr`, 그렇지 않으면 `false`합니다.  
+ 두 번째 및 세 번째 연산자를 생성 **true** 경우 개체 *는* 같지 **nullptr**고, 그렇지 않으면 **false**합니다.  
   
- 네 번째와 다섯 번째 연산자에서 생성 `true` 경우 개체 `a` 개체과 같지 않은 `b`, 그렇지 않으면 `false`합니다.  
+ 네 번째와 다섯 번째 연산자에서 생성 **true** 하는 경우 개체 *는* 개체와 같지 않은 *b*고, 그렇지 않으면 **false**합니다.  
   
 ## <a name="remarks"></a>설명  
- 두 개의 ComPtrRef 개체가 같지 않은지 여부를 나타냅니다.  
+ 나타냅니다 두 **ComPtrRef** 개체가 같지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

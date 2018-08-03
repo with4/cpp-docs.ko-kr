@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dafb3c41bd490e7c123e1aefe9ccaa04a4e6b233
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b9c17c0abbd8286d05423ac52abc2e2109253f6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944521"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404625"
 ---
 # <a name="exception-handling-differences"></a>예외 처리 차이점
 c + + 예외 처리 모델은 여러 형식 다룬다는 하면서 C 구조적된 예외 처리 모델 처리 한 형식의 예외를 사용 하 여 구조적된 예외 처리 및 c + + 예외 처리의 주요 차이점은, 특히  **부호 없는 int**합니다. 즉, C 예외는 부호 없는 정수 값으로 식별되지만 C++ 예외는 데이터 형식으로 식별됩니다. C에서 예외가 발생하는 경우 각각의 가능한 처리기는 C 예외 컨텍스트를 조사하고 예외를 허용할지, 다른 처리기로 전달할지 아니면 무시할지를 결정하는 필터를 실행합니다. C++에서 예외가 발생하는 경우 예외는 어떤 형식이든 가능합니다.  
@@ -87,7 +87,6 @@ public:
       return nSE;  
    }  
 };  
-  
 ```  
   
  이 클래스를 사용하려면 C 예외가 throw될 때마다 내부 예외 처리 메커니즘을 통해 호출되는 사용자 지정 C 예외 변환 함수를 설치합니다. 변환 함수 내에서 모든 형식의 예외를 throw 할 수 있습니다 (아마도 `SE_Exception` 에서 파생 된 형식 또는 클래스 형식 `SE_Exception`)를 적절 한 일치 하는 c + +에서 낼 수 있습니다 **catch** 처리기입니다. 변환 함수는 반환되기만 할 수 있으며, 이는 예외를 처리하지 않았음을 나타냅니다. 변환 함수 자체 C 예외를 발생 시키면 [종료](../c-runtime-library/reference/terminate-crt.md) 라고 합니다.  
@@ -150,5 +149,5 @@ Caught a __try exception with SE_Exception.
 nSE = 0xc0000094  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C(구조적) 및 C++ 예외 혼합](../cpp/mixing-c-structured-and-cpp-exceptions.md)

@@ -15,12 +15,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e01a6235ccd898e9ae732c89b9f9885db35151cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee104956bdfb5c7b72d20195fb3fb7a2789e236c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093064"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207707"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator 클래스
 Windows Runtime에서 파생 된 개체에 대 한 표준 템플릿 라이브러리 반복기를 제공`IVectorView` 인터페이스입니다.  
@@ -69,7 +69,7 @@ class VectorViewIterator;
 |[VectorViewIterator::operator++ 연산자](#operator-increment)|현재 VectorViewIterator를 증가시킵니다.|  
 |[VectorViewIterator::operator+= 연산자](#operator-plus-assign)|지정된 치환으로 현재 VectorViewIterator를 늘립니다.|  
 |[VectorViewIterator::operator< 연산자](#operator-less-than)|현재 VectorViewIterator가 지정된 VectorViewIterator보다 작은지 여부를 나타냅니다.|  
-|[Vectorviewiterator::\<= 연산자](#operator-less-than-or-equals)|현재 VectorViewIterator가 지정된 VectorViewIterator보다 같거나 작은지 여부를 나타냅니다.|  
+|[Vectorviewiterator:: Operator\<= 연산자](#operator-less-than-or-equals)|현재 VectorViewIterator가 지정된 VectorViewIterator보다 같거나 작은지 여부를 나타냅니다.|  
 |[VectorViewIterator::operator-= 연산자](#operator-minus-assign)|지정된 치환으로 현재 VectorViewIterator를 감소시킵니다.|  
 |[VectorViewIterator::operator== 연산자](#operator-equality)|현재 VectorViewIterator가 지정된 VectorViewIterator와 같은지 여부를 나타냅니다.|  
 |[VectorViewIterator::operator> 연산자](#operator-greater-than)|현재 VectorViewIterator가 지정된 VectorViewIterator보다 큰지 여부를 나타냅니다.|  
@@ -116,11 +116,11 @@ VectorViewIterator operator--(int);
 ### <a name="remarks"></a>설명  
  첫 번째 VectorViewIterator 구문은 현재 VectorViewIterator를 사전에 감소시킵니다.  
   
- 두 번째 구문은 현재 VectorViewIterator를 사후에 감소시킵니다. `int` 두 번째 구문의 형식은 실제 정수 피연산자가 아니라 후 위 감소 작업을 나타냅니다.  
+ 두 번째 구문은 현재 VectorViewIterator를 사후에 감소시킵니다. `int` 두 번째 구문의 형식은 실제 정수 피연산자가 없습니다를 후 위 감소 연산을 나타냅니다.  
   
 
 
-## <a name="operator-dereference"></a>  VectorViewIterator::operator* Operator
+## <a name="operator-dereference"></a>  VectorViewIterator::operator\* Operator
 현재 VectorViewIterator가 지정하는 요소에 대한 참조를 검색합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -148,7 +148,7 @@ bool operator==(const VectorViewIterator& other) const;
  다른 VectorViewIterator입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true` 현재 VectorViewIterator 같으면 `other`, 그렇지 않으면 `false`합니다.  
+ `true` 현재 VectorViewIterator가 같음 `other`이 고, 그렇지 않으면 `false`합니다.  
   
 
 
@@ -171,7 +171,7 @@ bool operator>(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-greater-than-or-equals"></a>  Vectorviewiterator::&gt;= 연산자
+## <a name="operator-greater-than-or-equals"></a>  Vectorviewiterator:: Operator&gt;= 연산자
 현재 VectorViewIterator가 지정된 VectorViewIterator보다 크거나 같은지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -225,7 +225,7 @@ bool operator!=(const VectorViewIterator& other) const;
  다른 VectorViewIterator입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true` 현재 VectorViewIterator와 같지 없으면 `other`, 그렇지 않으면 `false`합니다.  
+ `true` 현재 VectorViewIterator를 같지 `other`이 고, 그렇지 않으면 `false`합니다.  
   
 
 
@@ -247,7 +247,7 @@ bool operator<(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-less-than-or-equals"></a>  Vectorviewiterator::&lt;= 연산자
+## <a name="operator-less-than-or-equals"></a>  Vectorviewiterator:: Operator&lt;= 연산자
 현재 VectorIterator가 지정된 VectorIterator보다 작거나 같은지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -262,7 +262,7 @@ bool operator<=(const VectorViewIterator& other) const;
  다른 VectorIterator입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true` 현재 VectorIterator가 보다 작거나 같은 경우 `other`, 그렇지 않으면 `false`합니다.  
+ `true` 현재 VectorIterator 보다 작거나 같음 인지 `other`이 고, 그렇지 않으면 `false`합니다.  
   
 
 
@@ -337,7 +337,7 @@ inline VectorViewIterator<T> operator+
 ### <a name="return-value"></a>반환 값  
  첫 번째 구문에서 현재 VectorViewIterator에서 지정된 치환에 해당하는 요소를 참조하는 VectorViewIterator입니다.  
   
- 두 번째 구문에서 매개 변수의 시작 부분에서 지정된 된 치환에 요소를 참조 하는 VectorViewIterator `i`합니다.  
+ 두 번째 구문에서 매개 변수 부분에서 지정된 된 치환에 있는 요소를 참조 하는 VectorViewIterator `i`합니다.  
   
 
 
@@ -396,7 +396,7 @@ explicit VectorViewIterator(
  IVectorView\<T > 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 첫 번째 구문 예제에서는 기본 생성자를 호출합니다. 두 번째 구문 예제는 IVectorView에서 VectorViewIterator를 만드는 사용 되는 명시적 생성자\<T > 개체입니다.  
+ 첫 번째 구문 예제에서는 기본 생성자를 호출합니다. 두 번째 구문 예제 IVectorView에서 VectorViewIterator를 생성 하는 데 사용 되는 명시적 생성자가\<T > 개체입니다.  
   
 
   

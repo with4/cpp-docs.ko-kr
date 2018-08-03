@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae3419cc7df0b9ed436981d5e845764a762c8ee8
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 82ea6211a51bbe45fa1613dd7bb682f363783367
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940971"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461925"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 하드웨어에 의해 프로그램에서 수정할 수 있는 개체를 선언하는 데 사용할 수 있는 형식 한정자입니다.  
@@ -32,7 +32,6 @@ ms.locfileid: "37940971"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 volatile declarator ;  
 ```  
   
@@ -76,7 +75,7 @@ volatile declarator ;
   
 **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [키워드](../cpp/keywords-cpp.md)   
  [const](../cpp/const-cpp.md)   
  [const 및 volatile 포인터](../cpp/const-and-volatile-pointers.md)

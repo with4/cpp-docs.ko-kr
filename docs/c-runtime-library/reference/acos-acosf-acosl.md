@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664c3555602dfc16ce811b065e0d38f8fe93e733
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5384d4e97ebb4f3f6152278e916c02bb350090ea
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392772"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401940"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -67,34 +67,34 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>매개 변수
 
-*x*<br/>
-아크코사인 (역 코사인)을 계산 하 고에 대 한 1에서 1 사이의 값입니다.
+*x*  
+아크코사인 (역 코사인)을 계산 하는 1에서 1 사이의 값입니다.
 
 ## <a name="return-value"></a>반환 값
 
-**acos** 의 아크코사인을 반환 하는 함수 *x* 0에서 π 라디안입니다.
+합니다 **acos** 의 아크코사인을 반환 하는 함수 *x* π 범위의 0입니다.
 
-기본적으로 경우 *x* 가-1 보다 작거나 1 보다 큰 경우 **acos** 는 무한를 반환 합니다.
+기본적으로 하는 경우 *x* -1 보다 작거나 1 보다 크면 **acos** 는 무한 한 값을 반환 합니다.
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
-|± ∞|**올바르지 않음**|**_DOMAIN**|
-|± QNAN,IND|없음|**_DOMAIN**|
-|&#124;x&#124;>1|**올바르지 않음**|**_DOMAIN**|
+|± ∞|INVALID|_DOMAIN|
+|± QNAN,IND|없음|_DOMAIN|
+|&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>설명
 
-C + +는 오버 로딩을 허용 하기 때문에 오버 로드를 호출할 수 있습니다 **acos** 사용 하 고 반환 **float** 및 **긴** **double** 형식입니다. C 프로그램에서 **acos** 항상 사용 하 고 반환 된 **double**합니다.
+C + +에서는 오버 로드 하므로 오버 로드를 호출할 수 있습니다 **acos** 및 반환 하는 **float** 하 고 **긴** **double** 형식입니다. C 프로그램에서 **acos** 항상 받아서 반환 된 **double**합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴|필수 헤더|선택적 헤더|
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|
 |-------------|---------------------|----------------------|
-|**acos**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
+|**acos**하십시오 **acosf**, **acosl**|\<math.h>|\<errno.h>|
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-이 프로그램에서 -1에서 1 사이 범위의 값을 묻는 메시지가 나타납니다. 이 범위를 벗어나는 입력된 값이 생성 **_DOMAIN** 오류 메시지입니다. 올바른 값을 입력하는 경우 프로그램에서 해당 값의 아크사인 및 아크코사인을 인쇄합니다.
+이 프로그램에서 -1에서 1 사이 범위의 값을 묻는 메시지가 나타납니다. 이 범위를 벗어나는 입력 값은 `_DOMAIN` 오류 메시지를 생성합니다. 올바른 값을 입력하는 경우 프로그램에서 해당 값의 아크사인 및 아크코사인을 인쇄합니다.
 
 ```C
 // crt_asincos.c
@@ -144,10 +144,10 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>참고자료
 
-[부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
-[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
-[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
-[_matherr](matherr.md)<br/>
-[sin, sinf, sinl](sin-sinf-sinl.md)<br/>
-[tan, tanf, tanl](tan-tanf-tanl.md)<br/>
+[부동 소수점 지원](../../c-runtime-library/floating-point-support.md)  
+[asin, asinf, asinl](asin-asinf-asinl.md)  
+[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)  
+[cos, cosf, cosl](cos-cosf-cosl.md)  
+[_matherr](matherr.md)  
+[sin, sinf, sinl](sin-sinf-sinl.md)  
+[tan, tanf, tanl](tan-tanf-tanl.md)  

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31e313381eac3158a6cb72c7681bc49013e92f90
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: aa48af82fb5b6119e1efc14081c6851eafb85fa5
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881755"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208704"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges 클래스
 이 클래스는에 대 한 래퍼를 `TOKEN_PRIVILEGES` 구조입니다.  
@@ -290,7 +290,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ### <a name="return-value"></a>반환 값  
  업데이트 된 반환 `CTokenPrivileges` 개체입니다.  
   
-##  <a name="operator_const_token_privileges__star"></a>  CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
+##  <a name="operator_const_token_privileges__star"></a>  CTokenPrivileges::operator const TOKEN_PRIVILEGES \*  
  에 대 한 포인터에 값을 캐스팅 합니다 `TOKEN_PRIVILEGES` 구조입니다.  
   
 ```  

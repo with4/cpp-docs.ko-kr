@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eba5462caf739d78236e10df018fc07421ea876
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 84035f2007f3c45c33c1dfa342caf5c788580205
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939122"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460921"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 합니다 **가상** 키워드 가상 함수나 가상 기본 클래스를 선언 합니다.  
@@ -55,5 +55,5 @@ virtual [access-specifier] base-class-name
   
  다음 키워드를 참조 하세요. [클래스](../cpp/class-cpp.md), [개인](../cpp/private-cpp.md), [공용](../cpp/public-cpp.md), 및 [보호](../cpp/protected-cpp.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [키워드](../cpp/keywords-cpp.md)

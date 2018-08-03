@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be96658d5e2920f480747e484f60bed5c16f09c1
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 887ab1e29cf2a0eab656cc6d1b4587252871d328
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944509"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402824"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>명시적으로 기본 설정 및 삭제된 함수
 C++ 11에서 기본 설정 및 삭제된 함수를 사용하면 특수 멤버 함수가 자동으로 생성되는지 여부를 명시적으로 제어할 수 있습니다. 함수를 삭제하면 간단한 언어로 일반적인 멤버 함수와 비멤버 함수뿐 아니라 특수 멤버 함수까지 모든 형식의 함수에 대한 인수에서 문제가 발생할 수 있는 형식 승격을 방지할 수 있습니다. 그렇지 않은 경우 원하지 않는 함수 호출 시 문제가 발생할 수 있습니다.  
@@ -145,5 +145,4 @@ template < typename T >
 void call_with_true_double_only(T) =delete; //prevent call through type promotion of any T to double from succeeding.  
   
 void call_with_true_double_only(double param) { return; } // also define for const double, double&, etc. as needed.  
-  
 ```

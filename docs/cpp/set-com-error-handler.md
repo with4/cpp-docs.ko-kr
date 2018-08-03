@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f516114dbaa9e507491cf669c3371b6b8fbaf11
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 08d5df7893aa5390a6e577e3c26424864f7c3a8f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944545"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465768"
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
 **Microsoft 전용**  
@@ -48,7 +48,7 @@ void __stdcall _set_com_error_handler(
  `IErrorInfo` 개체  
   
 ## <a name="remarks"></a>설명  
- 기본적으로 [_com_raise_error](../cpp/com-raise-error.md) 모든 COM 오류를 처리 합니다. `_set_com_error_handler`를 사용하여 이 동작을 변경하여 사용자 고유의 오류 처리 함수를 호출할 수 있습니다.  
+ 기본적으로 [_com_raise_error](../cpp/com-raise-error.md) 모든 COM 오류를 처리 합니다. 사용 하 여이 동작을 변경할 수 있습니다 **_set_com_error_handler** 사용자 고유의 오류 처리 함수를 호출 합니다.  
   
  대체 함수에는 `_com_raise_error`의 시그니처에 해당하는 시그니처가 있어야 합니다.  
   
@@ -98,5 +98,5 @@ Exception raised: Unable to establish the connection!
   
  **Lib:** 경우는 **wchar_t is Native Type** 컴파일러 옵션이 설정 되어 있는 경우 comsuppw.lib 또는 comsuppwd.lib를 사용 합니다. 하는 경우 **wchar_t is Native Type** 해제가 comsupp.lib를 사용 합니다. 자세한 내용은 [/Zc:wchar_t(wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [컴파일러 COM 전역 함수](../cpp/compiler-com-global-functions.md)

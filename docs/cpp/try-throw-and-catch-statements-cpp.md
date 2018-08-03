@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da07786c3aac6bfce2f74a16088b3c09184a8106
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: dc5480b461a06d84647b7f139b2bd0ccce550dcd
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943244"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462146"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>Try, Throw 및 Catch 문(C++)
 사용할 c + +에서 예외 처리를 구현 하려면 **시도**를 **throw**, 및 **catch** 식입니다.  
@@ -50,7 +50,6 @@ ms.locfileid: "37943244"
 ## <a name="example"></a>예  
   
 ```cpp 
-  
 MyData md;  
 try {  
    // Code that could throw an exception  
@@ -100,7 +99,7 @@ catch(...) {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C + + 예외 처리](../cpp/cpp-exception-handling.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [처리 되지 않은 c + + 예외](../cpp/unhandled-cpp-exceptions.md)   

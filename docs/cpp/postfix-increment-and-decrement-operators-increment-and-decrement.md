@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6021de0e012797b811fa032547f2b95142176cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b1a878fe1c18889c1abfef995786ffcc9a267981
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944515"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404056"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>후위 증가 및 감소 연산자: ++ 및 --
 ## <a name="syntax"></a>구문  
@@ -46,7 +46,7 @@ postfix-expression --
 i++;  
 ```  
   
- 후위 증가 연산자(`++`)를 적용하면 피연산자 값이 적절한 형식의 단위로 한 단위씩 증가하게 됩니다. 마찬가지로, 후 위 감소 연산자를 적용 한 결과 (**--**)는 피연산자의 값은 적절 한 형식의 단위로 한 단위씩 감소 됩니다.  
+ 후 위 증가 연산자를 적용 한 결과 (**++**)는 피연산자의 값은 적절 한 형식의 단위로 한 단위씩 증가 됩니다. 마찬가지로, 후 위 감소 연산자를 적용 한 결과 (**--**)는 피연산자의 값은 적절 한 형식의 단위로 한 단위씩 감소 됩니다.  
   
  후 위 증가 한다는 점에 유의 해야 감소 식이 식의 값 또는 *이전에* 각 연산자를 적용 합니다. 증가 또는 감소 연산은 발생 *후* 피연산자 평가 됩니다. 이 문제는 후위 증가나 감소 연산이 더 큰 수식의 컨텍스트에서 진행할 경우에만 발생합니다.  
   
@@ -81,7 +81,7 @@ Compass myCompass;
 for( myCompass = North; myCompass != West; myCompass++ ) // Error  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [후 위 식](../cpp/postfix-expressions.md)   
  [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 후위 증가 및 감소 연산자](../c-language/c-postfix-increment-and-decrement-operators.md)

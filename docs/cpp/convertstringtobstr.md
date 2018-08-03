@@ -16,28 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2683daf4fd1293d3fad043037165fa3cbc13de3c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c579437ef0d5bd786b7066756b8e0bac4fa59e4a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943171"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408504"
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
 **Microsoft 전용**  
   
- 변환 된 **char \***  값을 `BSTR`합니다.  
+ 변환 된 `char *` 값을 `BSTR`.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 BSTR __stdcall ConvertStringToBSTR(const char* pSrc)  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
  *pSrc*  
- A **char \***  변수입니다.  
+ `char *` 변수입니다.  
   
 ## <a name="example"></a>예  
   
@@ -72,5 +71,5 @@ BSTR text: Test
   
  **Lib:** comsuppw.lib 또는 comsuppwd.lib (참조 [/zc: wchar_t (wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 자세한)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [컴파일러 COM 전역 함수](../cpp/compiler-com-global-functions.md)

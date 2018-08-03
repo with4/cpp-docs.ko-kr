@@ -16,22 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09efc905507d93bbb80b003f93b885d9d27fcb1d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f8b845fd147f51e3546f7a11afa0bae6deb5d527
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939847"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461467"
 ---
 # <a name="stdcall"></a>__stdcall
 **Microsoft 전용**  
   
- 합니다 **__stdcall** Win32 API 함수를 호출 하려면 호출 규칙이 사용 됩니다. 호출 수신자는 컴파일러에서 있도록 스택을 정리 **vararg** functions **__cdecl**합니다. 이 호출 규칙을 사용하는 함수에는 함수 프로토타입이 필요합니다.  
+ 합니다 **__stdcall** Win32 API 함수를 호출 하려면 호출 규칙이 사용 됩니다. 호출 수신자는 컴파일러에서 있도록 스택을 정리 `vararg` functions **__cdecl**합니다. 이 호출 규칙을 사용하는 함수에는 함수 프로토타입이 필요합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 return-type __stdcall function-name[(argument-list)]  
 ```  
   
@@ -73,7 +72,7 @@ void __stdcall CMyClass::mymethod() { return; }
 ```  
   
 ## <a name="example"></a>예  
- 다음 예제에서 사용 하 여 _ _**stdcall** 모든 `WINAPI` 함수 형식이 표준 호출으로 처리 됩니다.  
+ 다음 예제에서 사용 **__stdcall** 모든 `WINAPI` 함수 형식이 표준 호출으로 처리 됩니다.  
   
 ```cpp  
 // Example of the __stdcall keyword  
@@ -82,6 +81,6 @@ void __stdcall CMyClass::mymethod() { return; }
 typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [인수 전달 및 명명 규칙](../cpp/argument-passing-and-naming-conventions.md)   
  [키워드](../cpp/keywords-cpp.md)

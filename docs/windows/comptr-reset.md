@@ -13,15 +13,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd2ce820367b15cb5dad8baf691a835499457a55
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6edbe333ddb634d8657712695250ec627a171780
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870769"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461086"
 ---
 # <a name="comptrreset"></a>ComPtr::Reset
-이 ComPtr과 연관된 인터페이스의 포인터에 대한 모든 참조를 해제합니다.  
+이 사용 하 여 연결 된 인터페이스 포인터에 대 한 모든 참조를 해제 **ComPtr**합니다.  
   
 ## <a name="syntax"></a>구문  
   

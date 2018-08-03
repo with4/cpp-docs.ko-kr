@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e842a13461757e26dd1aed663c590df4c1ba6c74
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fd2f65bb86cdd77d4e285cee5603416fa629f940
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883432"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466350"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory 함수
 Windows 런타임으로 활성화할 수 있는 지정된 클래스의 인스턴스를 생성하는 팩터리를 만듭니다.  
@@ -35,27 +35,26 @@ template<typename Factory>
       _In_ unsigned int *flags,        _In_ const CreatorMap* entry,   
       REFIID riid,   
      _Outptr_ IUnknown **ppFactory) throw();  
-  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `flags`  
- 하나 이상의 조합이 [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거형 값입니다.  
+ *flags*  
+ 하나 이상의 조합 [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거형 값입니다.  
   
- `entry`  
- 에 대 한 포인터는 [CreatorMap](../windows/creatormap-structure.md) 매개 변수에 대 한 초기화 및 등록 정보를 포함 하는 `riid`합니다.  
+ *entry*  
+ 에 대 한 포인터를 [CreatorMap](../windows/creatormap-structure.md) 매개 변수에 대 한 초기화 및 등록 정보를 포함 하는 *riid*합니다.  
   
- `riid`  
+ *riid*  
  인터페이스 ID에 대 한 참조  
   
- `ppFactory`  
- 완료 되 면이 작업을 한 활성화 팩터리에 대 한 포인터입니다.  
+ *ppFactory*  
+ 이 작업이 완료 되 면 성공적으로 활성화 팩터리에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.  
   
 ## <a name="remarks"></a>설명  
- 어설션 오류가 발생 하는 경우 템플릿 매개 변수 `Factory` iactivationfactory입니다 인터페이스에서 파생 되지 않았습니다.  
+ 어설션 오류가 발생 하는 경우에 내보내집니다 템플릿 매개 변수 *팩터리* 인터페이스에서 파생 되지 `IActivationFactory`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** module.h  

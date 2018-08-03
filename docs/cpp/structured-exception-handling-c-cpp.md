@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64ff69a4ab75189dd069e774eb05266e6140ff77
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1edcf2cb24273f475b1ba98e5e973f5704c0cec8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940497"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461704"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Windows 및 Visual C++에서 SEH(구조적 예외 처리)를 지원하지만 포팅 가능하고 유연한 코드를 만들기 위해 ISO 표준 C++ 예외 처리를 사용하는 것이 좋습니다. 그러나 기존 코드 또는 특정 종류의 프로그램에서는 SEH를 계속 사용할 수 있습니다.  
@@ -72,7 +72,7 @@ Windows 및 Visual C++에서 SEH(구조적 예외 처리)를 지원하지만 포
 -   [C++에서 구조적 예외 처리 사용](../cpp/using-structured-exception-handling-with-cpp.md)  
   
 ## <a name="example"></a>예  
- C + + 프로그램에서 SEH를 사용 하 고 사용 하 여 컴파일하는 경우 로컬 개체는 호출에 대 한 소멸자 이전에 설명한 대로 합니다 **/EH** 특정 한정자와 함께 옵션-예를 들어 **/EHsc** 및 **/EHa**. 그러나 C++ 예외도 사용하는 경우 실행 중의 동작은 예상과 다를 수 있습니다. 다음 예제에서는 이러한 동작의 차이를 보여 줍니다.  
+ 앞서 설명한 것처럼, C++ 프로그램에서 SEH를 사용하고 특정 한정자와 함께 `/EH` 옵션을 사용하여 컴파일하는 경우(예: `/EHsc` 및 `/EHa`) 로컬 개체에 대한 소멸자가 호출됩니다. 그러나 C++ 예외도 사용하는 경우 실행 중의 동작은 예상과 다를 수 있습니다. 다음 예제에서는 이러한 동작의 차이를 보여 줍니다.  
   
 ```cpp  
 #include <stdio.h>  
@@ -119,7 +119,6 @@ int main()
   
     return 0;  
 }  
-  
 ```  
   
  사용 하는 경우 **/EHsc** 로컬 테스트 컨트롤 이지만이 코드를 컴파일하려면 `CPPEX` 가 정의 되지 않은 실행이 없습니다의 `TestClass` 소멸자 및 보입니다 같이:  
@@ -149,7 +148,7 @@ Executing SEH __except block
   
 **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [예외 처리](../cpp/exception-handling-in-visual-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [\<exception>](../standard-library/exception.md)   

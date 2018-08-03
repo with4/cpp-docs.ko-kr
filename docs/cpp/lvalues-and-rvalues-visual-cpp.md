@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6f9a11b6cf2a0045729acbc79d8e45103064ea
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 68f13848c01f91f9302246a763dd478ee8fccdda
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940188"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403925"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalue 및 Rvalue (Visual c + +)
 
@@ -78,6 +78,7 @@ int main()
 
 용어 *lvalue* 하 고 *rvalue* 개체 참조를 참조할 때 주로 사용 됩니다. 참조에 대 한 자세한 내용은 참조 하세요. [Lvalue 참조 선언 자: &](../cpp/lvalue-reference-declarator-amp.md) 하 고 [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)합니다.
 
-## <a name="see-also"></a>참고 항목
-
- [기본 개념](../cpp/basic-concepts-cpp.md) [Lvalue 참조 선언 자: &](../cpp/lvalue-reference-declarator-amp.md) [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)
+## <a name="see-also"></a>참고자료
+ [기본 개념](../cpp/basic-concepts-cpp.md)  
+ [Lvalue 참조 선언자: &](../cpp/lvalue-reference-declarator-amp.md)  
+ [Rvalue 참조 선언자: &&](../cpp/rvalue-reference-declarator-amp-amp.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 610a46c7906cda3c44cdf1f0aaf652552efb9bcb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ac866487c25ee4ce75abbebe9b9f9c2a5e97828
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943243"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405946"
 ---
 # <a name="ifexists-statement"></a>__if_exists 문
 합니다 **__if_exists** 문은 지정된 된 식별자가 있는지 여부를 테스트 합니다. 식별자가 있는 경우 지정된 문 블록이 실행됩니다.  
@@ -40,8 +40,8 @@ statements
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|`identifier`|존재 여부를 테스트할 식별자입니다.|  
-|`statements`|경우에 실행할 하나 이상의 문을 `identifier` 존재 합니다.|  
+|*identifier*|존재 여부를 테스트할 식별자입니다.|  
+|*문*|경우 실행할 하나 이상의 문이 *식별자* 존재 합니다.|  
   
 ## <a name="remarks"></a>설명  
   
@@ -129,7 +129,7 @@ g_bFlag = 1
 C::f exists  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [선택 문](../cpp/selection-statements-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [__if_not_exists 문](../cpp/if-not-exists-statement.md)

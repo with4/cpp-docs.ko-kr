@@ -1,5 +1,5 @@
 ---
-title: 컨트롤 | Microsoft Docs
+title: 제어 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8e80736ca84b551f197cc475aed4c7b54b9bf52
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93ffba61c9e0edaf3d127a7ddfb12b098ae484ca
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870834"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466489"
 ---
 # <a name="control"></a>컨트롤
-사용자 정의 형식 컨트롤 임을 지정 합니다.  
+사용자 정의 형식 컨트롤을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [control]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **제어** 내재 하 고는 [coclass](../windows/coclass.md) 특성입니다. **제어** c + + 특성에 동일한 기능을는 [제어](http://msdn.microsoft.com/library/windows/desktop/aa366764) MIDL 특성입니다.  
+ **제어** 특성을 의미 합니다 [coclass](../windows/coclass.md) 특성입니다. **제어** c + + 특성에 동일한 기능을 합니다 [컨트롤](http://msdn.microsoft.com/library/windows/desktop/aa366764) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cpp_attr_ref_control.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -61,7 +59,7 @@ class CTest : public ICustom {};
   
 |||  
 |-|-|  
-|**적용 대상**|**class**, `struct`|  
+|**적용 대상**|**클래스**, **구조체**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

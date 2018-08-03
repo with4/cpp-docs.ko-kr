@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed2165f75103f5e2aecd3d73dfe9518341d926e
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2eb0ea67156671ac682b61cd0e105d1781bda915
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042331"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209094"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>Visual Studio 2017 버전 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157)의 C++ 규칙 향상입니다.
 
@@ -81,7 +81,7 @@ Range-based for 루프에 더 이상 동일한 유형의 begin() 및 end() 반�
 
 이제 해당 정의에서 열거형을 소개하지 않고 소스에서 목록 초기화 구문을 사용하는 경우 범위가 지정된 열거형의 기본 형식에서 열거형 자체로의 암시적/비축소 변환이 있습니다. 자세한 내용은 [enum 클래스 값의 생성 규칙(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)을 참조하세요.
 
-### <a name="capturing-this-by-value"></a>값 기준 *this 캡처
+### <a name="capturing-this-by-value"></a>값 기준 \*this 캡처
 
 람다 식의 `*this` 개체는 이제 값을 기준으로 캡처할 수 있습니다. 이렇게 하면 병렬 및 비동기 작업, 특히 최신 컴퓨터 아키텍처에서 람다가 호출되는 시나리오를 사용할 수 있습니다. 자세한 내용은 [[=,\*this]로 값 기준 \*this 람다 캡처(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html)를 참조하세요.
 

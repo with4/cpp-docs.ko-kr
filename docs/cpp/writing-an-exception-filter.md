@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4b02144f55231a7b4472cd62322fd61a543d18
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944251"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462120"
 ---
 # <a name="writing-an-exception-filter"></a>예외 필터 작성
 예외 처리기의 수준으로 이동하거나 계속 실행하여 예외를 처리할 수 있습니다. 예외 처리기 코드를 사용 하 여 참인 및 예외 처리를 대신 사용할 수 있습니다 *필터* 에 문제를 정리한 다음-1을 반환 하 여 스택을 삭제 하지 않고 정상 흐름 재개 합니다.  
@@ -86,6 +86,6 @@ __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ) {
 __except( nCode = GetExceptionCode(), nCode == STATUS_INTEGER_OVERFLOW )  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [예외 처리기 작성](../cpp/writing-an-exception-handler.md)   
  [구조적 예외 처리(C/C++)](../cpp/structured-exception-handling-c-cpp.md)

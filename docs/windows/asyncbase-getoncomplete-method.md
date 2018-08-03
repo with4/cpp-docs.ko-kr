@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa1bf81c8b377da44fb4b81cdb2b0142e90032e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15a561924cad314d09209e205ac73430f6d8be01
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865112"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466574"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>AsyncBase::GetOnComplete 메서드
 지정된 된 변수를 현재 완료 이벤트 처리기의 주소를 복사합니다.  
@@ -36,8 +36,8 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `completeHandler`  
- 현재 완료 이벤트 처리기의 주소가 저장 되어 있는 위치입니다.  
+ *completeHandler*  
+ 현재 완료 이벤트 처리기의 주소를 저장 된 위치입니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공 하면 s_ok이 고 그렇지 않으면 E_ILLEGAL_METHOD_CALL 합니다.  

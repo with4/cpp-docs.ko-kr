@@ -14,18 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9646678398ff1e18d0acf45c45bc931ce37cd54a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a3941ec28efcc3639e56a62c25565f94bc941d13
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944875"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464284"
 ---
 # <a name="typeid-operator"></a>typeid 연산자
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 typeid(type-id)  
 typeid(expression)  
 ```  
@@ -41,7 +40,7 @@ typeid(expression)
   
 -   클래스에 대한 참조  
   
--   *로 역참조되는 포인터  
+-   포인터를 사용 하 여 역참조 \*  
   
 -   첨자 포인터(예: [ ]). 일반적으로 다형 형식의 포인터에 첨자를 사용하는 것은 안전하지 않습니다.  
   
@@ -99,6 +98,6 @@ T max( T arg1, T arg2 ) {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [런타임 형식 정보](../cpp/run-time-type-information.md)   
  [키워드](../cpp/keywords-cpp.md)

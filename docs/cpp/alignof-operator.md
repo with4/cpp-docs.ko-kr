@@ -22,22 +22,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 061557b4d017254584e8ddc3da0127f02d352720
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6a7ab2eb5f33db2a62e745756971ee29f84c25c8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408828"
 ---
 # <a name="alignof-operator"></a>__alignof 연산자
-C++11에서는 지정된 형식의 맞춤(바이트)을 반환하는 `alignof` 연산자를 소개합니다. 최대 이식성을 제공하려면 Microsoft 전용 __alignof 연산자가 아닌 alignof 연산자를 사용해야 합니다.  
+C + + 11 소개 합니다 **alignof** 바이트 단위로 지정 된 형식의 맞춤을 반환 하는 연산자입니다. 최대 이식성을 제공하려면 Microsoft 전용 __alignof 연산자가 아닌 alignof 연산자를 사용해야 합니다.  
   
  **Microsoft 전용**  
   
- 형식의 값을 반환 **size_t** 즉 형식의 맞춤 요구 합니다.  
+ 형식의 값을 반환 `size_t` 형식의 맞춤 요구 사항인 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   __alignof( type )
 ```  
   
@@ -54,26 +55,26 @@ C++11에서는 지정된 형식의 맞춤(바이트)을 반환하는 `alignof` �
 |**__alignof (double)**|8|  
 |**__alignof (char\* )**|4|  
   
- `__alignof` 값은 기본 유형에 대해 `sizeof`의 값과 동일합니다. 그러나 다음과 같은 예제를 고려해야 합니다.  
+ 합니다 **__alignof** 값에 대 한 값으로 동일 `sizeof` 기본 형식에 대 한 합니다. 그러나 다음과 같은 예제를 고려해야 합니다.  
   
-```  
+```cpp 
 typedef struct { int a; double b; } S;  
 // __alignof(S) == 8  
 ```  
   
- 이 경우 `__alignof` 값은 구조에서 가장 큰 요소의 맞춤 요구 사항입니다.  
+ 이 경우에 **__alignof** 값은 구조에서 가장 큰 요소의 맞춤 요구 합니다.  
   
  마찬가지로  
   
-```  
+```cpp 
 typedef __declspec(align(32)) struct { int a; } S;  
 ```  
   
  `__alignof(S)`가 `32`와 같은 경우  
   
- `__alignof`를 한 번 사용하면 자신의 메모리 할당 루틴 중 하나의 매개 변수가 됩니다. 예를 들어, 다음의 정의된 구조인 `S`가 지정된 경우 `aligned_malloc`이라는 메모리 할당 루틴을 호출하여 특정한 할당 경계에서 메모리를 할당할 수 있습니다.  
+ 에 대 한 한 가지 용도 **__alignof** 고유한 메모리 할당 루틴 중 하나를 매개 변수로 것입니다. 예를 들어, 다음의 정의된 구조인 `S`가 지정된 경우 `aligned_malloc`이라는 메모리 할당 루틴을 호출하여 특정한 할당 경계에서 메모리를 할당할 수 있습니다.  
   
-```  
+```cpp 
 typedef __declspec(align(32)) struct { int a; double b; } S;  
 int n = 50; // array size  
 S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));  
@@ -97,6 +98,6 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
 **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)   
  [키워드](../cpp/keywords-cpp.md)

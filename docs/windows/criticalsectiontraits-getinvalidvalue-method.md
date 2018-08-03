@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72c9dce0765029ee31e079315baec72afd16a46
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf0d52769052a36c0b494d19204dd6c07f0b2404
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883149"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463387"
 ---
 # <a name="criticalsectiontraitsgetinvalidvalue-method"></a>CriticalSectionTraits::GetInvalidValue 메서드
-서식 파일 항상 유효 하지 않은 있도록 CriticalSection 템플릿을 특수화 합니다.  
+전문적으로 다루는 **CriticalSection** 템플릿 서식 파일은 항상 유효한 수 있도록 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,10 +34,10 @@ inline static Type GetInvalidValue();
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 항상 유효 하지 않은 중요 한 섹션에 대 한 포인터를 반환합니다.  
+ 잘못 된 중요 한 섹션에 대 한 포인터를 항상 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- *형식* 한정자로 정의 `typedef CRITICAL_SECTION* Type;`합니다.  
+ 합니다 *형식* 한정자로 정의 된 `typedef CRITICAL_SECTION* Type;`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bf975a9d64508368ac5d61c82fecc07edda28b5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8a3c3defdfb882db69f7789c97feba11d346e540
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943212"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405589"
 ---
 # <a name="class-c"></a>클래스 (C++)
 합니다 **클래스** 키워드는 클래스 형식 선언 또는 클래스 형식의 개체를 정의 합니다.  
@@ -30,7 +30,6 @@ ms.locfileid: "37943212"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [template-spec]  
 class [ms-decl-spec] [tag [: base-list ]]  
 {  
@@ -149,6 +148,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [키워드](../cpp/keywords-cpp.md)   
  [클래스 및 구조체](../cpp/classes-and-structs-cpp.md)

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a632c96c39ccd40f008556287af95944530cdc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d08eb264ff3b4fc2f0170d6aee742ff29611613e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871177"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465372"
 ---
 # <a name="comptrcomptr-constructor"></a>ComPtr::ComPtr 생성자
-ComPtr 클래스의 새 인스턴스를 초기화합니다. 오버로드는 기본, 복사, 이동 및 변환 생성자를 제공합니다.  
+새 인스턴스를 초기화 합니다 **ComPtr** 클래스입니다. 오버로드는 기본, 복사, 이동 및 변환 생성자를 제공합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,16 +59,16 @@ WRL_NOTHROW ComPtr(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `U`  
- `other` 매개 변수의 형식입니다.  
+ *U*  
+ 형식의 합니다 *다른* 매개 변수입니다.  
   
- `other`  
- `U` 형식의 개체입니다.  
+ *other*  
+ 형식의 개체 *U*합니다.  
   
 ## <a name="return-value"></a>반환 값  
   
 ## <a name="remarks"></a>설명  
- 첫 번째 생성자는 기본 생성자를 어떤 변환이 가능한 빈 개체를 만듭니다. 두 번째 생성자는 지정 [__nullptr](../windows/nullptr-cpp-component-extensions.md), 빈 개체를 명시적으로 만듭니다.  
+ 첫 번째 생성자는 기본 생성자는 암시적 빈 개체를 만듭니다. 두 번째 생성자는 지정 [__nullptr](../windows/nullptr-cpp-component-extensions.md), 빈 개체를 명시적으로 만듭니다.  
   
  세 번째 생성자는 포인터에 의해 지정 된 개체에서 개체를 만듭니다.  
   

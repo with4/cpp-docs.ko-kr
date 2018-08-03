@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dd4643c21ebb8626252230b90880af9f9499c0d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eec47e9810e0cc846cc351330512256a32f95aac
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943196"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406847"
 ---
 # <a name="overview-of-file-translation"></a>파일 변환 개요
 C 프로그램과 같은 C++ 프로그램은 하나 이상의 파일로 구성됩니다. 이러한 각 파일은 다음 개념적 순서로 변환됩니다. 실제 순서는 "as if" 규칙을 따릅니다. 변환은 이러한 단계를 수행한 것처럼 발생해야 합니다.  
@@ -56,5 +56,5 @@ C 프로그램과 같은 C++ 프로그램은 하나 이상의 파일로 구성�
   
 - C 전처리기는 c + + 연산자를 인식 하지 않습니다: **.\*** 하십시오 **-> \***, 및 `::`합니다. 참조 [연산자](../cpp/cpp-built-in-operators-precedence-and-associativity.md) 하 고 [식을](../cpp/expressions-cpp.md), 연산자에 대 한 자세한 내용은 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [어휘 규칙](../cpp/lexical-conventions.md)

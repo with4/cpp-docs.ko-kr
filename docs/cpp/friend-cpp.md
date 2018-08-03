@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9938e8bb2128def7d5f507acb111de854dfd4977
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 931f9d7cc17afe974837c8a622b82c124ef6be57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942083"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407019"
 ---
 # <a name="friend-c"></a>friend (C++)
 이 일부 경우에는 클래스의 멤버가 아닌 함수 또는 별도 클래스에서 모든 구성원 멤버 수준 액세스 권한을 부여할 더 편리 합니다. 클래스 구현자만 이 클래스의 friend를 선언할 수 있습니다. 함수 또는 클래스는 자신을 클래스의 friend로 선언할 수 없습니다. 클래스 정의 사용 합니다 **friend** 키워드 및 비멤버 함수 또는 클래스의 private 및 protected 멤버에 대 한 액세스 권한을 부여 하려면 다른 클래스의 이름입니다. 템플릿 정의 형식 매개 변수는 friend로 선언할 수 있습니다.  
@@ -59,7 +59,7 @@ friend class F;
 friend F;  
 ```  
   
- 첫 번째 형태는 가장 안쪽의 네임 스페이스에 해당 이름의 기존 클래스가 있으면 F 새 클래스를 소개 합니다.  **C + + 11**: 두 번째 형태는 새 클래스를 제공 하지 않습니다; 클래스에 선언 된 및 템플릿 형식 매개 변수 또는 friend로 typedef를 선언할 때 사용 해야 하는 경우 사용할 수 있습니다.  
+ 첫 번째 형태는 가장 안쪽의 네임 스페이스에 해당 이름의 기존 클래스가 있으면 F 새 클래스를 소개 합니다. **C + + 11**: 두 번째 형태는 새 클래스를 제공 하지 않습니다; 클래스에 선언 된 및 템플릿 형식 매개 변수 또는 friend로 typedef를 선언할 때 사용 해야 하는 경우 사용할 수 있습니다.  
   
  사용 하 여 `class friend F` 때 참조 된 형식을 아직 아직 선언 되지 않았습니다.  
   
@@ -244,5 +244,5 @@ friend 관계의 의미
   
  클래스 선언 내에 정의된 friend 함수는 바깥쪽 클래스가 아닌 파일 범위에 있는 것으로 간주됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [키워드](../cpp/keywords-cpp.md)

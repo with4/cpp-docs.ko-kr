@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3a34fa07431892493e12a6f38603965da1dbc824
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943211"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466857"
 ---
 # <a name="temporary-objects"></a>임시 개체
 경우에 따라 컴파일러가 임시 개체를 만들어야 합니다. 다음과 같은 이유로 이 임시 개체를 만들 수 있습니다.  
@@ -54,4 +54,3 @@ ms.locfileid: "37943211"
 |------------------------------|-----------------------|  
 |식 계산 결과|식 계산 결과로 만들어진 모든 임시 개체는 식 문의 끝에 삭제 됩니다 (즉, 세미콜론), 또는 대 한 제어 식의 끝 **에 대 한**를 **경우**, **하는 동안**, **마십시오**, 및 **전환** 문입니다.|  
 |초기화 **const** 참조|이니셜라이저가 초기화되고 있는 참조와 동일한 형식의 l-value가 아닌 경우 기본 개체 형식의 임시 개체가 만들어지고 초기화 식을 사용하여 초기화됩니다. 이 임시 개체는 이 개체가 바인딩된 참조 개체가 제거된 후 즉시 제거됩니다.|  
-  

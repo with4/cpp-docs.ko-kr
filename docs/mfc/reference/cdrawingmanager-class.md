@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b5970f9d0ea6e3b0c7ed4715c8ff9c3578dc00
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337423"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209172"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager 클래스
 `CDrawingManager` 클래스는 복합 그리기 알고리즘을 구현 합니다.  
@@ -932,7 +932,7 @@ static COLORREF __stdcall SmartMixColors(
 ### <a name="remarks"></a>설명  
  오류가 있는 경우이 메서드는 실패 *k1* 하거나 *k2* 가 0 보다 작습니다. 메서드가 반환 하는 경우 0으로 설정 되어 이러한 매개 변수 모두를 `RGB(0, 0, 0)`입니다.  
   
- 가중치가 적용 된 비율을 다음 수식으로 계산 됩니다. (color1 * k1 + color2 \* k2) /(k1 + k2) 합니다. 가중치가 적용 된 비율을 결정 메서드 혼합된 색의 광도 계산 합니다. 곱합니다 여 명도 *dblLumRatio*합니다. 값 1.0 보다 큰 경우 메서드는 혼합된 색의 명도 새 값으로 설정 합니다. 그렇지 않으면 명도 1.0으로 설정 됩니다.  
+ 가중치가 적용 된 비율을 다음 수식으로 계산 됩니다. (color1 \* k1 + color2 \* k2) /(k1 + k2) 합니다. 가중치가 적용 된 비율을 결정 메서드 혼합된 색의 광도 계산 합니다. 곱합니다 여 명도 *dblLumRatio*합니다. 값 1.0 보다 큰 경우 메서드는 혼합된 색의 명도 새 값으로 설정 합니다. 그렇지 않으면 명도 1.0으로 설정 됩니다.  
   
 ##  <a name="drawrotated"></a>  CDrawingManager::DrawRotated  
  지정된 된 사각형 내에서 DC 콘텐츠 원본으로 90도 회전 합니다.  

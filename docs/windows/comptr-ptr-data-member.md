@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d995c8e35ed35d4581d8eec8b74fda1ebbca6519
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d22112e3478e17e8ed9688749c83cf1c3997d7e3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880809"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465102"
 ---
 # <a name="comptrptr-data-member"></a>ComPtr::ptr_ 데이터 멤버
-이 ComPtr과 연결되어 있고 이 ComPtr에서 관리하는 인터페이스에 대한 포인터를 포함합니다.  
+연결 되 고이 관리 되는 인터페이스에 대 한 포인터를 포함 **ComPtr**합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +34,7 @@ InterfaceType *ptr_;
 ```  
   
 ## <a name="remarks"></a>설명  
- `ptr_` 내부, 보호 된 데이터 멤버가입니다.  
+ **ptr_** 내부, 보호 된 데이터 멤버입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

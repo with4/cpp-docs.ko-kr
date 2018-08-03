@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83af39180da819349e95051c57dc137835db87bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e88509a77c58266c56290b84adfd1e7c143da2ef
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859542"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465089"
 ---
 # <a name="asyncbasegetonprogress-method"></a>AsyncBase::GetOnProgress 메서드
 지정된 된 변수를 현재 진행률 이벤트 처리기의 주소를 복사합니다.  
@@ -36,8 +36,8 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `progressHandler`  
- 현재 진행률 이벤트 처리기의 주소가 저장 되어 있는 위치입니다.  
+ *progressHandler*  
+ 현재 진행률 이벤트 처리기의 주소를 저장 된 위치입니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공 하면 s_ok이 고 그렇지 않으면 E_ILLEGAL_METHOD_CALL 합니다.  

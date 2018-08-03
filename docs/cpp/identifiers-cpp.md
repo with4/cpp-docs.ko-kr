@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ef6bf658cd290e23be59eb7d26a6b0d353b52c6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2d112e7ca192e56ede21d06e7ff17a775d661d01
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941774"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405232"
 ---
 # <a name="identifiers-c"></a>식별자 (c + +)
 식별자는 다음 중 하나를 나타내는 데 사용되는 문자 시퀀스입니다.  
@@ -81,7 +81,7 @@ N O P Q R S T U V W X Y Z
   
  달러 기호 `$` 는 Visual C++에서 유효한 식별자 문자입니다. 또한 Visual C++에서는 식별자에서 허용되는 유니버설 문자 이름 범위로 표시된 실제 문자를 사용할 수 있습니다. 이러한 문자를 사용하려면 해당 문자를 포함하는 파일 인코딩 코드 페이지를 사용하여 파일을 저장해야 합니다.  이 예에서는 확장 문자와 유니버설 문자 이름을 코드에서 서로 바꿔 사용할 수 있는 방법을 보여 줍니다.  
   
-```  
+```cpp  
 // extended_identifier.cpp  
 // In Visual Studio, use File, Advanced Save Options to set  
 // the file encoding to Unicode codepage 1200  
@@ -106,5 +106,5 @@ int main() {
   
  식별자 앞에 오는 두 개의 연속 밑줄 문자( **__** ) 또는 대문자가 이어지는 단일 선행 밑줄은 모든 범위에서 C++ 구현을 위해 예약됩니다. 현재 또는 나중에 예약되는 식별자와 충돌할 수 있기 때문에 파일 범위가 있는 이름에 소문자가 뒤에 오는 단일 선행 밑줄을 사용하지 않도록 해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [어휘 규칙](../cpp/lexical-conventions.md)

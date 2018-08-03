@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4800f8d6e4c361cf44918bc790c0d8edb7591f08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 785a89b1a5a174fc5ce453a6d2f87a18c508edf6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854043"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462351"
 ---
 # <a name="activationfactoryaddref-method"></a>ActivationFactory::AddRef 메서드
-현재 ActivationFactory 개체의 참조 횟수를 증가 시킵니다.  
+현재 참조 수가 증가 **ActivationFactory** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   

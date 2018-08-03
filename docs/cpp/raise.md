@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a95f012b36e30c171fde1cbc8d28a21a074e281
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d5ee7e0b9679fc4fd4e4cd9c541c38dd4446e47c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944227"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404368"
 ---
 # <a name="raise"></a>__raise
 이벤트의 호출 사이트를 강조합니다.  
@@ -30,9 +30,7 @@ ms.locfileid: "37944227"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 __raise method-declarator;  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
@@ -69,7 +67,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [키워드](../cpp/keywords-cpp.md)   
  [이벤트 처리](../cpp/event-handling.md)   
  [런타임 플랫폼용 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)

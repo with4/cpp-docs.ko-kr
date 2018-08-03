@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c269951eacfc2f7a5d40c8fad1e4fb67cc1d2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 82390f7afe45b48539fb5c33130900ef75cf1967
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392093"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403305"
 ---
 # <a name="accesss-waccesss"></a>_access_s, _waccess_s
 
@@ -66,27 +66,27 @@ errno_t _waccess_s(
 
 ### <a name="parameters"></a>매개 변수
 
-*path*<br/>
+*path*  
 파일 또는 디렉터리 경로입니다.
 
-*모드*<br/>
+*모드*  
 권한 설정
 
 ## <a name="return-value"></a>반환 값
 
-파일에 지정된 모드가 있으면 각 함수는 0을 반환합니다. 명명된 파일이 없거나 지정된 모드에서 액세스할 수 없는 경우 함수는 오류 코드를 반환합니다. 이 경우 해당 집합에서 오류 코드를 다음과 같이 반환 함수와 설정 **errno** 동일한 값입니다.
+파일에 지정된 모드가 있으면 각 함수는 0을 반환합니다. 명명된 파일이 없거나 지정된 모드에서 액세스할 수 없는 경우 함수는 오류 코드를 반환합니다. 이 경우 함수는 다음과 같이 집합에서 오류 코드를 반환하고 `errno`를 같은 값으로 설정합니다.
 
 |errno 값|조건|
 |-|-|
-**EACCES**|액세스가 거부되었습니다. 파일의 권한 설정이 지정된 액세스를 허용하지 않습니다.
-**ENOENT**|파일 이름 또는 경로를 찾을 수 없습니다.
-**EINVAL**|잘못된 매개 변수입니다.
+`EACCES`|액세스가 거부되었습니다. 파일의 권한 설정이 지정된 액세스를 허용하지 않습니다.
+`ENOENT`|파일 이름 또는 경로를 찾을 수 없습니다.
+`EINVAL`|잘못된 매개 변수입니다.
 
 자세한 내용은 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-파일을 함께 사용 하면는 **_access_s** 함수는 지정 된 파일이 있고로 액세스할 수 있는지 여부를 확인의 값으로 지정 된 *모드*합니다. 디렉터리와 함께 사용할 경우 **_access_s** 지정한 디렉터리가 있는지 여부만 확인 합니다. Windows 2000 이상의 운영 체제에서 모든 디렉터리 읽기 및 쓰기 액세스입니다.
+파일을 사용 하는 경우는 **_access_s** 함수는 지정 된 파일이 있고으로 액세스할 수 있는지 여부를 결정의 값으로 지정 된 *모드*합니다. 디렉터리와 함께 사용할 때 **_access_s** 지정한 디렉터리가 있는지만 확인 합니다. Windows 2000 이상의 운영 체제에서 모든 디렉터리에 읽기 및 쓰기 액세스 합니다.
 
 |모드 값|파일 검사|
 |----------------|---------------------|
@@ -95,28 +95,28 @@ errno_t _waccess_s(
 |04|읽기 권한.|
 |06|읽기 및 쓰기 권한.|
 
-파일 읽기 권한 또는 쓰기 권한은 파일을 열기 위한 충분한 권한이 아닙니다. 예를 들어 파일을 다른 프로세스에 의해 잠겨 있으면이 액세스할 수 없습니다도 **_access_s** 0을 반환 합니다.
+파일 읽기 권한 또는 쓰기 권한은 파일을 열기 위한 충분한 권한이 아닙니다. 예를 들어 파일을 다른 프로세스에 의해 잠겨 있으면이 액세스할 수 없습니다 하더라도 **_access_s** 0을 반환 합니다.
 
-**_waccess_s** 의 와이드 문자 버전이 **_access_s**, 여기서는 *경로* 인수를 **_waccess_s** 는 와이드 문자 문자열입니다. 그렇지 않으면 **_waccess_s** 및 **_access_s** 동일 하 게 작동 합니다.
+**_waccess_s** 의 와이드 문자 버전이 **_access_s**여기서는 *경로* 인수 **_waccess_s** 는 와이드 문자 문자열입니다. 그렇지 않으면 **_waccess_s** 하 고 **_access_s** 동일 하 게 작동 합니다.
 
-이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. 경우 *경로* 은 **NULL** 또는 *모드* 올바른 모드를 지정 하지 않는에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개변수유효성검사](../../c-runtime-library/parameter-validation.md). 실행을 계속 허용 된, 이러한 함수 설정 **errno** 를 **EINVAL** 다음 다시 돌아와 **EINVAL**합니다.
+이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. 하는 경우 *경로* 가 NULL 또는 *모드* 유효한 모드를 지정 하지 않는에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 계속해서 실행하도록 허용된 경우 이러한 함수는 `errno`를 `EINVAL`로 설정하고 `EINVAL`을 반환합니다.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
 
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_taccess_s**|**_access_s**|**_access_s**|**_waccess_s**|
+|`_taccess_s`|**_access_s**|**_access_s**|**_waccess_s**|
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴|필수 헤더|선택적 헤더|
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|
 |-------------|---------------------|---------------------|
 |**_access_s**|\<io.h>|\<errno.h>|
 |**_waccess_s**|\<wchar.h> 또는 \<io.h>|\<errno.h>|
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-이 예에서는 **_access_s** crt_access_s.c 존재 하는지 여부 및 쓰기 수 있는지 여부를 지정 된 파일을 확인 합니다.
+이 예제에서는 **_access_s** 존재 하는지 여부 및 쓰기가 허용 되는지를 crt_access_s.c 라는 파일을 확인 합니다.
 
 ```C
 // crt_access_s.c
@@ -160,9 +160,9 @@ File crt_access_s.c does not have write permission.
 
 ## <a name="see-also"></a>참고자료
 
-[파일 처리](../../c-runtime-library/file-handling.md)<br/>
-[_access, _waccess](access-waccess.md)<br/>
-[_chmod, _wchmod](chmod-wchmod.md)<br/>
-[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
-[_open, _wopen](open-wopen.md)<br/>
-[_stat, _wstat 함수](stat-functions.md)<br/>
+[파일 처리](../../c-runtime-library/file-handling.md)  
+[_access, _waccess](access-waccess.md)  
+[_chmod, _wchmod](chmod-wchmod.md)  
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)  
+[_open, _wopen](open-wopen.md)  
+[_stat, _wstat 함수](stat-functions.md)  

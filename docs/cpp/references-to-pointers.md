@@ -14,21 +14,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9cfec6642604fb495051d44d816d4a3370e9a8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3de0974608f313a497dfb93d357995e7cc578e4d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467831"
 ---
 # <a name="references-to-pointers"></a>포인터에 대한 참조
 포인터에 대한 참조는 개체에 대한 참조와 거의 같은 방법으로 선언할 수 있습니다. 포인터에 대한 참조를 선언하면 일반 포인터처럼 사용되는 수정 가능한 값이 생성됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 샘플은 포인터에 대한 포인터 사용과 포인터에 대한 참조 사용 간의 차이점을 보여 줍니다.  
   
  `Add1` 및 `Add2` 함수는 동일한 방식으로 호출되지는 않지만 기능상 동일합니다. 차이점은 `Add1`에서는 이중 간접 참조를 사용하지만 `Add2`에서는 포인터에 대한 참조의 편리성을 사용한다는 점입니다.  
   
-```  
+```cpp 
 // references_to_pointers.cpp  
 // compile with: /EHsc  
   
@@ -166,5 +167,5 @@ where:
 Input is from stdin.  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [참조](../cpp/references-cpp.md)

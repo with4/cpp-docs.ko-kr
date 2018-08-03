@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56372764c70498aec4ccf7b23fc7d074d1df179e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 393cb0b23ca67877a18d2148af76c8de59d29f30
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944482"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465560"
 ---
 # <a name="relational-operators-lt-gt-lt-and-gt"></a>관계형 연산자: &lt;하십시오 &gt;, &lt;=, 및 &gt;=
 ## <a name="syntax"></a>구문  
@@ -81,25 +81,25 @@ int main() {
  다루는 일반적인 산술 변환은 [표준 변환](standard-conversions.md) 산술 형식의 피연산자에 적용 됩니다.  
   
 ## <a name="comparing-pointers"></a>포인터 비교  
- 형식이 같은 개체의 포인터 2개를 비교할 때 프로그램의 주소 공간에서 가리키는 개체 위치에 따라 결과가 결정됩니다. 0 또는 void * 형식의 포인터로 계산되는 상수 식과 포인터를 비교할 수도 있습니다. 포인터 비교 이루어집니다 형식의 포인터에 대 한 void \*, 다른 포인터가 void 형식에 암시적으로 변환 됩니다 \*합니다. 그런 다음 비교가 수행됩니다.  
+ 형식이 같은 개체의 포인터 2개를 비교할 때 프로그램의 주소 공간에서 가리키는 개체 위치에 따라 결과가 결정됩니다. 포인터 형식의 포인터 또는 0으로 계산 되는 상수 식으로 비교할 수 있습니다 `void *`합니다. 형식의 포인터에 대 한 포인터 비교를 수행 하는 경우 `void *`, 다른 포인터 형식으로 암시적으로 변환 됩니다 `void *`합니다. 그런 다음 비교가 수행됩니다.  
   
  다음과 같은 경우에만 형식이 다른 두 포인터를 비교할 수 있습니다.  
   
 -   한 형식이 다른 형식에서 파생 클래스 형식입니다.  
   
--   하나 이상의 포인터가 void * 형식으로 명시적으로 변환됩니다. (다른 포인터가 void 형식에 암시적으로 변환 됩니다 \* 변환 합니다.)  
+-   하나 이상의 포인터를 명시적으로 변환 (캐스트) 형식으로 `void *`입니다. (다른 포인터 형식으로 암시적으로 변환 됩니다 `void *` 변환 합니다.)  
   
  형식이 같은 두 포인터가 같은 개체를 가리킬 경우 동일하다고 간주합니다. 개체의 비정적 멤버에 대한 두 포인터를 비교할 경우 다음 규칙이 적용됩니다.  
   
--   클래스 형식이 공용 구조체 및 두 멤버가 구분 되지 않은 경우는 *액세스 지정자*, 공용, protected 또는 private으로 선언 된 멤버에 대 한 포인터 마지막 비교 선언 된 멤버의 포인터 보다 크다고 이전 합니다.  
+-   클래스 형식이 아닌 경우는 **union**, 두 멤버가 구분 되지 않은 경우는 *액세스 지정자*와 같은 **공용**를 **보호**, 또는 **개인**, 선언 된 멤버에 대 한 포인터 마지막 비교 이전에 선언 된 멤버에 대 한 포인터 보다 큽니다.  
   
 -   두 멤버가 구분 되는 *액세스 지정자*, 결과가 정의 되지 않습니다.  
   
--   클래스 형식이 공용 구조체일 경우 해당 공용 구조체의 여러 데이터 멤버에 대한 포인터가 같다고 간주합니다.  
+-   클래스 형식이 **union**, 하는 다양 한 데이터 멤버에 대 한 포인터 **union** 비교 시 동일 합니다.  
   
  포인터 2개가 배열이 같은 요소를 가리키거나 배열의 끝을 벗어난 요소를 가리킬 경우 첨자가 높은 개체의 포인터가 더 높다고 간주합니다. 포인터가 같은 배열의 개체를 참조하거나 배열의 끝을 벗어난 위치를 참조할 경우에만 포인터 비교가 유효합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [이항 연산자가 있는 식](../cpp/expressions-with-binary-operators.md)   
  [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 관계 및 같음 연산자](../c-language/c-relational-and-equality-operators.md)

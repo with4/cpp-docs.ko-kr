@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6299249b477b568579063f7ee61060514c3028bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944824"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403143"
 ---
 # <a name="postfix-expressions"></a>후위 식
 후위 식은 기본 식 또는 후위 연산자가 기본 식 뒤에 오는 식으로 구성됩니다. 다음 표에서는 후위 연산자를 보여 줍니다.  
@@ -34,13 +34,12 @@ ms.locfileid: "37944824"
 |[함수 호출 연산자](../cpp/function-call-operator-parens.md)|**( )**|  
 |[명시적 형식 변환 연산자](../cpp/explicit-type-conversion-operator-parens.md)|*형식 이름* **)**|  
 |[멤버 액세스 연산자](../cpp/member-access-operators-dot-and.md)|**.** 또는 **->**|  
-|[후 위 증가 연산자](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
+|[후 위 증가 연산자](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|  
 |[후 위 감소 연산자](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   
  다음 구문에서는 가능한 후위 식을 설명합니다.  
   
 ```  
-  
 primary-expression   
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )  
 ```  
@@ -51,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- 위 식에서 func는 기본 식, func(1)은 함수 후위 식, func(1)->GetData는 클래스 멤버를 지정하는 후위 식, func(1)->GetData()는 또 다른 함수 후위 식이며, 전체 식은 GetData의 반환 값을 증가시키는 후위 식입니다.  이 식은 1을 인수로 전달하는 함수를 호출하거나 클래스의 포인터를 반환 값으로 가져오라는 의미입니다.  그다음에 해당 클래스에서 GetValue()를 호출하고 반환되는 값을 증가시킵니다.  
+ 위 식에서 `func` 은 기본 식 `func(1)` 는 함수 후 위 식 `func(1)->GetData` 클래스의 멤버를 지정 하는 후 위 식 `func(1)->GetData()` 다른 함수 후 위 식이 며 전체 식은은 GetData의 반환 값을 증가 하는 후 위 식이입니다.  이 식은 1을 인수로 전달하는 함수를 호출하거나 클래스의 포인터를 반환 값으로 가져오라는 의미입니다.  그런 다음 호출 `GetValue()` 해당 클래스를 반환 하는 값 증가 합니다.  
   
  위에 나열된 식은 할당 식입니다. 이는 이 식의 결과가 r-value여야 한다는 의미입니다.  
   
@@ -191,7 +190,7 @@ void print( const char *string, const char *terminator )
 }  
 ```  
   
- 앞의 프로그램은 두 개의 인수를 사용하는 `print` 함수를 선언합니다. 그러나 두 번째 인수 `terminator`의 기본값은 `"\n"`입니다. `main`에 대 한 처음 두 호출 `print` 인쇄 된 문자열을 종결 하는 새 줄을 제공 하는 기본 두 번째 인수를 허용 합니다. 세 번째 호출은 두 번째 인수에 대해 명시적 값을 지정합니다. 프로그램의 출력:  
+ 앞의 프로그램은 두 개의 인수를 사용하는 `print` 함수를 선언합니다. 그러나 두 번째 인수 *종결자*, 기본값, `"\n"`합니다. `main`에 대 한 처음 두 호출 `print` 인쇄 된 문자열을 종결 하는 새 줄을 제공 하는 기본 두 번째 인수를 허용 합니다. 세 번째 호출은 두 번째 인수에 대해 명시적 값을 지정합니다. 프로그램의 출력:  
   
 ```Output 
 hello,  
@@ -199,5 +198,5 @@ world!
 good morning, sunshine.  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [식의 형식](../cpp/types-of-expressions.md)

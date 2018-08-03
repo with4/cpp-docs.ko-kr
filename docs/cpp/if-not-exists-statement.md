@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37148a3849e859d7ca77595416616cfa0b952ecf
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: bee63ace276863a30c4ec81d970ba3bf5fd29e40
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939951"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405287"
 ---
 # <a name="ifnotexists-statement"></a>__if_not_exists 문
 합니다 **__if_not_exists** 문은 지정된 된 식별자가 있는지 여부를 테스트 합니다. 식별자가 없는 경우 지정된 문 블록이 실행됩니다.  
@@ -38,8 +38,8 @@ statements
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|`identifier`|존재 여부를 테스트할 식별자입니다.|  
-|`statements`|경우에 실행할 하나 이상의 문을 `identifier` 존재 하지 않습니다.|  
+|*identifier*|존재 여부를 테스트할 식별자입니다.|  
+|*문*|경우 실행할 하나 이상의 문이 *식별자* 존재 하지 않습니다.|  
   
 ## <a name="remarks"></a>설명  
   
@@ -59,7 +59,7 @@ statements
 ## <a name="example"></a>예  
  사용 하는 방법에 대 한 예로 **__if_not_exists**를 참조 하세요 [__if_exists 문](../cpp/if-exists-statement.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [선택 문](../cpp/selection-statements-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [__if_exists 문](../cpp/if-exists-statement.md)

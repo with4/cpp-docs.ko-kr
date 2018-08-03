@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49149a055f60cb24c6f676b91a2d9ddd55132a3a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8890a128ff625ead27ef34be6d057e879b22a5f6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944812"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402736"
 ---
 # <a name="anonymous-class-types"></a>익명 클래스 형식
 클래스는 익명 일 수-없이 선언할 수 있습니다 즉, 한 *식별자*합니다. 클래스 이름을 바꿔야 하는 경우에 유용를 **typedef** 같이 이름:  
@@ -101,4 +101,3 @@ int main()
 ```  
   
 **Microsoft 전용 종료**  
-  

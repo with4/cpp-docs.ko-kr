@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38edaa7dfa97fd34ab70b21785a416c3ed072d55
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7ccdbc71679a197e0464b4ec42dba948754c4c5c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940555"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462266"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>형식 변환 및 형식 안전성(최신 C++)
 이 문서에서는 공용 형식 변환 문제를 식별하고 C++ 코드에서 이 문제를 방지하는 방법에 대해 설명합니다.  
@@ -75,7 +75,6 @@ num2 = -1;
 num = num2;  
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;  
 // Prints: unsigned val = 65535 signed val = -1  
-  
 ```  
   
  값은 두 가지 지시 사항으로 다시 해석됩니다. 프로그램에서 값의 부호가 예상되는 결과와 반대인 홀수 결과를 생성하는 경우 부호 있는 정수 계열과 부호 없는 정수 계열 간의 암시적 변환을 찾습니다. 다음 예제에서는 식의 결과에 (0-1)에서 암시적으로 변환 됩니다 **int** 하 **부호 없는 int** 에 저장 되는 경우 `num`합니다. 이를 통해 비트 패턴이 다시 해석됩니다.  
@@ -83,7 +82,6 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 ```cpp  
 unsigned int u3 = 0 - 1;  
 cout << u3 << endl; // prints 4294967295  
-  
 ```  
   
  컴파일러에서 부호 있는 정수 계열과 부호 없는 정수 계열 형식 간의 암시적 변환에 대한 경고가 발생하지 않습니다. 따라서 부호 있음에서 부호 없음으로의 변환을 완전히 방지하는 것이 좋습니다. 이러한 변환을 방지할 수 없는 경우에는 코드에 런타임 검사를 추가하여 변환되는 값이 0보다 크거나 같은지 및 부호 있는 형식의 최대값보다 작거나 같은지 확인합니다. 이 범위의 값은 다시 해석되지 않고 부호 있음에서 부호 없음으로 또는 부호 없음에서 부호 있음으로 전송됩니다.  
@@ -93,7 +91,6 @@ cout << u3 << endl; // prints 4294967295
   
 ```cpp  
 char* s = "Help" + 3;  
-  
 ```  
   
 ## <a name="explicit-conversions-casts"></a>명시적 변환(캐스트)  
@@ -104,7 +101,6 @@ char* s = "Help" + 3;
 ```cpp  
 (int) x; // old-style cast, old-style syntax  
 int(x); // old-style cast, functional syntax  
-  
 ```  
   
  C 스타일 캐스트 연산자는 호출 연산자 ()와 동일하므로 코드에서 눈에 띄지 않으며 간과하기 쉽습니다. 보기 또는 검색에 인식 하기 어렵고 및의 조합을 호출할 정도로 서로 이기 때문에 잘못 된 둘 **정적**를 **const**, 및 **reinterpret_cast**. 이전 스타일의 캐스트에서 실제로 수행하는 사항을 알아내는 것은 어려울 수 있으며 오류가 발생할 수 있습니다. 이러한 모든 이유로 캐스팅이 필요할 때 다음 C++ 캐스트 연산자 중 하나를 사용하는 것이 좋습니다. 해당 연산자는 경우에 따라 훨씬 더 형식 안정적이며 더욱 명시적인 프로그래밍 의도를 표시합니다.  
@@ -121,7 +117,6 @@ int(x); // old-style cast, functional syntax
     // No error but not necessarily safe.  
     Base* b = new Base();  
     Derived* d2 = static_cast<Derived*>(b);  
-  
     ```  
   
      자세한 내용은 [static_cast](../cpp/static-cast-operator.md)합니다.  
@@ -147,7 +142,6 @@ int(x); // old-style cast, functional syntax
     }  
   
     //Output: d3 is null;  
-  
     ```  
   
      자세한 내용은 [dynamic_cast](../cpp/dynamic-cast-operator.md)합니다.  
@@ -161,7 +155,6 @@ int(x); // old-style cast, functional syntax
        const double pi = 3.14;  
        Func(const_cast<double&>(pi)); //No error.  
     }  
-  
     ```  
   
      자세한 내용은 [const_cast](../cpp/const-cast-operator.md)합니다.  
@@ -181,12 +174,11 @@ int(x); // old-style cast, functional syntax
                       // to do this?  
     int k = reinterpret_cast<int>(str);// Programming intent is clear.  
                                        // However, it is not 64-bit safe.  
-  
     ```  
   
      자세한 내용은 [reinterpret_cast 연산자](../cpp/reinterpret-cast-operator.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C + + 형식 시스템](../cpp/cpp-type-system-modern-cpp.md)   
  [C + +의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C++ 언어 참조](../cpp/cpp-language-reference.md)   

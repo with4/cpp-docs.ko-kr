@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da8c4446d10f87514ec49feef95d05df2de721f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7fbf9b1e21492294f6e26fb743f611ac4f4685f0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870730"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460799"
 ---
 # <a name="comptrget-method"></a>ComPtr::Get 메서드
-이 ComPtr과 연결된 인터페이스에 대한 포인터를 검색합니다.  
+이 사용 하 여 연결 된 인터페이스에 대 한 포인터를 검색 **ComPtr**합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +34,7 @@ T* Get() const;
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 이 ComPtr과 연결 된 인터페이스 포인터입니다.  
+ 이 사용 하 여 연결 된 인터페이스에 대 한 포인터 **ComPtr**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

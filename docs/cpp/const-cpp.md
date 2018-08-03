@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b6fea501724b24c07ab8b2199410a369d62dc9d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d9c3e42cf2dad7e227636582baa4deabcfc05bc1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944593"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466545"
 ---
 # <a name="const-c"></a>const (C++)
 데이터 선언을 수정할 때 합니다 **const** 키워드는 개체 또는 변수는 수정할 수를 지정 합니다.  
@@ -29,7 +29,6 @@ ms.locfileid: "37944593"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 const declaration ;  
 member-function const ;  
 ```  
@@ -132,7 +131,7 @@ int main()
 }  
 ```  
   
-## <a name="c-and-c-const-differences"></a>C 및 C++ const 차이점  
+## <a name="c-and-c-const-differences"></a>C 및 c + + const 차이점  
  변수를 선언 하는 경우 **const** C 소스 코드 파일에서 같이:  
   
 ```cpp 
@@ -170,7 +169,7 @@ extern "C" const int x=10;
   
 -   [volatile](../cpp/volatile-cpp.md)  
   
--   [#define](../preprocessor/hash-define-directive-c-cpp.md)합니다.  
+-   [#define](../preprocessor/hash-define-directive-c-cpp.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [키워드](../cpp/keywords-cpp.md)

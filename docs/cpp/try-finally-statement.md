@@ -28,17 +28,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea792bde6e50f0e4149f802a5c852192def0fefa
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944284"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464862"
 ---
 # <a name="try-finally-statement"></a>try-finally 문
 **Microsoft 전용**  
   
- 다음 구문에서는 `try-finally` 문을 설명합니다.  
+ 다음 구문에 설명 합니다 **try-finally** 문:  
   
 ```cpp 
 __try {  
@@ -55,7 +55,7 @@ __finally {
   
  **__finally** *복합 문*  
   
- `try-finally` 문은 C 및 C++ 언어의 Microsoft 확장으로서, 코드 블록 실행이 중단된 경우 대상 응용 프로그램이 정리 코드를 실행하게 해줍니다. 정리는 메모리 할당 해제, 파일 닫기 및 파일 핸들 해제와 같은 작업으로 구성됩니다. `try-finally` 문은 루틴으로부터 중간에 반환되게 만들 수 있는 오류가 있는지 확인하기 위해 검사가 수행되는 위치가 많은 루틴에 특히 유용합니다.  
+ 합니다 **try-finally** 문은 코드 블록의 실행이 중단 된 경우 정리 코드 실행을 보장 하기 위해 대상 응용 프로그램을 사용 하도록 설정 하는 C 및 c + + 언어에 Microsoft 확장입니다. 정리는 메모리 할당 해제, 파일 닫기 및 파일 핸들 해제와 같은 작업으로 구성됩니다. 합니다 **try-finally** 문에 루틴에서 반환 하는 위치는 검사가 수행 됩니다 오류가 발생할 수 있는 중간 많은 루틴에 특히 유용 합니다.  
   
  관련된 정보 및 코드 샘플을 참조 하세요 [시도-문을 제외 하 고](../cpp/try-except-statement.md)입니다. 구조적된 예외 처리에 대 한 자세한 내용은 참조 하세요. [구조적 예외 처리](../cpp/structured-exception-handling-c-cpp.md)합니다. 관리 되는 응용 프로그램에서 예외 처리에 대 한 자세한 내용은 참조 하세요. [/clr에서 예외 처리](../windows/exception-handling-cpp-component-extensions.md)합니다.  
   
@@ -83,20 +83,20 @@ __finally {
 >  Try-finally의 동작은의 사용을 지 원하는 다른 언어에서 다른 **마지막**, C#과 같은 합니다.  단일 **__try** 하나만 하거나, 있을 수 있습니다 **__finally** 하 고 **__except**합니다.  모두 함께 사용되는 경우 외부 try-except 문은 내부 try-finally 문을 포함해야 합니다.  또한 각 블록을 실행할 때 지정되는 규칙은 서로 다릅니다.  
   
 ## <a name="the-leave-keyword"></a>__leave 키워드  
- 합니다 **__leave** 키워드는 보호 된 섹션 내 에서만 사용할 수는 `try-finally` 문과 미치는 보호 된 섹션의 끝으로 이동 하는 것입니다. 종료 처리기의 첫 번째 문에서 계속 실행됩니다.  
+ **__leave** 키워드는 보호 된 섹션 내 에서만 사용할 수는 **try-finally** 문과 미치는 보호 된 섹션의 끝으로 이동 하는 것입니다. 종료 처리기의 첫 번째 문에서 계속 실행됩니다.  
   
  A **goto** 문은 보호 된 섹션에서 외부로 이동할 수도 있지만 스택 해제를 호출 하기 때문에 성능이 저하 됩니다. 합니다 **__leave** 문은 스택 해제 되지는지 않습니다 때문에 더 효율적입니다.  
   
 ## <a name="abnormal-termination"></a>비정상적인 종료  
- 종료를 `try-finally` 문을 사용 하는 [longjmp](../c-runtime-library/reference/longjmp.md) 런타임 함수에는 비정상적인 종료 것으로 간주 됩니다. 으로 이동 하는 것이 올바르지를 **__try** 문과 비슷하지만 밖 하나입니다. 모든 **__finally** 출발 지점 간에 활성화 된 문 (의 정상 종료를 **__try** 블록) 및 대상 (합니다 **__except** 는 차단 예외 처리)를 실행 해야 합니다. 이것을 로컬 해제라고 합니다.  
+ 종료를 **try finally** 문을 사용 하는 [longjmp](../c-runtime-library/reference/longjmp.md) 런타임 함수에는 비정상적인 종료 것으로 간주 됩니다. 으로 이동 하는 것이 올바르지를 **__try** 문과 비슷하지만 밖 하나입니다. 모든 **__finally** 출발 지점 간에 활성화 된 문 (의 정상 종료를 **__try** 블록) 및 대상 (합니다 **__except** 는 차단 예외 처리)를 실행 해야 합니다. 이것을 로컬 해제라고 합니다.  
   
  경우는 **시도** 블록 중간에 종료 되는 블록 밖으로 점프를 포함 하 여 어떤 이유로, 연결 된 시스템 실행 **마지막으로** 스택 해제 과정의 일부로 차단 합니다. 이러한 경우에는 [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265) 함수에서 반환 **true** 내에서 호출 하는 경우는 **마지막** ;를 반환 합니다 **false**.  
   
- `try-finally` 문을 실행하는 중간에 프로세스가 종료될 경우에는 종료 처리기가 호출되지 않습니다.  
+ 종료 처리기 실행 하는 도중에 프로세스가 종료 될 경우 라고는 **try-finally** 문.  
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [종료 처리기 작성](../cpp/writing-a-termination-handler.md)   
  [구조적된 예외 처리 (C/c + +)](../cpp/structured-exception-handling-c-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)   

@@ -18,20 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d826ba5a2252ba11a0b9206a0555c7a022a9382c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4921a6de3072ef402ba355714ddd67328c3a3541
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944686"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406834"
 ---
 # <a name="logical-and-operator-ampamp"></a>논리 AND 연산자: &amp;&amp;
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 expression && expression  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
@@ -76,6 +74,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [C + + 기본 제공 연산자 우선순위 및 결합성](cpp-built-in-operators-precedence-and-associativity.md) [c + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>참고자료  
+ [C + + 기본 제공 연산자 우선순위 및 결합성](cpp-built-in-operators-precedence-and-associativity.md)  
+ [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 논리 연산자](../c-language/c-logical-operators.md)
