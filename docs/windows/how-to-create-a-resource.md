@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a5c8ee47203f24c1995cfde9dda40912f21467
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff08e42ac1afe3954b485e11ed6433449a6ee2ff
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878647"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571472"
 ---
 # <a name="how-to-create-a-resource"></a>방법: 리소스 파일 만들기
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33878647"
   
 ### <a name="to-create-a-new-resource-in-class-view"></a>클래스 뷰에서 새 리소스를 만들려면  
   
-1.  [클래스 뷰](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)에서 클래스를 마우스 오른쪽 단추로 클릭하고 **추가**를 선택하고 바로 가기 메뉴에서 **리소스 추가** 를 클릭합니다.  
+1.  [클래스 뷰](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)클래스를 마우스 오른쪽 단추로 클릭 하 고 선택 **추가**, 클릭 **리소스 추가** 바로 가기 메뉴에서.  
   
 2.  [리소스 추가 대화 상자](../windows/add-resource-dialog-box.md)에서 프로젝트에 추가할 리소스 형식을 선택합니다.  
   
@@ -58,11 +58,12 @@ ms.locfileid: "33878647"
   
  리소스를 새 기본 리소스(템플릿에 기반을 두지 않은 리소스) 또는 [템플릿](../windows/how-to-use-resource-templates.md)을 기반으로 패턴화된 리소스로 만들 수 있습니다.  
   
- 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.*  
+ 관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드.*
+
+
+## <a name="requirements"></a>요구 사항  
   
- **요구 사항**  
-  
- Win32  
+Win32  
   
 ## <a name="see-also"></a>참고 항목  
  [리소스 파일](../windows/resource-files-visual-studio.md)   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1319b6a75f92e057975d0f8d2c7e2753df47141
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3bc6e7adfa99e2ce25c9913309b5c5bd486bee0
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873172"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569403"
 ---
 # <a name="handlenulltraitsclose-method"></a>HANDLENullTraits::Close 메서드
 지정된 된 핸들을 닫습니다.  
@@ -35,12 +35,12 @@ inline static bool Close(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `h`  
- 닫기에 대 한 핸들입니다.  
+### <a name="parameters"></a>매개 변수  
+ *h*  
+ 핸들 닫기입니다.  
   
 ## <a name="return-value"></a>반환 값  
- **true 이면** 경우 처리 `h` , 빌드되지 않으면 닫힌 **false**합니다.  
+ **true** 경우 처리할 *h* 이 고, 그렇지 않으면 닫은 **false**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

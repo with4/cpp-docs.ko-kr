@@ -366,8 +366,7 @@ class COleControl : public CWnd
   
 |이름|설명|  
 |----------|-----------------|  
-|[COleControl::COleControl](#colecontrol)|
-          `COleControl` 개체를 만듭니다.|  
+|[COleControl::COleControl](#colecontrol)|`COleControl` 개체를 만듭니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   

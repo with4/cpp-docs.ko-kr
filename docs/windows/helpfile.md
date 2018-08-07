@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 926d0fec27bf323f559ad2fe0dffbd4208b1bf2a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4f25a8f3d5cc76d1b2b8d9a3d9996449f449466
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876191"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570449"
 ---
 # <a name="helpfile"></a>helpfile
 형식 라이브러리에 대 한 도움말 파일의 이름을 설정합니다.  
@@ -30,21 +30,20 @@ ms.locfileid: "33876191"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ helpfile(  
+[ helpfile(  
    "filename"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *filename*  
- 도움말 항목을 포함 하는 파일의 이름입니다.  
+ 도움말 항목이 포함 된 파일의 이름입니다.  
   
 ## <a name="remarks"></a>설명  
- **helpfile** c + + 특성에 동일한 기능을는 [helpfile](http://msdn.microsoft.com/library/windows/desktop/aa366853) MIDL 특성입니다.  
+ 합니다 **helpfile** c + + 특성에 동일한 기능을 합니다 [helpfile](http://msdn.microsoft.com/library/windows/desktop/aa366853) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 예를 참조 [모듈](../windows/module-cpp.md) 사용 하는 방법의 예 **helpfile**합니다.  
+## <a name="example"></a>예  
+ 예를 참조 하세요 [모듈](../windows/module-cpp.md) 사용 하는 방법의 예제 **helpfile**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -52,7 +51,7 @@ ms.locfileid: "33876191"
   
 |||  
 |-|-|  
-|**적용 대상**|`interface``typedef`, **클래스**, 메서드, 속성|  
+|**적용 대상**|**인터페이스**, **typedef**합니다 **클래스**, 메서드, **속성**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da53f10932ffc0696d567bc1140e3e92a609e2c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04317a516b94ae5fc70b61cd3ae33269ad437dce
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870912"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569887"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 Visual Basic 코드 최적화를 위해 사용 합니다.  
@@ -30,18 +30,16 @@ Visual Basic 코드 최적화를 위해 사용 합니다.
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [defaultcollelem]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **defaultcollelem** c + + 특성에 동일한 기능을는 [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) MIDL 특성입니다.  
+ 합니다 **defaultcollelem** c + + 특성에 동일한 기능을 합니다 [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 다음 코드에서는 사용 하 여 인터페이스 메서드는 **defaultcollelem** 특성:  
+## <a name="example"></a>예  
+ 다음 코드를 사용 하 여 인터페이스 메서드를 표시 합니다 **defaultcollelem** 특성:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultcollelem.cpp  
 // compile with: /LD  
 #include <unknwn.h>  

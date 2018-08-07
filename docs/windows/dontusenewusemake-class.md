@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f343d0b47d50cd375d186c29ff55b91898aa9c61
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 351b38a002c470dcd3f53e8336e393f845fdb3cf
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872330"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569572"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake 클래스
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,7 +34,7 @@ class DontUseNewUseMake;
 ```  
   
 ## <a name="remarks"></a>설명  
- 연산자를 사용 하는 것을 금지 `new` RuntimeClass에 있습니다. 따라서 사용 해야 합니다는 [함수](../windows/make-function.md) 대신 합니다.  
+ 연산자를 사용 하는 것을 금지 **새** RuntimeClass에서. 결과적으로 사용 해야 합니다 [함수](../windows/make-function.md) 대신 합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -42,7 +42,7 @@ class DontUseNewUseMake;
   
 |이름|설명|  
 |----------|-----------------|  
-|[DontUseNewUseMake::operator 새 연산자](../windows/dontusenewusemake-operator-new-operator.md)|연산자 오버 로드 `new` RuntimeClass에서 사용 되지 않도록 방지 합니다.|  
+|[DontUseNewUseMake::operator 새 연산자](../windows/dontusenewusemake-operator-new-operator.md)|연산자 오버 로드 **새** RuntimeClass에서 사용 되지 않도록 방지 합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `DontUseNewUseMake`  

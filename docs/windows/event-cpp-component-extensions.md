@@ -1,5 +1,5 @@
 ---
-title: 이벤트 (c + + 구성 요소 확장명) | Microsoft Docs
+title: event (c + + 구성 요소 확장) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7859b8b58bbd8765c38daea46efea5859ba61d67
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 107d721e4603fc1f22a5ff793a867b290472f10c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881213"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570404"
 ---
 # <a name="event--c-component-extensions"></a>event(C++ 구성 요소 확장)
-`event` 키워드로 선언 된는 *이벤트*, 등록 된 구독자에 게 알리는 (*이벤트 처리기*) 특정 상황이 발생 합니다.  
+**이벤트** 키워드로 선언 된는 *이벤트*에 등록 된 구독자에 게 알리는 (*이벤트 처리기*) 특정 상황이 발생 합니다.  
   
 ## <a name="all-runtimes"></a>모든 런타임  
- C + + /cli CX 선언 하도록 지원는 *이벤트 멤버* 또는 *이벤트 블록*합니다. 이벤트 멤버는 이벤트 블록을 선언하기 위한 약칭입니다. 기본적으로는 이벤트 멤버는 이벤트 블록에서 명시적으로 선언된 `add()`, `remove()` 및 `raise()` 함수를 선언합니다. 이벤트 멤버의 함수를 사용자 지정하려면 대신에 이벤트 블록을 선언하고 필요한 함수를 재정의합니다.  
+ C + + /cli CX 선언 하도록 지원를 *이벤트 멤버* 요소나 *이벤트 블록*합니다. 이벤트 멤버는 이벤트 블록을 선언하기 위한 약칭입니다. 기본적으로는 이벤트 멤버는 이벤트 블록에서 명시적으로 선언된 `add()`, `remove()` 및 `raise()` 함수를 선언합니다. 이벤트 멤버의 함수를 사용자 지정하려면 대신에 이벤트 블록을 선언하고 필요한 함수를 재정의합니다.  
   
  **구문**  
   
 ```  
-  
 // event data member  
 modifiereventdelegate^ event_name;     
   
@@ -50,19 +49,19 @@ modifiereventdelegate^ event_name
  **매개 변수**  
   
  *한정자*  
- 이벤트 선언 또는 이벤트 접근자 메서드에 사용할 수 있는 한정자입니다.  가능한 값은 `static`와 `virtual`입니다.  
+ 이벤트 선언 또는 이벤트 접근자 메서드에 사용할 수 있는 한정자입니다.  가능한 값은 **정적** 하 고 **가상**합니다.  
   
  *delegate*  
- [위임](../windows/delegate-cpp-component-extensions.md), 시그니처를 가진 이벤트 처리기가 일치 해야 합니다.  
+ 합니다 [대리자](../windows/delegate-cpp-component-extensions.md), 시그니처를 가진 이벤트 처리기가 일치 해야 합니다.  
   
  *event_name*  
  이벤트의 이름입니다.  
   
  *return_value*  
- 이벤트 접근자 메서드의 반환 값입니다.  확인할 수 있으려면 반환 형식이 `void`여야 합니다.  
+ 이벤트 접근자 메서드의 반환 값입니다.  반환 형식을 확인할 수 있어야 **void**합니다.  
   
  *parameters*  
- (선택 사항) 에 대 한 매개 변수는 `raise` 의 시그니처와 일치 하는 메서드는 *위임* 매개 변수입니다.  
+ (선택 사항) 에 대 한 매개 변수를 `raise` 의 서명과 일치 하는 메서드를 *대리자* 매개 변수입니다.  
   
  **주의**  
   
@@ -76,14 +75,14 @@ modifiereventdelegate^ event_name
  *이벤트 블록*  
  이벤트 블록을 사용하여 `add()`, `remove()` 및 `raise()` 메서드의 동작을 명시적으로 선언 및 사용자 지정할 수 있습니다.  
   
- `operators+=` 및 `operator-=`를 사용하여 이벤트 처리기를 추가 및 제거하거나 `add()` 및 `remove()` 메서드를 명시적으로 호출할 수 있습니다.  
+ 사용할 수 있습니다 **연산자 + =** 및 **-= 연산자** 추가 및 제거할 이벤트 처리기 또는 호출을 `add()` 및 `remove()` 메서드 명시적으로.  
   
- `event` 상황에 맞는 키워드입니다. 참조 [상황에 맞는 키워드](../windows/context-sensitive-keywords-cpp-component-extensions.md) 자세한 정보에 대 한 합니다.  
+ **이벤트** 상황에 맞는 키워드는 참조 [상황에 맞는 키워드](../windows/context-sensitive-keywords-cpp-component-extensions.md) 자세한 내용은 합니다.  
   
 ## <a name="windows-runtime"></a>Windows 런타임  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 참조 [이벤트 (C + + /cli CX)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx)합니다.  
+ 자세한 내용은 [이벤트 (C + + /cli CX)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx)합니다.  
   
  이벤트 처리기를 추가하고 나서 제거하려면 추가 작업에서 반환되는 EventRegistrationToken 구조체를 저장해야 합니다. 그다음에 제거 작업에서 저장된 EventRegistrationToken 구조체를 사용하여 제거할 이벤트 처리기를 식별해야 합니다.  
   
@@ -91,12 +90,11 @@ modifiereventdelegate^ event_name
  컴파일러 옵션: **/ZW**  
   
 ## <a name="common-language-runtime"></a>공용 언어 런타임 
- `event` 키워드를 통해 이벤트를 선언할 수 있습니다. 이벤트는 특정 상황이 발생할 때 클래스가 알림을 제공하는 한 가지 방법입니다.  
+ 합니다 **이벤트** 키워드를 사용 하면 이벤트를 선언 합니다. 이벤트는 특정 상황이 발생할 때 클래스가 알림을 제공하는 한 가지 방법입니다.  
   
  **구문**  
   
 ```  
-  
 // event data member  
 modifiereventdelegate^ event_name;   
   
@@ -112,19 +110,19 @@ modifiereventdelegate^ event_name
  **매개 변수**  
   
  *한정자*  
- 이벤트 선언 또는 이벤트 접근자 메서드에 사용할 수 있는 한정자입니다.  가능한 값은 `static`와 `virtual`입니다.  
+ 이벤트 선언 또는 이벤트 접근자 메서드에 사용할 수 있는 한정자입니다.  가능한 값은 **정적** 하 고 **가상**합니다.  
   
  *delegate*  
- [위임](../windows/delegate-cpp-component-extensions.md), 시그니처를 가진 이벤트 처리기가 일치 해야 합니다.  
+ 합니다 [대리자](../windows/delegate-cpp-component-extensions.md), 시그니처를 가진 이벤트 처리기가 일치 해야 합니다.  
   
  *event_name*  
  이벤트의 이름입니다.  
   
  *return_value*  
- 이벤트 접근자 메서드의 반환 값입니다.  확인할 수 있으려면 반환 형식이 `void`여야 합니다.  
+ 이벤트 접근자 메서드의 반환 값입니다.  반환 형식을 확인할 수 있어야 **void**합니다.  
   
  *parameters*  
- (선택 사항) 에 대 한 매개 변수는 `raise` 의 시그니처와 일치 하는 메서드는 *위임* 매개 변수입니다.  
+ (선택 사항) 에 대 한 매개 변수를 `raise` 의 서명과 일치 하는 메서드를 *대리자* 매개 변수입니다.  
   
  **주의**  
   
@@ -148,13 +146,13 @@ modifiereventdelegate^ event_name
   
  Visual C++에서 이벤트를 만들고 사용하려면 다음 단계를 수행해야 합니다.  
   
-1.  대리자를 만들거나 식별합니다. 고유한 이벤트를 정의할 경우 `event` 키워드와 함께 사용할 대리자가 있는지 확인해야 합니다. 예를 들어 이벤트가 미리 정의되어 있으면 .NET Framework에서 이벤트 소비자는 대리자의 이름만 알면 됩니다.  
+1.  대리자를 만들거나 식별합니다. 사용자 고유의 이벤트를 정의 하는 경우 확인 해야 합니다도 대리자를 사용 하는 합니다 **이벤트** 키워드입니다. 예를 들어 이벤트가 미리 정의되어 있으면 .NET Framework에서 이벤트 소비자는 대리자의 이름만 알면 됩니다.  
   
 2.  다음을 포함하는 클래스를 만듭니다.  
   
     -   대리자에서 생성된 이벤트.  
   
-    -   (선택 사항) `event` 키워드를 통해 선언된 대리자의 인스턴스가 있는지 확인하는 메서드. 이외에는 이 논리가 이벤트를 실행하는 코드에 배치되어야 합니다.  
+    -   (선택 사항) 로 선언 된 대리자의 인스턴스 하는 확인 하는 메서드를 **이벤트** 키워드 존재 합니다. 이외에는 이 논리가 이벤트를 실행하는 코드에 배치되어야 합니다.  
   
     -   이벤트를 호출하는 메서드. 이들 메서드는 일부 기본 클래스 기능의 재정의일 수 있습니다.  
   
@@ -168,7 +166,7 @@ modifiereventdelegate^ event_name
   
     -   이벤트 정의를 포함하는 클래스의 개체를 만듭니다.  
   
- 자세한 내용은 C + + /cli CLI 이벤트 참조  
+ 자세한 내용은 C + + /cli CLI 이벤트를 참조 하세요.  
   
 -   [인터페이스의 이벤트](../dotnet/how-to-use-events-in-cpp-cli.md)  
   
@@ -180,7 +178,7 @@ modifiereventdelegate^ event_name
   
  다음 코드 예제에서는 대리자, 이벤트 및 이벤트 처리기의 쌍을 선언하고, 이벤트 처리기를 구독(추가)하고, 이벤트 처리기를 호출하고, 이벤트 처리기를 구독 취소(제거)하는 방법을 보여 줍니다.  
   
-```  
+```cpp  
 // mcppv2_events.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -241,9 +239,9 @@ OnDblClick: Hello
   
  **예제**  
   
- 다음 코드 예제에서는 trivial 이벤트의 `raise` 메서드를 생성하는 데 사용되는 논리를 보여 줍니다. 이벤트에 하나 이상의 구독자가 있는 경우 `raise` 메서드를 암시적으로 또는 명시적으로 호출하면 대리자가 호출됩니다. 대리자의 반환 형식이 `void`가 아닌 경우 및 0 이벤트 구독자가 있는 경우 `raise` 메서드는 대리자 형식의 기본값을 반환합니다. 이벤트 구독자가 없는 경우 `raise` 메서드를 호출하면 단순히 반환하고 예외가 발생하지 않습니다. 대리자 반환 형식이 `void`가 아니면 대리자 형식이 반환됩니다.  
+ 다음 코드 예제에서는 trivial 이벤트의 `raise` 메서드를 생성하는 데 사용되는 논리를 보여 줍니다. 이벤트에 하나 이상의 구독자가 있는 경우 `raise` 메서드를 암시적으로 또는 명시적으로 호출하면 대리자가 호출됩니다. 대리자의 반환 형식이 없으면 **void** 0 이벤트 구독자가 있는 경우 및는 `raise` 메서드는 대리자 형식의 기본값을 반환 합니다. 이벤트 구독자가 없는 경우 `raise` 메서드를 호출하면 단순히 반환하고 예외가 발생하지 않습니다. 대리자 반환 형식이 아닙니다 **void**, 대리자 형식이 반환 됩니다.  
   
-```  
+```cpp  
 // trivial_events.cpp  
 // compile with: /clr /c  
 using namespace System;  

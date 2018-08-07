@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2501413196e1fd6b8b7a1a4f9985304863e02549
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f80c7e758b282c0a1976d490483c397eca43b5f5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873003"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568630"
 ---
 # <a name="ftmbasedisconnectobject-method"></a>FtmBase::DisconnectObject 메서드
-개체에 대 한 모든 외부 연결을 강제로 해제합니다. 개체의 서버를 종료 하기 전에이 메서드는 개체의 구현을 호출 합니다.  
+개체에 모든 외부 연결을 강제로 해제합니다. 개체의 서버 개체의 구현의 종료 하기 전에이 메서드를 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,8 +35,8 @@ STDMETHODIMP DisconnectObject(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `dwReserved`  
+### <a name="parameters"></a>매개 변수  
+ *dwReserved*  
  나중에 사용하도록 예약되어 있습니다. 0이어야 합니다.  
   
 ## <a name="return-value"></a>반환 값  

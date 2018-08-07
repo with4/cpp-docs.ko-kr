@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b17749d5f20007e05f181de8f4e069d3fc736f0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de98932420cf5eb0d5b9b13011044e5bfc7b400d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872395"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569006"
 ---
 # <a name="ftmbasecreateglobalinterfacetable-method"></a>FtmBase::CreateGlobalInterfaceTable 메서드
 (GIT) 전역 인터페이스 테이블을 만듭니다.  
@@ -35,15 +35,15 @@ static HRESULT CreateGlobalInterfaceTable(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `git`  
- 이 작업이 완료 될 때, 전역 인터페이스 테이블에 대 한 포인터입니다.  
+### <a name="parameters"></a>매개 변수  
+ *Git*  
+ 이 작업이 완료 될 때 전역 인터페이스 테이블에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.  
   
 ## <a name="remarks"></a>설명  
- 자세한 내용은 MSDN Library에서 "COM 참조" 항목의 "COM 인터페이스" 하위 항목인 "IGlobalInterfaceTable" 항목을 참조 합니다.  
+ 자세한 내용은 MSDN Library에서 "COM 참조" 항목의 "COM 인터페이스" 하위 항목인 "IGlobalInterfaceTable" 항목을 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** ftm.h  

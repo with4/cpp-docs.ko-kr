@@ -1,5 +1,5 @@
 ---
-title: '방법: 지정 리소스에 대 한 포함 디렉터리 | Microsoft Docs'
+title: '방법: 지정한 리소스에 대 한 포함 디렉터리 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9778f774464e8da003a535e3c4dba0aef6ed24cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db09d29f0049152f734ada8a78c510e4424d8dd3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875281"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569542"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>방법: 리소스 포함 디렉터리 지정
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>특정 .rc 파일에 대한 포함 디렉터리를 지정하려면  
   
-1.  솔루션 탐색기에서.rc 파일을 마우스 오른쪽 단추로 클릭 하 고 선택 **속성** 바로 가기 메뉴에서.  
+1.  솔루션 탐색기에서.rc 파일을 마우스 오른쪽 단추로 누르고 **속성** 바로 가기 메뉴에서.  
   
-2.  에 **속성 페이지** 대화 상자를 클릭는 **리소스** 왼쪽된 창에서 노드는 다음에서 추가 포함 디렉터리에서 지정는 **추가 포함 디렉터리** 속성입니다.  
+2.  에 **속성 페이지** 대화 상자에서 클릭 합니다 **리소스** 왼쪽된 창에서 노드 추가 포함 디렉터리를 지정 합니다 합니다 **추가 포함 디렉터리** 속성입니다.  
   
- 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) .NET Framework 개발자 가이드에서. 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [연습:ASP.NET에서지역화에리소스를사용하여](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ 관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) .NET Framework Developer's Guide에 있습니다. 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 내용은 참조 [연습: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **요구 사항**  
+## <a name="requirements"></a>요구 사항  
   
  Win32  
   
 ## <a name="see-also"></a>참고 항목  
  [리소스 내용 대화 상자](../windows/resource-includes-dialog-box.md)   
- [TN035: Visual c + + 여러 리소스 파일과 헤더 파일 사용](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)   
+ [TN035: Visual c + +를 사용 하 여 여러 리소스 파일과 헤더 파일 사용](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)   
  [기호: 리소스 식별자](../windows/symbols-resource-identifiers.md)   
  [리소스 파일](../windows/resource-files-visual-studio.md)   
  [리소스 편집기](../windows/resource-editors.md)

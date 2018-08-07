@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4461004a1681d9095449c51fb9cb3973d5017693
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2757589509e4a2b091c5057ef2065866a8829494
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881311"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570423"
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray 클래스
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -36,7 +36,7 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
 ## <a name="remarks"></a>설명  
  이벤트 처리기의 배열을 나타냅니다.  
   
- 와 연결 된 이벤트 처리기는 [EventSource](../windows/eventsource-class.md) 개체 EventTargetArray 보호 된 데이터 멤버에 저장 됩니다.  
+ 연관 된 이벤트 처리기는 [EventSource](../windows/eventsource-class.md) 개체는 저장의 보호 된 **EventTargetArray** 데이터 멤버입니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -44,8 +44,8 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
   
 |이름|설명|  
 |----------|-----------------|  
-|[EventTargetArray::EventTargetArray 생성자](../windows/eventtargetarray-eventtargetarray-constructor.md)|EventTargetArray 클래스의 새 인스턴스를 초기화합니다.|  
-|[EventTargetArray::~EventTargetArray 소멸자](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|현재 EventTargetArray 클래스 초기화를 취소 합니다.|  
+|[EventTargetArray::EventTargetArray 생성자](../windows/eventtargetarray-eventtargetarray-constructor.md)|새 인스턴스를 초기화 합니다 **EventTargetArray** 클래스입니다.|  
+|[EventTargetArray::~EventTargetArray 소멸자](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|현재 초기화 취소 **EventTargetArray** 클래스입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -53,8 +53,8 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
 |----------|-----------------|  
 |[EventTargetArray::AddTail 메서드](../windows/eventtargetarray-addtail-method.md)|이벤트 처리기의 내부 배열의 끝에 지정된 된 이벤트 처리기를 추가합니다.|  
 |[EventTargetArray::Begin 메서드](../windows/eventtargetarray-begin-method.md)|이벤트 처리기의 내부 배열에서 첫 번째 요소의 주소를 가져옵니다.|  
-|[EventTargetArray::End 메서드](../windows/eventtargetarray-end-method.md)|이벤트 처리기의 내부 배열에 있는 마지막 요소의 주소를 가져옵니다.|  
-|[EventTargetArray::Length 메서드](../windows/eventtargetarray-length-method.md)|이벤트 처리기의 내부 배열에 있는 현재 요소 수를 가져옵니다.|  
+|[EventTargetArray::End 메서드](../windows/eventtargetarray-end-method.md)|이벤트 처리기의 내부 배열에서 마지막 요소의 주소를 가져옵니다.|  
+|[EventTargetArray::Length 메서드](../windows/eventtargetarray-length-method.md)|이벤트 처리기의 내부 배열에 현재 요소 수를 가져옵니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `EventTargetArray`  

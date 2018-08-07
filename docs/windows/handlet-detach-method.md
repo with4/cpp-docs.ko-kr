@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 100d215099494c9b2714fd2c42dee69644a5006c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc11d6be992584adb1ce2075e73d080cc3a43f47
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878465"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569481"
 ---
 # <a name="handletdetach-method"></a>HandleT::Detach 메서드
-현재 HandleT 개체에서 기본 핸들을 분리합니다.  
+현재 연결을 끊습니다 **HandleT** 해당 기본 핸들에서 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +37,7 @@ typename HandleTraits::Type Detach();
  기본 핸들입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 작업이 완료 되 면 현재 HandleT가 유효 하지 않은 상태로 설정 됩니다.  
+ 이 작업이 완료 되 면, 현재 **HandleT** 잘못 된 상태로 설정 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

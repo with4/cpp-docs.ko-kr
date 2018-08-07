@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb853e10b1745151c12f1855f841a21c2a7e126b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83949616f204ae37b42b91b03d69d8d803a1582f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882539"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569672"
 ---
 # <a name="defaultvtable"></a>defaultvtable
-COM 개체에 대 한 기본 vtable 인터페이스로 인터페이스를 정의합니다.  
+COM 개체에 대 한 기본 vtable 인터페이스와 인터페이스를 정의합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ defaultvtable(  
+[ defaultvtable(  
    interface  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `interface`  
- COM 개체에 대 한 기본 vtable 하려는 하는 지정 된 인터페이스입니다.  
+ *interface*  
+ 지정 된 인터페이스를 COM 개체에 대 한 기본 vtable 하려는입니다.  
   
 ## <a name="remarks"></a>설명  
- **defaultvtable** c + + 특성에 동일한 기능을는 [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) MIDL 특성입니다.  
+ 합니다 **defaultvtable** c + + 특성에 동일한 기능을 합니다 [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 다음 코드를 사용 하는 클래스에 특성을 보여 줍니다. **defaultvtable** 기본 인터페이스를 지정 하려면:  
+## <a name="example"></a>예  
+ 다음 코드를 사용 하는 클래스에 특성을 보여 줍니다 **defaultvtable** 기본 인터페이스를 지정 합니다.  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvtable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -78,7 +77,7 @@ class CMyC3 : public IMyI3 {};
   
 |||  
 |-|-|  
-|**적용 대상**|**class**, `struct`|  
+|**적용 대상**|**클래스**, **구조체**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|**coclass**|  
 |**잘못된 특성**|없음|  

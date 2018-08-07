@@ -1,5 +1,5 @@
 ---
-title: '방법: 복사 하는 동안 언어 또는 리소스의 조건은 변경 | Microsoft Docs'
+title: '방법: 복사 하는 동안 언어 또는 리소스의 상태를 변경 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fcddbc0bb5a2afe807cbe8ca7643a831c28ad50f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0681a5e0c88f44d5616724f5564660ecb05fbdc3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880139"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570498"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>방법: 복사할 때 리소스의 언어 또는 조건 변경
 리소스에서 복사하는 동안 언어 속성이나 조건 속성 또는 두 가지 모두를 변경할 수 있습니다.  
   
--   리소스의 언어는 말 그대로 리소스용 언어를 식별합니다. 이 특성을 사용 [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) 를 찾고 있는 리소스를 안전 하 게 식별할 수 있습니다. (그러나 언어별로 리소스에 텍스트와 관련 없는 차이점이 있을 수 있습니다. 예를 들어 액셀러레이터가 일본어 자판에서만 작동하거나 비트맵이 중국어로 지역화된 빌드에서만 적절하게 작동하는 경우가 있을 수 있습니다.)  
+-   리소스의 언어는 말 그대로 리소스용 언어를 식별합니다. 이 사용 됩니다 [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) 를 찾고 있는 리소스를 식별 하는 데 있습니다. (그러나 언어별로 리소스에 텍스트와 관련 없는 차이점이 있을 수 있습니다. 예를 들어 액셀러레이터가 일본어 자판에서만 작동하거나 비트맵이 중국어로 지역화된 빌드에서만 적절하게 작동하는 경우가 있을 수 있습니다.)  
   
 -   리소스의 조건은 리소스의 해당 특정 복사본이 사용되는 조건을 식별하는 정의된 기호입니다.  
   
@@ -40,19 +40,17 @@ IDD_AboutBox (Finnish - XX33)
   
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>기존 리소스를 복사하고 해당 언어 또는 조건을 변경하려면  
   
-1.  .Rc 파일 또는 [리소스 뷰](../windows/resource-view-window.md) 창에서 복사 하려는 리소스를 마우스 오른쪽 단추로 클릭 합니다.  
+1.  .Rc 파일 또는 합니다 [리소스 뷰](../windows/resource-view-window.md) 창에서 복사 하려는 리소스를 마우스 오른쪽 단추로 클릭 합니다.  
   
-2.  선택 **복사본 삽입** 바로 가기 메뉴에서.  
+2.  선택할 **복사본 삽입** 바로 가기 메뉴에서.  
   
 3.  에 **리소스 복사본 삽입** 대화 상자:  
   
-    -   에 대 한는 **언어** 목록 상자에서 언어를 선택 합니다.  
+    -   에 대 한 합니다 **언어** 목록 상자에서 언어를 선택 합니다.  
   
-    -   에 **조건** 상자에 조건을 입력 합니다.  
+    -   에 **조건을** 상자에서 조건을 입력 합니다.  
   
-
-  
- 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
  Win32  
   
