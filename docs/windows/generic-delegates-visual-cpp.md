@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ecbfebc49f76eee7bb753af3d07052d1e05d73be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96c4c878edb0125aca2d4782afd53ce0967452a5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875600"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571313"
 ---
 # <a name="generic-delegates-visual-c"></a>제네릭 대리자(Visual C++)
-대리자에 제네릭 형식 매개 변수를 사용할 수 있습니다. 대리자에 대 한 자세한 내용은 참조 하십시오. [대리자 (c + + 구성 요소 확장명)](../windows/delegate-cpp-component-extensions.md)합니다.  
+대리자에 제네릭 형식 매개 변수를 사용할 수 있습니다. 대리자에 대 한 자세한 내용은 참조 하세요. [delegate (c + + 구성 요소 확장)](../windows/delegate-cpp-component-extensions.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,17 +37,17 @@ generic < [class | typename] type-parameter-identifiers>
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `attributes` (선택 사항)  
+ *특성* (선택 사항)  
  추가 선언 정보입니다. 특성 및 특성 클래스에 대한 자세한 내용은 특성을 참조하십시오.  
   
  *type-parameter-identifier(s)*  
  형식 매개 변수에 대한 식별자의 쉼표로 구분된 목록입니다.  
   
- `type-parameter-constraints-clauses`  
- 에 지정 된 형식을 취합니다 [제네릭 형식 매개 변수에 대 한 제약 조건 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ *형식 매개 변수-제약 조건 절*  
+ 에 지정 된 형식은 [제네릭 형식 매개 변수에 대 한 제약 조건 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
  *액세스 가능성 한정자* (선택 사항)  
- 액세스 가능성 한정자 (예: **공용**, `private`).  
+ 액세스 가능성 한정자 (예: **공용**하십시오 **개인**).  
   
  *result-type*  
  대리자의 반환 형식입니다.  
@@ -58,17 +58,17 @@ generic < [class | typename] type-parameter-identifiers>
  *정식 매개 변수* (선택 사항)  
  대리자의 매개 변수 목록입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  대리자 형식 매개 변수는 대리자 개체가 만들어진 위치에 지정됩니다. 대리자 및 연결된 메서드의 시그니처는 둘 다 같아야 합니다. 다음 예제는 제네릭 대리자 선언을 보여 줍니다.  
   
-```  
+```cpp  
 // generics_generic_delegate1.cpp  
 // compile with: /clr /c  
 generic <class ItemType>  
 delegate ItemType GenDelegate(ItemType p1, ItemType% p2);  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플은 다음을 보여 줍니다.  
   
 -   서로 다른 생성된 형식에 동일한 대리자 개체를 사용할 수 없습니다. 형식마다 다른 대리자 개체를 만듭니다.  
@@ -77,7 +77,7 @@ delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
   
 -   형식 인수를 지정하지 않고 제네릭 메서드를 호출하면 컴파일러는 호출에 대한 형식 인수를 유추하려고 합니다.  
   
-```  
+```cpp  
 // generics_generic_delegate2.cpp  
 // compile with: /clr  
 generic <class ItemType>  
@@ -111,10 +111,10 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 제네릭 대리자 `GenDelegate<ItemType>`를 선언한 다음, `MyMethod` 형식 매개 변수를 사용하는 `ItemType` 메서드를 연결하여 인스턴스화합니다. 대리자의 두 인스턴스(정수 및 double)를 만들고 호출합니다.  
   
-```  
+```cpp  
 // generics_generic_delegate.cpp  
 // compile with: /clr  
 using namespace System;  

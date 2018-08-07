@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a298e63bc67dadf33a5e653d0eecf165a530d82
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c39c313f06bb4dd1f4dbc095df159a38625e9db8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873796"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570216"
 ---
 # <a name="ftmbasegetmarshalsizemax-method"></a>FtmBase::GetMarshalSizeMax 메서드
-지정된 된 개체에 지정 된 인터페이스 포인터를 마샬링하는 데 필요한 바이트 수의 상한 값을 가져옵니다.  
+지정된 된 개체의 지정 된 인터페이스 포인터를 마샬링하는 데 필요한 바이트 수에 상한값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,31 +40,31 @@ STDMETHODIMP GetMarshalSizeMax(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `riid`  
- 마샬링해야 하는 인터페이스의 식별자에 대 한 참조입니다.  
+### <a name="parameters"></a>매개 변수  
+ *riid*  
+ 마샬링될 인터페이스의 식별자에 대 한 참조입니다.  
   
- `pv`  
- 인터페이스 포인터를 마샬링할 수 있습니다. NULL이 될 수 있습니다.  
+ *pv*  
+ 인터페이스 포인터를 마샬링할 수 있습니다. NULL 일 수 있습니다.  
   
- `dwDestContext`  
- 대상 컨텍스트 마샬링해야 할 지정된 된 인터페이스입니다.  
+ *dwDestContext*  
+ 대상 위치 지정된 된 인터페이스를 컨텍스트 마샬링해야 합니다.  
   
  하나 이상의 MSHCTX 열거형 값을 지정 합니다.  
   
- 현재 역마샬링 발생할 수 있습니다 (MSHCTX_LOCAL) 현재 프로세스와 같은 컴퓨터에 다른 프로세스 또는 현재 프로세스 (MSHCTX_INPROC)의 다른 아파트에 있습니다.  
+ 현재 역마샬링 발생할 수 있습니다 (MSHCTX_INPROC) 현재 프로세스의 다른 아파트 또는 현재 프로세스 (MSHCTX_LOCAL)와 동일한 컴퓨터에서 다른 프로세스에서.  
   
- `pvDestContext`  
- 나중에 사용 됩니다. NULL 이어야 합니다.  
+ *pvDestContext*  
+ 사용 하도록 예약 됩니다. NULL 이어야 합니다.  
   
- `mshlflags`  
- 클라이언트 프로세스를 다시 전송 될 데이터를 마샬링할 수 인지를 나타내는 플래그-일반적인 사례-여러 클라이언트에서 검색할 수 있는, 전역 테이블에 기록 합니다. 하나 이상의 MSHLFLAGS 열거형 값을 지정 합니다.  
+ *mshlflags*  
+ 클라이언트 프로세스에 다시 전송할 데이터를 마샬링할 수 인지 여부를 나타내는 플래그-일반적인 사례-여러 클라이언트에서 검색할 수 있는 전역 테이블에 기록 합니다. 하나 이상의 MSHLFLAGS 열거형 값을 지정 합니다.  
   
- `pSize`  
- 이 작업이 완료 되 면 마샬링 스트림에 쓸 데이터의 양에 대 한 상한 값에 대 한 포인터입니다.  
+ *pSize*  
+ 이 작업이 완료 될 때 마샬링 스트림에 쓸 데이터의 양에 상한을에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 E_NOINTERFACE 합니다.  
+ 성공 하면 s_ok이 고 이 고, 그렇지 E_FAIL 또는 E_NOINTERFACE  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** ftm.h  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b0aef97645d515a03dcf2cab90eedc06f07971c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a54b61902c8994397c7bd6effa74a90d43c7e512
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874147"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568643"
 ---
 # <a name="handletinternalclose-method"></a>HandleT::InternalClose 메서드
-현재 HandleT 개체를 닫습니다.  
+현재 닫습니다 **HandleT** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,10 +34,10 @@ virtual bool InternalClose();
 ```  
   
 ## <a name="return-value"></a>반환 값  
- `true` 현재 HandleT 성공적으로 닫힌 경우 그렇지 않으면 `false`합니다.  
+ **true** 하는 경우 현재 **HandleT** 이 고, 그렇지 않으면 닫은 **false**합니다.  
   
 ## <a name="remarks"></a>설명  
- InternalClose() 보호 됩니다.  
+ **InternalClose()** 됩니다 **보호**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

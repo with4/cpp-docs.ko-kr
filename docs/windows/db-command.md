@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70399b15081de89d8da49268c8d62d3ad390858d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "38954983"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571440"
 ---
 # <a name="dbcommand"></a>db_command
 OLE DB 명령을 만듭니다.  
@@ -133,7 +133,7 @@ OLE DB 명령에서 바인딩 매개 변수를 구분할 수 있습니다.
 ## <a name="remarks"></a>설명  
 **db_command** 는 [CCommand](../data/oledb/ccommand-class.md) 개체를 만들고, OLE DB 소비자는 이 개체를 사용하여 명령을 실행합니다.  
   
-**db_command** 는 클래스 또는 함수 범위와 함께 사용할 수 있습니다. 주요 차이점은 `CCommand` 개체의 범위입니다. 함수 범위를 사용하는 경우 바인딩 같은 데이터는 함수 끝에서 종료됩니다. OLE DB 소비자 템플릿 클래스를 포함 하는 클래스 및 함수 범위 사용 **CCommand\<>**, 함수 및 클래스 사례에 대 한 템플릿 인수 다릅니다. 함수의 경우 로컬 변수를 포함하는 **Accessor** 에 대해 바인딩이 이루어지지만, 클래스 사용의 경우 `CAccessor`파생 클래스를 인수로 유추합니다. 클래스 특성으로 사용하는 경우 **db_command** 는 **db_column**과 함께 작동합니다.  
+**db_command** 는 클래스 또는 함수 범위와 함께 사용할 수 있습니다. 주요 차이점은 `CCommand` 개체의 범위입니다. 함수 범위를 사용하는 경우 바인딩 같은 데이터는 함수 끝에서 종료됩니다. OLE DB 소비자 템플릿 클래스를 포함 하는 클래스 및 함수 범위 사용 `CCommand<>`, 함수 및 클래스 사례에 대 한 템플릿 인수 다릅니다. 함수의 경우 로컬 변수를 포함하는 **Accessor** 에 대해 바인딩이 이루어지지만, 클래스 사용의 경우 `CAccessor`파생 클래스를 인수로 유추합니다. 클래스 특성으로 사용하는 경우 **db_command** 는 **db_column**과 함께 작동합니다.  
   
 **db_command** 는 결과 집합을 반환하지 않는 명령을 실행하는 데 사용할 수 있습니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Dontusenewusemake:: Operator new 연산자 | Microsoft Docs'
+title: 'Dontusenewusemake:: Operator 새 연산자 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9785ea27c79ff0a118ff3697a22804c520b265ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 59354062dded7792dca1cd84683bba64f6a64aa0
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873682"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571427"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>DontUseNewUseMake::operator 새 연산자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -37,17 +37,17 @@ void* operator new(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `__unnamed0`  
+ *__unnamed0*  
  할당할 메모리의 바이트 수를 지정 하는 명명 되지 않은 매개 변수입니다.  
   
- `placement`  
- 에 할당할 형식입니다.  
+ *배치*  
+ 할당할 형식입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 연산자를 오버 로드 하는 경우 추가 인수를 전달 하는 방법을 제공 `new`합니다.  
+ 연산자를 오버 로드 하는 경우 추가 인수를 전달 하는 방법을 제공 **새**합니다.  
   
 ## <a name="remarks"></a>설명  
- 연산자 오버 로드 `new` RuntimeClass에서 사용 되지 않도록 방지 합니다.  
+ 연산자 오버 로드 **새** 에서 사용 되지 않도록 방지 하 고 `RuntimeClass`입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

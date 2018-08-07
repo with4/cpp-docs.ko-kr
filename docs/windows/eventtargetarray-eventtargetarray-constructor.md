@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbfd12ea513044f1062e60f5c73f5089683f043d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 831c9a524f8120c855382d198a5f53ac312cada6
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872717"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569790"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray 생성자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -36,9 +36,9 @@ EventTargetArray(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `hr`  
- 이 생성자 작업을 수행한 후 매개 변수 `hr` 배열의 할당 성공 했는지 아니면 실패 했는지를 나타냅니다. 다음 표에서 가능한 값에 대 한 `hr`합니다.  
+### <a name="parameters"></a>매개 변수  
+ *hr*  
+ 이 생성자 작업을 수행한 후 매개 변수 *hr* 배열 할당 성공 또는 실패 여부를 나타냅니다. 다음 표에서 대 한 가능한 값 *hr*합니다.  
   
  S_OK  
  작업에 성공했습니다.  
@@ -47,15 +47,15 @@ EventTargetArray(
  배열에 대 한 메모리를 할당할 수 없습니다.  
   
  S_FALSE  
- 매개 변수 `items` 가 0 보다 작거나 같음.  
+ 매개 변수 *항목* 0 보다 작거나 같음.  
   
- `items`  
- 할당할 배열 요소의 수입니다.  
+ *항목*  
+ 할당할 배열의 요소 수입니다.  
   
 ## <a name="remarks"></a>설명  
- EventTargetArray 클래스의 새 인스턴스를 초기화합니다.  
+ 새 인스턴스를 초기화 합니다 **EventTargetArray** 클래스입니다.  
   
- EventTargetArray는 EventSource 개체에 이벤트 처리기의 배열을 유지 하는 데 사용 됩니다.  
+ **EventTargetArray** 이벤트 처리기의 배열을 유지 하는 데 사용 되는 `EventSource` 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** event.h  

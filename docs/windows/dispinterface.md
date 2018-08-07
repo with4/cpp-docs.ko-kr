@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10f398e83650dc63c002801ac999816e48f7bdd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874290"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569216"
 ---
 # <a name="dispinterface"></a>dispinterface
 .Idl 파일의 인터페이스를 디스패치 인터페이스로 배치합니다.  
@@ -30,9 +30,7 @@ ms.locfileid: "33874290"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [dispinterface]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
@@ -49,7 +47,7 @@ dispinterface helloPro
   
  **dispinterface** 특성에 대해 유효하지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [dispinterface](../windows/bindable.md) 사용법에 대한 예는 **bindable**의 예를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -58,7 +56,7 @@ dispinterface helloPro
   
 |||  
 |-|-|  
-|**적용 대상**|`interface`|  
+|**적용 대상**|**interface**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|**dual**, **object**, **oleautomation**, `local`, **ms_union**|  
@@ -68,7 +66,7 @@ dispinterface helloPro
 ## <a name="see-also"></a>참고 항목  
  [IDL 특성](../windows/idl-attributes.md)   
  [용도별 특성](../windows/attributes-by-usage.md)   
- [Uuid](../windows/uuid-cpp-attributes.md)   
+ [uuid](../windows/uuid-cpp-attributes.md)   
  [이중](../windows/dual.md)   
  [사용자 지정](../windows/custom-cpp.md)   
  [object](../windows/object-cpp.md)   

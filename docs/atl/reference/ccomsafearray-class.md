@@ -76,8 +76,7 @@ class CComSafeArray
 |[CComSafeArray::Attach](#attach)|연결 된 `SAFEARRAY` 구조체를 `CComSafeArray` 개체입니다.|  
 |[CComSafeArray::CopyFrom](#copyfrom)|내용을 복사 합니다는 `SAFEARRAY` 구조체로 `CComSafeArray` 개체입니다.|  
 |[CComSafeArray::CopyTo](#copyto)|`CComSafeArray` 개체의 복사본을 만듭니다.|  
-|[개체를 만들려면](#create)|
-          `CComSafeArray` 개체를 만듭니다.|  
+|[개체를 만들려면](#create)|`CComSafeArray` 개체를 만듭니다.|  
 |[CComSafeArray::Destroy](#destroy)|`CComSafeArray` 개체를 제거합니다.|  
 |[CComSafeArray::Detach](#detach)|분리 된 `SAFEARRAY` 에서 `CComSafeArray` 개체입니다.|  
 |[CComSafeArray::GetAt](#getat)|1차원 배열에서 단일 요소를 검색합니다.|  
@@ -229,8 +228,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
  에 대 한 포인터를 `SAFEARRAY` 구조입니다. 생성자 생성 후 배열 참조 되지 않은 있도록 배열의 복사본이 주소를 사용 합니다.  
   
 ### <a name="remarks"></a>설명  
- 
-          `CComSafeArray` 개체를 만듭니다.  
+ `CComSafeArray` 개체를 만듭니다.  
   
 ##  <a name="dtor"></a>  CComSafeArray:: ~ CComSafeArray  
  소멸자입니다.  
