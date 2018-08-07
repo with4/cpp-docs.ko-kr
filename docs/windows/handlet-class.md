@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a596bf1e086ac7b1a1a72c3504ce4f41844ba4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87a8718971a2da008b03dca1e9653d8454115adb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876152"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570599"
 ---
 # <a name="handlet-class"></a>HandleT 클래스
 개체에 대한 핸들을 나타냅니다.  
@@ -36,9 +36,9 @@ template <
 class HandleT;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `HandleTraits`  
- 인스턴스는 [HandleTraits](../windows/handletraits-structure.md) 핸들의 일반적인 특성을 정의 하는 구조체입니다.  
+### <a name="parameters"></a>매개 변수  
+ *HandleTraits*  
+ 인스턴스를 [HandleTraits](../windows/handletraits-structure.md) 핸들의 공통 된 특징을 정의 하는 구조입니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -52,36 +52,36 @@ class HandleT;
   
 |이름|설명|  
 |----------|-----------------|  
-|[HandleT::HandleT 생성자](../windows/handlet-handlet-constructor.md)|HandleT 클래스의 새 인스턴스를 초기화합니다.|  
-|[HandleT::~HandleT 소멸자](../windows/handlet-tilde-handlet-destructor.md)|HandleT 클래스의 인스턴스 초기화를 취소 합니다.|  
+|[HandleT::HandleT 생성자](../windows/handlet-handlet-constructor.md)|새 인스턴스를 초기화 합니다 **HandleT** 클래스입니다.|  
+|[HandleT::~HandleT 소멸자](../windows/handlet-tilde-handlet-destructor.md)|인스턴스를 초기화 해제 합니다 **HandleT** 클래스입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[HandleT::Attach 메서드](../windows/handlet-attach-method.md)|현재 HandleT 개체가 지정된 된 핸들에 연결합니다.|  
-|[HandleT::Close 메서드](../windows/handlet-close-method.md)|현재 HandleT 개체를 닫습니다.|  
-|[HandleT::Detach 메서드](../windows/handlet-detach-method.md)|현재 HandleT 개체에서 기본 핸들을 분리합니다.|  
+|[HandleT::Attach 메서드](../windows/handlet-attach-method.md)|현재 지정된 된 핸들과 연결 **HandleT** 개체입니다.|  
+|[HandleT::Close 메서드](../windows/handlet-close-method.md)|현재 닫습니다 **HandleT** 개체입니다.|  
+|[HandleT::Detach 메서드](../windows/handlet-detach-method.md)|현재 연결을 끊습니다 **HandleT** 해당 기본 핸들에서 개체입니다.|  
 |[HandleT::Get 메서드](../windows/handlet-get-method.md)|기본 핸들의 값을 가져옵니다.|  
-|[HandleT::IsValid 메서드](../windows/handlet-isvalid-method.md)|현재 HandleT 개체가 핸들을 나타내는지 여부를 나타냅니다.|  
+|[HandleT::IsValid 메서드](../windows/handlet-isvalid-method.md)|나타냅니다 여부 현재 **HandleT** 개체 핸들을 나타냅니다.|  
   
 ### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[HandleT::InternalClose 메서드](../windows/handlet-internalclose-method.md)|현재 HandleT 개체를 닫습니다.|  
+|[HandleT::InternalClose 메서드](../windows/handlet-internalclose-method.md)|현재 닫습니다 **HandleT** 개체입니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[HandleT::operator= 연산자](../windows/handlet-operator-assign-operator.md)|현재 HandleT 개체를 지정된 된 HandleT 개체의 값을 이동합니다.|  
+|[HandleT::operator= 연산자](../windows/handlet-operator-assign-operator.md)|지정 된 값을 이동 **HandleT** 개체를 현재 **HandleT** 개체입니다.|  
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
-|[HandleT::handle_ Data 멤버](../windows/handlet-handle-data-member.md)|HandleT 개체가 핸들을 포함 합니다.|  
+|[HandleT::handle_ Data 멤버](../windows/handlet-handle-data-member.md)|핸들을 나타내는 포함 된 **HandleT** 개체입니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `HandleT`  

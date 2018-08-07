@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00bce09f9e081bb0cd5c01115b05e4d3268d7293
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04a31c7d080ff4fbfae094e07ab02d912966f4b1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882617"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570656"
 ---
 # <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll 메서드
-현재와 관련 된 이벤트 처리기를 호출 [EventSource](../windows/eventsource-class.md) 지정 된 인수 형식 및 인수를 사용 하 여 개체입니다.  
+현재 연결 된 각 이벤트 처리기를 호출 [EventSource](../windows/eventsource-class.md) 지정 된 인수 형식 및 인수를 사용 하 여 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -183,65 +183,65 @@ void InvokeAll(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T0`  
+### <a name="parameters"></a>매개 변수  
+ *T0*  
  0번째 이벤트 처리기 인수 형식입니다.  
   
- `T1`  
+ *T1*  
  첫 번째 이벤트 처리기 인수 형식입니다.  
   
- `T2`  
+ *T2*  
  두 번째 이벤트 처리기 인수 형식입니다.  
   
- `T3`  
+ *T3*  
  세 번째 이벤트 처리기 인수 형식입니다.  
   
- `T4`  
+ *T4*  
  네 번째 이벤트 처리기 인수 형식입니다.  
   
- `T5`  
+ *T5*  
  다섯 번째 이벤트 처리기 인수 형식입니다.  
   
- `T6`  
+ *T6*  
  여섯 번째 이벤트 처리기 인수 형식입니다.  
   
- `T7`  
+ *T7*  
  일곱 번째 이벤트 처리기 인수 형식입니다.  
   
- `T8`  
+ *T8*  
  여덟 번째 이벤트 처리기 인수 형식입니다.  
   
- `T9`  
+ *T9*  
  아홉 번째 이벤트 처리기 인수 형식입니다.  
   
- `arg0`  
+ *arg0*  
  0번째 이벤트 처리기 인수입니다.  
   
- `arg1`  
+ *arg1*  
  첫 번째 이벤트 처리기 인수입니다.  
   
- `arg2`  
+ *Arg2*  
  두 번째 이벤트 처리기 인수입니다.  
   
- `arg3`  
+ *arg3*  
  세 번째 이벤트 처리기 인수입니다.  
   
- `arg4`  
+ *arg4*  
  네 번째 이벤트 처리기 인수입니다.  
   
- `arg5`  
+ *arg5*  
  다섯 번째 이벤트 처리기 인수입니다.  
   
- `arg6`  
+ *a r g 6*  
  여섯 번째 이벤트 처리기 인수입니다.  
   
- `arg7`  
+ *arg7*  
  일곱 번째 이벤트 처리기 인수입니다.  
   
- `arg8`  
+ *arg8*  
  여덟 번째 이벤트 처리기 인수입니다.  
   
- `arg9`  
+ *arg9*  
  아홉 번째 이벤트 처리기 인수입니다.  
   
 ## <a name="requirements"></a>요구 사항  

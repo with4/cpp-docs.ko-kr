@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad7af9f507a29531b14ff75aa97e0aee327db380
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70031553e6a0585dc9f86df336ec2199cd7660ea
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871369"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571347"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper 구조체
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -42,13 +42,13 @@ struct DerefHelper<T*>;
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `T`  
+ *T*  
  템플릿 매개 변수입니다.  
   
 ## <a name="remarks"></a>설명  
- 에 대 한 역참조 된 포인터를 나타내는 `T*` 템플릿 매개 변수입니다.  
+ 에 대 한 역참조 포인터를 나타내는 `T*` 템플릿 매개 변수입니다.  
   
- DerefHelper과 같은 식에 사용 됩니다: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`합니다.  
+ DerefHelper과 같은 식에 사용 됩니다. `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -56,7 +56,7 @@ struct DerefHelper<T*>;
   
 |이름|설명|  
 |----------|-----------------|  
-|`DerefType`|역참조 된 템플릿 매개 변수 식별자 `T*`합니다.|  
+|`DerefType`|역참조 템플릿 매개 변수 식별자 `T*`합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `DerefHelper`  

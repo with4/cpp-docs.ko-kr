@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ba3d9b75ff72399e1b9a027c937c24bba4a6c37
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc4bd998368fb325878a81ee4954a2ceec9432fe
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874332"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570105"
 ---
 # <a name="factorycacheflags-enumeration"></a>FactoryCacheFlags 열거형
 팩터리 개체를 캐시하는지 여부를 결정합니다.  
@@ -32,7 +32,7 @@ enum FactoryCacheFlags;
 ```  
   
 ## <a name="remarks"></a>설명  
- 기본적으로 팩터리 캐싱 정책은로 지정 된 [ModuleType](../windows/moduletype-enumeration.md) 만들 때 템플릿 매개 변수는 [모듈](../windows/module-class.md) 개체입니다. 이 정책을 재정의하려면 팩터리 개체를 만들 때 `FactoryCacheFlags` 값을 지정합니다.  
+ 기본적으로 팩터리 캐싱 정책은로 지정 합니다 [ModuleType](../windows/moduletype-enumeration.md) 만들 때 템플릿 매개 변수를 [모듈](../windows/module-class.md) 개체입니다. 이 정책을 재정의 하려면 지정 된 **FactoryCacheFlags** 팩터리 개체를 만들 때 값입니다.  
   
 |||  
 |-|-|  

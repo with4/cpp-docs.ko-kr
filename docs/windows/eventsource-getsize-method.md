@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60c52c711c85caa64c289937f39fe50ec18e1839
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e38bd233c302d0a2bd054a1cbf2efb301089a003
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887002"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569679"
 ---
 # <a name="eventsourcegetsize-method"></a>EventSource::GetSize 메서드
-현재 EventSource 개체에 연결된 이벤트 처리기 수를 가져옵니다.  
+현재 연결 된 이벤트 처리기의 수를 검색 **EventSource** 개체  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +34,7 @@ size_t GetSize() const;
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 이벤트 처리기 수 [targets_](../windows/eventsource-targets-data-member.md)합니다.  
+ 이벤트 처리기의 수가 [targets_](../windows/eventsource-targets-data-member.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** event.h  

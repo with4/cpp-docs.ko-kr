@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d56bc92e11d458a1872975f5a81a19c96566d59
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c536d3708141250c6e0ab19cacb22fe989dc236
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873653"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568760"
 ---
 # <a name="ftmbasereleasemarshaldata-method"></a>FtmBase::ReleaseMarshalData 메서드
-마샬링된 데이터 패킷을 소멸 시킵니다.  
+마샬링된 데이터 패킷을 삭제합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,8 +36,8 @@ STDMETHODIMP ReleaseMarshalData(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `pStm`  
- 소멸 될 예정 데이터 패킷을 포함 된 스트림에 대 한 포인터입니다.  
+ *pStm*  
+ 제거할 데이터 패킷을 포함 하는 스트림에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.  

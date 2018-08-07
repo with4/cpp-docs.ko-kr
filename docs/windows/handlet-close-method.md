@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f0c1e47420106651cfe0526d6d212e9819a72ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 69f3f2c756d158954676f6fc42941b1b80f4345e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873253"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569920"
 ---
 # <a name="handletclose-method"></a>HandleT::Close 메서드
-현재 HandleT 개체를 닫습니다.  
+현재 닫습니다 **HandleT** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +34,7 @@ void Close();
 ```  
   
 ## <a name="remarks"></a>설명  
- 현재 HandleT를 기반으로 하는 핸들이 닫히고 HandleT가 유효하지 않은 상태로 설정됩니다.  
+ 현재의 기반이 되는 핸들 **HandleT** 닫혀 하며 **HandleT** 잘못 된 상태로 설정 됩니다.  
   
  핸들이 제대로 닫히지 않은 경우 호출 스레드에서 예외가 발생합니다.  
   

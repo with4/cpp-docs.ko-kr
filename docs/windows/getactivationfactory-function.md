@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1a4bf31ff44c74362e21e8888630273fcc049e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2cbb5be3603f79a7df1cb330ca06775357666854
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881340"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570313"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory 함수
-템플릿 매개 변수로 지정 된 형식에 대 한 한 활성화 팩터리를 검색 합니다.  
+템플릿 매개 변수로 지정 된 형식에 대 한 활성화 팩터리를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,15 +39,15 @@ inline HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T`  
+### <a name="parameters"></a>매개 변수  
+ *T*  
  활성화 팩터리 형식을 지정 하는 템플릿 매개 변수입니다.  
   
- `activatableClassId`  
+ *activatableClassId*  
  활성화 팩터리를 생성할 수 있는 클래스의 이름입니다.  
   
- `factory`  
- 이 작업이 완료 될 때, 형식에 대 한 활성화 팩터리에 대 한 참조 `T`합니다.  
+ *팩터리*  
+ 이 작업이 완료 되 면 형식에 대 한 활성화 팩터리에 대 한 참조가 *T*합니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공 하면 s_ok이 고 그렇지 않은 경우이 작업이 실패 한 이유를 나타내는 HRESULT 오류가 발생 합니다.  

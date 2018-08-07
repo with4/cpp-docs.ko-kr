@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7cb3ab5fc624494d3292cd7a47031782ce7da70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27303f294f2414e2ea3f15de0c5bbfb1723628aa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877347"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570082"
 ---
 # <a name="helpstringdll"></a>typelib
 문서 문자열 조회 (지역화)를 수행 하는 데 DLL의 이름을 지정 합니다.  
@@ -30,22 +30,21 @@ ms.locfileid: "33877347"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ helpstringdll(  
+[ helpstringdll(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `string`  
- 문서 문자열 조회를 수행 하는 데 대 한 DLL입니다.  
+### <a name="parameters"></a>매개 변수  
+ *string*  
+ 문서 문자열 조회를 수행 하는 데 DLL입니다.  
   
 ## <a name="remarks"></a>설명  
- **helpstringdll** c + + 특성에 동일한 기능을는 [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) MIDL 특성입니다.  
+ 합니다 **helpstringdll** c + + 특성에 동일한 기능을 합니다 [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringdll.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -64,7 +63,7 @@ __interface IMyI
   
 |||  
 |-|-|  
-|**적용 대상**|**클래스**, `interface`, 인터페이스 메서드|  
+|**적용 대상**|**클래스**하십시오 **인터페이스**, 인터페이스 메서드|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

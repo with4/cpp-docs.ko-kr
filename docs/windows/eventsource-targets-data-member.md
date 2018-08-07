@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a35992a5579bf852323f4c01396fab56542f40cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e8782d66683d0a242e5321e8e3a0c8ab24b6f358
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871746"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568851"
 ---
 # <a name="eventsourcetargets-data-member"></a>EventSource::targets_ 데이터 멤버
 하나 이상의 이벤트 처리기 배열입니다.  
@@ -34,7 +34,7 @@ ComPtr<Details::EventTargetArray> targets_;
 ```  
   
 ## <a name="remarks"></a>설명  
- 현재 EventSource 개체가 나타내는 이벤트가 발생할 때 이벤트 처리기가 호출됩니다.  
+ 때 현재 표시 되는 이벤트 **EventSource** 발생 하는 개체, 이벤트 처리기가 호출 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** event.h  

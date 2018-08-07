@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c838f057d9c5e59193d0578fe8aa871b1b75ee9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11ec7cf883fe8c9454cf538efc0835b9c77b1f92
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873419"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569988"
 ---
 # <a name="defaultvalue"></a>defaultvalue
-형식화 된 선택적 매개 변수 기본값을의 지정을 허용 합니다.  
+형식화 된 선택적 매개 변수 기본값을 지정할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [ defaultvalue= value ]  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
  *값*  
- 매개 변수에 대해 기본 값입니다.  
+ 매개 변수의 기본 값입니다.  
   
 ## <a name="remarks"></a>설명  
- **defaultvalue** c + + 특성에 동일한 기능을는 [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) MIDL 특성입니다.  
+ 합니다 **defaultvalue** c + + 특성에 동일한 기능을 합니다 [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 다음 코드에서는 사용 하 여 인터페이스 메서드는 **defaultvalue** 특성:  
+## <a name="example"></a>예  
+ 다음 코드를 사용 하 여 인터페이스 메서드를 표시 합니다 **defaultvalue** 특성:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvalue.cpp  
 // compile with: /LD  
 #include <windows.h>  

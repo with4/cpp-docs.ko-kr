@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 964ce5cc33b51c54446874522317814279cdd960
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7b34f1af7734fa22db3a9f296bc021917356f8a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877721"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570030"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase::UnmarshalInterface 메서드
-새로 만든된 프록시를 초기화 하 고 해당 프록시에 대 한 인터페이스 포인터를 반환 합니다.  
+새로 만든된 프록시를 초기화 하 고 해당 프록시에 인터페이스 포인터를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,17 +38,17 @@ STDMETHODIMP UnmarshalInterface(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `pStm`  
- 인터페이스 포인터를 마샬링해야 할는 스트림에 대 한 포인터입니다.  
+ *pStm*  
+ 인터페이스 포인터를 역 마샬링해야 하는 스트림에 대 한 포인터입니다.  
   
- `riid`  
- 마샬링해야 할 인터페이스의 식별자에 대 한 참조입니다.  
+ *riid*  
+ 역 마샬링해야 하는 인터페이스의 식별자에 대 한 참조입니다.  
   
- `ppv`  
- 이 작업이 완료 되 면에서 요청 된 인터페이스 포인터를 받는 포인터 변수의 주소 `riid`합니다. 이 작업은 성공 하는 경우 *`ppv` 마샬링해야 할 인터페이스의 요청 된 인터페이스 포인터를 포함 합니다.  
+ *ppv*  
+ 이 작업이 완료 되 면에서 요청 된 인터페이스 포인터를 받는 포인터 변수의 주소 *riid*합니다. 이 작업에 성공 하면 **ppv* 마샬링해야 하는 인터페이스의 요청 된 인터페이스 포인터를 포함 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않고 E_NOINTERFACE 또는 E_FAIL입니다.  
+ 성공 하면 s_ok이 고 이 고, 그렇지 E_NOINTERFACE 또는 E_FAIL입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** ftm.h  
