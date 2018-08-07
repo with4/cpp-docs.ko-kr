@@ -17,32 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4055d541fa60c714262a64466734bc2b2323775b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4881d0e2bc1379f5c4cafa17f485707bca315783
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877825"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607945"
 ---
 # <a name="noncreatable"></a>noncreatable
-단독으로 인스턴스화할 수 없는 개체를 정의 합니다.  
+자체적으로 인스턴스화할 수 없는 개체를 정의 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [noncreatable]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **noncreatable** c + + 특성에 동일한 기능을는 [noncreatable](http://msdn.microsoft.com/library/windows/desktop/aa367118) MIDL 특성을 생성 된 자동으로 전달 됩니다. 컴파일러에서 IDL 파일입니다.  
+ 합니다 **noncreatable** c + + 특성에 동일한 기능을 합니다 [noncreatable](http://msdn.microsoft.com/library/windows/desktop/aa367118) MIDL 특성과 생성 된 자동으로 전달 됩니다. 컴파일러에서 IDL 파일입니다.  
   
- ATL을 사용 하는 프로젝트 내에서이 특성을 사용 하는 경우 특성의 동작이 변경 됩니다. 위의 동작 외에도 특성도 삽입 합니다.는 [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) 매크로입니다. Atl 나타냅니다이 매크로 개체 외부에서 만들 수 없습니다.  
+ ATL을 사용 하는 프로젝트 내에서이 특성을 사용 하면 특성의 동작을 변경 합니다. 위 동작 외에도 특성도 삽입 합니다 [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) 매크로입니다. ATL에 나타냅니다이 매크로 개체를 외부에서 만들 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cpp_attr_ref_noncreatable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -66,7 +64,7 @@ class CMyClass : public A
   
 |||  
 |-|-|  
-|**적용 대상**|**class**, `struct`|  
+|**적용 대상**|**클래스**, **구조체**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|**coclass**|  
 |**잘못된 특성**|없음|  

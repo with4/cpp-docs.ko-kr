@@ -1,5 +1,5 @@
 ---
-title: 데이터 멤버 Module::GenericReleaseNotifier::callback_ | Microsoft Docs
+title: Module::GenericReleaseNotifier::callback_ 데이터 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6f7c430fcd75033e10e0a23d9d0ab78675653bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ad301ba081ad063ff58ebf7a749b0d32371d05b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880705"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605034"
 ---
 # <a name="modulegenericreleasenotifiercallback-data-member"></a>Module::GenericReleaseNotifier::callback_ 데이터 멤버
-현재 Module::GenericReleaseNotifier 개체에 연결된 람다, 함수 또는 함수 포인터 이벤트 처리기를 보유합니다.  
+람다, 함수 또는 함수 포인터 이벤트 처리기에 연결 된 현재 보유 `Module::GenericReleaseNotifier` 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   

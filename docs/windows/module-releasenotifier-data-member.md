@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20e3ab1df91c279951b865f9a2d10804c7dbfd1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c074de0bd1a736d56979910d2123ca459848a40
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876945"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606490"
 ---
 # <a name="modulereleasenotifier-data-member"></a>Module::releaseNotifier_ 데이터 멤버
-ReleaseNotifier 개체에 대한 포인터를 보유합니다.  
+에 대 한 포인터를 보유 한 `ReleaseNotifier` 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   

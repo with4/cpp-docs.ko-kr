@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3ba58e08bac36d905fbf874546d7791f2aa3fcb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e850c90ef873e64352ace64ff680cd93474a4a1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882010"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606425"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier 클래스
 현재 모듈의 마지막 개체가 해제될 때 이벤트 처리기를 호출합니다. 이벤트 처리기는 람다, 함수 또는 함수 포인터에 의해 지정됩니다.  
@@ -34,8 +34,8 @@ template<typename T>
 class GenericReleaseNotifier : public ReleaseNotifier;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T`  
+### <a name="parameters"></a>매개 변수  
+ *T*  
  이벤트 처리기의 위치를 포함하는 데이터 멤버 형식입니다.  
   
 ## <a name="members"></a>멤버  
@@ -44,19 +44,19 @@ class GenericReleaseNotifier : public ReleaseNotifier;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Module::GenericReleaseNotifier::GenericReleaseNotifier 생성자](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Module::GenericReleaseNotifier 클래스의 새 인스턴스를 초기화합니다.|  
+|[Module::GenericReleaseNotifier::GenericReleaseNotifier 생성자](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|새 인스턴스를 초기화 합니다 **module:: genericreleasenotifier** 클래스입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[Module::GenericReleaseNotifier::Invoke 메서드](../windows/module-genericreleasenotifier-invoke-method.md)|현재 Module::GenericReleaseNotifier 개체에 연결된 이벤트 처리기를 호출합니다.|  
+|[Module::GenericReleaseNotifier::Invoke 메서드](../windows/module-genericreleasenotifier-invoke-method.md)|현재 연결 된 이벤트 처리기를 호출 **module:: genericreleasenotifier** 개체입니다.|  
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
-|[Module::GenericReleaseNotifier::callback_ 데이터 멤버](../windows/module-genericreleasenotifier-callback-data-member.md)|현재 Module::GenericReleaseNotifier 개체에 연결된 람다, 함수 또는 함수 포인터 이벤트 처리기를 보유합니다.|  
+|[Module::GenericReleaseNotifier::callback_ 데이터 멤버](../windows/module-genericreleasenotifier-callback-data-member.md)|람다, 함수 또는 함수 포인터 이벤트 처리기에 연결 된 현재 보유 **module:: genericreleasenotifier** 개체입니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `ReleaseNotifier`  

@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cb730163b9048005d3af64bb42ae9113681d52b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c09ae7e750a6372dd622f251a3b512e4ea67ef4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874020"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606438"
 ---
 # <a name="in-c"></a>in(C++)
-매개 변수가 호출된 된 프로시저를 호출 하는 프로시저에서 전달 하도록 임을 나타냅니다.  
+매개 변수가 호출된 된 프로시저를 호출 하는 프로시저에서 전달할 임을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [in]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **에** c + + 특성에 동일한 기능을는 [에](http://msdn.microsoft.com/library/windows/desktop/aa367051) MIDL 특성입니다.  
+ **에서** c + + 특성에 동일한 기능을 합니다 [에서](http://msdn.microsoft.com/library/windows/desktop/aa367051) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 참조 [바인딩 가능한](../windows/bindable.md) 사용 하는 방법의 예 **에서**합니다.  
+## <a name="example"></a>예  
+ 참조 [bindable](../windows/bindable.md) 사용 하는 방법의 예 **에서**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -59,5 +57,5 @@ ms.locfileid: "33874020"
  [매개 변수 특성](../windows/parameter-attributes.md)   
  [메서드 특성](../windows/method-attributes.md)   
  [defaultvalue](../windows/defaultvalue.md)   
- [id](../windows/id.md)   
+ [Id](../windows/id.md)   
  [out](../windows/out-cpp.md)   

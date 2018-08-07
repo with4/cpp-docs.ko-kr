@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c002dd64049006c8ee74c709c585a3a9d0f253a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c997b4221dee913a6eaad55f6f114b0ad9d820e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873981"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606542"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject 메서드
 다른 응용 프로그램이 COM 개체에 연결할 수 있도록 이 개체를 하나 이상 등록합니다.  
@@ -39,20 +39,20 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
   
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `serverName`  
+### <a name="parameters"></a>매개 변수  
+ *서버 이름*  
  서버의 정규화된 이름입니다.  
   
- `clsids`  
+ *clsid*  
  등록할 CLSID의 배열입니다.  
   
- `factories`  
+ *팩터리*  
  가용성을 게시하고 있는 클래스 개체의 IUnknown 인터페이스 배열입니다.  
   
- `cookies`  
+ *쿠키*  
  작업이 완료되면 등록된 클래스 개체를 식별하는 값에 대한 포인터 배열입니다. 이러한 값은 나중에 등록을 해지하는 데 사용됩니다.  
   
- `count`  
+ *count*  
  등록할 CLSID 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
@@ -61,7 +61,7 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 ## <a name="remarks"></a>설명  
  COM 개체는 CLSCTX 열거형의 CLSCTX_LOCAL_SERVER 열거자를 사용하여 등록됩니다.  
   
- 등록된 개체에 대한 연결 유형은 현재 `comflag` 템플릿 매개 변수 및 REGCLS 열거형의 REGCLS_SUSPENDED 열거자의 조합으로 지정됩니다.  
+ 현재는 결합 하 여 등록된 된 개체에는 연결 유형을 지정 *comflag* 템플릿 매개 변수 및 REGCLS 열거형의 열거자입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** module.h  

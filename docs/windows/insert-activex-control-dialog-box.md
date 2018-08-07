@@ -18,25 +18,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d2e0b25b7457ed11e297c3a4793bee4c93fc481d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7bbf381170da99a17ee8c701d8d3f3251c88729d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877153"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607126"
 ---
 # <a name="insert-activex-control-dialog-box"></a>ActiveX 컨트롤 삽입 대화 상자
-이 대화 상자를 사용 하면 [대화 상자에 ActiveX 컨트롤 삽입](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md) 사용 하는 동안는 [대화 상자 편집기](../windows/dialog-editor.md)합니다.  
+이 대화 상자를 사용 하면 수 있습니다 [대화 상자에 ActiveX 컨트롤 삽입](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md) 사용 하는 동안 합니다 [대화 상자 편집기](../windows/dialog-editor.md)합니다.  
   
  **ActiveX 컨트롤**  
- Activex 컨트롤의 목록을 표시합니다. 이 대화 상자에서 컨트롤을 삽입 하는 래퍼 클래스를 생성 하지 않습니다. 래퍼 클래스를 해야 하는 경우 사용 하 여 [클래스 뷰](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) 새로 만들려면 (자세한 내용은 참조 [클래스 추가](../ide/adding-a-class-visual-cpp.md)). Activex 컨트롤은이 대화 상자에 나타나지 않으면, 공급 업체의 지침에 따라 컨트롤을 설치 하십시오.  
+ Activex 컨트롤의 목록을 표시합니다. 이 대화 상자에서 컨트롤을 삽입 하는 래퍼 클래스를 생성 하지 않습니다. 래퍼 클래스를 해야 하는 경우 사용 하 여 [클래스 뷰](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) 만들려면 (자세한 내용은 참조 하십시오 [클래스를 추가](../ide/adding-a-class-visual-cpp.md)). 이 대화 상자에서 Activex 컨트롤을 없으면 공급 업체의 지침에 따라 컨트롤을 설치 하십시오.  
   
  **Path**  
- ActiveX 컨트롤은 항목이 있는 파일이 표시 됩니다.  
+ ActiveX 컨트롤은 찾을 수 있는 파일이 표시 됩니다.  
   
- 쉬운 액세스를 위해 도구 상자 창에 컨트롤을 배치할 수 있습니다. 자세한 내용은 [도구 상자 대화 상자 사용자 지정](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)을 참조하세요.  
+ 쉬운 액세스를 위해 도구 상자 창에 컨트롤을 배치할 수 있습니다. 자세한 내용은 [도구 상자 사용자 지정 대화 상자](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)합니다.  
   
- 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
+ 관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다. 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 내용은 참조 하세요 [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화 관리 되는 앱의 리소스에 대 한 내용은 참조 하세요 [Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  Win32  
@@ -45,4 +45,3 @@ ms.locfileid: "33877153"
  [도구 상자, 대화 상자 편집기 탭](../windows/dialog-editor-tab-toolbox.md)   
  [리소스 파일](../windows/resource-files-visual-studio.md)   
  [대화 상자의 컨트롤](../windows/controls-in-dialog-boxes.md)
-

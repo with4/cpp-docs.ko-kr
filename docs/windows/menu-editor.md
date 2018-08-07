@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5626e370dbeac9339dd603781e96f64377308899
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6aae190e20776c252b7f40651d5c0bdb13111dab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879440"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606252"
 ---
 # <a name="menu-editor"></a>메뉴 편집기
 메뉴를 통해 논리적이고 찾기 쉬운 방식으로 명령을 정렬할 수 있습니다. 메뉴 편집기를 사용하면 완성된 응용 프로그램과 매우 유사한 메뉴 모음을 직접 활용하여 메뉴를 만들고 편집할 수 있습니다.  
   
- Visual C++ 프로젝트의 경우 메뉴 편집기를 사용하여 다음을 할 수 있습니다.  
+Visual C++ 프로젝트의 경우 메뉴 편집기를 사용하여 다음을 할 수 있습니다.  
   
 -   [메뉴 만들기](../windows/creating-a-menu.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "33879440"
     > [!NOTE]
     >  MFC 라이브러리 프로그램 및 ATL 프로그램의 경우 코드 마법사를 사용하여 코드에 메뉴 명령을 연결할 수 있습니다. 자세한 내용은 [이벤트 추가](../ide/adding-an-event-visual-cpp.md)를 참조하세요.  
   
- 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
+ 관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다. 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 내용은 참조 하세요 [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화 관리 되는 앱의 리소스에 대 한 내용은 참조 하세요 [Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  Win32  
@@ -75,4 +75,3 @@ ms.locfileid: "33879440"
  [사용자 인터페이스 개체 및 명령 Id](../mfc/user-interface-objects-and-command-ids.md)   
  [메뉴](../mfc/menus-mfc.md)   
  [메뉴](http://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)
-

@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fd7e09980d82cdef346202ef8a1fde4d7cb1c66
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c784a0f91a5809ae1880ae6abf5bfa1e45f9a4c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875294"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604923"
 ---
 # <a name="hstringrelease-method"></a>HString::Release 메서드
-원본 문자열 값을 삭제 하 고 현재 HString 개체가 비어 있는 값을 초기화 합니다.  
+원본 문자열 값을 삭제 하 고 현재 초기화 **HString** 개체를 빈 값입니다.  
   
 ## <a name="syntax"></a>구문  
   

@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4bebe74ae855cf303f09dd8798fcceec0df455b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cbdb6a312d6658fc880aa43ffc1205378d3935e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877594"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607652"
 ---
 # <a name="makeandinitialize-function"></a>MakeAndInitialize 함수
-지정된 된 Windows 런타임 클래스를 초기화합니다. 이 함수는 동일한 모듈에 정의 된 구성 요소의 인스턴스를 사용 합니다.  
+지정된 된 Windows 런타임 클래스를 초기화합니다. 이 함수를 사용 하 여 동일한 모듈에 정의 된 구성 요소를 인스턴스화합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,69 +40,69 @@ typename TArg8,
 typename TArg9> HRESULT MakeAndInitialize(_Outptr_result_nullonfailure_ I** ppvObject, TArg1 &&arg1, TArg2 &&arg2, TArg3 &&arg3, TArg4 &&arg4, TArg5 &&arg5, TArg6 &&arg6, TArg7 &&arg7, TArg8 &&arg8, TArg9 &&arg9) throw()  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T`  
- 상속 되는 사용자 지정 클래스 `WRL::RuntimeClass`합니다.  
+### <a name="parameters"></a>매개 변수  
+ *T*  
+ 사용자 지정 클래스에서 상속 되는 `WRL::RuntimeClass`합니다.  
   
- `TArg1`  
- 지정된 된 런타임 클래스에 전달 되는 1 인수 형식입니다.  
+ *TArg1*  
+ 지정된 된 런타임 클래스에 전달 되는 인수 1의 형식입니다.  
   
- `TArg2`  
- 지정된 된 런타임 클래스에 전달 되는 인수 2 형식입니다.  
+ *TArg2*  
+ 지정된 된 런타임 클래스에 전달 되는 2 인수 형식입니다.  
   
- `TArg3`  
- 지정된 된 런타임 클래스에 전달 되는 3 인수 형식입니다.  
+ *TArg3*  
+ 지정된 된 런타임 클래스에 전달 되는 3 번째 인수의 형식입니다.  
   
- `TArg4`  
- 지정된 된 런타임 클래스에 전달 되는 4 인수 형식입니다.  
+ *TArg4*  
+ 지정된 된 런타임 클래스에 전달 되는 4 번째 인수의 형식입니다.  
   
- `TArg5`  
- 지정된 된 런타임 클래스에 전달 되는 5 인수 형식입니다.  
+ *TArg5*  
+ 지정된 된 런타임 클래스에 전달 되는 5 번째 인수의 형식입니다.  
   
- `TArg6`  
- 지정된 된 런타임 클래스에 전달 되는 인수 6 형식입니다.  
+ *TArg6*  
+ 지정된 된 런타임 클래스에 전달 되는 6 번째 인수의 형식입니다.  
   
- `TArg7`  
- 지정된 된 런타임 클래스에 전달 되는 7 인수 형식입니다.  
+ *TArg7*  
+ 지정된 된 런타임 클래스에 전달 되는 7 번째 인수의 형식입니다.  
   
- `TArg8`  
- 지정된 된 런타임 클래스에 전달 되는 8 인수 형식입니다.  
+ *TArg8*  
+ 지정된 된 런타임 클래스에 전달 되는 8 번째 인수의 형식입니다.  
   
- `TArg9`  
- 지정된 된 런타임 클래스에 전달 되는 9 인수 형식입니다.  
+ *TArg9*  
+ 지정된 된 런타임 클래스에 전달 되는 9 번째 인수의 형식입니다.  
   
- `arg1`  
+ *arg1*  
  인수 1 지정된 된 런타임 클래스에 전달 되는입니다.  
   
- `arg2`  
+ *Arg2*  
  인수 2 지정된 된 런타임 클래스에 전달 되는입니다.  
   
- `arg3`  
+ *arg3*  
  인수 3 지정된 된 런타임 클래스에 전달 되는입니다.  
   
- `arg4`  
+ *arg4*  
  인수 4 지정된 된 런타임 클래스에 전달 되는입니다.  
   
- `arg5`  
+ *arg5*  
  인수 5 지정된 된 런타임 클래스에 전달 되는입니다.  
   
- `arg6`  
+ *a r g 6*  
  인수 6 지정된 된 런타임 클래스에 전달 되는입니다.  
   
- `arg7`  
- 인수 7 지정된 된 런타임 클래스에 전달 되는입니다.  
+ *arg7*  
+ 7 전달 된 인수를 지정 된 런타임 클래스입니다.  
   
- `arg8`  
- 인수 8 지정된 된 런타임 클래스에 전달 되는입니다.  
+ *arg8*  
+ 8 전달 된 인수를 지정 된 런타임 클래스입니다.  
   
- `arg9`  
- 인수 9 지정된 된 런타임 클래스에 전달 되는입니다.  
+ *arg9*  
+ 9 전달 된 인수를 지정 된 런타임 클래스입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `HRESULT` 값입니다.  
+ HRESULT 값입니다.  
   
 ## <a name="remarks"></a>설명  
- 참조 [하는 방법: 직접 WRL 구성 요소를 인스턴스화할](../windows/how-to-instantiate-wrl-components-directly.md) 이 함수 간의 차이점을 파악 하 고 [Microsoft::WRL::Make](../windows/make-function.md), 및 예제입니다.  
+ 참조 [방법: 직접 WRL 구성 요소 인스턴스화](../windows/how-to-instantiate-wrl-components-directly.md) 이 함수 간의 차이점을 알아보려면 및 [Microsoft::WRL::Make](../windows/make-function.md), 및 예제입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

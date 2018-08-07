@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c662d4f8752014ca785b63020fc0ef7c97b5306f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f52e81a57909cfb9fa0c52b8e376d33f63fded0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878244"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605008"
 ---
 # <a name="moduleincrementobjectcount-method"></a>Module::IncrementObjectCount 메서드
 모듈에서 추적하는 개체 수를 늘립니다.  
@@ -41,5 +41,5 @@ virtual long IncrementObjectCount();
   
  **네임스페이스:** Microsoft::WRL
  
- ## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고 항목
  [Module 클래스](../windows/module-class.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0e8d387dea7687ad61d85f975d58aa47489266d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06f8db4c713feb69e0037d10879383411ea07007
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876218"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606265"
 ---
 # <a name="makeallocatorallocate-method"></a>MakeAllocator::Allocate 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,14 +34,14 @@ __forceinline void* Allocate();
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 성공 하면 할당된 된 메모리;에 대 한 포인터 그렇지 않으면 `nullptr`합니다.  
+ 성공 하면 할당된 된 메모리;에 대 한 포인터 그렇지 않으면 **nullptr**합니다.  
   
 ## <a name="remarks"></a>설명  
- 메모리를 할당 하 고 현재 MakeAllocator 개체와 연결 합니다.  
+ 메모리를 할당 하 고 현재 연결 **MakeAllocator** 개체입니다.  
   
- 할당 된 메모리의 크기는 현재 MakeAllocator 템플릿 매개 변수로 지정 된 형식의 크기입니다.  
+ 할당된 된 메모리의 크기는 현재 지정 된 형식의 크기 **MakeAllocator** 템플릿 매개 변수입니다.  
   
- 개발자는 서로 다른 메모리 할당 모델을 구현 하 고 Allocate() 메서드만 재정의 해야 합니다.  
+ 개발자만 재정의 해야 합니다 **Allocate()** 다른 메모리 할당 모델을 구현 하는 방법입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

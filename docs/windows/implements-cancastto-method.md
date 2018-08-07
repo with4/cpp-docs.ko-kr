@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4fd6e6736c74e1ce895031e17c1d5268eb4ce646
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53b17558998812895ece4b47f5de03700e502b8e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877075"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608945"
 ---
 # <a name="implementscancastto-method"></a>Implements::CanCastTo 메서드
 지정된 된 인터페이스에 대 한 포인터를 가져옵니다.  
@@ -36,18 +36,18 @@ __forceinline HRESULT CanCastTo(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `riid`  
+### <a name="parameters"></a>매개 변수  
+ *riid*  
  인터페이스 ID에 대 한 참조  
   
- `ppv`  
- 성공 하면 인터페이스에 대 한 포인터에 지정 된 `riid`합니다.  
+ *ppv*  
+ 성공 하면 인터페이스에 대 한 포인터를 지정 *riid*합니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공 하면 s_ok이 고 그렇지 않으면 E_NOINTERFACE 같은 오류를 나타내는 HRESULT입니다.  
   
 ## <a name="remarks"></a>설명  
- 이것이 QueryInterface 작업을 수행 하는 내부 도우미 함수입니다.  
+ QueryInterface 작업을 수행 하는 내부 도우미 함수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

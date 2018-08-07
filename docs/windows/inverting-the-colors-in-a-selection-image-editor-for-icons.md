@@ -20,23 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f29c9698a14d5cd8773d12a1719614e19ca67c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c187f0fac784bdd0c162334abcfdc23f8a6c1804
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874082"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608919"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>선택 영역에서 색 반전(아이콘에 대한 이미지 편집기)
 이미지 편집기에서는 이미지가 반전된 색으로 표시되는 방식을 알 수 있도록 이미지의 선택한 부분에서 색을 반전하는 편리한 방법을 제공합니다.  
   
 ### <a name="to-invert-colors-in-the-current-selection"></a>현재 선택 영역의 색을 반전하려면  
   
-1.  에 **이미지** 메뉴를 클릭 하 여 **색 반전**합니다.  
+1.  에 **이미지** 메뉴에서 클릭 **색 반전**합니다.  
   
-
-  
- 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
  없음  
   

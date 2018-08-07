@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c309c97b9c9ce057ca67ab4b5d729c61d803ea5a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87f51d39bf1ff8c7d4271797dcaa23278ac2e747
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888426"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608445"
 ---
 # <a name="runtimeclassgetiids-method"></a>RuntimeClass::GetIids 메서드
-RuntimeClass 개체에서 구현되는 인터페이스 ID를 포함할 수 있는 배열을 가져옵니다.  
+인터페이스는 현재 구현 하는 Id를 포함할 수 있는 배열을 가져옵니다 **RuntimeClass** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,11 +37,11 @@ STDMETHOD(
    _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `iidCount`  
- 이 작업이 완료될 때 배열 `iids`의 총 요소 수입니다.  
+### <a name="parameters"></a>매개 변수  
+ *iidCount*  
+ 이 작업이 완료 되 면 배열에 있는 요소의 총 *iid*합니다.  
   
- `iids`  
+ *iid*  
  이 작업이 완료될 때 인터페이스 ID 배열에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  

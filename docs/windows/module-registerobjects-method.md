@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 986dcfff49529eedd8d495f4c37e19fa2b6cb8bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdaa1b23bbefb64071e5f1f330c8708f9f9516ad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875346"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605268"
 ---
 # <a name="moduleregisterobjects-method"></a>Module::RegisterObjects 메서드
 다른 응용 프로그램에 연결할 수 있도록 COM 또는 Windows 런타임 개체를 등록 합니다.  
@@ -35,11 +35,11 @@ HRESULT RegisterObjects(
    const wchar_t* serverName);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `module`  
+### <a name="parameters"></a>매개 변수  
+ *모듈*  
  COM 또는 Windows 런타임 개체의 배열입니다.  
   
- `serverName`  
+ *서버 이름*  
  개체를 생성한 서버의 이름입니다.  
   
 ## <a name="return-value"></a>반환 값  

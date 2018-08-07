@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfc64a64a0fc08d417117e46bc7537a4e2ebf4ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f68e51de101ad8ef7adfb4d9ad061a66071ef48
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877049"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605433"
 ---
 # <a name="modulereleasenotifierrelease"></a>Module::ReleaseNotifier::Release
-`true`의 매개 변수로 개체를 생성한 경우 현재 Module::ReleaseNotifier 개체를 삭제합니다.  
+현재 삭제 **module:: releasenotifier** 개체의 매개 변수를 사용 하 여 생성 된 경우 개체 **true**합니다.  
   
 ## <a name="syntax"></a>구문  
   

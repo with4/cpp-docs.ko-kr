@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd3ea56386cadc638fd0234993ef6a8a0f5eb2be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2de0d40a4b506da2cec36719b8fa2fe9c22108d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881831"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604215"
 ---
 # <a name="operatorlt-operator-microsoftwrl"></a>연산자&lt; 연산자 (microsoft:: wrl)
-한 개체의 주소 다른 보다 작은 인지 여부를 확인 합니다.  
+한 개체의 주소를 다른 미만 인지 확인 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,15 +34,15 @@ template<class T, class U>
 bool operator<(const Details::ComPtrRef<ComPtr<T>>& a, const Details::ComPtrRef<ComPtr<U>>& b) throw();  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `a`  
+### <a name="parameters"></a>매개 변수  
+ *a*  
  왼쪽 개체입니다.  
   
- `b`  
+ *b*  
  오른쪽 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true` 하는 경우의 주소 `a` 의 주소 보다 작으면 `b`, 그렇지 않으면 `false`합니다.  
+ **true** 경우 주소의 *는* 의 주소 보다 작습니다 *b*고, 그렇지 않으면 **false**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

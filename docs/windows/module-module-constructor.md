@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b31e9f1e4536bc124bba359ece10217ef8b7f253
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 207b1006aeb57d9c16c09f5d8101a7f64b2cb85b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875255"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608721"
 ---
 # <a name="modulemodule-constructor"></a>Module::Module 생성자
-Module 클래스의 새 인스턴스를 초기화합니다.  
+새 인스턴스를 초기화 합니다 **모듈** 클래스입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +34,7 @@ Module();
 ```  
   
 ## <a name="remarks"></a>설명  
- 이 생성자가 보호되고 `new` 키워드로 호출할 수 없습니다. 대신, 호출 [module:: getmodule 메서드](../windows/module-getmodule-method.md) 또는 [module:: create 메서드](../windows/module-create-method.md)합니다.  
+ 이 생성자는 보호 되 고 사용 하 여 호출할 수 없습니다는 **새** 키워드입니다. 대신, 호출 [module:: getmodule 메서드](../windows/module-getmodule-method.md) 하거나 [module:: create 메서드](../windows/module-create-method.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** module.h  

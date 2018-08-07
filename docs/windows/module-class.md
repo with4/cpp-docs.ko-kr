@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2af8fa5bbafa76ab13f14d1a10e040a38bc6e2fb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4c437035713634736a02afbce1325d14ba18229
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880584"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604413"
 ---
 # <a name="module-class"></a>Module 클래스
 관련된 개체의 컬렉션을 나타냅니다.  
@@ -30,7 +30,6 @@ ms.locfileid: "33880584"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 template<ModuleType moduleType>  
 class Module;  
   
@@ -41,31 +40,31 @@ template<>
 class Module<OutOfProc> : public Module<InProc>;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `moduleType`  
- 하나 이상의 조합이 [ModuleType](../windows/moduletype-enumeration.md) 열거형 값입니다.  
+### <a name="parameters"></a>매개 변수  
+ *moduleType*  
+ 하나 이상의 조합 [ModuleType](../windows/moduletype-enumeration.md) 열거형 값입니다.  
   
 ## <a name="members"></a>멤버  
   
-### <a name="protected-classes"></a>Protected 클래스  
+### <a name="protected-classes"></a>보호 된 클래스  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[Module::GenericReleaseNotifier 클래스](../windows/module-genericreleasenotifier-class.md)|현재 모듈의 마지막 개체가 해제될 때 이벤트 처리기를 호출합니다. 이벤트 처리기는 람다, 함수 또는 함수 포인터에 의해 지정됩니다.|  
-|[Module::MethodReleaseNotifier 클래스](../windows/module-methodreleasenotifier-class.md)|현재 모듈의 마지막 개체가 해제될 때 이벤트 처리기를 호출합니다. 이벤트 처리기는 멤버의 포인터-에-a-메서드 멤버 및 개체에서 지정 됩니다.|  
+|[Module::MethodReleaseNotifier 클래스](../windows/module-methodreleasenotifier-class.md)|현재 모듈의 마지막 개체가 해제될 때 이벤트 처리기를 호출합니다. 이벤트 처리기 개체와 해당 포인터를-a-메서드 멤버 지정 됩니다.|  
 |[Module::ReleaseNotifier 클래스](../windows/module-releasenotifier-class.md)|모듈의 마지막 개체가 해제될 때 이벤트 처리기를 호출합니다.|  
   
 ### <a name="public-constructors"></a>Public 생성자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[Module::~Module 소멸자](../windows/module-tilde-module-destructor.md)|Module 클래스의 현재 인스턴스 초기화를 해제합니다.|  
+|[Module::~Module 소멸자](../windows/module-tilde-module-destructor.md)|현재 인스턴스 초기화를 해제 합니다 **모듈** 클래스입니다.|  
   
 ### <a name="protected-constructors"></a>Protected 생성자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[Module::Module 생성자](../windows/module-module-constructor.md)|Module 클래스의 새 인스턴스를 초기화합니다.|  
+|[Module::Module 생성자](../windows/module-module-constructor.md)|새 인스턴스를 초기화 합니다 **모듈** 클래스입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -84,7 +83,7 @@ class Module<OutOfProc> : public Module<InProc>;
 |[Module::Terminate 메서드](../windows/module-terminate-method.md)|모듈에 의해 인스턴스화되는 모든 팩터리가 종료됩니다.|  
 |[Module::UnregisterCOMObject 메서드](../windows/module-unregistercomobject-method.md)|다른 응용 프로그램에서 COM 개체에 연결할 수 없도록 하나 이상의 COM 개체의 등록을 취소합니다.|  
 |[Module::UnregisterObjects 메서드](../windows/module-unregisterobjects-method.md)|다른 응용 프로그램에서 지정된 모듈의 개체에 연결할 수 없도록 이 개체의 등록을 취소합니다.|  
-|[Module::UnregisterWinRTObject 메서드](../windows/module-unregisterwinrtobject-method.md)|다른 응용 프로그램에 연결할 수 있도록 하나 이상의 Windows 런타임 개체를 등록 취소 합니다.|  
+|[Module::UnregisterWinRTObject 메서드](../windows/module-unregisterwinrtobject-method.md)|다른 응용 프로그램과 연결할 수 있도록 하나 이상의 Windows 런타임 개체를 등록 취소 합니다.|  
   
 ### <a name="protected-methods"></a>보호된 메서드  
   
@@ -94,18 +93,18 @@ class Module<OutOfProc> : public Module<InProc>;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
-|[Module::objectCount_ 데이터 멤버](../windows/module-objectcount-data-member.md)|추적으로 생성 된 클래스 수는 [확인](../windows/make-function.md) 함수입니다.|  
+|[Module::objectCount_ 데이터 멤버](../windows/module-objectcount-data-member.md)|얼마나 많은 클래스가 사용 하 여 만든 추적 합니다는 [있도록](../windows/make-function.md) 함수입니다.|  
 |[Module::releaseNotifier_ 데이터 멤버](../windows/module-releasenotifier-data-member.md)|ReleaseNotifier 개체에 대한 포인터를 보유합니다.|  
   
 ### <a name="macros"></a>매크로  
   
 |||  
 |-|-|  
-|[ActivatableClass](../windows/activatableclass-macros.md)|지정된 된 클래스의 인스턴스를 만들 수는 팩터리를 포함 하는 내부 캐시를 채웁니다. 이 매크로 기본 팩터리 및 그룹 ID 매개 변수를 지정합니다.|  
-|[ActivatableClassWithFactory](../windows/activatableclass-macros.md)|지정된 된 클래스의 인스턴스를 만들 수는 팩터리를 포함 하는 내부 캐시를 채웁니다. 이 매크로 사용 하면 특정 팩터리 매개 변수를 지정할 수 있습니다.|  
-|[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)|지정된 된 클래스의 인스턴스를 만들 수는 팩터리를 포함 하는 내부 캐시를 채웁니다. 이 매크로 사용 하면 특정 팩터리 및 그룹 ID 매개 변수를 지정할 수 있습니다.|  
+|[ActivatableClass](../windows/activatableclass-macros.md)|지정된 된 클래스의 인스턴스를 만들 수 있는 팩터리를 포함 하는 내부 캐시를 채웁니다. 이 매크로 기본 팩터리 및 그룹 ID 매개 변수를 지정합니다.|  
+|[ActivatableClassWithFactory](../windows/activatableclass-macros.md)|지정된 된 클래스의 인스턴스를 만들 수 있는 팩터리를 포함 하는 내부 캐시를 채웁니다. 이 매크로 사용 하면 특정 factory 매개 변수를 지정할 수 있습니다.|  
+|[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)|지정된 된 클래스의 인스턴스를 만들 수 있는 팩터리를 포함 하는 내부 캐시를 채웁니다. 이 매크로 사용 하면 특정 팩터리 및 그룹 ID 매개 변수를 지정할 수 있습니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `ModuleBase`  

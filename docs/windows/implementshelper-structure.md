@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 58f27e418946987633f771bc8d2c3224bc2cd7fd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5e5da95e6cfb276704b5cd6150e4abc2921a5701
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875941"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605619"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 구조체
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -38,20 +38,20 @@ template <
 friend struct Details::ImplementsHelper;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `RuntimeClassFlagsT`  
- 플래그의 하나 이상 지정 하는 필드 [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거자입니다.  
+### <a name="parameters"></a>매개 변수  
+ *RuntimeClassFlagsT*  
+ 플래그 중 하나 이상 지정 하는 필드 [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거자입니다.  
   
- `ILst`  
- 인터페이스 Id의 목록입니다.  
+ *ILst*  
+ 목록 인터페이스 Id입니다.  
   
- `IsDelegateToClass`  
- 지정 `true` 구현의 현재 인스턴스는 기본 클래스에 있는 첫 번째 인터페이스 ID의 경우 `ILst`, 그렇지 않으면 `false`합니다.  
+ *IsDelegateToClass*  
+ 지정 **true** 하는 경우 현재 인스턴스의 `Implements` 첫 번째 인터페이스 ID의 기본 클래스인 *ILst*고, 그렇지 않으면 **false**합니다.  
   
 ## <a name="remarks"></a>설명  
- 구현에 유용한는 [구현](../windows/implements-structure.md) 구조입니다.  
+ 구현에 유용한 합니다 [구현](../windows/implements-structure.md) 구조입니다.  
   
- 이 템플릿은 인터페이스의 목록을 트래버스로 기본 클래스로 및 QueryInterface를 사용 하도록 설정 하는 데 필요한 정보로 추가 합니다.  
+ 이 템플릿은 인터페이스의 목록을 트래버스 및 QueryInterface를 사용 하도록 설정 하는 데 필요한 정보 및 기본 클래스로 추가 합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -64,5 +64,5 @@ friend struct Details::ImplementsHelper;
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>참고 항목  
- [참조 (Windows 런타임 라이브러리)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [참조 (Windows 런타임 라이브러리)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)   
  [Microsoft::WRL::Details 네임스페이스](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: '아이콘 및 커서: 디스플레이 장치 (아이콘에 대 한 이미지 편집기)에 대 한 이미지 리소스 | Microsoft Docs'
+title: '아이콘 및 커서: 디스플레이 장치용 (아이콘에 대 한 이미지 편집기) 이미지 리소스 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a977629cbae140afa1463a7765f193a7519e1f68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 384db46d495b342d40dd4f7588583c5b6048810c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881912"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604618"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>아이콘 및 커서: 디스플레이 장치용 이미지 리소스(아이콘에 대한 이미지 편집기)
 아이콘 및 커서는 다양한 유형의 디스플레이 장치에 맞는 다양한 크기 및 색 구성표의 여러 이미지를 포함할 수 있는 그래픽 리소스입니다. 또한 커서에는 Windows에서 해당 위치를 추적하는 데 사용하는 위치인 "핫스팟"이 있습니다. 비트맵 및 기타 이미지와 마찬가지로 아이콘과 커서는 모두 이미지 편집기를 사용하여 생성하고 편집할 수 있습니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "33881912"
   
 -   [커서의 핫스팟 설정](../windows/setting-a-cursor-s-hot-spot-image-editor-for-icons.md)  
   
- 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
+ 관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다. 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 내용은 참조 하세요 [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화 관리 되는 앱의 리소스에 대 한 내용은 참조 하세요 [Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  없음  
@@ -84,4 +84,3 @@ ms.locfileid: "33881912"
  [아이콘에 대한 이미지 편집기](../windows/image-editor-for-icons.md)   
  [아이콘](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
  [커서](http://msdn.microsoft.com/library/windows/desktop/ms646970)
-

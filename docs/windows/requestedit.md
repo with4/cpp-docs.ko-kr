@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d741494d33cba7b1d19e2ce081bad35eaaf283e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a9b0102ad6ba7b11ea2f0c738983385ffda632ca
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878257"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606477"
 ---
 # <a name="requestedit"></a>requestedit
-속성을 지원 하는지 나타냅니다는 **OnRequestEdit** 알림입니다.  
+속성을 지원함을 나타냅니다는 `OnRequestEdit` 알림.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [requestedit]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **requestedit** c + + 특성에 동일한 기능을는 [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) MIDL 특성입니다.  
+ 합니다 **requestedit** c + + 특성에 동일한 기능을 합니다 [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 예를 참조 [바인딩 가능한](../windows/bindable.md) 의 샘플 사용에 대 한 **requestedit**합니다.  
+## <a name="example"></a>예  
+ 예를 참조 하세요 [bindable](../windows/bindable.md) 의 샘플 사용에 대 한 **requestedit**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

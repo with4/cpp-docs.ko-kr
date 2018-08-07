@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b20dac5f189a51a1610da45e43e03e51ff1c3610
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0ebf8efb556aef4fbd5048fa1930f2d98a01410
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876165"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605726"
 ---
 # <a name="mixin-structure"></a>MixIn 구조체
 런타임 클래스가 Windows 런타임 인터페이스에서 파생되었는지 확인한 다음 있는 경우 클래식 COM 인터페이스를 확인합니다.  
@@ -39,18 +39,18 @@ template<
 struct MixIn;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `Derived`  
- 파생 된 형식에서 [구현](../windows/implements-structure.md) 구조입니다.  
+### <a name="parameters"></a>매개 변수  
+ *파생 된*  
+ 형식에서 파생 된 [구현](../windows/implements-structure.md) 구조입니다.  
   
- `MixInType`  
+ *MixInType*  
  기본 형식입니다.  
   
- `hasImplements`  
- `true`이 현재 구현 기본 형식으로 파생되면 `MixInType`이고, 그렇지 않으면 `false`입니다.  
+ *hasImplements*  
+ **true** 하는 경우 *MixInType* 는 현재 구현에서 파생 된 기본 형식입니다. **false** 그렇지 않은 경우.  
   
 ## <a name="remarks"></a>설명  
- Windows 런타임과 클래스 COM 인터페이스에서 파생 된 클래스는 클래스 선언 목록 다른 모든 Windows 런타임 인터페이스를 먼저 나열 되어야 하 고 모든 클래식 COM 인터페이스입니다. MixIn는 인터페이스가 올바른 순서로 지정되는지 확인합니다.  
+ Windows 런타임 및 COM 클래스 인터페이스에서 파생 된 클래스는, 클래스 선언 목록에는 모든 Windows 런타임 인터페이스 먼저 나열 해야 합니다 하 고 모든 클래식 COM 인터페이스입니다. **MixIn** 인터페이스가 올바른 순서로 지정 되어 있는지 확인 합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `MixIn`  

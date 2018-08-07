@@ -19,16 +19,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef3c1d11c0f814699ca1492f7ec1fb49c43c3d76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 744bf034572745cd88a35f47a1ca2da03e900fd8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892178"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606659"
 ---
 # <a name="safeintexceptionsafeintexception"></a>SafeIntException::SafeIntException
-
-          `SafeIntException` 개체를 만듭니다.  
+만듭니다는 **SafeIntException** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,12 +39,12 @@ SafeIntException(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- [in] `code`  
+### <a name="parameters"></a>매개 변수  
+ [in] *코드*  
  발생 한 오류를 설명 하는 열거형된 데이터 값입니다.  
   
 ## <a name="remarks"></a>설명  
- 에 가능한 값은 `code` Safeint.h 파일에 정의 됩니다. 편의 위해 사용할 수 있는 값은 아래에 나열 되어 있습니다.  
+ 가능한 값에 대 한 *코드* Safeint.h 파일에 정의 됩니다. 편의 위해 가능한 값도 여기에 나와 있습니다.  
   
 -   `SafeIntNoError`  
   
@@ -56,7 +55,7 @@ SafeIntException(
 ## <a name="requirements"></a>요구 사항  
  **헤더:** safeint.h  
   
- **Namespace:** msl::utilities  
+ **Namespace:** msl:: utilities  
   
 ## <a name="see-also"></a>참고 항목  
  [SafeInt 라이브러리](../windows/safeint-library.md)   

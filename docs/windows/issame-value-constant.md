@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aaf248622b6306af1a3eeebb258b296be43448da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e9d1ae2b4ea4ad4769a770d503ff8bd82c91a53a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875242"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608789"
 ---
 # <a name="issamevalue-constant"></a>IsSame::value 상수
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -30,7 +30,6 @@ WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습
 ## <a name="syntax"></a>구문  
   
 ```  
-  
   template <typename T1, typename T2>  
 struct IsSame  
 {  
@@ -42,13 +41,12 @@ struct IsSame<T1, T1>
 {  
     static const bool value = true;  
 };  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- 한 형식이 다른 동일 인지를 나타냅니다.  
+ 한 형식이 다른 동일한 인지 여부를 나타냅니다.  
   
- `value` **true** 같으면 템플릿 매개 변수, 및 **false** 템플릿 매개 변수는 서로 다른 경우.  
+ `value` 됩니다 **true** 같으면 템플릿 매개 변수, 및 **false** 템플릿 매개 변수는 서로 다른 경우.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** internal.h  

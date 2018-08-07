@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cef979ae284a303b120df7d14ae71f311498423
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 508c9a5d34fa8e9c4fa339e9917ae069874159ad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882344"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608380"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper 함수
-지정된 된 인수 형식에서 파생 되었는지 확인는 `IUnknown` 인터페이스입니다.  
+지정 된 인수의 형식에서 파생 되는 확인 된 `IUnknown` 인터페이스입니다.  
   
 > [!IMPORTANT]
->  이 템플릿 특수화 WRL 인프라를 지원 하며 사용자 코드에서 직접 사용할 수 없습니다. 사용 하 여 [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) 대신 합니다.  
+>  이 템플릿 특수화 WRL 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다. 사용 하 여 [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) 대신 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,20 +40,20 @@ void** IID_PPV_ARGS_Helper(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `T`  
- 인수의 형식은 `pp`합니다.  
+ *T*  
+ 인수의 형식은 *pp*합니다.  
   
- `pp`  
+ *pp*  
  이중 간접 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 인수 `pp` 에 대 한 포인터-에-a-포인터 캐스팅 `void`합니다.  
+ 인수 *pp* 에 대 한 포인터-에-a-포인터로 캐스팅 **void**합니다.  
   
 ## <a name="remarks"></a>설명  
- 컴파일 타임 오류가 발생 템플릿 매개 변수 `T` 에서 파생 되 지도 `IUnknown`합니다.  
+ 컴파일 타임 오류가 생성 됩니다 템플릿 매개 변수 *T* 에서 파생 되지 `IUnknown`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  
   
 ## <a name="see-also"></a>참고 항목  
- [참조 (Windows 런타임 라이브러리)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)
+ [참조 (Windows 런타임 라이브러리)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)

@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8844a4770d0a4746c9d9de32a593d0770dcc9a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878514"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606516"
 ---
 # <a name="idlquote"></a>idl_quote
-Visual c + +의 현재 버전에서 지원 되지 않는 IDL 구문을 사용할 수 있습니다 및 생성된 된.idl 파일을 통과 하도록 합니다.  
+Visual c + +의 현재 버전에서 지원 되지 않는 IDL 구문을 사용할 수 있습니다 하 고 생성된 된.idl 파일을 통과 하도록 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ idl_quote(  
+[ idl_quote(  
    text  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
  *텍스트*  
- Visual c + + 컴파일러는 컴파일러 오류를 반환 하지 않고 생성된 된.idl 파일을 통과 하는 특성 이름입니다.  
+ 컴파일러 오류를 반환 하지 않고 생성된 된.idl 파일을 통과 하도록 Visual c + + 컴파일러는 특성 이름입니다.  
   
 ## <a name="remarks"></a>설명  
- 경우는 **idl_quote** (세미콜론으로 닫는 괄호 뒤)를 독립 실행형 특성으로 다음 c + + 특성은 사용 *텍스트* 그대로 병합 된.idl 파일에 배치 됩니다. 경우 **idl_quote** 를 기호를 사용할 경우 *텍스트* 해당 기호에 대 한 특성 블록 내에 배치 됩니다.  
+ 경우는 **idl_quote** c + + 특성 (세미콜론으로 닫는 괄호 뒤), 독립 실행형 특성으로 사용 됩니다 *텍스트* 그대로 병합 된.idl 파일에 배치 됩니다. 하는 경우 **idl_quote** 기호를 사용할 경우 *텍스트* 해당 기호에 대 한 특성 블록 내에 배치 됩니다.  
   
-## <a name="example"></a>예제  
- 다음 코드는 지원 되지 않는 특성을 지정 하는 방법은 보여 줍니다 (사용 하 여 **에**, 지원 되는) 정의 하는 정의 되지 않은.idl 구문을 사용 하는 방법 및:  
+## <a name="example"></a>예  
+ 다음 코드는 지원 되지 않는 특성을 지정할 수는 방법을 보여 줍니다 (사용 하 여 **에서**, 지원 되는) 정의 하는 정의 되지 않은.idl 구문을 사용 하는 방법과:  
   
-```  
+```cpp  
 // cpp_attr_ref_idl_quote.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -79,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- 이 코드는 MYFLOT 및 MYDUB 및 *텍스트* 항목이 생성된 된.idl 파일에 저장 됩니다. *이름* 매개 변수가 강제로 *텍스트* 참조 하는 것 보다 먼저 배치 될 *이름* 생성된 된.idl 파일에 있습니다. *종속성* 매개 변수 앞에 배치 하려면 종속성 목록 정의 강제로 *텍스트* 생성된 된.idl 파일에 있습니다.  
+ 이 코드는 MYFLOT 및 MYDUB 및 *텍스트* 생성된 된.idl 파일에 배치 될 항목입니다. 합니다 *이름을* 매개 변수 *텍스트* 참조 하는 것 보다 먼저 배치할 *이름* 생성된 된.idl 파일에서. 합니다 *종속성* 매개 변수 앞에 배치 해야 하는 종속성 목록 정의가 강제로 *텍스트* 생성된 된.idl 파일에 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

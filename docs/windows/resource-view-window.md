@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b207bfa9236b4e0de1f01f98cc7e83124048a3a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf2c5cb434b07c9323594448a25da7251010bbad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877386"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608311"
 ---
 # <a name="resource-view-window"></a>리소스 뷰 창
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "33877386"
 >  프로젝트에 .rc 파일이 아직 없는 경우 [새 리소스 스크립트 파일 만들기](../windows/how-to-create-a-resource-script-file.md)를 참조하세요.  
   
 > [!TIP]
->  리소스 뷰 창을 마우스 오른쪽 단추로 클릭하여 명령을 바로 가기 메뉴를 시작할 수 있습니다. 제목 표시줄을 두 번 클릭하여 창을 도킹하거나 도킹 해제할 수도 있습니다. 제목 표시줄을 마우스 오른쪽 단추로 클릭하면 창의 동작을 제어할 수 있는 추가 명령이 제공됩니다. 자세한 내용은 참조 [Windows 관리](/visualstudio/ide/customizing-window-layouts-in-visual-studio)합니다.  
+>  리소스 뷰 창을 마우스 오른쪽 단추로 클릭하여 명령을 바로 가기 메뉴를 시작할 수 있습니다. 제목 표시줄을 두 번 클릭하여 창을 도킹하거나 도킹 해제할 수도 있습니다. 제목 표시줄을 마우스 오른쪽 단추로 클릭하면 창의 동작을 제어할 수 있는 추가 명령이 제공됩니다. 자세한 내용은 [Windows 관리](/visualstudio/ide/customizing-window-layouts-in-visual-studio)합니다.  
   
 #### <a name="to-open-the-resource-view-window"></a>리소스 뷰 창을 열려면  
   
@@ -43,11 +43,9 @@ ms.locfileid: "33877386"
   
      \- 또는 -  
   
-2.  키를 눌러 **CTRL + SHIFT + E**합니다.  
+2.  키를 눌러 **Ctrl**+**Shift**+**E**합니다.  
   
-
-  
-### <a name="requirements"></a>요구 사항  
+## <a name="requirements"></a>요구 사항  
  Win32  
   
 ## <a name="see-also"></a>참고 항목  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb7782e44fc8598ca3b806ef922f8d0840765e28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a7549371ba4648f8fcce03a98a021c8027c676e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876458"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605196"
 ---
 # <a name="mutexmutex-constructor"></a>Mutex::Mutex 생성자
-Mutex 클래스의 새 인스턴스를 초기화합니다.  
+새 인스턴스를 초기화 합니다 **뮤텍스** 클래스입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,12 +39,12 @@ Mutex(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `h`  
- 핸들, 핸들에 대한 rvalue 참조, Mutex 개체에 대한 rvalue 참조입니다.  
+### <a name="parameters"></a>매개 변수  
+ *h*  
+ 핸들 또는 rvalue 참조 핸들을 하는 **뮤텍스** 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 첫 번째 생성자는 지정된 핸들에서 Mutex 개체를 초기화합니다. 두 번째 생성자는 지정된 핸들에서 Mutex 개체를 초기화한 다음 뮤텍스의 소유권을 현재 Mutex 개체로 옮깁니다.  
+ 첫 번째 생성자는 초기화 된 **뮤텍스** 지정된 된 핸들에서 개체입니다. 두 번째 생성자는 초기화 된 **뮤텍스** 현재 개체와 지정 된 핸들을 다음 뮤텍스의 소유권 이동 **뮤텍스** 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c570209ff612fb4fcedd77dbae92f72b2744a52
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7bd721d8f1edeedacc04515eef917899ed0c667
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892262"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608484"
 ---
 # <a name="runtimeclassaddref-method"></a>RuntimeClass::AddRef 메서드
-현재 RuntimeClass 개체에 대 한 참조 횟수를 증가 시킵니다.  
+현재 참조 횟수를 증가 시킵니다 **RuntimeClass** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   

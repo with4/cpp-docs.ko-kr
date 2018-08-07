@@ -17,33 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87cdbf66676ed2a3e6054006270b39ad80325857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f670da3ad4858f3c09903f2ed3ec6aa58268180
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881603"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608497"
 ---
 # <a name="nonextensible"></a>nonextensible
-지정 된 `IDispatch` 구현 속성만 포함 및 메서드와 인터페이스 설명에 나열 된 추가 멤버와 런타임 시 확장할 수 없습니다.  
+지정 된 `IDispatch` 구현 속성만 포함 하 고 메서드 인터페이스 설명에 나열 된 런타임 시 추가 멤버를 사용 하 여 확장할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [nonextensible]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **nonextensible** c + + 특성에 동일한 기능을는 [nonextensible](http://msdn.microsoft.com/library/windows/desktop/aa367120) MIDL 특성입니다.  
+ 합니다 **nonextensible** c + + 특성에 동일한 기능을 합니다 [nonextensible](http://msdn.microsoft.com/library/windows/desktop/aa367120) MIDL 특성입니다.  
   
- 사용 하 여 **nonextensible** 도 필요는 [oleautomation](../windows/oleautomation.md) 특성입니다.  
+ 이용 **nonextensible** 도 필요 합니다 [oleautomation](../windows/oleautomation.md) 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드와의 용도 중 하나는 **nonextensible** 특성:  
   
-```  
+```cpp  
 // cpp_attr_ref_nonextensible.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -64,9 +62,9 @@ __interface IFireTabCtrl
   
 |||  
 |-|-|  
-|**적용 대상**|`interface`|  
+|**적용 대상**|**interface**|  
 |**반복 가능**|아니요|  
-|**필수 특성**|**이중** 및 **oleautomation**, 또는 **dispinterface**|  
+|**필수 특성**|`dual` 및 `oleautomation`, 또는 `dispinterface`|  
 |**잘못된 특성**|없음|  
   
  특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  

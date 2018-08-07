@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e30b3ea3c6b791eb654a6fbbe91b3c87353f31c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 673d5b10706580303f179ee453495b581d96eda3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882643"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608337"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference 메서드
-지정 된 문자열 매개 변수에서 HStringReference 개체를 만듭니다.  
+만듭니다는 `HStringReference` 지정 된 문자열 매개 변수에서 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,18 +38,18 @@ template<unsigned int sizeDest>
               unsigned int len);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `sizeDest`  
- 대상 HStringReference 버퍼의 크기를 지정하는 템플릿 매개 변수입니다.  
+### <a name="parameters"></a>매개 변수  
+ *sizeDest*  
+ 대상의 크기를 지정 하는 템플릿 매개 변수 `HStringReference` 버퍼입니다.  
   
- `str`  
+ *str*  
  와이드 문자 문자열에 대한 참조입니다.  
   
- `len`  
- 이 작업에 사용할 `str` 매개 변수 버퍼의 최대 길이입니다. `len` 매개 변수가 지정되지 않으면 전체 `str` 매개 변수가 사용됩니다.  
+ *Len 함수*  
+ 최대 길이 *str* 이 작업에 사용할 매개 변수 버퍼입니다. 경우는 *len* 매개 변수를 지정 하지 않으면 전체 *str* 매개 변수를 사용 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- HStringReference 개체를 해당 값은 지정 된 동일 `str` 매개 변수입니다.  
+ `HStringReference` 개체는 지정 된 대로 동일한 값인 *str* 매개 변수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2a0a37f4ef9fa8f2aa92405b4b2c01d99386555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df603fe8d4c063c014118caf89a74a40e73cbe5b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879583"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607831"
 ---
 # <a name="interfacetraitscancastto-method"></a>InterfaceTraits::CanCastTo 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -30,33 +30,31 @@ WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 template<typename T>  
 static __forceinline bool CanCastTo(  
    _In_ T* ptr,  
    REFIID riid,  
    _Deref_out_ void **ppv  
 );  
-  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `ptr`  
- 형식에 대 한 포인터의 이름입니다.  
+### <a name="parameters"></a>매개 변수  
+ *ptr*  
+ 이름 형식에 대 한 포인터입니다.  
   
- `riid`  
+ *riid*  
  인터페이스 ID의 `Base`합니다.  
   
- `ppv`  
- 이 작업은 성공 하는 경우 `ppv` 로 지정 된 인터페이스를 가리키는 `Base`합니다. 그렇지 않으면 `ppv` 로 설정 된 `nullptr`합니다.  
+ *ppv*  
+ 이 작업에 성공 하면 *ppv* 로 지정 된 인터페이스를 가리키는 `Base`합니다. 그렇지 않으면 *ppv* 로 설정 된 **nullptr**합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true` 이 작업을 완료 하 고 `ptr` 에 대 한 포인터로 캐스팅 `Base`, 그렇지 않으면 `false` 합니다.  
+ **true** 이 작업이 완료 되 고 *ptr* 포인터로 캐스팅 됩니다 `Base`이 고, 그렇지 않으면 **false** 합니다.  
   
 ## <a name="remarks"></a>설명  
- 지정된 된 포인터에 대 한 포인터로 캐스팅 될 수 있는지 여부를 나타냅니다. `Base`합니다.  
+ 지정된 된 포인터에 대 한 포인터로 캐스팅 될 수 있는지 여부를 나타내는 `Base`합니다.  
   
- 에 대 한 자세한 내용은 `Base`, 공용 Typedefs 섹션을 참조 [InterfaceTraits 구조체](../windows/interfacetraits-structure.md)합니다.  
+ 에 대 한 자세한 내용은 `Base`를 참조 합니다 **공용 Typedefs** 섹션 [InterfaceTraits 구조체](../windows/interfacetraits-structure.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  
