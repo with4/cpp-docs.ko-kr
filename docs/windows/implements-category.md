@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6770f8303af63c66f0d1a656c2b36e034cc2be83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11fecff2336163fa4f2e773244bc1ab132a15329
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879037"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603720"
 ---
 # <a name="implementscategory"></a>implements_category
 대상 클래스에서 구현 되는 구성 요소 범주를 지정 합니다.  
@@ -30,25 +30,24 @@ ms.locfileid: "33879037"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ implements_category(  
+[ implements_category(  
    implements_category="uuid"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- **implements_category**  
+### <a name="parameters"></a>매개 변수  
+ *implements_category*  
  구현 된 범주의 ID입니다.  
   
 ## <a name="remarks"></a>설명  
- **implements_category** c + + 특성 대상 클래스에서 구현 되는 구성 요소 범주를 지정 합니다. 범주 맵을 만들고에서 지정한 별도 항목을 추가 하 여 이렇게는 **implements_category** 특성입니다. 자세한 내용은 참조 [구성 요소 범주 및 어떻게 수행 될 작업 이란?](http://msdn.microsoft.com/library/windows/desktop/ms694322)합니다.  
+ 합니다 **implements_category** c + + 특성 대상 클래스에 의해 구현 된 구성 요소 범주를 지정 합니다. 범주 지도 만들고 지정 된 별도 항목을 추가 하 여 이렇게 합니다 **implements_category** 특성입니다. 자세한 내용은 [구성 요소 범주 및 수행할 해당 작동 방법 이란?](http://msdn.microsoft.com/library/windows/desktop/ms694322)합니다.  
   
- 이 특성을 사용하려면 [coclass](../windows/coclass.md), [progid](../windows/progid.md)또는 [vi_progid](../windows/vi-progid.md) 특성(또는 이 중 하나를 암시하는 다른 특성)을 동일한 요소에 적용해야 합니다. 단일 특성을 사용하는 경우 다른 두 특성도 자동으로 적용됩니다. 예를 들어 **progid** 를 적용하면 **vi_progid** 및 **coclass** 도 적용됩니다.  
+ 이 특성을 사용하려면 [coclass](../windows/coclass.md), [progid](../windows/progid.md)또는 [vi_progid](../windows/vi-progid.md) 특성(또는 이 중 하나를 암시하는 다른 특성)을 동일한 요소에 적용해야 합니다. 단일 특성을 사용하는 경우 다른 두 특성도 자동으로 적용됩니다. 예를 들어 있으면 `progid` 적용 됩니다 `vi_progid` 및 `coclass` 도 적용 됩니다.  
   
-## <a name="example"></a>예제  
- 다음 코드는 다음과 같은 개체 컨트롤 범주를 구현 함을 지정 합니다.  
+## <a name="example"></a>예  
+ 다음 코드는 다음 개체가 컨트롤 범주를 구현 하는 것을 지정 합니다.  
   
-```  
+```cpp  
 // cpp_attr_ref_implements_category.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -67,9 +66,9 @@ class CMyClass {};
   
 |||  
 |-|-|  
-|**적용 대상**|**class**, `struct`|  
+|**적용 대상**|**클래스**, **구조체**|  
 |**반복 가능**|예|  
-|**필수 특성**|다음 중 하나: **coclass**, **progid**, 또는 **vi_progid**|  
+|**필수 특성**|다음 중 하나: `coclass`, `progid`, 또는 `vi_progid`|  
 |**잘못된 특성**|없음|  
   
  자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
@@ -78,4 +77,3 @@ class CMyClass {};
  [COM 특성](../windows/com-attributes.md)   
  [클래스 특성](../windows/class-attributes.md)   
  [IMPLEMENTED_CATEGORY](../atl/reference/category-macros.md#implemented_category)   
- 

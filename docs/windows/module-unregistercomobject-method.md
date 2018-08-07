@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4cc44d88f59e18f2c1644e9b27a9214ad32962
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c19e7b5388438b8c3c2359672360e4a2ee3001a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881938"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602632"
 ---
 # <a name="moduleunregistercomobject-method"></a>Module::UnregisterCOMObject 메서드
 다른 응용 프로그램에서 COM 개체에 연결할 수 없도록 하나 이상의 COM 개체의 등록을 취소합니다.  
@@ -36,14 +36,14 @@ virtual HRESULT UnregisterCOMObject(
    unsigned int count  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `serverName`  
+### <a name="parameters"></a>매개 변수  
+ *서버 이름*  
  (사용되지 않음)  
   
- `cookies`  
- 등록 취소한 클래스 개체를 식별하는 값에 대한 포인터 배열입니다. 배열에서 생성 된 [RegisterCOMObject](../windows/module-registercomobject-method.md) 메서드.  
+ *쿠키*  
+ 등록 취소한 클래스 개체를 식별하는 값에 대한 포인터 배열입니다. 배열에서 만든 합니다 [RegisterCOMObject](../windows/module-registercomobject-method.md) 메서드.  
   
- `count`  
+ *count*  
  등록 취소할 클래스 수입니다.  
   
 ## <a name="return-value"></a>반환 값  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50afca04492c29aa526f7a004c6e0f725022e9ba
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a269b7cbab3bba180dfc389075346db3c60e8bf0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876971"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603370"
 ---
 # <a name="makeallocatordetach-method"></a>MakeAllocator::Detach 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,9 +34,9 @@ __forceinline void Detach();
 ```  
   
 ## <a name="remarks"></a>설명  
- 분리가 할당 한 메모리는 [Allocate](../windows/makeallocator-allocate-method.md) 현재 MakeAllocator 개체에서 메서드.  
+ 의해 할당 된 메모리를 분리 합니다 [할당](../windows/makeallocator-allocate-method.md) 현재 메서드에서 **MakeAllocator** 개체입니다.  
   
- Detach()를 호출 하면 모르는 경우 Allocate 메서드에서 제공 하는 메모리를 삭제 해야 합니다.  
+ 호출 하는 경우 **Detach()** 에서 제공한 메모리를 삭제 하는 일을 담당 하는 `Allocate` 메서드.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43ab0a738af4c6bc92d42c0884827b574946d2ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4464d236a85e06bf907f738657a4a0707e14a5e1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892405"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603503"
 ---
 # <a name="runtimeclasstype-enumeration"></a>RuntimeClassType 열거형
 유형을 지정 [RuntimeClass](../windows/runtimeclass-class.md) 지원 되는 인스턴스.  
@@ -40,9 +40,9 @@ enum RuntimeClassType;
 |이름|설명|  
 |----------|-----------------|  
 |`ClassicCom`|클래식 COM 런타임 클래스입니다.|  
-|`Delegate`|에 해당 **ClassicCom**합니다.|  
-|`InhibitFtmBase`|사용 하지 않도록 설정 `FtmBase` 하는 동안 지원 `__WRL_CONFIGURATION_LEGACY__` 정의 되어 있지 않습니다.|  
-|`InhibitWeakReference`|약한 참조 지원을 해제합니다.|  
+|`Delegate`|`ClassicCom`와 같습니다.|  
+|`InhibitFtmBase`|사용 하지 않도록 설정 `FtmBase` 하는 동안 지원을 `__WRL_CONFIGURATION_LEGACY__` 정의 되어 있지 않습니다.|  
+|`InhibitWeakReference`|약한 참조 지원을 사용 하지 않도록 설정 합니다.|  
 |`WinRt`|Windows 런타임 클래스입니다.|  
 |`WinRtClassicComMix`|`WinRt` 및 `ClassicCom`의 조합입니다.|  
   

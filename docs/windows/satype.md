@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a77021cbcf6622701a1025ef33000196ba7bb6d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a5376e0e830654c15dc31522b07ed53af4492bf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888684"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603396"
 ---
 # <a name="satype"></a>satype
-데이터 형식을 지정 된 **SAFEARRAY** 구조입니다.  
+데이터 형식을 지정 합니다 `SAFEARRAY` 구조입니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ satype(  
+[ satype(  
    data_type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *data_type*  
- 데이터 형식에 대 한는 **SAFEARRAY** 인터페이스 메서드에 매개 변수로 전달 되는 데이터 구조입니다.  
+ 데이터에 대 한 입력을 `SAFEARRAY` 인터페이스 메서드에 대 한 매개 변수로 전달 되는 데이터 구조입니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -52,14 +51,14 @@ ms.locfileid: "33888684"
 |**잘못된 특성**|없음|  
   
 ## <a name="remarks"></a>설명  
- **satype** c + + 특성의 데이터 형식을 지정 된 **SAFEARRAY**합니다.  
+ 합니다 **satype** c + + 특성의 데이터 형식 지정을 `SAFEARRAY`입니다.  
   
 > [!NOTE]
->  간접 참조 수준을에서 삭제 되 고 **SAFEARRAY** 생성된 된.idl 파일에서.cpp 파일에서 선언 되는 방법에 대 한 포인터입니다.  
+>  간접 참조 수준을에서 삭제 되는 `SAFEARRAY` 생성된 된.idl 파일에서.cpp 파일에서 선언 하는 방법에 대 한 포인터입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cpp_attr_ref_satype.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

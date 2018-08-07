@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5c16ebda96d5d1c8ff12532e728f32501ea4db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 404c5fc8680089aeac49b0cda655e9cbd0d4ecd9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875502"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603050"
 ---
 # <a name="interfacetraitsverify-method"></a>InterfaceTraits::Verify 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,9 +34,9 @@ __forceinline static void Verify();
 ```  
   
 ## <a name="remarks"></a>설명  
- 자료 제대로 파생 된 것을 확인 합니다.  
+ 확인 `Base` 제대로 파생 됩니다.  
   
- 에 대 한 자세한 내용은 `Base`, 공용 Typedefs 섹션을 참조 [InterfaceTraits 구조체](../windows/interfacetraits-structure.md)합니다.  
+ 에 대 한 자세한 내용은 `Base`에서 공용 Typedefs 섹션을 참조 하세요 [InterfaceTraits 구조체](../windows/interfacetraits-structure.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

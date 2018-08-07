@@ -1,5 +1,5 @@
 ---
-title: 'operator! = 연산자 (microsoft:: wrl) | Microsoft Docs'
+title: '연산자! = 연산자 (microsoft:: wrl) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c972687973cbaa66d4b79a883e8b008cd588e237
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 517184dffac0c35772e61284a18eca764fbb5cc8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876399"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603982"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!= Operator (Microsoft::WRL)
-같지 않음 연산자에 대 한 [ComPtr](../windows/comptr-class.md) 및 [ComPtrRef](../windows/comptrref-class.md) 개체입니다.  
+에 대 한 같지 않음 연산자 [ComPtr](../windows/comptr-class.md) 하 고 [ComPtrRef](../windows/comptrref-class.md) 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,15 +62,15 @@ WRL_NOTHROW bool operator!=(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `a`  
+### <a name="parameters"></a>매개 변수  
+ *a*  
  왼쪽 개체입니다.  
   
- `b`  
+ *b*  
  오른쪽 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true` 개체가 같지 않으면 그렇지 않으면 `false`합니다.  
+ **true 이면** 없으면 개체가 같고, 그렇지 않으면 **false**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

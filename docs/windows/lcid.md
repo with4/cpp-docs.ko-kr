@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c36c4a53dc627af10b6c768cdc9bc9353cbd4877
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 919bf90fad228a3d7b4f574072e5f315da6427d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877256"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602702"
 ---
 # <a name="lcid"></a>lcid
-로캘 식별자는 함수에 전달할 수 있습니다.  
+함수는 로캘 식별자를 전달할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [lcid]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **lcid** 의 기능을 구현 하는 c + + 특성은 [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) MIDL 특성입니다. 사용 하 여 라이브러리 블록에 대 한 로캘을 구현 하려는 경우는 **lcid =** `lcid` 매개 변수를는 [모듈](../windows/module-cpp.md) 특성입니다.  
+ **lcid** 기능을 구현 하는 c + + 특성은 [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) MIDL 특성입니다. 라이브러리 블록에 대 한 로캘을 구현 하려는 경우 사용 합니다 **lcid =** `lcid` 매개 변수를 [모듈](../windows/module-cpp.md) 특성.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cpp_attr_ref_lcid.cpp  
 // compile with: /LD  
 #include <unknwn.h>  

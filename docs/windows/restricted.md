@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1d688d4ebca5d2cc01901f5fe1afaa4536b71bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f79b4e53947e0e87fb70211ca40bc54f4500855f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892880"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602774"
 ---
 # <a name="restricted"></a>restricted
-모듈, 인터페이스 또는 dispinterface의 멤버를 임의로 호출할 수 없도록 지정 합니다.  
+모듈, 인터페이스 또는 dispinterface의 멤버를 임의로 호출할 수 없습니다 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ restricted(  
+[ restricted(  
    interfaces  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `interfaces`  
- 하나 이상의 인터페이스를 COM 개체에서 하지 임의로 호출할 수 있습니다. 이 매개 변수 에서만 유효 클래스에 적용 합니다.  
+### <a name="parameters"></a>매개 변수  
+ *interfaces*  
+ 호출할 수 없습니다 임의로 COM 개체에는 하나 이상의 인터페이스입니다. 이 매개 변수는 클래스에 적용 하는 경우에 유효만 합니다.  
   
 ## <a name="remarks"></a>설명  
- **제한** c + + 특성에 동일한 기능을는 [제한](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 특성입니다.  
+ 합니다 **제한** c + + 특성에 동일한 기능을 합니다 [제한](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 사용 하 여 **제한** 특성:  
   
-```  
+```cpp  
 // cpp_attr_ref_restricted.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -75,9 +74,9 @@ class c : public a, public b
   
 |||  
 |-|-|  
-|**적용 대상**|인터페이스 메서드를 `interface`, **클래스**, `struct`|  
+|**적용 대상**|인터페이스 메서드를 **인터페이스**하십시오 **클래스**, **구조체**|  
 |**반복 가능**|아니요|  
-|**필수 특성**|**coclass** ( **클래스** 또는 `struct`에 적용된 경우)|  
+|**필수 특성**|**coclass** (적용할 때 **클래스** 하거나 **구조체**)|  
 |**잘못된 특성**|없음|  
   
  특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  

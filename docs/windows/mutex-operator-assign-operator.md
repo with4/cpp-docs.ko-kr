@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8791d3c947206be399f475bb8c895b2b5e032133
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 837c8ed508b713f790d1a6a56310705a00f12b3f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875489"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602748"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator= 연산자
-현재 Mutex 개체를 할당 합니다 (이동) 지정 된 뮤텍스 개체입니다.  
+할당 된 (이동) **뮤텍스** 개체를 현재 **뮤텍스** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,15 +35,15 @@ Mutex& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `h`  
- 뮤텍스 개체 rvalue 참조입니다.  
+### <a name="parameters"></a>매개 변수  
+ *h*  
+ rvalue 참조를 **뮤텍스** 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 현재 Mutex 개체에 대 한 참조입니다.  
+ 현재에 대 한 참조가 **뮤텍스** 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 자세한 내용은 참조는 **이동 의미 체계** 섹션 [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)합니다.  
+ 자세한 내용은 참조는 **이동 의미 체계** 부분 [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

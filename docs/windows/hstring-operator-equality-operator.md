@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5386636a348fdf7162e9b6d63f0e6dbc109bd655
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c21e9f79673cc888f8661803a8cc4bb9053870c4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876542"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604566"
 ---
 # <a name="hstringoperator-operator"></a>HString::Operator== 연산자
-두 개의 매개 변수가 같은지 여부를 나타냅니다.  
+두 매개 변수가 같은지 여부를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,18 +47,17 @@ inline bool operator==(
 inline bool operator==(  
                  const HString& lhs,   
                  const HSTRING& rhs) throw()  
-  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `lhs`  
- 비교할 첫 번째 매개 변수입니다. `lhs` HString 또는 HStringReference 개체 또는 HSTRING 핸들 수 있습니다.  
+### <a name="parameters"></a>매개 변수  
+ *lhs*  
+ 비교할 첫 번째 매개 변수입니다. *lhs* 수는 **HString** 또는 `HStringReference` 개체 또는 HSTRING 핸들입니다.  
   
- `rhs`  
- 비교할 두 번째 매개 변수입니다.`rhs` HString 또는 HStringReference 개체 또는 HSTRING 핸들 수 있습니다.  
+ *rhs*  
+ 비교할 두 번째 매개 변수입니다. *rhs* 수는 **HString** 또는 `HStringReference` 개체 또는 HSTRING 핸들입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true` 경우는 `lhs` 및 `rhs` 같고, 그렇지 않으면 매개 변수는 `false`합니다.  
+ **true** 경우는 *lhs* 하 고 *rhs* 매개 변수는 같고, 그렇지 않으면 **false**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  
