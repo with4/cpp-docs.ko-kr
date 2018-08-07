@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107820"
 ---
 # <a name="transactions--mfc-data-access"></a>트랜잭션  (MFC Data Access)
 트랜잭션의 개념은 데이터베이스의 결과 상태가 일련의 작업에 성공한 총 횟수에 따라 달라지는 사례를 처리하기 위해 개발되었습니다. 연속적인 작업을 수행하면 이전 작업의 결과가 수정될 수 있기 때문입니다. 이러한 경우 한 작업이 실패하면 결과 상태가 비활성화 상태가 될 수 있습니다.  

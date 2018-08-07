@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251296"
 ---
 # <a name="compiler-error-c3217"></a>컴파일러 오류 C3217
 'param': 제네릭 매개 변수는 이 선언에서 제약을 받을 수 없습니다.  

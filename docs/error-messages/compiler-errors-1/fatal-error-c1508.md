@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198536"
 ---
 # <a name="fatal-error-c1508"></a>심각한 오류 C1508
 컴파일러 한계: 'function': 인수가 65,535바이트가 넘습니다.  

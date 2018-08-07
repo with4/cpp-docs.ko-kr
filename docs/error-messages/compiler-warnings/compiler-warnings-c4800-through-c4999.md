@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06c4d65fe7b6ab2b0238c3a4e4cd081e2dc011b5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d5fb04d31451ac4c49a0a2c11a3699b8a670a6c4
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704752"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322334"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>컴파일러 경고 C4800 C5999 통해
 
@@ -250,3 +250,4 @@ ms.locfileid: "34704752"
 |컴파일러 경고 (수준 3) C5042|'*선언*': 함수 선언은 블록 범위에서 표준 c + +에서 '인라인'이 지정 된 일 수 없습니다. '인라인' 지정자를 제거 합니다.|
 |컴파일러 경고 (수준 2) C5043|'*사양*': 예외 사양이 이전 선언과 일치 하지 않습니다|
 |컴파일러 경고 (수준 4) C5044|명령줄 옵션에 인수가 *옵션* 경로 가리키는 '*경로*' 존재 하지 않는|
+|[컴파일러 경고 C5045](c5045.md)|컴파일러는 유령 완화 삽입 하지 않은 메모리 로드 /Qspectre 전환 하는 경우 지정한에 대 한|

@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddd48c51e1e9b5d206cefa56e2879dfb3ace3b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c284f5d5fdfee09349cc6eb9cbde38da21918d25
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040963"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl 클래스
 도구 설명에는 구현 하는 컨트롤의 [CMFCPropertyGridCtrl 클래스](../../mfc/reference/cmfcpropertygridctrl-class.md) 사용 하 여 도구 설명을 표시 합니다.  
@@ -73,7 +74,7 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
   
  이 컨트롤을 만듭니다. 및에서 사용 하 여 자동으로 MFC는 [CMFCPropertyGridCtrl 클래스](../../mfc/reference/cmfcpropertygridctrl-class.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는의 개체를 생성 하는 `CMFCPropertyGridToolTipCtrl` 클래스 및 도구 설명 컨트롤을 표시 하는 방법입니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#23](../../mfc/reference/codesnippet/cpp/cmfcpropertygridtooltipctrl-class_1.cpp)]  
@@ -105,7 +106,7 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  부모 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -129,7 +130,7 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `rect`  
+ [out] *rect*  
  도구 설명 컨트롤의 마지막 위치를 포함합니다.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
@@ -147,7 +148,7 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nTextMargin`  
+ [in] *nTextMargin*  
  도구 설명 컨트롤 텍스트 및 도구 설명 창의 테두리 사이의 간격을 지정 합니다. 기본값은 10 픽셀입니다.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
@@ -160,14 +161,14 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `rect`  
+ [in] *rect*  
  Tooltip 컨트롤의 크기와 위치를 지정합니다.  
   
- [in] `strText`  
+ [in] *strText*  
  도구 설명에 표시할 텍스트를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 지정 된 크기와 위치에 도구 설명 컨트롤 표시 `rect`합니다. 이 메서드가 호출 된 마지막 시간 이후 위치, 크기 및 텍스트 변경 되지 않은 경우이 메서드는 영향을 주지 않습니다.  
+ 이 메서드는 지정 된 크기와 위치에 도구 설명 컨트롤 표시 *rect*합니다. 이 메서드가 호출 된 마지막 시간 이후 위치, 크기 및 텍스트 변경 되지 않은 경우이 메서드는 영향을 주지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   

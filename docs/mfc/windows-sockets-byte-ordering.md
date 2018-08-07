@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18fc3f586c7fc8861bfc29dade7b62e741bb0ffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a95725565dee2b25fd7f2e39927fde88c9cddff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956004"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows 소켓: 바이트 순서 지정
 이 문서 및 두 개의 참조 문서에서는 Windows 소켓 프로그래밍의 몇 가지 문제를 설명합니다. 이 문서에서는 바이트 순서 지정에 대해 설명 합니다. 다른 문제는 문서에서 다루지: [Windows 소켓: 차단](../mfc/windows-sockets-blocking.md) 및 [Windows 소켓: 문자열 변환](../mfc/windows-sockets-converting-strings.md)합니다.  
@@ -79,7 +80,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]  
   
- C + +에서는 `struct` 는 기본적으로 클래스와 같은 것입니다. `Message` 구조는 같은 멤버 함수를 가질 수 있습니다는 `Serialize` 위에서 멤버 함수를 선언 합니다. `Serialize` 멤버 함수는 다음과 비슷합니다.  
+ C + +에서는 **구조체** 는 기본적으로 클래스와 같은 것입니다. `Message` 구조는 같은 멤버 함수를 가질 수 있습니다는 `Serialize` 위에서 멤버 함수를 선언 합니다. `Serialize` 멤버 함수는 다음과 비슷합니다.  
   
  [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="windows-sockets-byte-order-conversion-functions"></a>Windows 소켓 Byte-order 변환 함수  
   
-|함수|용도|  
+|기능|용도|  
 |--------------|-------------|  
 |**ntohs**|네트워크 바이트 순서에서 16 비트 수량 호스트 바이트 순서 (big Endian에 little Endian)으로 변환 합니다.|  
 |**ntohl**|네트워크 바이트 순서에서 32 비트 수량 호스트 바이트 순서 (big Endian에 little Endian)으로 변환 합니다.|  

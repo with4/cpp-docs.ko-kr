@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294952"
 ---
 # <a name="compiler-warning-levels-2-and-4-c4200"></a>컴파일러 경고(수준 2 및 4) C4200
 비표준 확장이 사용됨: 구조체/공용 구조체의 배열 크기가 0입니다.  

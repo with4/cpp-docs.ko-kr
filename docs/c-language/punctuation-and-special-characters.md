@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383906"
 ---
 # <a name="punctuation-and-special-characters"></a>문장 부호 및 특수 문자
 C 문자 집합의 문장 부호와 특수 문자는 프로그램 텍스트의 구성에서 컴파일러 또는 컴파일된 프로그램이 수행하는 작업의 정의에 이르기까지 다양한 용도로 사용됩니다. 이러한 특수 문자는 수행할 작업을 지정하지 않습니다. 일부 문장 부호 기호는 연산자이기도 합니다([연산자](../c-language/c-operators.md) 참조). 컴파일러는 컨텍스트에서 이러한 기호의 사용을 확인합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878150"
 ---
 # <a name="pragma"></a>pragma
 인용 부호를 사용 하지 않고 생성 된.idl 파일에 지정 된 문자열을 내보냅니다. 이어야 합니다.  

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf9f05b77adc7d989d37afcbce040405ccbfdf03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30234c932aad28d16830b80fd19e4ad334ba407c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962818"
 ---
 # <a name="ispointer-class"></a>is_pointer 클래스
 
@@ -36,13 +37,13 @@ struct is_pointer;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 형식이 쿼리입니다.
+*Ty* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `Ty` 형식이 `void`에 대한 포인터, 개체에 대한 포인터 또는 함수에 대한 포인터이거나 이러한 포인터 중 하나의 `cv-qualified` 형식인 경우 true이고, 그렇지 않은 경우 false입니다. `Ty`가 멤버에 대한 포인터 또는 멤버 함수에 대한 포인터인 경우 `is_pointer`는 false입니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *Ty* 에 대 한 포인터 **void**, 개체에 대 한 포인터 또는 함수에 대 한 포인터 또는 `cv-qualified` 형식 중 하나, 그렇지 않으면 false입니다. 유의 `is_pointer` 이면 false를 보유 *Ty* 멤버에 대 한 포인터 또는 멤버 함수에 대 한 포인터입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__is_pointer.cpp

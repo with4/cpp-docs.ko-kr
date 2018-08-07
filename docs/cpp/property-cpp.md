@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a791615f7fd91a7ccfcda45b23fc524ebd9b6400
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4673101d41b896ed3fc19aa1998aa9329064b41
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409068"
 ---
 # <a name="property-c"></a>속성 (C++)
 **Microsoft 전용**  
@@ -31,18 +32,17 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>구문  
   
 ```  
-  
    __declspec( property( get=get_func_name ) ) declarator  
    __declspec( property( put=put_func_name ) ) declarator  
    __declspec( property( get=get_func_name, put=put_func_name ) ) declarator  
 ```  
   
 ## <a name="remarks"></a>설명  
- 컴파일러가 멤버 선택 연산자의 오른쪽에이 특성으로 선언 된 데이터 멤버를 확인 하는 경우 ("**.**"또는"**->**"), 작업을 변환는 **가져오기** 또는 **배치** 이러한 식은 l-value 또는 r-value 인지에 따라 함수입니다. 보다 복잡 한 컨텍스트에서와 같은 "`+=`", 다시 작성 둘 다 수행 하 여 수행 됩니다 **가져오기** 및 **배치**합니다.  
+ 컴파일러는 멤버 선택 연산자의 오른쪽에이 특성으로 선언 된 데이터 멤버를 확인 하는 경우 ("**합니다.**"또는"**->**")를 변환 하는 작업을 `get` 또는 `put` 함수를 이러한 식은 l-value 또는 r-value 인지에 따라 합니다. 더 복잡 한 컨텍스트에서 같은 "`+=`"를 다시 쓰기를 모두 수행 하 여 수행 됩니다 `get` 고 `put`입니다.  
   
  이 특성은 클래스 또는 구조체 정의에 있는 빈 배열의 선언에서도 사용할 수 있습니다. 예를 들어:  
   
-```  
+```cpp 
 __declspec(property(get=GetX, put=PutX)) int x[];  
 ```  
   
@@ -50,9 +50,9 @@ __declspec(property(get=GetX, put=PutX)) int x[];
   
  **Microsoft 전용 종료**  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp 
 // declspec_property.cpp  
 struct S {  
    int i;  
@@ -74,6 +74,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [__declspec](../cpp/declspec.md)   
  [키워드](../cpp/keywords-cpp.md)

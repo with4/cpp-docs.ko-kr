@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319080"
 ---
 # <a name="project-build-error-prj0034"></a>프로젝트 빌드 오류 PRJ0034
 프로젝트 수준의 사용자 지정에 대 한 ' 추가 종속성 ' 속성이 'macro_expansion'으로 계산 되는 포함 된 단계 '매크로를' 빌드합니다.  

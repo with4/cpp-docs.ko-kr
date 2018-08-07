@@ -17,14 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e09a795688c7e2b31771126f9e4036ddfbd8e4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 654ef60c924a14e861971c651899c8baea0300ef
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462708"
 ---
 # <a name="classfactorylockserver-method"></a>ClassFactory::LockServer 메서드
-현재 ClassFactory 개체에서 추적하는 기본 개체 수를 늘리거나 줄입니다.  
+증가 또는 현재 추적 되는 개체의 기본 수 감소 **ClassFactory** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `fLock`  
- 추적된 개체 수를 늘리려면 `true`입니다. 추적된 개체 수를 줄이려면 `false`입니다.  
+ *떼*  
+ **true** 추적 된 개체 수가 증가 합니다. **false** 추적 된 개체 수가 감소 합니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공하면 S_OK이고, 그렇지 않으면 E_FAIL입니다.  
   
 ## <a name="remarks"></a>설명  
- ClassFactory 개체의 기본 인스턴스에서는 추적 된 [모듈](../windows/module-class.md) 클래스입니다.  
+ ClassFactory 개체의 기본 인스턴스에서 추적 합니다 [모듈](../windows/module-class.md) 클래스입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** module.h  

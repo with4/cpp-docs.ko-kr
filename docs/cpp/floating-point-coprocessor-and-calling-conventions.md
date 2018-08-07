@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46cf9c937453894ed37ad434ad94609d0744be24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66ccd54c4abb1d8d9761d5ded88beba76bfae043
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401356"
 ---
 # <a name="floating-point-coprocessor-and-calling-conventions"></a>부동 소수점 보조 프로세서 및 호출 규칙
-부동 유지 해야 하는 경우를 작성 하는 어셈블리 루틴은 부동 소수점 보조 프로세서 반환 하지 않으면 보조 프로세서 스택을 정리 하 고 소수점 제어 단어는 **float** 또는 **double** 값 (함수가 st (0)에서 반환 해야 합니다.  
+를 작성 하는 어셈블리 루틴은 부동 소수점 보조 프로세서 부동 유지 해야 하면 소수점 제어 단어 및 반환 하는 경우가 아니면 보조 프로세서 스택을 정리를 **부동 소수점** 하거나 **double** 값 (함수가 ST(0)에 반환 해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [호출 규칙](../cpp/calling-conventions.md)

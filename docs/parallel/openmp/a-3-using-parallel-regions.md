@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689898"
 ---
 # <a name="a3---using-parallel-regions"></a>A.3   병렬 영역 사용
 `parallel` 지시문 ([섹션 2.3](../../parallel/openmp/2-3-parallel-construct.md) 페이지 8) 성긴 병렬 프로그램에서 사용할 수 있습니다. 다음 예제에서는 병렬 영역에서 각 스레드에 결정 배열의 전역 부분 `x` 작업을 스레드 수를 기반으로 합니다.  

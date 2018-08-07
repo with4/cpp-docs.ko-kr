@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849732"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>이전 버전의 Visual C++에서 프로젝트 업그레이드
 대부분의 경우 Visual Studio 이전 버전에서 만든 프로젝트를 열 수 있습니다. 그러나 이를 위해 Visual Studio는 프로젝트를 업그레이드합니다. 이 업그레이드된 프로젝트를 저장하면 이전 버전에서 열 수 없습니다.  

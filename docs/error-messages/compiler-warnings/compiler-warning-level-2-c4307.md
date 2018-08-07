@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292034"
 ---
 # <a name="compiler-warning-level-2-c4307"></a>컴파일러 경고(수준 2) C4307
 'operator': 정수 계열 상수 오버플로입니다  

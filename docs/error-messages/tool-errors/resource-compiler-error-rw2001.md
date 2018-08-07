@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321102"
 ---
 # <a name="resource-compiler-error-rw2001"></a>리소스 컴파일러 오류 RW2001
 전처리 RC 파일에서 잘못 된 지시문  

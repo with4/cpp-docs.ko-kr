@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342968"
 ---
 # <a name="derived-message-maps"></a>파생된 메시지 맵
 메시지 처리, 클래스의 메시지를 확인 하는 동안 맵이 메시지 맵 스토리의 끝 되었습니다. 어떻게 클래스 `CMyView` (에서 파생 된 `CView`)과 일치 하는 항목이 메시지에 대 한 없습니다  

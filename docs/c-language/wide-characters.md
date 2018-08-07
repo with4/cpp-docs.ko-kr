@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386640"
 ---
 # <a name="wide-characters"></a>와이드 문자
 **ANSI 3.1.3.4** 둘 이상의 문자를 포함하는 정수 문자 상수 또는 둘 이상의 멀티바이트 문자를 포함하는 와이드 문자 상수의 값입니다.  

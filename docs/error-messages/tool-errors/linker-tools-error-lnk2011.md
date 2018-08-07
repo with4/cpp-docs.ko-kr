@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300757"
 ---
 # <a name="linker-tools-error-lnk2011"></a>링커 도구 오류 LNK2011
 미리 컴파일된 개체가 링크 되지 않았습니다. 이미지가 실행 되지 않습니다.  

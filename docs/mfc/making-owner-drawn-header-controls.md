@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345255"
 ---
 # <a name="making-owner-drawn-header-controls"></a>소유자가 그린 헤더 컨트롤 만들기
 헤더 컨트롤의 개별 항목을 정의할 수 있습니다 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 항목 소유자가 그린 되도록 합니다. 자세한 내용은 참조 [소유자가 그린 헤더 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb775238) Windows sdk에서입니다.  

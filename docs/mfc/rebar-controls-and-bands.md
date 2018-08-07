@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1fac5f83f19fab37604a14e239cf505891c737f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ae83c3e41ebabf62ad98211f3943af2b535c806
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929509"
 ---
 # <a name="rebar-controls-and-bands"></a>Rebar 컨트롤 및 밴드
 Rebar 컨트롤의 주 목적은 자식 창, 공용 대화 상자 컨트롤, 메뉴, 도구 모음, 등에 대 한 컨테이너 역할을 하는 것입니다. 이 포함 된 "밴드"의 개념으로 사용할 수 각 rebar 밴드에는 그리퍼 막대, 비트맵, 텍스트 레이블 및 자식 창의 조합을 포함할 수 있습니다.  
@@ -42,7 +43,7 @@ Rebar 컨트롤의 주 목적은 자식 창, 공용 대화 상자 컨트롤, 메
   
  [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) 및 [DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband) 추가 및 rebar 밴드를 제거 합니다. [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband) 및 [MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband) 특정 rebar 밴드의 현재 크기에 영향을 줍니다. [MoveBand](../mfc/reference/crebarctrl-class.md#moveband) 특정 rebar 밴드의 인덱스를 변경 합니다. [ShowBand](../mfc/reference/crebarctrl-class.md#showband) 하거나 사용자에 게 서 rebar 밴드를 숨깁니다.  
   
- 다음 예제에서는 도구 모음으로 밴드를 추가 하는 방법을 보여 줍니다 (`m_wndToolBar`) 기존 rebar 컨트롤 (`m_wndReBar`). 밴드를 초기화 하 여 설명의 `rbi` 구조와 다음 호출에서 `InsertBand` 멤버 함수:  
+ 다음 예제에서는 도구 모음으로 밴드를 추가 하는 방법을 보여 줍니다 (*m_wndToolBar*) 기존 rebar 컨트롤 (*m_wndReBar*). 밴드를 초기화 하 여 설명의 `rbi` 구조와 다음 호출에서 `InsertBand` 멤버 함수:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]  
   

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381350"
 ---
 # <a name="toolbars"></a>도구 모음
 항목의 도구 모음 제품군은 MFC 도구 모음 및을 만들고 사용 하는 방법을 설명 합니다.  

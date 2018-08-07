@@ -32,11 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f538874b1690be920e9c7a3b3f494ca6851c532
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3de348131dded63794e818d40c0ac5aeae910b03
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956710"
 ---
 # <a name="cbasekeyframe-class"></a>CBaseKeyFrame 클래스
 키프레임의 기본 기능을 구현합니다.  
@@ -66,7 +67,7 @@ class CBaseKeyFrame : public CObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CBaseKeyFrame::m_bAdded](#m_badded)|이 키 프레임에 스토리 보드에 추가 되었는지 여부를 지정 합니다.|  
 |[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|이 키 프레임에서 다른 기존 키 프레임의 오프셋 또는 일부 전환의 끝에서 스토리 보드에 추가할지 여부를 지정 합니다.|  
@@ -93,10 +94,10 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pStoryboard`  
+ *pStoryboard*  
  스토리 보드에 대 한 포인터입니다.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  이 매개 변수가 TRUE이 고 다른 키 프레임 또는 전환에 추가 되는 키 프레임에 따라 달라 집니다 하는 경우에이 메서드가이 키 프레임 또는 먼저 스토리 보드에 전환을 추가 하려고 합니다.  
   
 ### <a name="return-value"></a>반환 값  

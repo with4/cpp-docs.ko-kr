@@ -30,11 +30,12 @@ helpviewer_keywords:
 - std::future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31490578b1f1d9b6028b3fa2cdcc5769d3a53935
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 77b3c96d2c579b9fa3081ad7223ac254a727a88b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956640"
 ---
 # <a name="future-class"></a>future 클래스
 
@@ -78,7 +79,7 @@ class future;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<이후 >
+**헤더:** \<향후 >
 
 **네임스페이스:** std
 
@@ -93,13 +94,13 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>매개 변수
 
-`Other` A `future` 개체입니다.
+*다른* 는 `future` 개체입니다.
 
 ### <a name="remarks"></a>설명
 
 첫 번째 생성자는 연결된 비동기 상태가 없는 `future` 개체를 구성합니다.
 
-두 번째 생성자는 `future` 개체를 생성하며 `Other`로부터 연결된 비동기 상태를 전송합니다. `Other`에는 더 이상 연결된 비동기 상태가 없습니다.
+두 번째 생성자 구문 한 `future` 개체와 연결된 된 비동기 상태에서 전송 *다른*합니다. *다른* 연결 된 비동기 상태를 더 이상.
 
 ## <a name="get"></a>  future::get
 
@@ -119,7 +120,7 @@ Ty get();
 
 부분 특수화 `future<Ty&>`의 경우 저장되는 값은 실제로는 반환 값으로 비동기 공급자에 전달된 개체에 대한 참조입니다.
 
-특수화 `future<void>`에 대해서는 저장된 값이 없으므로 메서드는 `void`를 반환합니다.
+특수화에 대 한 저장 된 값이 있으므로 `future<void>`, 메서드가 반환 **void**합니다.
 
 다른 특수화에서 메서드는 저장된 값에서 반환 값을 이동합니다. 따라서 이 메서드를 한 번만 호출합니다.
 
@@ -133,7 +134,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>매개 변수
 
-`Right` A `future` 개체입니다.
+*오른쪽* 는 `future` 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -141,7 +142,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="remarks"></a>설명
 
-전송 후 `Right`에는 더 이상 연결된 비동기 상태가 없습니다.
+전송 후 *오른쪽* 연결 된 비동기 상태를 더 이상.
 
 ## <a name="share"></a>  future::share
 
@@ -165,7 +166,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>반환 값
 
-개체가 연결된 비동기 상태이면 `true`이고, 그렇지 않으면 `false`입니다.
+**true 이면** 개체에 연결된 된 비동기 상태가;이 고, 그렇지 **false**합니다.
 
 ## <a name="wait"></a>  future::wait
 
@@ -190,7 +191,7 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`Rel_time` A [chrono::](../standard-library/duration-class.md) 최대 시간 간격을 지정 하는 개체는 해당 스레드는 차단 합니다.
+*Rel_time* A [chrono::](../standard-library/duration-class.md) 최대 시간 간격을 지정 하는 개체는 해당 스레드는 차단 합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -211,7 +212,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>매개 변수
 
-`Abs_time` A [time_point](../standard-library/time-point-class.md) 차단 해제할 수는 스레드는 시간을 지정 하는 개체입니다.
+*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md) 지나면 스레드가 차단 해제할 수 시간을 지정 하는 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 

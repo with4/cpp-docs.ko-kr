@@ -22,6 +22,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255930"
 ---
 # <a name="atl-class-overview"></a>ATL 클래스 개요
 클래스에는 ATL 액티브 템플릿 라이브러리 ()는 다음과 같이 분류할 수 있습니다.  

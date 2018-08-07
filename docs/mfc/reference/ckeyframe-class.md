@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9e9ff3d6e3e4bcccf8e9ebd46f791f60f1cc37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56fa354a46e40704ac063791931ca01d1386a558
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038460"
 ---
 # <a name="ckeyframe-class"></a>CKeyFrame 클래스
 애니메이션 키프레임을 나타냅니다.  
@@ -72,7 +73,7 @@ class CKeyFrame : public CBaseKeyFrame;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CKeyFrame::m_offset](#m_offset)|M_pExistingKeyFrame에 저장 된 키 프레임의이 키 프레임의 오프셋을 지정 합니다.|  
 |[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|기존 키프레임에 대에 대 한 포인터를 저장합니다. 이 키 프레임은 기존 키 프레임에 대 한 m_offset이 있는 스토리 보드에 추가 됩니다.|  
@@ -101,10 +102,10 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pStoryboard`  
+ *pStoryboard*  
  스토리 보드에 대 한 포인터입니다.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  키 프레임을 추가 하거나 재귀적으로 전환 것인지 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -123,10 +124,10 @@ BOOL AddToStoryboardAfterTransition(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pStoryboard`  
+ *pStoryboard*  
  스토리 보드에 대 한 포인터입니다.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  전환 재귀적으로 추가할 것인지를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -145,10 +146,10 @@ virtual BOOL AddToStoryboardAtOffset(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pStoryboard`  
+ *pStoryboard*  
  스토리 보드에 대 한 포인터입니다.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  재귀적에이 키 프레임 종속 키 프레임 추가 되는지 여부를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -170,13 +171,13 @@ CKeyFrame(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pTransition`  
+ *pTransition*  
  전환에 대 한 포인터입니다.  
   
- `pKeyframe`  
+ *pKeyframe*  
  키 프레임에 대 한 포인터입니다.  
   
- `offset`  
+ *offset*  
  초 단위, pkeyframe에 지정 된 키 프레임의에서 오프셋입니다.  
   
 ### <a name="remarks"></a>설명  

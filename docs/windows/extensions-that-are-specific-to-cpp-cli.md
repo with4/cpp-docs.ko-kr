@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872616"
 ---
 # <a name="extensions-that-are-specific-to-ccli"></a>C++/CLI와 관련된 확장명
 설명서의이 섹션에서 설명 하는 다음 언어 기능은 적용에 C + + /cli CLI 합니다.  

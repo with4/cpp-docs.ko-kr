@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356141"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, ATL Active Server Page 구성 요소 마법사
 ATL Active Server 페이지 구성 요소 마법사의이 페이지를 사용 하 여 ASP 구성 요소와 관련 된 상태 및 정보 처리에 대 한 선택적 설정을 지정 합니다.  

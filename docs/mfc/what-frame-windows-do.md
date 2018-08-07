@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382569"
 ---
 # <a name="what-frame-windows-do"></a>프레임 창의 기능
 단순한 뷰 프레임 지정 외에도 프레임 창은 프레임을 해당 뷰 및 응용 프로그램에서 조정하는 것과 관련된 여러 작업을 수행합니다. [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) 및 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) 에서 상속 [CFrameWnd](../mfc/reference/cframewnd-class.md)갖추고 있으므로, `CFrameWnd` 으로 기능을 더 추가 하는 새로운 기능입니다. 자식 창 예에는 뷰, 단추 및 목록 상자와 같은 컨트롤, 도구 모음, 상태 표시줄 및 대화 상자 막대를 비롯한 컨트롤 막대가 포함됩니다.  

@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a47db4f9715c539ecf9bcbfb78e48b7e8edbc94b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c912b6c703ef7e05825e070d09f0a1b3cd73003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932161"
 ---
 # <a name="active-document-containers"></a>액티브 문서 컨테이너
 Microsoft Office Binder 또는 Internet Explorer와 같은 액티브 문서 컨테이너를 사용 하면 여러 문서를 만들고 각각에 대해 여러 응용 프로그램 프레임을 사용 하도록 요구 하는 것 (대신 단일 프레임 내에서 다른 응용 프로그램 종류의 작업을 문서 유형)입니다.  
@@ -49,15 +50,15 @@ Microsoft Office Binder 또는 Internet Explorer와 같은 액티브 문서 컨�
   
  활성 문서를 통합 하는 액티브 문서 컨테이너 수행 해야 합니다.  
   
--   개체를 통해 저장소를 처리할 수는 **IPersistStorage** 인터페이스, 즉, 제공 해야는 `IStorage` 각 활성 문서 인스턴스입니다.  
+-   개체를 통해 저장소를 처리할 수는 `IPersistStorage` 인터페이스, 즉, 제공 해야는 `IStorage` 각 활성 문서 인스턴스입니다.  
   
--   (문서 또는 포함 당 하나)는 "사이트" 개체 있으므로 해야 OLE 문서의 기본 포함 기능을 지원 구현 하는 **IOleClientSite** 및 **IAdviseSink**합니다.  
+-   "사이트" 개체 (문서 또는 포함 당 하나)를 하기 하며 OLE 문서의 기본 포함 기능을 지원 구현 하는 `IOleClientSite` 및 `IAdviseSink`합니다.  
   
--   포함 된 개체 또는 활성 문서에는 내부 활성화를 지원 합니다. 컨테이너의 사이트 개체를 구현 해야 `IOleInPlaceSite` 컨테이너의 프레임 개체를 제공 해야 하 고 **IOleInPlaceFrame**합니다.  
+-   포함 된 개체 또는 활성 문서에는 내부 활성화를 지원 합니다. 컨테이너의 사이트 개체를 구현 해야 `IOleInPlaceSite` 컨테이너의 프레임 개체를 제공 해야 하 고 `IOleInPlaceFrame`합니다.  
   
 -   액티브 문서는 확장을 구현 하 여 지원 `IOleDocumentSite` 문서에 설명 하는 컨테이너에 대 한 메커니즘을 제공 합니다. 컨테이너는 액티브 문서 인터페이스를 구현할 수는 필요에 따라 `IOleCommandTarget` 및 `IContinueCallback` 인쇄 하거나 저장할 같은 간단한 명령을 선택 하도록 합니다.  
   
- 프레임 개체, 보기 개체 및 컨테이너 개체 선택적으로 구현할 수 **IOleCommandTarget** 에 설명 된 대로 특정 명령 디스패치를 지원 하기 위해 [명령 대상](../mfc/message-handling-and-command-targets.md)합니다. 컨테이너 개체도 선택적으로 구현할 수 `IPrint` 및 `IContinueCallback`에 설명 된 대로 프로그래밍 방식 인쇄를 지원 하기 위해 [프로그래밍 방식 인쇄](../mfc/programmatic-printing.md)합니다.  
+ 프레임 개체, 보기 개체 및 컨테이너 개체 선택적으로 구현할 수 `IOleCommandTarget` 에 설명 된 대로 특정 명령 디스패치를 지원 하기 위해 [명령 대상](../mfc/message-handling-and-command-targets.md)합니다. 컨테이너 개체도 선택적으로 구현할 수 `IPrint` 및 `IContinueCallback`에 설명 된 대로 프로그래밍 방식 인쇄를 지원 하기 위해 [프로그래밍 방식 인쇄](../mfc/programmatic-printing.md)합니다.  
   
  다음 그림의 컨테이너 및 (왼쪽)에 해당 구성 요소와 액티브 문서 (오른쪽)에 뷰 간의 개념적 관계를 보여 줍니다. 현재 문서 저장소 및 데이터를 관리 하 고 보기를 표시 하거나 선택적으로 해당 데이터를 인쇄 합니다. 굵게 표시 된 인터페이스는 액티브 문서 참여;에 필요한 이러한 굵게 및 기울임꼴는 선택적입니다. 다른 모든 인터페이스는 필수입니다.  
   
@@ -84,7 +85,7 @@ Microsoft Office Binder 또는 Internet Explorer와 같은 액티브 문서 컨�
  여러 뷰를 지원 하는 컨테이너 문서 사이트 내 사이트 개체에 여러 보기를 만들 수 있어야 합니다. 통해 제공 된 별도 활성화 및 비활성화 서비스와 각 보기를 제공이 `IOleInPlaceSite`합니다.  
   
 ##  <a name="frame_object"></a> 프레임 개체  
- 컨테이너의 프레임 개체는 대부분의 경우 즉 OLE 문서에서 내부 활성화에 사용 되는 동일한 프레임, 메뉴 및 도구 모음 협상을 처리 하는 것입니다. View 개체를 통해이 프레임 개체에 대 한 액세스는 **IOleInPlaceSite::GetWindowContext**, 또한 (도구 모음 창 수준 협상을 처리할 수 있는 컨테이너 문서를 나타내는 컨테이너 개체에 대 한 액세스를 제공 하는 및 포함 된 개체를 열거)입니다.  
+ 컨테이너의 프레임 개체는 대부분의 경우 즉 OLE 문서에서 내부 활성화에 사용 되는 동일한 프레임, 메뉴 및 도구 모음 협상을 처리 하는 것입니다. View 개체를 통해이 프레임 개체에 대 한 액세스는 `IOleInPlaceSite::GetWindowContext`, 또한는 컨테이너 문서 (협상 수준 창 도구 모음 및 포함 된 개체 열거형을 처리할 수)를 나타내는 컨테이너 개체에 대 한 액세스를 제공 하는 합니다.  
   
  액티브 문서 컨테이너를 추가 하 여 프레임을 강화할 수 `IOleCommandTarget`합니다. 이렇게 하면 현재 문서의 사용자 인터페이스에서이 인터페이스에서 동일한 명령을 보내도록 컨테이너를 허용할 수에 관계 없이 동일한 방식으로 발생 하는 명령을 받을 수 (같은 **새 파일**, **열려**,  **다른 이름으로 저장**, **인쇄**; **복사본 편집**, **붙여넣기**, **실행 취소**, 및 기타) 현재 문서에 있습니다. 자세한 내용은 참조 [명령 대상](../mfc/message-handling-and-command-targets.md)합니다.  
   

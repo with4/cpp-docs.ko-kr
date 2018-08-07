@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089417"
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>레코드 뷰의 데이터 교환   (MFC Data Access)
 사용 하는 경우 [클래스 추가](../mfc/reference/adding-an-mfc-odbc-consumer.md) 레코드 집합의 필드에 레코드 뷰 대화 상자 템플릿 리소스에서 컨트롤을 매핑하려면 프레임 워크는 양방향에서 데이터 교환을 관리-컨트롤 및 컨트롤에 대 한 레코드 집합에서. DDX 메커니즘을 사용하면 데이터를 전송하는 코드를 직접 작성할 필요가 없습니다.  

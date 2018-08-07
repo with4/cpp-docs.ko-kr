@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231550"
 ---
 # <a name="compiler-error-c2637"></a>컴파일러 오류 C2637
 'identifier': 데이터 멤버에 대 한 포인터를 수정할 수 없습니다  

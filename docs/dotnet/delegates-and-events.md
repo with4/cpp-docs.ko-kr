@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108333"
 ---
 # <a name="delegates-and-events"></a>대리자 및 이벤트
 대리자 및 이벤트를 선언 하는 방법은 Visual c + + Managed Extensions for c + + 변경 되었습니다.  

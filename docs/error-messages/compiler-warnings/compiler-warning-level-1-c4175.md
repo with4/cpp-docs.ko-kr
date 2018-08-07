@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278168"
 ---
 # <a name="compiler-warning-level-1-c4175"></a>컴파일러 경고(수준 1) C4175
 \#pragma component(browser, on): 브라우저 정보는 처음에 명령줄에 지정  

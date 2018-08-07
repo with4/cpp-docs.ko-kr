@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889279"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits 구조체
 배타적 잠금 모드의 SRWLock 클래스의 일반적인 특성에 설명합니다.  

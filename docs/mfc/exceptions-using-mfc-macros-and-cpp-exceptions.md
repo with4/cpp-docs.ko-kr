@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c50e7358d29e04c81a5e443d5b1a03881fed7f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 698d8a754716f6876f9a72a0d5043807a32d2089
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932210"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>예외: MFC 매크로 및 C++ 예외 사용
 MFC 예외 처리 매크로 c + + 예외 처리 키워드를 사용 하는 코드를 작성 하기 위한 고려 사항에 설명 합니다.  
@@ -50,7 +51,7 @@ MFC 예외 처리 매크로 c + + 예외 처리 키워드를 사용 하는 코�
   
  [!code-cpp[NVC_MFCExceptions#10](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]  
   
- 문제가 발생 하기 때문에 `e` 실행 "내부" 밖으로 전달 하면 삭제 됩니다 **CATCH** 블록입니다. 사용 하는 `THROW_LAST` 대신 매크로 **THROW** 문을 하면는 "외부" **CATCH** 블록 유효한 포인터를 받을 수:  
+ 문제가 발생 하기 때문에 `e` 실행 "내부" 밖으로 전달 하면 삭제 됩니다 **CATCH** 블록입니다. 사용 하는 **THROW_LAST** 대신 매크로 **THROW** 문을 하면는 "외부" **CATCH** 블록 유효한 포인터를 받을 수:  
   
  [!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]  
   

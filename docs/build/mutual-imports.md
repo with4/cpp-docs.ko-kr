@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377759"
 ---
 # <a name="mutual-imports"></a>상호 가져오기
 Import에는 상호 (또는 순환) 내보내기 또는 가져오기를 다른 실행 파일에 대해 복잡해 집니다. 예를 들어 두 개의 Dll 상호 재귀 함수를 유사한 다른 기호를 가져옵니다.  

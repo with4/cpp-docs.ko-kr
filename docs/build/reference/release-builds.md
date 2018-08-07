@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376652"
 ---
 # <a name="release-builds"></a>릴리스 빌드
 릴리스 빌드 최적화를 사용 합니다. 최적화를 사용 하 여 릴리스 빌드를 만들 때 컴파일러가 기호 디버깅 정보를 생성 하지 않습니다. ASSERT와 추적에 대 한 코드가 생성 되지 않으면 사실 외 기호 디버깅 정보 없으면 호출, 실행 파일의 크기 감소를 더 빠르게 수 없으므로 있다는 것을 의미 합니다.  

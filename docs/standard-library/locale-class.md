@@ -31,11 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0a3f60a4cbcde76a681b33ed9201e81f313bac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 80cb3dd5d60665fbfb510fb2fddf94f17ef9f171
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963796"
 ---
 # <a name="locale-class"></a>locale 클래스
 
@@ -212,27 +213,27 @@ static const int none = 0;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 클래스 로캘에 로컬인 비트 마스크 형식의 고유 요소 그룹을 나타내거나 해당 C 로캘 범주를 나타내는 데 사용할 수 있는 `int` 형식의 동의어입니다. 요소는 다음과 같습니다.
+형식은의 동의어는 **int** 비트 마스크의 고유 요소 그룹을 나타낼 수 있는 형식 클래스 로캘에 로컬인 입력 하거나 해당 C 로캘 범주 중 하나를 나타내는 데 사용할 수 있습니다. 요소는 다음과 같습니다.
 
-- **collate** - C 범주 LC_COLLATE에 해당
+- `collate`에-C 범주 LC_COLLATE에 해당 합니다.
 
-- **ctype** - C 범주 LC_CTYPE에 해당
+- `ctype`에-C 범주 LC_CTYPE에 해당 합니다.
 
-- **monetary** - C 범주 LC_MONETARY에 해당
+- `monetary`에-C 범주 LC_MONETARY에 해당 합니다.
 
-- **numeric** - C 범주 LC_NUMERIC에 해당
+- `numeric`에-C 범주 LC_NUMERIC에 해당 합니다.
 
-- **time** - C 범주 LC_TIME에 해당
+- `time`에-C 범주 LC_TIME에 해당 합니다.
 
-- **messages** - Posix 범주 LC_MESSAGES에 해당
+- `messages`에서 Posix 범주 LC_MESSAGES에 해당 합니다.
 
 또한 두 개의 유용한 값은 다음과 같습니다.
 
-- **none** - C 범주 중 해당하는 항목 없음
+- `none`C 범주 중 어떤 항목에 해당 합니다.
 
-- **all** - 모든 범주 LC_ALL의 C 공용 구조체에 해당
+- `all`에 모든 범주 LC_ALL의 C 공용 구조체에 해당 합니다.
 
-**monetary** &#124; **time**에서처럼 이러한 상수와 함께 `OR`을 사용하면 임의의 범주 그룹을 나타낼 수 있습니다.
+임의의 범주 그룹을 사용 하 여 나타낼 수 있습니다 `OR` 에서처럼 이러한 상수를 사용 하 여 `monetary` &#124; `time`합니다.
 
 ## <a name="classic"></a>  locale::classic
 
@@ -250,7 +251,7 @@ C 로캘에 대한 참조입니다.
 
 클래식 C 로캘은 국제화되지 않은 프로그램에서 암시적으로 사용되는 표준 C 라이브러리 내의 영어(미국) ASCII 로캘입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // locale_classic.cpp
@@ -300,13 +301,13 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`Loc` 패싯을 대상 로캘로에 삽입할 수를 포함 하는 로캘.
+*Loc* 대상 로캘에 삽입할 패싯을 포함 하는 로캘입니다.
 
 ### <a name="return-value"></a>반환 값
 
-이 멤버 함수는 `Loc`에 나열된 **\*이** 패싯 `Facet`을 대체하거나 이 패싯에 추가되는 로캘 개체를 반환합니다.
+대체 하거나 추가 하는 로캘 개체를 반환 하는 멤버 함수  **\*이** 패싯 `Facet` 나오는 *Loc*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // locale_combine.cpp
@@ -368,7 +369,7 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>매개 변수
 
-`Loc` 프로그램에서 기본 로캘을으로 사용할 로캘.
+*Loc* 프로그램에서 기본 로캘로 사용할 로캘입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -378,7 +379,7 @@ static locale global(const locale& Loc);
 
 프로그램이 시작될 때는 전역 로캘이 클래식 로캘과 같습니다. `global()` 함수는 `setlocale( LC_ALL, loc.name. c_str())`을 호출하여 표준 C 라이브러리에서 일치하는 로캘을 설정합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // locale_global.cpp
@@ -414,7 +415,7 @@ class id { protected:    id(); private:    id(const id&) // not defined void ope
 
 ### <a name="remarks"></a>설명
 
-멤버 클래스는 각 고유 로캘 패싯에 필요한 정적 멤버 개체에 대해 설명합니다. **id** 클래스의 개체는 복사하거나 할당할 수 없습니다.
+멤버 클래스는 각 고유 로캘 패싯에 필요한 정적 멤버 개체에 대해 설명합니다. 복사 하거나 클래스의 개체에 할당할 수 없습니다 참고 `id`합니다.
 
 ## <a name="locale"></a>  locale::locale
 
@@ -435,37 +436,37 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>매개 변수
 
-`Locname` 로캘의의 이름입니다.
+*Locname* 로캘 이름입니다.
 
-`Loc` 새 로캘의 구성할 때 복사 되는 로캘.
+*Loc* 새 로캘을 생성할 때 복사 되는 로캘입니다.
 
-`Other` 범주를 선택할 수 있는 로캘.
+*다른* 범주를 선택할 로캘입니다.
 
-`Cat` 범주에 생성 된 로캘을 대체입니다.
+*Cat* 생성 된 로캘로 대체 될 범주입니다.
 
-`Fac` 생성 된 로캘으로 대체 되는 패싯.
+*Fac* 생성 된 로캘로 대체 될 패싯입니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 전역 로캘과 일치하도록 개체를 초기화합니다. 두 번째 및 세 번째 생성자는 동작이 로캘 이름 `Locname`과 일치하도록 모든 로캘 범주를 초기화합니다. 나머지 생성자는 다음과 같은 경우를 제외하고 `Loc`를 복사합니다.
+첫 번째 생성자는 전역 로캘과 일치하도록 개체를 초기화합니다. 두 번째 및 세 번째 생성자 초기화 동작이 로캘 이름과 일치 하도록 모든 로캘 범주 *Locname*합니다. 나머지 생성자는 복사 *Loc*를 제외 하 고 있습니다.
 
 `locale(const locale& Loc, const locale& Other, category Cat);`
 
-`Other`에서 C & `Cat`가 0이 아닌 범주 C에 해당하는 패싯을 대체합니다.
+대체 *다른* 범주에 해당 하는 C는 C에 대 한 패싯을 & *Cat* 0이 아닌 합니다.
 
 `locale(const locale& Loc, const char* Locname, category Cat);`
 
 `locale(const locale& Loc, const string& Locname, category Cat);`
 
-`locale(Locname, _All)`에서 C & `Cat`가 0이 아닌 범주 C에 해당하는 패싯을 대체합니다.
+대체 `locale(Locname, _All)` 범주에 해당 하는 C는 C에 대 한 패싯을 & *Cat* 0이 아닌 합니다.
 
 `template<class Facet> locale(const locale& Loc, Facet* Fac);`
 
-`Fac`가 null 포인터가 아닌 경우 `Loc` 패싯 `Fac`를 대체하거나 이 패싯에 추가합니다.
+대체 (또는 추가) *Loc* 패싯 *Fac*이면 *Fac* 가 null 포인터가 아닌 합니다.
 
-로캘 이름 `Locname`이 null 포인터이거나 유효하지 않은 경우 함수는 [runtime_error](../standard-library/runtime-error-class.md)를 throw합니다.
+로캘 이름 *Locname* 가 null 포인터 또는 그렇지 않은 경우 잘못 된 경우 함수가 throw [runtime_error](../standard-library/runtime-error-class.md)합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // locale_locale.cpp
@@ -517,7 +518,7 @@ string name() const;
 
 로캘의 이름을 지정하는 문자열입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // locale_name.cpp
@@ -554,7 +555,7 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 다른 지 테스트할는 로캘 중 하나입니다.
+*오른쪽* 같지 않음을 테스트할 로캘 중 하나입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -564,7 +565,7 @@ bool operator!=(const locale& right) const;
 
 두 로캘은 두 로캘이 동일한 로캘이거나, 한 로캘이 다른 로캘의 복사본이거나, 이름이 동일한 경우 같습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // locale_op_ne.cpp
@@ -617,9 +618,9 @@ bool operator()(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 왼쪽된 문자열입니다.
+*왼쪽* 왼쪽된 문자열입니다.
 
-`right` 오른쪽 문자열입니다.
+*오른쪽* 오른쪽 문자열입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -643,7 +644,7 @@ return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 
 따라서 로캘 개체를 함수 개체로 사용할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // locale_op_compare.cpp
@@ -684,7 +685,7 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 같은지 테스트할는 로캘 중 하나입니다.
+*오른쪽* 같은지 테스트할 로캘 중 하나입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -694,7 +695,7 @@ bool operator==(const locale& right) const;
 
 두 로캘은 두 로캘이 동일한 로캘이거나, 한 로캘이 다른 로캘의 복사본이거나, 이름이 동일한 경우 같습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // locale_op_eq.cpp

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889110"
 ---
 # <a name="srwlocksrwlock-data-member"></a>SRWLock::SRWLock_ 데이터 멤버
 현재 SRWLock 개체에 대한 기본 잠금 변수를 포함합니다.  

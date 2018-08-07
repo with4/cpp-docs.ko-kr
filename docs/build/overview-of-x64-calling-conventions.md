@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374910"
 ---
 # <a name="overview-of-x64-calling-conventions"></a>x64 호출 규칙 개요
 두 가지 중요 한 차이점 x86 및 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 는 64 비트 주소 지정 기능 및 범용 레지스터 16 64 비트의 단순 집합입니다. 확장 된 레지스터 집합, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 사용 하 여는 [__fastcall](../cpp/fastcall.md) 호출 규칙 및 RISC 기반 예외 처리 모델입니다. `__fastcall` 규칙 처음 네 개의 인수가 및 스택 프레임에 대 한 레지스터를 사용 하 여 추가 인수를 전달 합니다.  

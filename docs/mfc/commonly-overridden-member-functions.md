@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345838"
 ---
 # <a name="commonly-overridden-member-functions"></a>일반적으로 재정의되는 멤버 함수
 다음 표에서 주로 멤버 함수에서 재정의 하 여 `CDialog`-클래스를 파생 합니다.  

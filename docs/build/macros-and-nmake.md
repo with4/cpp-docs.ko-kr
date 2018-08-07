@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368007"
 ---
 # <a name="macros-and-nmake"></a>매크로와 NMake
 매크로를 다른 문자열로 메이크파일의 특정 문자열을 대체합니다. 매크로 사용 하 여 다음을 수행할 수 있습니다.  

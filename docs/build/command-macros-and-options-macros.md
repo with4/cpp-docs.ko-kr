@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367361"
 ---
 # <a name="command-macros-and-options-macros"></a>명령 매크로와 옵션 매크로
 명령 매크로 Microsoft 제품에 대 한 미리 정의 합니다. 옵션 매크로 옵션 이러한 제품을 나타내고 기본적으로 정의 되어 있지 않습니다. 모두 미리 정의 된 규칙에 사용 되 고 설명 블록 또는 사용자 정의 유추 규칙에서 사용할 수 있습니다. 옵션을 포함 하는 명령줄의 일부 또는 전체를 나타내기 위해 명령 매크로 재정의할 수 있습니다. 옵션 매크로 정의 하지 않으면 null 문자열을 생성 합니다.  

@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2999e82bd05d75cb8637ba7404c36cdc2be047a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932174"
 ---
 # <a name="containers-advanced-features"></a>컨테이너: 고급 기능
 이 문서에서는 기존 컨테이너 응용 프로그램에 선택적 고급 기능을 통합 하는 데 필요한 단계를 설명 합니다. 이러한 기능은 다음과 같습니다.  
@@ -69,13 +70,13 @@ ms.lasthandoff: 05/04/2018
   
     -   연결 프로그램 `COleTemplateServer` 개체의 호출 하 여 문서 서식 파일에 개체 `ConnectTemplate` 멤버 함수입니다.  
   
-    -   호출 된 **COleTemplateServer::RegisterAll** OLE 시스템으로 모든 클래스 개체를 등록 하려면 멤버 함수입니다.  
+    -   호출 된 `COleTemplateServer::RegisterAll` OLE 시스템으로 모든 클래스 개체를 등록 하려면 멤버 함수입니다.  
   
-    -   `COleTemplateServer::UpdateRegistry`를 호출합니다. 유일한 매개 변수를 `UpdateRegistry` 해야 `OAT_CONTAINER` "/ 포함 된" 스위치와 함께 응용 프로그램 시작 되지 않은 경우. 이 포함 된 개체에 대 한 링크를 지원할 수 있는 컨테이너 응용 프로그램을 등록 합니다.  
+    -   `COleTemplateServer::UpdateRegistry`를 호출합니다. 유일한 매개 변수를 `UpdateRegistry` 해야 *OAT_CONTAINER* "/ 포함 된" 스위치와 함께 응용 프로그램 시작 되지 않은 경우. 이 포함 된 개체에 대 한 링크를 지원할 수 있는 컨테이너 응용 프로그램을 등록 합니다.  
   
          응용 프로그램 "/ 포함 된" 스위치를 시작한 경우 서버 응용 프로그램과 유사한 주 창, 표시 하지 않도록 합니다.  
   
- MFC OLE 샘플 [OCLIENT](../visual-cpp-samples.md) 이 기능을 구현 합니다. 이 수행 되는 방법의 예제를 참조 하십시오.는 `InitInstance` 는 OCLIENT의 함수입니다. 이 샘플 응용 프로그램의 CPP 파일입니다.  
+ MFC OLE 샘플 [OCLIENT](../visual-cpp-samples.md) 이 기능을 구현 합니다. 이 수행 되는 방법의 예제를 참조 하십시오.는 `InitInstance` 함수는 *OCLIENT 합니다. CPP* 이 샘플 응용 프로그램의 파일입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [컨테이너](../mfc/containers.md)   

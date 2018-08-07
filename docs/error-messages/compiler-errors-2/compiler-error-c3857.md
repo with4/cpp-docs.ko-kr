@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267828"
 ---
 # <a name="compiler-error-c3857"></a>컴파일러 오류 C3857
 'type': 여러 개의 형식 매개 변수 목록을 사용할 수 없습니다  

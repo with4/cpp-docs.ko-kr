@@ -26,34 +26,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccf5ad83afe2151ac9ceb90029780989ca33487
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a4fddaa53aed54fd33afee9205fcc9a3819f1b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406869"
 ---
 # <a name="event-handling-in-com"></a>COM에서 이벤트 처리
-COM 이벤트 처리를 설정 하는 이벤트 소스와 이벤트 수신기를 사용 하는 [event_source](../windows/event-source.md) 및 [event_receiver](../windows/event-receiver.md) 특성에 각각 지정 `type` = **com**합니다. 적용되는 클래스가 COM 연결 지점을 통해 이벤트를 발생시키고 처리할 수 있도록 이러한 특성은 사용자 지정, 디스패치 및 이중 인터페이스에 대한 적절한 코드를 삽입합니다.  
+COM 이벤트 처리를 설정한 이벤트 소스와 이벤트 수신기를 사용 하는 [event_source](../windows/event-source.md) 하 고 [event_receiver](../windows/event-receiver.md) 특성에 각각 지정 `type` = `com`. 적용되는 클래스가 COM 연결 지점을 통해 이벤트를 발생시키고 처리할 수 있도록 이러한 특성은 사용자 지정, 디스패치 및 이중 인터페이스에 대한 적절한 코드를 삽입합니다.  
   
 ## <a name="declaring-events"></a>이벤트 선언  
- 이벤트 소스 클래스에서 사용 하 여는 [__event](../cpp/event.md) 이벤트로 해당 인터페이스의 메서드를 선언 하는 인터페이스 선언에서 키워드입니다. 해당 인터페이스의 이벤트는 이를 인터페이스 메서드로 호출할 때 발생합니다. 이벤트 인터페이스의 메서드는 0 개 이상의 매개 변수를 가질 수 있습니다 (모든 해야 **에** 매개 변수). 반환 형식은 void 또는 모든 정수 계열 형식이 될 수 있습니다.  
+ 이벤트 소스 클래스를 사용 합니다 [__event](../cpp/event.md) 이벤트와 해당 인터페이스의 메서드를 선언 하는 인터페이스 선언에서 키워드입니다. 해당 인터페이스의 이벤트는 이를 인터페이스 메서드로 호출할 때 발생합니다. 이벤트 인터페이스의 메서드는 0 개 이상의 매개 변수를 가질 수 있습니다 (모든 야 *에서* 매개 변수). 반환 형식은 void 또는 모든 정수 계열 형식이 될 수 있습니다.  
   
 ## <a name="defining-event-handlers"></a>이벤트 처리기 정의  
- 이벤트 수신기 클래스에서는 처리될 이벤트와 일치하는 시그니처(반환 형식, 호출 규칙 및 인수)가 포함된 메서드인 이벤트 처리기를 정의합니다. COM 이벤트에 대 한 호출 규칙은 일치; 필요가 없으며 참조 [레이아웃 종속 COM 이벤트](#vcconeventhandlingincomanchorlayoutdependentcomevents) 아래의 세부 정보에 대 한 합니다.  
+ 이벤트 수신기 클래스에서는 처리될 이벤트와 일치하는 시그니처(반환 형식, 호출 규칙 및 인수)가 포함된 메서드인 이벤트 처리기를 정의합니다. COM 이벤트에 대 한 호출 규칙 수행 일치할 필요는 없습니다. 참조 [레이아웃 종속 COM 이벤트](#vcconeventhandlingincomanchorlayoutdependentcomevents) 아래 세부 정보에 대 한 합니다.  
   
 ## <a name="hooking-event-handlers-to-events"></a>이벤트에 이벤트 처리기 후크  
- 또한 이벤트 수신기 클래스를 사용 하 여 내장 함수 [__hook](../cpp/hook.md) 이벤트와 이벤트 처리기와 연결할 및 [__unhook](../cpp/unhook.md) 을 이벤트 처리기에서 이벤트를 분리 합니다. 한 이벤트 처리기에 여러 이벤트를 후크하거나 한 이벤트에 여러 이벤트 처리기를 후크할 수 있습니다.  
+ 또한 이벤트 수신기 클래스를 사용 하 여 내장 함수 [__hook](../cpp/hook.md) 이벤트 처리기를 사용 하 여 이벤트를 연결 하 고 [__unhook](../cpp/unhook.md) 이벤트 처리기에서 이벤트를 분리 하려면. 한 이벤트 처리기에 여러 이벤트를 후크하거나 한 이벤트에 여러 이벤트 처리기를 후크할 수 있습니다.  
   
 > [!NOTE]
->  일반적으로 COM 이벤트 수신기가 이벤트 소스 인터페이스 정의에 액세스할 수 있게 만드는 두 가지 방법이 있습니다. 첫 번째 방법은 아래와 같이 공용 헤더 파일을 공유하는 것입니다. 사용 하는 두 번째는 [#import](../preprocessor/hash-import-directive-cpp.md) 와 `embedded_idl` 가져오기 한정자를 특성에서 생성 된 코드를 유지 이벤트 소스 형식 라이브러리가.tlh 파일에 작성 되도록 합니다.  
+>  일반적으로 COM 이벤트 수신기가 이벤트 소스 인터페이스 정의에 액세스할 수 있게 만드는 두 가지 방법이 있습니다. 첫 번째 방법은 아래와 같이 공용 헤더 파일을 공유하는 것입니다. 사용 하는 두 번째 것 [#import](../preprocessor/hash-import-directive-cpp.md) 사용 하 여는 `embedded_idl` 유지 하는 특성에서 생성 된 코드를 사용 하 여 이벤트 소스 형식 라이브러리가.tlh 파일에 기록 됩니다 있도록 한정자를 가져옵니다.  
   
 ## <a name="firing-events"></a>이벤트 발생  
- 이벤트를 발생시키려면 이벤트 소스 클래스에서 `__event` 키워드로 선언된 인터페이스의 메서드를 호출하기만 하면 됩니다. 처리기가 이벤트에 후크된 경우 처리기가 호출됩니다.  
+ 이벤트를 발생 시키는 메서드를 호출로 선언 된 인터페이스에는 **__event** 키워드 이벤트 소스 클래스입니다. 처리기가 이벤트에 후크된 경우 처리기가 호출됩니다.  
   
 ### <a name="com-event-code"></a>COM 이벤트 코드  
  다음 예제에서는 COM 클래스에서 이벤트를 발생시키는 방법을 보여 줍니다. 예제를 컴파일 및 실행하려면 코드의 주석을 참조하십시오.  
   
-```  
+```cpp 
 // evh_server.h  
 #pragma once  
   
@@ -72,7 +73,7 @@ class DECLSPEC_UUID("530DF3AD-6936-3214-A83B-27B63C7997C4") CSource;
   
  서버는 다음과 같습니다.  
   
-```  
+```cpp 
 // evh_server.cpp  
 // compile with: /LD  
 // post-build command: Regsvr32.exe /s evh_server.dll  
@@ -97,7 +98,7 @@ public:
   
  클라이언트는 다음과 같습니다.  
   
-```  
+```cpp 
 // evh_client.cpp  
 // compile with: /link /OPT:NOREF  
 #define _ATL_ATTRIBUTES 1  
@@ -155,7 +156,7 @@ int main() {
   
 ### <a name="output"></a>출력  
   
-```  
+```Output  
 MyHandler1 was called with value 123.  
 MyHandler2 was called with value 123.  
 ```  
@@ -163,20 +164,20 @@ MyHandler2 was called with value 123.
 ##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> 레이아웃 종속 COM 이벤트  
  레이아웃 종속성은 COM 프로그래밍에만 문제가 됩니다. 네이티브 및 관리되는 이벤트 처리에서 처리기의 시그니처(반환 형식, 호출 규칙 및 인수)는 해당 이벤트와 일치해야 하지만 처리기 이름은 해당 이벤트와 일치하지 않아도 됩니다.  
   
- 그러나 COM 이벤트 처리를 설정 하는 경우에 *layout_dependent* 의 매개 변수 **event_receiver** 를 **true**, 이름 및 서명 일치 적용 됩니다. 즉, 이벤트 수신기에 있는 처리기의 이름 및 시그니처가 후크되어 있는 이벤트의 이름 및 시그니처와 정확하게 일치해야 합니다.  
+ 그러나 COM 이벤트 처리를 설정 하는 경우에 *layout_dependent* 의 매개 변수 `event_receiver` 하 **true**, 이름 및 서명 일치 적용 됩니다. 즉, 이벤트 수신기에 있는 처리기의 이름 및 시그니처가 후크되어 있는 이벤트의 이름 및 시그니처와 정확하게 일치해야 합니다.  
   
- 때 *layout_dependent* 로 설정 된 **false**, 호출 규칙 및 저장소 클래스 (가상, 정적, 및 등)을 혼합 사이 발생 하 고 이벤트 메서드와 후크 메서드 (해당 대리자)입니다. 이 약간 더 효율적 *layout_dependent*=**true**합니다.  
+ 때 *layout_dependent* 로 설정 된 **false**, 호출 규칙 및 저장소 클래스 (가상, 정적 및 등)을 혼합 실행 간에 일치 하 고 이벤트 메서드와 후크 메서드 (해당 대리자)입니다. 것이 약간 더 효율적 *layout_dependent*=**true**합니다.  
   
  예를 들어, `IEventSource`가 다음 메서드를 사용하도록 정의되어 있다고 가정합니다.  
   
-```  
+```cpp 
 [id(1)] HRESULT MyEvent1([in] int value);  
 [id(2)] HRESULT MyEvent2([in] int value);  
 ```  
   
  이벤트 소스의 형태가 다음과 같다고 가정합니다.  
   
-```  
+```cpp 
 [coclass, event_source(com)]  
 class CSource : public IEventSource {  
 public:  
@@ -192,7 +193,7 @@ public:
   
  그런 다음 이벤트 수신기에서 `IEventSource`의 메서드에 후크된 처리기가 다음과 같이 해당 이름과 시그니처를 일치시켜야 합니다.  
   
-```  
+```cpp 
 [coclass, event_receiver(com, true)]  
 class CReceiver {  
 public:  
@@ -215,5 +216,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [이벤트 처리](../cpp/event-handling.md)

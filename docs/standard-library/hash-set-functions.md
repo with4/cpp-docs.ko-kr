@@ -7,11 +7,12 @@ f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 083d928198d8d83d8a56d8a74a6204e94c86aa67
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad8041ff6a4abab84272d2bbbdee290bfce4eff6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961879"
 ---
 # <a name="lthashsetgt-functions"></a>&lt;hash_set&gt; 함수
 
@@ -34,19 +35,19 @@ void swap(
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 요소를 제공 하는 hash_set 또는 hash_set의와 교환할 요소가 hash_set `left`합니다.
+*오른쪽* 교환할 요소를 제공 하는 hash_set 또는 hash_set의와 교환할 요소가 들어 있는 hash_set *왼쪽*합니다.
 
-`left` Hash_set의와 교환할 요소가 hash_set `right`합니다.
+*왼쪽* 요소를 교환할 hash_set의 hash_set *오른쪽*합니다.
 
 ### <a name="remarks"></a>설명
 
-`swap` 템플릿 함수는 멤버 함수 `left.`[swap](../standard-library/hash-set-class.md#swap)(`right`)을 실행하기 위해 컨테이너 클래스 hash_set에서 특수화된 알고리즘입니다. 이 함수는 컴파일러에서 지정하는 함수 템플릿의 부분 순서 인스턴스입니다. 함수를 호출할 때 템플릿이 고유하게 일치하지 않는 방식으로 템플릿 함수가 오버로드되면 컴파일러는 템플릿 함수의 가장 특수화된 버전을 선택합니다. 알고리즘 클래스 내 템플릿 함수의 일반 버전
+합니다 `swap` 템플릿 함수는 멤버 함수를 실행 하는 컨테이너 클래스 hash_set에서 특수화 된 알고리즘 `left.` [스왑](../standard-library/hash-set-class.md#swap)(`right`). 이 함수는 컴파일러에서 지정하는 함수 템플릿의 부분 순서 인스턴스입니다. 함수를 호출할 때 템플릿이 고유하게 일치하지 않는 방식으로 템플릿 함수가 오버로드되면 컴파일러는 템플릿 함수의 가장 특수화된 버전을 선택합니다. 알고리즘 클래스 내 템플릿 함수의 일반 버전
 
 **template \<class T> void swap(T&, T&),**
 
 는 할당을 통해 작동하며 속도가 느린 작업입니다. 각 컨테이너의 특수화된 버전은 컨테이너 클래스의 내부 표현을 사용할 수 있으므로 속도가 훨씬 빠릅니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `swap`의 템플릿 버전 사용 예제를 보려면 멤버 클래스 [hash_set::swap](../standard-library/hash-set-class.md#swap)에 대한 코드 예제를 참조하세요.
 
@@ -63,19 +64,19 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 요소를 제공 하는 hash_multiset 또는 hash_multiset의와 교환할 요소가 hash_multiset `left`합니다.
+*오른쪽* 교환할 요소를 제공 하는 hash_multiset 또는 hash_multiset과 교환할 요소가 들어 있는 hash_multiset *왼쪽*합니다.
 
-`left` Hash_multiset의와 교환할 요소가 hash_multiset `right`합니다.
+*왼쪽* 요소가 들어 있는 hash_multiset과 교환할 hash_multiset *오른쪽*합니다.
 
 ### <a name="remarks"></a>설명
 
-`swap` 템플릿 함수는 멤버 함수 `left.`[swap](../standard-library/hash-multiset-class.md#swap)(`right`)을 실행하기 위해 컨테이너 클래스 hash_multiset에서 특수화된 알고리즘입니다. 이 함수는 컴파일러에서 지정하는 함수 템플릿의 부분 순서 인스턴스입니다. 함수를 호출할 때 템플릿이 고유하게 일치하지 않는 방식으로 템플릿 함수가 오버로드되면 컴파일러는 템플릿 함수의 가장 특수화된 버전을 선택합니다. 알고리즘 클래스 내 템플릿 함수의 일반 버전
+합니다 `swap` 템플릿 함수는 멤버 함수를 실행 하려면 컨테이너 클래스 hash_multiset에서 특수화 된 알고리즘 `left.` [스왑](../standard-library/hash-multiset-class.md#swap)(`right`). 이 함수는 컴파일러에서 지정하는 함수 템플릿의 부분 순서 인스턴스입니다. 함수를 호출할 때 템플릿이 고유하게 일치하지 않는 방식으로 템플릿 함수가 오버로드되면 컴파일러는 템플릿 함수의 가장 특수화된 버전을 선택합니다. 알고리즘 클래스 내 템플릿 함수의 일반 버전
 
 **template \<class T> void swap(T&, T&),**
 
 는 할당을 통해 작동하며 속도가 느린 작업입니다. 각 컨테이너의 특수화된 버전은 컨테이너 클래스의 내부 표현을 사용할 수 있으므로 속도가 훨씬 빠릅니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `swap`의 템플릿 버전 사용 예제를 보려면 멤버 클래스 [hash_multiset::swap](../standard-library/hash-multiset-class.md#swap)에 대한 코드 예제를 참조하세요.
 

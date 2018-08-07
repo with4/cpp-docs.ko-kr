@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892529"
 ---
 # <a name="semaphoreoperator-operator"></a>Semaphore::operator= 연산자
 Semaphore 개체에서 현재 Semaphore 개체에 지정된 된 핸들을 이동합니다.  

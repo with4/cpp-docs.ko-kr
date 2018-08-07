@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247650"
 ---
 # <a name="compiler-error-c3216"></a>컴파일러 오류 C3216
 제약 조건은 'type'이 아니라 제네릭 매개 변수여야 합니다.  

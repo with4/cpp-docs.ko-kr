@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686193"
 ---
 # <a name="318-ompgetdynamic-function"></a>3.1.8 omp_get_dynamic 함수
 **omp_get_dynamic** 스레드 동적인 조절을 사용 되 고 그렇지 않으면 0을 반환 하는 경우 함수는 0이 아닌 값을 반환 합니다. 형식은 다음과 같습니다.  

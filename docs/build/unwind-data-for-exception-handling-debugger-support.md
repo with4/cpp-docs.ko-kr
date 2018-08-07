@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380435"
 ---
 # <a name="unwind-data-for-exception-handling-debugger-support"></a>예외 처리 및 디버거 지원을 위한 해제 데이터
 이 섹션에서는 예외 처리 및 디버깅 지원에 필요한 데이터 구조에 설명 합니다.  

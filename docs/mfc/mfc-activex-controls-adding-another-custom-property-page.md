@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0e8713bc228e65cb06e58d7ccb5389f7366e76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9c3d9f4744ae01a7e251387bd342b77292d1c0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931611"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX 컨트롤: 다른 사용자 지정 속성 페이지 추가
 경우에 따라서는 ActiveX 컨트롤 한 속성 페이지에 표시 될 수 있는 보다 더 많은 속성을 갖습니다. 이 경우 이러한 속성을 표시 하려면 ActiveX 컨트롤에 속성 페이지를 추가할 수 있습니다.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
   
 3.  확장 된 **대화** 노드를 선택한 **IDD_OLE_PROPPAGE_SMALL**합니다.  
   
-4.  클릭 `New` 프로젝트에 리소스를 추가 합니다.  
+4.  클릭 **새로** 프로젝트에 리소스를 추가 합니다.  
   
 5.  속성 창을 새로 고쳐야 새 속성 페이지 템플릿을 선택 합니다.  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]  
   
- 참고의 두 번째 매개 변수를 증가 시켜야 하는 `BEGIN_PROPPAGEIDS` 2 1에서 매크로 (속성 페이지 수)입니다.  
+ Note BEGIN_PROPPAGEIDS 매크로 (속성 페이지 수) 1에서 2의 두 번째 매개 변수를 증가 해야 합니다.  
   
  컨트롤 구현 파일을 수정 해야 (합니다. 헤더를 포함 하도록 CPP) 파일 (합니다. H) 새 속성 페이지 클래스의 파일입니다.  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 05/04/2018
   
      [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]  
   
-7.  생성자를 수정 `CAddtlPropPage` 있도록 **IDS_SAMPLE_ADDPPG_CAPTION** 에 전달 되는 `COlePropertyPage` 생성자를 다음과 같이 합니다.  
+7.  생성자를 수정 `CAddtlPropPage` IDS_SAMPLE_ADDPPG_CAPTION에 전달 되도록는 `COlePropertyPage` 생성자를 다음과 같이 합니다.  
   
      [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]  
   

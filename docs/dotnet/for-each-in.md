@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111945"
 ---
 # <a name="for-each-in"></a>for each, in
 배열 또는 컬렉션을 반복합니다. 이 비표준 키워드는 C++/CLI 및 네이티브 C++ 프로젝트에서 사용할 수 있습니다. 그러나 사용하지 않는 것이 좋습니다. 표준을 사용 하는 것이 좋습니다 [범위 기반에 대 한 문 (c + +)](../cpp/range-based-for-statement-cpp.md) 대신 합니다.  

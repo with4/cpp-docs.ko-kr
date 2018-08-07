@@ -28,11 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d48bd8dce38a5042c01b56f40cebb2e030be6f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70ffecdfdf661e7423a4db0898b05dfa2f5ce832
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954645"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper 클래스
 
@@ -111,7 +112,7 @@ Ty& get() const noexcept;
 
 구성원 함수는 래핑된 참조를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__functional__reference_wrapper_get.cpp
@@ -150,7 +151,7 @@ operator Ty&() const noexcept;
 
 멤버 연산자는 `*ptr`을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__functional__reference_wrapper_operator_cast.cpp
@@ -185,15 +186,15 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>매개 변수
 
-`Types` 인수 목록 유형입니다.
+*형식* 인수 목록 유형입니다.
 
-`args` 인수 목록입니다.
+*args* 인수 목록입니다.
 
 ### <a name="remarks"></a>설명
 
 템플릿 구성원 `operator()`는 `std::invoke(get(), std::forward<Types>(args)...)`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__functional__reference_wrapper_operator_call.cpp
@@ -228,15 +229,15 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 래핑할 유형입니다.
+*Ty* 래핑할 형식입니다.
 
-`val` 래핑할 값입니다.
+*val* 래핑할 값입니다.
 
 ### <a name="remarks"></a>설명
 
 생성자는 저장된 값 `ptr`을 `&val`로 설정합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__functional__reference_wrapper_reference_wrapper.cpp
@@ -279,7 +280,7 @@ typedef R result_type;
 
 `result_type` 형식 정의는 래핑된 함수의 취약한 결과 형식과 동일한 의미입니다. 이 형식 정의는 함수 형식에서만 의미가 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__functional__reference_wrapper_result_type.cpp
@@ -318,7 +319,7 @@ typedef Ty type;
 
 typedef는 템플릿 인수 `Ty`의 동의어입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__functional__reference_wrapper_type.cpp

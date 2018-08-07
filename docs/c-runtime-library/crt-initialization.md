@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389704"
 ---
 # <a name="crt-initialization"></a>CRT 초기화
 이 항목에서는 CRT가 네이티브 코드에서 전역 상태를 초기화하는 방법에 대해 설명합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317062"
 ---
 # <a name="project-build-error-prj0033"></a>프로젝트 빌드 오류 PRJ0033
 사용자 지정 빌드에 대 한 ' 추가 종속성 ' 속성이 한 단계씩 코드 실행 매크로 대 한 파일에 포함 된 ' file' ' '로 확인 됨 'macro_expansion'.  

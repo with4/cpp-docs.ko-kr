@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267422"
 ---
 # <a name="compiler-error-c3828"></a>컴파일러 오류 C3828
 'object type': WinRTclasses 또는 배치 인수를 관리 하는 인스턴스를 만드는 동안 사용할 수 없습니다  

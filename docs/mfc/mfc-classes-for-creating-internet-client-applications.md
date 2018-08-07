@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348663"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>인터넷 클라이언트 응용 프로그램을 만들기 위한 MFC 클래스
 MFC는 인터넷 클라이언트 응용 프로그램을 작성 하기 위한 다음과 같은 클래스 및 전역 함수를 제공 합니다. 들여쓰기 된 들여쓰지 않은 상위 클래스에서 파생 되는 것을 나타냅니다. `CGopherFile` 및 `CHttpFile` 에서 파생 `CInternetFile`, 예를 들어 있습니다. 이러한 클래스 및 전역 함수의 afx에서 선언 됩니다. H, 제외 하 고 `CFileFind`, afx에서는 선언 합니다. 8.  

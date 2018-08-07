@@ -19,26 +19,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4b4860726fa77d7b852290d8ea4680fe1bbbd86f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1196bc41022a3202a55ad1ba5c208b8a8fdbbcc5
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340614"
 ---
 # <a name="recordset-filtering-records-odbc"></a>레코드 집합: 레코드 필터링(ODBC)
-MFC ODBC 클래스에이 항목에 적용 됩니다.  
+이 항목에서는 MFC ODBC 클래스에 적용 됩니다.  
   
- 이 항목에서는 레코드 집합을 필터링 하는 사용할 수 있는 레코드의 특정 하위 집합만 선택 하는 방법에 설명 합니다. 예를 들어 다음 MATH101 등의 특정 과정에 대 한 클래스 부분에만 선택 하는 것이 좋습니다. 필터는 SQL의 내용에 의해 정의 된 검색 조건을 **여기서** 절. 프레임 워크가 레코드 집합의 SQL 문에 추가 **여기서** 절 선택 범위를 제한 합니다.  
+ 이 항목에서는 레코드 집합을 필터링 하는 사용할 수 있는 레코드의 특정 하위 집합만 선택 하는 방법에 설명 합니다. 예를 들어, 다음 MATH101 같은 특정 강좌에 클래스 부분에만 선택 하는 것이 좋습니다. 필터는 SQL의 내용으로 정의 된 검색 조건을 **여기서** 절. 프레임 워크가 레코드 집합의 SQL 문에 추가 합니다 **여기서** 절 선택 범위를 제한 합니다.  
   
- 하지만 호출 하기 전에 개체를 생성 한 후에 레코드 집합 개체의 필터를 설정 해야 해당 **열려** 멤버 함수 (또는 호출 하기 전에 **Requery** 기존 레코드 집합에 대 한 멤버 함수 개체의 **열려** 멤버 함수가 이전에 호출 되었습니다).  
+ 하지만 호출 하기 전에 개체를 생성 한 후에 레코드 집합 개체의 필터를 설정 해야 해당 `Open` 멤버 함수 (호출 하기 전에 또는 합니다 `Requery` 멤버 함수는 기존 레코드 집합에 대 한 개체 `Open` 멤버 함수에 이미 호출 된).  
   
 #### <a name="to-specify-a-filter-for-a-recordset-object"></a>레코드 집합 개체에 대 한 필터를 지정 하려면  
   
-1.  새 레코드 집합 개체를 생성 합니다 (호출을 준비 또는 **Requery** 기존 개체에 대 한).  
+1.  새 레코드 집합 개체를 생성 (호출을 준비 하거나 `Requery` 기존 개체에 대 한).  
   
 2.  개체의 값을 설정 [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) 데이터 멤버입니다.  
   
-     필터는 SQL의 내용이 포함 된 null로 끝나는 문자열로 **여기서** 절 하지만 키워드가 아니라 **여기서**합니다. 예를 들어 사용 합니다.  
+     필터는 SQL의 내용이 포함 된 null로 끝나는 문자열로 **위치** 절 있지만 not 키워드 **여기서**합니다. 예를 들어 사용 합니다.  
   
     ```  
     m_pSet->m_strFilter = "CourseID = 'MATH101'";  
@@ -51,19 +52,19 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
     ```  
   
     > [!NOTE]
-    >  리터럴 문자열 "MATH101" 위의 단일 인용 부호로 표시 됩니다. ODBC SQL 사양에 작은따옴표는 문자열 리터럴을 표시 하는 데 사용 됩니다. 이 상황에서 DBMS의 따옴표 요구 사항에 대 한 ODBC 드라이버 설명서를 확인 합니다. 이 구문은 설명 추가이 항목의 끝 근처 합니다.  
+    >  리터럴 문자열 "MATH101" 위의 단일 큰따옴표를 사용 하 여 표시 됩니다. ODBC SQL 사양에서 작은따옴표는 문자열 리터럴을 나타내는 데 사용 됩니다. 이 상황에서 DBMS의 따옴표 요구 사항에 대 한 ODBC 드라이버 설명서를 확인 합니다. 이 구문에 대해서도 설명 추가이 항목의 끝부분입니다.  
   
-3.  정렬 순서, 잠금 모드 또는 매개 변수 같은 사용자가 필요한 다른 옵션을 설정 합니다. 매개 변수를 지정 하는 것은 특히 유용 합니다. 필터를 매개 변수화 하는 방법에 대 한 정보를 참조 하십시오. [레코드 집합: 레코드 집합 (ODBC)를 매개 변수화](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)합니다.  
+3.  정렬 순서, 잠금 모드 또는 매개 변수 등 필요한 다른 옵션을 설정 합니다. 매개 변수를 지정 하는 것은 특히 유용 합니다. 필터를 매개 변수화 하는 방법에 대 한 정보를 참조 하세요 [레코드 집합: 레코드 집합 (ODBC)를 매개 변수화](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)합니다.  
   
-4.  호출 **열려** 새 개체에 대 한 (또는 **Requery** 이전에 열린된 개체에 대 한).  
-  
-> [!TIP]
->  필터에 매개 변수를 사용 하는 잠재적으로 레코드를 검색 하기 위한 가장 효율적인 방법을 합니다.  
+4.  호출 `Open` 새 개체에 대 한 (또는 `Requery` 이전에 열린된 개체에 대 한).  
   
 > [!TIP]
->  레코드 집합 필터는 데 유용 [조인](../../data/odbc/recordset-performing-a-join-odbc.md) 테이블 및 사용에 대 한 [매개 변수](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) 가져오거나 런타임 시 계산 된 정보에 기반 합니다.  
+>  레코드를 검색 하기 위한 가장 효율적인 방법은 가능성이 필터에서 매개 변수를 사용 합니다.  
   
- 지정한 검색 조건에 일치 하는 레코드만 일부 레코드를 선택 합니다. 위에 설명 된 과정 필터를 지정 (변수 가정 `strCourseID` 현재, 예를 들어, "MATH101"로 설정)에서 다음을 수행 합니다.  
+> [!TIP]
+>  레코드 집합 필터에 대 한 유용 [조인](../../data/odbc/recordset-performing-a-join-odbc.md) 테이블 및 사용에 대 한 [매개 변수](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) 가져오거나 런타임에 계산 된 정보를 기반으로 합니다.  
+  
+ 지정한 검색 조건을 충족 하는 레코드만 일부 레코드를 선택 합니다. 예를 들어, 과정 필터를 지정 하려면 위에서 설명한 (변수 가정 `strCourseID` 현재, 예를 들어 "MATH101"로 설정), 다음을 수행 합니다.  
   
 ```  
 // Using the recordset pointed to by m_pSet  
@@ -79,22 +80,22 @@ if ( m_pSet->Open( CRecordset::snapshot, NULL, CRecordset::readOnly ) )
   
  레코드 집합 MATH101에 대 한 모든 클래스 섹션에 대 한 레코드를 포함합니다.  
   
- 문자열 변수를 사용 하 여 위의 예제에서 필터 문자열을 설정 하는 방법을 살펴보십시오. 일반적인 사용법입니다. 과목 ID에 대 한 리터럴 값 100을 지정 한다고 가정 하지만 다음 코드에는 리터럴 값을 사용 하 여 올바르게 필터 문자열을 설정 하는 방법을 보여 줍니다.  
+ 문자열 변수를 사용 하 여 위의 예제에서 필터 문자열을 설정한 어떻게 알 수 있습니다. 일반적인 사용법입니다. 과정 ID에 대 한 리터럴 값 100을 지정 한다고 가정 하지만 다음 코드를 리터럴 값을 사용 하 여 올바르게 필터 문자열을 설정 하는 방법을 보여 줍니다.  
   
 ```  
 m_strFilter = "StudentID = '100'";   // correct  
 ```  
   
- 참고; 작은따옴표 문자 사용 필터 문자열을 직접 설정 하는 경우에 **하지**:  
+ 작은따옴표 문자;의 사용 필터 문자열을 직접 설정 하는 경우에 **되지**:  
   
 ```  
 m_strFilter = "StudentID = 100";   // incorrect for some drivers  
 ```  
   
- 인용 부호 위에 표시 된 ODBC 사양에 하지만 일부 Dbms 다른 인용 문자 필요할 수 있습니다. 자세한 내용은 참조 [SQL: 사용자 지정 레코드 집합의 SQL 문 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)합니다.  
+ ODBC 사양에 맞는 위의 인용 되지만 일부 Dbms에 다른 따옴표 필요할 수 있습니다. 자세한 내용은 [SQL: 사용자 지정 레코드 집합의 SQL 문 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)합니다.  
   
 > [!NOTE]
->  사용자 고유의 SQL 문자열을 전달 하 여 레코드 집합의 기본 SQL 문자열을 재정의 하도록 선택 **열려**, 사용자 지정 문자열에 있으면 필터를 설정 하지 않아야는 **여기서** 절. 기본 SQL를 재정의 하는 방법에 대 한 자세한 내용은 참조 [SQL: 사용자 지정 레코드 집합의 SQL 문 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)합니다.  
+>  사용자 고유의 SQL 문자열을 전달 하 여 레코드 집합의 기본 SQL 문자열을 재정의 하려는 경우 `Open`, 사용자 지정 문자열에 있으면 필터를 설정 하지 않아야는 **여기서** 절. SQL 기본값을 재정의 하는 방법에 대 한 자세한 내용은 참조 하세요. [SQL: 사용자 지정 레코드 집합의 SQL 문 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [레코드 집합 (ODBC)](../../data/odbc/recordset-odbc.md)   

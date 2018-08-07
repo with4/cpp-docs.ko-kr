@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb9fd0ff09f6775a95ff881d9f8cbaa3edc61065
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e8307411994fb2f850a71e91b63b44052cca40e0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461012"
 ---
 # <a name="comptras-method"></a>ComPtr::As 메서드
-지정된 템플릿 매개 변수로 식별된 인터페이스를 나타내는 ComPtr 개체를 반환합니다.  
+반환 된 **ComPtr** 지정 된 템플릿 매개 변수로 식별 된 인터페이스를 나타내는 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* p  
@@ -39,15 +39,14 @@ template<typename U>
 HRESULT As(  
    _Out_ Details::ComPtrRef<ComPtr<U>> p  
 ) const;  
-  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `U`  
- 매개 변수로 표현 되어야 하는 인터페이스 `p`합니다.  
+ *U*  
+ 인터페이스를 매개 변수로 표시할 *p*합니다.  
   
- `p`  
- 매개 변수로 지정 된 인터페이스를 나타내는 ComPtr 개체 `U`합니다. 매개 변수 `p` 현재 ComPtr 개체를 참조 하지 않아야 합니다.  
+ *p*  
+ A **ComPtr** 매개 변수에 의해 지정 된 인터페이스를 나타내는 개체입니다 *U*합니다. 매개 변수 *p* 현재 참조 하지 않아야 **ComPtr** 개체입니다.  
   
 ## <a name="remarks"></a>설명  
  첫 번째 템플릿은 코드에서 사용해야 하는 폼입니다. 두 번째 템플릿은 [자동](../cpp/auto-cpp.md) 형식 추론 키워드와 같은 C++ 언어 기능을 지원하는 내부 도우미 특수화입니다.  

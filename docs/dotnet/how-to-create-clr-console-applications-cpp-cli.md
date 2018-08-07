@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132572"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>방법: CLR 콘솔 응용 프로그램 만들기(C++/CLI)
 콘솔 응용 프로그램 템플릿을 사용하여 이미 필수 프로젝트 참조 및 파일이 있는 콘솔 응용 프로그램 프로젝트를 만들 수 있습니다.  

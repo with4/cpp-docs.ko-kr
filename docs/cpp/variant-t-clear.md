@@ -19,29 +19,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce2a8f423c7c1ff4ce975e13b216442825c6d65c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6cc11c12efc2beb8ec70c9081619c799f0c8c0d5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466737"
 ---
 # <a name="varianttclear"></a>_variant_t::Clear
 **Microsoft 전용**  
   
- 캡슐화 된 지웁니다 **VARIANT** 개체입니다.  
+ 캡슐화 된 지웁니다 `VARIANT` 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 void Clear( );  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- 호출 **VariantClear** 에 캡슐화 된 **VARIANT** 개체입니다.  
+ 호출 `VariantClear` 캡슐화 된 `VARIANT` 개체입니다.  
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_variant_t 클래스](../cpp/variant-t-class.md)

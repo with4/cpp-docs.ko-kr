@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381253"
 ---
 # <a name="spin-button-member-functions"></a>스핀 단추 멤버 함수
 spin 컨트롤에 사용할 수 있는 여러 멤버 함수 ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)). 이러한 함수를 사용 하 여 스핀 단추의 다음 특성을 변경 해야 합니다.  

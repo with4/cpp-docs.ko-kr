@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350486"
 ---
 # <a name="output-device-context-classes"></a>출력(장치 컨텍스트) 클래스
 이 클래스는 다양 한 유형의 Windows에서 사용할 수 있는 장치 컨텍스트를 캡슐화 합니다.  

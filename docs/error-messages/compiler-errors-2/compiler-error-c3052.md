@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244200"
 ---
 # <a name="compiler-error-c3052"></a>컴파일러 오류 C3052
 'var': default(none) 절 밑의 데이터 공유 절에 변수가 없습니다.  

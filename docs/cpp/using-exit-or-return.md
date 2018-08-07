@@ -1,5 +1,5 @@
 ---
-title: 사용 하 여 종료 하거나 반환할 | Microsoft Docs
+title: 사용 하 여 종료 또는 반환 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45885cc6dbac50a693bb84abb797469d8aff93a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47fb8ff09fc50557283a0f4e8ef0e159bc900e86
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460947"
 ---
 # <a name="using-exit-or-return"></a>exit 또는 return 사용
-호출 하는 경우 **종료** 하거나 실행 한 `return` 에서 문을 **주**, 정적 개체 초기화의 역순으로 제거 됩니다. 다음 예제에서는 이러한 초기화 및 정리가 작동하는 방법을 보여 줍니다.  
+호출 하는 경우 **종료** 하거나 실행을 **반환** 문이 `main`, 정적 개체 초기화의 역순으로 소멸 됩니다. 다음 예제에서는 이러한 초기화 및 정리가 작동하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp 
 // using_exit_or_return1.cpp  
 #include <stdio.h>  
 class ShowData {  
@@ -64,11 +65,11 @@ int main() {
 }  
 ```  
   
- 위의 예제에서 `sd1`에 진입하기 전에 정적 개체 `sd2` 및 `main`가 만들어지고 초기화됩니다. `return` 문을 사용하여 이 프로그램이 종료된 후 먼저 `sd2`가 소멸된 후 `sd1`이 소멸됩니다. `ShowData` 클래스에 대한 소멸자가 이 정적 개체와 연결된 파일을 닫습니다.   
+ 위의 예제에서 `sd1`에 진입하기 전에 정적 개체 `sd2` 및 `main`가 만들어지고 초기화됩니다. 사용 하 여이 프로그램이 종료 후는 **반환** 문, 첫 번째 `sd2` 소멸 되 고 `sd1`합니다. `ShowData` 클래스에 대한 소멸자가 이 정적 개체와 연결된 파일을 닫습니다.   
   
  범위를 벗어나면 소멸되도록 블록 범위를 사용해 `ShowData` 개체를 선언하여 이 코드를 작성할 수도 있습니다.  
   
-```  
+```cpp 
 int main() {  
    ShowData sd1, sd2( "hello.dat" );  
   
@@ -77,5 +78,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [추가 종료 고려 사항](../cpp/additional-termination-considerations.md)

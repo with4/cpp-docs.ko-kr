@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300061"
 ---
 # <a name="linker-tools-warning-lnk4014"></a>링커 도구 경고 LNK4014
 멤버 개체 "objectname"를 찾을 수 없습니다.  

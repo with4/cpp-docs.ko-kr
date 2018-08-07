@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 742270c77d47c178d0254ca9b9882f73fe3b8293
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5d192234a2b3cd3d72bef15e11678ebc41ccede0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462890"
 ---
 # <a name="definitions-and-declarations-c"></a>선언 및 정의 (C++)
-## <a name="microsoft-specific"></a>Microsoft 전용
- 시스템의 일부 프로그램에서 내보내지는 것으로 알려진 모든 항목 (함수 및 데이터)에 참조를 DLL 인터페이스 로 선언 된 모든 항목 즉, `dllimport` 또는 `dllexport`합니다. DLL 인터페이스에 포함 된 모든 선언은 지정 해야 합니다는 `dllimport` 또는 `dllexport` 특성입니다. 그러나 정의는 `dllexport` 특성만 지정해야 합니다. 예를 들어, 다음 함수 정의는 컴파일러 오류를 생성합니다.
+**Microsoft 전용** DLL 인터페이스 참조 시스템의 일부 프로그램에서 내보내지는 것으로 알려진 모든 항목 (함수 및 데이터)로 선언 되는 모든 항목, 즉 **dllimport** 또는 **dllexport** . DLL 인터페이스에 포함 된 모든 선언은 지정 해야 합니다는 **dllimport** 하거나 **dllexport** 특성입니다. 그러나 정의 지정 해야 합니다 **dllexport** 특성입니다. 예를 들어, 다음 함수 정의는 컴파일러 오류를 생성합니다.
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
@@ -41,7 +41,7 @@ __declspec( dllimport ) int i = 10;  // Error; this is a definition.
 __declspec( dllexport ) int i = 10;  // Okay--export definition
 ```
 
- 사용 `dllexport` 는 정의 암시 하는 동안 `dllimport` 가 선언을 암시 합니다. `extern`에 `dllexport` 키워드를 사용하여 선언을 강제해야 합니다. 그렇지 않으면 정의가 암시됩니다. 따라서 다음 예제는 올바릅니다.
+ 사용 **dllexport** 는 정의 암시 하는 동안 **dllimport** 가 선언을 암시 합니다. 사용 해야 합니다 **extern** 키워드를 사용 **dllexport** 선언을; 강제 적용 그렇지 않으면 정의가 암시 됩니다. 따라서 다음 예제는 올바릅니다.
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -74,5 +74,5 @@ void func() {
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
  [dllexport, dllimport](../cpp/dllexport-dllimport.md)

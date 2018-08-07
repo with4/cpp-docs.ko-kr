@@ -21,33 +21,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dffefb74faf6836b9f2fc81a7800dc34084657cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e7f722d4d1759bdec7a23bb15076b38de000eb6
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337419"
 ---
 # <a name="caccessor-class"></a>CAccessor 클래스
 접근자 형식 중 하나를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```cpp
 template <class T>  
 class CAccessor : public CAccessorBase, public T  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T`  
+### <a name="parameters"></a>매개 변수  
+ *T*  
  사용자 레코드 클래스입니다.  
   
 ## <a name="remarks"></a>설명  
- 레코드를 데이터 원본에 정적으로 바인딩할 때 사용 됩니다. 이 레코드는 버퍼에 포함 합니다. 이 클래스는 행 집합에서 여러 접근자를 지원합니다.  
+ 레코드를 데이터 원본에 정적으로 바인딩할 때 사용 됩니다. 레코드는 버퍼를 포함합니다. 이 클래스는 행 집합에서 여러 접근자를 지원합니다.  
   
- 구조 및 데이터베이스의 형식을 알고 있는 경우이 접근자 유형을 사용 합니다.  
+ 구조 및 데이터베이스의 형식을 알고 있는 경우이 접근자 유형이 사용 합니다.  
   
- 접근자에 메모리를 가리키는 필드를 포함 하는 경우 (같은 `BSTR` 또는 인터페이스) 수 있어야 하 해제, 멤버 함수를 호출 [caccessorrowset:: Freerecordmemory](../../data/oledb/caccessorrowset-freerecordmemory.md) 후 다음 레코드를 읽을 합니다.  
+ 접근자에 메모리를 가리키는 필드를 포함 하는 경우 (같은 `BSTR` 또는 인터페이스) 되어야 하는 멤버 함수를 호출 해제 [caccessorrowset:: Freerecordmemory](../../data/oledb/caccessorrowset-freerecordmemory.md) 다음 레코드를 읽을 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  

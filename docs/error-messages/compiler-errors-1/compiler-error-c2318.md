@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33222347"
 ---
 # <a name="compiler-error-c2318"></a>컴파일러 오류 C2318
 이 catch 처리기와 관련된 try 블록이 없습니다.  

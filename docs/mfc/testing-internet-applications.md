@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380073"
 ---
 # <a name="testing-internet-applications"></a>인터넷 응용 프로그램 테스트
 웹 서버에서 실행 중인 응용 프로그램에 대 한 특히 인터넷에 몇 가지 고유한 테스트 방법이 있습니다. 초기 테스트 아마도 수행 됩니다 테스트 서버에 연결 하는 단일 사용자 클라이언트를 사용 하 여 합니다. 이 코드를 디버깅에 유용 합니다.  

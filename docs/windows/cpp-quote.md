@@ -17,20 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38ecabcde55f49687abf7caff66fb2c316fab0fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3dc81eacdbadb971ab86f4cfde1353e89bbe1342
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463829"
 ---
 # <a name="cppquote"></a>cpp_quote
-생성 된.idl 파일에 인용 문자 없이 지정된 된 문자열을 내보냅니다.  
+생성된 된.idl 파일의 따옴표 없이 지정된 된 문자열을 내보냅니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ cpp_quote(  
+[ cpp_quote(  
    "statement"  
 ) ];  
 ```  
@@ -40,14 +40,14 @@ ms.lasthandoff: 05/08/2018
  C 명령입니다.  
   
 ## <a name="remarks"></a>설명  
- **cpp_quote** c + + 특성은.idl 파일에서 전처리기 지시문을 삽입 하려는 경우에 유용 합니다.  
+ 합니다 **cpp_quote** c + + 특성은.idl 파일에서 전처리기 지시문을 배치 하려는 경우에 유용 합니다.  
   
- 사용할 수도 있습니다 **cpp_quote** MIDL 컴파일의 일부로.h 파일을 생성 합니다. 예를 들어 c + + IDL 특성을 사용 하지만 일부 작업에 대 한이 파일을 사용할 수 없습니다는 c + + 헤더 파일을 만든 경우 다음 컴파일할 수 있습니다 사용할 수 있어야 하 고 있으므로 MIDL 생성.h 파일을 만드는 것입니다.  
+ 사용할 수도 있습니다 **cpp_quote** MIDL 컴파일의 일부로.h 파일을 생성 합니다. 예를 들어, c + + IDL 특성을 사용 하지만 일부 작업에 대 한이 파일을 사용할 수 없습니다는 c + + 헤더 파일에 있으면 다음 컴파일할 수 있습니다 하 여 사용할 수 있어야 하는.h 있으므로 MIDL 생성 파일을 만듭니다.  
   
- **cpp_quote** 특성와 동일한 기능에는 [cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL 특성입니다.  
+ 합니다 **cpp_quote** 특성이 동일한 기능을 합니다 [cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 예를 참조 [이중](../windows/dual.md) 예제를 보려면 사용 하는 방법을 사용 하 여 **cpp_quote**합니다.  
+## <a name="example"></a>예  
+ 예를 참조 하세요 [이중](../windows/dual.md) 예로 사용 하는 방법을 사용 하 여 **cpp_quote**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33845611"
 ---
 # <a name="porting-guide-com-spy"></a>포팅 가이드: COM Spy
 이 항목은 이전 Visual C++ 프로젝트를 최신 버전의 Visual Studio로 업그레이드하는 프로세스를 보여 주는 일련의 문서 중 두 번째입니다. 이 항목의 예제 코드는 Visual Studio 2005를 사용하여 마지막으로 컴파일되었습니다.  

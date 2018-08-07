@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691269"
 ---
 # <a name="omplockt"></a>omp_lock_t
 잠금, 잠금을 사용할 수 있는지 또는 스레드는 잠금을 소유 하는 경우의 상태를 보유 하는 형식입니다.  

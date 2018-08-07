@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f265bf915d9ba0c984b85235bd502d6ea0a5a77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 313e4602c06c1baf090ed7a66c51b308a3f6f586
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402752"
 ---
 # <a name="additive-operators--and--"></a>가감 연산자: + 및 -
 ## <a name="syntax"></a>구문  
@@ -45,9 +46,9 @@ expression - expression
   
  이 이항 연산자는 왼쪽에서 오른쪽으로 연결됩니다.  
   
- 가감 연산자는 산술 또는 포인터 형식의 피연산자를 사용합니다. 덧셈의 결과 (**+**) 연산자는 피연산자의 합계입니다. 빼기의 결과 (**-**) 연산자는 피연산자 간의 차이. 피연산자 중 하나 이상이 포인터인 경우 함수가 아닌 개체에 대한 포인터여야 합니다. 피연산자가 둘 다 포인터인 경우 둘 다 동일한 배열의 개체에 대한 포인터가 아니면 결과는 의미가 없습니다.  
+ 가감 연산자는 산술 또는 포인터 형식의 피연산자를 사용합니다. 더하기 연산의 결과 (**+**) 연산자는 피연산자의 합계입니다. 뺄셈 결과 (**-**) 연산자는 피연산자 간의 차이입니다. 피연산자 중 하나 이상이 포인터인 경우 함수가 아닌 개체에 대한 포인터여야 합니다. 피연산자가 둘 다 포인터인 경우 둘 다 동일한 배열의 개체에 대한 포인터가 아니면 결과는 의미가 없습니다.  
   
- 가감 연산자의 피연산자 *산술*, *정수 계열*, 및 *스칼라* 형식입니다. 이러한 형식은 다음 표에 정의되어 있습니다.  
+ 가감 연산자의 피연산자 *산술*를 *정수*, 및 *스칼라* 형식입니다. 이러한 형식은 다음 표에 정의되어 있습니다.  
   
 ### <a name="types-used-with-additive-operators"></a>가감 연산자와 함께 사용되는 형식  
   
@@ -71,11 +72,11 @@ expression - expression
   
  더하기와 빼기는 동등한 연산이 아닙니다.  
   
- 설명한 변환이 피연산자가 모두 산술 형식, 경우 [표준 변환](standard-conversions.md) 피연산자에 적용 되 고 결과 변환 된 형식입니다.  
+ 설명한 변환이 피연산자 모두 산술 형식인 경우 [표준 변환](standard-conversions.md) 피연산자에 적용 되 고 결과 변환 된 형식입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp 
 // expre_Additive_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -96,7 +97,7 @@ int main() {
 ## <a name="pointer-addition"></a>포인터 더하기  
  더하기 연산에서 피연산자 중 하나가 개체 배열에 대한 포인터인 경우 다른 피연산자는 정수 계열 형식이어야 합니다. 결과는 원래 포인터와 형식이 같으며 다른 배열 요소를 가리키는 포인터입니다. 다음 코드 조각에서는 이 개념을 보여 줍니다.  
   
-```  
+```cpp 
 short IntArray[10]; // Objects of type short occupy 2 bytes  
 short *pIntArray = IntArray;  
   
@@ -114,11 +115,11 @@ for( int i = 0; i < 10; ++i )
 >  `pIntArray = pIntArray + 1` 형태의 코드는 C++ 프로그램에서 거의 발견되지 않습니다. 증분을 수행하려면 `pIntArray++` 또는 `pIntArray += 1` 형태를 사용하는 것이 좋습니다.  
   
 ## <a name="pointer-subtraction"></a>포인터 빼기  
- 두 피연산자가 모두 포인터인 경우 빼기의 결과는 피연산자 간 배열 요소의 차이입니다. 빼기 식은 ptrdiff_t 형식의 부호 있는 정수 계열 결과 생성 (표준 포함 파일에 정의 된 \<stddef.h >).  
+ 두 피연산자가 모두 포인터인 경우 빼기의 결과는 피연산자 간 배열 요소의 차이입니다. 빼기 식 형식의 부호 있는 정수 계열 결과 `ptrdiff_t` (표준 포함 파일에 정의 된 \<stddef.h >).  
   
- 피연산자 중 하나가 두 번째 피연산자라면 정수 계열 형식이 될 수 있습니다. 빼기 결과는 원래 포인터와 동일한 형식입니다. 빼기 값은에 대 한 포인터는 (*n* - *i*) 번째 배열 요소 여기서 *n* 요소를 가리키고 원래 포인터와 *i* 두 번째 피연산자의 정수 값입니다.  
+ 피연산자 중 하나가 두 번째 피연산자라면 정수 계열 형식이 될 수 있습니다. 빼기 결과는 원래 포인터와 동일한 형식입니다. 빼기의 값이에 대 한 포인터는 (*n* - *있나요*) 번째 배열 요소에 있는 *n* 이 요소가 가리키는 원래 포인터와 *있습니까* 두 번째 피연산자의 정수 값입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [이항 연산자가 있는 식](../cpp/expressions-with-binary-operators.md)   
  [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 가감 연산자](../c-language/c-additive-operators.md)

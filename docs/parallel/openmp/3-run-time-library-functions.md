@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688117"
 ---
 # <a name="3-run-time-library-functions"></a>3. 런타임 라이브러리 함수
 이 섹션에서는 OpenMP C 및 c + + 런타임 라이브러리 함수에 설명 합니다. 헤더  **\<omp.h >** 두 형식, 제어 및 병렬 실행 환경 쿼리 및 데이터에 대 한 액세스를 동기화 하는 데 사용할 수 있는 함수를 잠그는 데 사용할 수 있는 여러 함수를 선언 합니다.  

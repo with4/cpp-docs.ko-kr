@@ -1,5 +1,5 @@
 ---
-title: '레코드 집합: 대량 (ODBC) 레코드 추가 | Microsoft Docs'
+title: '레코드 집합: 레코드 대량 추가 (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7bb39b910eae797f360513954ad0c32d5e99bb86
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 167cf817074a992fae5492ba387ea8a3589a10ec
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337231"
 ---
 # <a name="recordset-adding-records-in-bulk-odbc"></a>레코드 집합: 대량 레코드 추가(ODBC)
-MFC ODBC 클래스에이 항목에 적용 됩니다.  
+이 항목에서는 MFC ODBC 클래스에 적용 됩니다.  
   
- MFC [CRecordset](../../mfc/reference/crecordset-class.md) 클래스에 최적화 테이블에 새 레코드를 일괄 추가할 때 효율성을 향상 합니다.  
+ MFC [CRecordset](../../mfc/reference/crecordset-class.md) 클래스에는 테이블에 대량으로 새 레코드를 추가할 때 효율성을 개선 하는 최적화 합니다.  
   
 > [!NOTE]
->  이 항목에서 파생 된 개체에 적용 됩니다. `CRecordset` 에서 대량 행 페치 구현 되지 않았습니다. 대량 행 페치를 사용 하는 경우 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+>  이 항목에서 파생 된 개체에 적용 됩니다 `CRecordset` 의 대량 행 페치 구현 되지 않았습니다. 대량 행 페치를 사용 하는 경우 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
   
- 에 대 한 새 옵션은 **dwOptions** 매개 변수를는 [crecordset:: Open](../../mfc/reference/crecordset-class.md#open) 멤버 함수 **optimizeBulkAdd**을 하면 여러 레코드를 추가 하는 경우 성능이 향상 호출 하지 않고 연속적으로 **Requery** 또는 **닫기**합니다. 첫 번째 변경 되는 필드에만 **업데이트** 호출 다음에 대 한 커밋되지 않은 것으로 표시 된 `AddNew` / **업데이트** 호출 합니다.  
+ 에 대 한 새 옵션을 *dwOptions* 매개 변수를를 [crecordset:: Open](../../mfc/reference/crecordset-class.md#open) 멤버 함수 `optimizeBulkAdd`, 호출없이연속적으로여러레코드를추가할때성능을향상시킵니다`Requery` 또는 `Close`합니다. 첫 번째 더티 필드만 `Update` 호출 다음에 대 한 커밋되지 않은 것으로 표시 됩니다 `AddNew` / `Update` 호출 합니다.  
   
- 활용 하기 위해 데이터베이스 클래스를 사용 하는 경우는 **:: SQLSetPos** 편집, ODBC API 함수를 추가 하 고 레코드를 삭제,이 최적화 필요 하지 않습니다.  
+ 데이터베이스 클래스를 활용 하기 위해 사용 중인 경우는 `::SQLSetPos` 편집을 추가 하는 것에 대 한 ODBC API 함수 및 레코드를 삭제 하는 중에이 최적화가 필요 없습니다.  
   
- ODBC 커서 라이브러리가 로드 하거나 ODBC 드라이버는 추가 지원 하지 않습니다, 편집 및 통해 삭제 **:: SQLSetPos**,이 최적화 대량 개선 해야 성능 추가 합니다. 이 최적화를 활성화 하려면 설정는 **dwOptions** 에서 매개 변수는 **열려** 다음과 레코드 집합에 대 한 호출:  
+ ODBC 커서 라이브러리가 로드 또는 ODBC 드라이버는 추가 지원 하지 않는 경우 편집 및 삭제를 통해 `::SQLSetPos`,이 최적화는 bulk 개선 해야 성능을 추가 합니다. 이 최적화를 설정 합니다 *dwOptions* 에 매개 변수는 `Open` 다음과 레코드 집합에 대 한 호출:  
   
 ```  
 appendOnly | optimizeBulkAdd  

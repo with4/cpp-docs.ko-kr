@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875281"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>방법: 리소스 포함 디렉터리 지정
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>특정 .rc 파일에 대한 포함 디렉터리를 지정하려면  

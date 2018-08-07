@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167205"
 ---
 # <a name="compiler-error-c2238"></a>컴파일러 오류 C2238
 'token' 앞에 예기치 않은 토큰이 있습니다.  

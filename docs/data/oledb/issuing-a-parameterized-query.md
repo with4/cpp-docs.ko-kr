@@ -1,5 +1,5 @@
 ---
-title: 매개 변수가 있는 쿼리를 실행 | Microsoft Docs
+title: 매개 변수가 있는 쿼리 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b377df31e9166ee5288d37b0843944a3b2eb6bc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02ce5cbfdc6c5305ab356fc32993b6bdd34f1fac
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339538"
 ---
 # <a name="issuing-a-parameterized-query"></a>매개 변수가 있는 쿼리 실행
-다음 예제에서는 Microsoft Access 데이터베이스의 테이블에서 레코드 (즉, 30 보다 큰) 나이 필드를 검색 하는 단순 매개 변수가 있는 쿼리를 발급 합니다. 매개 변수를 지원 하려면 사용자 레코드에 추가 맵이 있어야 합니다. 다음 코드는 ATL 프로젝트에서 사용 된 `CCommand` 클래스 대신는 `CTable` 앞의 예에서 사용 되는 클래스 [단순 행 집합 검색](../../data/oledb/traversing-a-simple-rowset.md)합니다.  
+다음 예제에서는 Microsoft Access 데이터베이스의 테이블에서 (즉, 30 보다 큰) 연령 필드를 사용 하 여 레코드를 검색 하는 단순 매개 변수화 된 쿼리를 발급 합니다. 매개 변수를 지원 하려면 사용자 레코드에는 추가 맵이 있어야 합니다. 다음 코드에서는 ATL 프로젝트에서 사용 합니다 `CCommand` 클래스 대신를 `CTable` 앞의 예에서 사용 되는 클래스 [단순 행 집합 검색](../../data/oledb/traversing-a-simple-rowset.md)합니다.  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -50,9 +51,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- 사용자 레코드 `CArtists`, 다음과 같습니다.  
+ 사용자 레코드 `CArtists`, 다음과 유사 합니다.  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

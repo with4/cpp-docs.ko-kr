@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370616"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>새 컨트롤 클래스 기반의 변수 선언
 MFC 컨트롤 클래스를 만든 후에 따라 변수를 선언할 수 있습니다. 새 변수에 대 한 컨텍스트를 제공 하려면 대화 상자 편집기를 열고 편집 대화 상자를 다시 사용할 수 있는 컨트롤을 사용 하려면. 또한 대화 상자에는 관련 된 클래스가 있어야 합니다. 대화 상자 편집기를 사용 하는 방법은 참조 하십시오. [대화 상자 편집기](../../windows/dialog-editor.md)합니다.  

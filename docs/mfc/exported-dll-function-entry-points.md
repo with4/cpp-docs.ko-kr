@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be4c74a48f1367369582b433a2a833ceb8e1976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8e9ff08054fbef3f15283395d7eb150551926dc
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928627"
 ---
 # <a name="exported-dll-function-entry-points"></a>내보낸 DLL 함수 시작 지점
 DLL의 내보낸된 함수에 대 한 사용는 [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) DLL 모듈에서 호출 응용 프로그램의 DLL로 전환 하는 경우 적절 한 글로벌 상태를 유지 하는 매크로입니다.  
   
  이 매크로 설정 하는 호출 되 면 `pModuleState`에 대 한 포인터는 `AFX_MODULE_STATE` 포함 하는 함수 범위의 나머지 부분에 대 한 유효한 모듈 상태와 모듈에 대 한 글로벌 데이터를 포함 하는 구조입니다. 매크로 포함 하는 범위를 벗어나면 자동으로 이전 유효한 모듈 상태 복원 됩니다.  
   
- 인스턴스를 구성 하 여 수행 됩니다이 전환는 **AFX_MODULE_STATE** 스택에 클래스입니다. 생성자에서이 클래스를 받고 현재 모듈 상태에 대 한 포인터 및 멤버 변수에 저장를 설정 하는 다음 `pModuleState` 새 유효한 모듈 상태입니다. 이 클래스는 해당 소멸자에서 유효한 모듈 상태와 해당 멤버 변수에 저장 된 포인터를 복원 합니다.  
+ 인스턴스를 구성 하 여 수행 됩니다이 전환는 `AFX_MODULE_STATE` 스택에 클래스입니다. 생성자에서이 클래스를 받고 현재 모듈 상태에 대 한 포인터 및 멤버 변수에 저장를 설정 하는 다음 `pModuleState` 새 유효한 모듈 상태입니다. 이 클래스는 해당 소멸자에서 유효한 모듈 상태와 해당 멤버 변수에 저장 된 포인터를 복원 합니다.  
   
  내보낸된 함수, 사용자 DLL에 대화 상자를 시작 하는 것과 같은 있는 경우 함수의 시작 부분에 다음 코드를 추가 해야 합니다.  
   

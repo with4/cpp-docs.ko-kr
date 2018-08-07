@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379434"
 ---
 # <a name="ieee-floating-point-representation"></a>IEEE 부동 소수점 표시
 Microsoft Visual c + +는 IEEE 숫자 표준 일치 합니다. 세 종류의 실수로 가지가 있습니다. 실제\*4 및 real\*8 Visual c + +에서 사용 됩니다. 실제\*4 라는 단어를 사용 하 여 선언 된 **float**합니다. 실제\*8 단어를 사용 하 여 선언 된 **double**합니다. Windows 32 비트 프로그래밍에는 `long double` 데이터 형식은 **double**합니다. 하지만가 실제를 사용 하 여 계산에 대 한 어셈블리 언어 지원 * 10 데이터 형식입니다.  

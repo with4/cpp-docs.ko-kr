@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873695"
 ---
 # <a name="defining-mnemonics-access-keys"></a>니모닉(선택키) 정의
 일반적으로 키보드 사용자 입력된 포커스를 이동 한 컨트롤에서 대화 상자에서 다른 탭 및 화살표 키를 사용 합니다. 그러나 사용자가 단일 키를 눌러 컨트롤을 선택할 수 있도록 하는 액세스 키 (니모닉 또는 기억 하기 쉬운 이름)을 정의할 수 있습니다.  

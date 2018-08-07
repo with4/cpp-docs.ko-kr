@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33306467"
 ---
 # <a name="bscmake-error-bk1512"></a>BSCMAKE 오류 BK1512
 filename: 용량을 초과 했습니다  

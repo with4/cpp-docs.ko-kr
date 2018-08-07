@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369307"
 ---
 # <a name="msbuild-visual-c"></a>MSBuild(Visual C++)
 사용할 수는 **MSBuild** 명령 프롬프트에서 Visual c + + 응용 프로그램을 빌드하는 도구입니다. 빌드 프로세스에서 정보를 만들고 편집할 수 있는 프로젝트 파일 (.vcxproj)에 의해 제어 됩니다. 프로젝트 파일에 따라 빌드 옵션 빌드 단계, 조건 및 이벤트를 지정 합니다.  

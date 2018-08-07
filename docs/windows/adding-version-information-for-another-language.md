@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857573"
 ---
 # <a name="adding-version-information-for-another-language"></a>다른 언어에 대한 버전 정보 추가
 ### <a name="to-add-version-information-for-another-language-new-info-block"></a>다른 언어의 버전 정보(새로운 정보 블록)를 추가하려면  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691146"
 ---
 # <a name="openmp-in-visual-c"></a>Visual C++의 OpenMP
 OpenMP C 및 c + + 응용 프로그램 인터페이스를 사용 하면 효과적으로 여러 프로세서를 사용 하는 응용 프로그램을 작성할 수 있습니다. Visual c + +에는 OpenMP 2.0 표준을 지원합니다.  

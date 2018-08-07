@@ -17,11 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0acc6f62530daf641a2e4d568ed511d6fd831c20
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab47405f81cf6fb92af215f1868d8ad7c42bffa7
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463732"
 ---
 # <a name="asyncbasestart-method"></a>AsyncBase::Start 메서드
 비동기 작업을 시작 합니다.  
@@ -35,10 +36,10 @@ STDMETHOD(
 ```  
   
 ## <a name="return-value"></a>반환 값  
- S_ok이 고 작업을 시작 하거나 이미 있으면 시작 됨 그렇지 않으면 E_ILLEGAL_STATE_CHANGE 합니다.  
+ S_ok이 고, 작업을 시작 하거나 이미 있는 경우 시작 합니다. 그렇지 않으면 E_ILLEGAL_STATE_CHANGE 합니다.  
   
 ## <a name="remarks"></a>설명  
- Start (), IAsyncInfo::Start의 기본 구현을 이며 실제로 진행 되지 않습니다. 실제로 비동기 작업을 시작 하려면 onstart () 순수 가상 메서드를 재정의 합니다.  
+ **Start ()** 의 기본 구현 이며 `IAsyncInfo::Start`, 없습니다 실제 작업을 수행 합니다. 실제로 비동기 작업을 시작 하려면 재정의 `OnStart()` 순수 가상 메서드가 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** async.h  

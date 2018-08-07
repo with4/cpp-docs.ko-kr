@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377120"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE(성능 도구 프로파일러)
 성능 도구 프로파일러와 함께 사용할 수 있는 출력 파일을 생성합니다.  

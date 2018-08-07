@@ -9,11 +9,12 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-ms.openlocfilehash: 2d3f63ab29049e5f5a928186ba033bfe041bcfc1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5747d511777ae6f1f32d8e93bb6ee90bd0193bf9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959981"
 ---
 # <a name="ltstringgt-typedefs"></a>&lt;string&gt; 형식 정의
 
@@ -24,7 +25,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="string"></a>  string
 
-`char` 형식 요소가 포함된 템플릿 클래스 [basic_string](../standard-library/basic-string-class.md)의 특수화를 설명하는 형식입니다.
+템플릿 클래스의 특수화를 설명 하는 형식 [basic_string](../standard-library/basic-string-class.md) 형식의 요소가 포함 된 **char**합니다.
 
 `basic_string`을 특수화하는 기타 형식 정의에는 [wstring](../standard-library/string-typedefs.md#wstring), [u16string](../standard-library/string-typedefs.md#u16string), [u32string](../standard-library/string-typedefs.md#u32string) 등이 있습니다.
 
@@ -74,7 +75,7 @@ typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32st
 
 ## <a name="wstring"></a>  wstring
 
-`wchar_t` 형식 요소가 포함된 템플릿 클래스 [basic_string](../standard-library/basic-string-class.md)의 특수화를 설명하는 형식입니다.
+템플릿 클래스의 특수화를 설명 하는 형식 [basic_string](../standard-library/basic-string-class.md) 형식의 요소가 포함 된 **wchar_t**합니다.
 
 `basic_string`을 특수화하는 기타 형식 정의에는 [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string), [u32string](../standard-library/string-typedefs.md#u32string) 등이 있습니다.
 
@@ -95,7 +96,7 @@ basic_string<wchar_t> wstr(L"");
 문자열 생성자 목록은 [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string)을 참조하세요.
 
 > [!NOTE]
-> `wchar_t`의 크기는 구현 시 정의됩니다. 코드에서 `wchar_t`가 특정 크기여야 하는 경우 `sizeof(wchar_t)` 등을 사용하여 플랫폼 구현을 확인하세요. 모든 플랫폼에서 너비가 동일하게 유지되도록 보장되는 문자열 문자 형식이 필요한 경우에는 [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) 또는 [u32string](../standard-library/string-typedefs.md#u32string)을 사용합니다.
+> 크기인 **wchar_t** 구현 시 정의 됩니다. 코드에 종속 되 면 **wchar_t** 하려면 특정 크기를 검사 합니다 플랫폼의 구현 (예를 들어 `sizeof(wchar_t)`). 모든 플랫폼에서 너비가 동일하게 유지되도록 보장되는 문자열 문자 형식이 필요한 경우에는 [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) 또는 [u32string](../standard-library/string-typedefs.md#u32string)을 사용합니다.
 
 ## <a name="see-also"></a>참고자료
 

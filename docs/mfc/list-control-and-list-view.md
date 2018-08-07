@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346001"
 ---
 # <a name="list-control-and-list-view"></a>목록 컨트롤 및 목록 뷰
 편의 위해 MFC는 두 가지 방법으로 목록 컨트롤을 캡슐화합니다. 목록 컨트롤을 사용할 수 있습니다.  

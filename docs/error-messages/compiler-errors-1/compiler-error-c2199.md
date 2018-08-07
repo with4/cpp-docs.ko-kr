@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169012"
 ---
 # <a name="compiler-error-c2199"></a>컴파일러 오류 C2199
 구문 오류: 찾을 ' 식별자 (' 전역 범위에서 (의도 한 선언 ि ल ्?)  

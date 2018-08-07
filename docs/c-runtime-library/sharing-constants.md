@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409705"
 ---
 # <a name="sharing-constants"></a>상수 공유
 파일 공유 모드에 대한 상수입니다.  

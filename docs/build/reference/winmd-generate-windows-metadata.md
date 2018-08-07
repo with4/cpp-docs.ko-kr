@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376181"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD(Windows 메타데이터 생성)
 Windows 런타임 메타데이터(.winmd) 파일을 생성할 수 있게 해줍니다.  

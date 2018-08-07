@@ -30,11 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e72f9c584f818de69b0c341ff8dba66892816d8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4dfbd3bc6a020dba4b6e5eb868e21ec37fcc1ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955249"
 ---
 # <a name="moveiterator-class"></a>move_iterator 클래스
 
@@ -63,9 +64,9 @@ class move_iterator;
 |형식 이름|설명|
 |-|-|
 |[iterator_type](#iterator_type)|템플릿 매개 변수 `RandomIterator`의 동의어.|
-|[iterator_category](#iterator_category)|동일한 이름의 긴 `typename` 식에 대한 동의어. `iterator_category`는 반복기의 일반 기능을 식별합니다.|
-|[value_type](#value_type)|동일한 이름의 긴 `typename` 식에 대한 동의어. `value_type`은 반복기 요소의 형식에 대해 설명합니다.|
-|[difference_type](#difference_type)|동일한 이름의 긴 `typename` 식에 대한 동의어. `difference_type`은 요소 간 차이 값을 표시하는 데 필요합니다.|
+|[iterator_category](#iterator_category)|긴 동의어 **typename** 식 같은 이름의 `iterator_category` 반복기의 일반 기능을 식별 합니다.|
+|[value_type](#value_type)|긴 동의어 **typename** 식 같은 이름의 `value_type` 은 반복기 요소의 유형을 설명 합니다.|
+|[difference_type](#difference_type)|긴 동의어 **typename** 식 같은 이름의 `difference_type` 요소 간 express 차이 값을 하는 데 필요한 정수 형식에 설명 합니다.|
 |[pointer](#pointer)|템플릿 매개 변수 `RandomIterator`에 대한 동의어.|
 |[reference](#reference)|`rvalue` 참조 `value_type&&`에 대한 동의어.|
 
@@ -156,7 +157,7 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 저장 된 반복기로 사용할 반복기입니다.
+*오른쪽* 저장 된 반복기로 사용할 반복기입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -172,7 +173,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Off` 새 현재 위치를 결정 하는 현재 위치에 추가 하는 오프셋입니다.
+*_Off* 새 현재 위치를 확인 하기 위해 현재 위치의에 추가할 오프셋입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -180,7 +181,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="remarks"></a>설명
 
-연산자가 `_Off`를 저장된 반복기에 추가합니다. 그런 다음 `*this`를 반환합니다.
+추가 연산자 *_Off* 저장 된 반복기입니다. 그런 다음 `*this`를 반환합니다.
 
 ## <a name="move_iterator__operator-_eq"></a>  move_iterator::operator-=
 
@@ -298,7 +299,7 @@ pointer operator->() const;
 
 ## <a name="pointer"></a>  move_iterator::pointer
 
-`pointer` 형식은 `move_iterator`에 대한 임의 반복기 `RandomIterator`를 기반으로 하는 `typedef`이며, 같은 의미로 사용될 수 있습니다.
+형식 `pointer` 되는 **typedef** 임의 반복기 기반 `RandomIterator` 에 대 한 `move_iterator`, 서로 교환해 서 사용할 수 있습니다.
 
 ```cpp
 typedef RandomIterator  pointer;
@@ -310,7 +311,7 @@ typedef RandomIterator  pointer;
 
 ## <a name="reference"></a>  move_iterator::reference
 
-`reference` 형식은 `move_iterator`의 `value_type&&`에 따른 `typedef`이며, `value_type&&`과 바꿔서 사용할 수 있습니다.
+형식 `reference` 은 **typedef** 기반 `value_type&&` 에 대 한 `move_iterator`를 사용 하 여 서로 교환해 서 사용할 수 있습니다 `value_type&&`합니다.
 
 ```cpp
 typedef value_type&& reference;

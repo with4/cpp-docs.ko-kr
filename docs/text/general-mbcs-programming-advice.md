@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855801"
 ---
 # <a name="general-mbcs-programming-advice"></a>일반적인 MBCS 프로그래밍 팁
 다음 팁을 사용 합니다.  

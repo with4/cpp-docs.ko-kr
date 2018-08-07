@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291179"
 ---
 # <a name="compiler-warning-level-3-c4995"></a>컴파일러 경고 (수준 3) C4995
 'function': 이름 #pragma 사용 되지 않는 것으로 표시 되었습니다  

@@ -12,17 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e2988d1260cac91e2614765aba8ae1b9be9b922
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c10821f7e71c928fa749c2b85bd076cb9af6d04a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402418"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof 및 alignas(C++)
-`alignas` 형식 지정자는 변수 및 사용자 정의 형식의 사용자 지정 맞춤을 지정하는 포팅 가능한 C++ 표준 방법입니다. 마찬가지로 `alignof` 연산자도 지정된 형식 또는 변수의 맞춤을 얻는 포팅 가능한 표준 방법입니다.  
+합니다 **alignas** 형식 지정자는 변수 및 사용자 정의 형식의 사용자 지정 맞춤을 지정 하는 이식 가능 하며 c + + 표준 방법입니다. 합니다 **alignof** 연산자는 마찬가지로 표준, 이식 가능한 방법 지정 된 형식 또는 변수의 맞춤을 가져옵니다.  
   
-## <a name="example"></a>예제  
- 클래스, 구조체/공용 구조체 또는 개별 멤버에 `alignas`를 사용할 수 있습니다. 여러 `alignas` 지정자가 발견되는 경우 컴파일러는 가장 엄격한 지정자(가장 큰 값을 가진 지정자)를 선택합니다.  
+## <a name="example"></a>예  
+ 사용할 수 있습니다 **alignas** 구조체 / 공용 구조체, 클래스 또는 개별 멤버입니다. 때 여러 **alignas** 지정자 발생 하는, 컴파일러는 엄격한 것 (가장 큰 값을 사용 하 여 하나)를 선택 합니다.  
   
 ```cpp  
 // alignas_alignof.cpp
@@ -43,5 +44,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [맞춤](../cpp/alignment-cpp-declarations.md)

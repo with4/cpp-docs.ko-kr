@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384846"
 ---
 # <a name="type-long-double"></a>long double 형식
 `long double` 형식은 [double](../c-language/type-double.md) 형식과 동일합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128656"
 ---
 # <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>방법: for each로 사용자 정의 컬렉션 반복
 클래스가 관리되는 컬렉션이 되려면 열거자 클래스 또는 인터페이스에 대한 핸들을 반환하는 private가 아닌 GetEnumerator 함수가 필요합니다.  열거자 클래스는 정적이 아닌 MoveNext 함수 및 Current 속성에 대한 선언을 포함해야 합니다.  

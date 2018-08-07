@@ -124,11 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c7550e3e3d8bf7e49f9f93ea6e9a931d6567ef0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ab1f4a056e1a65475a71ede0b51db45189d2dd9
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079762"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget 클래스
 ID2D1RenderTarget에 대 한 래퍼입니다.  
@@ -216,7 +217,7 @@ class CRenderTarget : public CObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CRenderTarget::m_lstResources](#m_lstresources)|목록 CD2DResource 개체에 대 한 포인터입니다.|  
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|ID2D1RenderTarget 개체에 대 한 포인터입니다.|  
@@ -245,7 +246,7 @@ void Attach(ID2D1RenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRenderTarget`  
+ *pRenderTarget*  
  기존 렌더링 대상 인터페이스입니다. NULL 일 수 없습니다.  
   
 ##  <a name="begindraw"></a>  CRenderTarget::BeginDraw  
@@ -263,7 +264,7 @@ void Clear(D2D1_COLOR_F color);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `color`  
+ *색*  
  그리기 영역을 지워집니다 색입니다.  
   
 ##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR  
@@ -276,10 +277,10 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `color`  
+ *색*  
  RGB 값입니다.  
   
- `nAlpha`  
+ *nAlpha*  
   
 ### <a name="return-value"></a>반환 값  
  D2D1_COLOR_F 값입니다.  
@@ -297,19 +298,19 @@ BOOL CreateCompatibleRenderTarget(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bitmapTarget`  
+ *bitmapTarget*  
  이 메서드가 반환 될 때 새 비트맵 렌더링 대상에 대 한 포인터의 주소를 포함 합니다. 이 매개 변수는 초기화되지 않은 상태로 전달됩니다.  
   
- `sizeDesired`  
+ *sizeDesired*  
  장치 독립적 픽셀 원래 달라 야 하는 경우 새 렌더링 대상의 원하는 크기 렌더 대상, 되었거나 NULL입니다. 자세한 내용은 설명 섹션을 참조하세요.  
   
- `sizePixelDesired`  
+ *sizePixelDesired*  
  원하는 크기의 픽셀 원래 달라 야 하는 경우 새 렌더링 대상 렌더 대상, 되었거나 NULL입니다. 자세한 내용은 설명 섹션을 참조하세요.  
   
- `desiredFormat`  
+ *desiredFormat*  
  원하는 픽셀 형식 및 새 알파 모드 렌더 대상, 또는 NULL입니다. 픽셀 형식을 DXGI_FORMAT_UNKNOWN로 설정 된 경우 또는이 매개 변수가 null 이면 원래 렌더링 대상으로 새 렌더링 대상에 같은 픽셀 형식을 사용 합니다. 알파 모드 D2D1_ALPHA_MODE_UNKNOWN 나이 매개 변수는 NULL을 하는 경우 새 렌더링 대상의 알파 모드 D2D1_ALPHA_MODE_PREMULTIPLIED 기본값이 됩니다. 지원 되는 픽셀 형식에 대 한 내용은 지원 되는 픽셀 형식 및 알파 모드를 참조 하십시오.  
   
- `options`  
+ *options*  
  새 렌더링 대상 GDI와 호환 해야 하는지 여부를 지정 하는 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -330,7 +331,7 @@ BOOL Destroy(BOOL bDeleteResources = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bDeleteResources`  
+ *bDeleteResources*  
  BDeleteResources 결과가 TRUE 이면 m_lstResources에 있는 리소스를 모두 자동으로 제거 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -359,19 +360,19 @@ void DrawBitmap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pBitmap`  
+ *pBitmap*  
  렌더링 하는 비트맵입니다.  
   
- `rectDest`  
+ *rectDest*  
  크기 및 위치 비트맵을 그리면 영역의 렌더링 대상의 좌표 공간에서 장치 독립적 픽셀 단위로. 사각형 잘 정렬 되지 않은 경우 아무 것도 그려지지, 있지만 렌더링 대상의 오류 상태에 들어가지 않습니다.  
   
- `fOpacity`  
+ *fOpacity*  
  비트맵;에 적용 하는 데 사용할 불투명도 값을 지정 하는 0.0 f에서 1.0 f 까지의 사이의 값 비트맵의 콘텐츠의 알파 값에 대해이 값을 곱합니다.  
   
- `interpolationMode`  
+ *interpolationMode*  
  비트맵을 크기 조정 또는 그리기 작업으로 회전 하는 경우 사용 하는 보간 모드입니다.  
   
- `pRectSrc`  
+ *pRectSrc*  
  크기와 위치를 그릴 비트맵 내에서 영역의 비트맵의 좌표 공간에서 장치 독립적 픽셀 단위로 합니다.  
   
 ##  <a name="drawellipse"></a>  CRenderTarget::DrawEllipse  
@@ -386,16 +387,16 @@ void DrawEllipse(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ellipse`  
+ *타원*  
  위치 및 장치 독립적 픽셀에서을 그리려면 타원의 반지름입니다.  
   
- `pBrush`  
+ *pBrush*  
  타원의 개요를 그리는 데 사용 되는 브러시입니다.  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  타원의 선의 두께입니다. 선의 가운데 타원의 개요에 표시 됩니다.  
   
- `strokeStyle`  
+ *strokeStyle*  
  타원의 윤곽선 또는 단색 스트로크를 그리는 데 NULL에 적용할 선의 스타일입니다.  
   
 ##  <a name="drawgeometry"></a>  CRenderTarget::DrawGeometry  
@@ -410,16 +411,16 @@ void DrawGeometry(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pGeometry`  
+ *pGeometry*  
  그릴 도형을 합니다.  
   
- `pBrush`  
+ *pBrush*  
  기 하 도형의 스트로크를 그리는 데 사용 되는 브러시입니다.  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  기 하 도형의 선의 두께입니다. 선의 가운데 기 하 도형의 윤곽선에 표시 됩니다.  
   
- `strokeStyle`  
+ *strokeStyle*  
  기 하 도형의 윤곽선 또는 단색 스트로크를 그리는 데 NULL에 적용할 선의 스타일입니다.  
   
 ##  <a name="drawglyphrun"></a>  CRenderTarget::DrawGlyphRun  
@@ -434,16 +435,16 @@ void DrawGlyphRun(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ptBaseLineOrigin`  
+ *ptBaseLineOrigin*  
  장치 독립적 픽셀은 문자 모양 기준의 원본입니다.  
   
- `glyphRun`  
+ *glyphrun이 만들어집니다*  
  렌더링 하는 문자 모양입니다.  
   
- `pForegroundBrush`  
+ *pForegroundBrush*  
  지정 된 문자 모양을 그리는 데 사용 되는 브러시입니다.  
   
- `measuringMode`  
+ *measuringMode*  
  포맷 될 때 텍스트를 측정 하 문자 모양 메트릭을 사용 하는 방법을 나타내는 값입니다. 기본값은 DWRITE_MEASURING_MODE_NATURAL 합니다.  
   
 ##  <a name="drawline"></a>  CRenderTarget::DrawLine  
@@ -459,19 +460,19 @@ void DrawLine(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ptFrom`  
+ *ptFrom*  
  장치 독립적 픽셀 단위로 선의 시작점입니다.  
   
- `ptTo`  
+ *ptTo*  
  장치 독립적 픽셀 단위로 선의 끝점입니다.  
   
- `pBrush`  
+ *pBrush*  
  선의 스트로크를 그리는 데 사용 되는 브러시입니다.  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  선의 두께 지정 하는 0.0 f 보다 크거나 같은 값입니다. 이 매개 변수를 지정 하지 않으면 1.0 f로 기본값입니다. 선의 가운데 줄에 표시 됩니다.  
   
- `strokeStyle`  
+ *strokeStyle*  
  그림판을 또는 NULL을 실선이 표시를 그리는 선의 스타일입니다.  
   
 ##  <a name="drawrectangle"></a>  CRenderTarget::DrawRectangle  
@@ -486,16 +487,16 @@ void DrawRectangle(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rect`  
+ *rect*  
  장치 독립적 픽셀에 그릴 사각형의 크기  
   
- `pBrush`  
+ *pBrush*  
  사각형의 스트로크를 그리는 데 사용 되는 브러시  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  사각형의 스트로크 너비를 지정 하는 0.0 f 보다 크거나 같은 값입니다. 선의 가운데 사각형의 개요에 표시 됩니다.  
   
- `strokeStyle`  
+ *strokeStyle*  
  그림판 또는 NULL 단색 스트로크를 그리는 선의 스타일입니다.  
   
 ##  <a name="drawroundedrectangle"></a>  CRenderTarget::DrawRoundedRectangle  
@@ -510,16 +511,16 @@ void DrawRoundedRectangle(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rectRounded`  
+ *rectRounded*  
  장치 독립적 픽셀에서을 그리려면 모퉁이가 둥근된 사각형의 크기입니다.  
   
- `pBrush`  
+ *pBrush*  
  모퉁이가 둥근된 사각형의 개요를 그리는 데 사용 되는 브러시입니다.  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  모퉁이가 둥근된 사각형의 스트로크 너비입니다. 선의 가운데 모퉁이가 둥근된 사각형 윤곽선에 표시 됩니다. 기본값은 1.0 f.  
   
- `strokeStyle`  
+ *strokeStyle*  
  모퉁이가 둥근된 사각형의 선 또는 단색 스트로크를 그리는 데 NULL의 스타일입니다. 기본값은 NULL입니다.  
   
 ##  <a name="drawtext"></a>  CRenderTarget::DrawText  
@@ -536,22 +537,22 @@ void DrawText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `strText`  
+ *strText*  
  그릴 유니코드 문자 배열에 대 한 포인터입니다.  
   
- `rect`  
+ *rect*  
  텍스트를 그리는 영역 위치와 크기입니다.  
   
- `pForegroundBrush`  
+ *pForegroundBrush*  
  텍스트를 그리는 데 사용 되는 브러시입니다.  
   
- `textFormat`  
+ *textFormat*  
  서식의 텍스트를 그릴, 글꼴, 글꼴 크기 및 흐름 방향을 같은 세부 사항을 설명 하는 개체입니다.  
   
- `options`  
+ *options*  
  픽셀 경계에 텍스트 맞춰야 하는지 여부 및 텍스트 레이아웃 사각형에 맞게 잘림을 있는지 여부를 나타내는 값입니다. 기본값은 D2D1_DRAW_TEXT_OPTIONS_NONE 픽셀 경계에 맞춰야 하 텍스트가 레이아웃 사각형에 맞게 잘림을 나타냅니다.  
   
- `measuringMode`  
+ *measuringMode*  
  포맷 될 때 텍스트를 측정 하 문자 모양 메트릭을 사용 하는 방법을 나타내는 값입니다. 기본값은 DWRITE_MEASURING_MODE_NATURAL 합니다.  
   
 ##  <a name="drawtextlayout"></a>  CRenderTarget::DrawTextLayout  
@@ -566,16 +567,16 @@ void DrawTextLayout(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ptOrigin`  
+ *ptOrigin*  
  장치 독립적 픽셀, textLayout으로 설명 하는 텍스트의 왼쪽 위 모서리를 그릴는 점입니다.  
   
- `textLayout`  
+ *textLayout*  
  그릴 서식 있는 텍스트입니다. ID2D1Resource에서 상속 되지 않는 모든 그리기 효과 무시 됩니다. 브러시 않는 ID2D1Resource에서 상속 하는 그리기 효과가 없으면이 메서드가 실패 하 고 렌더링 대상의 오류 상태에 배치 됩니다.  
   
- `pBrushForeground`  
+ *pBrushForeground*  
  그리기 효과 (IDWriteTextLayout::SetDrawingEffect 메서드에 의해 지정 됨)로 연결 된 브러시를 아직 포함 되지 않은 textLayout에 텍스트를 그리는 데 사용 되는 브러시입니다.  
   
- `options`  
+ *options*  
  픽셀 경계에 텍스트 맞춰야 하는지 여부 및 텍스트 레이아웃 사각형에 맞게 잘림을 있는지 여부를 나타내는 값입니다. 기본값은 D2D1_DRAW_TEXT_OPTIONS_NONE 픽셀 경계에 맞춰야 하 텍스트가 레이아웃 사각형에 맞게 잘림을 나타냅니다.  
   
 ##  <a name="enddraw"></a>  CRenderTarget::EndDraw  
@@ -598,10 +599,10 @@ void FillEllipse(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ellipse`  
+ *타원*  
  위치 및 장치 독립적 픽셀을 그리는 타원의 반지름입니다.  
   
- `pBrush`  
+ *pBrush*  
  타원의 내부를 그리는 데 사용 되는 브러시입니다.  
   
 ##  <a name="fillgeometry"></a>  CRenderTarget::FillGeometry  
@@ -615,13 +616,13 @@ void FillGeometry(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pGeometry`  
+ *pGeometry*  
  그리는 geometry 합니다.  
   
- `pBrush`  
+ *pBrush*  
  기 하 도형을 그리는 데 사용 되는 브러시의 내부입니다.  
   
- `pOpacityBrush`  
+ *pOpacityBrush*  
  불투명 마스크; 기 하 도형에 적용 하려면 NULL 불투명도 마스크가 없는입니다. 불투명 마스크 (opacityBrush 매개 변수)를 지정 하는 경우 브러시 D2D1_EXTEND_MODE_CLAMP로 설정 하는 해당 x 및 y 확장 모드를 가진 ID2D1BitmapBrush 이어야 합니다. 자세한 내용은 설명 섹션을 참조하세요.  
   
 ##  <a name="fillmesh"></a>  CRenderTarget::FillMesh  
@@ -634,10 +635,10 @@ void FillMesh(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pMesh`  
+ *pMesh*  
  그리는 데 사용 되는 메시 합니다.  
   
- `pBrush`  
+ *pBrush*  
  메시를 그리는 데 사용 되는 브러시입니다.  
   
 ##  <a name="fillopacitymask"></a>  CRenderTarget::FillOpacityMask  
@@ -653,19 +654,19 @@ void FillOpacityMask(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pOpacityMask`  
+ *pOpacityMask*  
  위치 및 장치 독립적 픽셀을 그리는 타원의 반지름입니다.  
   
- `pBrush`  
+ *pBrush*  
  DestinationRectangle로 지정 된 렌더링 대상의 영역을 그리는 데 사용 되는 브러시입니다.  
   
- `content`  
+ *content*  
  불투명 마스크 콘텐츠의 형식을 포함합니다. 값은 불투명 마스크 혼합 됩니다 색 공간을 확인 하려면 사용 됩니다.  
   
- `rectDest`  
+ *rectDest*  
  장치 독립적 픽셀 그릴 렌더링 대상의 영역입니다.  
   
- `rectSrc`  
+ *rectSrc*  
  불투명 마스크 (장치 독립적 픽셀)로 사용할 비트맵의 영역입니다.  
   
 ##  <a name="fillrectangle"></a>  CRenderTarget::FillRectangle  
@@ -678,10 +679,10 @@ void FillRectangle(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rect`  
+ *rect*  
  장치 독립적 픽셀 단위로 그릴 사각형의 차원입니다.  
   
- `pBrush`  
+ *pBrush*  
  사각형을 그리는 데 사용 되는 브러시의 내부입니다.  
   
 ##  <a name="fillroundedrectangle"></a>  CRenderTarget::FillRoundedRectangle  
@@ -694,10 +695,10 @@ void FillRoundedRectangle(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rectRounded`  
+ *rectRounded*  
  장치 독립적 픽셀 단위로 그리는 데 모퉁이가 둥근된 사각형의 크기입니다.  
   
- `pBrush`  
+ *pBrush*  
  모퉁이가 둥근된 사각형의 내부를 그리는 데 사용 되는 브러시입니다.  
   
 ##  <a name="flush"></a>  CRenderTarget::Flush  
@@ -710,10 +711,10 @@ void Flush(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `tag1`  
+ *tag1*  
  그리기를 발생 시킨 오류 또는 0 오류가 있는 경우 작업에 대 한 태그를 포함 합니다. 이 매개 변수는 초기화되지 않은 상태로 전달됩니다.  
   
- `tag2`  
+ *tag2*  
  그리기를 발생 시킨 오류 또는 0 오류가 있는 경우 작업에 대 한 태그를 포함 합니다. 이 매개 변수는 초기화되지 않은 상태로 전달됩니다.  
   
 ##  <a name="getantialiasmode"></a>  CRenderTarget::GetAntialiasMode  
@@ -796,10 +797,10 @@ void GetTags(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `tag1`  
+ *tag1*  
  후속 그리기 작업에 대 한 첫 번째 레이블을 포함합니다. 이 매개 변수는 초기화되지 않은 상태로 전달됩니다. NULL을 지정 하는 경우이 매개 변수 값이 없는 검색 됩니다.  
   
- `tag2`  
+ *tag2*  
  후속 그리기 작업에 대 한 두 번째 레이블을 포함합니다. 이 매개 변수는 초기화되지 않은 상태로 전달됩니다. NULL을 지정 하는 경우이 매개 변수 값이 없는 검색 됩니다.  
   
 ##  <a name="gettextantialiasmode"></a>  CRenderTarget::GetTextAntialiasMode  
@@ -820,7 +821,7 @@ void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `textRenderingParams`  
+ *textRenderingParams*  
  이 메서드가 반환 될 때 렌더링 대상에 대 한 포인터의 주소 textRenderingParamscontains의 현재 텍스트 렌더링 옵션입니다.  
   
 ##  <a name="gettransform"></a>  CRenderTarget::GetTransform  
@@ -831,7 +832,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `transform`  
+ *transform*  
  렌더링 대상에 적용할 변환입니다.  
   
 ##  <a name="issupported"></a>  CRenderTarget::IsSupported  
@@ -842,7 +843,7 @@ BOOL IsSupported(const D2D1_RENDER_TARGET_PROPERTIES& renderTargetProperties) co
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `renderTargetProperties`  
+ *renderTargetProperties*  
  테스트 하려면 렌더링 대상 속성  
   
 ### <a name="return-value"></a>반환 값  
@@ -913,10 +914,10 @@ void PushAxisAlignedClip(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rectClip`  
+ *rectClip*  
  크기와 장치 독립적 픽셀 단위로 클리핑 영역 위치입니다.  
   
- `mode`  
+ *모드*  
  장면 내용으로 클립을 혼합 하는 하위 픽셀 경계 클립 영역이의 가장자리를 그리는 데 사용 하는 앨리어싱 사용 안 함 모드입니다. 혼합 PopAxisAlignedClip 메서드를 호출 하 고 계층 내 각 기본 형식에 적용 되지 않습니다 때 수행 됩니다.  
   
 ##  <a name="pushlayer"></a>  CRenderTarget::PushLayer  
@@ -929,10 +930,10 @@ void PushLayer(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `layerParameters`  
+ *layerParameters*  
  콘텐츠 경계, 기하학적 마스크, 불투명도, 불투명 마스크 및 앤티 앨리어싱 계층의 옵션입니다.  
   
- `layer`  
+ *계층*  
  후속 그리기 작업을 수신 하는 계층입니다.  
   
 ##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState  
@@ -943,7 +944,7 @@ void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `drawingStateBlock`  
+ *drawingStateBlock*  
  렌더링 대상의 그리기 새 상태입니다.  
   
 ##  <a name="savedrawingstate"></a>  CRenderTarget::SaveDrawingState  
@@ -954,7 +955,7 @@ void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `drawingStateBlock`  
+ *drawingStateBlock*  
  이 메서드가 반환 될 때 렌더링 대상의 현재 그리기 상태를 포함 합니다. 이 매개 변수를 메서드에 전달 하기 전에 초기화 되어야 합니다.  
   
 ##  <a name="setantialiasmode"></a>  CRenderTarget::SetAntialiasMode  
@@ -965,7 +966,7 @@ void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `antialiasMode`  
+ *antialiasMode*  
  앤티 앨리어싱 모드 향후 그리기 작업입니다.  
   
 ##  <a name="setdpi"></a>  CRenderTarget::SetDpi  
@@ -976,7 +977,7 @@ void SetDpi(const CD2DSizeF& sizeDPI);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `sizeDPI`  
+ *sizeDPI*  
  렌더링 대상의 가로/수직 Dpi를 지정 하는 0 보다 크거나 같은 값입니다.  
   
 ##  <a name="settags"></a>  CRenderTarget::SetTags  
@@ -989,10 +990,10 @@ void SetTags(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `tag1`  
+ *tag1*  
  다음 그리기 작업에 적용 하도록 레이블을 합니다.  
   
- `tag2`  
+ *tag2*  
  다음 그리기 작업에 적용 하도록 레이블을 합니다.  
   
 ##  <a name="settextantialiasmode"></a>  CRenderTarget::SetTextAntialiasMode  
@@ -1003,7 +1004,7 @@ void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `textAntialiasMode`  
+ *textAntialiasMode*  
  후속 텍스트와 문자 모양 그리기 작업에 사용할 앨리어싱 사용 안 함 모드입니다.  
   
 ##  <a name="settextrenderingparams"></a>  CRenderTarget::SetTextRenderingParams  
@@ -1014,7 +1015,7 @@ void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `textRenderingParams`  
+ *textRenderingParams*  
  모든 후속 텍스트와 문자 모양 그리기 작업;에 적용할 텍스트 렌더링 옵션 NULL을 현재 텍스트 렌더링 옵션의 선택을 취소 합니다.  
   
 ##  <a name="settransform"></a>  CRenderTarget::SetTransform  
@@ -1026,7 +1027,7 @@ void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `transform`  
+ *transform*  
  렌더링 대상에 적용할 변환입니다.  
   
 ##  <a name="verifyresource"></a>  CRenderTarget::VerifyResource  
@@ -1037,7 +1038,7 @@ BOOL VerifyResource(CD2DResource* pResource);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pResource`  
+ *pResource*  
  CD2DResource 개체에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  

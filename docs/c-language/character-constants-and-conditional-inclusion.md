@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381810"
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>문자 상수 및 조건부 포함
 **ANSI 3.8.1** 조건부 포함을 제어하는 상수 식의 단일 문자 상수 값이 실행 문자 집합의 동일한 문자 상수 값과 일치=하는지 여부. 해당 문자 상수가 음의 값을 가질 수 있는지 여부  

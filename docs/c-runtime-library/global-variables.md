@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392041"
 ---
 # <a name="global-variables"></a>전역 변수
 Microsoft C 런타임 라이브러리는 다음 전역 변수 또는 매크로를 제공합니다. 이러한 전역 변수 또는 매크로 중 일부는 보다 안전한 함수 버전으로 인해 사용되지 않고 있으므로 전역 변수 대신 이러한 함수 버전을 사용하는 것이 좋습니다.  

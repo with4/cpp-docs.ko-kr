@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113202"
 ---
 # <a name="changes-in-destructor-semantics"></a>소멸자 의미의 변경 내용
 클래스 소멸자에 대 한 의미는 Visual c + +는 데 Managed Extensions for c + + 크게 변경 되었습니다.  

@@ -52,11 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf19865b4c11bb8305bea62b3682faebe39bef74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 562f0eff1470a4754d3eaac15a94d08fefb95951
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123021"
 ---
 # <a name="cwordarray-class"></a>CWordArray 클래스
 16비트 단어 배열을 지원합니다.  
@@ -68,7 +69,7 @@ class CWordArray : public CObject
 ```  
   
 ## <a name="members"></a>멤버  
- 멤버 함수 `CWordArray` 클래스의 멤버 함수와 비슷한 [CObArray](../../mfc/reference/cobarray-class.md)합니다. 이처럼 두 함수가 비슷하므로 `CObArray` 참조 설명서에서 멤버 함수 관련 사항을 확인할 수 있습니다. 볼 때마다는 [CObject](../../mfc/reference/cobject-class.md) 포인터를 함수 매개 변수 또는 반환 값으로 대체 한 **단어**합니다.  
+ 멤버 함수 `CWordArray` 클래스의 멤버 함수와 비슷한 [CObArray](../../mfc/reference/cobarray-class.md)합니다. 이처럼 두 함수가 비슷하므로 `CObArray` 참조 설명서에서 멤버 함수 관련 사항을 확인할 수 있습니다. 볼 때마다는 [CObject](../../mfc/reference/cobject-class.md) 포인터를 함수 매개 변수 또는 반환 값으로 대체 단어입니다.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -93,7 +94,7 @@ class CWordArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|현재 상한을 초과하며 사용되지 않는 모든 메모리를 해제합니다.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|지정된 인덱스의 값을 반환합니다.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|이 배열에 있는 요소의 수를 가져옵니다.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|배열의 요소에 대한 액세스를 허용합니다. 수 **NULL**합니다.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|배열의 요소에 대한 액세스를 허용합니다. NULL이 될 수 있습니다.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|이 배열에 있는 요소의 수를 가져옵니다.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|유효한 최대 인덱스를 반환합니다.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|지정한 인덱스에 요소 하나 또는 다른 배열의 모든 요소를 삽입합니다.|  
@@ -152,14 +153,14 @@ void AddCommandHandler(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cmdID`  
+ *cmdID*  
  명령 ID입니다.  
   
- `cmdHandler`  
+ *cmdHandler*  
  명령 처리기 메서드인에 대 한 핸들입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 명령 처리기를 추가 `cmdHandler` 명령 원본 개체에 매핑되는 처리기에 `cmdID`합니다.  
+ 이 메서드는 명령 처리기를 추가 *cmdHandler* 명령 원본 개체에 매핑되는 처리기에 *cmdID*합니다.  
   
  참조 [하는 방법: Windows Forms 컨트롤에 명령 라우팅 추가](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) 사용 하는 방법의 예 `AddCommandHandler`합니다.  
   
@@ -174,13 +175,13 @@ void AddCommandRangeHandler(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cmdIDMin`  
+ *cmdIDMin*  
  명령 ID 범위의 시작 인덱스입니다.  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  명령 ID 범위의 끝 인덱스입니다.  
   
- `cmdHandler`  
+ *cmdHandler*  
  명령이 매핑되는 메시지 처리기 방법에 대 한 핸들입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -197,13 +198,13 @@ void AddCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cmdIDMin`  
+ *cmdIDMin*  
  명령 ID 범위의 시작 인덱스입니다.  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  명령 ID 범위의 끝 인덱스입니다.  
   
- `cmdHandler`  
+ *cmdHandler*  
  명령이 매핑되는 메시지 처리기 방법에 대 한 핸들입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -219,14 +220,14 @@ void AddCommandUIHandler(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cmdID`  
+ *cmdID*  
  명령 ID입니다.  
   
- `cmdUIHandler`  
+ *cmdUIHandler*  
  사용자 인터페이스 명령 메시지 처리기 방법에 대 한 핸들입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 사용자 인터페이스 명령 메시지 처리기 추가 `cmdHandler` 명령 원본 개체에 매핑되는 처리기에 `cmdID`합니다.  
+ 이 메서드는 사용자 인터페이스 명령 메시지 처리기 추가 *cmdHandler* 명령 원본 개체에 매핑되는 처리기에 *cmdID*합니다.  
   
 ##  <a name="postcommand"></a>  ICommandSource::PostCommand  
  처리 되기를 기다리지 않고 메시지를 게시 합니다.  
@@ -236,11 +237,11 @@ void PostCommand(unsigned int command);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `command`  
+ *command*  
  게시 될 메시지의 명령 ID입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 비동기적으로 하 여 지정 된 ID에 매핑된 메시지 게시 `command`합니다. 호출 [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) 해당 창 메시지를 처리할 때까지 기다리지 않고 창의 메시지 큐와 돌아올에 메시지를 배치할 수 있습니다.  
+ 이 메서드는 비동기적으로 하 여 지정 된 ID에 매핑된 메시지 게시 *명령*합니다. 호출 [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) 해당 창 메시지를 처리할 때까지 기다리지 않고 창의 메시지 큐와 돌아올에 메시지를 배치할 수 있습니다.  
   
 ##  <a name="removecommandhandler"></a>  ICommandSource::RemoveCommandHandler  
  명령 원본 개체에서 명령 처리기를 제거합니다.  
@@ -250,11 +251,11 @@ void RemoveCommandHandler(unsigned int cmdID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cmdID`  
+ *cmdID*  
  명령 ID입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드 매핑할 명령 처리기를 제거 `cmdID` 명령 소스 개체에서입니다.  
+ 이 메서드 매핑할 명령 처리기를 제거 *cmdID* 명령 원본 개체에서 합니다.  
   
 ##  <a name="removecommandrangehandler"></a>  ICommandSource::RemoveCommandRangeHandler  
  명령 원본 개체에서 명령 처리기의 그룹을 제거합니다.  
@@ -266,14 +267,14 @@ void RemoveCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cmdIDMin`  
+ *cmdIDMin*  
  명령 ID 범위의 시작 인덱스입니다.  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  명령 ID 범위의 끝 인덱스입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 메시지 처리기에서 명령 Id 지정에 매핑된의 그룹을 제거 `cmdIDMin` 및 `cmdIDMax`, 명령 원본 개체에서 합니다.  
+ 이 메서드는 메시지 처리기에서 명령 Id 지정에 매핑된의 그룹을 제거 *cmdIDMin* 및 *cmdIDMax*, 명령 원본 개체에서 합니다.  
   
 ##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler  
  명령 원본 개체에서 사용자 인터페이스 명령 메시지 처리기의 그룹을 제거합니다.  
@@ -285,14 +286,14 @@ void RemoveCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cmdIDMin`  
+ *cmdIDMin*  
  명령 ID 범위의 시작 인덱스입니다.  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  명령 ID 범위의 끝 인덱스입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 사용자 인터페이스 명령 메시지 처리기를에서 명령 Id 지정에 매핑된의 그룹을 제거 `cmdIDMin` 및 `cmdIDMax`, 명령 원본 개체에서 합니다.  
+ 이 메서드는 사용자 인터페이스 명령 메시지 처리기를에서 명령 Id 지정에 매핑된의 그룹을 제거 *cmdIDMin* 및 *cmdIDMax*, 명령 원본 개체에서 합니다.  
   
 ##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler  
  명령 원본 개체에서 사용자 인터페이스 명령 메시지 처리기를 제거합니다.  
@@ -302,11 +303,11 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cmdID`  
+ *cmdID*  
  명령 ID입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는에 매핑된 사용자 인터페이스 명령 메시지 처리기를 제거 `cmdID` 명령 소스 개체에서입니다.  
+ 이 메서드는에 매핑된 사용자 인터페이스 명령 메시지 처리기를 제거 *cmdID* 명령 원본 개체에서 합니다.  
   
 ##  <a name="sendcommand"></a>  ICommandSource::SendCommand  
  메시지를 보내고 반환 하기 전에 처리 되기를 기다립니다.  
@@ -316,11 +317,11 @@ void SendCommand(unsigned int command);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `command`  
+ *command*  
  보낼 메시지의 명령 ID입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 동기적으로 처리 하 여 지정 된 ID에 매핑된 메시지 전송 `command`합니다. 호출 [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) 해당 창 프로시저에서 반환 하기 전에 메시지를 처리할 때 까지는 창의 메시지 큐와 대기에 메시지를 배치 합니다.  
+ 이 메서드는 동기적으로 처리 하 여 지정 된 ID에 매핑된 메시지 전송 *명령*합니다. 호출 [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) 해당 창 프로시저에서 반환 하기 전에 메시지를 처리할 때 까지는 창의 메시지 큐와 대기에 메시지를 배치 합니다.  
   
 ##  <a name="icommandtarget_interface"></a>  ICommandTarget 인터페이스  
  명령 원본 개체에서 명령을 수신 하도록 인터페이스와 함께 사용자 정의 컨트롤을 제공 합니다.  
@@ -344,13 +345,13 @@ void Initialize(ICommandSource^ cmdSource);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cmdSource`  
+ *cmdSource*  
  명령 원본 개체에 대 한 핸들입니다.  
   
 ### <a name="remarks"></a>설명  
  MFC 뷰에서 사용자 정의 컨트롤을 호스팅하는 경우 [CWinFormsView](../../mfc/reference/cwinformsview-class.md) 경로 명령 및 업데이트 명령을 MFC 명령을 처리할 수 있도록 허용 하는 사용자 정의 컨트롤에 UI 메시지입니다.  
   
- 이 메서드는 명령 대상 개체를 초기화 하 고 지정 된 명령 원본 개체와 연결 `cmdSource`합니다. 사용자 컨트롤 클래스 구현에서 호출 되어야 합니다. 초기화 하는 과정을 등록 해야 명령 처리기 명령 원본 개체와 호출 하 여 [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) 에 `Initialize` 구현 합니다. 참조 [하는 방법: Windows Forms 컨트롤에 명령 라우팅 추가](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) 사용 하는 방법의 예 `Initialize` 에이 작업을 수행 합니다.  
+ 이 메서드는 명령 대상 개체를 초기화 하 고 지정 된 명령 원본 개체와 연결 *cmdSource*합니다. 사용자 컨트롤 클래스 구현에서 호출 되어야 합니다. 초기화 하는 과정을 등록 해야 명령 처리기 명령 원본 개체와 호출 하 여 [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) 에 `Initialize` 구현 합니다. 참조 [하는 방법: Windows Forms 컨트롤에 명령 라우팅 추가](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) 사용 하는 방법의 예 `Initialize` 에이 작업을 수행 합니다.  
   
 ##  <a name="icommandui_interface"></a>  ICommandUI 인터페이스  
  사용자 인터페이스 명령을 관리합니다.  
@@ -394,7 +395,7 @@ void ContinueRouting();
 ```  
   
 ### <a name="remarks"></a>설명  
- 와 함께에서 사용 해야 하는 고급 멤버 함수는 [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) 반환 하는 처리기 `FALSE`합니다. 자세한 내용은 기술 참고를 참조 하십시오. [TN006: 메시지 맵](../../mfc/tn006-message-maps.md)합니다.  
+ 와 함께에서 사용 해야 하는 고급 멤버 함수는 [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) FALSE를 반환 하는 처리기. 자세한 내용은 기술 참고를 참조 하십시오. [TN006: 메시지 맵](../../mfc/tn006-message-maps.md)합니다.  
   
 ##  <a name="enabled"></a>  ICommandUI::Enabled  
  이 명령에 대 한 사용자 인터페이스 항목을 사용 하지 않도록 설정 하거나 사용 합니다.  
@@ -404,7 +405,7 @@ property bool Enabled;
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 속성 사용 하거나이 명령에 대 한 사용자 인터페이스 항목을 사용 하지 않도록 설정 합니다. 설정 `Enabled` 를 `TRUE` 해당 항목을 사용할 수 있도록 `FALSE` 사용 하지 않도록 합니다.  
+ 이 속성 사용 하거나이 명령에 대 한 사용자 인터페이스 항목을 사용 하지 않도록 설정 합니다. 설정 `Enabled` FALSE 사용 하지 않도록 해당 항목을 사용 하도록 설정 하려면 TRUE로 합니다.  
   
 ##  <a name="id"></a>  ICommandUI::ID  
  가 나타내는 사용자 인터페이스 개체의 ID를 가져옵니다는 `ICommandUI` 개체입니다.  
@@ -434,7 +435,7 @@ property bool Radio;
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 속성을 적절 한 확인 상태로이 명령에 대 한 사용자 인터페이스 항목을 설정합니다. 설정 `Radio` 를 `TRUE` ; 항목을 설정 하려면 그렇지 않으면 `FALSE`합니다.  
+ 이 속성을 적절 한 확인 상태로이 명령에 대 한 사용자 인터페이스 항목을 설정합니다. 설정 `Radio` 의 항목이 고, 그렇지 않으면 FALSE를 사용 하도록 설정 하려면 TRUE로 합니다.  
   
 ##  <a name="text"></a>  ICommandUI::Text  
  이 명령에 대 한 사용자 인터페이스 항목의 텍스트를 설정 합니다.  
@@ -468,7 +469,7 @@ void OnActivateView(bool activate);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `activate`  
+ *활성화*  
  보기를 새로 있는지 여부를 나타냅니다. 활성화 또는 비활성화 합니다.  
   
 ##  <a name="oninitialupdate"></a>  IView::OnInitialUpdate  

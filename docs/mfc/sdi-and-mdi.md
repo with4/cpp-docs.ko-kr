@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385806"
 ---
 # <a name="sdi-and-mdi"></a>SDI 및 MDI
 MFC를 사용 하면 쉽게 단일 문서 인터페이스 (SDI) 및 (mdi 다중) 다중 문서 인터페이스 응용 프로그램 모두와 작업할 수 있습니다.  

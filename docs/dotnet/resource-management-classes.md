@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161436"
 ---
 # <a name="resource-management-classes"></a>리소스 관리 클래스
 이러한 클래스는 관리되는 클래스에 대한 자동 관리 기능을 제공합니다.  

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5aaf151d7591776857c5f731841847e31c41239
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 343acc8d23e2b67c1e9f7556ffe2268c94bb3c63
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957904"
 ---
 # <a name="removereference-class"></a>remove_reference 클래스
 
@@ -39,13 +40,13 @@ using remove_reference_t = typename remove_reference<T>::type;
 
 ### <a name="parameters"></a>매개 변수
 
-`T` 수정할 형식입니다.
+*T* 수정할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-`remove_reference<T>`의 인스턴스는 `T1`가 `T` 형식인 경우 수정된 형식인 `T1&`을 보관하고, 그렇지 않은 경우 `T`를 보관합니다.
+인스턴스의 `remove_reference<T>` 는 형식인 수정 된 `T1` 때 *T* 형식인 `T1&`고, 그렇지 않으면 *T*합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 #include <type_traits>

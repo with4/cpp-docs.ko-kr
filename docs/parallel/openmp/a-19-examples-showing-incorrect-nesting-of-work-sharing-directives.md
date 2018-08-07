@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691498"
 ---
 # <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19   작업 공유 지시문의 잘못된 중첩을 보여 주는 예제
 이 섹션의 예는 지시문 중첩 규칙을 설명 합니다. 지시문 중첩에 대 한 자세한 내용은 참조 하십시오. [섹션 2.9](../../parallel/openmp/2-9-directive-nesting.md) 33 페이지입니다.  

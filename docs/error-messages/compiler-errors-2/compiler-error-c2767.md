@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234785"
 ---
 # <a name="compiler-error-c2767"></a>컴파일러 오류 C2767
 관리 되는 또는 WinRTarray 차원 불일치: N 인수가 필요한 데 M 제공  

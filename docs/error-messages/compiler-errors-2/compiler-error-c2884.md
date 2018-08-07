@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33261470"
 ---
 # <a name="compiler-error-c2884"></a>컴파일러 오류 C2884
 'name': 'function' 지역 함수와 충돌 using 선언으로 인해  

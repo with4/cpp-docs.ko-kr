@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170218"
 ---
 # <a name="compiler-error-c2271"></a>컴파일러 오류 C2271
 'operator': 새/삭제는 형식 목록 한정자를 사용할 수 없습니다  

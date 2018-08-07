@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877523"
 ---
 # <a name="lastis"></a>last_is
 전송할 마지막 배열 요소의 인덱스를 지정 합니다.  

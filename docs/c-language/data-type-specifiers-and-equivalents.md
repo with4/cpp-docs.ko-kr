@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386152"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>데이터 형식 지정자 및 해당 항목
 이 책에서는 일반적으로 긴 형태보다 다음 표에 나열되어 있는 형식 지정자의 형태를 사용하며, 기본적으로 `char` 형식이 서명되어 있다고 가정합니다. 따라서 이 책에 나온 `char`는 **signed char**와 동일합니다.  

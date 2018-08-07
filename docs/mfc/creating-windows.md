@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341900"
 ---
 # <a name="creating-windows"></a>창 만들기
 프레임 워크는 프레임 워크 프로그램에 필요한 창 대부분 자동으로 만듭니다. [문서/뷰 만들기](../mfc/document-view-creation.md) 프레임 워크의 프레임 창에 연결 된 문서 및 뷰를 만드는 방법을 보여 줍니다. 한 특수 한 용도의 고유한 창을 만들 수 있습니다 하지만-고유한 자식 창 프레임 창이 나 뷰를 포함 하 여-프레임 워크에서 제공 하는 창 외에도 합니다.  

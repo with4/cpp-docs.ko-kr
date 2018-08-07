@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344924"
 ---
 # <a name="header-items-in-a-header-control"></a>헤더 컨트롤의 헤더 항목
 모양 및 헤더 컨트롤을 구성 하는 헤더 항목의 동작을 상당히 제어할 수 있습니다 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)). 각 헤더 항목에는 연결된 된 이미지 목록의 또는 연결 된 응용 프로그램 정의 32 비트 값에서 이미지, 비트맵 이미지를 사용 하는, 문자열 있을 수 있습니다. 문자열, 비트맵 또는 이미지는 머리글 항목에 표시 됩니다.  

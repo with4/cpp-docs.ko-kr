@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c9903170f62652357264a3ea2de0839496e9e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8863f3a6c37693ec28f931c2af4cb0d299788daa
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402665"
 ---
 # <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
 **Microsoft 전용**  
@@ -30,21 +31,19 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 BSTR& GetBSTR( );  
-  
 ```  
   
 ## <a name="return-value"></a>반환 값  
  `BSTR`에 의해 래핑되는 `_bstr_t`의 시작 부분입니다.  
   
 ## <a name="remarks"></a>설명  
- `GetBSTR`는 `_bstr_t`을 공유하는 모든 `BSTR` 개체에 영향을 줍니다. 두 개 이상의 `_bstr_t`는 복사 생성자와 `BSTR`를 사용하여 `operator=`을 공유할 수 있습니다.  
+ **GetBSTR** 모두에 영향을 줍니다 `_bstr_t` 공유 하는 개체는 `BSTR`합니다. 둘 이상의 `_bstr_t` 공유할 수는 `BSTR` 복사 생성자를 사용 하 여 및 및 **연산자 =** 합니다.  
   
-## <a name="example"></a>예제  
- 참조 [_bstr_t:: assign](../cpp/bstr-t-assign.md) 사용 하는 예제 `GetBSTR`합니다.  
+## <a name="example"></a>예  
+ 참조 [_bstr_t:: assign](../cpp/bstr-t-assign.md) 사용 하는 예제 **GetBSTR**합니다.  
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_bstr_t 클래스](../cpp/bstr-t-class.md)

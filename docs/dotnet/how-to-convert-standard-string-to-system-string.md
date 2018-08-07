@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127837"
 ---
 # <a name="how-to-convert-standard-string-to-systemstring"></a>방법: 표준 문자열을 System::String으로 변환
 이 항목에서는 c + + 표준 라이브러리 문자열로 변환 하는 방법을 ([\<문자열 >](../standard-library/string.md))에 <xref:System.String>합니다.  

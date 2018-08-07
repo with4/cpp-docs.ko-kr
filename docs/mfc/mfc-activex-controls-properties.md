@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347109"
 ---
 # <a name="mfc-activex-controls-properties"></a>MFC ActiveX 컨트롤: 속성
 ActiveX 컨트롤은 컨트롤 컨테이너와 통신 하는 이벤트입니다. 컨테이너를 사용 하 여 메서드 및 속성 컨트롤와 통신할 수 있습니다. 메서드 및 속성은 비슷한 목적으로 사용 중인 각각, 멤버 함수 및 c + + 클래스의 멤버 변수입니다. 속성은 ActiveX 컨트롤의 모든 컨테이너에 노출 되는 데이터 멤버입니다. 자동화 클라이언트 및 ActiveX 컨트롤 컨테이너와 같은 ActiveX 컨트롤을 포함 하는 응용 프로그램에 대 한 한 인터페이스를 제공 합니다.  

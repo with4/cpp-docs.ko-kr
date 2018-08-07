@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877594"
 ---
 # <a name="makeandinitialize-function"></a>MakeAndInitialize 함수
 지정된 된 Windows 런타임 클래스를 초기화합니다. 이 함수는 동일한 모듈에 정의 된 구성 요소의 인스턴스를 사용 합니다.  

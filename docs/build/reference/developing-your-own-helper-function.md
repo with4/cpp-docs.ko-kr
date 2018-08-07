@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371400"
 ---
 # <a name="developing-your-own-helper-function"></a>사용자 도우미 함수 개발
 고유한 버전의 DLL 이나 가져오기 이름을 기반으로 하는 특정 처리를 수행 하는 루틴을 제공 하려는 경우. 이 작업을 수행 하는 방법은 두 가지가: 후크 설명한 알림 후크를 사용 하 여 제공 된 버전 또는 코딩을 직접 제공된 된 코드에 기반 합니다.  

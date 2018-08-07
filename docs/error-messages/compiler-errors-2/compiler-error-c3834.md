@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267716"
 ---
 # <a name="compiler-error-c3834"></a>컴파일러 오류 C3834
 명시적으로 잘못 캐스팅 했습니다 고정 포인터; 대신 고정된 된 지역 변수를 사용 합니다.  

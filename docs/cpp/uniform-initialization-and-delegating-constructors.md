@@ -12,17 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df40eef538ec09a0189bf6c1e6b4881edb59f5c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26b4cbfb798e47b1add5b1d46c2ea1adb538898b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465970"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>균일 초기화 및 생성자 위임
-최신 c + +에서 사용할 수 있습니다 *중괄호 초기화* 등호 없이 모든 형식에 대 한 합니다. 또한 코드를 단순화 하 여 비슷한 작업을 수행 하는 생성자를 여러 개 있는 경우 위임 생성자를 사용할 수 있습니다.  
+최신 c + +에서 사용할 수 있습니다 *중괄호 초기화* 등호 기호 없이 모든 형식에 대 한 합니다. 또한 비슷한 작업을 수행 하는 생성자를 여러 개 있는 경우 코드를 단순화 하기 위해 위임 생성자를 사용할 수 있습니다.  
   
 ## <a name="brace-initialization"></a>중괄호 초기화  
- 모든 클래스, 구조체 또는 공용 구조체에 대 한 중괄호 초기화를 사용할 수 있습니다. 형식에 기본 생성자를 명시적으로 또는 암시적으로 선언 된 경우 (빈 중괄호)와 기본 중괄호 초기화를 사용할 수 있습니다. 예를 들어, 기본 및 기본이 아닌 중괄호 초기화를 사용 하 여 다음 클래스를 초기화할 수 수 있습니다.  
+ 모든 클래스, 구조체 또는 공용 구조체에 대 한 중괄호 초기화를 사용할 수 있습니다. 형식에 기본 생성자를 암시적 또는 명시적으로 선언 하는 경우 (빈 중괄호)와 기본 중괄호 초기화를 사용할 수 있습니다. 예를 들어, 기본값 및 기본값이 아닌 중괄호 초기화를 사용 하 여 다음 클래스를 초기화할 수 있습니다.  
   
 ```cpp  
 #include <string>  
@@ -49,10 +50,9 @@ int main()
     class_a c3{ "yy", 4.4 };  
     class_a c3_1("zz", 5.5);  
 }  
-  
 ```  
   
- 클래스 멤버는 중괄호 이니셜라이저에 나타나는 순서는 해당 매개 변수를 생성자에 나오는 순서, 멤버 선언 된 순서가 아니라 클래스에 기본이 아닌 생성자를 (마찬가지로 `class_a` 에 이전 예제)입니다. 그렇지 않은 경우 형식에 선언 된 생성자가 없습니다, 중괄호 이니셜라이저에 나타나는 멤버의 순서 인지는 선언 된; 순서와 동일 이 경우 모든 멤버를 건너뛸 수 없습니다은 선택 사항으로 공용 멤버의 많은 초기화할 수 있습니다. 다음 예제에서는 생성자가 없는 선언 된 때 중괄호 초기화에 사용 되는 순서를 보여 줍니다.  
+ 클래스 멤버 중괄호 이니셜라이저에 나타나는 순서는 해당 매개 변수를 생성자에 나타나는 순서를 멤버 선언 되는 순서가 아니라 클래스의 기본이 아닌 생성자가 하는 경우 (마찬가지로 `class_a` 에 이전 예제)입니다. 그렇지 않으면 형식에 선언 된 생성자가 없는 경우 중괄호 이니셜라이저에 나타나는 멤버의 순서가는 선언 된 순서와 동일 이 경우 원하는 대로 모든 멤버를 건너뛸 수 없습니다 public 멤버의 만큼 초기화할 수 있습니다. 다음 예제에서는 선언 된 생성자가 없는 경우 중괄호 초기화에 사용 되는 순서를 보여 줍니다.  
   
 ```cpp  
 class class_d {  
@@ -74,7 +74,7 @@ int main()
 }   
 ```  
   
- 기본 생성자가 명시적으로 선언 되지만 삭제 된 것으로 표시, 기본 중괄호 초기화를 사용할 수 없습니다.  
+ 기본 생성자를 명시적으로 선언 하지만 삭제 된 것으로 표시 하는 경우에 기본 중괄호 초기화를 사용할 수 없습니다.  
   
 ```cpp  
 class class_f {  
@@ -90,36 +90,34 @@ int main()
 }  
 ```  
   
- 중괄호 초기화에서는 아무 곳 이나 일반적으로 수행한 초기화-예를 들어, 또는 함수 매개 변수 또는 반환 값으로는 `new` 키워드:  
+ 중괄호 초기화를 사용할 수 있습니다 아무 곳 이나 일반적으로 하듯이 초기화-예를 들어, 또는 함수 매개 변수 또는 반환 값으로는 **새** 키워드:  
   
 ```cpp  
 class_d* cf = new class_d{4.5};  
 kr->add_d({ 4.5 });  
 return { 4.5 };  
-  
 ```  
   
 ## <a name="initializerlist-constructors"></a>initializer_list 생성자  
- [initializer_list 클래스](../standard-library/initializer-list-class.md) 생성자에서와 다른 컨텍스트에서 사용할 수 있는 지정 된 형식의 개체 목록을 나타냅니다. Initializer_list 중괄호 초기화를 사용 하 여 구성할 수 있습니다.  
+ 합니다 [initializer_list 클래스](../standard-library/initializer-list-class.md) 생성자에서 및 다른 컨텍스트에서 사용할 수 있는 지정 된 형식의 개체 목록을 나타냅니다. Initializer_list 중괄호 초기화를 사용 하 여 생성할 수 있습니다.  
   
 ```cpp  
 initializer_list<int> int_list{5, 6, 7};  
 ```  
   
 > [!IMPORTANT]
->  이 클래스를 사용 하려면 포함 해야는 [< initializer_list >](../standard-library/initializer-list.md) 헤더입니다.  
+>  이 클래스를 사용 하려면 포함 해야 합니다 [< initializer_list >](../standard-library/initializer-list.md) 헤더입니다.  
   
- `initializer_list` 복사 될 수 있습니다. 이 경우 새 목록의 구성원 원래 그룹의 구성원에 대 한 참조 생성 됩니다.  
+ `initializer_list` 복사할 수 있습니다. 이 경우 새 그룹의 구성원은 원래 목록 멤버에 대 한 참조:  
   
 ```cpp  
 initializer_list<int> ilist1{ 5, 6, 7 };  
 initializer_list<int> ilist2( ilist1 );  
 if (ilist1.begin() == ilist2.begin())  
     cout << "yes" << endl; // expect "yes"  
-  
 ```  
   
- 표준 라이브러리 컨테이너 클래스와 `string`, `wstring`, 및 `regex`, 있어야 `initializer_list` 생성자입니다. 다음 예에서는 이러한 생성자를 사용 하 여 초기화 중괄호를 수행 하는 방법을 보여 줍니다.  
+ 표준 라이브러리 컨테이너 클래스 및 `string`, `wstring`, 및 `regex`에 있는 `initializer_list` 생성자입니다. 다음 예제에서는 중괄호 이러한 생성자를 사용 하 여 초기화를 수행 하는 방법을 보여 줍니다.  
   
 ```cpp  
 vector<int> v1{ 9, 10, 11 };   
@@ -129,7 +127,7 @@ regex rgx{'x', 'y', 'z'};
 ```  
   
 ## <a name="delegating-constructors"></a>위임 생성자  
- 대부분의 클래스에는 비슷한 작업을 수행 하는 여러 생성자-예를 들어 매개 변수 유효성 검사:  
+ 많은 클래스는 비슷한 작업을 수행 하는 여러 생성자-예를 들어, 매개 변수 유효성 검사:  
   
 ```cpp  
 class class_c {  
@@ -154,7 +152,7 @@ public:
 };  
 ```  
   
- 모든 유효성 검사를 하지만 대 한 코드를 수행 하는 함수를 추가 하 여 반복 되는 코드를 줄일 수 있습니다 `class_c` 이해 및 생성자가 하나에 다른 작업의 일부를 위임 될 수 하는 경우 유지 관리 하는 것이 더 쉽습니다. 위임 생성자를 추가 하려면 사용 된 `constructor (. . .) : constructor (. . .)` 구문:  
+ 모든 유효성 검사에 대 한 코드를 수행 하는 함수를 추가 하 여 반복 되는 코드를 줄일 수 있습니다 `class_c` 이해 하 고 생성자가 하나 일부 다른 작업을 위임할 수 있습니다 하는 경우 유지 하는 것이 더 쉽습니다. 위임 생성자를 추가 하려면 사용 된 `constructor (. . .) : constructor (. . .)` 구문:  
   
 ```cpp  
 class class_c {  
@@ -177,12 +175,11 @@ int main() {
   
     class_c c1{ 1, 3, 2 };  
 }  
-  
 ```  
   
- 앞의 예제를 통해 실행 함에 따라 다음에 유의 생성자 `class_c(int, int, int)` 생성자를 호출 하는 먼저 `class_c(int, int)`를 호출 하 `class_c(int)`합니다. 각 생성자는 다른 생성자에서 수행 되지 않는 작업을 수행 합니다.  
+ 앞의 예제를 단계별로 확인 하는 생성자 `class_c(int, int, int)` 생성자를 호출 하는 먼저 `class_c(int, int)`를 호출 하 `class_c(int)`합니다. 각 생성자에는 다른 생성자에 의해 수행 되지 않는 작업을 수행 합니다.  
   
- 라고 하는 첫 번째 생성자는 모든 해당 멤버를 해당 지점에서 초기화 되도록 개체를 초기화 합니다. 다음과 같이 다른 생성자에 위임 하는 생성자에서 멤버 초기화를 수행할 수 없습니다.  
+ 호출 되는 첫 번째 생성자는 모든 해당 멤버를 해당 지점에서 초기화 하는 개체를 초기화 합니다. 여기에 나와 있는 것 처럼 다른 생성자에 위임 하는 생성자 멤버 초기화를 수행할 수 없습니다.  
   
 ```cpp  
 class class_a {  
@@ -200,10 +197,9 @@ public:
     double m_double{ 1.0 };  
     string m_string;  
 };  
-  
 ```  
   
- 다음 예제에서는 비정적 데이터 멤버 이니셜라이저 사용을 보여 줍니다. 생성자에 지정된 된 데이터 멤버를 초기화, 멤버 이니셜라이저 재정의 되 고 지 사항:  
+ 다음 예제에서는 비정적 데이터 멤버 이니셜라이저를 사용 하는 방법을 보여 줍니다. 생성자는 지정 된 데이터 멤버 초기화를 하는 경우 멤버 이니셜라이저 재정의 알 수 있습니다.  
   
 ```cpp  
 class class_a {  
@@ -221,7 +217,7 @@ int main() {
 }  
 ```  
   
- 생성자 위임 구문 생성자 재귀를 실수로 생성을 방지 하지-Constructor1 Constructor2 Constructor1를 호출 하는 호출-스택 오버플로가 있을 때까지 오류가 throw 됩니다. 주기를 방지 하기 위해 작업은 합니다.  
+ 생성자 위임 구문 생성자 재귀 실수로 생성을 방지 하지-Constructor1 Constructor2 Constructor1를 호출 하는 호출-스택 오버플로가 발생 될 때까지 오류가 throw 됩니다. 것이 주기를 방지 해야 합니다.  
   
 ```cpp  
 class class_f{  

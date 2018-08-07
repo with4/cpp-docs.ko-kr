@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380617"
 ---
 # <a name="types-and-storage"></a>형식 및 저장소
 이 섹션에서는 열거 및 저장소에 대 한 데이터 형식의 설명는 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 아키텍처.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111473"
 ---
 # <a name="finally"></a>finally
 외에 `try` 및 `catch` 절, CLR 예외 지원 처리는 `finally` 절. 의미 체계와 동일는 `__finally` 구조적 예외 처리 (SEH)를 차단 합니다. A `__finally` 블록 따를 수는 `try` 또는 `catch` 블록입니다.  

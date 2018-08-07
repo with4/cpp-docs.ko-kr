@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382850"
 ---
 # <a name="initialization"></a>초기화
 "이니셜라이저"는 선언되는 변수에 할당할 값 또는 값의 시퀀스입니다. 변수 선언에서 선언자에 이니셜라이저를 적용하여 변수를 초기 값으로 설정할 수 있습니다. 이니셜라이저의 값이 변수에 할당됩니다.  

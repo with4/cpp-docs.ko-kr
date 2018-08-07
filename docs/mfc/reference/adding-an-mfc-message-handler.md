@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353730"
 ---
 # <a name="adding-an-mfc-message-handler"></a>MFC 메시지 처리기 추가
 할 수 있습니다 [메시지 처리기를 추가 하려면 속성 창을 사용](../../mfc/reference/mapping-messages-to-functions.md) (Windows 메시지를 처리 하는 멤버 함수)을 메시지 처리기는 클래스 및 지도 Windows 메시지입니다. 추가할 수도 있습니다 [대화 상자 컨트롤에 대 한 이벤트 처리기](../../windows/adding-event-handlers-for-dialog-box-controls.md)합니다.  

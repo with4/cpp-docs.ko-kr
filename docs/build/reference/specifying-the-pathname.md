@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375664"
 ---
 # <a name="specifying-the-pathname"></a>경로 이름 지정
 각 출력 파일 옵션을 *pathname* 인수를 위치와 출력 파일에 대 한 이름을 지정할 수 있습니다. 인수는 드라이브 이름, 디렉터리 및 파일 이름에 포함할 수 있습니다. 옵션 및 인수 사이 공백이 없어야 합니다.  

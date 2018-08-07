@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687274"
 ---
 # <a name="21-directive-format"></a>2.1 지시문 형식
 OpenMP 지시문의 구문은 문법을 지정 공식적으로 [부록 C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md), 다음과 같이 비공식적 및:  

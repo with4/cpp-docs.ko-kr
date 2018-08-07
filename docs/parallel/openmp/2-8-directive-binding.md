@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689456"
 ---
 # <a name="28-directive-binding"></a>2.8 지시문 바인딩
 동적 바인딩 지시문의 다음 규칙을 따라야 합니다.  

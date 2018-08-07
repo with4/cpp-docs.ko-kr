@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132468"
 ---
 # <a name="how-to-use-tracking-references-in-ccli"></a>방법: C++/CLI에서 추적 참조 사용
 이 문서에서는 C + 추적 참조 (%)를 사용 하는 방법을 보여 줍니다. + CLI 공용 언어 런타임 (CLR) 형식 참조로 전달할 수 있습니다.  

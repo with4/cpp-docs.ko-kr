@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366306"
 ---
 # <a name="cmemoryexception-class"></a>CMemoryException 클래스
 메모리 부족 예외 상태를 나타냅니다.  

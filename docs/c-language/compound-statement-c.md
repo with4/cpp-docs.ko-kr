@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385727"
 ---
 # <a name="compound-statement-c"></a>복합 문 (C)
 "블록"이라고도 하는 복합 문은 일반적으로 **if** 문 같은 다른 문의 본문으로 나타납니다. [선언 및 형식](../c-language/declarations-and-types.md)에서는 복합 문 헤드에 나타날 수 있는 선언의 형태와 의미에 대해 설명합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282430"
 ---
 # <a name="compiler-warning-level-1-c4717"></a>컴파일러 경고(수준 1) C4717
 'function': 모든 제어 경로에서 재귀적으로 함수 런타임 스택 오버플로가 발생 하면  

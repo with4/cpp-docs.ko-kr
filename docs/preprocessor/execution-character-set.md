@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850296"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 문자열 및 문자 리터럴에 사용 되는 실행 문자 집합을 지정 합니다. 이 지시어 u8 접두사가 있는 표시 된 리터럴에 대 한 필요 하지 않습니다.  

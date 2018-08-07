@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104271"
 ---
 # <a name="c-support-library"></a>C++ 지원 라이브러리
 C + + 지원 라이브러리를 c + +에서 관리 되는 프로그래밍을 지 원하는 클래스를 제공 합니다.  

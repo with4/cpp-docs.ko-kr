@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f46e2d7f6fd7337965d0b5dcf5b5cfe8d7a53688
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0266c33731bdbd70fe9c9fb26a33878fc5d1c495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957687"
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution 클래스
 
@@ -80,20 +81,20 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-*IntType* 정수 결과 형식 기본값이 `int`합니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
+*IntType* 정수 결과 형식으로 기본값으로 **int**합니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
 
 *URNG* 균일 난수 생성기 엔진입니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-이항 분포 이산 확률 함수에 따라 분포된 경우 템플릿 클래스는 사용자 지정 정수 형식 또는 아무 것도 제공되지 않았다면 `int` 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
+사용자 지정 정수 값을 생성 하는 분포를 설명 하는 템플릿 클래스 형식 또는 형식 **int** 이항 분포 이산 확률 함수에 따라 제공 하지 않으면 배포 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-속성 멤버 `t()` 및 `p()`는 각각 현재 저장된 분포 매개 변수 값 `t` 및 `p`를 반환합니다.
+속성 멤버 `t()` 하 고 `p()` 현재 저장 된 분포 매개 변수 값을 반환 *t* 하 고 *p* 각각.
 
 속성 구성원 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.
 
@@ -107,7 +108,7 @@ public:
 
 이항 분포 이산 확률 함수에 대한 자세한 내용은 Wolfram MathWorld 문서 [이항 분포](http://go.microsoft.com/fwlink/p/?linkid=398469)를 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // compile with: /EHsc /W4
@@ -253,13 +254,13 @@ explicit binomial_distribution(const param_type& parm);
 
 *p* 는 `p` 분포 매개 변수입니다.
 
-*매개 변수* 는 `param_type` 분포를 생성 하는 데 사용 되는 구조입니다.
+*parm* 는 `param_type` 분포를 생성 하는 데 사용 되는 구조입니다.
 
 ### <a name="remarks"></a>설명
 
 **사전 조건:** `0 ≤ t` 및 `0.0 ≤ p ≤ 1.0`
 
-첫 번째 생성자는 저장된 `p` 값이 *p* 값을 보유하고 저장된 `t` 값이 *t* 값을 보유하고 있는 개체를 생성합니다.
+개체를 생성 하는 첫 번째 생성자는 해당 저장 *p* 값을 보유 하는 값 *p* 을 저장 *t* 값을 보유 하는 값 *t*합니다.
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 

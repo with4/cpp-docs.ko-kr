@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418187"
 ---
 # <a name="strcoll-functions"></a>strcoll 함수
 각 `strcoll` 및 `wcscoll` 함수는 현재 사용 중인 로캘 코드 페이지의 `LC_COLLATE` 범주 설정에 따라 두 개의 문자열을 비교합니다. 각 `_mbscoll` 함수는 현재 사용 중인 멀티바이트 코드 페이지에 따라 두 개의 문자열을 비교합니다. `coll` 함수는 현재 코드 페이지에서 문자 집합 순서와 사전적 문자 순서가 다르며 이러한 차이가 비교 시 중요한 경우의 문자열 비교에 사용합니다. 문자열 일치만 테스트하려면 해당 `cmp` 함수를 사용합니다.  

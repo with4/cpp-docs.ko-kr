@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197379"
 ---
 # <a name="compiler-error-c2341"></a>컴파일러 오류 C2341
 '섹션 이름': 사용 하도록 #pragma data_seg, code_seg 또는 section을 사용 하 여 세그먼트를 정의 해야 합니다  

@@ -18,14 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6113737d7463354ffa273ced61b190246f63a83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fadba5993b7445af2386f6e0669f210e29560c6c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464258"
 ---
 # <a name="creatormap-structure"></a>CreatorMap 구조체
-Windows 런타임 c + + 템플릿 라이브러리 인프라를 지원 하며 사용자 코드에서 직접 사용할 수 없습니다.  
+Windows Runtime c + + 템플릿 라이브러리 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,7 +37,7 @@ struct CreatorMap;
 ## <a name="remarks"></a>설명  
  초기화, 등록 및 개체의 등록을 취소 하는 방법에 대 한 정보를 포함 합니다.  
   
- CreatorMap은 다음과 같은 정보가 포함 되어 있습니다.  
+ **CreatorMap** 다음 정보를 포함 합니다.  
   
 -   초기화, 등록 및 개체의 등록을 취소 하는 방법.  
   
@@ -50,10 +51,10 @@ struct CreatorMap;
   
 |이름|설명|  
 |----------|-----------------|  
-|[CreatorMap::activationId 데이터 멤버](../windows/creatormap-activationid-data-member.md)|클래식 COM 클래스 ID 또는 Windows 런타임 이름에 의해 식별 되는 개체 ID를 나타냅니다.|  
-|[CreatorMap::factoryCache 데이터 멤버](../windows/creatormap-factorycache-data-member.md)|CreatorMap에 대 한 팩터리 캐시에 대 한 포인터를 저장합니다.|  
-|[CreatorMap::factoryCreator 데이터 멤버](../windows/creatormap-factorycreator-data-member.md)|지정 된 CreatorMap에 대 한 팩터리를 만듭니다.|  
-|[CreatorMap::serverName 데이터 멤버](../windows/creatormap-servername-data-member.md)|CreatorMap에 대 한 서버 이름을 저장합니다.|  
+|[CreatorMap::activationId 데이터 멤버](../windows/creatormap-activationid-data-member.md)|클래식 COM 클래스 ID 또는 Windows 런타임 이름을 식별 되는 개체 ID를 나타냅니다.|  
+|[CreatorMap::factoryCache 데이터 멤버](../windows/creatormap-factorycache-data-member.md)|에 대 한 팩터리 캐시에 대 한 포인터를 저장 합니다 **CreatorMap**합니다.|  
+|[CreatorMap::factoryCreator 데이터 멤버](../windows/creatormap-factorycreator-data-member.md)|지정 된 팩터리를 만듭니다 **CreatorMap**합니다.|  
+|[CreatorMap::serverName 데이터 멤버](../windows/creatormap-servername-data-member.md)|에 대 한 서버 이름을 저장 합니다 **CreatorMap**합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `CreatorMap`  

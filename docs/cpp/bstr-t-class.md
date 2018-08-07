@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bea9f863df08342f17419a16b14579fa6a257b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f7cb3d05997cfe3d803f522962ed9e7382269bd3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404927"
 ---
 # <a name="bstrt-class"></a>_bstr_t 클래스
 **Microsoft 전용**  
   
- A `_bstr_t` 개체에서 캡슐화 된 [BSTR 데이터 형식](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228)합니다. 클래스 리소스 할당 및 할당 해제 함수 호출을 통해 관리 **SysAllocString** 및 **SysFreeString** 및 기타 `BSTR` Api입니다. `_bstr_t` 클래스는 과도한 오버헤드를 방지하기 위해 참조 가산을 사용합니다.  
+ A `_bstr_t` 개체를 캡슐화 합니다 [BSTR 데이터 형식](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228)합니다. 클래스가 관리 리소스 할당 및 할당 해제 함수 호출을 통해 `SysAllocString` 하 고 `SysFreeString` 및 기타 `BSTR` 적절 한 경우 Api. 합니다 **_bstr_t** 클래스는 과도 한 오버 헤드를 방지 하기 위해 참조 가산을 사용 합니다.  
   
 ### <a name="construction"></a>생성  
   
@@ -52,9 +53,9 @@ ms.lasthandoff: 05/03/2018
 |||  
 |-|-|  
 |[operator =](../cpp/bstr-t-operator-equal.md)|기존 `_bstr_t` 개체에 새 값을 할당합니다.|  
-|[+ = 연산자](../cpp/bstr-t-operator-add-equal-plus.md)|`_bstr_t` 개체의 끝 부분에 문자를 추가합니다.|  
+|[operator + =](../cpp/bstr-t-operator-add-equal-plus.md)|`_bstr_t` 개체의 끝 부분에 문자를 추가합니다.|  
 |[연산자 +](../cpp/bstr-t-operator-add-equal-plus.md)|두 문자열을 연결합니다.|  
-|[연산자 !](../cpp/bstr-t-operator-logical-not.md)|확인 캡슐화 된 `BSTR` 는 **NULL** 문자열입니다.|  
+|[연산자 !](../cpp/bstr-t-operator-logical-not.md)|확인 캡슐화 된 `BSTR` NULL 문자열입니다.|  
 |[operator ==, !=, \<, >, \<=, >=](../cpp/bstr-t-relational-operators.md)|두 `_bstr_t` 개체를 비교합니다.|  
 |[연산자 wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|캡슐화된 유니코드 또는 멀티바이트 `BSTR` 개체에 대한 포인터를 추출합니다.|  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<comutil.h >  
   
- **Lib:** 에서는 comsuppw.lib 또는 comsuppwd.lib (참조 [/zc: wchar_t (wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 자세한 내용은)  
+ **Lib:** comsuppw.lib 또는 comsuppwd.lib (참조 [/zc: wchar_t (wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 자세한)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [컴파일러 COM 지원 클래스](../cpp/compiler-com-support-classes.md)

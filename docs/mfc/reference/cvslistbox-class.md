@@ -38,11 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 380b470531fd28d8cfe68aa931105430111c3dbf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 582ddd1340dd94f367d5401d517e9335d370b634
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122639"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox 클래스
 `CVSListBox` 클래스 편집 가능한 목록 컨트롤을 지원 합니다.  
@@ -123,20 +124,20 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `strIext`  
+ [in] *strIext*  
  문자열에 대 한 참조입니다.  
   
- [in] `dwData`  
+ [in] *dwData*  
  문자열 연결 되는 응용 프로그램별 32 비트 값입니다. 기본값은 0입니다.  
   
- [in] `iIndex`  
- 문자열을 보유 하는 위치의 0부터 시작 하는 인덱스입니다. 경우는 `iIndex` 매개 변수가-1 이면 문자열이 목록의 끝에 추가 됩니다. 기본값은 -1입니다.  
+ [in] *iIndex*  
+ 문자열을 보유 하는 위치의 0부터 시작 하는 인덱스입니다. 경우는 *iIndex* 매개 변수가-1 이면 문자열이 목록의 끝에 추가 됩니다. 기본값은 -1입니다.  
   
 ### <a name="return-value"></a>반환 값  
  목록 컨트롤에서 문자열의 위치의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="remarks"></a>설명  
- 사용 하 여는 [CVSListBox::GetItemData](#getitemdata) 변수로 지정 된 값을 검색 하는 메서드는 `dwData` 매개 변수입니다. 이 값은 응용 프로그램별 정수 또는 다른 데이터에 대 한 포인터 수 있습니다.  
+ 사용 하 여는 [CVSListBox::GetItemData](#getitemdata) 변수로 지정 된 값을 검색 하는 메서드는 *dwData* 매개 변수입니다. 이 값은 응용 프로그램별 정수 또는 다른 데이터에 대 한 포인터 수 있습니다.  
   
 ##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
  `CVSListBox` 개체를 생성합니다.  
@@ -157,11 +158,11 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iIndex`  
+ [in] *iIndex*  
  목록 컨트롤 항목의 0부터 시작 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 편집 작업이 성공적으로 시작 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ 편집 작업이 성공적으로 시작 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
  사용자가 편집 작업을 시작할 항목의 레이블을 두 번 클릭 하거나 눌러는 **F2** 또는 **스페이스바** 항목에 포커스가 있을 때 키입니다.  
@@ -187,7 +188,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iIndex`  
+ [in] *iIndex*  
  편집 가능한 목록 컨트롤 항목의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -245,11 +246,11 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iIndex`  
+ [in] *iIndex*  
  편집 가능한 목록 컨트롤 항목의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 지정된 된 항목이 제거 되는 경우 그렇지 않으면 `FALSE`합니다.  
+ TRUE 이면 지정된 된 항목이 제거 됩니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -261,11 +262,11 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iItem`  
+ [in] *iItem*  
  편집 가능한 목록 컨트롤 항목의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 이 메서드가 성공적으로 수행되면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
+ 이 메서드가 성공 하면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 지정된 된 항목을 선택 하 고 필요한 경우 항목을 뷰로 스크롤합니다.  
@@ -280,10 +281,10 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iIndex`  
+ [in] *iIndex*  
  편집 가능한 목록 컨트롤 항목의 0부터 시작 하는 인덱스입니다.  
   
- [in] `dwData`  
+ [in] *dwData*  
  32 비트 값입니다. 이 값은 응용 프로그램별 정수 또는 다른 데이터에 대 한 포인터 수 있습니다.  
   
 ### <a name="remarks"></a>설명  

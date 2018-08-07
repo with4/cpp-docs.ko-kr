@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345559"
 ---
 # <a name="collections"></a>컬렉션
 Microsoft Foundation Class 라이브러리는 개체 그룹을 관리하기 위한 컬렉션 클래스를 제공합니다. 이러한 클래스는 두 가지 유형입니다.  

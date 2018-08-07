@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690080"
 ---
 # <a name="a10---specifying-sequential-ordering"></a>A.10   순차적 정렬 지정
 정렬 섹션 ([섹션 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) 페이지 22) 순차적으로 동시에 수행 된 작업에 출력을 정렬 하는 데 유용 합니다. 다음 프로그램은 인덱스 순서 대로 인쇄합니다.  

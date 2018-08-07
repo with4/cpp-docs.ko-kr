@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285917"
 ---
 # <a name="compiler-warning-level-1-c4258"></a>컴파일러 경고(수준 1) C4258
 'variable':에서 정의 된 루프 무시 됩니다. 사용 되는 바깥쪽 범위에서 정의 "  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361891"
 ---
 # <a name="registry-scripting-examples"></a>레지스트리 스크립팅 예제
 이 항목의 스크립팅 예제에는 시스템 레지스트리에 키를 추가, 등록자 COM 서버를 등록 합니다. 여러 구문 분석 트리를 지정 하는 방법을 보여 줍니다.  

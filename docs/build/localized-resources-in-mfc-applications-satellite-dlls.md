@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369119"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>MFC 응용 프로그램의 지역화된 리소스: 위성 DLL
 MFC 버전 7.0 이상 위성 Dll에 여러 언어로 지역화 된 응용 프로그램을 만드는 데 도움이 되는 기능에 대 한 향상 된 지원을 제공 합니다. 위성 DLL이는 [리소스 전용 DLL](../build/creating-a-resource-only-dll.md) 특정 언어에 대 한 지역화 된 응용 프로그램의 리소스를 포함 하 합니다. 응용 프로그램이 실행, MFC는 환경에 대 한 가장 적절 한 지역화 된 리소스를 자동으로 로드 합니다. 예를 들어 영어 리소스 두 위성 Dll에 코드 및 기타는 독일어로 번역을 포함 하 여 리소스의 프랑스어 번역이 포함 된 하나를 사용 하는 응용 프로그램에 있을 수 있습니다. 응용 프로그램은 영어 언어 시스템에서 실행 되는 영어 리소스 사용 합니다. 프랑스 리소스만 사용 하 여 시스템 프랑스어인을 실행 하는 경우 독일어 시스템을 실행 하는 경우에 독일 리소스 사용 합니다.  

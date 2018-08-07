@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691415"
 ---
 # <a name="a12---using-the-atomic-directive"></a>A.12   atomic 지시문 사용
 다음 예제에서는 경합 상태를 방지 (의 요소를 동시에 업데이트할 *x* 여러 스레드에서)를 사용 하 여는 `atomic` 지시문 ([섹션 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md) 페이지 19):  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353978"
 ---
 # <a name="current-time-automation-classes"></a>현재 시간: 자동화 클래스
 다음 절차를 만드는 방법을 보여는 `COleDateTime` 개체를 현재 시간으로 초기화 합니다.  

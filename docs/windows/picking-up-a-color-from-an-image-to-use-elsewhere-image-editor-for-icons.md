@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877412"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>이미지에서 색을 선택하여 다른 곳에 사용(아이콘에 대한 이미지 편집기)
 **색 선택**, 색-픽업 도구를 통해 이미지에서 색 현재 전경색 또는 배경색의 왼쪽 또는 오른쪽 마우스 단추를 눌러 여부에 따라 또는 합니다. 취소 하 고 **색 선택** 도구를 다른 도구를 선택 합니다.  

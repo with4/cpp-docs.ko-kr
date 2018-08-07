@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348572"
 ---
 # <a name="device-contexts"></a>장치 컨텍스트
 장치 컨텍스트에 화면 또는 프린터와 같은 장치 그리기 특성에 대 한 정보를 포함 하는 Windows 데이터 구조입니다. 모든 그리기 호출은 그리기 선, 도형 및 텍스트에 대 한 Windows Api를 캡슐화 하는 장치 컨텍스트 개체를 통해 수행 됩니다. 장치 컨텍스트는 Windows에서 장치 독립적 그리기를 허용합니다. 장치 컨텍스트 화면, 프린터 또는 메타 파일을 그리는 데 사용할 수 있습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382182"
 ---
 # <a name="using-slider-controls"></a>슬라이더 컨트롤 사용
 슬라이더 컨트롤의 일반적인 사용은 아래의 패턴을 따릅니다.  

@@ -15,11 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3abf87340671d1ac4851b055a57896e340d0c20
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58e808510868e375672ee5de0b27c4bed3c568e0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464053"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -33,22 +34,22 @@ inline INT32 CompareStringOrdinal(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `lhs`  
- 비교할 첫 번째 HSTRING 합니다.  
+ *lhs*  
+ 비교할 첫 번째 HSTRING입니다.  
   
- `rhs`  
- 비교할 두 번째 HSTRING 합니다.  
+ *rhs*  
+ 비교할 두 번째 HSTRING입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
 |값|조건|  
 |-----------|---------------|  
-|-1|`lhs`가 `rhs`보다 작은 경우|  
-|0|`lhs`가 `rhs`와 같습니다.|  
-|1|`lhs`가 `rhs`보다 큰 경우|  
+|-1|*lhs* 는 보다 작은 *rhs*합니다.|  
+|0|*lhs* equals *rhs*합니다.|  
+|1|*lhs* 보다 크면 *rhs*합니다.|  
   
 ## <a name="remarks"></a>설명  
- 지정 된 두 HSTRING 개체 하 고 정렬 순서에서의 상대 위치를 나타내는 정수를 반환 합니다.  
+ 두 지정 된 HSTRING 개체를 비교 하 고 정렬 순서에서 상대 위치를 나타내는 정수를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

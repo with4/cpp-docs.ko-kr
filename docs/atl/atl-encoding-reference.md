@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358630"
 ---
 # <a name="atl-encoding-reference"></a>ATL 인코딩 참조
 일반적인 인터넷 표준 16 진수, uuencode 등의 범위 및 UTF8 인코딩 atlenc.h에 코드에서 지원 됩니다.  

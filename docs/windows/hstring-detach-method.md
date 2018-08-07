@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33885456"
 ---
 # <a name="hstringdetach-method"></a>HString::Detach 메서드
 지정된 된 HString 개체를 기본 값에서 연결을 끊습니다.  

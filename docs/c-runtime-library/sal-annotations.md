@@ -62,6 +62,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409386"
 ---
 # <a name="sal-annotations"></a>SAL 주석
 라이브러리 헤더 파일에서 `_In_z` 및 `_Out_z_cap_(_Size)`와 같은 특수한 주석을 볼 수 있습니다. 이러한 주석은 Microsoft SAL(소스 코드 주석 언어)의 예로서 가정과 완료에 대한 보장 등 함수에서 매개 변수를 사용하는 방법을 설명하는 주석 모음을 제공합니다. 헤더 파일 \<sal.h>는 주석을 정의합니다.  

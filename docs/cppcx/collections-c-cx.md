@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094259"
 ---
 # <a name="collections-ccx"></a>컬렉션(C++/CX)
 C + + /CX 프로그램 템플릿 STL (표준 라이브러리) 컨테이너 또는 다른 모든 사용자 정의 컬렉션 형식을 자유롭게 사용할 만들 수 있습니다. 그러나 전달 하는 경우 컬렉션에서 Windows 런타임 응용 프로그램 이진 인터페이스 ABI ()를 통해-예를 들어 XAML 컨트롤 또는 JavaScript 클라이언트로-Windows 런타임 컬렉션 형식을 사용 해야 합니다.  

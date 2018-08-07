@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345012"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Rich Edit 컨트롤의 현재 선택
 사용자 서식 있는 편집 컨트롤에서 텍스트를 선택할 수 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 마우스나 키보드를 사용 하 여 합니다. 현재 선택 영역이 선택 된 문자의 범위 또는 문자가 없는 경우 삽입 지점의 위치를 선택 합니다. 응용 프로그램 현재 선택 영역에 대 한 정보를 가져올 수, 현재 선택 영역을 설정, 현재 선택 영역이 변경 하 고 표시 또는 숨기기 선택 항목 강조 표시는 시기를 결정 합니다.  

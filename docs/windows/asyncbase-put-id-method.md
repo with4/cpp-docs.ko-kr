@@ -17,14 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a439d94cd84ef2d94abcd9bb7a8e895db47290bf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e9a0203bd0da2ea62d015264c1f4e8c58fcae66
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463196"
 ---
 # <a name="asyncbaseputid-method"></a>AsyncBase::put_Id 메서드
-비동기 작업의 핸들을 설정합니다.  
+비동기 작업의 핸들을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `id`  
+ *ID*  
  0이 아닌 핸들입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않고 E_INVALIDARG 또는 E_ILLEGAL_METHOD_CALL 합니다.  
+ 성공 하면 s_ok이 고 이 고, 그렇지 E_INVALIDARG 또는 E_ILLEGAL_METHOD_CALL 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** async.h  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376001"
 ---
 # <a name="pdb-use-program-database"></a>/PDB(프로그램 데이터베이스 사용)
 ```  

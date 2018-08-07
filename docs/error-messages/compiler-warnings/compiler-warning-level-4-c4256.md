@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297224"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>컴파일러 경고(수준 4) C4256
 'function': 가상 기본 클래스 생성자가 '...'; 호출이 이전 버전의 Visual c + +와 호환 되지 않을 수 있습니다.  

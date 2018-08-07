@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356607"
 ---
 # <a name="atl-module-classes"></a>ATL 모듈 클래스
 이 항목에서는 ATL 7.0에 새로 추가 된 모듈 클래스에 설명 합니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381511"
 ---
 # <a name="file-access-limits"></a>파일 액세스 제한
 **ANSI 4.9.3** 동일한 파일이 여러 번 열릴 수 있는지 여부  

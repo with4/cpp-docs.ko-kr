@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051735"
 ---
 # <a name="alpha"></a>.ALPHA
 세그먼트를 사전순으로 정렬합니다.  

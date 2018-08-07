@@ -25,14 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b82232b8f2ad7a5e3bc1ff8fed0e8a38b1a7d66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a2e6e5eeab0be13eb64052eb9e90a570dcc5124d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929054"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC ActiveX 컨트롤: 사용자 지정 이벤트 추가
-사용자 지정 이벤트 스톡 이벤트 한다는 점에서 다릅니다 클래스에 의해 자동으로 발생 되지 않습니다 `COleControl`합니다. 사용자 지정 이벤트는 컨트롤 개발자는 이벤트에 의해 결정 된 특정 작업을 인식 합니다. 사용자 지정 이벤트에 대 한 이벤트 맵 항목으로 표시 됩니다는 `EVENT_CUSTOM` 매크로입니다. 다음 섹션에는 ActiveX 컨트롤 마법사를 사용 하 여 만든 ActiveX 컨트롤 프로젝트에 대 한 사용자 지정 이벤트를 구현 합니다.  
+사용자 지정 이벤트 스톡 이벤트 한다는 점에서 다릅니다 클래스에 의해 자동으로 발생 되지 않습니다 `COleControl`합니다. 사용자 지정 이벤트는 컨트롤 개발자는 이벤트에 의해 결정 된 특정 작업을 인식 합니다. 사용자 지정 이벤트에 대 한 이벤트 맵 항목 EVENT_CUSTOM 매크로 의해 표현 됩니다. 다음 섹션에는 ActiveX 컨트롤 마법사를 사용 하 여 만든 ActiveX 컨트롤 프로젝트에 대 한 사용자 지정 이벤트를 구현 합니다.  
   
 ##  <a name="_core_adding_a_custom_event_with_classwizard"></a> 추가 된 사용자 지정 이벤트는 이벤트 추가 마법사  
  다음 절차에는 특정 사용자 지정 이벤트를 ClickIn 추가합니다. 다른 사용자 지정 이벤트를 추가 하려면이 절차를 사용할 수 있습니다. 사용자 지정 이벤트 이름 및 해당 매개 변수 ClickIn 이벤트 이름 및 매개 변수를 대체 합니다.  
@@ -47,13 +48,13 @@ ms.lasthandoff: 05/04/2018
   
      이벤트 추가 마법사가 열립니다.  
   
-4.  에 **이벤트 이름** 상자, 먼저 모든 기존 이벤트를 선택한 다음 클릭는 **사용자 지정** 라디오 단추를 선택한 다음 입력 `ClickIn`합니다.  
+4.  에 **이벤트 이름** 상자, 먼저 모든 기존 이벤트를 선택한 다음 클릭는 **사용자 지정** 라디오 단추를 선택한 다음 입력 *ClickIn*합니다.  
   
 5.  에 **내부 이름** 이벤트의 발생 함수 이름을 입력 합니다. 이 예에서는 이벤트 추가 마법사에서 제공 기본값을 사용 합니다 (`FireClickIn`).  
   
-6.  라는 매개 변수 추가 `xCoord` (형식 `OLE_XPOS_PIXELS`)를 사용 하 여는 **매개 변수 이름** 및 **매개 변수 형식** 컨트롤입니다.  
+6.  라는 매개 변수 추가 *xCoord* (형식 *OLE_XPOS_PIXELS*)를 사용 하 여는 **매개 변수 이름** 및 **매개 변수 형식** 컨트롤입니다.  
   
-7.  라는 두 번째 매개 변수 추가 `yCoord` (형식 `OLE_YPOS_PIXELS`).  
+7.  라는 두 번째 매개 변수 추가 *yCoord* (형식 *OLE_YPOS_PIXELS*).  
   
 8.  클릭 **마침** 여 이벤트를 만듭니다.  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 05/04/2018
  이 줄 ClickIn 이벤트 이벤트 추가 마법사 이벤트 목록에서 이벤트의 위치에서 가져온 특정 ID 번호를 할당 합니다. 이벤트 목록에 항목 컨테이너를를 해당 이벤트를 예상할 수 있습니다. 예를 들어 이벤트가 발생할 때 실행 되는 처리기 코드를 제공할 수 있습니다.  
   
 ##  <a name="_core_calling_fireclickin"></a> FireClickIn 호출  
- 이벤트 추가 마법사를 사용 하 여 사용자 지정 ClickIn 이벤트를 추가한 했으므로이 이벤트는 시작 될 시기를 결정 해야 합니다. 호출 하 여이 작업을 수행 `FireClickIn` 적절 한 조치에 발생 합니다. 이 설명에서는 컨트롤이 사용 하는 `InCircle` 함수 내는 `WM_LBUTTONDOWN` 원형 또는 타원형 영역 내부를 클릭할 때 ClickIn 이벤트를 발생 시키는 메시지 처리기입니다. 다음 절차에서는 추가 `WM_LBUTTONDOWN` 처리기입니다.  
+ 이벤트 추가 마법사를 사용 하 여 사용자 지정 ClickIn 이벤트를 추가한 했으므로이 이벤트는 시작 될 시기를 결정 해야 합니다. 호출 하 여이 작업을 수행 `FireClickIn` 적절 한 조치에 발생 합니다. 이 설명에서는 컨트롤이 사용 하는 `InCircle` 내 원형 또는 타원형 영역 내부를 클릭할 때 ClickIn 이벤트를 발생 시키는 WM_LBUTTONDOWN 메시지 처리기 함수입니다. 다음 절차는 WM_LBUTTONDOWN 처리기를 추가합니다.  
   
 #### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>이벤트 추가 마법사와 메시지 처리기를 추가 하려면  
   
@@ -91,13 +92,13 @@ ms.lasthandoff: 05/04/2018
   
      속성 창에는 ActiveX 컨트롤에 의해 처리 될 수 있는 메시지의 목록이 표시 됩니다. 이미에 굵게 표시 된 모든 메시지에 할당 된 처리기 함수를 포함 합니다.  
   
-4.  속성 창에서 처리할 메시지를 선택 합니다. 이 예에서는 선택 `WM_LBUTTONDOWN`합니다.  
+4.  속성 창에서 처리할 메시지를 선택 합니다. 예를 들어 WM_LBUTTONDOWN를 선택 합니다.  
   
 5.  오른쪽의 드롭다운 목록 상자에서 선택  **\<추가 > OnLButtonDown**합니다.  
   
 6.  메시지 처리기 코드 구현에서으로 이동 하려면 클래스 뷰에서 새 처리기 함수를 두 번 클릭 (합니다. ActiveX 컨트롤의 CPP) 파일입니다.  
   
- 다음 코드 샘플 호출은 **InCircle** 제어 창 내에서 마우스 왼쪽된 단추를 클릭할 때마다 작동 합니다. 이 샘플에서 찾을 수 있습니다는 `WM_LBUTTONDOWN` 처리기 함수를 `OnLButtonDown`에 [Circ 샘플](../visual-cpp-samples.md) 추상 합니다.  
+ 다음 코드 샘플 호출은 `InCircle` 제어 창 내에서 마우스 왼쪽된 단추를 클릭할 때마다 작동 합니다. 이 샘플 WM_LBUTTONDOWN 처리기 함수에 있습니다 `OnLButtonDown`에 [Circ 샘플](../visual-cpp-samples.md) 추상 합니다.  
   
  [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]  
   

@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecaa90598ce07cd0db52b7a4c30cfacc12566aba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1602857896745daae6e7af969add76ca2c1e1ead
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406756"
 ---
 # <a name="punctuators-c"></a>문장 부호 (c + +)
 C++의 문장 부호는 컴파일러에서 구문 및 의미 체계를 의미하지만 스스로 값을 생성하는 연산을 지정하지 않습니다. 또한 일부 단독 또는 조합 문장 기호는 C++ 연산자가 될 수도 있고 전처리기에 중요할 수도 있습니다.  
@@ -32,5 +33,5 @@ C++의 문장 부호는 컴파일러에서 구문 및 의미 체계를 의미하
 
  문장 부호 **[]**, **()**, 및 **{}** 뒤에 야 [변환 단계](../preprocessor/phases-of-translation.md) 4입니다.  
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [어휘 규칙](../cpp/lexical-conventions.md)

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381919"
 ---
 # <a name="using-frame-windows"></a>프레임 창 사용
 MFC 프레임 워크 만듭니다 문서 프레임 창-보기 및 문서-새로운 기능 및 파일 메뉴에 대 한 열기 명령 기본 구현의 일부로 합니다. 프레임 워크는 대부분의 프레임 창 작업에서, 때문에 만들기, 사용 및 제거 해당 창에서 작은 역할만을 재생 합니다. 하지만 만들 수 있습니다 명시적으로 사용자 고유의 프레임 창 및 자식 창이 특수 목적을 위해.  

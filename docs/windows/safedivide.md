@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892672"
 ---
 # <a name="safedivide"></a>SafeDivide
 분모가 0 으로부터 보호 하는 방법에 대 한 두 숫자를 나눕니다.  

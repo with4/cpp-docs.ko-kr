@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691432"
 ---
 # <a name="ompgetnumprocs"></a>omp_get_num_procs
 함수를 호출할 때 사용할 수 있는 프로세서 수를 반환 합니다.  

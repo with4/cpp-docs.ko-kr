@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232053"
 ---
 # <a name="compiler-error-c2577"></a>컴파일러 오류 C2577
 'member': 소멸자/종료자는 반환 형식을 가질 수 없습니다  

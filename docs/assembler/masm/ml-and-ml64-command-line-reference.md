@@ -69,6 +69,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057801"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML 및 ML64 명령줄 참조
 조합 하 고 하나 이상의 어셈블리 언어 소스 파일을 연결 합니다. 명령줄 옵션은 대/소문자를 구분 합니다.  

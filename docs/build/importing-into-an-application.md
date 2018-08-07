@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368059"
 ---
 # <a name="importing-into-an-application"></a>응용 프로그램으로 가져오기
 함수는 두 가지 방법으로 응용 프로그램으로 가져올 수 있습니다.  

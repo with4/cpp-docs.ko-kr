@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878865"
 ---
 # <a name="menu-command-properties"></a>메뉴 명령 속성
 아래 정보는 메뉴 명령을 선택하면 [속성 창](/visualstudio/ide/reference/properties-window) 에 나타나는 메뉴 속성에 따라 구성됩니다. 이 속성은 사전순으로 나열되어 있으며, 실제 속성 창에서는 이 속성을 범주별로 볼 수 있습니다.  

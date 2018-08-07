@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b137d24d3d6500a46ceb392c79ff6f7ac5e780e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dccbf5cb312dcbced034ad2987b7f9a620b8d161
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404703"
 ---
 # <a name="comerror-member-functions"></a>_com_error 멤버 함수
-에 대 한 내용은 **_com_error** 멤버 함수는 참조 [_com_error 클래스](../cpp/com-error-class.md)합니다.  
+에 대 한 자세한 합니다 **_com_error** 멤버 함수를 참조 하십시오 [_com_error 클래스](../cpp/com-error-class.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_com_error 클래스](../cpp/com-error-class.md)

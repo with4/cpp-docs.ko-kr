@@ -15,39 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb459c10f7ead6960760c8d02b9a471a7b8f6c2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e53f2dfd0181b85efbc71defbc528d452d32b4dd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953851"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 데스크톱 구성 요소
-ATL 참조는 액티브 템플릿 라이브러리(ATL), 콤포넌트 개체 모델(COM) 객체의 프로그래밍을 단순화하는 템플릿 기반 C++ 클래스 집합을 설명합니다. ATL를 완전히 활용하기 위해 COM에 대한 지식이 있는 것이 가장 좋습니다.  완전히 활용 하기 위해 ATL를 COM에 대 한 작업 지식이 가장 좋습니다.  
+ATL 참조는 액티브 템플릿 라이브러리(ATL), 콤포넌트 개체 모델(COM) 객체의 프로그래밍을 단순화하는 템플릿 기반 C++ 클래스 집합을 설명합니다. ATL를 완전히 활용하기 위해 COM에 대한 지식이 있는 것이 가장 좋습니다.  완벽 하 게 활용 하기 위해 ATL, COM에 대 한 작업 지식이 것이 좋습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ATL 클래스 개요](../atl/atl-class-overview.md)  
- 범주별으로 구성 하는 ATL 클래스에 간략하게 설명 및 링크를 제공 합니다.  
+ 범주별로 구성 된 ATL 클래스에 간략하게 설명 및 링크를 제공 합니다.  
   
  [ATL 클래스 및 구조체](../atl/reference/atl-classes.md)  
- 클래스 및 사전순으로 구성 하는 구조체에 참조 자료를 제공 합니다.  
+ 클래스 및 구조체 사전순으로 정렬 되어에 대 한 참조 자료를 제공 합니다.  
   
  [ATL 함수](../atl/reference/atl-functions.md)  
- 사전순으로 구성 하는 전역 함수에 참조 자료를 제공 합니다. 범주로 함수를 구성 하는 항목을 포함 합니다.  
+ 사전순으로 구성 하는 전역 함수에 대 한 참조 자료를 제공 합니다. 함수는 범주로 구성 하는 항목이 포함 되어 있습니다.  
   
  [ATL 전역 변수](../atl/reference/atl-global-variables.md)  
- 사전순으로 정렬 되어 전역 변수에 참조 자료를 제공 합니다.  
+ 사전순으로 구성 하는 전역 변수에서 참조 자료를 제공 합니다.  
   
  [ATL 매크로](../atl/reference/atl-macros.md)  
- 사전순으로 정렬 되어 매크로에 참조 자료를 제공 합니다. 매크로 범주로 구성 항목을 포함 합니다.  
+ 사전순으로 정렬 되어 매크로에 대 한 참조 자료를 제공 합니다. 매크로 범주로 구성 하는 항목이 포함 되어 있습니다.  
   
- [ATL Typedefs](../atl/reference/atl-typedefs.md)  
- 사전순으로 정렬 되어 한 형식 정의에 참조 자료를 제공 합니다.  
+ [ATL 형식 정의](../atl/reference/atl-typedefs.md)  
+ 사전순으로 정렬 되어 typedef에 대 한 참조 자료를 제공 합니다.  
   
  [Worker 원형](../atl/reference/worker-archetype.md)  
- ATL 작업자 전형에 링크를 제공합니다.  
-  
- [사용 되지 않는 ATL 항목](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
- 클래스, 매크로 및 오래 되었거나 사용 되지 않는 함수에 참조 자료를 제공 합니다.  
+ ATL Worker 원형에 대 한 링크를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [ATL](../atl/active-template-library-atl-concepts.md)  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875099"
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol"></a>특정 기호에 대한 리소스 편집기 열기
 기호를 찾는 경우는 [리소스 기호 대화 상자](../windows/resource-symbols-dialog-box.md), 특정 기호의 사용 방법에 대 한 자세한 정보를 확인할 수 있습니다. **사용 리소스 보기** 단추는이 정보를 얻는 빠른 방법을 제공 합니다.  

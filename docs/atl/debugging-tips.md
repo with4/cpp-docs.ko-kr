@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355196"
 ---
 # <a name="debugging-tips"></a>디버깅 팁
 다음 항목에서는 서비스를 디버깅에 유용한 몇 가지 단계를 간략히 설명 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244851"
 ---
 # <a name="compiler-error-c2835"></a>컴파일러 오류 C2835
 사용자 정의 변환 'type' 형식 매개 변수를 사용합니다.  

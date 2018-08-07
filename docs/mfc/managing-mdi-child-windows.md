@@ -22,16 +22,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcdcbad2b7b3e70988579786c1c8cf28f734a48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58ddef11e56da760bbecaa47f03dfa6c57dfa3ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929483"
 ---
 # <a name="managing-mdi-child-windows"></a>MDI 자식 창 관리
-MDI 주 프레임 창 (응용 프로그램 당 하나) 라는 특수 한 자식 창이 포함 된 **MDICLIENT** 창. **MDICLIENT** 창은 주 프레임 창의 클라이언트 영역을 관리 하 고 자식 창 자체에:에서 파생 된 문서 창인 `CMDIChildWnd`합니다. 문서 창은 그 자체로 프레임 창(MDI 자식 창)이기 때문에 고유 자식을 포함할 수도 있습니다. 이러한 모든 경우, 부모 창은 해당 자식 창을 관리하고 일부 명령을 자식 창에 전달합니다.  
+MDI 주 프레임 창 (응용 프로그램 당 하나)는 MDICLIENT 창 이라는 특수 한 자식 창을 포함 합니다. MDICLIENT 창 주 프레임 창의 클라이언트 영역을 관리 하 고 자식 창 자체에:에서 파생 된 문서 창인 `CMDIChildWnd`합니다. 문서 창은 그 자체로 프레임 창(MDI 자식 창)이기 때문에 고유 자식을 포함할 수도 있습니다. 이러한 모든 경우, 부모 창은 해당 자식 창을 관리하고 일부 명령을 자식 창에 전달합니다.  
   
- MDI 프레임 창, 프레임 창을 관리 하는 **MDICLIENT** 창, 컨트롤 막대와 함께에서 위치를 변경 합니다. **MDICLIENT** 창 다시 모든 MDI 자식 프레임 창을 관리 합니다. 다음 그림은 MDI 프레임 창 사이의 관계를 보여 줍니다. 그 **MDICLIENT** 창 및 해당 자식 문서 프레임 창.  
+ MDI 프레임 창, 프레임 창은 컨트롤 막대와 함께 MDICLIENT 창를 관리 합니다. MDICLIENT 창에는 다시 모든 MDI 자식 프레임 창을 관리합니다. 다음 그림은 MDI 프레임 창, 해당 MDICLIENT 창 및 해당 자식 문서 프레임 창 사이의 관계를 보여 줍니다.  
   
  ![MDI 프레임 창의 자식 창](../mfc/media/vc37gb1.gif "vc37gb1")  
 MDI 프레임 창 및 자식  

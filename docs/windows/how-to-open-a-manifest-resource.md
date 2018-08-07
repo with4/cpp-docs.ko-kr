@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881844"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>방법: 매니페스트 리소스 열기
 [리소스 뷰](../windows/resource-view-window.md)에서 매니페스트 리소스를 열면 리소스가 이진 형식으로 열립니다. 매니페스트 리소스의 콘텐츠를 더 많이 볼 수 있는 형식으로 보려면 솔루션 탐색기에서 리소스를 열어야 합니다.  

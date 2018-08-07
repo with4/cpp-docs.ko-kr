@@ -14,25 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beac75a8a27fc4638b541228330e83e7b665fbcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70b1e0e6ef1294ff23952816db6f468022609f4f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408377"
 ---
 # <a name="microsoft-extensions"></a>Microsoft 확장명
-*asm 문의*:  
- **__asm***어셈블리 명령* **;** 선택    
+*asm 문*:  
+ **__asm***어셈블리 명령* **;** 옵트인    
   
- **__asm {***어셈블리 명령 목록***};** 선택      
+ **__asm {***어셈블리 명령 목록***};** 옵트인      
   
  *어셈블리 명령 목록*:  
- *어셈블리 명령* **;** 선택  
+ *어셈블리 명령* **;** 옵트인  
   
- *어셈블리 명령* **;** *어셈블리 명령 목록* **;** 선택  
+ *어셈블리 명령* **;** *어셈블리 명령 목록* **;** 옵트인  
   
  *ms 한정자 목록*:  
- *ms 한정자 ms 한정자 목록*선택  
+ *ms 한정자 ms 한정자 목록*최적화  
   
  *ms 한정자*:  
  **__cdecl**  
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/03/2018
  *기반 한정자*  
   
  *기반 한정자*:  
- **__based (** *기반 형식* **)**  
+ **__based (** *기반으로 형식당* **)**  
   
- *기반 형식*:  
+ *형식 기반*:  
  *name*  

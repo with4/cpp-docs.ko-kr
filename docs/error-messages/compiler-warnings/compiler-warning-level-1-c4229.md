@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275417"
 ---
 # <a name="compiler-warning-level-1-c4229"></a>컴파일러 경고(수준 1) C4229
 사용 하는 오래 된 구문: 데이터의 한정자는 무시 됩니다.  

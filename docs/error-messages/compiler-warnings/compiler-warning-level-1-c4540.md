@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283064"
 ---
 # <a name="compiler-warning-level-1-c4540"></a>컴파일러 경고(수준 1) C4540
 dynamic_cast 액세스할 수 없거나 모호한 기본을 변환 하는 데 사용 테스트 실행 시간 ('type2'에 ' type1')이 실패 합니다.  

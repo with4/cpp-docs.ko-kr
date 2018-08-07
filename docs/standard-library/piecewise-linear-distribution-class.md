@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b516478c72e92f63b898cc43aa4838ab72733a05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b475f497509249a29eb466c1a353111661b744e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959474"
 ---
 # <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution 클래스
 
@@ -89,7 +90,7 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-`RealType` 부동 소수점 결과 형식으로, 기본적으로 `double`합니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
+*RealType* 부동 소수점 결과 형식, 기본값은 **double**합니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
@@ -116,7 +117,7 @@ public:
 
 분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // compile with: /EHsc /W4
@@ -259,21 +260,21 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 *firstI* 분포 범위의 첫 번째 요소의 입력된 반복기입니다.
 
-*lastI* 대상 범위에 있는 마지막 요소의 입력된 반복기입니다.
+*lastI* 배포 범위에서 마지막 요소의 입력된 반복기입니다.
 
-*firstW* 가중치 범위에서 첫 번째 요소의 입력된 반복기입니다.
+*firstW* 가중치 범위에 있는 첫 번째 요소의 입력된 반복기입니다.
 
 *간격* 는 [initializer_list](../cpp/initializers.md) 분포의 간격이 있습니다.
 
-*count* 배포 범위에 있는 요소의 수입니다.
+*개수* 분포 범위의 요소 수입니다.
 
 *xmin* 분포 범위의 가장 낮은 값입니다.
 
 *xmax* 분포 범위의 가장 높은 값입니다. *xmin*보다 커야 합니다.
 
-*weightfunc* 분포에 대 한 확률 함수를 나타내는 개체입니다. 매개 변수와 반환 값은 둘 다 `double`로 변환할 수 있어야 합니다.
+*weightfunc* 분포에 대 한 확률 함수를 나타내는 개체입니다. 매개 변수 및 반환 값을 변환할 수 있어야 합니다 **이중**합니다.
 
-*매개 변수* 분포를 생성 하는 데 사용 되는 매개 변수 구조입니다.
+*parm* 분포를 생성 하는 데 매개 변수 구조입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -289,7 +290,7 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```
 
-시퀀스 [ `firstI`, `lastI`)에 대한 반복기의 간격과 `firstW`에서 시작하는 일치하는 가중치 시퀀스를 사용하여 분포 개체를 생성합니다.
+시퀀스 반복기의 간격과 사용 하 여 분포 개체를 생성 합니다. [ `firstI`, `lastI`) 일치 하는 가중치 시퀀스부터 *firstW*합니다.
 
 다음 이니셜라이저 목록 생성자는
 
@@ -300,7 +301,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-이니셜라이저 목록 `intervals`의 간격과 함수 `weightfunc`에서 생성된 가중치를 사용하여 분포 개체를 생성합니다.
+이니셜라이저 목록에서 간격을 사용 하 여 분포 개체를 생성 *간격* 하 고 함수에서 생성 된 가중치 *weightfunc*합니다.
 
 다음과 같이 정의된 생성자는
 
@@ -313,7 +314,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-[ `xmin,xmax`]에 대해 균등하게 배포된 `count`개 간격을 사용하여 분포 개체를 생성하여 함수 `weightfunc`에 따라 각 간격 가중치를 할당하고 `weightfunc`는 매개 변수 하나를 수락해야 하고 반환 값이 있어야 합니다. 이 두 값은 모두 `double`로 변환할 수 있습니다. **사전 조건:**`xmin < xmax`.
+사용 하 여 분포 개체를 생성 *개수* 간격을 넘는 균일 하 게 분산 [ `xmin,xmax`], 각 간격 가중치를 할당 함수에 따라 *weightfunc*, 및  *weightfunc* 하나의 매개 변수를 수락 하 고 있으며 둘 모두로 변환할 값을 반환 해야 `double`합니다. **사전 조건:**`xmin < xmax`.
 
 다음과 같이 정의된 생성자는
 
@@ -321,7 +322,7 @@ piecewise_linear_distribution(
 explicit piecewise_linear_distribution(const param_type& parm);
 ```
 
-`parm`을 사용하여 생성 개체를 저장된 매개 변수 구조로 생성합니다.
+사용 하 여 분포 개체를 생성 *parm* 로 저장 된 매개 변수 구조입니다.
 
 ## <a name="param_type"></a>  piecewise_linear_distribution::param_type
 

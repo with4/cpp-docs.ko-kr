@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4144eed22a3a16615d7fa79ecd4828835c6ebe0b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 73a051eadaf06950e606f475b2bb418425e1b19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958876"
 ---
 # <a name="alignedstorage-class"></a>aligned_storage 클래스
 
@@ -39,15 +40,15 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>매개 변수
 
-`Len` 개체 크기입니다.
+*Len* 개체 크기입니다.
 
-`Align` 개체 정렬입니다.
+*맞춤* 개체 정렬 합니다.
 
 ## <a name="remarks"></a>설명
 
-템플릿 멤버 typedef `type`은 맞춤 `Align` 및 크기 `Len`의 POD 형식과 동의어입니다. `Align`은 일부 형식 `T` 또는 기본 맞춤에 대해 `alignment_of<T>::value`와 같아야 합니다.
+템플릿 멤버 typedef `type` 맞춤을 사용 하 여 POD 형식에 대 한 동의어 *맞춤* 크기 *Len*합니다. *Align* 같아야 `alignment_of<T>::value` 일부 형식에 대 한 `T`, 또는 기본 맞춤 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 #include <type_traits>

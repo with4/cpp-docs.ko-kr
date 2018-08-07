@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050482"
 ---
 # <a name="dosseg"></a>DOSSEG
 동일 [합니다. DOSSEG](../../assembler/masm/dot-dosseg.md), 기본 설정에서 양식입니다.  

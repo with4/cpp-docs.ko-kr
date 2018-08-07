@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33895751"
 ---
 # <a name="srwlocklockshared-method"></a>SRWLock::LockShared 메서드
 공유 모드의 SRWLock 개체를 가져옵니다.  

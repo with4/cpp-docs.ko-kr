@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268837"
 ---
 # <a name="compiler-error-c3851"></a>컴파일러 오류 C3851
 'char': 유니버설 문자 이름에는 기본 문자 집합의 문자를 지정할 수 없습니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877698"
 ---
 # <a name="odl"></a>odl
 개체 설명 언어 ODL () 인터페이스는 인터페이스를 식별합니다. MIDL 컴파일러 필요 하지 않습니다는 **odl** 특성; 이전.odl 파일의 호환에만 인식 됩니다.  

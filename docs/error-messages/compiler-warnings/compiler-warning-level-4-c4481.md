@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293121"
 ---
 # <a name="compiler-warning-level-4-c4481"></a>컴파일러 경고(수준 4) C4481
 비표준 확장이 사용 됨: 재정의 지정자는 'keyword'  

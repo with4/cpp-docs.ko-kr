@@ -17,28 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63fbe4042bb86f1ac7810302eeaa1b7978422b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 80fdbe14539c5b32c2da80a5de75fbe0a2b64241
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409128"
 ---
 # <a name="indirection-operator-"></a>간접 참조 연산자: *
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 * cast-expression  
 ```  
   
 ## <a name="remarks"></a>설명  
- 단항 간접 연산자 (**\***)는 포인터를 역참조 l 값을 포인터 값 즉, 변환 합니다. 간접 참조 연산자의 피연산자는 형식에 대한 포인터여야 합니다. 간접 참조의 결과는 포인터 형식이 파생된 형식입니다. 사용은 **\*** 이 컨텍스트에서 연산자는 곱셈 이항 연산자로 해당 의미와에서 다릅니다.  
+ 단항 간접 참조 연산자 (**\***)는 포인터를 역참조, 포인터 값 l-value를 변환 합니다. 간접 참조 연산자의 피연산자는 형식에 대한 포인터여야 합니다. 간접 참조의 결과는 포인터 형식이 파생된 형식입니다. 사용은 **\*** 이 컨텍스트에서 연산자는 곱셈 이항 연산자로 해당 의미와에서 다릅니다.  
   
  피연산자가 함수를 가리키는 경우 결과는 함수 지정자입니다. 저장소 위치를 가리키는 경우 결과는 저장소 위치를 지정하는 l-value입니다.  
   
  포인터에 대한 포인터를 역참조하기 위해 간접 참조 연산자를 누적하여 사용할 수도 있습니다. 예를 들어:  
   
-```  
+```cpp 
 // expre_Indirection_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate indirection operator  
@@ -68,8 +68,8 @@ int main() {
   
 -   포인터가 실행 중인 프로그램에서 사용되지 않는 주소를 지정합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)   
  [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [주소 연산자: &](../cpp/address-of-operator-amp.md)   
+ [Address-of 연산자: &](../cpp/address-of-operator-amp.md)   
  [연산자 주소 및 간접 참조](../c-language/indirection-and-address-of-operators.md)

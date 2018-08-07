@@ -16,11 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 413b7b4a7cf11ff7e83596ecc61423d4bc4f0358
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efdd8f5b806b7e5745aed0091a2638c8592a6ecc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079067"
 ---
 # <a name="csingledoctemplate-class"></a>CSingleDocTemplate 클래스
 SDI(단일 문서 인터페이스)를 구현하는 문서 템플릿을 정의합니다.  
@@ -44,7 +45,7 @@ class CSingleDocTemplate : public CDocTemplate
   
  문서 서식 파일을 3 가지 유형의 클래스 간의 관계를 정의합니다.  
   
--   문서 클래스에서 파생 되는 **CDocument**합니다.  
+-   문서 클래스에서 파생 되는 `CDocument`합니다.  
   
 -   위에 나열 된 문서 클래스에서 데이터를 표시 하는 뷰 클래스 이 클래스를 파생 시켜 `CView`, `CScrollView`, `CFormView`, 또는 `CEditView`합니다. (사용할 수 있습니다 `CEditView` 직접.)  
   
@@ -80,7 +81,7 @@ CSingleDocTemplate(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDResource`  
+ *nIDResource*  
  문서 종류를 사용 하는 리소스의 ID를 지정 합니다. 이 메뉴, 아이콘, 액셀러레이터 키 테이블 및 문자열 리소스 포함 될 수 있습니다.  
   
  '\N' 문자로 구분 되는 최대 7 개의 부분 문자열로 이루어진 문자열 리소스 구성 (부분 문자열에 포함 되지 않은 경우 '\n' 문자 자리 표시자로 필요한; 그러나 후행 '\n' 문자가 필요 하지 않은); 이러한 부분 문자열에는 문서 유형에 대해 설명합니다. 부분 문자열에 대 한 정보를 참조 하십시오. [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)합니다. 이 문자열 리소스를 응용 프로그램의 리소스 파일에서 찾을 수 있습니다. 예를 들어:  
@@ -99,19 +100,19 @@ CSingleDocTemplate(
   
  이러한 리소스 종류에 대 한 자세한 내용은 참조는 [문자열 편집기](../../windows/string-editor.md)합니다.  
   
- `pDocClass`  
- 가리키는 `CRuntimeClass` 문서 클래스의 개체입니다. 이 클래스는는 **CDocument**-문서를 나타내기 위해 정의한 클래스를 파생 합니다.  
+ *pDocClass*  
+ 가리키는 `CRuntimeClass` 문서 클래스의 개체입니다. 이 클래스는는 `CDocument`-문서를 나타내기 위해 정의한 클래스를 파생 합니다.  
   
- `pFrameClass`  
+ *pFrameClass*  
  가리키는 `CRuntimeClass` 프레임 창 클래스의 개체입니다. 될 수 있는이 클래스는 `CFrameWnd`-파생 클래스가 될 수 있습니다 또는 `CFrameWnd` 자체 주 프레임 창에 대 한 기본 동작을 수행 합니다.  
   
- `pViewClass`  
+ *pViewClass*  
  가리키는 `CRuntimeClass` 뷰 클래스의 개체입니다. 이 클래스는는 `CView`-문서를 표시 하기 위해 정의 하는 클래스를 파생 합니다.  
   
 ### <a name="remarks"></a>설명  
  동적으로 할당 한 `CSingleDocTemplate` 개체를 전달 `CWinApp::AddDocTemplate` 에서 `InitInstance` 응용 프로그램 클래스의 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocViewSDI#13](../../mfc/codesnippet/cpp/csingledoctemplate-class_1.cpp)]  
   
  [!code-cpp[NVC_MFCDocViewSDI#14](../../mfc/codesnippet/cpp/csingledoctemplate-class_2.cpp)]  

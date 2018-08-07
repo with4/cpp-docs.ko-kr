@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 437b80a0766a07b181a60743e79bdbaf32347de4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930548"
 ---
 # <a name="menus-and-resources-container-additions"></a>메뉴 및 리소스: 컨테이너 추가
 이 문서에서는 메뉴 및 기타 시각적 편집 컨테이너 응용 프로그램 리소스에 적용 하는 변경 사항을 설명 합니다.  
@@ -66,27 +67,27 @@ ms.lasthandoff: 05/04/2018
   
 |ID|Key|형식|  
 |--------|---------|----------|  
-|**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|  
   
- 두 번째 변경 사항에는 내부 활성화에 대해 만든 새 메뉴 리소스에 해당 하는 새 액셀러레이터 키 테이블을 만드는 것입니다. 이 테이블 외에 파일 및 창 메뉴에 대 한 항목에는 **VK_ESCAPE** 위의 항목입니다. 다음 예제는 MFC 샘플에서에 내부 활성화에 대해 만든 액셀러레이터 키 테이블 [컨테이너](../visual-cpp-samples.md):  
+ 두 번째 변경 사항에는 내부 활성화에 대해 만든 새 메뉴 리소스에 해당 하는 새 액셀러레이터 키 테이블을 만드는 것입니다. 이 테이블에는 위의 VK_ESCAPE 항목 외에 파일 및 창 메뉴에 대 한 항목입니다. 다음 예제는 MFC 샘플에서에 내부 활성화에 대해 만든 액셀러레이터 키 테이블 [컨테이너](../visual-cpp-samples.md):  
   
 |ID|Key|형식|  
 |--------|---------|----------|  
-|`ID_FILE_NEW`|Ctrl+N|**VIRTKEY**|  
-|`ID_FILE_OPEN`|Ctrl+O|**VIRTKEY**|  
-|**ID_FILE_SAVE**|Ctrl+S|**VIRTKEY**|  
-|**ID_FILE_PRINT**|Ctrl+P|**VIRTKEY**|  
-|**ID_NEXT_PANE**|VK_F6|**VIRTKEY**|  
-|**ID_PREV_PANE**|SHIFT + VK_F6|**VIRTKEY**|  
-|**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
+|ID_FILE_NEW|Ctrl+N|**VIRTKEY**|  
+|ID_FILE_OPEN|Ctrl+O|**VIRTKEY**|  
+|ID_FILE_SAVE|Ctrl+S|**VIRTKEY**|  
+|ID_FILE_PRINT|Ctrl+P|**VIRTKEY**|  
+|ID_NEXT_PANE|VK_F6|**VIRTKEY**|  
+|ID_PREV_PANE|SHIFT + VK_F6|**VIRTKEY**|  
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|  
   
 ##  <a name="_core_string_table_additions_for_container_applications"></a> 컨테이너 응용 프로그램에 대 한 문자열 테이블 추가  
  에 설명 된 추가 메뉴 항목에 해당 하는 대부분의 컨테이너 응용 프로그램에 대 한 문자열 테이블 내용 [컨테이너 메뉴 추가](#_core_container_menu_additions)합니다. 이러한 각 메뉴 항목 표시 되 면 상태 표시줄에 표시 되는 텍스트를 제공 합니다. 다음은 예를 들어, 응용 프로그램 마법사에서 생성 하는 문자열 테이블 항목입니다.  
   
 |ID|문자열|  
 |--------|------------|  
-|**IDP_OLE_INIT_FAILED**|OLE 초기화 하지 못했습니다. OLE 라이브러리 버전이 올바른지 확인 합니다.|  
-|**IDP_FAILED_TO_CREATE**|개체를 만들지 못했습니다. 개체가 시스템 레지스트리에 입력 되어 있는지 확인 합니다.|  
+|IDP_OLE_INIT_FAILED|OLE 초기화 하지 못했습니다. OLE 라이브러리 버전이 올바른지 확인 합니다.|  
+|IDP_FAILED_TO_CREATE|개체를 만들지 못했습니다. 개체가 시스템 레지스트리에 입력 되어 있는지 확인 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [메뉴 및 리소스 (OLE)](../mfc/menus-and-resources-ole.md)   

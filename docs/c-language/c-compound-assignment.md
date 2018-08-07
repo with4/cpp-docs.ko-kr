@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382044"
 ---
 # <a name="c-compound-assignment"></a>C 복합 할당
 복합 할당 연산자는 단순 할당 연산자에 다른 이항 연산자를 결합한 것입니다. 복합 할당 연산자는 추가 연산자로 지정된 연산을 수행한 다음 결과를 왼쪽 피연산자에 할당합니다. 예를 들어 다음과 같은 복합 할당 식은  

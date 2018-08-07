@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172769"
 ---
 # <a name="compiler-error-c2312"></a>컴파일러 오류 C2312
 'exception1': 줄 번호에서 'exception2'에 의해 catch되었습니다.  

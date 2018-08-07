@@ -96,11 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e2a6dc618795872e3587c1872c4fb020872861f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81c7572ffd5a53456cd4555b82a8d3e235286339
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961710"
 ---
 # <a name="hashset-class"></a>hash_set 클래스
 
@@ -120,11 +121,11 @@ class hash_set
 
 ### <a name="parameters"></a>매개 변수
 
-`Key` Hash_set에 저장 되는 요소 데이터 형식
+*키* hash_set에 저장 되는 요소 데이터 형식입니다.
 
-`Traits` 두 함수 개체를 포함 하 여 형식에 비교 중 하 나와 클래스 즉 상대적 순서를 결정 하는 한 해시 함수는 단항 조건자 매핑 키 값의 부호 없는 요소를 정렬 키로 두 요소 값을 비교할 수 있는 이진 조건자 형식의 정수 **size_t**합니다. 이 인수는 선택 사항이 고 `hash_compare` *< 키를* **작음 * * *\<키 >>* 기본값입니다.
+*특성* 클래스 중 하나는 두 함수 개체를 포함 하는 형식 비교는 해당 상대 순서를 하는 단항 조건자 매핑 키 값의 해시 함수를 결정 하는 정렬 키로 두 요소 값을 비교할 수 있는 이진 조건자는 부호 없는 정수 형식의 요소 `size_t`합니다. 이 인수는 선택적 이며 하며 `hash_compare` *< 키* **덜 * * *\<키 >>* 기본값입니다.
 
-`Allocator` Hash_set의 할당 및 메모리 할당 취소에 대 한 세부 정보를 캡슐화 하는 저장 된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이 며 기본값은 **할당자 * * *\<키 >입니다.*
+*할당자* hash_set의 할당 및 메모리 할당 취소 하는 방법에 대 한 세부 정보를 캡슐화 하는 저장 된 할당자 개체를 나타내는 형식입니다. 이 인수 선택 사항이 며 기본값은 **할당자 *\<키 >입니다.*
 
 ## <a name="remarks"></a>설명
 
@@ -146,7 +147,7 @@ Hash_set은 다음과 같습니다.
 
 응용 프로그램에서 값과 해당 키를 연결하는 조건을 만족할 경우 적절한 연관 컨테이너는 hash_set입니다. hash_set의 요소는 고유하며 자체 정렬 키로 사용됩니다. 이 형식의 구조에 대한 모델은 정렬된 목록입니다. 예를 들어, 단어 내의 단어는 한 번만 나타날 수 있습니다. 단어를 여러 번 중복할 수 있는 경우 hash_multiset이 적절한 컨테이너 구조입니다. 고유 키 단어 목록에 값이 연결된 경우 이 데이터를 포함하기 위한 적절한 구조는 hash_map입니다. 대신 Key가 고유하지 않은 경우 hash_multimap이 적절한 컨테이너입니다.
 
-hash_set은 [value_compare](#value_compare) 형식의 저장된 해시 **Traits** 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 이 저장된 개체는 [key_comp](#key_comp) 멤버 함수를 호출하여 액세스할 수 있습니다. 이러한 함수 개체는 *hash_compare<Key, less\<Key> >* 클래스의 개체와 동일하게 동작해야 합니다. 특히, Key 형식의 모든 값 `key`에 대해 Trait(`key`) 호출은 size_t 형식의 값 분포를 생성합니다.
+저장된 된 해시를 호출 하 여 제어 하는 시퀀스를 정렬 하는 hash_set `Traits` 형식의 개체 [value_compare](#value_compare)합니다. 이 저장된 개체는 [key_comp](#key_comp) 멤버 함수를 호출하여 액세스할 수 있습니다. 이러한 함수 개체는 *hash_compare<Key, less\<Key> >* 클래스의 개체와 동일하게 동작해야 합니다. 모든 값에 대해 특히 `key` 형식 키를 특성 (trait) 호출 (`key`) size_t 형식의 값 분포를 생성 합니다.
 
 일반적으로, 이 순서를 정하려면 요소의 크기를 비교할 수 있어야 합니다. 즉, 제공된 어떤 두 요소에서 두 요소가 동일하거나(어떤 것도 다른 것보다 작지 않음) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 기술적으로 설명하면, 비교 함수는 표준 함수의 의미에서 엄밀히 약한 정렬을 수행하는 이진 조건자입니다. 이진 조건자 *f*(*x*, *y*)는 두 인수 개체 x, y 및 반환 값 true 또는 false가 있는 함수 개체입니다. 이진 조건자가 비재귀적, 비대칭 및 전이적인 경우 및 동등성이 전이적인 경우 hash_set에 적용된 정렬은 엄밀히 약한 정렬입니다. 여기서, *f*(*x*, *y*) 및 *f*(*y*, *x*)가 모두 false인 경우 *x* 및 *y* 두 개체는 동등한 것으로 정의됩니다. 키 사이의 더 강력한 같음 조건이 동등 조건을 대체하는 경우, 정렬은 전체가 되고(모든 요소가 서로 상대적으로 정렬됨을 의미) 일치된 키는 서로 구분할 수 없게 됩니다.
 
@@ -166,9 +167,9 @@ hash_set 클래스에서 제공하는 반복기는 양방향 반복기이지만,
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` 개체의 `hash_set` 클래스를 나타내는 형식입니다.|
 |[const_iterator](#const_iterator)|`const`에 있는 `hash_set` 요소를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.|
-|[const_pointer](#const_pointer)|`const`에 있는 `hash_set` 요소에 대한 포인터를 제공하는 형식입니다.|
-|[const_reference](#const_reference)|`const` 작업을 읽고 수행하기 위해 `hash_set`에 저장된 `const` 요소에 대한 참조를 제공하는 형식입니다.|
-|[const_reverse_iterator](#const_reverse_iterator)|`const`에 있는 `hash_set` 요소를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.|
+|[const_pointer](#const_pointer)|에 대 한 포인터를 제공 하는 형식을 **상수** 요소에는 `hash_set`합니다.|
+|[const_reference](#const_reference)|에 대 한 참조를 제공 하는 형식을 **상수** 에 저장 된 요소를 `hash_set` 읽고 수행 하기 위해 **const** 작업.|
+|[const_reverse_iterator](#const_reverse_iterator)|읽을 수 있는 양방향 반복기를 제공 하는 형식 **상수** 요소에는 `hash_set`합니다.|
 |[difference_type](#difference_type)|부호 있는 정수 형식은 반복기가 가리키는 요소 사이의 범위에 있는 `hash_set`의 요소의 개수를 표현하는 데 사용할 수 있습니다.|
 |[iterator](#iterator)|`hash_set`에 있는 모든 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.|
 |[key_compare](#key_compare)|`hash_set`의 두 요소간 상대적 순서를 결정하는 두 정렬 키를 비교할 수 있는 함수 개체를 제공하는 형식입니다.|
@@ -235,11 +236,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="remarks"></a>설명
 
-**allocator_type**은 템플릿 매개 변수 `Allocator`의 동의어입니다.
+`allocator_type` 템플릿 매개 변수에 대 한 동의어가 *할당자*합니다.
 
-`Allocator`에 대한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목의 설명 섹션을 참조하세요.
+에 대 한 자세한 *할당자*의 주의 섹션을 참조 합니다 [hash_set 클래스](../standard-library/hash-set-class.md) 항목입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `allocator_type`을 사용하는 예제는 [get_allocator](#get_allocator)의 예제를 참조하세요.
 
@@ -262,9 +263,9 @@ hash_set의 첫 번째 요소 또는 빈 hash_set 다음의 위치 주소를 지
 
 ### <a name="remarks"></a>설명
 
-**begin**의 반환 값이 `const_iterator`에 할당된 경우 hash_set 개체의 요소를 수정할 수 없습니다. **begin**의 반환 값이 **iterator**에 할당된 경우에는 hash_set 개체의 요소를 수정할 수 있습니다.
+하는 경우의 반환 값 `begin` 에 할당 되는 `const_iterator`, hash_set 개체의 요소를 수정할 수 없습니다. 하는 경우의 반환 값 `begin` 에 할당 되는 `iterator`, hash_set 개체의 요소를 수정할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_begin.cpp
@@ -323,7 +324,7 @@ const_iterator cbegin() const;
 
 `cbegin`의 반환 값을 사용하여 `hash_set` 개체의 요소를 수정할 수 없습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_cbegin.cpp
@@ -370,7 +371,7 @@ const_iterator cend() const;
 
 `cend`는 반복기가 `hash_set`의 끝에 도달했는지 여부를 테스트하는 데 사용됩니다. `cend`에서 반환한 값은 역참조되지 않아야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_cend.cpp
@@ -412,7 +413,7 @@ void clear();
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_clear.cpp
@@ -458,7 +459,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_iterator` 형식을 사용하여 요소의 값을 수정할 수는 없습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `const_iterator`를 사용하는 예제는 [begin](#begin)에 대한 예제를 참조하세요.
 
@@ -492,7 +493,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_const_ref.cpp
@@ -541,7 +542,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_reverse_iterator` 형식은 요소 값을 수정할 수 없으며 hash_set을 역방향으로 반복하는 데 사용됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `const_reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rend](#rend)의 예제를 참조하세요.
 
@@ -558,7 +559,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`key` Hash_set에서 일치 시킬 요소의 키입니다.
+*키* hash_set에서 일치 하는지 확인할 요소의 키입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -572,7 +573,7 @@ hash_set에 일치하는 키가 있는 요소가 포함되지 않은 경우 0입
 
 [ **lower_bound** (_ *Key* ), **upper_bound** (\_ *Key* ) ).
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 hash_set::count 멤버 함수를 사용하는 방법을 보여 줍니다.
 
@@ -631,7 +632,7 @@ const_reverse_iterator crbegin() const;
 
 `crbegin`은 `hash_set`을 역방향으로 반복할 때 사용할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_crbegin.cpp
@@ -683,7 +684,7 @@ const_reverse_iterator crend() const;
 
 `crend`를 사용하여 역방향 반복기가 `hash_set` 끝에 도달했는지 여부를 테스트할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_crend.cpp
@@ -730,7 +731,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::diff
 
 입력 반복기 요구 사항을 충족하는 모든 반복기(set 등의 가역 컨테이너에서 지원하는 양방향 반복기 클래스 포함)에 대해 `difference_type`을 사용할 수는 있지만, 반복기 간의 빼기는 vector 또는 deque와 같은 임의 액세스 컨테이너가 제공하는 임의 액세스 반복기를 통해서만 지원됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_diff_type.cpp
@@ -808,15 +809,15 @@ emplace(
 
 |매개 변수|설명|
 |-|-|
-|`val`|`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_set](../standard-library/hash-set-class.md)에 삽입될 요소의 값입니다.|
+|*val*|`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_set](../standard-library/hash-set-class.md)에 삽입될 요소의 값입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-`emplace` 멤버 함수는 해당 `bool` 구성 요소가 삽입이 수행된 경우 `true`를 반환하고, 해당 키가 순서 지정 시 동일한 값을 가지고 해당 반복기 구성 요소에서 새 요소가 삽입되었거나 요소가 이미 있었던 주소를 반환하는 요소가 `hash_set`에 이미 들어 있었던 경우에는 `false`를 반환합니다.
+합니다 `emplace` 쌍을 반환 하는 멤버 함수입니다 **bool** 구성 요소를 반환 합니다 **true** 삽입 되었으면 확인 및 **false** 경우는 `hash_set` 이미 키의 순서를 동일한 값을가지고 해당 반복기 구성 요소 주소를 반환 하는 새 요소가 삽입 된 위치는 요소를 포함 하거나 있는 요소가 이미 있는 합니다.
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_emplace.cpp
@@ -860,8 +861,8 @@ iterator emplace(
 
 |매개 변수|설명|
 |-|-|
-|`val`|`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_set](../standard-library/hash-set-class.md)에 삽입될 요소의 값입니다.|
-|`_Where`|올바른 삽입 지점 검색을 시작할 위치입니다. 삽입 지점이 `_Where` 바로 뒤에 오면 로그 시간 대신 분할 상수 시간에 삽입이 발생할 수 있습니다.|
+|*val*|`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_set](../standard-library/hash-set-class.md)에 삽입될 요소의 값입니다.|
+|*_Where*|올바른 삽입 지점 검색을 시작할 위치입니다. (삽입 지점 바로 뒤에 오는 경우 로그 시간 대신 분할 상환된 상수 시간에 삽입이 발생할 수 있습니다 *_Where*.)|
 
 ### <a name="return-value"></a>반환 값
 
@@ -869,9 +870,9 @@ iterator emplace(
 
 ### <a name="remarks"></a>설명
 
-삽입 지점이 `_Where` 바로 뒤에 오면 로그 시간 대신 분할 상수 시간에 삽입이 발생할 수 있습니다.
+삽입 지점 바로 뒤에 오는 경우 로그 시간 대신 분할 상환된 상수 시간에 삽입이 발생할 수 있습니다 *_Where*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_emplace_hint.cpp
@@ -914,7 +915,7 @@ hash_set이 비어 있으면 **true**이고 비어 있지 않으면 **false**입
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_empty.cpp
@@ -965,9 +966,9 @@ hash_set에서 마지막 요소 다음에 나오는 위치의 주소를 지정�
 
 ### <a name="remarks"></a>설명
 
-**end**는 반복기가 hash_set의 끝에 도달했는지 여부를 테스트하는 데 사용됩니다. **end**에서 반환한 값은 역참조해서는 안 됩니다.
+`end` 반복기가 hash_set의 끝에 도달 했는지 여부를 테스트 하는 데 사용 됩니다. `end`에서 반환한 값은 역참조되지 않아야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_end.cpp
@@ -1024,7 +1025,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>매개 변수
 
-`key` 검색 중인 hash_set에서 요소의 정렬 키와 비교할 인수 키입니다.
+*키* 검색 중인 hash_set에서 요소의 정렬 키와 비교할 인수 키입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -1034,7 +1035,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_equal_range.cpp
@@ -1110,13 +1111,13 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Where` Hash_set에서 제거할 요소의 위치입니다.
+*_Where* hash_set에서 제거할 요소의 위치입니다.
 
-`first` Hash_set에서 제거 되는 첫 번째 요소의 위치입니다.
+*첫 번째* hash_set에서 제거 되는 첫 번째 요소의 위치입니다.
 
-`last` Hash_set에서 제거 되는 마지막 요소 바로 뒤의 위치입니다.
+*마지막* hash_set에서 마지막 요소 바로 뒤의 위치를 제거 합니다.
 
-`key` Hash_set에서 제거할 요소의 키입니다.
+*키* hash_set에서 제거할 요소의 키입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -1126,7 +1127,7 @@ size_type erase(const key_type& key);
 
 멤버 함수는 예외를 throw하지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 hash_set::erase 멤버 함수의 사용을 보여 줍니다.
 
@@ -1224,19 +1225,19 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-`key` 검색 중인 hash_set에서 요소의 정렬 키와 일치 하려면 인수 키입니다.
+*키* 검색 중인 hash_set에서 요소의 정렬 키와 일치 하는지 확인할 인수 키입니다.
 
 ### <a name="return-value"></a>반환 값
 
-지정된 키에 해당하는 요소의 위치 또는 해당 키와 일치하는 항목이 없는 경우 hash_set의 마지막 요소 다음 위치에 대한 주소를 지정하는 **iterator** 또는 `const_iterator`입니다.
+`iterator` 또는 `const_iterator` 주소 지정된 된 키에 해당 하는 요소의 위치 또는 키에 대 한 일치 항목이 없을 경우 hash_set에서 마지막 요소 다음 위치의 주소입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 보다 작음 비교 가능 관계를 기반으로 순서를 적용하는 이진 조건자에서 정렬 키가 인수 키와 **같은** hash_set 내 요소의 주소를 지정하는 반복기를 반환합니다.
+정렬 키가 hash_set 내에서 요소의 주소는 반복기를 반환 하는 멤버 함수 `equivalent` 인수 순서를 적용 하는 이진 조건자에서 키를 기반으로-보다 작음 비교 가능 관계입니다.
 
-**find**의 반환 값이 `const_iterator`에 할당된 경우 hash_set 개체는 수정할 수 없습니다. **find**의 반환 값이 **iterator**에 할당되는 경우에는 hash_set 개체를 수정할 수 있습니다.
+하는 경우의 반환 값 `find` 에 할당 되는 `const_iterator`, hash_set 개체를 수정할 수 없습니다. 하는 경우의 반환 값 `find` 에 할당 되는 `iterator`, hash_set 개체를 수정할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_find.cpp
@@ -1299,15 +1300,15 @@ Allocator get_allocator() const;
 
 ### <a name="return-value"></a>반환 값
 
-hash_set에서 메모리를 관리하는 데 사용하는 할당자(템플릿 매개 변수 `Allocator`)입니다.
+템플릿 매개 변수는 메모리를 관리 하는 hash_set에서 사용 하는 할당자 *할당자*합니다.
 
-`Allocator`에 대한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목의 설명 섹션을 참조하세요.
+에 대 한 자세한 *할당자*의 주의 섹션을 참조 합니다 [hash_set 클래스](../standard-library/hash-set-class.md) 항목입니다.
 
 ### <a name="remarks"></a>설명
 
 hash_set 클래스의 할당자는 클래스가 저장소를 관리하는 방법을 지정합니다. C++ 표준 라이브러리 컨테이너 클래스와 함께 제공되는 기본 할당자를 사용하면 대부분의 프로그래밍 요구 사항을 충족할 수 있습니다. 할당자 클래스를 직접 작성하고 사용하는 방법에 대해서는 고급 C++ 항목에서 다룹니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_get_allocator.cpp
@@ -1420,11 +1421,11 @@ hash_set(
 
 |매개 변수|설명|
 |-|-|
-|`Al`|이 `hash_set` 개체에 사용할 저장소 할당자 클래스로, 기본값은 `Allocator`입니다.|
-|`Comp`|`hash_set`의 요소 순서를 지정하는 데 사용되는 `const Traits` 형식의 비교 함수로, 기본값은 `hash_compare`입니다.|
-|`Right`|생성된 `hash_set`이 복사본으로 지정될 `hash_set`입니다.|
-|`First`|복사할 요소의 범위에서 첫 번째 요소의 위치입니다.|
-|`Last`|복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.|
+|*Al*|이 `hash_set` 개체에 사용할 저장소 할당자 클래스로, 기본값은 `Allocator`입니다.|
+|*구성 요소*|`hash_set`의 요소 순서를 지정하는 데 사용되는 `const Traits` 형식의 비교 함수로, 기본값은 `hash_compare`입니다.|
+|*오른쪽*|생성된 `hash_set`이 복사본으로 지정될 `hash_set`입니다.|
+|*첫 번째*|복사할 요소의 범위에서 첫 번째 요소의 위치입니다.|
+|*마지막*|복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.|
 
 ### <a name="remarks"></a>설명
 
@@ -1436,13 +1437,13 @@ hash_set(
 
 첫 번째 생성자는 빈 초기 `hash_set`을 정의하고, 두 번째 생성자는 요소의 순서를 설정하는 데 사용할 비교 함수(`Comp`)의 형식을 지정하며, 세 번째 생성자는 사용할 할당자 형식(`Al`)을 명시적으로 지정합니다. `explicit` 키워드를 사용하는 경우 특정 종류의 자동 형식 변환이 수행되지 않습니다.
 
-복사본을 지정 하는 네 번째 및 다섯 번째 생성자는 `hash_set` `Right`합니다.
+네 번째와 다섯 번째 생성자의 복사본을 지정 합니다 `hash_set` `Right`합니다.
 
 마지막 여섯 번째, 일곱 번째 및 여덟 번째 생성자는 요소에 initializer_list를 사용합니다.
 
 마지막 3개 생성자는 `hash_set`의 범위 [ `First`, `Last`)를 복사하며, 범위 내에서 클래스 Traits 및 allocator의 비교 함수 형식을 지정하는 명시도는 계속 높아집니다.
 
-이동 여덟 번째 생성자는 `hash_set` `Right`합니다.
+여덟 번째 생성자 이동 합니다 `hash_set` `Right`합니다.
 
 `hash_set` 컨테이너에 있는 요소의 실제 순서는 해시 함수, 순서 지정 함수 및 해시 테이블의 현재 크기에 따라 달라지고, 일반적으로 순서 지정 함수에 의해서만 결정된 경우 set 컨테이너에서 예상 가능하던 것처럼 실제 순서를 예상할 수는 없습니다.
 
@@ -1473,17 +1474,17 @@ void insert(
 
 |매개 변수|설명|
 |-|-|
-|`Val`|`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 `hash_set`에 삽입될 요소의 값입니다.|
-|`Where`|올바른 삽입 지점 검색을 시작할 위치입니다. 삽입 지점이 `_Where` 바로 뒤에 오면 로그 시간 대신 분할 상수 시간에 삽입이 발생할 수 있습니다.|
-|`First`|`hash_set`에서 복사할 첫 번째 요소의 위치입니다.|
-|`Last`|`hash_set`에서 복사할 마지막 요소 바로 다음 위치입니다.|
-|`IList`|요소를 복사해올 initializer_list입니다.|
+|*val*|`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 `hash_set`에 삽입될 요소의 값입니다.|
+|*Where*|올바른 삽입 지점 검색을 시작할 위치입니다. 삽입 지점이 `_Where` 바로 뒤에 오면 로그 시간 대신 분할 상수 시간에 삽입이 발생할 수 있습니다.|
+|*첫 번째*|`hash_set`에서 복사할 첫 번째 요소의 위치입니다.|
+|*마지막*|`hash_set`에서 복사할 마지막 요소 바로 다음 위치입니다.|
+|*IList*|요소를 복사해올 initializer_list입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-첫 번째 `insert` 멤버 함수는 해당 `bool` 구성 요소가 삽입이 수행된 경우 `true`를 반환하고, 해당 키가 순서 지정 시 동일한 값을 가지고 해당 반복기 구성 요소에서 새 요소가 삽입되었거나 요소가 이미 있었던 주소를 반환하는 요소가 `hash_set`에 이미 들어 있었던 경우에는 `false`를 반환합니다.
+첫 번째 `insert` 쌍을 반환 하는 멤버 함수입니다 **bool** 구성 요소를 반환 합니다 **true** 삽입 되었으면 확인 하 고 **false** 경우는 `hash_set` 이미 키의 순서를 동일한 값을가지고 해당 반복기 구성 요소 주소를 반환 하는 새 요소가 삽입 된 위치는 요소를 포함 하거나 있는 요소가 이미 있는 합니다.
 
-이 멤버 함수가 반환하는 `pr` 쌍의 반복기 구성 요소에 액세스하려면 `pr.first`를 사용하고 해당 구성 요소를 역참조하려면 `*(pr.first)`를 사용합니다. 이 멤버 함수가 반환하는 `pr` 쌍의 `bool` 구성 요소에 액세스하려면 `pr.second`를 사용하고 해당 구성 요소를 역참조하려면 `*(pr.second)`를 사용합니다.
+이 멤버 함수가 반환하는 `pr` 쌍의 반복기 구성 요소에 액세스하려면 `pr.first`를 사용하고 해당 구성 요소를 역참조하려면 `*(pr.first)`를 사용합니다. 액세스 하는 **bool** 쌍의 구성 요소 `pr` 사용 하 여이 멤버 함수가 반환 하 `pr.second`, 역참조를 사용 하 여 `*(pr.second)`입니다.
 
 두 번째 `insert` 멤버 함수는 새 요소를 `hash_set`에 삽입한 위치를 가리키는 반복기를 반환합니다.
 
@@ -1506,11 +1507,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>설명
 
-**iterator** 형식은 요소값을 수정할 때 사용할 수 있습니다.
+형식 `iterator` 요소의 값을 수정 하려면 사용할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
-**iterator**를 선언하고 사용하는 방법의 예제는 [begin](#begin)의 예제를 참조하세요.
+`iterator`를 선언하고 사용하는 방법에 대한 예제는 [begin](#begin)의 예제를 참조하세요.
 
 ## <a name="key_comp"></a>  hash_set::key_comp
 
@@ -1525,9 +1526,9 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>반환 값
 
-hash_set이 요소의 순서를 지정하는 데 사용하는 함수 개체(템플릿 매개 변수 `Traits`)를 반환합니다.
+템플릿 매개 변수는 hash_set에서 요소의 순서를 사용 하는 함수 개체를 반환 합니다 *Traits*합니다.
 
-`Traits`에 대한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목을 참조하세요.
+에 대 한 자세한 *Traits* 참조를 [hash_set 클래스](../standard-library/hash-set-class.md) 항목입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1537,9 +1538,9 @@ hash_set이 요소의 순서를 지정하는 데 사용하는 함수 개체(템�
 
 정의합니다. 이 함수는 `_xVal`이 앞에 오며 정렬 순서가 `_yVal`과 같지 않으면 **true**를 반환합니다.
 
-[key_compare](#key_compare)와 [value_compare](#value_compare)는 둘 다 템플릿 매개 변수 **Traits**의 동의어입니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
+[key_compare](#key_compare)와 [value_compare](#value_compare)는 둘 다 템플릿 매개 변수 *Traits*의 동의어입니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_key_comp.cpp
@@ -1601,13 +1602,13 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>설명
 
-`key_compare`은 템플릿 매개 변수 `Traits`의 동의어입니다.
+`key_compare` 템플릿 매개 변수에 대 한 동의어가 *Traits*합니다.
 
-`Traits`에 대한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목을 참조하세요.
+에 대 한 자세한 *Traits* 참조를 [hash_set 클래스](../standard-library/hash-set-class.md) 항목입니다.
 
-`key_compare` 및 [value_compare](#value_compare)는 둘 다 템플릿 매개 변수 **Traits**의 동의어입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
+`key_compare` 및 [value_compare](#value_compare)는 둘 다 템플릿 매개 변수 *Traits*와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `key_compare`를 선언하고 사용하는 방법에 대한 예제는 [key_comp](#key_comp)의 예제를 참조하세요.
 
@@ -1624,13 +1625,13 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>설명
 
-**key_type**은 템플릿 매개 변수 `Key`의 동의어입니다.
+`key_type` 템플릿 매개 변수에 대 한 동의어가 *키*합니다.
 
-`Key`에 대한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목의 설명 섹션을 참조하세요.
+에 대 한 자세한 *키*의 주의 섹션을 참조 합니다 [hash_set 클래스](../standard-library/hash-set-class.md) 항목입니다.
 
-`key_type` 및 [value_type](#value_type)은 둘 다 템플릿 매개 변수 **Key**와 동일한 의미입니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
+`key_type` 및 [value_type](#value_type)은 둘 다 템플릿 매개 변수 *Key*와 동일한 의미입니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `key_type`를 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.
 
@@ -1649,15 +1650,15 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>매개 변수
 
-`key` 검색 중인 hash_set에서 요소의 정렬 키와 비교할 인수 키입니다.
+*키* 검색 중인 hash_set에서 요소의 정렬 키와 비교할 인수 키입니다.
 
 ### <a name="return-value"></a>반환 값
 
-인수 키보다 크거나 같은 키가 들어 있는 hash_set 내 요소의 위치 주소를 지정하거나, 키와 일치하는 항목이 없는 경우 hash_set에서 마지막 요소 다음 위치의 주소를 지정하는 **iterator** 또는 `const_iterator`입니다.
+`iterator` 또는 `const_iterator` 는 주소 일치 키 인수 키 보다 크거나 같은 이거나 없는 경우 hash_set에서 마지막 요소 다음 위치의 주소를 사용 하 여는 hash_set 내에서 요소의 위치가 키에 대 한 합니다.
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_lower_bound.cpp
@@ -1724,7 +1725,7 @@ hash_set의 최대 허용 길이입니다.
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_max_size.cpp
@@ -1762,13 +1763,13 @@ hash_set& operator=(hash_set&& right);
 
 |매개 변수|설명|
 |-|-|
-|`right`|`hash_set`에 복사되는 [hash_set](../standard-library/hash-set-class.md)입니다.|
+|*right*|`hash_set`에 복사되는 [hash_set](../standard-library/hash-set-class.md)입니다.|
 
 ### <a name="remarks"></a>설명
 
-`hash_set`는 `operator=`에서 기존 요소를 지운 후에 `right`의 내용을 `hash_set`로 복사하거나 이동합니다.
+기존 요소를 지운 후는 `hash_set`, `operator=` 복사 하거나 이동 내용의 *오른쪽* 에 `hash_set`합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_operator_as.cpp
@@ -1819,7 +1820,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::poin
 
 ### <a name="remarks"></a>설명
 
-형식 **pointer**는 요소값을 수정할 때 사용할 수 있습니다.
+형식 `pointer` 요소의 값을 수정 하려면 사용할 수 있습니다.
 
 대부분의 경우 [iterator](#iterator)를 사용하여 hash_set 개체의 요소에 액세스해야 합니다.
 
@@ -1848,7 +1849,7 @@ reverse_iterator rbegin();
 
 `rbegin`은 hash_set을 역방향으로 반복할 때 사용할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_rbegin.cpp
@@ -1919,7 +1920,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::refe
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_reference.cpp
@@ -1981,7 +1982,7 @@ reverse_iterator rend();
 
 `rend`를 사용하여 역방향 반복기가 hash_set 끝에 도달했는지 여부를 테스트할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_rend.cpp
@@ -2057,7 +2058,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 `reverse_iterator` 형식은 hash_set을 역방향으로 반복하는 데 사용됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rbegin](#rbegin)의 예제를 참조하세요.
 
@@ -2078,7 +2079,7 @@ hash_set의 현재 길이입니다.
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_size.cpp
@@ -2121,7 +2122,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::size
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.
 
@@ -2138,13 +2139,13 @@ void swap(hash_set& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 인수 hash_set 대상 hash_set와 교환할 요소를 제공 합니다.
+*오른쪽* 대상 hash_set과 교환할 요소를 제공 하는 인수 hash_set입니다.
 
 ### <a name="remarks"></a>설명
 
 멤버 함수는 해당 요소를 교환할 두 hash_set의 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_swap.cpp
@@ -2213,15 +2214,15 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>매개 변수
 
-`key` 검색 중인 hash_set에서 요소의 정렬 키와 비교할 인수 키입니다.
+*키* 검색 중인 hash_set에서 요소의 정렬 키와 비교할 인수 키입니다.
 
 ### <a name="return-value"></a>반환 값
 
-인수 키보다 크거나 같은 키가 들어 있는 hash_set 내 요소의 위치 주소를 지정하거나, 키와 일치하는 항목이 없는 경우 hash_set에서 마지막 요소 다음 위치의 주소를 지정하는 **iterator** 또는 `const_iterator`입니다.
+`iterator` 또는 `const_iterator` 는 주소 일치 키 인수 키 보다 크거나 같은 이거나 없는 경우 hash_set에서 마지막 요소 다음 위치의 주소를 사용 하 여는 hash_set 내에서 요소의 위치가 키에 대 한 합니다.
 
 ### <a name="remarks"></a>설명
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_upper_bound.cpp
@@ -2284,9 +2285,9 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>반환 값
 
-hash_set이 요소의 순서를 지정하는 데 사용하는 함수 개체(템플릿 매개 변수 `Compare`)를 반환합니다.
+템플릿 매개 변수는 hash_set에서 요소의 순서를 사용 하는 함수 개체를 반환 합니다 *비교*합니다.
 
-`Compare`에 대한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목의 설명 섹션을 참조하세요.
+에 대 한 자세한 *비교*의 주의 섹션을 참조 합니다 [hash_set 클래스](../standard-library/hash-set-class.md) 항목입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -2296,9 +2297,9 @@ hash_set이 요소의 순서를 지정하는 데 사용하는 함수 개체(템�
 
 정의합니다. 이 함수는 `_xVal`이 앞에 오며 정렬 순서가 `_yVal`과 같지 않으면 **true**를 반환합니다.
 
-[value_compare](../standard-library/set-class.md#value_compare)와 [key_compare](../standard-library/set-class.md#key_compare)는 둘 다 템플릿 매개 변수 `Compare`의 동의어입니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
+둘 다 [value_compare](../standard-library/set-class.md#value_compare) 하 고 [key_compare](../standard-library/set-class.md#key_compare) 템플릿 매개 변수는 *비교*합니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_value_comp.cpp
@@ -2360,13 +2361,13 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>설명
 
-**value_compare**는 템플릿 매개 변수 `Traits`의 동의어입니다.
+`value_compare` 템플릿 매개 변수에 대 한 동의어가 *Traits*합니다.
 
-`Traits`에 대한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목을 참조하세요.
+에 대 한 자세한 *Traits* 참조를 [hash_set 클래스](../standard-library/hash-set-class.md) 항목입니다.
 
-[key_compare](#key_compare)와 **value_compare**는 둘 다 템플릿 매개 변수 **Traits**의 동의어입니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
+둘 다 [key_compare](#key_compare) 하 고 `value_compare` 템플릿 매개 변수는 *Traits*합니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `value_compare`를 선언하고 사용하는 방법의 예제는 [value_comp](#value_comp)의 예제를 참조하세요.
 
@@ -2381,7 +2382,7 @@ typedef key_compare value_compare;
 typedef Key value_type;
 ```
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // hash_set_value_type.cpp

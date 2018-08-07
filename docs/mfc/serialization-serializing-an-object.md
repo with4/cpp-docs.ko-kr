@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379660"
 ---
 # <a name="serialization-serializing-an-object"></a>Serialization: 개체 Serialize
 문서 [Serialization: Serializable 클래스 만들기](../mfc/serialization-making-a-serializable-class.md) 클래스를 직렬화 할 수 있게 하는 방법을 보여 줍니다. Serializable 클래스를 만든 후 serialize 할 수 있습니다를 통해 파일에서 해당 클래스의 개체는 [CArchive](../mfc/reference/carchive-class.md) 개체입니다. 이 문서는 다음 사항을 설명합니다.  

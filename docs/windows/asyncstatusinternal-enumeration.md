@@ -17,11 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 150169442aa68395b4dc8a4f4c74951e877f18f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a68189c461453dc72585ff4034df5ba69bb41bd5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464878"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal 열거형
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -33,23 +34,23 @@ enum AsyncStatusInternal;
 ```  
   
 ## <a name="remarks"></a>설명  
- 비동기 작업의 상태에 대 한 내부 열거형 간의 매핑을 지정 및 **Windows::Foundation::AsyncStatus** 열거 합니다.  
+ 비동기 작업의 상태 내부 열거형 사이 매핑을 지정 및 `Windows::Foundation::AsyncStatus` 열거형입니다.  
   
 ## <a name="members"></a>멤버  
- `_Created`  
- 에 해당:: Windows::Foundation::AsyncStatus:: 생성  
+ *_Created*  
+ 같음:: Windows::Foundation::AsyncStatus:: 생성  
   
- `_Started`  
- 에 해당:: Windows::Foundation::AsyncStatus:: 시작  
+ *_Started*  
+ 같음:: Windows::Foundation::AsyncStatus:: 시작  
   
- `_Completed`  
- 에 해당:: Windows::Foundation::AsyncStatus:: 완료  
+ *_Completed*  
+ 같음:: Windows::Foundation::AsyncStatus:: 완료  
   
- `_Cancelled`  
- 에 해당:: Windows::Foundation::AsyncStatus:: 취소  
+ *_Cancelled*  
+ 같음:: Windows::Foundation::AsyncStatus:: 취소  
   
- `_Error`  
- 에 해당:: Windows::Foundation::AsyncStatus::Error  
+ *오류 (_e)*  
+ 같음:: Windows::Foundation::AsyncStatus::Error  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** async.h  

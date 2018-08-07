@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690561"
 ---
 # <a name="ompinparallel"></a>omp_in_parallel
 병렬 영역 내부에서 호출 된 경우 0이 아닌 값을 반환 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249400"
 ---
 # <a name="compiler-error-c3045"></a>컴파일러 오류 C3045
 OpenMP 'sections' 지시문 다음에는 복합 문이 와야 합니다. '{'가 없습니다.  

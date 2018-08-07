@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230537"
 ---
 # <a name="compiler-error-c2507"></a>컴파일러 오류 C2507
 'identifier': 기본 클래스에 가상 한정자가 너무 많은  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171855"
 ---
 # <a name="value-type-semantics"></a>값 형식 의미
 값 형식 의미 체계 Visual c + + Managed Extensions for c + + 변경 되었습니다.  

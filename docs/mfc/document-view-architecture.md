@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350057"
 ---
 # <a name="documentview-architecture"></a>문서/뷰 아키텍처
 기본적으로 MFC 응용 프로그램 마법사는 문서 클래스 뷰 클래스와 기초 응용 프로그램을 만듭니다. MFC는이 두 클래스에 대 한 데이터 관리를 구분합니다. 문서는 데이터를 저장 하 고 및 관리 데이터를 인쇄, 데이터의 여러 뷰 업데이트를 조정 합니다. 뷰는 데이터를 표시 하 고 작성기를 편집 및 선택 영역을 포함 하 여 사용자 상호 작용을 관리 합니다.  

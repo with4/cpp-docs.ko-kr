@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93113e64e9b6a72f40557d063f83724c5ff8da62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cdfcf3c6a562f7aab0164e3d63d468ba39ec0023
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954101"
 ---
 # <a name="codecvtutf16"></a>codecvt_utf16
 
@@ -33,9 +34,9 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>매개 변수
 
-`Elem` 와이드 문자 요소 형식입니다.
-`Maxcode` 로캘 패싯에 대 한 문자의 최대 수입니다.
-`Mode` 로캘 패싯에 대 한 구성 정보입니다.
+*Elem* 와이드 문자 요소 형식입니다.
+*Maxcode* 로캘 패싯에 대 한 문자의 최대 수입니다.
+*모드* 로캘 패싯에 대 한 구성 정보입니다.
 
 ## <a name="remarks"></a>설명
 

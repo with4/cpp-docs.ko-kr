@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385099"
 ---
 # <a name="c-floating-point-constants"></a>C 부동 소수점 상수
 "부동 소수점 상수"는 부호 있는 실수를 나타내는 10진수 숫자입니다. 부호 있는 실수 표현에는 정수 부분, 분수 부분 및 지수가 포함됩니다. 부동 소수점 상수를 사용하여 변경할 수 없는 부동 소수점 값을 나타냅니다.  

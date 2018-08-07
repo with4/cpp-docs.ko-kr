@@ -25,6 +25,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056134"
 ---
 # <a name="operator-"></a>operator +
 첫 번째 연산자는 반환 *expression1* 플러스 *expression2*합니다. 두 번째 연산자의 부호를 반대로 바꿉니다. *식*합니다.  

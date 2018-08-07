@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057590"
 ---
 # <a name="operator-size"></a>연산자 SIZE
 바이트 수를 반환 *변수* 첫 번째 이니셜라이저에 의해 할당 합니다.  

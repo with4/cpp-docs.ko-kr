@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33222269"
 ---
 # <a name="compiler-error-c2349"></a>컴파일러 오류 C2349
 'function' 관리 대상으로 컴파일할 수 없습니다. 'reason'; #pragma 관리 되지 않는 리소스를 사용 하 여  

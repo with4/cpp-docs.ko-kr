@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135891"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>방법: 마샬링 라이브러리 확장명
 이 데이터 형식 사이 더 많은 변환을 수 있도록 마샬링 라이브러리를 확장 하는 방법을 설명 합니다. 사용자는 현재 지원 하지 않는 라이브러리에서 데이터 변환에 대 한 마샬링 라이브러리를 확장할 수 있습니다.  

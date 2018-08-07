@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382717"
 ---
 # <a name="expressions-and-assignments"></a>식 및 할당
 이 단원에서는 C 언어로 식을 구성하고 값을 할당하는 방법을 설명합니다. 상수, 식별자, 문자열 및 함수 호출은 모두 식에서 조작되는 피연산자입니다. C 언어에는 일반적인 언어 연산자가 모두 포함됩니다. 이 섹션에서는 이러한 연산자는 물론, C 또는 Microsoft C의 고유한 연산자를 다룹니다. 다음과 같은 항목에 대해 설명됩니다.  

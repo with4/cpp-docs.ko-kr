@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28dc4e52e2f114600ad3a22697500ce9d8594113
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccc01372d08edb997ed6b0aaa70be69fde60a1e2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954325"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc 클래스
 
@@ -41,13 +42,13 @@ class cache_suballoc
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Sz`|할당할 배열의 요소 수입니다.|
+|*sz*|할당할 배열의 요소 수입니다.|
 
 ## <a name="remarks"></a>설명
 
-cache_suballoc 템플릿 클래스는 `freelist<sizeof(Type), max_unbounded>`를 사용하여 제한 없는 길이의 사용 가능한 목록에 할당 취소된 메모리 블록을 저장하고, 사용 가능한 목록이 비어 있는 경우 `operator new`를 사용하여 할당되어 있는 보다 큰 청크의 메모리 블록을 하위 할당합니다.
+Cache_suballoc 템플릿 클래스는 제한 없는 길이의 사용 가능한 목록에서 할당 취소 된 메모리 블록을 저장를 사용 하 여 `freelist<sizeof(Type), max_unbounded>`, 및에서 사용 하 여 할당 큰 청크의 메모리 블록을 suballocates **new 연산자** 사용 가능한 목록의 경우 비어 있습니다.
 
-각 청크는 `operator new`와 `operator delete`에서 필요로 하는 `Sz * Nelts`바이트의 사용 가능한 메모리 및 데이터를 포함합니다. 할당된 청크는 해제되지 않습니다.
+각 청크를 보유 `Sz * Nelts` 바이트의 사용 가능한 메모리 및 데이터는 **new 연산자** 하 고 **delete 연산자** 필요 합니다. 할당된 청크는 해제되지 않습니다.
 
 ### <a name="constructors"></a>생성자
 
@@ -80,7 +81,7 @@ void *allocate(std::size_t count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`count`|할당할 배열의 요소 수입니다.|
+|*count*|할당할 배열의 요소 수입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -110,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`ptr`|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
-|`count`|저장소에서 할당을 취소할 개체의 수입니다.|
+|*ptr*|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
+|*count*|저장소에서 할당을 취소할 개체의 수입니다.|
 
 ### <a name="remarks"></a>설명
 

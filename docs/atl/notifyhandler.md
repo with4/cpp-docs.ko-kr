@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74fbdd99c162b4362339d8c1b45ddc281d30eeee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 72c6c992f2ec92bc11d6dd009649d503d3c0bd02
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848339"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
-세 번째 매개 변수에 의해 식별 된 함수 이름에서 `NOTIFY_HANDLER` 메시지 맵에서 매크로입니다.  
+메시지 맵에서 NOTIFY_HANDLER 매크로의 세 번째 매개 변수로 식별 된 함수의 이름입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,20 +39,20 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `idCtrl`  
+ *idCtrl*  
  메시지를 전송 하는 컨트롤의 식별자입니다.  
   
  *pnmh*  
- 주소는 [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) 알림 코드 및 추가 정보를 포함 하는 구조입니다. 일부 알림 메시지에 대 한이 매개 변수는 큰 구조체를 가리키는 **NMHDR** 첫 번째 멤버로 구조입니다.  
+ 주소는 [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) 알림 코드 및 추가 정보를 포함 하는 구조입니다. 일부 알림 메시지의 경우이 매개 변수가 가리키는 있는 더 큰 구조체는 `NMHDR` 첫 번째 멤버로 구조체입니다.  
   
- `bHandled`  
- 메시지 맵 집합 `bHandled` 를 **TRUE** 전에 *NotifyHandler* 호출 됩니다. 경우 *NotifyHandler* 메시지를 완전히 처리 하지 않는 설정 해야 `bHandled` 를 **FALSE** 를 나타내는 메시지에 추가 처리가 필요 합니다.  
+ *bHandled*  
+ 메시지 맵 집합 *bHandled* 하기 전에 true *NotifyHandler* 라고 합니다. 경우 *NotifyHandler* 메시지를 완전히 처리 하지 않는 설정 해야 *bHandled* 에 **FALSE** 를 나타내는 메시지에 추가 처리가 필요 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 메시지 처리의 결과입니다. 성공 하면 0입니다.  
+ 메시지 처리의 결과입니다. 성공한 경우 0입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 메시지 처리기를 사용 하 여 메시지 맵에서 예제를 보려면 [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).  
+ 메시지 맵에서이 메시지 처리기를 사용 하 여 예제를 참조 하세요 [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).  
   
 ## <a name="see-also"></a>참고 항목  
  [창 구현](../atl/implementing-a-window.md)   

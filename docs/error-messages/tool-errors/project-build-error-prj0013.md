@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318778"
 ---
 # <a name="project-build-error-prj0013"></a>프로젝트 빌드 오류 PRJ0013
 시스템 리소스가 심각하게 부족할 수 있습니다. 빌드를 시작하는 데 필요한 파이프를 만들 수 없습니다.  

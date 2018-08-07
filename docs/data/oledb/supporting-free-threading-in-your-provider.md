@@ -16,20 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9c61aea0fec1f6d808a0a34ee74bd0ce2d399a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17750a61675f9b208be69b86ec7b044b6b19f1bb
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336679"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>공급자에서 자유 스레딩 지원
-모든 OLE DB 공급자 클래스는 스레드로부터 안전 하 고, 및 레지스트리 항목에 따라 설정 됩니다. 높은 수준의 다중 사용자 환경에서 성능 제공 하기 위하여 자유 스레딩 지원 하도록 하는 것이 좋습니다. 공급자에 스레드로부터 안전한을 유지 하려면 코드 제대로 차단 되었음을 확인 해야 합니다. 를 작성 하거나 데이터를 저장할 때마다 임계 영역을 사용 하 여 액세스를 차단 해야 합니다.  
+모든 OLE DB 공급자 클래스는 스레드로부터 안전 하 고 레지스트리 항목에 따라 설정 됩니다. 다중 사용자 환경에서 성능 수준을 높이기 위해 자유 스레딩 지원 하도록 하는 것이 좋습니다. 공급자 스레드 안전 유지를 위해 코드를 제대로 차단 되는 확인 해야 합니다. 를 작성 하거나 데이터를 저장할 때마다 중요 섹션을 사용 하 여 액세스를 차단 해야 합니다.  
   
- 각 OLE DB 공급자 템플릿 개체 자체 임계 영역을 있습니다. 차단을 쉽게 하려면, 만들 각 새 클래스는 부모 클래스를 취하는 템플릿 클래스 수의 인수 이름입니다.  
+ 각 OLE DB 공급자 템플릿 개체에 중요 한 고유한 섹션이 있습니다. 차단을 쉽게 하려면, 각 새 클래스를 만들면 해야 부모 과목을 수강 하는 템플릿 클래스를 인수로 이름입니다.  
   
  다음 예제에서는 코드를 차단 하는 방법을 보여 줍니다.  
   
-```  
+```cpp  
 template <class T>  
 class CMyObject<T> : public...  
   
@@ -46,9 +47,9 @@ HRESULT MyObject::MyMethod(void)
 }  
 ```  
   
- 임계 섹션을 보호 하는 방법에 대 한 자세한 내용은 `Lock` 및 `Unlock`, 참조 [다중 스레딩: 동기화 클래스 사용 방법](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)합니다.  
+ 임계 섹션을 보호 하는 방법에 대 한 자세한 내용은 `Lock` 및 `Unlock`를 참조 하세요 [다중 스레딩: 동기화 클래스 사용 방법](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)합니다.  
   
- 모든 메서드를 재정의 하는 사항도 확인 해야 합니다 (예: `Execute`)는 스레드로부터 안전 합니다.  
+ 메서드를 재정의 하는 확인 해야 합니다 (같은 `Execute`)는 스레드로부터 안전 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿을 사용하여 작업](../../data/oledb/working-with-ole-db-provider-templates.md)

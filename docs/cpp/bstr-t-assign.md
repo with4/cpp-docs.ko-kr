@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de790fa55299999be8c4cb4d2945e2b004d20a9e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a415f695f512a9d6263025fc6e45d5f9df754f80
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403909"
 ---
 # <a name="bstrtassign"></a>_bstr_t::Assign
 **Microsoft 전용**  
   
- 복사는 `BSTR` 에 `BSTR` 의해 래핑되는 **_**`bstr_t`합니다.  
+ 복사본을 `BSTR` 에 `BSTR` 래핑되는 **_**`bstr_t`합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,15 +37,15 @@ void Assign(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `s`  
+ *s*  
  `BSTR`로 래핑된 `BSTR`로 복사되는 `_bstr_t`입니다.  
   
 ## <a name="remarks"></a>설명  
- `Assign`은 이진 복사를 수행합니다. 즉, `BSTR`의 전체 길이가 내용과 관계없이 복사됩니다.  
+ **할당** 는 이진 복사, 즉, 전체 길이 `BSTR` 내용에 관계 없이 복사 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp 
 // _bstr_t_Assign.cpp  
   
 #include <comdef.h>  
@@ -117,5 +118,5 @@ bstrWrapper2 = some text
   
 **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_bstr_t 클래스](../cpp/bstr-t-class.md)

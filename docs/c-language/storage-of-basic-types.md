@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388117"
 ---
 # <a name="storage-of-basic-types"></a>기본 형식의 저장소
 다음 표에서는 각 기본 형식과 관련된 저장소에 대해 요약합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391667"
 ---
 # <a name="interpreting-more-complex-declarators"></a>더 복잡한 선언자 해석
 선언자를 괄호로 묶어 "복합 선언자"의 특정 해석을 지정할 수 있습니다. 복합 선언자는 둘 이상의 배열, 포인터 또는 함수 한정자로 한정된 식별자입니다. 배열, 포인터 및 함수 한정자의 다양한 조합을 단일 식별자에 적용할 수 있습니다. 일반적으로 `typedef`를 사용하여 선언을 단순화할 수 있습니다. [Typedef 선언](../c-language/typedef-declarations.md)을 참조하세요.  

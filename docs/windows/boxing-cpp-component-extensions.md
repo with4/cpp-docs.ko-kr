@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861359"
 ---
 # <a name="boxing--c-component-extensions"></a>Boxing(C++ 구성 요소 확장)
 Visual c + + 컴파일러 호출 프로세스의 개체에 값 형식을 변환할 수 *boxing*, 이라는 프로세스에서 값 형식에 개체를 변환 하 고 *unboxing*합니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378235"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd(개체 파일에 디버그 정보 삽입)
 함께 사용 하면 미리 컴파일된 헤더 (.pch) 파일에서 만든 전체 디버깅 정보 모든 개체 파일에 삽입 된 [/Yc](../../build/reference/yc-create-precompiled-header-file.md) 및 [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) 옵션입니다. 더 이상 사용되지 않습니다.  

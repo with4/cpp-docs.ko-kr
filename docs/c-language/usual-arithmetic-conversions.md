@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388859"
 ---
 # <a name="usual-arithmetic-conversions"></a>일반적인 산술 변환
 대부분의 C 연산자는 형식 변환을 수행하여 식의 피연산자를 공용 형식으로 변환하거나 short 값을 컴퓨터 연산에서 사용되는 정수 크기로 확장합니다. C 연산자로 수행되는 변환은 특정 연산자와 피연산자의 형식에 따라 달라집니다. 하지만 많은 연산자는 정수 계열 및 부동 형식의 피연산자에 대해 비슷한 변환을 수행합니다. 이러한 변환을 "산술 변환"이라고 합니다. 피연산자 값을 호환되는 형식으로 변환하는 경우 해당 값이 변경되지 않습니다.  

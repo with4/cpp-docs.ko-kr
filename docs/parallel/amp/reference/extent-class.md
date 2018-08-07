@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693252"
 ---
 # <a name="extent-class-c-amp"></a>extent 클래스(C++ AMP)
 벡터를 나타냅니다 *N* 의 범위를 지정 하는 정수 값은 *N*-0 원점이 차원 공간입니다. 벡터의 값은 가장 덜 중요 한에 가장 중요 한에서 정렬 됩니다.  

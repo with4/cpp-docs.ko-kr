@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367492"
 ---
 # <a name="cnotsupportedexception-class"></a>CNotSupportedException 클래스
 지원되지 않는 기능을 요청한 결과인 예외를 나타냅니다.  

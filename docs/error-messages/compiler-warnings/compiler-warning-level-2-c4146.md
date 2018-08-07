@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296691"
 ---
 # <a name="compiler-warning-level-2-c4146"></a>컴파일러 경고 (수준 2) C4146
 단항 빼기 연산자 결과 역시 unsigned 부호 없는 형식에 적용  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198744"
 ---
 # <a name="fatal-error-c1313"></a>심각한 오류 C1313
 컴파일러 한계: 형식 블록 수 number 보다 깊은 수준으로 중첩 될 수 없습니다  

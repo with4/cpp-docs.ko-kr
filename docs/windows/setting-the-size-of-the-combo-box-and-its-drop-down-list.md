@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889347"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>콤보 상자 및 드롭다운 목록의 크기 설정
 대화 상자에 추가 하면 콤보 상자 크기. 드롭다운 목록 상자의 크기를 지정할 수 있습니다.  

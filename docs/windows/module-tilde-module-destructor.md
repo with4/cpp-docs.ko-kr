@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881366"
 ---
 # <a name="modulemodule-destructor"></a>Module::~Module 소멸자
 Module 클래스의 현재 인스턴스 초기화를 해제합니다.  

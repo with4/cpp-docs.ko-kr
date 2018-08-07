@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318324"
 ---
 # <a name="project-build-error-prj0031"></a>프로젝트 빌드 오류 PRJ0031
 사용자 지정 빌드에 대 한 '출력' 속성이 한 단계씩 코드 실행 매크로 대 한 파일에 포함 된 ' file' ' '로 확인 됨 'macro_expansion'.  

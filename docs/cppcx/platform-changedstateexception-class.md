@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087951"
 ---
 # <a name="platformchangedstateexception-class"></a>Platform::ChangedStateException 클래스
 개체의 내부 상태가 변경되어 메서드의 결과가 무효화될 때 throw됩니다.  

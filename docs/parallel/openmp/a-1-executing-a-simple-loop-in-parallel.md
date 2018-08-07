@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686128"
 ---
 # <a name="a1---executing-a-simple-loop-in-parallel"></a>A.1   병렬로 단일 루프 실행
 다음 예제에서는 사용 하 여 간단한 루프를 병렬화 하는 `parallel for` 지시문 ([2.5.1 섹션](../../parallel/openmp/2-5-1-parallel-for-construct.md) 페이지 16). 루프 반복 변수 기본적으로 private 이므로 개인 절에 명시적으로 지정할 필요는 없습니다.  

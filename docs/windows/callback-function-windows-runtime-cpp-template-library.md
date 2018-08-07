@@ -1,5 +1,5 @@
 ---
-title: 콜백 함수 (Windows 런타임 c + + 템플릿 라이브러리) | Microsoft Docs
+title: 콜백 함수 (Windows Runtime c + + 템플릿 라이브러리) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27d89f60f27c71cec0f158375805e3e8487fd7a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92cb3dd6d21f2ca7e4a119d110510d91085f38da
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461494"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Callback 함수(Windows Runtime C++ 템플릿 라이브러리)
 멤버 함수가 콜백 메서드인 개체를 만듭니다.  
@@ -198,56 +199,56 @@ ComPtr<TDelegateInterface> Callback(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `TDelegateInterface`  
+ *TDelegateInterface*  
  이벤트가 발생할 때 호출할 대리자의 인터페이스를 지정하는 템플릿 매개 변수입니다.  
   
- `TCallback`  
+ *TCallback*  
  개체 및 해당 콜백 멤버 함수를 나타내는 개체 형식을 지정하는 템플릿 매개 변수입니다.  
   
- `TCallbackObject`  
+ *TCallbackObject*  
  이벤트가 발생할 때 호출할 메서드가 메서드 함수인 개체를 지정하는 템플릿 매개 변수입니다.  
   
- `TArg1`  
+ *TArg1*  
  첫 번째 콜백 메서드 인수의 형식을 지정하는 템플릿 매개 변수입니다.  
   
- `TArg2`  
+ *TArg2*  
  두 번째 콜백 메서드 인수의 형식을 지정하는 템플릿 매개 변수입니다.  
   
- `TArg3`  
+ *TArg3*  
  세 번째 콜백 메서드 인수의 형식을 지정하는 템플릿 매개 변수입니다.  
   
- `TArg4`  
+ *TArg4*  
  네 번째 콜백 메서드 인수의 형식을 지정하는 템플릿 매개 변수입니다.  
   
- `TArg5`  
+ *TArg5*  
  다섯 번째 콜백 메서드 인수의 형식을 지정하는 템플릿 매개 변수입니다.  
   
- `TArg6`  
+ *TArg6*  
  여섯 번째 콜백 메서드 인수의 형식을 지정하는 템플릿 매개 변수입니다.  
   
- `TArg7`  
+ *TArg7*  
  일곱 번째 콜백 메서드 인수의 형식을 지정하는 템플릿 매개 변수입니다.  
   
- `TArg8`  
+ *TArg8*  
  여덟 번째 콜백 메서드 인수의 형식을 지정하는 템플릿 매개 변수입니다.  
   
- `TArg9`  
+ *TArg9*  
  아홉 번째 콜백 메서드 인수의 형식을 지정하는 템플릿 매개 변수입니다.  
   
- `callback`  
+ *콜백*  
  콜백 개체 및 해당 멤버 함수를 나타내는 개체입니다.  
   
- `object`  
+ *object*  
  이벤트가 발생할 때 해당 멤버 함수를 호출하는 개체입니다.  
   
- `method`  
+ *method*  
  이벤트가 발생할 때 호출할 멤버 함수입니다.  
   
 ## <a name="return-value"></a>반환 값  
  멤버 함수가 지정된 콜백 메서드인 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 대리자 개체의 기본은 IInspectable이 아닌 IUnknown이어야 합니다.  
+ 대리자 개체의 기본 이어야 합니다 `IUnknown`이 아니라 `IInspectable`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** event.h  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383867"
 ---
 # <a name="range-of-char-values"></a>char 값의 범위
 **ANSI 3.2.1.1** "일반" **char**에 **signed char** 또는 `unsigned char`과 같은 값의 범위가 있는지 여부  

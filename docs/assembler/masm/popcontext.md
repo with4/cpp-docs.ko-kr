@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055302"
 ---
 # <a name="popcontext"></a>POPCONTEXT
 현재 전체 또는 일부를 복원 `context` (에 의해 저장 된 [PUSHCONTEXT](../../assembler/masm/pushcontext.md) 지시문). `context` 수 **가정**, `RADIX`, **나열**, **CPU**, 또는 **모든**합니다.  

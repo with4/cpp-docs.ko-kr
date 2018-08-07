@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135120"
 ---
 # <a name="member-declarations-within-a-class-or-interface-ccli"></a>클래스 또는 인터페이스 내에서 멤버 선언(C++/CLI)
 속성 및 연산자 선언에 광범위 하 게 변경 되었습니다 Managed Extensions에서 c + +에 대 한 Managed Extensions 디자인에서 노출 된 기본 구현 세부 사항 숨기기 Visual c + +입니다. 이벤트 선언도 수정 되었습니다.  

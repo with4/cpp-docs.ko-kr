@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136209"
 ---
 # <a name="marshalcontextmarshalas"></a>marshal_context::marshal_as
 관리 되는 및 네이티브 데이터 형식 간에 변환 하려면 특정 데이터 개체에 대해 마샬링을 수행 합니다.  

@@ -20,15 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d3de4c7538c36ac1a55ea2519fa26a878663a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7e43d5f528e85ea3233b9ea4a68e83ee0cfb7f3
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026409"
 ---
 # <a name="complex-class"></a>complex 클래스
 
-템플릿 클래스는 **Type** 형식의 두 개체를 저장하는 개체를 설명하며, 한 개체는 복소수의 실수부를 나타내고 다른 개체는 허수부를 나타냅니다.
+형식의 두 개체를 저장 하는 개체를 설명 하는 템플릿 클래스 `Type`, 복소수 허수 부분을 나타내는 하나을 실수 부분을 나타내는 하나입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -41,7 +42,7 @@ class complex
 
 ## <a name="remarks"></a>설명
 
-**Type** 클래스의 개체:
+클래스의 개체 `Type`:
 
 - 기본 동작과 함께 공용 기본 생성자, 소멸자, 복사 생성자 및 대입 연산자를 포함합니다.
 
@@ -49,9 +50,9 @@ class complex
 
 - 필요에 따라 기본 동작으로 부동 소수점 형식을 위해 정의된 산술 연산자 및 수학 함수를 정의합니다.
 
-특히 복사본 생성과 뒤에 할당이 이어지는 기본 생성 간에는 차이가 없을 수도 있습니다. **Type** 클래스의 개체에 대한 작업 중 예외를 throw하는 작업이 없을 수도 있습니다.
+특히 복사본 생성과 뒤에 할당이 이어지는 기본 생성 간에는 차이가 없을 수도 있습니다. 클래스의 개체에서 작업을 하나도 `Type` 예외를 throw 할 수 있습니다.
 
-세 개의 부동 소수점 형식에 대해 템플릿 클래스 complex의 명시적 특수화가 존재합니다. 이 구현에서, 다른 형식의 **Type** 값은 실제 계산을 위해 **double**로 형식 캐스트됩니다. **double** 결과는 **Type** 형식의 저장된 개체에 다시 할당됩니다`.`
+세 개의 부동 소수점 형식에 대해 템플릿 클래스 complex의 명시적 특수화가 존재합니다. 이 구현에서 다른 형식의 값입니다 `Type` 형식으로 캐스팅 됩니다 **이중** 실제 계산을 위해 사용 하 여 합니다 **double** 결과 형식의 저장 된 개체에 다시 할당 `Type``.`
 
 ### <a name="constructors"></a>생성자
 
@@ -107,11 +108,11 @@ constexpr complex(
 
 ### <a name="parameters"></a>매개 변수
 
-`_RealVal` 생성 되 고 있는 복소수를 초기화 하는 데 사용 되는 실제 부분의 값입니다.
+*_RealVal* 생성 되 고 있는 복소수를 초기화 하는 데 사용 되는 실수부의 값입니다.
 
-`_ImagVal` 생성 되 고 있는 복소수를 초기화 하는 데 사용 되는 허수 부분의 값입니다.
+*_ImagVal* 생성 되 고 있는 복소수를 초기화 하는 데 허수 부분의 값입니다.
 
-`complexNum` 해당 실수 및 허수 부분이 생성 되 고 있는 복소수를 초기화할 때 사용 되는 복소수.
+*complexNum* 복소수의 실수부와 허수부은 생성 되 고 있는 복소수를 초기화 하는 데 사용 됩니다.
 
 ### <a name="remarks"></a>설명
 
@@ -133,7 +134,7 @@ complex(const complex& right);
 
 위 템플릿은 복사 생성자입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // complex_complex.cpp
@@ -186,7 +187,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 허수 값을 추출할 복소수.
+*오른쪽* 복소수의 허수 값이 추출 합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -196,7 +197,7 @@ T imag(const T& right);
 
 복소수 *a + bi*의 경우 허수부 또는 성분은 *Im(a + bi) = b.* 입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // complex_imag.cpp
@@ -242,7 +243,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 복소수 또는 대상 복소수의 매개 변수와 동일한 형식의 숫자.
+*오른쪽* 복소수 이거나 대상 복소수의 매개 변수와 동일한 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -252,7 +253,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // complex_op_me.cpp
@@ -325,7 +326,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 복소수 또는 대상 복소수의 매개 변수와 동일한 형식의 숫자.
+*오른쪽* 복소수 이거나 대상 복소수의 매개 변수와 동일한 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -335,7 +336,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // complex_op_pe.cpp
@@ -427,9 +428,9 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>매개 변수
 
-`complexNum` 대상 복소수에서 뺄 복소수.
+*complexNum* 대상 복소수에서 뺄 복소수입니다.
 
-`_RealPart` 대상 복소수에서 뺄 실수입니다.
+*_RealPart* 대상 복소수에서 뺄 실수입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -439,7 +440,7 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // complex_op_se.cpp
@@ -533,9 +534,9 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>매개 변수
 
-`complexNum` 대상 복소수에서 뺄 복소수.
+*complexNum* 대상 복소수에서 뺄 복소수입니다.
 
-`_RealPart` 대상 복소수에서 뺄 실수입니다.
+*_RealPart* 대상 복소수에서 뺄 실수입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -545,7 +546,7 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // complex_op_de.cpp
@@ -633,7 +634,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 복소수 또는 대상 복소수의 매개 변수와 동일한 형식의 숫자.
+*오른쪽* 복소수 이거나 대상 복소수의 매개 변수와 동일한 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -643,7 +644,7 @@ complex<Type>& operator=(const Type& right);
 
 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // complex_op_as.cpp
@@ -710,7 +711,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 실제 값을 추출할 복소수.
+*오른쪽* 복소수의 실제 값을 추출 합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -720,7 +721,7 @@ T real(const T& right);
 
 복소수 *a + bi*의 경우 실수부 또는 성분은 *Re(a + bi) = a.* 입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // complex_class_real.cpp
@@ -762,9 +763,9 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>설명
 
-`value_type`은 complex 클래스 **Type** 템플릿 매개 변수의 동의어입니다.
+`value_type` 동의어가 클래스에 대 한 복잡 한 `Type` 템플릿 매개 변수입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // complex_valuetype.cpp
@@ -791,5 +792,5 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>참고자료
 
-[복잡 한 멤버](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
+[complex 멤버](http://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
 [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

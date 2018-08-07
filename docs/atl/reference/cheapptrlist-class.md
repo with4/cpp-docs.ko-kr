@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5b164fda27775a7b3fb272d8718c31815cb1ca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd3342e7c64a13761830073cd3ed82b627b8c407
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879298"
 ---
 # <a name="cheapptrlist-class"></a>CHeapPtrList 클래스
 이 클래스는 힙에 대 한 포인터의 목록을 구성할 때 유용한 메서드를 제공 합니다.  
@@ -40,10 +41,10 @@ class CHeapPtrList
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `E`  
+ *E*  
  컬렉션 클래스에 저장할 개체 형식입니다.  
   
- `Allocator`  
+ *할당자*  
  사용 하는 메모리 할당 클래스입니다. 기본값은 [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)합니다.  
   
 ## <a name="members"></a>멤버  
@@ -55,7 +56,7 @@ class CHeapPtrList
 |[CHeapPtrList::CHeapPtrList](#cheapptrlist)|생성자입니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 클래스는 생성자를 제공 하 고 메서드를 파생 [CAtlList](../../atl/reference/catllist-class.md) 및 [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) 힙에 대 한 포인터를 저장 하는 컬렉션 클래스 개체 만들기를 지원할 수 있습니다.  
+ 이 클래스는 생성자를 제공 하 고 메서드에서 파생 [CAtlList](../../atl/reference/catllist-class.md) 하 고 [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) 힙 포인터를 저장 하는 컬렉션 클래스 개체의 생성을 지원 하기 위해.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CAtlList](../../atl/reference/catllist-class.md)  
@@ -73,11 +74,11 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBlockSize`  
+ *nBlockSize*  
  블록 크기입니다.  
   
 ### <a name="remarks"></a>설명  
- 블록 크기는 새 요소가 필요한 경우 할당 된 메모리의 업무량을 측정 합니다. 블록 크기는 메모리 할당 루틴에 대 한 호출 줄어들지만 더 많은 리소스를 사용 하 여 합니다.  
+ 블록 크기는 새 요소가 필요한 경우 할당 된 메모리의 크기를 측정 합니다. 블록 크기가 클수록 메모리 할당 루틴에 대 한 호출 줄어들지만 더 많은 리소스를 사용 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CAtlList 클래스](../../atl/reference/catllist-class.md)   

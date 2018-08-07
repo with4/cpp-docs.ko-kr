@@ -17,11 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc8e80fe97bc0a4ace0cb53e43f306ad2b85309
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 435b853268d1fe8c324d217d1ad14f71e4b5a295
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462939"
 ---
 # <a name="comptrrefgetaddressof-method"></a>ComPtrRef::GetAddressOf 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -33,10 +34,10 @@ InterfaceType* const * GetAddressOf() const;
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 현재 ComPtrRef 개체에서이 나타내는 인터페이스에 대 한 포인터의 주소입니다.  
+ 현재이 나타내는 인터페이스에 대 한 포인터 주소의 **ComPtrRef** 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 현재 ComPtrRef 개체에서이 나타내는 인터페이스에 대 한 포인터의 주소를 검색 합니다.  
+ 현재이 나타내는 인터페이스에 대 한 포인터의 주소를 검색 **ComPtrRef** 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

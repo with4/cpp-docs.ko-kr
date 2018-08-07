@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e443b233e19f6cdc64d7d6021a9a9c078a4f327
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aad73939b8fd011fd6e1c9bf16f8dfe6eb303ff3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405745"
 ---
 # <a name="bstrtoperator--"></a>_bstr_t::operator +=, +
 **Microsoft 전용**  
@@ -32,45 +33,34 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      _bstr_t& operator+=(  
-   const _bstr_t& s1   
-);  
-_bstr_t operator+(  
-   const _bstr_t& s1   
-);  
-friend _bstr_t operator+(  
-   const char* s2,  
-   const _bstr_t& s1   
-);  
-friend _bstr_t operator+(  
-   const wchar_t* s3,  
-   const _bstr_t& s1   
-);  
+_bstr_t& operator+=( const _bstr_t& s1 );  
+_bstr_t operator+( const _bstr_t& s1 );  
+friend _bstr_t operator+( const char* s2, const _bstr_t& s1);  
+friend _bstr_t operator+( const wchar_t* s3, const _bstr_t& s1);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *S1*  
+ *s1*  
  `_bstr_t` 개체입니다.  
   
- *S2*  
+ *s2*  
  멀티바이트 문자열입니다.  
   
- `s3`  
+ *s3*  
  유니코드 문자열입니다.  
   
 ## <a name="remarks"></a>설명  
  이러한 연산자는 다음과 같이 문자열 연결을 수행합니다.  
   
--   **operator + = (***s1***)** 에 캡슐화 된 문자를 추가 `BSTR` 의 *s1* 이 개체의 캡슐화 된 의끝에`BSTR`.      
+-   **operator + = (***s1***)** 캡슐화 된 문자를 추가 `BSTR` 의 *s1* 캡슐화 가이개체의끝에`BSTR`.  
   
--   **operator + (***s1***)** 반환 새 `_bstr_t` 이 개체를 연결 하 여 형식이 `BSTR` 의 *s1*합니다.      
+-   **operator + (***s1***)** 새 반환 `_bstr_t` 이 개체를 연결 하 여 형성 된 `BSTR` 의 지 문으로 *s1*합니다.  
   
--   **operator + (***s2***&#124;***s1***)** 반환 새 `_bstr_t` 연결 하 여 만들어집니다는 멀티 바이트 문자열 *s2*유니코드로 변환 된와 `BSTR` 에 캡슐화 된 *s1*합니다.          
+-   **operator + (***s2***&#124;***s1***)** 새 반환 `_bstr_t` 연결 하 여 형성 된를 멀티 바이트 문자열 *s2*유니코드로 변환 된와 `BSTR` 캡슐화 *s1*합니다.          
   
--   **operator + (** `s3` **,***s1***)** 반환 새 `_bstr_t` 유니코드 문자열을 연결 하 여 형식이 `s3` 와 `BSTR` 에 캡슐화 된 *s1*합니다.        
+-   **operator + (***s3* **하십시오***s1***)** 반환 된 새 `_bstr_t` 유니코드 문자열을 연결 하 여 형성 된 *s3* 사용 하 여 합니다 `BSTR` 캡슐화 *s1*합니다.        
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_bstr_t 클래스](../cpp/bstr-t-class.md)

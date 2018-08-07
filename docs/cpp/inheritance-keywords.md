@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1088a920e5d023e4dea78e55610bebc0f20c2bac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cadeefc9ec150aedcb99f1ed531a3478aecfce89
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408416"
 ---
 # <a name="inheritance-keywords"></a>상속 키워드
 **Microsoft 전용**  
@@ -50,20 +51,20 @@ class [__virtual_inheritance] class-name;
   
  C++를 사용하면 클래스의 정의 이전에 클래스 멤버에 대한 포인터를 선언할 수 있습니다. 예를 들어:  
   
-```  
+```cpp 
 class S;  
 int S::*p;  
 ```  
   
- 위의 코드에서 `p` S. 클래스의 정수 멤버에 대 한 포인터로 선언 그러나 `class S` 에이 코드에서 정의 된 아직만 선언 합니다. 컴파일러는 이러한 포인터를 발견하면 포인터의 일반화된 표현을 만들어야 합니다. 표현의 크기는 지정된 상속 모델에 따라 달라집니다. 상속 모델을 컴파일러에 지정하는 방법에는 다음 네 가지가 있습니다.  
+ 위의 코드에서 `p` S. 클래스의 정수 멤버에 대 한 포인터로 선언 됩니다 그러나 `class S` 에이 코드에 정의 된 아직 것만 선언 되었습니다. 컴파일러는 이러한 포인터를 발견하면 포인터의 일반화된 표현을 만들어야 합니다. 표현의 크기는 지정된 상속 모델에 따라 달라집니다. 상속 모델을 컴파일러에 지정하는 방법에는 다음 네 가지가 있습니다.  
   
--   IDE에서 **멤버 포인터 표현**  
+-   IDE의 **멤버 포인터 표현**  
   
--   사용 하 여 명령줄에서 [/vmg](../build/reference/vmb-vmg-representation-method.md) 전환  
+-   사용 하 여 명령줄의 [/vmg](../build/reference/vmb-vmg-representation-method.md) 전환  
   
 -   사용 하 여 [pointers_to_members](../preprocessor/pointers-to-members.md) pragma  
   
--   상속 키워드 `__single_inheritance`, `__multiple_inheritance` 및 `__virtual_inheritance` 사용. 이 방법은 클래스별로 상속 모델을 제어합니다.  
+-   상속 키워드를 사용 하 여 **__single_inheritance**하십시오 **__multiple_inheritance**, 및 **__virtual_inheritance**합니다. 이 방법은 클래스별로 상속 모델을 제어합니다.  
   
     > [!NOTE]
     >  항상 클래스를 정의한 후 클래스 멤버에 대한 포인터를 선언하면 이러한 옵션을 사용할 필요가 없습니다.  
@@ -72,7 +73,7 @@ int S::*p;
   
  위의 예제를 다음과 같이 변경한 경우  
   
-```  
+```cpp 
 class __single_inheritance S;  
 int S::*p;  
 ```  
@@ -84,5 +85,5 @@ int S::*p;
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [키워드](../cpp/keywords-cpp.md)

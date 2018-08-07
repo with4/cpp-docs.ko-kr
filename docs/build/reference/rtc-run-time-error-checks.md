@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378459"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC(런타임 오류 검사)
 설정 및 런타임 오류 검사 기능을 함께에서 사용 하지 않도록 설정 하는 데 사용 된 [runtime_checks](../../preprocessor/runtime-checks.md) pragma입니다.  

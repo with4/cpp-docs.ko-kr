@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383981"
 ---
 # <a name="initializing-strings"></a>문자열 초기화
 문자열 리터럴(또는 와이드 문자열 리터럴)로 문자(또는 와이드 문자) 배열을 초기화할 수 있습니다. 예:  

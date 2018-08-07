@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374374"
 ---
 # <a name="loading-all-imports-for-a-delay-loaded-dll"></a>지연 로드된 DLL에 대한 모든 가져오기 로드
 **__HrLoadAllImportsForDll** delayhlp.cpp에 정의 된 함수를 사용 하 여 지정 된 DLL에서 모든 가져오기 로드 하면 링커에서 [/delayload](../../build/reference/delayload-delay-load-import.md) 링커 옵션입니다.  

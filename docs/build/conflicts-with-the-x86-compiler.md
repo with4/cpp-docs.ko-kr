@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366915"
 ---
 # <a name="conflicts-with-the-x86-compiler"></a>x86 컴파일러와 충돌
 데이터 형식은 4 바이트 정렬 되지 않은 자동으로 스택에 x86를 사용 하는 경우 보다 더 큰 응용 프로그램을 컴파일하려면 컴파일러입니다. 때문에 컴파일러는 예를 들어 64 비트 정수 4 바이트 보다 큰 4 바이트 정렬 된 스택이 8 바이트 주소를 자동으로 정렬할 수 없습니다 x86 아키텍처입니다.  

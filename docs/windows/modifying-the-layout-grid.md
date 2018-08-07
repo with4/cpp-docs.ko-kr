@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880321"
 ---
 # <a name="modifying-the-layout-grid"></a>레이아웃 모눈 수정
 배치 하거나 대화 상자에서 컨트롤 정렬 하는 경우 보다 정확 하 게 배치 하기 위한 레이아웃 모눈을 사용할 수 있습니다. 표의 상태에서 컨트롤 "에 맞춰서" 눈금의 점선은 자석 마치 나타납니다. 이 "모눈에 맞춤" 기능을 켜고 끄는 하 고 레이아웃 표 형태 셀의 크기를 변경할 수 있습니다.  

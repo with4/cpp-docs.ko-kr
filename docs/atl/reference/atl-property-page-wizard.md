@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359784"
 ---
 # <a name="atl-property-page-wizard"></a>ATL 속성 페이지 마법사
 이 마법사 [ATL 프로젝트에 속성 페이지를 추가](../../atl/reference/adding-an-atl-property-page.md) 또는 MFC 프로젝트에 ATL 지원 합니다. 속성을 설정 하기 위한 사용자 인터페이스를 제공 하는 ATL 속성 페이지 (또는 메서드를 호출할) 하나 이상의 COM 개체입니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692667"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>비동기 에이전트 라이브러리의 모범 사례
 이 문서에서는 비동기 에이전트 라이브러리를 효과적으로 사용 하는 방법에 설명 합니다. 에이전트 라이브러리는 행위자 기반 프로그래밍 모델 및 정교 하지 않은 데이터 흐름에 대 한 전달 및 파이프라인 작업을 위해 in-process 메시지의 수준을 올립니다.  

@@ -37,11 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2bcb774d7ebe7e71c3877af326177bbf8d7160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 480bf65d61581866fe447c9563a267d08d17c838
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207655"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -62,7 +63,7 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>매개 변수
 
-*번호*<br/>
+*필드가*<br/>
 분자입니다.
 
 *denom*<br/>
@@ -73,23 +74,23 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ## <a name="return-value"></a>반환 값
 
-**remquo** 의 부동 소수점 나머지를 반환 *x* / *y*합니다. 하는 경우의 값 *y* 이 0.0 인 경우 **remquo** 자동 NaN을 반환 합니다. 자동 NaN으로 표현에 대 한 내용은 **printf** 제품군, 참조 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)합니다.
+**remquo** 부동 소수점 나머지를 반환 합니다 *x* / *y*합니다. 경우 값 *y* 는 0.0 **remquo** quiet NaN을 반환 합니다. 자동 NaN 표현에 대 한 자세한 합니다 **printf** 제품군을 참조 하십시오 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)합니다.
 
 ## <a name="remarks"></a>설명
 
-**remquo** 함수는 부동 소수점 나머지 계산 *f* 의 *x* / *y* 되도록 *x*   =  *i* * *y* + *f*여기서 *i* 은 정수 *f* 와 동일한 기호가 *x*, 및의 절대값 *f* 의 절대 값 보다 작으면 *y*합니다.
+합니다 **remquo** 함수는 부동 소수점 나머지를 계산 *f* 의 *x* / *y* 되도록 *x*   =  *합니까* \* *y* + *f*여기서 *있습니까* 정수가 를 *f* 와 부호가 같도록 *x*, 및의 절대값 *f* 의 절대값 보다 작습니다 *y*합니다.
 
-C + + 오버 로드의 오버 로드를 호출할 수 있도록 허용 **remquo** 사용 하 고 반환 **float** 또는 **긴** **double** 값입니다. C 프로그램에서 **remquo** 항상는 두 가지 **double** 인수 및 반환 된 **double**합니다.
+C + +에서는 오버 로드를 허용 하므로 오버 로드를 호출할 수 있습니다 **remquo** 및 반환 하는 **float** 하거나 **긴** **double** 값입니다. C 프로그램에서 **remquo** 는 항상 두 가지 **double** 인수 및 반환 된 **double**합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|함수|필수 헤더(C)|필수 헤더(C++)|
+|기능|필수 헤더(C)|필수 헤더(C++)|
 |--------------|---------------------|-|
-|**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath> 또는 \<math.h>|
+|**remquo**하십시오 **remquof**, **remquol**|\<math.h>|\<cmath> 또는 \<math.h>|
 
 호환성에 대한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```C
 // crt_remquo.c

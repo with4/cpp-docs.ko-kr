@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5e2ceff83704632a77ef0fb1eedecaa9e678b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 140bdea373442e1e987ce30c2421057b9355796b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954020"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/07/2018
 ## <a name="remarks"></a>설명
 
 > [!NOTE]
-> 사용 하 여 컴파일된 코드에서 **/clr**,이 헤더 ï ´ ù.
+> 코드를 사용 하 여 컴파일된 **/clr**,이 헤더가 차단 됩니다.
 
 *비동기 공급자*는 함수 호출의 결과를 저장합니다. *비동기 반환 개체*는 함수 호출 결과를 검색하는 데 사용됩니다. *연결된 비동기 상태*를 통해 비동기 공급자와 비동기 반환 개체 하나 이상 사이에서 통신할 수 있습니다.
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/07/2018
 
 템플릿 함수 `async`와 템플릿 클래스 `promise` 및 `packaged_task`는 비동기 공급자입니다. 템플릿 클래스 `future` 및 `shared_future`는 비동기 반환 개체를 설명합니다.
 
-각 템플릿 클래스 `promise`, `future` 및 `shared_future`에는 `void` 형식에 대한 특수화와 참조별로 값을 저장 및 검색하기 위한 부분 특수화가 포함됩니다. 이러한 특수화는 반환된 값을 저장 및 검색하는 함수의 시그니처와 의미 체계에만 있는 기본 템플릿과 다릅니다.
+각 템플릿 클래스 `promise`, `future`, 및 `shared_future` 유형에 대 한 특수화가 **void** 및 저장 하 고 참조로 값을 검색 하는 부분 특수화 합니다. 이러한 특수화는 반환된 값을 저장 및 검색하는 함수의 시그니처와 의미 체계에만 있는 기본 템플릿과 다릅니다.
 
 템플릿 클래스 `future` 및 `shared_future`는 이전 버전과의 호환성을 위해 유지된 경우를 제외하고 소멸자에서 절대 차단되지 않습니다. 모든 다른 future와 달리 `std::async`로 시작된 작업에 연결된 `future` 또는 마지막 `shared_future`에 대한 소멸자는 작업이 완료되지 않은 경우 차단됩니다. 즉, 이 스레드가 아직 `.get()` 또는 `.wait()`를 호출하지 않아 작업이 계속 실행 중일 경우 소멸자가 차단됩니다. 다음 유용성 메모는 초안 표준에서 `std::async`에 대한 설명에 추가되었습니다. "[참고: std::async에서 가져온 future가 로컬 범위 외부로 이동되면 해당 future를 사용하는 다른 코드는 공유된 상태가 준비가 되도록 future의 소멸자가 차단될 수 있다는 것을 인식해야 합니다. - 메모 종료]" 다른 모든 경우에는 `future` 및 `shared_future` 소멸자가 필요하고 절대 차단되지 않도록 보장됩니다.
 
@@ -82,7 +83,7 @@ ms.lasthandoff: 05/07/2018
 
 ### <a name="enumerations"></a>열거형
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|`future_error` 클래스에서 보고한 오류에 대해 기호화된 이름을 제공합니다.|
 |[future_status](../standard-library/future-enums.md#future_status)|timed wait 함수가 반환할 수 있는 이유에 대해 기호화된 이름을 제공합니다.|

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391817"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>로캘 이름, 언어 및 국가/지역 문자열
 `setlocale` 및 `_create_locale` 함수에 대한 *locale* 인수는 Windows NLS API에서 지원하는 로캘 이름, 언어, 국가/지역 코드 및 코드 페이지를 사용하여 설정할 수 있습니다. *locale* 인수 형식은 다음과 같습니다.  

@@ -19,34 +19,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93c4ec0b4d25f1ca0ec03d9aae1dd9e1c16b79a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 567a3387e79244443b784549d6223a14f78103ce
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464686"
 ---
 # <a name="varianttattach"></a>_variant_t::Attach
 **Microsoft 전용**  
   
- 연결 된 **VARIANT** 개체는 `_variant_t` 개체입니다.  
+ 연결 된 `VARIANT` 개체를 **_variant_t** 개체.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      void Attach(  
-   VARIANT& varSrc   
-);  
+void Attach(VARIANT& varSrc);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
  *varSrc*  
- A **VARIANT** 개체를이 연결 `_variant_t` 개체입니다.  
+ A `VARIANT` 이 연결할 개체 **_variant_t** 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 소유권은 **VARIANT** 캡슐화 하 여 그 합니다. 이 멤버 함수를 캡슐화 된 기존 해제 **VARIANT**, 다음 제공 된 복사 **VARIANT**, 설정 및 해당 **VARTYPE** 를 `VT_EMPTY` 되도록 해당 리소스에서 해제 될 수는 `_variant_t` 소멸자입니다.  
+ 소유권을 `VARIANT` 캡슐화 하 여 그 합니다. 이 멤버 함수는 캡슐화 된 기존 릴리스 `VARIANT`, 다음 제공 된 복사 `VARIANT`를 설정 하 고 해당 `VARTYPE` 값을 vt_empty로 되도록 해당 리소스 에서만 해제할 수 있습니다는 **_variant_t** 소멸자입니다.  
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_variant_t 클래스](../cpp/variant-t-class.md)

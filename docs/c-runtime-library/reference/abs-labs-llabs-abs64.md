@@ -46,11 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc426bbbc28e6eb3b7e6e4a0fa9fab7e74f62093
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b783ee6e4a5ea511a26068ffb89fcc09236f20b1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408130"
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
 
@@ -75,29 +76,29 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>매개 변수
 
-*n*<br/>
+*n*  
 숫자 값입니다.
 
 ## <a name="return-value"></a>반환 값
 
-**abs**, **랩**, **llabs** 및 **_abs64** 함수 매개 변수의 절대 값을 반환 *n*. 반환되는 오류가 없습니다.
+**abs**, **labs**를 **llabs** 고 **_abs64** 함수 매개 변수의 절대 값을 반환 *n*. 반환되는 오류가 없습니다.
 
 ## <a name="remarks"></a>설명
 
-C + +는 오버 로딩을 허용 하기 때문에 오버 로드를 호출할 수 있습니다 **abs** 사용 하 고 반환 **긴**, **긴** **긴**,  **float**, **double**, 및 **긴** **double** 값입니다. 이러한 오버로드는 \<cmath> 헤더에 정의됩니다. C 프로그램에서 **abs** 항상 사용 하 고 int를 반환 합니다.
+C + +에서는 오버 로드 하므로 오버 로드를 호출할 수 있습니다 **abs** 및 반환 하는 **긴**하십시오 **긴** **긴**,  **부동 소수점**, **double**, 및 **long** **double** 값입니다. 이러한 오버로드는 \<cmath> 헤더에 정의됩니다. C 프로그램에서 **abs** 항상 받아서 반환 된 **int**합니다.
 
-**Microsoft 전용**: 이러한 인수를 제공 하는 모든 정수 계열 형식을 사용 하 여 나타낼 수 있는 음의 정수 범위 해당 형식을 사용 하 여 나타낼 수 있는 양의 정수 범위 보다 크기 때문에 변환할 수 없는 함수입니다. 인수의 절대값을 반환 형식으로 표현할 수 없는 경우는 **abs** 함수 변경 하지 않고 인수 값을 반환 합니다. 특히, `abs(INT_MIN)` 반환 **INT_MIN**, `labs(LONG_MIN)` 반환 **LONG_MIN**, `llabs(LLONG_MIN)` 반환 **LLONG_MIN**, 및 `_abs64(_I64_MIN)` 반환 **_I64_MIN**합니다. 즉는 **abs** 양수 값을 보장 하기 위해 함수를 사용할 수 없습니다.
+**Microsoft 전용**: 이러한 인수를 제공할 수는 모든 정수 계열 형식을 사용 하 여 나타낼 수 있는 음의 정수 범위가 해당 형식을 사용 하 여 나타낼 수 있는 양의 정수 범위 보다 크기 때문에 변환할 수 없는 함수입니다. 인수의 절대값을 반환 형식으로 표현할 수 없는 경우는 **abs** 함수 변경 되지 않은 인수 값을 반환 합니다. 특히 `abs(INT_MIN)`는 `INT_MIN`, `labs(LONG_MIN)`는 `LONG_MIN`, `llabs(LLONG_MIN)`는 `LLONG_MIN`, `_abs64(_I64_MIN)`는 `_I64_MIN`을 반환합니다. 즉 합니다 **abs** 양수 값을 보장 하기 위해 함수를 사용할 수 없습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴|필수 C 헤더|필수 C++ 헤더|
+|루틴에서 반환된 값|필수 C 헤더|필수 C++ 헤더|
 |-------------|-----------------------|---------------------------|
-|**abs**, **랩**, **llabs**|\<math.h> 또는 \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> 또는 \<math.h>|
+|**abs**하십시오 **labs**, **llabs**|\<math.h> 또는 \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> 또는 \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> 또는 \<stdlib.h>|
 
-오버 로드 된 버전을 사용 하려면 **abs** c + +에서는에 포함 해야는 \<cmath > 헤더입니다.
+오버 로드 된 버전을 사용 하도록 **abs** c + +에서 포함 해야 합니다는 \<cmath > 헤더입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 프로그램은 여러 숫자의 절대 값을 계산하여 표시합니다.
 
@@ -156,8 +157,8 @@ _abs64(_I64_MIN) returns 0x8000000000000000
 
 ## <a name="see-also"></a>참고자료
 
-[데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
-[부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
-[_cabs](cabs.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
-[imaxabs](imaxabs.md)<br/>
+[데이터 변환](../../c-runtime-library/data-conversion.md)  
+[부동 소수점 지원](../../c-runtime-library/floating-point-support.md)  
+[_cabs](cabs.md)  
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)  
+[imaxabs](imaxabs.md)  

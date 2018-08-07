@@ -52,6 +52,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365157"
 ---
 # <a name="security-identifier-global-functions"></a>보안 식별자 전역 함수
 이러한 함수 개체 일반적인 잘 알려진 SID를 반환합니다.  

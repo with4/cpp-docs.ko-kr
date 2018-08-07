@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054613"
 ---
 # <a name="arm-assembler-command-line-reference"></a>ARM 어셈블러 명령줄 참조
 이 문서에서는 Microsoft ARM 어셈블러 명령줄 설명 *armasm*, Microsoft 구현에는 파일 형식 COFF (공용 개체) ARMv7 Thumb 어셈블리 언어를 컴파일합니다. 링커는 ARM 어셈블러 또는 라이브러리 관리자가 만든 개체 라이브러리와 함께 C 컴파일러에서 생성 되는 개체 코드를 사용 하 여 COFF 코드를 연결할 수 있습니다.  

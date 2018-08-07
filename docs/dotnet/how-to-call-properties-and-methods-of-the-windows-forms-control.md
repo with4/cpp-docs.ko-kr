@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131357"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>방법: Windows Forms 컨트롤의 속성 및 메서드 호출
 때문에 [CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#getcontrol) 에 대 한 포인터를 반환 <xref:System.Windows.Forms.Control?displayProperty=fullName>에 대 한 포인터가 아니라 `WindowsControlLibrary1::UserControl1`, 사용자 정의 컨트롤 형식과의 구성원을 추가 하 고 초기화 하는 것이 좋습니다 [IView::OnInitialUpdate ](../mfc/reference/iview-interface.md#oninitialupdate). 메서드 및 속성을 사용 하 여 호출할 수 이제 `m_ViewControl`합니다.  

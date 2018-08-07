@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382392"
 ---
 # <a name="character-sequences"></a>문자 시퀀스
 **ANSI 3.8.2** 소스 파일 문자 시퀀스의 매핑  

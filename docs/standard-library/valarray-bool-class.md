@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 291abd2cc3ec1d40a448e593b5dc09d64ab95ec3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b6b9cd3778ceb90e5e73a927f098c62d2c1e9bad
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964299"
 ---
 # <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt; 클래스
 
-`bool` 형식의 요소에 대한 템플릿 클래스 **valarray\<Type>** 의 특수 버전입니다.
+템플릿 클래스의 특수 버전 **valarray\<유형 >** 형식의 요소에 **bool**합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/08/2018
 class valarray<bool>
 ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // valarray_bool.cpp

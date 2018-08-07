@@ -46,11 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f3d4945ef339f5166bdd07bc8d5615b161d266
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3bcaebf6578bfb4168d17131989b9b200a7ef8f9
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209458"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -111,25 +112,25 @@ long double scalblnl(
 
 ## <a name="return-value"></a>반환 값
 
-**scalbn** 의 값을 반환 하는 함수 *x* * **FLT_RADIX**<sup>exp</sup> 로그인이 성공 합니다. 오버플로에서 (의 부호에 따라 *x*), **scalbn** + /-반환 **HUGE_VAL**; **errno** 값으로 설정 되어 **ERANGE** .
+합니다 **scalbn** 의 값을 반환 하는 함수 *x* \* **FLT_RADIX**<sup>exp</sup> 로그인이 성공 합니다. 오버플로에서 (의 부호에 따라 *x*), **scalbn** + /-반환 **HUGE_VAL**; **errno** 값으로 설정 되어 **ERANGE** .
 
-에 대 한 자세한 내용은 **errno** 및 반환 값, 참조 가능한 오류 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)합니다.
+에 대 한 자세한 내용은 **errno** 및 가능한 오류 반환 값을 참조 하십시오 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)합니다.
 
 ## <a name="remarks"></a>설명
 
-**FLT_RADIX** 에 정의 된 \<float.h > 값이 2에 네이티브 부동 소수점 기수로 서; 이진 시스템 및 **scalbn** 같습니다 [ldexp](ldexp.md)합니다.
+**FLT_RADIX** 에 정의 된 \<float.h >에 네이티브 부동 소수점 radix로 이진 시스템에서는 값이 2, 및 **scalbn** 동일 [ldexp](ldexp.md)합니다.
 
-C + +는 오버 로딩을 허용 하기 때문에 오버 로드를 호출할 수 있습니다 **scalbn** 및 **scalbln** 사용 하 고 반환 **float** 또는 **긴** **double** 형식입니다. C 프로그램에서 **scalbn** 항상 약간의 **double** 및 **int** 반환는 **double**, 및 **scalbln**항상 약간의 **double** 및 **긴** 반환는 **double**합니다.
+C + +에서는 오버 로드 하므로 오버 로드를 호출할 수 있습니다 **scalbn** 하 고 **scalbln** 및 반환 하는 **float** 하거나 **긴** **이중** 형식입니다. C 프로그램에서 **scalbn** 는 항상 사용을 **double** 및 **int** 반환을 **double**, 및 **scalbln**항상 사용을 **double** 및 **긴** 반환 하 고는 **double**.
 
 ## <a name="requirements"></a>요구 사항
 
-|함수|C 헤더|C++ 헤더|
+|기능|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
-|**scalbn**, **scalbnf**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
+|**scalbn**, **scalbnf**합니다 **scalbnl**를 **scalbln**를 **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
 
 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```C
 // crt_scalbn.c

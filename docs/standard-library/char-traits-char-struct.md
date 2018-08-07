@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a20e9c1df241feb8dd7f16891f1e2a67068f772
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1150de3c94f8a656d46d54b673cb2d08dc05a7be
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959328"
 ---
 # <a name="chartraitsltchargt-struct"></a>char_traits&lt;char&gt; 구조체
 
-`char` 형식 요소에 대한 템플릿 구조체 **char_traits\<CharType>** 의 특수화인 구조체입니다.
+템플릿 구조체의 특수화 인 구조체입니다 **char_traits\<CharType >** 형식의 요소 **char**합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -36,8 +37,8 @@ struct char_traits<char>;
 
 ## <a name="remarks"></a>설명
 
-특수화를 사용하면 구조체에서 이 `char` 형식의 개체를 조작하는 라이브러리 함수를 활용할 수 있습니다.
+특수화는이 형식의 개체를 조작 하는 라이브러리 함수를 활용 하는 구조체를 허용 **char**합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 템플릿 클래스인 [char_traits 클래스](../standard-library/char-traits-struct.md)의 typedef 및 멤버 함수를 참조하세요.

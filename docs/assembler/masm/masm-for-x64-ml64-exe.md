@@ -1,7 +1,7 @@
 ---
 title: MASM (ml64.exe) x64 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42edd255b3f8730263bba9ff683ce16da6fc59b5
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: bb4f4a0ba996be34749350c0d99c1915752fe99e
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253804"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322250"
 ---
 # <a name="masm-for-x64-ml64exe"></a>x64용 MASM (ml64.exe)
 
-Visual Studio x64 대상 코드를 호스트 된 버전이 Microsoft 어셈블러 (MASM)의 32 비트 및 64 비트 포함 됩니다. X64 허용 하는 어셈블러는 ml64.exe 명명 된, 어셈블러 언어입니다. MASM 명령줄 도구는 Visual Studio를 설치 하는 동안 c + + 작업을 선택 하면 설치 됩니다. MASM 도구가 별도 다운로드로 제공 됩니다. 다운로드 하 고 Visual Studio의 복사본을 설치 하는 방법에 지침은 [Visual Studio 설치](/visualstudio/install/install-visual-studio)합니다. 전체 Visual Studio IDE를 설치 하지 않을 않고 원하는 명령줄 도구를 경우 다운로드는 [Visual Studio 2017 용 빌드 도구](https://go.microsoft.com/fwlink/p/?linkid=840931)합니다.
+Visual Studio x64 대상 코드를 호스트 된 버전이 Microsoft 어셈블러 (MASM)의 32 비트 및 64 비트 포함 됩니다. X64 허용 하는 어셈블러는 ml64.exe 명명 된, 어셈블러 언어입니다. MASM 명령줄 도구는 Visual Studio를 설치 하는 동안 c + + 작업을 선택 하면 설치 됩니다. MASM 도구가 별도 다운로드로 제공 됩니다. 다운로드 하 고 Visual Studio의 복사본을 설치 하는 방법에 지침은 [Visual Studio 설치](/visualstudio/install/install-visual-studio)합니다. 전체 Visual Studio IDE를 설치 하지 않을 않고 원하는 명령줄 도구를 경우 다운로드는 [Visual Studio 2017 용 빌드 도구](https://go.microsoft.com/fwlink/p/?linkid=875721)합니다.
 
 작성 하는 MASM을 사용 하려면 x64에 대 한 코드를 명령줄에서 대상으로 x64 개발자 명령 프롬프트를 사용 해야 합니다 필요한 경로 및 다른 환경 변수를 설정 하는 대상입니다. 개발자 명령 프롬프트를 시작 하는 방법에 대 한 정보를 참조 하십시오. [명령줄에서 빌드 C/c + + 코드](../../build/building-on-the-command-line.md)합니다.
 

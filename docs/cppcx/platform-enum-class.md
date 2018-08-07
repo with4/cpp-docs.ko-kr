@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088292"
 ---
 # <a name="platformenum-class"></a>Platform::Enum 클래스
 명명된 상수 집합을 나타내는 값 클래스입니다.  

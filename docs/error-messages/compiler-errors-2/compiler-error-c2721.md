@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231926"
 ---
 # <a name="compiler-error-c2721"></a>컴파일러 오류 C2721
 'specifier': 연산자 키워드 및 형식 간의 저장소 클래스 지정자  

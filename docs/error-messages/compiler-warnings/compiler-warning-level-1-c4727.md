@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282784"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>컴파일러 경고(수준 1) C4727
 "PCH obj_file_1 및 obj_file_2에 타임 스탬프가 동일한 pch_file를 라는 하는 데 사용 합니다.  첫 번째 PCH를 사용합니다.  

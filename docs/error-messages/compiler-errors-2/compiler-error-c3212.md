@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256166"
 ---
 # <a name="compiler-error-c3212"></a>컴파일러 오류 C3212
 'specialization': 템플릿 멤버의 명시적 특수화는 명시적 특수화의 멤버여야 합니다.  

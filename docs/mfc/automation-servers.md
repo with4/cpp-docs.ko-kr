@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343946"
 ---
 # <a name="automation-servers"></a>자동화 서버
 자동화를 다른 응용 프로그램에서 구현 된 개체를 조작 하거나 조작할 수 있도록 개체를 노출 시키는 응용 프로그램에 대 한 수 있게 합니다. 자동화 서버는 다른 응용 프로그램에 프로그래밍 가능 개체 (자동화 개체 라고 함)을 노출 하는 응용 프로그램 (호출 [자동화 클라이언트](../mfc/automation-clients.md)). 자동화 서버는 자동화 구성 요소 라고도 합니다.  

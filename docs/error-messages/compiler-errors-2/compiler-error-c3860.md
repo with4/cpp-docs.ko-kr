@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268320"
 ---
 # <a name="compiler-error-c3860"></a>컴파일러 오류 C3860
 형식 인수 목록에 클래스 형식 이름 다음의 형식 매개 변수 목록에 사용 된 순서 매개 변수를 나열 해야 합니다.  

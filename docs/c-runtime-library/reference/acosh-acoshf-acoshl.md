@@ -40,11 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc5ec18eec5be6ee0cc696768be65cd62b74bdc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 546006fcf1c559317b4afff424976db8109442e7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404754"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -65,31 +66,31 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>매개 변수
 
-*x*<br/>
+*x*  
 부동 소수점 값입니다.
 
 ## <a name="return-value"></a>반환 값
 
-**acosh** 의 역 코사인 (쌍 곡 아크코사인)을 반환 하는 함수 *x*합니다. 이러한 함수는 도메인에 대해 유효한 *x* ≥ 1입니다. 경우 *x* 1 보다 작으면 **errno** 로 설정 된 **EDOM** 결과 quiet NaN입니다. 경우 *x* 가 quiet NaN, 무한 또는 무한대 이면 동일한 값이 반환 됩니다.
+합니다 **acosh** 의 역 쌍 곡 코사인 (쌍곡선 아크코사인)를 반환 하는 함수 *x*합니다. 도메인을 통해 이러한 함수는 유효한 *x* ≥ 1입니다. 경우 *x* 1 보다 작으면 `errno` 로 설정 된 `EDOM` 결과 quiet NaN입니다. 하는 경우 *x* 는 quiet NaN, 무한 또는 무한대 이면 동일한 값이 반환 됩니다.
 
-|입력|SEH 예외|**_matherr** 예외|
+|입력|SEH 예외|`_matherr` 예외|
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|없음|없음|
 |*x* < 1|없음|없음|
 
 ## <a name="remarks"></a>설명
 
-C + +를 사용 하는 경우의 오버 로드를 호출할 수 있습니다 **acosh** 사용 하 고 반환 **float** 또는 **긴** **double** 값입니다. C 프로그램에서 **acosh** 항상 사용 하 고 반환 **double**합니다.
+C + +를 사용 하는 경우의 오버 로드를 호출할 수 있습니다 **acosh** 및 반환 하는 **float** 하거나 **긴** **double** 값입니다. C 프로그램에서 **acosh** 항상 받아서 반환 **double**합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|함수|C 헤더|C++ 헤더|
+|기능|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
-|**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
+|**acosh**하십시오 **acoshf**, **acoshl**|\<math.h>|\<cmath>|
 
 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```C
 // crt_acosh.c
@@ -119,9 +120,9 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>참고자료
 
-[부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
-[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
-[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
-[cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
-[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)<br/>
-[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)<br/>
+[부동 소수점 지원](../../c-runtime-library/floating-point-support.md)  
+[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)  
+[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)  
+[cosh, coshf, coshl](cosh-coshf-coshl.md)  
+[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)  
+[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)  

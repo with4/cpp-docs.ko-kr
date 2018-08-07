@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346817"
 ---
 # <a name="isolation-of-the-mfc-common-controls-library"></a>MFC 공용 컨트롤 라이브러리 격리
 공용 컨트롤 라이브러리 이제 격리 된 (예: 사용자 Dll)의 서로 다른 모듈 수 있도록 MFC 내 매니페스트에서 버전을 지정 하 여 서로 다른 버전의 공용 컨트롤 라이브러리를 사용 합니다.  

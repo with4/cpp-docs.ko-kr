@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685787"
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>방법: 특정 Scheduler 정책 지정
 스케줄러 정책을 스케줄러가 작업을 관리할 때 사용 하는 전략을 제어할 수 있습니다. 이 항목에는 스케줄러 정책을 사용 하는 진행률 표시기는 콘솔에 출력 하는 작업의 스레드 우선 순위 증가 하는 방법을 보여 줍니다.  

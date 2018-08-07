@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33885154"
 ---
 # <a name="editing-properties-for-an-activex-control"></a>ActiveX 컨트롤 속성 편집
 외부 공급 업체에서 제공 하는 ActiveX 컨트롤 속성 및 특성이 있을 수 있습니다. ActiveX 컨트롤에 대 한 속성은 속성 창에 표시 됩니다. ActiveX 컨트롤의 작성자가 만든 모든 속성 페이지에 표시 됩니다는 또한는 **속성 페이지** 대화 상자 (특정 ActiveX 컨트롤에 대 한 속성 페이지를 보려면는 에서속성페이지단추를클릭[속성 창](/visualstudio/ide/reference/properties-window)).  

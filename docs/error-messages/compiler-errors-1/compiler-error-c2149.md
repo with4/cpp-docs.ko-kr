@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167826"
 ---
 # <a name="compiler-error-c2149"></a>컴파일러 오류 C2149
 'identifier': 명명된 비트 필드의 너비가 0일 수 없습니다.  

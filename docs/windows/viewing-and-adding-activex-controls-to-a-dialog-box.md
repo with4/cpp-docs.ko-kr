@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891168"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>ActiveX 컨트롤 보기 및 대화 상자에 추가
 Visual Studio에서는 ActiveX 컨트롤을 대화 상자에 삽입할 수 있습니다.  

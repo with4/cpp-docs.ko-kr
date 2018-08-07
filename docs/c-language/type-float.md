@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390937"
 ---
 # <a name="type-float"></a>float 형식
 부동 소수점 수는 IEEE(Institute of Electrical and Electronics Engineers) 형식을 사용합니다. float 형식의 단정밀도 값은 부호 비트, -127승 이진 지수 8비트 및 가수 23비트로 구성된 4바이트를 사용합니다. 가수는 1.0에서 2.0 사이의 수를 의미합니다. 가수의 상위 비트가 항상 1이기 때문에 가수의 상위 비트는 수에 저장되지 않습니다. 이 표현은 float 형식에 대한 약 3.4E–38 ~ 3.4E+38의 범위를 제공합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128695"
 ---
 # <a name="how-to-wrap-native-class-for-use-by-c"></a>방법: C#에서 사용하기 위해 네이티브 클래스 래핑
 이 샘플에서는 C# 또는 다른.NET 언어에서 작성 된 코드에서 사용할 수 있도록 네이티브 c + + 클래스를 래핑하는 방법을 보여 줍니다.  

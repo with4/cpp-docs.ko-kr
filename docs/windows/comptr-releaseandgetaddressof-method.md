@@ -17,14 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32d846a1fc41596812ca6e8578f25f9ae8115182
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9d55241ddefce0e4fcd7f72698779d6e4ec97e20
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464995"
 ---
 # <a name="comptrreleaseandgetaddressof-method"></a>ComPtr::ReleaseAndGetAddressOf 메서드
-이 ComPtr과 연결된 인터페이스를 해제한 다음 해제된 인터페이스에 대한 포인터를 포함하는, [ptr_](../windows/comptr-ptr-data-member.md) 데이터 멤버의 주소를 검색합니다.  
+와 연결 된 인터페이스를 해제 **ComPtr** 다음의 주소를 검색 합니다 [ptr_](../windows/comptr-ptr-data-member.md) 출시 된 인터페이스에 대 한 포인터를 포함 하는 데이터 멤버입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,7 +34,7 @@ T** ReleaseAndGetAddressOf();
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 주소는 [ptr_](../windows/comptr-ptr-data-member.md) 이 ComPtr의 데이터 멤버입니다.  
+ 주소를 [ptr_](../windows/comptr-ptr-data-member.md) 이 데이터 멤버 **ComPtr**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

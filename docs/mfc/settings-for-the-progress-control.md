@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380011"
 ---
 # <a name="settings-for-the-progress-control"></a>진행률 컨트롤에 대한 설정
 진행률 컨트롤에 대 한 기본 설정 ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md))은 범위 및 현재 위치입니다. 범위는 작업의 전체 기간을 나타냅니다. 현재 위치 하 응용 프로그램이 작업을 완료 했는지 진행 상황을 나타냅니다. 범위 또는 위치를 변경 하면는 진행률 컨트롤을 다시 그리도록 합니다.  

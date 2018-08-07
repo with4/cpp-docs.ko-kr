@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876854"
 ---
 # <a name="editing-parts-of-an-image-image-editor-for-icons"></a>이미지의 일부 편집(아이콘에 대한 이미지 편집기)
 표준 편집 작업을 수행할 수 있습니다-잘라내기, 복사, 해제 및 이동-에 [선택](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), 선택 항목의 일부 또는 전체 이미지 인지 여부입니다. 이미지 편집기를 Windows 클립보드를 사용 하므로 이미지 편집기와 다른 Windows 응용 프로그램 간에 이미지를 전송할 수 있습니다.  

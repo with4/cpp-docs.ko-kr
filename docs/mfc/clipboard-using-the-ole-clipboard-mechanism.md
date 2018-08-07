@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342539"
 ---
 # <a name="clipboard-using-the-ole-clipboard-mechanism"></a>클립보드: OLE 클립보드 메커니즘 사용
 OLE는 클립보드를 통해 데이터를 전송 하기 위한 표준 형식 및 몇 가지 특정 형식을 사용 합니다.  

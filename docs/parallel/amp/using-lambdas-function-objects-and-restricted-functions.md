@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687454"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>람다, 함수 개체 및 제한 함수 사용
 액셀러레이터에서 실행 하려는 하는 c + + AMP 코드에 대 한 호출에서 인수로 지정 된 [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) 메서드. 람다 식 또는 함수 개체 (함수)를 해당 인수로 제공할 수 있습니다. 또한 람다 식 또는 함수 개체는 c + + AMP 제한 함수를 호출할 수 있습니다. 이 항목 람다, 함수 개체 및 제한 된 기능을 보여 주기 위해 배열 추가 알고리즘을 사용 합니다. 다음 예제에서는 c + + AMP 코드 없이 알고리즘을 보여 줍니다. 동일한 길이의 두 1 차원 배열이 생성 됩니다. 해당 정수 요소는 추가 하 고 세 번째 1 차원 배열에 저장 됩니다. C + + AMP 사용 되지 않습니다.  

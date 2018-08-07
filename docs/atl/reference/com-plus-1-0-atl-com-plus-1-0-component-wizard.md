@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358214"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, ATL COM+ 1.0 구성 요소 마법사
 지원 해야 하는 인터페이스 형식 및 추가 인터페이스를 지정 하는 ATL COM + 1.0 구성 요소 마법사의이 페이지를 사용 합니다.  

@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f242fac0d81c6d46c2d810bf07459fde2fb2ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c00f9d40fedd084afa2da6e2e7bfaf0ee831b3a9
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401882"
 ---
 # <a name="overloading-unary-operators"></a>단항 연산자 오버로드
 오버로드할 수 있는 단항 연산자는 다음과 같습니다.  
@@ -42,15 +43,15 @@ ms.lasthandoff: 05/03/2018
   
 6.  `-` ([단항 부정 연산자](../cpp/additive-operators-plus-and.md))  
   
-7.  `++` ([증분](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))  
+7.  `++` ([증가](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))  
   
 8.  `--` ([감소](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))  
   
 9. conversion operators  
   
- 후 위 증가 및 감소 연산자 (`++` 및 **--**)에서 별도로 처리 됩니다 [증가 및 감소](../cpp/increment-and-decrement-operator-overloading-cpp.md)합니다.  
+ 후 위 증가 및 감소 연산자 (`++` 하 고 `--`)에서 별도로 처리 됩니다 [증가 및 감소](../cpp/increment-and-decrement-operator-overloading-cpp.md)합니다.  
   
- 변환 연산자는 별도 항목; 에서도 설명 참조 [사용자 정의 형식 변환](../cpp/user-defined-type-conversions-cpp.md)합니다.  
+ 변환 연산자도 별도 항목;의 설명 참조 [사용자 정의 형식 변환](../cpp/user-defined-type-conversions-cpp.md)합니다.  
   
  다음 규칙은 다른 모든 단항 연산자에 적용됩니다. 단항 연산자 함수를 비정적 멤버로 선언하려면 해당 함수를 다음 형식으로 선언해야 합니다.  
   
@@ -67,5 +68,5 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  단항 연산자의 반환 형식에 대한 제한은 없습니다. 예를 들어 논리 NOT(`!`)에서 정수 계열 값을 반환하는 것이 적합하지만 이는 적용되지 않습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [연산자 오버로드](../cpp/operator-overloading.md)

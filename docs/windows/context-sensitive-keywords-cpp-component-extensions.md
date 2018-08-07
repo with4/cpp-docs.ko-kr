@@ -1,5 +1,5 @@
 ---
-title: 상황에 맞는 키워드 (c + + 구성 요소 확장명) | Microsoft Docs
+title: 상황에 맞는 키워드 (c + + 구성 요소 확장) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466126"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>상황에 맞는 키워드(C++ 구성 요소 확장)
 *상황에 맞는 키워드* 는 특정 컨텍스트에서만에서 인식 되는 언어 요소입니다. 특정 컨텍스트가 아닐 경우 상황에 맞는 키워드는 사용자 정의 기호일 수 있습니다.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/08/2018
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   `where` (의 일부가 [제네릭](../windows/generics-cpp-component-extensions.md))  
+-   `where` (부분 [제네릭](../windows/generics-cpp-component-extensions.md))  
   
  가독성을 위해 사용자 정의 기호로 상황에 맞는 키워드의 사용을 제한 하는 것이 좋습니다.  
   
@@ -76,9 +77,9 @@ ms.lasthandoff: 05/08/2018
 ### <a name="examples"></a>예제  
  **예제**  
   
- 다음 코드 예제는 적절한 컨텍스트에서 상황에 맞는 키워드 `property`를 사용하여 속성과 변수를 정의할 수 있음을 보여 줍니다.  
+ 다음 코드 예제는 적절 한 컨텍스트에서 따르면 합니다 **속성** 속성 및 변수를 정의 하는 상황에 맞는 키워드를 사용할 수 있습니다.  
   
-```  
+```cpp  
 // context_sensitive_keywords.cpp  
 // compile with: /clr  
 public ref class C {  

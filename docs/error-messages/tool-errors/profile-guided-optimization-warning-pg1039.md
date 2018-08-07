@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316532"
 ---
 # <a name="profile-guided-optimization-warning-pg1039"></a>프로필 기반 최적화 경고 PG1039
 정리 작업을 유휴 시간 동안 대기 하지 못했습니다.  

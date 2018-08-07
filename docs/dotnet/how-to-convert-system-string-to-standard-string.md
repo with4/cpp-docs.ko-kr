@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135241"
 ---
 # <a name="how-to-convert-systemstring-to-standard-string"></a>방법: System::String을 표준 문자열로 변환
 변환할 수는 <xref:System.String> 를 `std::string` 또는 `std::wstring`, 사용 하지 않고 `PtrToStringChars` Vcclr.h에서 합니다.  

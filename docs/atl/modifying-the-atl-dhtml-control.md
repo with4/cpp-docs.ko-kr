@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356497"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>ATL DHTML 컨트롤 수정
 ATL 컨트롤 마법사에서 작성 하 고 해당 컨트롤의 실행 수 있도록 하 고 프로젝트 파일에는 메서드는 작성 하는 방법 및 DHTML 디스패치 메서드를 사용 하 여 컨트롤의 c + + 코드를 호출 하는 방법을 확인할 수 있도록 시작 코드를 제공 합니다. 인터페이스에 디스패치 메서드를 추가할 수 있습니다. 그런 다음 HTML 리소스의 메서드를 호출할 수 있습니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379538"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/SDL(추가 보안 검사 사용)
 권장되는 SDL(Security Development Lifecycle) 검사를 추가합니다. 이러한 검사에는 오류와 같은 추가 보안 관련 경고 및 추가 보안 코드 생성 기능이 포함됩니다.  

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d062912a441f16e9eb26415287fbbb574b829e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91132492ab6173d9d462eeb74d6393dce41f6833
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961593"
 ---
 # <a name="iscompound-class"></a>is_compound 클래스
 
@@ -36,13 +37,13 @@ struct is_compound;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 형식이 쿼리입니다.
+*Ty* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스 `false` 경우 유형의 `Ty` 형식 (즉, [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > 보유 `true`), 그렇지 않으면 보유 `true`합니다. 따라서 `Ty`가 배열 형식이거나, 함수 형식이거나, `void`, 개체 또는 함수에 대한 포인터이거나, 비정적 클래스 멤버에 대한 참조, 클래스, 집합체, 열거형 또는 포인터이거나, 이들 중 하나의 *cv 한정* 형식이면 조건자는 `true`입니다.
+형식 조건자의 인스턴스 **false** 하는 경우 형식의 *Ty* 은 기본 형식 (즉, [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > 보유  **true**); 그 외 **true**합니다. 조건자는 따라서 **true** 하는 경우 *Ty* 가 배열 형식, 함수 형식에 대 한 포인터 **void** , 개체 또는 함수, 참조, 클래스, 집합체, 열거형 또는 비정적 클래스 멤버에 대 한 포인터 또는 *cv 한정* 그 중 하나는 형식입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__is_compound.cpp

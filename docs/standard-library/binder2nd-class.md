@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de37ee92805d35b25e73e0682ce8abe79822a8b5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbd2f2c652c619a954b789a3b765fc636a03c33e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962726"
 ---
 # <a name="binder2nd-class"></a>binder2nd 클래스
 
@@ -52,23 +53,23 @@ protected:
 
 ### <a name="parameters"></a>매개 변수
 
-`Func` 이항 함수 개체를 단항 함수 개체로 변환할 수입니다.
+*func* 단항 함수 개체로 변환할 이항 함수 개체입니다.
 
-`right` 이항 함수 개체의 두 번째 인수를 바인딩할 수 값입니다.
+*오른쪽* 이항 함수 개체의 두 번째 인수 바인딩할 값입니다.
 
-`left` 두 번째 인수의 고정된 값으로 조정된 이진 개체를 비교 하는 인수 값입니다.
+*왼쪽* 두 번째 인수의 고정된 값으로 수정 된 이진 개체를 비교 하는 인수의 값입니다.
 
 ## <a name="return-value"></a>반환 값
 
-이항 함수 개체의 두 번째 인수를 `right.` 값에 바인딩할 때 생성되는 단항 함수 개체입니다.
+두 번째 인수에 바인딩할 때 이항 함수 개체의 값을 결과로 생성 되는 단항 함수 개체로 *오른쪽*합니다.
 
 ## <a name="remarks"></a>설명
 
-템플릿 클래스는 이항 함수 개체 _ *Func*의 복사본을 **op**에, `right`의 복사본을 **value**에 저장합니다. 그리고 **op**( `left`, **value**)를 반환하도록 해당 멤버 함수 `operator()`를 정의합니다.
+이항 함수 개체 _의 복사본을 저장 하는 템플릿 클래스 *Func* 에서 `op`, 및 사본을 *오른쪽* 에서 `value`합니다. 그리고 **op**( `left`, **value**)를 반환하도록 해당 멤버 함수 `operator()`를 정의합니다.
 
-`Func`가 **Operation** 형식의 개체이고 c가 상수이면 [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` )는 `binder2nd` 클래스 생성자 `binder2nd`\< **Operation**> ( `Func`, `c` )와 등가이고 더 편리합니다.
+경우 `Func` 형식의 개체인 `Operation` c가 상수 이면 및 [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`를 `c` ) 해당 하는 `binder2nd` 클래스 생성자 `binder2nd` \<  **작업이**> ( `Func`, `c` )이 고 더 편리 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // functional_binder2nd.cpp

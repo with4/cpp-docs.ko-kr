@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379420"
 ---
 # <a name="security-implications-of-customization"></a>사용자 지정의 보안 의미
 이 항목에서는 MFC의 잠재적인 보안 취약점에 설명 합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347362"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>리스트 컨트롤의 작업 영역 구현
 기본적으로 목록 컨트롤에 표준 표 적절 하 게에 있는 모든 항목을 정렬합니다. 그러나 작업 영역을 사각형 그룹으로 목록 항목을 정렬 하는 다른 메서드는 지원 합니다. 작업 영역을 구현 하는 목록 컨트롤의 이미지에 대 한 Windows SDK에서 목록 뷰 컨트롤 사용를 참조 하십시오.  

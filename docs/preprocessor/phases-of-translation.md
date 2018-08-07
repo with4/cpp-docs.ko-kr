@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842770"
 ---
 # <a name="phases-of-translation"></a>변환 단계
 C 및 C++ 프로그램은 각각 일부 프로그램의 텍스트를 포함하는 하나 이상의 소스 파일로 구성됩니다. `#include`와 같은 조건부 컴파일에서 제거된 코드 섹션을 제외하고 include 파일(`#if` 전처리기 지시문을 사용하여 포함된 파일)을 포함하는 소스 파일을 "변환 단위"라고 합니다.  

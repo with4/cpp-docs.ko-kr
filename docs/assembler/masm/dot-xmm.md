@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050131"
 ---
 # <a name="xmm"></a>.XMM
 스트리밍 SIMD 확장 인터넷 지침의 어셈블리를 수 있습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168687"
 ---
 # <a name="compiler-error-c2188"></a>컴파일러 오류 C2188
 'number': 와이드 문자에 비해 너무 큽니다.  

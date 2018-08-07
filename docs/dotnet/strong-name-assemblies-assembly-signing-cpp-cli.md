@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169194"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>강력한 이름 어셈블리(어셈블리 서명)(C++/CLI)
 이 항목 라고도 어셈블리에 강력한 이름을 지정 하면 어셈블리를 서명할 수 방법을 설명 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377540"
 ---
 # <a name="y-precompiled-headers"></a>/Y(미리 컴파일된 헤더)
 다음과 같은 컴파일러 옵션 생성 및 미리 컴파일된 헤더 사용에 영향을 줍니다.  

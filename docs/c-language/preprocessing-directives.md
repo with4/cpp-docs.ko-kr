@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385613"
 ---
 # <a name="preprocessing-directives"></a>전처리 지시문
 -   [문자 상수 및 조건부 포함](../c-language/character-constants-and-conditional-inclusion.md)  

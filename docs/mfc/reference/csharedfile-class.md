@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bee22940fb197d480f4ae3550d8dd59780c256b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3d570204a997def3b295e7ba0fb3b08b9a15677b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853730"
 ---
 # <a name="csharedfile-class"></a>CSharedFile 클래스
-[CMemFile](../../mfc/reference/cmemfile-class.md)-공유 메모리 파일을 지 원하는 클래스를 파생된 합니다.  
+합니다 [CMemFile](../../mfc/reference/cmemfile-class.md)-공유 메모리 파일을 지 원하는 클래스를 파생된 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,20 +51,20 @@ class CSharedFile : public CMemFile
 |이름|설명|  
 |----------|-----------------|  
 |[CSharedFile::Detach](#detach)|공유 메모리 파일을 닫고 해당 메모리 블록의 핸들을 반환 합니다.|  
-|[CSharedFile::SetHandle](#sethandle)|공유 메모리 파일을 메모리 블록을 연결 합니다.|  
+|[CSharedFile::SetHandle](#sethandle)|공유 메모리 파일을 메모리 블록에 연결합니다.|  
   
 ## <a name="remarks"></a>설명  
- 파일이 디스크 대신 RAM에 저장 된 제외 하 고 메모리 파일 디스크 파일 처럼 동작 합니다. 메모리 파일 독립 프로세스 간에 개체를 직렬화 하거나 빠른 임시 저장소에 대 한 또는 원시 바이트를 전송 하는 데 유용 합니다.  
+ RAM 대신 디스크에 저장 되는 점을 제외 하 고 메모리 파일 디스크 파일 처럼 동작 합니다. 메모리 파일을 빠른 임시 저장소에 대 한 원시 바이트를 전송 하기 위한 유용한 되었거나 독립 프로세스 간에 개체를 직렬화 합니다.  
   
- 공유 메모리 파일 달리 다른 메모리 파일에서 메모리에 할당 된는 [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 함수입니다. `CSharedFile` 전역적으로 할당 된 메모리 블록에 데이터를 저장 하는 클래스 (사용 하 여 만든 **GlobalAlloc**), DDE, 클립보드 또는 다른 OLE/COM 단일형 데이터 전송 작업의 경우 예를 들어,를 사용 하 여이 메모리 블록을 공유할 수 있습니다 사용 하 여 `IDataObject`합니다.  
+ 다른 메모리 파일에서 공유 메모리 파일 다를 사용 하 여 해당 메모리를 할당 하는 [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 함수입니다. 합니다 `CSharedFile` 전역적으로 할당 된 메모리 블록에 데이터를 저장 하는 클래스 (사용 하 여 만든 `GlobalAlloc`), 메모리 블록에이 공유 될 수 있습니다 다른 OLE/COM 단일형 데이터 전송 작업의 경우 예를 들어, DDE, 클립보드를 사용 하 여 사용 하 여 `IDataObject`입니다.  
   
- **GlobalAlloc** 반환는 `HGLOBAL` 처리에서 반환 된 포인터와 같은 메모리에 대 한 포인터 대신 [malloc](../../c-runtime-library/reference/malloc.md)합니다. `HGLOBAL` 핸들은 특정 응용 프로그램에 필요 합니다. 예를 들어 데이터에 두 클립보드 필요한는 `HGLOBAL` 처리 합니다.  
+ `GlobalAlloc` HGLOBAL 처리에서 반환 된 포인터와 같은 메모리에 대 한 포인터 대신 반환 [malloc](../../c-runtime-library/reference/malloc.md)합니다. HGLOBAL 핸들을 특정 응용 프로그램에 필요 합니다. 예를 들어, 클립보드에 데이터를 저장 하려면 HGLOBAL 핸들을 필요 합니다.  
   
- 유의 사항: `CSharedFile` 사용 메모리 매핑된 파일 하지 않으며 데이터 직접 프로세스 간에 공유할 수 없습니다.  
+ 유의 사항: `CSharedFile` 사용 하 여 메모리 매핑된 파일 하지 않으며 프로세스 간에 데이터를 직접 공유할 수 없습니다.  
   
- `CSharedFile` 개체의 경우 자동으로 자체 메모리를 할당할 수 하거나 사용자 고유의 메모리 블록을 연결할 수 있습니다는 `CSharedFile` 호출 하 여 개체 [CSharedFile::SetHandle](#sethandle)합니다. 두 경우 모두 자동으로 증가 하 고 메모리 파일에 대 한 메모리에 할당 됩니다 `nGrowBytes`-크기 만큼 경우 `nGrowBytes` 0이 아닙니다.  
+ `CSharedFile` 개체 자체 메모리를 자동으로 할당할 수 있습니다 하거나 고유한 메모리 블록을 연결할 수 있습니다 합니다 `CSharedFile` 개체를 호출 하 여 [CSharedFile::SetHandle](#sethandle)합니다. 두 경우 모두 메모리 파일의 크기를 자동으로 증가 하는 것에 대 한 메모리에 할당 됩니다 `nGrowBytes`-경우 증가 크기 `nGrowBytes` 0이 아닙니다.  
   
- 자세한 내용은 문서 참조 [MFC의 파일](../../mfc/files-in-mfc.md) 및 [파일 처리](../../c-runtime-library/file-handling.md) 에 *런타임 라이브러리 참조*합니다.  
+ 자세한 내용은 문서를 참조 [MFC의 파일](../../mfc/files-in-mfc.md) 및 [파일 처리](../../c-runtime-library/file-handling.md) 에 *런타임 라이브러리 참조*합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -78,7 +79,7 @@ class CSharedFile : public CMemFile
  **헤더:** afxadv.h  
   
 ##  <a name="csharedfile"></a>  CSharedFile::CSharedFile  
- 생성 된 `CSharedFile` 개체와 메모리를 할당 합니다.  
+ 생성 된 `CSharedFile` 개체 및 메모리를 할당 합니다.  
   
 ```  
 CSharedFile(
@@ -88,13 +89,13 @@ CSharedFile(
   
 ### <a name="parameters"></a>매개 변수  
  *nAllocFlags*  
- 메모리 할당 방법을 나타내는 플래그입니다. 참조 [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) 올바른 플래그 값의 목록에 대 한 합니다.  
+ 메모리 할당 되는 방식을 나타내는 플래그입니다. 참조 [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) 올바른 플래그 값의 목록은 합니다.  
   
- `nGrowBytes`  
- 바이트의 메모리 할당 증가 합니다.  
+ *nGrowBytes*  
+ 메모리 할당 바이트에서 증가 합니다.  
   
 ##  <a name="detach"></a>  CSharedFile::Detach  
- 메모리 파일을 메모리 블록에서 컬렉션을 분리 하 여이 함수를 호출 합니다.  
+ 메모리 파일을 닫고 메모리 블록에서 분리 하려면이 함수를 호출 합니다.  
   
 ```  
 HGLOBAL Detach();
@@ -107,7 +108,7 @@ HGLOBAL Detach();
  호출 하 여 다시 열 수 있습니다 [SetHandle](#sethandle)에서 반환 된 핸들을 사용 하 여 **분리**합니다.  
   
 ##  <a name="sethandle"></a>  CSharedFile::SetHandle  
- 전역 메모리 블록을 연결 하려면이 함수 호출의 `CSharedFile` 개체입니다.  
+ 전역 메모리의 블록을 연결 하려면이 함수를 호출 합니다 `CSharedFile` 개체입니다.  
   
 ```  
 void SetHandle(
@@ -117,13 +118,13 @@ void SetHandle(
   
 ### <a name="parameters"></a>매개 변수  
  *hGlobalMemory*  
- 에 연결 될 글로벌 메모리에 대 한 핸들은 `CSharedFile`합니다.  
+ 에 연결 되는 전역 메모리에 대 한 핸들을 `CSharedFile`입니다.  
   
- `bAllowGrow`  
- 메모리 블록 증가할 수 있는지 여부를 지정 합니다.  
+ *bAllowGrow*  
+ 메모리 블록을 증가할 수 있는지 여부를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `bAllowGrow` 0이 아닌 메모리 블록의 크기 증가 필요할 경우, 예를 들어 시도가 있으면 하려고 파일에서 메모리 블록에 할당 된 것 보다 더 많은 바이트를 쓰려고 합니다.  
+ 하는 경우 *bAllowGrow* 파일에서 메모리 블록에 할당 된 것 보다 더 많은 바이트를 쓸 0이 아닌 경우 메모리 블록의 크기 증가 필요할 경우, 예를 들어, 시도 하는 경우 수행 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CMemFile 클래스](../../mfc/reference/cmemfile-class.md)   

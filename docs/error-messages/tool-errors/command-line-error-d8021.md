@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293977"
 ---
 # <a name="command-line-error-d8021"></a>명령줄 오류 D8021
 'number' 숫자 인수가 잘못 되었습니다.  

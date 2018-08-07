@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367174"
 ---
 # <a name="child-window-notification-message-handlers"></a>자식 창 알림 메시지 처리기
 자식 창 알림 메시지의 5 개 범주 가지가 있습니다.  

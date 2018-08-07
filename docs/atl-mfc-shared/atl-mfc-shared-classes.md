@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357202"
 ---
 # <a name="atlmfc-shared-classes"></a>ATL/MFC 공유 클래스
 유틸리티 클래스는 MFC DLL을 요구하지 않고 모든 네이티브 C++ 프로젝트에서 사용할 수 있습니다.  

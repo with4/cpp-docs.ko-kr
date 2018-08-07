@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689976"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>다중 스레드 Win32 프로그램 작성
 여러 스레드를 사용 하 여 프로그램을 작성 하는 경우의 동작을 조정 해야 하 고 [프로그램의 리소스 사용](#_core_sharing_common_resources_between_threads)합니다. 각 스레드에 있는지 확인 해야 [스레드 스택](#_core_thread_stacks)합니다.  

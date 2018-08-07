@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092560"
 ---
 # <a name="quick-reference-ccx"></a>빠른 참조(C++/CX)
 Windows 런타임에서 신뢰할 수 있는 운영 체제 환경 에서만 실행 권한 있는 함수, 데이터 형식 및 장치를 사용 하 고 Microsoft 스토어를 통해 배포 되는 유니버설 Windows 플랫폼 (UWP) 앱을 지원 합니다. C + + /cli CX Windows 런타임에 대 한 앱의 작성을 단순화 합니다. 이 문서는 빠른 참조입니다. 전체 설명서를 참조 하십시오. [형식 시스템](../cppcx/type-system-c-cx.md) 및 [런타임 플랫폼용 구성 요소 확장명](http://go.microsoft.com/fwlink/p/?linkid=228720)합니다.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839449"
 ---
 # <a name="region-endregion"></a>region, endregion
 **#pragma 지역** 확장 하거나 사용 하는 경우를 축소할 수 있는 코드 블록을 지정할 수 있습니다는 [개요 기능](/visualstudio/ide/outlining) Visual Studio 코드 편집기의 합니다.  

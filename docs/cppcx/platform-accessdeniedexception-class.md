@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087616"
 ---
 # <a name="platformaccessdeniedexception-class"></a>Platform::AccessDeniedException 클래스
 리소스 또는 기능에 대한 액세스가 거부된 경우 throw됩니다.  

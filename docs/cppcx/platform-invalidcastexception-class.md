@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087124"
 ---
 # <a name="platforminvalidcastexception-class"></a>Platform::InvalidCastException 클래스
 캐스트 또는 명시적 변환이 잘못된 경우 throw됩니다.  

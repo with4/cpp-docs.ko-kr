@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373025"
 ---
 # <a name="output-file-f-options"></a>출력 파일(/F) 옵션
 출력 파일 옵션 만들거나 출력 파일의 이름을 바꿉니다. CL 환경 변수, 명령줄 또는 명령 파일에에서 지정 된 모든 C 또는 c + + 소스 파일을 영향을 줍니다.  

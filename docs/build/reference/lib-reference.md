@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371943"
 ---
 # <a name="lib-reference"></a>LIB 참조
 Microsoft 라이브러리 관리자 (LIB.exe)가 만들고 COFF 공용 개체 파일 형식 () 개체 파일의 라이브러리를 관리 합니다. LIB은 내보내기 파일을 만들고 내보낸 정의 참조 하려면 가져오기 라이브러리를 사용할 수도 있습니다.  

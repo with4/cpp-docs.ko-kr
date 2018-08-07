@@ -19,23 +19,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8de2511096766cc4852c1c612eccb7dc65713218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405112"
 ---
 # <a name="if-else-statement-c"></a>if-else 문 (C++)
-조건부 분기를 제어 합니다. *if 블록* 경우에 실행 되는 *if 식을* 0이 아닌 값으로 계산 (또는 `true`). 하는 경우의 값 *식* 이 값은 0 *statement1* 및 블록의 다른 문이 실행 되 고 블록에서는 다른 있는 경우를 건너뜁니다. 하는 경우의 값 *식* 가 0 이면 다음 if 블록이 생략 되 고 다른-블록이 있는 경우 실행 됩니다. 0이 아닌 값을 평가 하는 식은
-- `true`
+조건부 분기를 제어 합니다. 문에서 *경우 블록* 실행 된 경우에 합니다 *if 식은* 0이 아닌 값 (또는 TRUE)으로 계산 되. 경우 값 *식* 는 0이 아니면 *문 1* 블록에 있는 다른 문이 실행 되 고 다른-블록에 있는 경우를 건너뜁니다. 경우 값 *식* 가 0 이면 다음 경우 블록을 생략 되 고 다른-블록이 있으면 실행 됩니다. 0이 아닌 값으로 계산 되는 식은
+- true
 - null이 아닌 포인터
-- 0이 아닌 산술 값 또는 
-- 클래스 형식으로 명확한 변환을 하는 산술, 부울 또는 포인터를 정의 하는 입력 합니다. (변환에 대 한 정보를 참조 하십시오. [표준 변환](../cpp/standard-conversions.md).)   
+- 0이 아닌 산술 값, 또는 
+- 산술, 부울 및 포인터를 변환 하는 명확한 변환을 정의 하는 클래스 형식을 입력 합니다. (변환에 대 한 자세한 내용은 [표준 변환](../cpp/standard-conversions.md).)   
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 if ( expression )  
 {
    statement1;
@@ -71,8 +71,10 @@ else  // optional
    ...
 } 
 ```  
-## <a name="example"></a>예제  
-```  
+
+## <a name="example"></a>예  
+
+```cpp  
 // if_else_statement.cpp  
 #include <iostream>
 
@@ -118,7 +120,7 @@ int main()
 }
 ```  
 ## <a name="if-statement-with-an-initializer"></a>경우는 이니셜라이저를 사용 하 여 문을
-**Visual Studio 2017 15.3 이상 버전** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):는 **경우** 문을 선언 하 고 명명된 된 변수를 초기화 하는 식을 포함 될 수도 있습니다. If 블록의 범위 내 변수만 필요한 경우 이러한 형태의 if 문을 사용 합니다. 
+**Visual Studio 2017 버전 15.3 이상** (사용할 수 있습니다 [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):는 **경우** 문에 선언 하 고 명명 된 변수를 초기화 하는 식을 포함 될 수도 있습니다. 변수의 경우 블록의 범위 안에서 필요한 경우 if 문이 이러한 형식의 사용 합니다. 
 
 ```cpp
 ## Example  
@@ -127,7 +129,6 @@ int main()
 #include <map>
 #include <string>
 #include <algorithm>
-
 
 using namespace std;
 
@@ -156,22 +157,20 @@ int main()
         shared_flag = false;
     }
 
-
     string s{ "if" };
     if (auto keywords = { "if", "for", "while" }; any_of(keywords.begin(), keywords.end(), [&s](const char* kw) { return s == kw; }))
     {
         cout << "Error! Token must not be a keyword\n";
     }
-
 }
 ```
 
- 모든 양식에서에서 **경우** 문, *식*, 모든 파생 작업이 계산 되는 구조를 제외한 모든 값을 사용할 수 있는 합니다. 컨트롤에서 전달는 **경우** 문을 다음 문으로 프로그램에서 하지 않는 한 중 하나는 *문을*s에는 [나누기](../cpp/break-statement-cpp.md), [계속](../cpp/continue-statement-cpp.md), 또는 [goto](../cpp/goto-statement-cpp.md)합니다.  
+ 모든 양식에서 합니다 **하는 경우** 문을 *식*, 모든 파생 작업이 계산 되는 구조를 제외한 모든 값을 사용할 수 있는 합니다. 컨트롤에서 전달 합니다 **경우** 문에서 프로그램의 다음 문으로 하지 않는 한 중 하나는 *문을*s에는 [중단](../cpp/break-statement-cpp.md), [계속](../cpp/continue-statement-cpp.md), 또는 [goto](../cpp/goto-statement-cpp.md)합니다.  
   
- **다른** 절은 `if...else` 문은 가장 가까운와 연결 된 이전 **경우** 해당 하지 않은 동일한 범위에서 문을 **다른** 문입니다.   
+ **다른** 절을 `if...else` 문은 가장 가까운 연관 된 이전 **하는 경우** 해당 없는 동일한 범위에서 문을 **다른** 문입니다.   
 
 ## <a name="constexpr-if-statements"></a>constexpr 경우 문
-**Visual Studio 2017 15.3 이상 버전** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 함수 템플릿을 사용할 수 있습니다는 **constexpr 경우** 문 없이 컴파일 타임 분기 결정을 내릴 수 여러 함수 오버 로드에 필요 합니다. 예를 들어 해당 핸들 매개 변수의 압축을 푼 (0이 매개 변수 오버 로드가 필요) 함수를 하나 작성할 수 있습니다. 
+**Visual Studio 2017 버전 15.3 이상** (사용할 수 있습니다 [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 함수 템플릿을 사용할 수 있습니다는 `constexpr if` 문을 여러에 의존 하지 않고 컴파일 타임 분기 결정 함수 오버 로드 합니다. 예를 들어, 해당 핸들 매개 변수 압축 해제 (0-매개 변수 오버 로드가 없는 필요) 단일 함수를 작성할 수 있습니다. 
 
 ```cpp
 template <class T, class... Rest>
@@ -193,9 +192,7 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-  
- 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [선택 문](../cpp/selection-statements-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [switch 문(C++)](../cpp/switch-statement-cpp.md)

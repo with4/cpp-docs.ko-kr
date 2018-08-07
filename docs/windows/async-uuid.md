@@ -17,20 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857b10e206e5a4a3208086e5b7b1455f58bc40a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c76aee3ce1e56f60e966094bb2d634269cd5e3a9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466750"
 ---
 # <a name="asyncuuid"></a>async_uuid
-동기 및 비동기 버전 COM 인터페이스의 정의 MIDL 컴파일러에 지시 하 UUID를 지정 합니다.  
+MIDL 컴파일러에 지시 합니다 COM 인터페이스의 동기 및 비동기 버전을 정의 하는 UUID를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [async_uuid (  
+[async_uuid (  
    uuid  
 )]  
 ```  
@@ -40,11 +40,11 @@ ms.lasthandoff: 05/08/2018
  인터페이스의 버전을 식별 하는 UUID입니다.  
   
 ## <a name="remarks"></a>설명  
- **async_uuid** c + + 특성에 동일한 기능을는 [async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) MIDL 특성입니다.  
+ 합니다 **async_uuid** c + + 특성에 동일한 기능을 합니다 [async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cpp_attr_ref_async_uuid.cpp  
 // compile with: /LD  
 #include <Windows.h>  

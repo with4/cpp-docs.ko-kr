@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881402"
 ---
 # <a name="generic-classes-ccli"></a>제네릭 클래스(C++/CLI)
 제네릭 클래스는 다음과 같은 형식을 사용 하 여 선언 됩니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874800"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>컨트롤의 너비, 높이, 크기를 동일하게 만들기
 기준 컨트롤의 크기에 따라 컨트롤 그룹의 크기를 조정할 수 있습니다. 수도 있습니다 [각 캡션 텍스트의 크기에 따라 컨트롤의 크기를 조정](../windows/sizing-individual-controls.md)합니다.  

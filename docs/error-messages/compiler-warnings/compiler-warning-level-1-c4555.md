@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278911"
 ---
 # <a name="compiler-warning-level-1-c4555"></a>컴파일러 경고(수준 1) C4555
 식이 효과가 없습니다. 파생 작업이 있는 식이어야 합니다.  

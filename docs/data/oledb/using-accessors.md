@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104999"
 ---
 # <a name="using-accessors"></a>접근자 사용
 다음 항목에서는 데이터에 가장 적합 접근자 형식 결정 하는 방법을 응용 프로그램 및 다양 한 유형의 접근자를 사용 하는 방법:  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368976"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 매니페스트 조회 동작을 지정합니다.  

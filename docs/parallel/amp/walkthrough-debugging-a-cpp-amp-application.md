@@ -22,6 +22,7 @@ ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34463094"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>연습: C++ AMP 응용 프로그램 디버깅
 이 항목에는 처리 GPU (그래픽 장치)를 활용 하기 위해 c + + Accelerated Massive Parallelism (c + + AMP)를 사용 하는 응용 프로그램을 디버깅 하는 방법을 보여 줍니다. 큰 정수 배열의을 요약 하는 병렬 감소 프로그램을 사용 합니다. 이 연습에서는 다음 작업을 수행합니다.  

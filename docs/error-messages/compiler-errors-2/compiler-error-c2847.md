@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245977"
 ---
 # <a name="compiler-error-c2847"></a>컴파일러 오류 C2847
 WinRT 또는 관리되는 형식 'class'에 sizeof를 적용할 수 없습니다.  

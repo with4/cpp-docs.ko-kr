@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344365"
 ---
 # <a name="general-class-design-philosophy"></a>일반 클래스 디자인 원칙
 Microsoft Windows는 c + + 언어 유행 훨씬 전에 설계 되었습니다. 응용 프로그램 C 언어 Windows 응용 프로그램 프로그래밍 인터페이스 (API)를 사용 하므로 해당 인터페이스 장래에 유지 됩니다. 따라서 모든 c + + Windows 인터페이스를 설명 하는 절차는 C 언어 API를 기반으로 빌드해야 합니다. 이 c + + 응용 프로그램 C 응용 프로그램과 함께 사용할 수 있는지를 보장 합니다.  

@@ -16,11 +16,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: a26a4a0cab0bdea8a7a642cc760da0f3fc79b471
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c7f053466e8c6297b7ccd9a2a40c5980e23ccba
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960309"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 함수
 
@@ -40,15 +41,17 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>매개 변수
 
-`val` New_val의 값을 받을 개체입니다.
+*val*  
+ new_val의 값을 받는 개체입니다.
 
-`new_val` 값이 복사 되거나 val로 이동 하는 개체입니다.
+*new_val*  
+ 값이 val로 복사되거나 이동되는 개체입니다.
 
 ### <a name="remarks"></a>설명
 
 복합 형식에서 `exchange`는 이동 생성자를 사용할 수 있는 경우 이전 값의 복사를 방지하고, 임시 개체이거나 이동된 경우 새 값의 복사를 방지하며, 사용 가능한 변환 대입 연산자를 통해 모든 형식을 새 값으로 받아들입니다. exchange 함수는 왼쪽 인수가 오른쪽 인수로 이동되거나 복사되지 않는다는 점에서 [std::swap](../standard-library/algorithm-functions.md#swap)과 다릅니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 `exchange`을 사용하는 방법을 보여 줍니다. 실제로 `exchange`는 복사하는 데 비용이 많이 드는 큰 개체에서 가장 유용합니다.
 
@@ -98,12 +101,12 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Type`|`Arg`에 전달된 값 형식(`Arg` 형식과 다를 수 있음)입니다. 일반적으로 전달 함수의 템플릿 인수에 의해 결정됩니다.|
-|`Arg`|캐스팅할 인수입니다.|
+|*Type*|전달 된 값의 형식을 *Arg*의 형식과 다 수 있음 *Arg*합니다. 일반적으로 전달 함수의 템플릿 인수에 의해 결정됩니다.|
+|*arg*|캐스팅할 인수입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-`Arg`에 전달된 값이 원래 rvalue였거나 rvalue에 대한 참조였던 경우 `Arg`에 대한 rvalue를 반환합니다. 그렇지 않으면 해당 형식을 수정하지 않고 `Arg`를 반환합니다.
+Rvalue 참조를 반환 *Arg* 값을 전달 하는 경우 *Arg* rvalue 또는 rvalue에 대 한 참조를 원래 그렇지 않으면 반환 *Arg* 해당 형식을 수정 하지 않고 있습니다.
 
 ### <a name="remarks"></a>설명
 
@@ -160,23 +163,27 @@ constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 
 ### <a name="parameters"></a>매개 변수
 
-`Index` 지정 된 요소의 0 기반 인덱스입니다.
+*Index*  
+ 지정된 요소의 0으로 시작하는 인덱스입니다.
 
-`T1` 첫 번째 pair 요소의 형식입니다.
+*T1*  
+ 첫 번째 pair 요소의 형식입니다.
 
-`T2` 두 번째 pair 요소의 형식입니다.
+*T2*  
+ 두 번째 pair 요소의 형식입니다.
 
-`pr` 선택할 쌍입니다.
+*pr*  
+ 선택할 쌍입니다.
 
 ### <a name="remarks"></a>설명
 
 각각의 템플릿 함수는 `pair` 인수의 요소에 대한 참조를 반환합니다.
 
-인덱싱된 오버로드에 대해 `Index` 의 값이 0이면 함수는 `pr.first` 를 반환하고, `Index` 의 값이 1이면 함수는 `pr.second`를 반환합니다. `RI` 형식은 반환된 요소의 형식입니다.
+인덱싱된 오버 로드에 대 한 경우 값 *인덱스* 함수를 반환 하는 0 `pr.first` 경우에 값 *인덱스* 함수를 반환 하는 1 `pr.second`합니다. `RI` 형식은 반환된 요소의 형식입니다.
 
-인덱스 매개 변수가 없는 오버로드에서는 반환할 요소가 형식 인수로 추론됩니다. `get<T>(Tuple)` 을 호출할 때 `pr` 에 T 형식의 요소가 두 개 이상 있거나 없는 경우 컴파일러 오류가 생성됩니다.
+인덱스 매개 변수가 없는 오버로드에서는 반환할 요소가 형식 인수로 추론됩니다. 호출 `get<T>(Tuple)` 경우 컴파일러 오류가 생성 됩니다 *pr* 이상 있거나 없는 형식은 T 형식 요소가 두 개
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 #include <utility>
@@ -227,9 +234,11 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 ### <a name="parameters"></a>매개 변수
 
-`Val1` 첫 번째 요소로 초기화 하는 값 `pair`합니다.
+*Val1*  
+ `pair`의 첫 번째 요소를 초기화하는 값
 
-`Val2` 두 번째 요소를 초기화 하는 값 `pair`합니다.
+*Val2*  
+ `pair`의 두 번째 요소를 초기화하는 값
 
 ### <a name="return-value"></a>반환 값
 
@@ -251,7 +260,7 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 `make_pair` 도우미 함수도 입력 매개 변수로 한 쌍이 필요한 함수에 두 값을 전달할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 도우미 함수 `make_pair`를 사용하여 쌍을 선언하고 초기화하는 방법을 알아보려면 [pair 구조체](../standard-library/pair-structure.md)를 참조하세요.
 
@@ -268,8 +277,8 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Type`|참조 축소 규칙과 함께 `Arg`에 전달된 인수의 형식에서 추론된 형식입니다.|
-|`Arg`|캐스팅할 인수입니다. `Arg`의 형식이 rvalue 참조로 지정되는 것처럼 보여도 lvalue 참조가 rvalue 참조에 바인딩될 수 있기 때문에 `move`도 lvalue 인수를 수용합니다.|
+|*Type*|전달 된 인수 형식에서 추론 된 형식 *Arg*참조 축소 규칙과 함께 합니다.|
+|*arg*|캐스팅할 인수입니다. 하지만 유형의 *Arg* 는 rvalue 참조로 지정 되 `move` 도 lvalue 참조가 rvalue 참조에 바인딩할 수 있으므로 lvalue 인수를 허용 합니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -277,11 +286,11 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 ### <a name="remarks"></a>설명
 
-템플릿 인수 `Type`은 명시적으로 지정하는 것이 아니며, `Arg`에 전달된 값의 형식에서 추론해야 합니다. `Type`의 형식은 참조 축소 규칙에 따라 추가 조정됩니다.
+템플릿 인수 *형식* 명시적으로 지정할 수 있지만 전달 된 값의 형식에서 추론 해야 아닙니다 *Arg*합니다. 유형의 *형식* 참조 축소 규칙에 따라 추가 조정 됩니다.
 
-`move`는 인수를 이동하지 않습니다. 대신, lvalue일 수 있는 인수를 무조건 rvalue로 캐스트할 경우 `Arg` 형식에 이동이 활성화되어 있으면 컴파일러가 나중에 해당 형식에 전달된 값을 복사하지 않고 이동합니다. 해당 형식에 이동이 활성화되어 있지 않은 경우에는 대신 복사됩니다.
+`move`는 인수를 이동하지 않습니다. 무조건 인수를 캐스트 하 여 대신-lvalue 일 수 있는-에서 전달 된 값을 복사 하는 것이 아니라 있도록 이동할 이후에 컴파일러는 rvalue 참조로 *Arg* 해당 형식이 이동 가능할 경우. 해당 형식에 이동이 활성화되어 있지 않은 경우에는 대신 복사됩니다.
 
-`Arg`에 전달된 값이 lvalue인 경우, 즉 이름이 있거나 주소를 가져올 수 있는 경우, 이동이 발생하면 무효화됩니다. 이동 이후에는 이름 또는 주소로 `Arg`에 전달된 값을 참조하지 마세요.
+값 전달 *Arg* 이 lvalue-즉, 여기에 이름 또는 해당 주소를 가져올 수 있습니다-이동이 발생 하면 무효화 됩니다. 전달 된 값을 참조 하지 않는 *Arg* 이름이 나 주소를 이동한 후으로 합니다.
 
 ## <a name="swap"></a>  swap
 
@@ -296,8 +305,8 @@ void swap(pair<T, U>& left, pair<T, U>& right);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`left`|`pair` 형식의 개체입니다.|
-|`right`|`pair` 형식의 개체입니다.|
+|*left*|`pair` 형식의 개체입니다.|
+|*right*|`pair` 형식의 개체입니다.|
 
 ### <a name="remarks"></a>설명
 

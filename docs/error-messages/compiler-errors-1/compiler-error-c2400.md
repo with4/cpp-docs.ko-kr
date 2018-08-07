@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225478"
 ---
 # <a name="compiler-error-c2400"></a>컴파일러 오류 C2400
 인라인 어셈블러 구문 오류가 '컨텍스트의'; 'token'를 찾을 수합니다  

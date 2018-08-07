@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384413"
 ---
 # <a name="fmod-function"></a>fmod 함수
 **ANSI 4.5.6.4** `fmod` 함수의 두 번째 인수가 0일 때 도메인 오류가 발생하는지 아니면 0이 반환되는지 여부  

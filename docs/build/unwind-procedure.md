@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382025"
 ---
 # <a name="unwind-procedure"></a>해제 절차
 해제 코드 배열은 내림차순으로 정렬 됩니다. 예외가 발생 하면 전체 컨텍스트가 컨텍스트 레코드에 운영 체제에 의해 저장 됩니다. 예외 디스패치 논리 호출 되를 예외 처리기를 찾으려면 다음 단계를 반복 해 서 실행 하는 합니다.  

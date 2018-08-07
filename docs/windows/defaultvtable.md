@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882539"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 COM 개체에 대 한 기본 vtable 인터페이스로 인터페이스를 정의합니다.  

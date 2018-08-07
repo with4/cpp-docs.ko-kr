@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857914"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>투명 또는 불투명 배경 선택(아이콘에 대한 이미지 편집기)
 때을 이동 하거나 이미지에서 선택 영역 복사 현재 배경색을 일치 하는 모든 픽셀 선택 영역에는 기본적으로 선택 합니다. 대상 위치에서 픽셀을 숨깁니다 하지 않습니다.  

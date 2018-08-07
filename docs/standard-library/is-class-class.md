@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d344beea880bb576a681a4797c7bdd8ff8d88e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ada95adb2d82bfccf05f3b9141a1b940feaed50
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966448"
 ---
 # <a name="isclass-class"></a>is_class 클래스
 
@@ -36,13 +37,13 @@ struct is_class;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 형식이 쿼리입니다.
+*Ty* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `Ty` 형식이 `class`, `struct` 또는 두 형식 중 하나의 `cv-qualified` 형태로 정의된 형식인 경우 true이고 그렇지 않은 경우 false입니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식 *Ty* 로 정의 하는 형식을 **클래스** 또는 **구조체**, 또는 `cv-qualified` 형태의 그 중 하나, 그렇지 않으면 false입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__is_class.cpp

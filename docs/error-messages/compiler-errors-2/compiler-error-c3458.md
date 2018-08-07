@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255360"
 ---
 # <a name="compiler-error-c3458"></a>컴파일러 오류 C3458
 'attribute1': 'attribute2' 특성이 'construct'에 대해 이미 지정되어 있습니다.  

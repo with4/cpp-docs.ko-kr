@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380942"
 ---
 # <a name="blocks"></a>블록
 중괄호(**{ }**)로 묶인 선언, 정의 및 문의 시퀀스를 "블록"이라고 합니다. 하나 이상의 문으로 구성된 "복합 문"([복합 문](../c-language/compound-statement-c.md) 참조)이 블록의 형식 중 하나입니다. 블록의 다른 형식인 "함수 정의"는 복합 문(함수 본문)과 함수의 관련 "헤더"(함수 이름, 반환 형식 및 정식 매개 변수)로 구성됩니다. 다른 블록 안에 있는 블록을 "중첩"된 블록이라고 합니다.  

@@ -17,11 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6205d69962d70d9da76c932fdd8b3f66f491ebc9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bb8dfeff0e1f3e659e0d3c6514904df39286c45
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466639"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper 구조체
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,11 +35,11 @@ struct ArgTraitsHelper;
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `TDelegateInterface`  
+ *TDelegateInterface*  
  대리자 인터페이스입니다.  
   
 ## <a name="remarks"></a>설명  
- 대리자 인수의 공통 특성을 정의 하는 데 도움이 됩니다.  
+ 대리자 인수의 공통 된 특징을 정의할 수 있습니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -53,7 +54,7 @@ struct ArgTraitsHelper;
   
 |이름|설명|  
 |----------|-----------------|  
-|[ArgTraitsHelper::args 상수](../windows/argtraitshelper-args-constant.md)|사용 하면 [argtraits:: Args](../windows/argtraits-args-constant.md) 대리자 인터페이스의 Invoke 메서드에 매개 변수 수를 유지 합니다.|  
+|[ArgTraitsHelper::args 상수](../windows/argtraitshelper-args-constant.md)|데 도움이 됩니다 [argtraits:: Args](../windows/argtraits-args-constant.md) 매개 변수 개수를 유지는 `Invoke` 대리자 인터페이스의 메서드입니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `ArgTraitsHelper`  

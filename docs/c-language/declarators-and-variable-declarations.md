@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390608"
 ---
 # <a name="declarators-and-variable-declarations"></a>선언자 및 변수 선언
 이 단원의 나머지 부분에서는 이 목록에 요약된 변수 형식 선언의 형태와 의미를 설명합니다. 나머지 단원에서는 다음을 선언하는 방법을 중점적으로 설명합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243149"
 ---
 # <a name="compiler-error-c3014"></a>컴파일러 오류 C3014
 OpenMP 'directive' 지시문 다음에 for 루프가 와야 합니다.  

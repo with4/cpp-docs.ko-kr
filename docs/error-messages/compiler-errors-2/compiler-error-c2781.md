@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235523"
 ---
 # <a name="compiler-error-c2781"></a>컴파일러 오류 C2781
 'declaration': 적어도 value1 인수-value2 제공  

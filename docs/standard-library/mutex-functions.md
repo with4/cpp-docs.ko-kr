@@ -16,11 +16,12 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.openlocfilehash: 85ed95250b5563cd8a7c1ef9cfc0ee048cb3bc60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df52b5bdf9b7054fd838b1892c4e641cdf9d4dcc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962190"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt; 함수 및 변수
 
@@ -49,15 +50,15 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>매개 변수
 
-`Flag` A [once_flag](../standard-library/once-flag-structure.md) 호출 가능 개체만 한 번 호출 되도록 보장 하는 개체입니다.
+*플래그* A [once_flag](../standard-library/once-flag-structure.md) 개체는 호출 가능 개체는 한 번만 호출 되도록 합니다.
 
-`F` 호출 가능 개체입니다.
+*F* 호출 가능 개체입니다.
 
-`A` 인수 목록입니다.
+ 인수 목록입니다.
 
 ### <a name="remarks"></a>설명
 
-`Flag`가 유효하지 않으면 함수는 오류 코드가 `invalid_argument`인 [system_error](../standard-library/system-error-class.md)를 throw합니다. 그렇지 않은 경우 템플릿 함수는 해당 `Flag` 인수를 사용하여 템플릿 함수가 호출되는 횟수와 관계없이 `F(A...)`를 정확히 한 번 올바르게 호출합니다. 예외가 throw되어 `F(A...)`가 종료되면 호출은 실패한 것입니다.
+하는 경우 *플래그* 유효 하지 않은 throw를 [system_error](../standard-library/system-error-class.md) 오류 코드가 있는 `invalid_argument`합니다. 템플릿 함수는 사용이 고, 그렇지 해당 *플래그* 인수를 호출 하는 것 `F(A...)` 성공적으로 정확히 한 번 횟수에 관계 없이 템플릿 함수를 호출 합니다. 예외가 throw되어 `F(A...)`가 종료되면 호출은 실패한 것입니다.
 
 ## <a name="defer_lock"></a>  defer_lock 변수
 

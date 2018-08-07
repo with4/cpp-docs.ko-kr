@@ -17,14 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 590a50fbaca22b088af39f31e2e6349a3ebc18dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f852f8f360be90e7d17e9aaa09e7d584ad98fc33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461070"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach 메서드
-현재 템플릿 형식 매개 변수에 지정된 인터페이스 형식과 이 ComPtr을 연결합니다.  
+이 연결 **ComPtr** 현재 템플릿 형식 매개 변수에 의해 지정 된 인터페이스 형식을 사용 하 여 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,7 +36,7 @@ void Attach(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `other`  
+ *other*  
  인터페이스 형식입니다.  
   
 ## <a name="requirements"></a>요구 사항  

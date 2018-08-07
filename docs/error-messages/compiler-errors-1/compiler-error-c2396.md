@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197457"
 ---
 # <a name="compiler-error-c2396"></a>컴파일러 오류 C2396
 ' your_type:: operator'type ': WinRT 또는 CLR 사용자 정의 변환 functionnot를 유효 합니다. 다음에서 변환되거나 다음으로 변환해야 합니다. 'T^', 'T^%', 'T^&'(T = 'your_type')  

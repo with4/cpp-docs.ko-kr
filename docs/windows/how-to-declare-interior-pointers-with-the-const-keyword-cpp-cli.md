@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875047"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>방법: const 키워드(C++/CLI)를 사용하여 내부 포인터 선언
 다음 샘플에서는 사용 하는 방법을 보여 줍니다. `const` 내부 포인터의 선언에 있습니다.  

@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6492c6ecc4c21c5c978ad031fed7182f2acee4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60c66beb3c0c8874bd3d678bfc4331dc766c443a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929133"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>명령 및 컨트롤 알림에 대한 처리기
 명령 또는 컨트롤 알림 메시지에 대 한 기본 처리기가 없는 있습니다. 따라서 이러한 메시지의이 범주에 대 한 처리기를 명명 규칙만 바인딩됩니다. 명령 또는 컨트롤 알림 처리기에 매핑할 때는 속성 창에 명령 ID 또는 알림 컨트롤 코드에 따라 이름을 제안 합니다. 제안된 된 이름을 적용,를 변경 하거나 바꿀 수 있습니다.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]  
   
- 이 명령은 ID가 할당할 수 있습니다 `IDC_MY_BUTTON` 이므로 응용 프로그램 관련 사용자 인터페이스 개체에 해당 합니다.  
+ 이 명령은 ID가 할당할 수 있습니다 **IDC_MY_BUTTON** 이므로 응용 프로그램 관련 사용자 인터페이스 개체에 해당 합니다.  
   
  메시지의 두 범주 인수를 가져오지 않고 및 아무 값도 반환 합니다.  
   

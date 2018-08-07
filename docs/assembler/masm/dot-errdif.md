@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054932"
 ---
 # <a name="errdifi"></a>.ERRDIF[[I]]
 텍스트 항목에는 서로 다른 경우 오류가 발생 합니다.  

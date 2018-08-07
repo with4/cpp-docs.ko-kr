@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246772"
 ---
 # <a name="compiler-error-c3110"></a>컴파일러 오류 C3110
 'function_name': COM 인터페이스 메서드를 오버 로드할 수 없습니다  

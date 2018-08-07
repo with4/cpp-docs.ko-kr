@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33705395"
 ---
 # <a name="norm-class"></a>norm 클래스
 Norm 수를 나타냅니다. 각 요소는 부동 소수점 숫자의 범위에 [-1.0 f, 1.0 f].  

@@ -283,6 +283,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694487"
 ---
 # <a name="int4-class"></a>int_4 클래스
 정수 4 개의 짧은 벡터를 나타냅니다.  

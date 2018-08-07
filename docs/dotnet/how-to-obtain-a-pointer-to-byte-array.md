@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127970"
 ---
 # <a name="how-to-obtain-a-pointer-to-byte-array"></a>방법: 바이트 배열에 대한 포인터 가져오기
 배열 블록에 대 한 포인터를 가져올 수 있습니다는 <xref:System.Byte> 첫 번째 요소의 주소를 포인터에 할당 하는 배열입니다.  

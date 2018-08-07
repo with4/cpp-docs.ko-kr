@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872067"
 ---
 # <a name="evening-the-spacing-between-controls"></a>컨트롤 사이의 간격을 동일하게 지정
 대화 상자 편집기를 사용 하면 선택한 가장 바깥쪽 컨트롤 간에 균등 하 게 공간 컨트롤에 있습니다.  

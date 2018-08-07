@@ -21,14 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 942c446fc64bb7e4210bc82e21fc2511ae01503a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af604ac6afce91dc865cfbb465e8c27acea8f775
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885323"
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation 클래스
-이 클래스 되돌립니다 [CAccessToken](../../atl/reference/caccesstoken-class.md) 범위를 벗어나면 nonimpersonating 상태로 개체입니다.  
+이 클래스 되돌립니다 [CAccessToken](../../atl/reference/caccesstoken-class.md) 범위를 벗어나면 nonimpersonating 상태 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,33 +50,33 @@ class CAutoRevertImpersonation
   
 |이름|설명|  
 |----------|-----------------|  
-|[CAutoRevertImpersonation::Attach](#attach)|액세스 토큰의 가장 되돌리기 작업을 자동화 합니다.|  
-|[CAutoRevertImpersonation::Detach](#detach)|자동 가장 버전을 취소합니다.|  
+|[CAutoRevertImpersonation::Attach](#attach)|액세스 토큰의 가장 되돌리기가 자동화합니다.|  
+|[CAutoRevertImpersonation::Detach](#detach)|자동 가장 되돌리기가 취소합니다.|  
 |[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|이 개체와 연결 된 액세스 토큰 현재를 검색 합니다.|  
   
 ## <a name="remarks"></a>설명  
- [액세스 토큰](http://msdn.microsoft.com/library/windows/desktop/aa374909) 프로세스 또는 스레드의 보안 컨텍스트를 설명 하 고 Windows NT 또는 Windows 2000 시스템에 로그온 한 각 사용자에 게 할당 하는 개체입니다. 이러한 액세스 토큰으로 나타낼 수 있습니다는 `CAccessToken` 클래스입니다.  
+ [액세스 토큰](http://msdn.microsoft.com/library/windows/desktop/aa374909) 개체인 프로세스 또는 스레드의 보안 컨텍스트를 설명 하는 Windows NT 또는 Windows 2000 시스템에 로그온 한 각 사용자에 게 할당 됩니다. 이러한 액세스 토큰을 사용 하 여 나타낼 수는 `CAccessToken` 클래스입니다.  
   
- 액세스 토큰을 가장 하는 경우가 가끔 있습니다. 이 클래스는 편의 위해 제공 되지만 액세스 토큰;의 가장을 수행 하지 않습니다. 또한 자동 조항이 nonimpersonated 상태로 수행합니다. 즉, 토큰 액세스 가장 다양 한 방법으로 수행할 수 있습니다.  
+ 액세스 토큰을 가장 하는 데 필요한 경우가 있습니다. 이 클래스는 편의상 제공 되지만 액세스 토큰의 가장을 수행 하지 않습니다. nonimpersonated 상태로 자동 되돌리기가 수행합니다. 즉, 여러 가지 방법으로 액세스 토큰 가장을 수행할 수 있습니다.  
   
- Windows에서 액세스 제어 모델에 대 한 소개를 참조 하십시오. [액세스 제어](http://msdn.microsoft.com/library/windows/desktop/aa374860) Windows sdk에서입니다.  
+ Windows의 액세스 제어 모델에 대 한 소개를 참조 하세요 [Access Control](http://msdn.microsoft.com/library/windows/desktop/aa374860) Windows SDK에 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h  
   
 ##  <a name="attach"></a>  CAutoRevertImpersonation::Attach  
- 액세스 토큰의 가장 되돌리기 작업을 자동화 합니다.  
+ 액세스 토큰의 가장 되돌리기가 자동화합니다.  
   
 ```
 void Attach(const CAccessToken* pAT) throw();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pAT`  
- 주소는 [CAccessToken](../../atl/reference/caccesstoken-class.md) 개체를 자동으로 되돌릴 수  
+ *PAT*  
+ 주소를 [CAccessToken](../../atl/reference/caccesstoken-class.md) 개체를 자동으로 되돌릴 수  
   
 ### <a name="remarks"></a>설명  
- 경우에이 메서드를 사용 해야는 [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) null 개체가 만들어진 `CAccessToken` 포인터 또는 [분리](#detach) 이전에 호출 되었습니다. 단순한 경우에 대 한이 메서드를 사용 하는 데 필요한있지 않습니다.  
+ 경우에이 메서드를 사용 해야 합니다 [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) 개체는 NULL을 사용 하 여 만든 `CAccessToken` 포인터 이거나 [분리](#detach) 이전에 호출 되었습니다. 간단한 경우이 방법을 사용 하려면 필요 없는 합니다.  
   
 ##  <a name="cautorevertimpersonation"></a>  CAutoRevertImpersonation::CAutoRevertImpersonation  
  `CAutoRevertImpersonation` 개체를 생성합니다.  
@@ -85,11 +86,11 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pAT`  
- 주소는 [CAccessToken](../../atl/reference/caccesstoken-class.md) 개체를 자동으로 되돌릴 수 있습니다.  
+ *PAT*  
+ 주소를 [CAccessToken](../../atl/reference/caccesstoken-class.md) 개체를 자동으로 되돌려집니다.  
   
 ### <a name="remarks"></a>설명  
- 액세스 토큰의 실제 가장 수행 해야 별도로 및 가급적 만들기 전에 `CAutoRevertImpersonation` 개체입니다. 이 가장 때를 자동으로 되돌릴 수는 `CAutoRevertImpersonation` 범위를 벗어나면 합니다.  
+ 액세스 토큰의 실제 가장에서 가급적를 만들기 전에 별도로 수행할 수 해야는 `CAutoRevertImpersonation` 개체입니다. 이 가장 시기에 자동으로 되돌릴 수는 `CAutoRevertImpersonation` 범위를 벗어나면 합니다.  
   
 ##  <a name="dtor"></a>  CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
  개체를 제거 하 고 액세스 토큰 가장을 되돌립니다.  
@@ -99,20 +100,20 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ```  
   
 ### <a name="remarks"></a>설명  
- 에 적용 된 모든 가장 현재 되돌립니다는 [CAccessToken](../../atl/reference/caccesstoken-class.md) 통해 또는 생성 시 제공 된 개체는 [연결](#attach) 메서드. 하지 않으면 `CAccessToken` 는 연결, 소멸자에 영향을 주지 않습니다.  
+ 모든 현재 적용에 대 한 가장을 되돌립니다 합니다 [CAccessToken](../../atl/reference/caccesstoken-class.md) 생성 시 또는 제공 된 개체를 [연결](#attach) 메서드. 없으면 `CAccessToken` 는 연결 된 소멸자에 영향을 주지 않습니다.  
   
 ##  <a name="detach"></a>  CAutoRevertImpersonation::Detach  
- 자동 가장 버전을 취소합니다.  
+ 자동 가장 되돌리기가 취소합니다.  
   
 ```
 const CAccessToken* Detach() throw();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 이전에 연관 된 주소 [CAccessToken](../../atl/reference/caccesstoken-class.md), 또는 다른 설명이 없는 존재 하는 경우 NULL입니다.  
+ 이전에 연결된 된 주소의 [CAccessToken](../../atl/reference/caccesstoken-class.md), 연결이 없습니다. 존재 하는 경우에 null입니다.  
   
 ### <a name="remarks"></a>설명  
- 호출 **분리** 방지는 `CAutoRevertImpersonation` 개체에 적용 된 모든 가장 현재으로 되돌릴는 [CAccessToken](../../atl/reference/caccesstoken-class.md) 이 개체와 연결 된 개체입니다. `CAutoRevertImpersonation` 영향을 주지 파괴 하거나를 동일한 문서나 다른 클라우드에 다시 연결할 수 `CAccessToken` 개체 사용 하 여 [연결](#attach)합니다.  
+ 호출 **분리** 방지 합니다 `CAutoRevertImpersonation` 개체에 적용 된 모든 가장 현재 되돌릴 합니다 [CAccessToken](../../atl/reference/caccesstoken-class.md) 이 개체와 연결 된 개체입니다. `CAutoRevertImpersonation` 영향을 주지 않습니다를 사용 하 여 제거 하거나 동일한 또는 다른 클라우드에 다시 연결할 수 `CAccessToken` 를 사용 하 여 개체 [연결](#attach)합니다.  
   
 ##  <a name="getaccesstoken"></a>  CAutoRevertImpersonation::GetAccessToken  
  이 개체와 연결 된 액세스 토큰 현재를 검색 합니다.  
@@ -122,10 +123,10 @@ const CAccessToken* GetAccessToken() throw();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 이전에 연관 된 주소 [CAccessToken](../../atl/reference/caccesstoken-class.md), 또는 다른 설명이 없는 존재 하는 경우 NULL입니다.  
+ 이전에 연결된 된 주소의 [CAccessToken](../../atl/reference/caccesstoken-class.md), 연결이 없습니다. 존재 하는 경우에 null입니다.  
   
 ### <a name="remarks"></a>설명  
- 가장의 버전을 포함 하는 목적에 대 한이 메서드를 호출 하면는 `CAccessToken` 개체는 [분리](#detach) 메서드를 대신 사용 해야 합니다.  
+ 가장의 되돌리기가 포함 하는 용도로이 메서드를 호출 하면 합니다 `CAccessToken` 개체를 [분리](#detach) 메서드를 대신 사용 해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ATLSecurity 샘플](../../visual-cpp-samples.md)   

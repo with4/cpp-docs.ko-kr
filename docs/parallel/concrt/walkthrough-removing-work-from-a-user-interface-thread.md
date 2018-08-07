@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694289"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>연습: 사용자 인터페이스 스레드에서 작업 제거
 이 문서에는 작업자 스레드를 Microsoft Foundation 클래스 (MFC) 응용 프로그램의 사용자 인터페이스 (UI) 스레드에서 수행 하는 작업을 이동 하려면 동시성 런타임을 사용 하는 방법을 보여 줍니다. 이 문서에는 긴 그리기 작업의 성능을 개선 하는 방법을 보여 줍니다.  

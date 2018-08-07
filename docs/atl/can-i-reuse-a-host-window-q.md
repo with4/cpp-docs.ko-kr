@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353707"
 ---
 # <a name="can-i-reuse-a-host-window"></a>호스트 창 다시 사용할 수 있습니까?
 호스트 창을 다시 사용 하는 권장 되지 않습니다. 코드의 견고성을 보장 하려면 단일 컨트롤의 수명과 호스트 창의 수명을 제한 해야 합니다.  

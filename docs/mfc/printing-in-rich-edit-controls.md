@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347665"
 ---
 # <a name="printing-in-rich-edit-controls"></a>Rich Edit 컨트롤의 인쇄
 Rich edit 컨트롤을 확인할 수 있습니다 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 프린터와 같은 지정 된 장치에 대 한 해당 출력을 렌더링 합니다. 출력 장치 rich edit 컨트롤의 텍스트 서식을 지정할 수 있습니다.  

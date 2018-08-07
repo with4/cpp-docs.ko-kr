@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382988"
 ---
 # <a name="using-clistctrl"></a>CListCtrl 사용
 파일 탐색기 또는 텍스트, 아이콘 유무 열 목록을 처럼 레이블과 함께 아이콘의 배열을 표시 하는 목록 컨트롤을 사용 합니다. 목록 컨트롤에 있는 수에 대 한 설명은 4 가지 가능한 "보기" (MFC 보기와 혼동 하지 않음)-아이콘 보기, 작은 아이콘 보기, 목록 보기 및 보고서 보기-설명은 [CListCtrl](../mfc/reference/clistctrl-class.md) 클래스 개요.  

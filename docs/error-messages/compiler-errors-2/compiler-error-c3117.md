@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249087"
 ---
 # <a name="compiler-error-c3117"></a>컴파일러 오류 C3117
 '%$S': 인터페이스는 단 하나의 기본 클래스를 하나만 사용할 수 있습니다  

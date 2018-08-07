@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106208"
 ---
 # <a name="debug-class-ccli"></a>Debug 클래스(C++/CLI)
 사용 하는 경우 <xref:System.Diagnostics.Debug> Visual c + + 응용 프로그램에서 동작 디버그 및 릴리스 빌드 간에 변경 되지 않습니다.  

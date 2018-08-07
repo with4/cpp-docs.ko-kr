@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086677"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Platform::InvalidArgumentException 클래스
 메서드에 제공된 인수 중 하나가 유효하지 않을 때 throw됩니다.  

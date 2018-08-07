@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380803"
 ---
 # <a name="behavior-of-identifiers"></a>식별자 동작
 -   [외부 링크가 없는 중요한 문자](../c-language/significant-characters-without-external-linkage.md)  

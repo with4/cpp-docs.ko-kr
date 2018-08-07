@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054265"
 ---
 # <a name="ml-nonfatal-error-a2066"></a>ML 심각하지 않은 오류 A2066
 **호환 되지 않는 CPU 모드와 세그먼트 크기**  

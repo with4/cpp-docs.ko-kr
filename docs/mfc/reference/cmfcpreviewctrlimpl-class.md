@@ -46,14 +46,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb1ef84aabed69554ded868bbe9092c3e8b7082f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ab9cd717d8e035d9cfc75e0f856af792c392cf7
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848999"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl 클래스
-이 클래스는 for Rich Preview 셸에서 제공 하는 호스 창에 배치 하는 창을 구현 합니다.  
+이 클래스에는 풍부한 미리 보기에 대 한 셸을 제공 하는 호스 창에 배치 되는 창을 구현 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,20 +69,20 @@ class CMFCPreviewCtrlImpl : public CWnd;
 |이름|설명|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl](#dtor)|미리 보기 컨트롤 개체를 destructs 합니다.|  
-|[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|미리 보기 컨트롤 개체를 만듭니다.|  
+|[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|미리 보기 컨트롤 개체를 생성합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[CMFCPreviewCtrlImpl::Create](#create)|오버로드됨. Windows 창을 만들기 위해 서식 있는 미리 보기 처리기에서 호출 됩니다.|  
-|[CMFCPreviewCtrlImpl::Destroy](#destroy)|이 컨트롤을 삭제 하는 데 필요한 풍부한 미리 보기 처리기에서 호출 됩니다.|  
+|[CMFCPreviewCtrlImpl::Create](#create)|오버로드됨. Windows 창을 만들기 위해 다양 한 미리 보기 처리기에서 호출 됩니다.|  
+|[CMFCPreviewCtrlImpl::Destroy](#destroy)|이 컨트롤을 제거 해야 할 경우 다양 한 미리 보기 처리기에서 호출 됩니다.|  
 |[CMFCPreviewCtrlImpl::Focus](#focus)|입력이 컨트롤에 포커스를 설정 합니다.|  
-|[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|이 미리 보기 컨트롤에 연결 하는 문서를 반환 합니다.|  
-|[CMFCPreviewCtrlImpl::Redraw](#redraw)|이 컨트롤을 다시 그리게 지시 합니다.|  
-|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|문서 구현 및 미리 보기 컨트롤 간의 관계를 만드는 미리 보기 처리기에서 호출 됩니다.|  
+|[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|이 미리 보기 컨트롤에 연결 된 문서를 반환 합니다.|  
+|[CMFCPreviewCtrlImpl::Redraw](#redraw)|이 컨트롤을 다시 그리게 알려 줍니다.|  
+|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|문서 구현 및 미리 보기 컨트롤 간의 관계를 만들려면 미리 보기 처리기에서 호출 됩니다.|  
 |[CMFCPreviewCtrlImpl::SetHost](#sethost)|이 컨트롤에 대 한 새 부모를 설정합니다.|  
-|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|호출한 풍부한 미리 보기 처리기 풍부한 미리 보기의 시각적 개체를 설정 해야 할 때 콘텐츠 됩니다.|  
+|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|호출한 풍부한 미리 보기 처리기 풍부한 미리 보기의 시각적 개체를 설정 해야 할 경우 콘텐츠입니다.|  
 |[CMFCPreviewCtrlImpl::SetRect](#setrect)|이 컨트롤에 대 한 새로운 경계 사각형을 설정합니다.|  
   
 ### <a name="protected-methods"></a>보호된 메서드  
@@ -92,7 +93,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|미리 보기 창의 배경색입니다.|  
 |[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|미리 보기 창의 텍스트 색입니다.|  
@@ -112,13 +113,13 @@ class CMFCPreviewCtrlImpl : public CWnd;
  [CMFCPreviewCtrlImpl](../../mfc/reference/cmfcpreviewctrlimpl-class.md)
 
 ## <a name="cmfcpreviewctrlimpl"></a> CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
-미리 보기 컨트롤 개체를 만듭니다.
+미리 보기 컨트롤 개체를 생성합니다.
 
 ### <a name="syntax"></a>구문
 CMFCPreviewCtrlImpl();  
 
 ## <a name="create"></a> CMFCPreviewCtrlImpl::Create
-오버로드됨. Windows 창을 만들기 위해 서식 있는 미리 보기 처리기에서 호출 됩니다.  
+오버로드됨. Windows 창을 만들기 위해 다양 한 미리 보기 처리기에서 호출 됩니다.  
   
 ### <a name="syntax"></a>구문  
   
@@ -135,20 +136,20 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hWndParent`  
- 서식 있는 미리 보기에 대 한 셸에서 제공 호스트 창에 대 한 핸들입니다.  
+ *hWndParent*  
+ 셸에서에서 제공 하는 다양 한 미리 보기에 대 한 호스트 창 핸들입니다.  
   
- `prc`  
- 초기 크기와 창의 위치를 지정합니다.  
+ *중국*  
+ 초기 크기와 창의 위치를 지정 합니다.  
   
- `pContext`  
- 컨텍스트를 만들지에 대 한 포인터입니다.  
+ *pContext*  
+ 생성 컨텍스트 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 만들기 성공 그렇지 않으면 `FALSE`합니다.  
+ 생성에 성공하면 TRUE이고, 그렇지 않으면 FALSE입니다.  
   
 ## <a name="destroy"></a> CMFCPreviewCtrlImpl::Destroy
-이 컨트롤을 삭제 하는 데 필요한 풍부한 미리 보기 처리기에서 호출 됩니다.  
+이 컨트롤을 제거 해야 할 경우 다양 한 미리 보기 처리기에서 호출 됩니다.  
   
 ### <a name="syntax"></a>구문  
   
@@ -168,8 +169,8 @@ virtual void DoPaint(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
- 그리기 장치 컨텍스트 포인터입니다.  
+ *pDC*  
+ 그리기에 대 한 장치 컨텍스트 포인터입니다.  
 
 
 ## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus  
@@ -181,7 +182,7 @@ virtual void DoPaint(
 virtual void Focus();  
 ```  
 ## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
-이 미리 보기 컨트롤에 연결 하는 문서를 반환 합니다.  
+이 미리 보기 컨트롤에 연결 된 문서를 반환 합니다.  
   
 ### <a name="syntax"></a>구문  
   
@@ -226,7 +227,7 @@ ATL::IDocument* m_pDocument;
 ```  
 
 ## <a name="redraw"></a> CMFCPreviewCtrlImpl::Redraw  
-이 컨트롤을 다시 그리게 지시 합니다.  
+이 컨트롤을 다시 그리게 알려 줍니다.  
   
 ### <a name="syntax"></a>구문  
   
@@ -234,7 +235,7 @@ ATL::IDocument* m_pDocument;
 virtual void Redraw();  
 ```  
 ## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument 
-문서 구현 및 미리 보기 컨트롤 간의 관계를 만드는 미리 보기 처리기에서 호출 됩니다.  
+문서 구현 및 미리 보기 컨트롤 간의 관계를 만들려면 미리 보기 처리기에서 호출 됩니다.  
   
 ### <a name="syntax"></a>구문  
   
@@ -245,7 +246,7 @@ void SetDocument(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDocument`  
+ *pDocument*  
  문서 구현에 대 한 포인터입니다.  
 
 ## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
@@ -260,11 +261,11 @@ virtual void SetHost(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hWndParent`  
- 새 부모 창에 대 한 핸들입니다.  
+ *hWndParent*  
+ 새 부모 창 핸들입니다.  
 
 ## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
-호출한 풍부한 미리 보기 처리기 풍부한 미리 보기의 시각적 개체를 설정 해야 할 때 콘텐츠 됩니다.  
+호출한 풍부한 미리 보기 처리기 풍부한 미리 보기의 시각적 개체를 설정 해야 할 경우 콘텐츠입니다.  
   
 ### <a name="syntax"></a>구문  
   
@@ -277,13 +278,13 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `clrBack`  
+ *clrBack*  
  미리 보기 창의 배경색입니다.  
   
- `clrText`  
+ *clrText*  
  미리 보기 창의 텍스트 색입니다.  
   
- `plf`  
+ *plf*  
  미리 보기 창에 텍스트를 표시 하는 데 사용 하는 글꼴입니다. 
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
@@ -299,14 +300,14 @@ virtual void SetRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `prc`  
- 새 크기와 미리 보기 컨트롤의 위치를 지정합니다.  
+ *중국*  
+ 새 크기와 미리 보기 컨트롤의 위치를 지정 합니다.  
   
- `bRedraw`  
- 컨트롤 그려야 하는지 여부를 지정 합니다.  
+ *bRedraw*  
+ 컨트롤을 그려야 하는지 여부를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 일반적으로 새 경계 사각형에 호스트 컨트롤의 크기를 조정할 때 설정 됩니다.  
+ 일반적으로 호스트 컨트롤의 크기를 조정할 때 새 경계 사각형에 설정 됩니다.  
 
 ## <a name="dtor"></a> CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
 미리 보기 컨트롤 개체를 destructs 합니다.  

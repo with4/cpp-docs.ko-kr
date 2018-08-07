@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691952"
 ---
 # <a name="ompsetdynamic"></a>omp_set_dynamic
 실행된 시간까지 후속 병렬 영역에서 사용할 수 있는 스레드 수를 조정할 수 있다는 것을 나타냅니다.  

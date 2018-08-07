@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854654"
 ---
 # <a name="buffer-overflow"></a>버퍼 오버플로
 문자 크기를 다르게 문자 버퍼에 배치할 때 문제가 발생할 수 있습니다. 문자열에서 문자를 복사, 다음 코드는 `sz`, 버퍼로 `rgch`:  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300230"
 ---
 # <a name="function-inlining-problems"></a>함수 인라이닝 문제
 함수 인라이닝를 사용 하는 경우 다음을 수행 해야 합니다.  

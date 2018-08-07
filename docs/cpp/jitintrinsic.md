@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cd88882ea104275e4c1a43ccf05494a859d303
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f0b114089567de06a71f15b69c556e08d1e4e9c6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404082"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
 64비트 공용 언어 런타임에 중요한 항목으로 함수를 표시합니다. 이는 Microsoft에서 제공하는 라이브러리의 특정 함수에서 사용됩니다.  
@@ -34,10 +35,10 @@ __declspec(jitintrinsic)
 ```  
   
 ## <a name="remarks"></a>설명  
- `jitintrinsic`는 MODOPT(<xref:System.Runtime.CompilerServices.IsJitIntrinsic>)를 함수 서명에 추가합니다.  
+ **jitintrinsic** 추가 MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>)를 함수 서명에 합니다.  
   
- 예기치 않은 결과가 발생할 수 있기 때문에 이 `__declspec` 한정자는 사용하지 않도록 합니다.  
+ 사용자가이 사용 하 여 권장 되지 않습니다 **__declspec** 한정자, 예기치 않은 결과가 발생할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [__declspec](../cpp/declspec.md)   
  [키워드](../cpp/keywords-cpp.md)

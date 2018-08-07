@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274055"
 ---
 # <a name="compiler-error-c3748"></a>컴파일러 오류 C3748
 'interface': 관리 되는 인터페이스 이벤트를 발생 하지 않습니다  

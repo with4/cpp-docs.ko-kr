@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392363"
 ---
 # <a name="initializing-scalar-types"></a>스칼라 형식 초기화
 스칼라 형식을 초기화할 때 *assignment-expression*의 값이 변수에 할당됩니다. 할당에 대한 변환 규칙이 적용됩니다. (변환 규칙에 대한 자세한 내용은 [형식 변환](../c-language/type-conversions-c.md)을 참조하세요.)  

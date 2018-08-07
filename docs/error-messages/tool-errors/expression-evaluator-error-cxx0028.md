@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298839"
 ---
 # <a name="expression-evaluator-error-cxx0028"></a>식 계산기 오류 CXX0028
 구조체/공용 구조체 요소가 아닙니다  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254411"
 ---
 # <a name="compiler-error-c3282"></a>컴파일러 오류 C3282
 관리 되는 제네릭 매개 변수 목록에 나타날 수 또는 WinRTclasses, 구조체 또는 함수  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110248"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>C++/CLI를 사용한 .NET 프로그래밍 (Visual C++)
 다음 항목에서는 Visual C++에서 .NET 플랫폼을 대상으로 지정하는 방법에 대해 설명합니다.  

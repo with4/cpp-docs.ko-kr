@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854865"
 ---
 # <a name="agileactivationfactory-class"></a>AgileActivationFactory 클래스
 구현 하는 아파트 활성화 팩터리를 나타내는 [FtmBase](../windows/ftmbase-class.md)합니다.  

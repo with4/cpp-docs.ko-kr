@@ -17,14 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88d2dd1d09b573b89e69d28071c7f689fa8396d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fab750ce655add3ccdac9d955e1e3a36e46f8cc5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465131"
 ---
 # <a name="asyncbasegeterrorcode-method"></a>AsyncBase::get_ErrorCode 메서드
-현재 비동기 작업에 대 한 오류 코드를 검색합니다.  
+현재 비동기 작업에 대 한 오류 코드를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `errorCode`  
+ *오류 코드*  
  현재 오류 코드가 저장 된 위치입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 현재 비동기 작업 닫혀 있으면 E_ILLEGAL_METHOD_CALL 합니다.  
+ 성공 하면 s_ok이 고 그렇지 않으면 현재 비동기 작업이 닫히면 E_ILLEGAL_METHOD_CALL 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** async.h  

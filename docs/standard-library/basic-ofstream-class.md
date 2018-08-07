@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57ed2b662b21425f206b0a4f07e072b723c8aae4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d90cbfd5d1f239f05d19803c9ed89ad080667f2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964816"
 ---
 # <a name="basicofstream-class"></a>basic_ofstream 클래스
 
@@ -45,17 +46,17 @@ class basic_ofstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>매개 변수
 
-`Elem` 파일 버퍼의 기본 요소입니다.
+*Elem* 파일 버퍼의 기본 요소입니다.
 
-`Tr` 파일 버퍼 기본 요소의 특성 (일반적으로 `char_traits` <  `Elem`>).
+*Tr* 파일 버퍼 기본 요소의 특성 (일반적으로 `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>설명
 
-`basic_ofstream`의 `wchar_t` 특수화에서는 파일에 쓸 때, 파일이 텍스트 모드로 열려 있으면 MBCS 시퀀스를 작성합니다. 내부 표현에서는 `wchar_t`자의 버퍼를 사용하게 됩니다.
+경우는 **wchar_t** 특수화 `basic_ofstream` 파일 텍스트 모드로 열려 있으면 MBCS 시퀀스를 작성 파일에 씁니다. 내부 표현에서는 `wchar_t`자의 버퍼를 사용하게 됩니다.
 
 이 개체는 `basic_filebuf`< `Elem`, `Tr`> 클래스의 개체를 저장합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 `basic_ofstream` 개체를 만들고 거기에 텍스트를 쓰는 방법을 보여 줍니다.
 
@@ -128,23 +129,23 @@ basic_ofstream(
 
 ### <a name="parameters"></a>매개 변수
 
-`_Filename` 열려는 파일의 이름입니다.
+*_Filename* 열려는 파일의 이름입니다.
 
-`_Mode` 열거 중 하나 [ios_base:: openmode](../standard-library/ios-base-class.md#openmode)합니다.
+*모드 (_m)* 의 열거형 중 하나 [ios_base:: openmode](../standard-library/ios-base-class.md#openmode)합니다.
 
-`_Prot` 기본 파일을 보호 하려면 해당를 여는 `shflag` 매개 변수에서 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)합니다.
+*_Prot* 기본 파일 열기 보호는 `shflag` 에 매개 변수 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)합니다.
 
-`right` 에 대 한 rvalue 참조는 `basic_ofstream` 이 초기화 하는 데 사용 되 고 개체 `basic_ofstream` 개체입니다.
+*오른쪽* 에 대 한 rvalue 참조를 `basic_ofstream` 이 초기화 하는 데 사용 되 고 개체 `basic_ofstream` 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 [basic_iostream](../standard-library/basic-ostream-class.md)( **sb**)를 호출하여 기본 클래스를 초기화합니다. 여기서 **sb**는 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 클래스의 저장된 개체입니다. 또한 `basic_filebuf`< `Elem`, `Tr`>을 호출하여 **sb**를 초기화합니다.
+첫 번째 생성자는 기본 클래스를 호출 하 여 초기화 [basic_ostream](../standard-library/basic-ostream-class.md)(`sb`), 여기서 `sb` 클래스의 저장 개체인 [basic_filebuf](../standard-library/basic-filebuf-class.md) <  `Elem`, `Tr`>. 또한 `basic_filebuf`< `Elem`, `Tr`>을 호출하여 `sb`를 초기화합니다.
 
-두 번째 및 세 번째 생성자는 `basic_ostream`( **sb**)를 호출하여 기본 클래스를 초기화합니다. 또한 **sb**를 초기화하는데, `basic_filebuf`< `Elem`, `Tr`> 및 **sb**. [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`)을 차례로 호출합니다. 후자 함수가 null 포인터를 반환하면 생성자는 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)를 호출합니다.
+두 번째 및 세 번째 생성자는 `basic_ostream`( **sb**)를 호출하여 기본 클래스를 초기화합니다. 초기화 `sb` 호출한 `basic_filebuf` <  `Elem`, `Tr`> 차례로 `sb`합니다. [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`)을 차례로 호출합니다. 후자 함수가 null 포인터를 반환 하는 경우 생성자를 호출 [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
-네 번째 생성자는 복사 함수입니다. 이 생성자는 rvalue 참조로 처리되는 `right`의 내용으로 개체를 초기화합니다.
+네 번째 생성자는 복사 함수입니다. 내용으로 개체를 초기화 *오른쪽*는 rvalue 참조로 처리 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 `basic_ofstream` 개체를 만들고 거기에 텍스트를 쓰는 방법을 보여 줍니다.
 
@@ -178,9 +179,9 @@ void close();
 
 멤버 함수 호출 [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf)**->**[닫습니다](../standard-library/basic-filebuf-class.md#close)합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
-**close**를 사용하는 예는 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)를 참조하세요.
+`close`의 사용 예제는 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)를 참조하세요.
 
 ## <a name="is_open"></a>  basic_ofstream::is_open
 
@@ -192,13 +193,13 @@ bool is_open() const;
 
 ### <a name="return-value"></a>반환 값
 
-파일이 열려 있는 경우 `true`, 아닌 경우 `false`입니다.
+파일이 열린 경우 **true**, 아닌 경우 **false**입니다.
 
 ### <a name="remarks"></a>설명
 
 멤버 함수는 반환 [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // basic_ofstream_is_open.cpp
@@ -246,19 +247,19 @@ void open(
 
 ### <a name="parameters"></a>매개 변수
 
-`_Filename` 열려는 파일의 이름입니다.
+*_Filename* 열려는 파일의 이름입니다.
 
-`_Mode` 열거 중 하나 [ios_base:: openmode](../standard-library/ios-base-class.md#openmode)합니다.
+*모드 (_m)* 의 열거형 중 하나 [ios_base:: openmode](../standard-library/ios-base-class.md#openmode)합니다.
 
-`_Prot` 기본 파일을 보호 하려면 해당를 여는 `shflag` 매개 변수에서 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)합니다.
+*_Prot* 기본 파일 열기 보호는 `shflag` 에 매개 변수 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)합니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; `ios_base::out`)을 호출합니다. 해당 함수가 null 포인터를 반환하면 함수는 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)를 호출합니다.
+멤버 함수는 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; `ios_base::out`)을 호출합니다. 이 함수를 호출 하는 해당 함수가 null 포인터를 반환 하면 [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
-**open**을 사용하는 예는 [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open)을 참조하세요.
+참조 [basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open) 사용 하는 예제에 대 한 `open`합니다.
 
 ## <a name="op_eq"></a>  basic_ofstream::operator=
 
@@ -270,7 +271,7 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 에 대 한 rvalue 참조는 `basic_ofstream` 개체입니다.
+*오른쪽* rvalue 참조는 `basic_ofstream` 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -278,7 +279,7 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="remarks"></a>설명
 
-멤버 연산자는 rvalue 참조로 처리되는 `right`의 내용을 사용하여 개체의 내용을 바꿉니다.
+멤버 연산자의 콘텐츠를 사용 하 여 개체의 내용을 바꿉니다 *오른쪽*는 rvalue 참조로 처리 합니다.
 
 ## <a name="rdbuf"></a>  basic_ofstream::rdbuf
 
@@ -292,7 +293,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 
 저장된 스트림 버퍼 주소를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `rdbuf`의 사용 예제는 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)를 참조하세요.
 
@@ -306,11 +307,11 @@ void swap(basic_ofstream& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` `lvalue` 다른 참조 `basic_ofstream` 개체입니다.
+*오른쪽* 는 `lvalue` 다른 참조 `basic_ofstream` 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 이 개체의 내용을 `right`의 내용으로 교환합니다.
+멤버 함수는 내용에 대해이 개체의 내용을 교환 *오른쪽*합니다.
 
 ## <a name="see-also"></a>참고자료
 

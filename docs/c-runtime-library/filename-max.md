@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387572"
 ---
 # <a name="filenamemax"></a>FILENAME_MAX
 `filename` 문자열 버퍼 크기에 대해 허용 가능한 최대 길이입니다.  

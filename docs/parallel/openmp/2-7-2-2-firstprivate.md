@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687402"
 ---
 # <a name="2722-firstprivate"></a>2.7.2.2 firstprivate
 **firstprivate** 절에서 제공 하는 기능의 상위 집합을 제공 된 **개인** 절. 구문은 **firstprivate** 절은 다음과 같습니다.  

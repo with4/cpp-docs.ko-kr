@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdece555ea58f0a1321258405fa76ba02cf12efa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9b266d167b34c1c773d79ea92813a310eb18441
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408968"
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>멤버 포인터 연산자: .* 및- &gt;*
 ## <a name="syntax"></a>구문  
@@ -38,7 +39,7 @@ expression ->* expression
 ## <a name="remarks"></a>설명  
  멤버 포인터 연산자. * 및->\*, 식의 왼쪽에 지정 된 개체에 대 한 특정 클래스 멤버의 값을 반환 합니다.  오른쪽에는 클래스 멤버를 지정해야 합니다.  다음 예제에서는 이러한 연산자를 사용하는 방법을 보여 줍니다.  
   
-```  
+```cpp 
 // expre_Expressions_with_Pointer_Member_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -78,7 +79,7 @@ int main() {
   
 ## <a name="output"></a>출력  
   
-```  
+```Output  
 m_func1  
 m_func1  
 1  
@@ -89,16 +90,16 @@ m_func1
   
  .* 이항 연산자는 첫 번째 피연산자(반드시 클래스 형식의 개체)와 두 번째 피연산자(반드시 멤버 포인터 형식)를 결합합니다.  
   
- 이항 연산자-> *는 첫 번째 피연산자, 반드시 클래스 형식의 개체에 포인터는 멤버 포인터 형식 이어야 하는 두 번째 피연산자와 결합 합니다.  
+ 이항 연산자-> * 첫 번째 피연산자를 클래스 형식의 개체에 대 한 포인터 여야 하는 멤버 포인터 형식 이어야 하는 두 번째 피연산자를 사용 하 여 결합 합니다.  
   
  .* 연산자가 포함된 식에서 첫 번째 피연산자는 두 번째 피연산자에 지정된 멤버 포인터의 클래스 형식이면서 해당 멤버 포인터에 액세스할 수 있거나 해당 클래스에서 명확히 파생되고 해당 클래스에 액세스할 수 있는 형식이어야 합니다.  
   
- ->를 포함 하는 식에서 * 연산자를 첫 번째 피연산자 형식의 "클래스 형식 포인터" 형식 지정 된 두 번째 피연산자에 해당 해야 형식의 명확 하 게에서 파생 되었거나 해당 클래스입니다.  
+ ->를 포함 하는 식에 * 연산자가 첫 번째 피연산자 형식의 "클래스 형식에 대 한 포인터" 형식으로에서 지정 해야 두 번째 피연산자 또는 해당 형식의 명확 하 게에서 파생 되어야 합니다는 클래스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 클래스와 프로그램 부분을 살펴보십시오.  
   
-```  
+```cpp 
 // expre_Expressions_with_Pointer_Member_Operators2.cpp  
 // C2440 expected  
 class BaseClass {  
@@ -134,11 +135,10 @@ int main() {
 }  
 ```  
   
- 결과. * 또는->\* 개체 또는 함수 멤버에 대 한 포인터의 선언에 지정 된 형식의 멤버 포인터 연산자가 있습니다. 따라서 앞의 예제에서 `ADerived.*pmfnFunc1()` 식의 결과는 void를 반환하는 함수 포인터입니다. 두 번째 피연산자가 l-value인 경우 이 결과는 l-value입니다.  
+ 결과. * 또는->\* 멤버 포인터 연산자는 개체 또는 멤버에 대 한 포인터의 선언에 지정 된 형식의 함수입니다. 따라서 앞의 예제에서 `ADerived.*pmfnFunc1()` 식의 결과는 void를 반환하는 함수 포인터입니다. 두 번째 피연산자가 l-value인 경우 이 결과는 l-value입니다.  
   
 > [!NOTE]
 >  멤버 포인터 연산자 중 하나의 결과가 함수인 경우 결과는 함수 호출 연산자에 대한 피연산자로만 사용할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-

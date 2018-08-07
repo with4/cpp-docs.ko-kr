@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249054"
 ---
 # <a name="compiler-error-c2921"></a>컴파일러 오류 C2921
 재정의: 'class' : 클래스 템플릿 또는 제네릭이 'type'으로 다시 선언되고 있습니다.  

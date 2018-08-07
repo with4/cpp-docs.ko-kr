@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872941"
 ---
 # <a name="editing-accelerator-tables"></a>액셀러레이터 키 테이블 편집
 Visual c + +에서 액셀러레이터 키 편집기에서 내부 편집으로 직접 액셀러레이터 키 테이블을 편집할 수 있습니다.  

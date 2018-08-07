@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086625"
 ---
 # <a name="platformobjectdisposedexception-class"></a>Platform::ObjectDisposedException 클래스
 삭제된 개체에서 연산이 수행될 때 throw됩니다.  

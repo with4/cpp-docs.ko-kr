@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fcfda308ed3a5723b32729e7986a7063e9928fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f9ee05b55a0945d18e78dc67df5653c06c8a1bc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404384"
 ---
 # <a name="calling-example-function-prototype-and-call"></a>호출 예제: 함수 프로토타입 및 호출
 ## <a name="microsoft-specific"></a>Microsoft 전용  
@@ -44,9 +45,9 @@ void    MyFunc( char c, short s, int i, double f )
 MyFunc ('x', 12, 8192, 2.7183);  
 ```  
   
- 자세한 내용은 참조 [호출 예제 결과](../cpp/results-of-calling-example.md)합니다.  
+ 자세한 내용은 [호출 예제 결과](../cpp/results-of-calling-example.md)합니다.  
   
 **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [호출 규칙](../cpp/calling-conventions.md)

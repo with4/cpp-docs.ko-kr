@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76aaf29febd04f95efc0922e0d2680976e1e97da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 090fd7ed027738ebe7bc9276e3b3f124b9212c4a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463469"
 ---
 # <a name="varianttsetstring"></a>_variant_t::SetString
 **Microsoft 전용**  
@@ -30,14 +31,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      void SetString(  
-   const char* pSrc   
-);  
+void SetString(const char* pSrc);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `pSrc`  
+ *pSrc*  
  문자열에 대한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -45,5 +43,5 @@ ms.lasthandoff: 05/03/2018
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_variant_t 클래스](../cpp/variant-t-class.md)

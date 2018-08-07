@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380290"
 ---
 # <a name="targets-in-multiple-description-blocks"></a>여러 개의 설명 블록에 포함된 대상
 다른 명령을 사용 하 여 둘 이상의 설명 블록에 업데이트를 대상 및 종속 항목 간의 연속 된 두 개의 콜론 (:)을 지정 합니다.  

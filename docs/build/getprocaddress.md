@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367968"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 DLL 호출에 명시적으로 연결 하는 프로세스 [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) DLL에서 내보낸된 함수 주소를 가져옵니다. 반환 된 함수 포인터를 사용 하 여 DLL 함수를 호출 합니다. **GetProcAddress** DLL 모듈 핸들을 매개 변수로 (에서 반환 된 **LoadLibrary**, `AfxLoadLibrary`, 또는 **GetModuleHandle**) 원하는 함수 이름을 사용 하 고 호출 하거나 함수 내보내기 서 수를 제공 합니다.  

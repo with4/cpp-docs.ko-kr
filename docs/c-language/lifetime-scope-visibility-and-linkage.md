@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384426"
 ---
 # <a name="lifetime-scope-visibility-and-linkage"></a>수명, 범위, 표시 영역 및 링크
 C 프로그램의 작동 방식을 이해하려면 프로그램에서 변수와 함수를 사용하는 방법을 결정하는 규칙을 이해해야 합니다. 아래의 몇 가지 개념은 이러한 규칙을 이해하는 데 중요합니다.  

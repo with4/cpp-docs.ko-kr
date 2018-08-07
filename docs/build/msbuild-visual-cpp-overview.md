@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe3499cdd8f9a9a1cfb91a45e9f039e1b8be2e76
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039091"
 ---
 # <a name="msbuild-visual-c-overview"></a>MSBuild(Visual C++) 개요  
   
@@ -138,7 +139,10 @@ Visual c + + 지원 파일에서 대상을 수백 있습니다. 그러나 대부
 |다시 빌드|정리 하 고 프로젝트를 빌드합니다.|  
 |ResourceCompile|Microsoft Windows 리소스 컴파일러 도구의 실행 rc.exe 합니다.|  
 |XdcMake|XML 문서 도구 실행 xdcmake.exe 합니다.|  
-|Xsd|XML 스키마 정의 도구 실행 xsd.exe 합니다.|  
+|Xsd|XML 스키마 정의 도구 실행 xsd.exe 합니다. *다음의 참고를 참조 하십시오.*|  
+
+> [!NOTE] 
+> Visual Studio 2017 년에서 c + + 프로젝트에 대 한 지원 **xsd** 파일을 사용 하는 사용 되지 않습니다. 사용할 수 있습니다 **Microsoft.VisualC.CppCodeProvider** 추가 하 여 **CppCodeProvider.dll** 수동으로 GAC에 있습니다.
   
 ## <a name="see-also"></a>참고 항목  
   

@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fc8fb21afe1f024e4e5418d3cc706f654946de6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e49fcc87c4c074494164a085e01581077bbfe118
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953864"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -82,13 +83,17 @@ void swap (
 
 ### <a name="parameters"></a>매개 변수
 
-벡터에 저장 된 데이터 형식에 대 한 템플릿 매개 변수를 입력 합니다.
+*Type*  
+ 벡터에 저장되는 데이터 형식에 대한 템플릿 매개 변수입니다.
 
-할당자 메모리 할당 및 할당 취소 하는 일을 담당 하는 저장 된 할당자 개체에 대 한 템플릿 매개 변수입니다.
+*할당자*  
+ 메모리 할당 및 할당 취소를 수행하는 저장된 할당자 개체에 대한 템플릿 매개 변수입니다.
 
-`left` 비교 작업의 첫 번째 (왼쪽된) 벡터
+*left*  
+ 비교 작업의 첫 번째(왼쪽) 벡터입니다.
 
-`right` 비교 작업의 두 번째 (오른쪽) 벡터입니다.
+*right*  
+ 비교 작업의 두 번째(오른쪽) 벡터입니다.
 
 ### <a name="operators"></a>연산자
 

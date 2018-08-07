@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373555"
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ(스택 프레임 런타임 오류 검사 사용)
 와 같은 작업을 수행 된 [/RTC (런타임 오류 검사)](../../build/reference/rtc-run-time-error-checks.md) 옵션입니다. 더 이상 사용되지 않습니다.  

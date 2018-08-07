@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344232"
 ---
 # <a name="global-hot-keys"></a>전역 바로 가기 키
 전역 바로 가기 키가 특정 비 자식 창에 연결 합니다. 시스템의 모든 부분에서 창을 활성화 하려면 사용자 수 있습니다. 전송 하 여 특정 창에 대 한 전역 바로 가기 키를 설정 하는 응용 프로그램의 [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) 해당 창에 메시지입니다. 예를 들어 경우 `m_HotKeyCtrl` 는 [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) 개체 및 `pMainWnd` 대 한 포인터 바로 가기 키를 누를 때 활성화할 창에 있는 컨트롤에 지정 된 바로 가기 키를 연결 하려면 다음 코드를 사용할 수 있습니다 창에서 가리키는 `pMainWnd`합니다.  

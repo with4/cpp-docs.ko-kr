@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130557"
 ---
 # <a name="initonly-ccli"></a>initonly(C++/CLI)
 **initonly** 해당 변수 할당을 나타내는 상황에 맞는 키워드는 선언 또는 동일한 클래스의 정적 생성자의 일부로 서만 발생할 수 있습니다.  

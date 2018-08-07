@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87abaa5a3564c61a6944e0cc31e81375f92a3a80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba1596e1dd114dcd46610b824405740a783c21e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954795"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>CArchive 개체를 만드는 두 가지 방법
 두 가지 방법으로 만들 수는 `CArchive` 개체:  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
   
 3.  만듭니다는 `CArchive` 이 가리키는 개체를 `CFile` 개체입니다. 만드는 `CArchive` 개체, 프레임 워크 "store" 모드를 설정 (작성, 직렬화) "load" 달리 (읽기, 역직렬화) 합니다.  
   
-4.  호출의 `Serialize` 함수에 정의 된 프로그램 **CDocument**-에 대 한 참조를 전달 하는 클래스를 파생는 `CArchive` 개체입니다.  
+4.  호출의 `Serialize` 함수에 정의 된 프로그램 `CDocument`-에 대 한 참조를 전달 하는 클래스를 파생는 `CArchive` 개체입니다.  
   
  문서의 `Serialize` 함수에는 다음 데이터를 쓰는 `CArchive` 곧에 설명 된 대로 개체입니다. 반환 될 때 프로그램 `Serialize` 함수, 프레임 워크 제거는 `CArchive` 개체 차례로 `CFile` 개체입니다.  
   

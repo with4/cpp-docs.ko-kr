@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33195908"
 ---
 # <a name="compiler-error-c2332"></a>컴파일러 오류 C2332
 'typedef': 태그 이름이 없습니다.  

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de2f28feb775cd6e37116ea7c27691397d2dfce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 662c4915753cc49534fa9f489eb61504907744c4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954710"
 ---
 # <a name="basiciostream-class"></a>basic_iostream 클래스
 
@@ -84,15 +85,15 @@ basic_iostream();
 
 ### <a name="parameters"></a>매개 변수
 
-`strbuf` 기존 `basic_streambuf` 개체입니다.
+*strbuf* 기존 `basic_streambuf` 개체입니다.
 
-`right` 기존 `basic_iostream` 새 생성에 사용 되는 개체 `basic_iostream`합니다.
+*오른쪽* 기존 `basic_iostream` 새 생성 하는 데 사용 되는 개체 `basic_iostream`합니다.
 
 ### <a name="remarks"></a>설명
 
 첫 번째 생성자는 `basic_istream(strbuf)` 및 `basic_ostream(strbuf)`의 방식으로 기본 개체를 초기화합니다.
 
-두 번째 생성자를 호출 하 여 기본 개체를 초기화 합니다. `move(right)`합니다.
+호출 하 여 기본 개체를 초기화 하는 두 번째 생성자는 `move(right)`합니다.
 
 ## <a name="op_eq"></a>  basic_iostream::operator=
 
@@ -104,7 +105,7 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` `rvalue` 에 대 한 참조는 `basic_iostream` 할당 하는 개체입니다.
+*오른쪽* 는 `rvalue` 에 대 한 참조를 `basic_iostream` 할당할 개체입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -120,7 +121,7 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` `basic_iostream` 개체입니다.
+*오른쪽* 는 `basic_iostream` 개체입니다.
 
 ### <a name="remarks"></a>설명
 

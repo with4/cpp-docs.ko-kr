@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875489"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator= 연산자
 현재 Mutex 개체를 할당 합니다 (이동) 지정 된 뮤텍스 개체입니다.  

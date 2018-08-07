@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02cf84f2774a10ec0ca2751dbeffd4eb3c52e8a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f54f600e9a98304f1113c6e9e22389f6c974a80
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078897"
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>CParabolicTransitionFromAcceleration 클래스
 포물선 가속 전환을 캡슐화합니다.  
@@ -87,13 +88,13 @@ CParabolicTransitionFromAcceleration(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dblFinalValue`  
+ *dblFinalValue*  
  전환의 끝에서 애니메이션 변수의 값입니다.  
   
- `dblFinalVelocity`  
+ *dblFinalVelocity*  
  전환의 끝에서 애니메이션 변수의 속도입니다.  
   
- `dblAcceleration`  
+ *dblAcceleration*  
  전환 하는 동안 애니메이션 변수의 가속 합니다.  
   
 ##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create  
@@ -106,7 +107,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pLibrary`  
+ *pLibrary*  
  표준 전환 만드는 담당 하는 전환 라이브러리에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  

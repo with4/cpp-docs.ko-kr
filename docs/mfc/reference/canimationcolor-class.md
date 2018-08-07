@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f564b70e850f3020956711ef15ab1fe9285a6ae4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 462882957999d607809e80908ae4a25c628f18d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951745"
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor 클래스
 빨강, 녹색 및 파랑 구성 요소에 애니메이션을 적용할 수 있는 색 기능을 구현합니다.  
@@ -90,7 +91,7 @@ class CAnimationColor : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAnimationColor::m_bValue](#m_bvalue)|캡슐화 된 애니메이션 변수 애니메이션 색의 파랑 구성 요소를 나타냅니다.|  
 |[CAnimationColor::m_gValue](#m_gvalue)|캡슐화 된 애니메이션 변수 애니메이션 색의 녹색 구성 요소를 나타냅니다.|  
@@ -120,13 +121,13 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRTransition`  
+ *pRTransition*  
  빨강 구성 요소에 대 한 전환 해야 합니다.  
   
- `pGTransition`  
+ *pGTransition*  
  녹색 구성 요소에 대 한 전환 해야 합니다.  
   
- `pBTransition`  
+ *pBTransition*  
  파랑 구성 요소에 대 한 전환 해야 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -146,16 +147,16 @@ CAnimationColor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `color`  
+ *색*  
  기본 색을 지정합니다.  
   
- `nGroupID`  
+ *nGroupID*  
  그룹 ID를 지정 합니다.  
   
- `nObjectID`  
+ *nObjectID*  
  개체 ID를 지정 합니다.  
   
- `dwUserData`  
+ *dwUserData*  
  사용자 정의 데이터를 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -169,7 +170,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lst`  
+ *lst*  
  함수가 반환할 때 빨강, 녹색 및 파랑 구성 요소를 나타내는 세 CAnimationVariable 개체에 대 한 포인터를 포함 합니다.  
   
 ##  <a name="getb"></a>  CAnimationColor::GetB  
@@ -232,7 +233,7 @@ BOOL GetValue(COLORREF& color);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `color`  
+ *색*  
  출력입니다. 이 메서드가 반환 될 때 현재 값을 포함 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -278,7 +279,7 @@ void operator=(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `color`  
+ *색*  
  새 애니메이션 색 값을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -292,7 +293,7 @@ void SetDefaultValue(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `color`  
+ *색*  
  빨강, 녹색 및 파랑 구성 요소에 대 한 새 기본값을 지정합니다.  
   
 ### <a name="remarks"></a>설명  

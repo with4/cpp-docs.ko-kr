@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112136"
 ---
 # <a name="declaration-of-a-clr-array"></a>CLR 배열 선언
 선언 구문은 인스턴스화하고 관리 되는 배열 초기화에서 변경 되었습니다 Managed Extensions for c + + Visual c + +.  

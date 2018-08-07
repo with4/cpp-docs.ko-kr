@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e275bd195c11b605891b250e9264bad587eb853
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0fb9b61ec4d2abc6ae73b2ebed7571398857d517
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963461"
 ---
 # <a name="syncshared-class"></a>sync_shared 클래스
 
@@ -43,7 +44,7 @@ class sync_shared
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Cache`|동기화 필터와 연결된 캐시 형식입니다. [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) 또는 [cache_suballoc](../standard-library/cache-suballoc-class.md)일 수 있습니다.|
+|*캐시*|동기화 필터와 연결된 캐시 형식입니다. [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) 또는 [cache_suballoc](../standard-library/cache-suballoc-class.md)일 수 있습니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
@@ -71,7 +72,7 @@ void *allocate(std::size_t count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`count`|할당할 배열의 요소 수입니다.|
+|*count*|할당할 배열의 요소 수입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -93,8 +94,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`ptr`|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
-|`count`|저장소에서 할당을 취소할 개체의 수입니다.|
+|*ptr*|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
+|*count*|저장소에서 할당을 취소할 개체의 수입니다.|
 
 ### <a name="remarks"></a>설명
 
@@ -112,12 +113,12 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Cache`|동기화 필터와 연결된 캐시 형식입니다.|
-|`Other`|같은지 비교할 캐시입니다.|
+|*캐시*|동기화 필터와 연결된 캐시 형식입니다.|
+|*기타*|같은지 비교할 캐시입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-`cache.equals(Other.cache)`의 결과(여기서 `cache`는 캐시 개체를 나타냄)가 `true`이면 `true`이고 그렇지 않으면 `false`입니다.
+**true** 경우의 결과 `cache.equals(Other.cache)`, 여기서 `cache` 는 캐시 개체를 나타내는 **true**고, 그렇지 않으면 **false**합니다.
 
 ### <a name="remarks"></a>설명
 

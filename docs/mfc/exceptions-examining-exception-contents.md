@@ -19,16 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7af858a7bd43bca2a04fac417c592f2dba979ffe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 82c7453b92ce14fbbcd20ea0f9a8bd8a7a2b5b6d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932236"
 ---
 # <a name="exceptions-examining-exception-contents"></a>예외: 예외 내용 검사
 하지만 한 **catch** 거의 모든 데이터 형식의 블록의 인수 수 있으며, MFC 함수는 클래스에서 파생 된 형식의 예외를 throw `CException`합니다. MFC 함수에 의해 throw 된 예외를 catch 하려면 한 다음, 작성 한 **catch** 포인터 인수가 블록에는 `CException` 개체 (에서 파생 된 개체 또는 `CException`와 같은 `CMemoryException`) 합니다. 예외에 대 한 정확한 형식에 따라 예외의 특정 원인에 대 한 정보를 수집 하는 예외 개체의 데이터 멤버를 검사할 수 있습니다.  
   
- 예를 들어는 `CFileException` 형식에는 `m_cause` 파일 예외의 원인을 지정 하는 열거 형식에 포함 된 데이터 멤버입니다. 일부의 가능한 반환 값은 **CFileException::fileNotFound** 및 **CFileException::readOnly**합니다.  
+ 예를 들어는 `CFileException` 형식에는 `m_cause` 파일 예외의 원인을 지정 하는 열거 형식에 포함 된 데이터 멤버입니다. 일부의 가능한 반환 값은 `CFileException::fileNotFound` 및 `CFileException::readOnly`합니다.  
   
  다음 예제에서는의 내용을 검사 하는 방법을 보여 줍니다.는 `CFileException`합니다. 마찬가지로 다른 예외 형식을 검사할 수 있습니다.  
   

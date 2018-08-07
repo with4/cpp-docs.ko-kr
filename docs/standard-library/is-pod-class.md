@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b52479cc433f59d76dd40cfb752550e51652892d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c655ea4adec0364f35d0b43c637eae9c270cdb0e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962067"
 ---
 # <a name="ispod-class"></a>is_pod 클래스
 
@@ -36,11 +37,11 @@ struct is_pod;
 
 ### <a name="parameters"></a>매개 변수
 
-*T* 형식이 쿼리입니다.
+*T* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-*T* 형식이 POD(Plain Old Data)이면 `is_pod<T>::value`는 `true`이고, 그렇지 않으면 `false`입니다.
+`is_pod<T>::value` **true** 경우 형식 *T* POD Plain Old Data ()가 있습니다. 그렇지 않으면 **false**합니다.
 
 산술 형식, 열거형 형식, 포인터 형식 및 멤버 형식에 대한 포인터는 POD입니다.
 
@@ -66,7 +67,7 @@ POD 배열 자체도 POD입니다.
 
 따라서 POD 구조체 및 배열을 포함하는 POD 구조체 및 배열을 재귀적으로 빌드할 수 있습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__is_pod.cpp

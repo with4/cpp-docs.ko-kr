@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088026"
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata 네임스페이스
 이 네임스페이스는 형식 선언을 수정하는 특성을 포함합니다.  

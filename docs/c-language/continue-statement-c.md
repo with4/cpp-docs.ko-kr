@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383552"
 ---
 # <a name="continue-statement-c"></a>continue 문 (C)
 `continue` 문은 자신이 배치되는 가장 가까운 바깥쪽 `do`, `for` 또는 `while` 문의 다음 반복으로 제어를 전달하고 `do`, `for` 또는 `while` 문 본문에서 나머지 문을 건너뜁니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198367"
 ---
 # <a name="fatal-error-c1603"></a>심각한 오류 C1603
 인라인 어셈블리 분기 대상이 'number' 바이트 만큼 범위를 벗어났습니다  

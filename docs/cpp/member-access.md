@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8896e473f1a419f24636d7c503924b51426be24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 99f65d2b03f54eb16db56bf81948aadfb184cfa1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402369"
 ---
 # <a name="member-access"></a>멤버 액세스
 멤버 액세스 연산자를 오버 로드 하 여 클래스 멤버 액세스를 제어할 수 있습니다 (**->**). 이 연산자는 이 사용법에서 단항 연산자로 간주되며 오버로드된 연산자 함수가 클래스 멤버 함수여야 합니다. 따라서 이러한 함수의 선언은 다음과 같습니다.  
@@ -31,7 +32,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 class-type *operator->()  
 ```  
   
@@ -42,5 +42,5 @@ class-type *operator->()
   
  **.** 멤버 액세스 연산자를 오버 로드할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [연산자 오버로드](../cpp/operator-overloading.md)

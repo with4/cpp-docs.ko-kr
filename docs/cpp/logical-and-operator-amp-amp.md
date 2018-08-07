@@ -18,25 +18,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f683b7ff17a1dd3945f5cb554a7440ab47fad454
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4921a6de3072ef402ba355714ddd67328c3a3541
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406834"
 ---
 # <a name="logical-and-operator-ampamp"></a>논리 AND 연산자: &amp;&amp;
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-expression   
-&&  
- expression  
-  
+expression && expression  
 ```  
   
 ## <a name="remarks"></a>설명  
- 논리 AND 연산자 (**&&**) 부울 값을 반환 **true** 피연산자가 모두 경우 **true** 반환 **false** 그렇지 않은 경우. 피연산자는 계산 전에 `bool` 형식으로 암시적 변환되므로 연산 결과가 `bool` 형식이 됩니다. 논리 AND에는 왼쪽에서 오른쪽으로의 결합성이 있습니다.  
+ 논리 AND 연산자 (**&&**) 두 피연산자가 TRUE 부울 값 TRUE를 반환 하 고 그렇지 않으면 FALSE를 반환 합니다. 피연산자 형식으로 암시적으로 변환 됩니다 **bool** 형식입니다. 평가 및 결과에 이전 **bool**합니다. 논리 AND에는 왼쪽에서 오른쪽으로의 결합성이 있습니다.  
   
  논리 AND 연산자의 피연산자는 동일한 형식일 필요는 없지만 정수 계열 또는 포인터 형식이어야 합니다. 피연산자는 일반적으로 관계형 또는 동등 식입니다.  
   
@@ -44,7 +41,7 @@ expression
   
  둘째 피연산자는 첫째 피연산자가 true(0이 아님)인 경우에만 계산됩니다. 이 계산으로 인해 논리 AND 식이 false일 때 둘째 피연산자의 불필요한 계산이 배제됩니다. 다음 예제와 같이 이 단락(short-circuit) 계산을 사용하여 null 포인터 역참조를 방지할 수 있습니다.  
   
-```  
+```cpp 
 char *pch = 0;  
 ...  
 (pch) && (*pch = 'a');  
@@ -53,11 +50,11 @@ char *pch = 0;
  `pch`가 null(0)인 경우 식의 오른쪽이 계산되지 않습니다. 따라서 null 포인터를 통해 할당할 수 없습니다.  
   
 ## <a name="operator-keyword-for-"></a>&&에 대한 연산자 키워드  
- **및** 연산자는 해당 하는 텍스트 **&&** 합니다. 두 가지 방법으로 액세스 하는 **및** 를 프로그램에서 연산자: 헤더 파일을 포함 `iso646.h`,으로 컴파일하는 [/Za](../build/reference/za-ze-disable-language-extensions.md) (언어 확장명 사용 안 함) 컴파일러 옵션입니다.  
+ 합니다 **하 고** 연산자는 해당 하는 텍스트 **&&** 합니다. 두 가지 방법으로 액세스 하는 **및** 프로그램에서 연산자: 헤더 파일을 포함 `iso646.h`,으로 컴파일하는 [/Za](../build/reference/za-ze-disable-language-extensions.md) (언어 확장명 사용 안 함) 컴파일러 옵션.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp 
 // expre_Logical_AND_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate logical AND  
@@ -77,6 +74,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [C + + 기본 제공 연산자 우선순위 및 결합성](cpp-built-in-operators-precedence-and-associativity.md) [c + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>참고자료  
+ [C + + 기본 제공 연산자 우선순위 및 결합성](cpp-built-in-operators-precedence-and-associativity.md)  
+ [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 논리 연산자](../c-language/c-logical-operators.md)

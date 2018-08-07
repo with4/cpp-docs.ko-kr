@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690067"
 ---
 # <a name="27-data-environment"></a>2.7 데이터 환경
 이 섹션에서는 지시문 및 병렬 영역을 실행 하는 동안 다음과 같이 데이터 환경을 제어 하기 위한 여러 절을 제공 합니다.  

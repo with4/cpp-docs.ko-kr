@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871125"
 ---
 # <a name="eventoperator-operator"></a>Event::operator= 연산자
 현재 이벤트 인스턴스를 지정된 이벤트 참조를 할당합니다.  

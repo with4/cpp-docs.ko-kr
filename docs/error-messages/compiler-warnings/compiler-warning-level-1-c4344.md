@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271372"
 ---
 # <a name="compiler-warning-level-1-c4344"></a>컴파일러 경고(수준 1) C4344
 동작 변경: 'function' 호출에 명시적 템플릿 인수 결과 사용  

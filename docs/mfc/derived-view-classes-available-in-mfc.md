@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345666"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>MFC에서 사용할 수 있는 파생된 뷰 클래스
 다음 표에서 MFC의 뷰 클래스 및 형식 간의 관계를 보여 줍니다. 뷰 클래스의 기능 파생 되는 MFC 뷰 클래스에 따라 다릅니다.  

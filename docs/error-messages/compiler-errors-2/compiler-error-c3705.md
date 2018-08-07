@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267211"
 ---
 # <a name="compiler-error-c3705"></a>컴파일러 오류 C3705
 'function': 이벤트 인터페이스를 찾을 수 없습니다  

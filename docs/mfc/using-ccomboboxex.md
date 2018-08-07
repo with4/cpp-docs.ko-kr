@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381763"
 ---
 # <a name="using-ccomboboxex"></a>CComboBoxEx 사용
 확장 된 콤보 상자 컨트롤에 항목 이미지에 대 한 기본 지원을 제공 하는 표준 콤보 상자 컨트롤의 확장입니다. 이러한 이미지 콤보 상자의 현재 선택 되 고 선택 되지 않은 항목 등의 개별 항목의 상태를 나타내는 데 사용할 수 있습니다. 항목 이미지를 쉽게 액세스할 수 있도록 컨트롤 이미지 목록 지원을 제공 합니다.  

@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54cc874fd3c95123446ab81b920bfe0fce52df5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cae180ca71b89732e073b9039483b8b46366a42a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929636"
 ---
 # <a name="menus-and-resources-ole"></a>메뉴 및 리소스(OLE)
 다음이 문서 메뉴와 MFC OLE 문서 응용 프로그램의 리소스 사용에 설명 합니다.  
@@ -53,10 +54,10 @@ ms.lasthandoff: 05/04/2018
   
 |리소스 이름|사용|  
 |-------------------|---------|  
-|**IDR_MAINFRAME**|파일이 열려 있으면 MDI 응용 프로그램 또는 열려 있는 파일에 관계 없이 SDI 응용 프로그램을 사용 합니다. 비 OLE 응용 프로그램에서 사용 되는 표준 메뉴입니다.|  
-|**IDR_\<프로젝트 > 형식**|파일이 열려 있으면 MDI 응용 프로그램에서 사용 합니다. 응용 프로그램을 독립 실행형 실행 중인 경우를 사용 합니다. 비 OLE 응용 프로그램에서 사용 되는 표준 메뉴입니다.|  
-|**IDR_\<프로젝트 > TYPE_SRVR_IP**|위치에서 개체를 열 때 해당 서버 또는 컨테이너에 사용 합니다.|  
-|**IDR_\<프로젝트 > TYPE_SRVR_EMB**|내부 활성화를 사용 하지 않고 개체가 열린 경우 서버 응용 프로그램에 사용 합니다.|  
+|IDR_MAINFRAME|파일이 열려 있으면 MDI 응용 프로그램 또는 열려 있는 파일에 관계 없이 SDI 응용 프로그램을 사용 합니다. 비 OLE 응용 프로그램에서 사용 되는 표준 메뉴입니다.|  
+|IDR_\<프로젝트 > 형식|파일이 열려 있으면 MDI 응용 프로그램에서 사용 합니다. 응용 프로그램을 독립 실행형 실행 중인 경우를 사용 합니다. 비 OLE 응용 프로그램에서 사용 되는 표준 메뉴입니다.|  
+|IDR_\<프로젝트 > TYPE_SRVR_IP|위치에서 개체를 열 때 해당 서버 또는 컨테이너에 사용 합니다.|  
+|IDR_\<프로젝트 > TYPE_SRVR_EMB|내부 활성화를 사용 하지 않고 개체가 열린 경우 서버 응용 프로그램에 사용 합니다.|  
   
  리소스 이름은 각 메뉴와 일반적으로 액셀러레이터 키 테이블을 나타냅니다. 응용 프로그램 마법사로 생성 되지 않은 MFC 응용 프로그램에서 비슷한 스키마를 사용 해야 합니다.  
   

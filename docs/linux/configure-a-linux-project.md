@@ -14,14 +14,15 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 8fc0c15f4e6ff7a9969c31c4d474bb42a9797b30
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: b4e5bad5b0688a2f0deeb237335c26419e2d9cbe
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207904"
 ---
 # <a name="configure-a-linux-project"></a>Linux 프로젝트 구성
-이 항목에서는 Visual Studio Linux 프로젝트를 구성하는 방법을 설명합니다. CMake Linux 프로젝트에 대한 자세한 내용은 [Linux CMake 프로젝트 구성](cmake-linux-project.md)을 참조하세요.
+이 항목에서는 Visual Studio에서 C++ Linux 프로젝트를 구성하는 방법을 설명합니다. Visual Studio에서 CMake Linux 프로젝트에 대한 자세한 내용은 [Linux CMake 프로젝트 구성](cmake-linux-project.md)을 참조하세요.
 
 ## <a name="general-settings"></a>일반 설정
 Visual Studio를 사용하여 Linux 프로젝트에 대해 다양한 옵션을 구성할 수 있습니다.  이러한 옵션을 보려면 **프로젝트 > 속성** 메뉴를 선택하거나 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **속성**을 선택합니다. **일반 설정**이 나타납니다.

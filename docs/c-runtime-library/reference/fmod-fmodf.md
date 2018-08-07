@@ -39,11 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f6cc8cc10c026c5ecd621657c556da883c187f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c473b5cb6822df07f4972ff2c964c828b14b5966
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207535"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -81,23 +82,23 @@ long double fmodl(
 
 ## <a name="return-value"></a>반환 값
 
-**fmod** 의 부동 소수점 나머지를 반환 *x* / *y*합니다. 하는 경우의 값 *y* 이 0.0 인 경우 **fmod** 자동 NaN을 반환 합니다. 자동 NaN에서의 표현에 대 한 내용은 **printf** 제품군, 참조 [printf](printf-printf-l-wprintf-wprintf-l.md)합니다.
+**fmod** 부동 소수점 나머지를 반환 합니다 *x* / *y*합니다. 경우 값 *y* 는 0.0 **fmod** quiet NaN을 반환 합니다. 자동 NaN의 표현에 대 한 자세한 합니다 **printf** 제품군을 참조 하십시오 [printf](printf-printf-l-wprintf-wprintf-l.md)합니다.
 
 ## <a name="remarks"></a>설명
 
-**fmod** 함수는 부동 소수점 나머지 계산 *f* 의 *x* / *y* 되도록 *x*  =  *i* * *y* + *f*여기서 *i* 정수 이면 *f* 와 동일한 기호가 *x*, 및의 절대값 *f* 의 절대 값 보다 작으면 *y*합니다.
+합니다 **fmod** 함수는 부동 소수점 나머지를 계산 *f* 의 *x* / *y* 되도록 *x*  =  *있습니까* \* *y* + *f*여기서 *i* 정수 이면 *f* 와 부호가 같도록 *x*, 및의 절대값 *f* 의 절대값 보다 작습니다 *y*합니다.
 
-C + + 오버 로드의 오버 로드를 호출할 수 있도록 허용 **fmod** 사용 하 고 반환 **float** 및 **긴** **double** 값입니다. C 프로그램에서 **fmod** 항상는 두 가지 **double** 인수 및 반환 된 **double**합니다.
+C + +에서는 오버 로드를 허용 하므로 오버 로드를 호출할 수 있습니다 **fmod** 및 반환 하는 **float** 하 고 **긴** **double** 값입니다. C 프로그램에서 **fmod** 는 항상 두 가지 **double** 인수 및 반환 된 **double**합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|함수|필수 헤더|
+|기능|필수 헤더|
 |--------------|---------------------|
-|**fmod**, **fmodf**, **fmodl**|\<math.h>|
+|**fmod**하십시오 **fmodf**, **fmodl**|\<math.h>|
 
 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```C
 // crt_fmod.c

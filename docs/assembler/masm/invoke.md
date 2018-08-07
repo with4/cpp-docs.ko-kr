@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055172"
 ---
 # <a name="invoke"></a>INVOKE
 프로시저를 호출 하 여 주어진 주소에서 *식*, 스택에 또는 언어 형식의 표준 호출 규칙에 따라 레지스터에 인수를 전달 합니다.  

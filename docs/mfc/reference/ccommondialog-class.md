@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19f8c0aa6aaa4980466918eac2649cc246b2e6ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6821b7a33339b2a143778172caa7a4a22cb101e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335917"
 ---
 # <a name="ccommondialog-class"></a>CCommonDialog 클래스
 Windows 공용 대화 상자의 기능을 캡슐화하는 클래스의 기본 클래스입니다.  
@@ -42,7 +43,7 @@ class CCommonDialog : public CDialog
 |[CCommonDialog::CCommonDialog](#ccommondialog)|`CCommonDialog` 개체를 생성합니다.|  
   
 ## <a name="remarks"></a>설명  
- Windows 공용 대화 상자의 기능을 캡슐화 하는 다음 클래스:  
+ 다음 클래스는 Windows 공용 대화 상자의의 기능을 캡슐화 합니다.  
   
 - [CFileDialog](../../mfc/reference/cfiledialog-class.md)  
   
@@ -82,8 +83,8 @@ explicit CCommonDialog(CWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentWnd`  
- 부모 또는 소유자 창 개체를 가리키는 (형식의 [CWnd](../../mfc/reference/cwnd-class.md)) 대화 상자 개체 속해 있는 합니다. 이 경우 **NULL**, 대화 상자 개체의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
+ *pParentWnd*  
+ 부모 또는 소유자 창 개체 (형식의 [CWnd](../../mfc/reference/cwnd-class.md)) 대화 상자 개체 속한 합니다. NULL 인 경우 대화 상자 개체의 부모 창 주 응용 프로그램 창으로 설정 됩니다.  
   
 ### <a name="remarks"></a>설명  
  참조 [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) 완전 한 정보에 대 한 합니다.  

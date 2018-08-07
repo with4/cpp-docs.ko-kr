@@ -52,11 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8fb0833fc82895f1f32fb5c93a6e6519bfe119c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23728966dfd6bd759c16b364da063c7f80687b5e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954493"
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush 클래스
 ID2D1BitmapBrush에 대 한 래퍼입니다.  
@@ -108,7 +109,7 @@ class CD2DBitmapBrush : public CD2DBrush;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CD2DBitmapBrush::m_pBitmap](#m_pbitmap)|CD2DBitmap 개체에 대 한 포인터를 저장합니다.|  
 |[CD2DBitmapBrush::m_pBitmapBrush](#m_pbitmapbrush)|ID2D1BitmapBrush 개체에 대 한 포인터를 저장합니다.|  
@@ -141,7 +142,7 @@ void Attach(ID2D1BitmapBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pResource`  
+ *pResource*  
  기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
   
 ##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush  
@@ -175,28 +176,28 @@ CD2DBitmapBrush(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentTarget`  
+ *pParentTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
- `pBitmapBrushProperties`  
+ *pBitmapBrushProperties*  
  확장 모드 및 비트맵 브러시의 보간 모드에 대 한 포인터입니다.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  불투명도 및 브러시의 변환에 대 한 포인터입니다.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  개체를 소유자 (pParentTarget)에 의해 폐기 수를 나타냅니다.  
   
- `uiResID`  
+ *uiResID*  
  리소스의 리소스 ID.  
   
- `lpszType`  
+ *lpszType*  
  리소스 종류를 포함 하는 null로 끝나는 문자열에 대 한 포인터입니다.  
   
- `sizeDest`  
+ *sizeDest*  
  비트맵의 대상 크기입니다.  
   
- `lpszImagePath`  
+ *lpszImagePath*  
  파일의 이름을 포함 하는 null로 끝나는 문자열에 대 한 포인터입니다.  
   
 ##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit  
@@ -207,7 +208,7 @@ void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pBitmapBrushProperties`  
+ *pBitmapBrushProperties*  
  비트맵 브러시 속성에 대 한 포인터입니다.  
   
 ##  <a name="create"></a>  CD2DBitmapBrush::Create  
@@ -218,7 +219,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRenderTarget`  
+ *pRenderTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -330,7 +331,7 @@ void SetBitmap(CD2DBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pBitmap`  
+ *pBitmap*  
  브러시에 사용 되는 비트맵 소스  
   
 ##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX  
@@ -341,7 +342,7 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `extendModeX`  
+ *extendModeX*  
  브러시가 비트맵을 지 나 확장 되는 영역을 가로로으로 바둑판식으로 표시 되는 방법을 지정 하는 값  
   
 ##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY  
@@ -352,7 +353,7 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `extendModeY`  
+ *extendModeY*  
  브러시가 비트맵을 지 나 확장 되는 영역을 세로로으로 바둑판식으로 표시 되는 방법을 지정 하는 값  
   
 ##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode  
@@ -363,7 +364,7 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `interpolationMode`  
+ *interpolationMode*  
  브러시 비트맵은 크기 조정 또는 회전할 때 사용 되는 보간 모드  
   
 ## <a name="see-also"></a>참고 항목  

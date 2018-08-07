@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacb6fda870f698bef23184912fc3becfd6c7e2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e709ce37d60281bbc56a0e8ecf3cc7eafef5b0ee
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207613"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator 클래스
 
@@ -39,7 +40,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>매개 변수
 
-`Container` 의해 삽입 될 요소는 앞에는 컨테이너 유형에 `front_insert_iterator`합니다.
+*컨테이너* 앞에 요소를 삽입할 수 있는 컨테이너의 종류를 `front_insert_iterator`입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -62,9 +63,9 @@ class front_insert_iterator;
 
 |연산자|설명|
 |-|-|
-|[operator*](#op_star)|전면 삽입을 위해 출력 반복기 식을 구현하는 데 사용된 역참조 연산자 * `i` = `x`|
+|[operator*](#op_star)|출력 반복기 식을 구현 하는 데 사용 된 역참조 연산자 \* `i`  =  `x` 전면 삽입을 위해.|
 |[operator++](#op_add_add)|값을 저장할 다음 위치에 `front_insert_iterator`를 증가시킵니다.|
-|[operator=](#op_eq)|전면 삽입을 위해 출력 반복기 식을 구현하는 데 사용된 할당 연산자 * `i` = `x`|
+|[operator=](#op_eq)|출력 반복기 식을 구현 하는 데 사용 되는 대입 연산자 \* `i`  =  `x` 전면 삽입을 위해.|
 
 ## <a name="requirements"></a>요구 사항
 
@@ -82,9 +83,9 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 템플릿 매개 변수 **Container**의 동의어입니다.
+이 형식은 템플릿 매개 변수 *Container*의 동의어입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // front_insert_iterator_container_type.cpp
@@ -124,13 +125,13 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Cont` 컨테이너 개체는 `front_insert_iterator` 요소를 삽입 하는 것입니다.
+*_Cont* 는 컨테이너 개체는 `front_insert_iterator` 요소를 삽입 하는 것입니다.
 
 ### <a name="return-value"></a>반환 값
 
 매개 변수 컨테이너 개체에 대한 `front_insert_iterator`입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // front_insert_iterator_front_insert_iterator.cpp
@@ -176,7 +177,7 @@ After the front insertions, the list L is:
 *\
 ```
 
-## <a name="op_star"></a>  front_insert_iterator::operator*
+## <a name="op_star"></a>  front_insert_iterator:: operator\*
 
 주소가 지정된 요소를 반환하는 삽입 반복기를 역참조합니다.
 
@@ -190,9 +191,9 @@ front_insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>설명
 
-출력 반복기 식 **\*Iter** = **value**를 구현하는 데 사용됩니다. **Iter**이 시퀀스에서 요소의 주소를 지정하는 반복기인 경우 **\*Iter** = **value**는 해당 요소를 값과 바꾸며 시퀀스에서 총 요소 수를 변경하지 않습니다.
+출력 반복기 식 **\*Iter** = **value**를 구현하는 데 사용됩니다. 하는 경우 `Iter` 가 다음 시퀀스에서 요소를 해결 하는 반복기  **\*Iter** = **값** 값을 사용 하 여 해당 요소를 대체 하 고 총 변경 되지 않습니다 시퀀스의 요소입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // front_insert_iterator_deref.cpp
@@ -255,7 +256,7 @@ front_insert_iterator<Container> operator++(int);
 
 preincrementation과 postincrementation 연산자는 둘 다 동일한 결과를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // front_insert_iterator_op_incre.cpp
@@ -300,7 +301,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>매개 변수
 
-`val` 컨테이너에 할당할 값입니다.
+*val* 컨테이너에 할당할 값입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -316,7 +317,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 그런 다음 `*this`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // front_insert_iterator_op_assign.cpp
@@ -357,7 +358,7 @@ The list L1 is: ( 30 20 10 ).
 typedef typename Container::reference reference;
 ```
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // front_insert_iterator_reference.cpp

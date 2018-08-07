@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386805"
 ---
 # <a name="integer-types"></a>정수 형식
 모든 정수 상수에는 값과 표현 방식에 따라 형식이 제공됩니다. **l** 또는 **L** 문자를 상수 끝에 추가하여 모든 정수 상수를 **long** 형식으로 지정할 수 있으며, **u** 또는 **U**를 값에 추가하여 `unsigned` 형식으로 지정할 수 있습니다. 소문자 **l**은 숫자 1과 혼동할 수 있으므로 사용하지 않아야 합니다. **long** 정수 상수의 몇 가지 형태는 다음과 같습니다.  

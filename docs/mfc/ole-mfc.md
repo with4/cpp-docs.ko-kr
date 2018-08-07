@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349228"
 ---
 # <a name="ole-mfc"></a>OLE(MFC)
 프로그램에서 OLE 기능을 구현 합니다. 여러 가지 방법으로 사용자 인터페이스를 영향을 줍니다.  

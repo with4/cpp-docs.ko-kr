@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d265938eb024a41d8b90f3b9891c35ec1ec251
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963928"
 ---
 # <a name="tuple-class"></a>튜플 클래스
 
@@ -47,17 +48,18 @@ public:
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
    };
+```
 
-### Parameters
+### <a name="parameters"></a>매개 변수
 
-`TN`
- The type of the Nth tuple element.
+*TN*  
+ N번째 튜플 요소의 형식입니다.
 
-## Remarks
+## <a name="remarks"></a>설명
 
-The template class describes an object that stores N objects of types `T1`, `T2`, ..., `TN`, respectively, where where `0 <= N <= Nmax`. The extent of a tuple instance `tuple<T1, T2, ..., TN>` is the number `N` of its template arguments. The index of the template argument `Ti` and of the corresponding stored value of that type is `i - 1`. Thus, while we number the types from 1 to N in this documentation, the corresponding index values range from 0 to N - 1.
+형식의 n 개 개체를 저장 하는 개체를 설명 하는 템플릿 클래스 `T1`, `T2`,..., `TN`각각, 여기서는 `0 <= N <= Nmax`합니다. 튜플 인스턴스 익스텐트 `tuple<T1, T2, ..., TN>` 수 `N` 해당 템플릿 인수의 합니다. 템플릿 인수의 인덱스 `Ti` 형식의 저장된 된 해당 값은 및 `i - 1`합니다. 따라서 것이 설명서의 n 1에서 형식 번호를 하는 동안 해당 인덱스 값 범위는 0에서 n-1입니다.
 
-## Example
+## <a name="example"></a>예
 
 ```cpp
 // tuple.cpp
@@ -152,17 +154,19 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>매개 변수
 
-`UN` N 번째 유형의 복사 된 튜플 요소의 합니다.
+*취소*  
+ N번째 복사된 튜플 요소의 형식입니다.
 
-`right` 복사할 튜플입니다.
+*right*  
+ 복사할 튜플입니다.
 
 ### <a name="remarks"></a>설명
 
-처음 두 구성원 연산자는 `right`의 요소를 `*this`의 해당 요소에 할당합니다. 세 번째 구성원 연산자는 `right.first`를 `*this`의 인덱스 0에 있는 요소에, `right.second`를 인덱스 1에 있는 요소에 할당합니다. 세 구성원 연산자는 모두 `*this`를 반환합니다.
+처음 두 구성원 연산자의 요소를 할당 *오른쪽* 의 해당 요소에 `*this`입니다. 세 번째 구성원 연산자는 `right.first`를 `*this`의 인덱스 0에 있는 요소에, `right.second`를 인덱스 1에 있는 요소에 할당합니다. 세 구성원 연산자는 모두 `*this`를 반환합니다.
 
 나머지 구성원 연산자도 앞의 연산자와 동일하지만 [Rvalue 참조 선언자: &&](../cpp/rvalue-reference-declarator-amp-amp.md)를 사용합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__tuple__tuple_operator_as.cpp
@@ -225,8 +229,8 @@ template <class... Types>
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`left`|`right` 튜플과 요소를 교환할 튜플입니다.|
-|`right`|`left` 튜플과 요소를 교환할 튜플입니다.|
+|*left*|튜플의 교환할 요소가 들어 있는 튜플을 *오른쪽*합니다.|
+|*right*|튜플의 교환할 요소가 들어 있는 튜플을 *왼쪽*합니다.|
 
 ### <a name="remarks"></a>설명
 
@@ -259,9 +263,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>매개 변수
 
-`UN` N 번째 유형의 복사 된 튜플 요소의 합니다.
+*취소*  
+ N번째 복사된 튜플 요소의 형식입니다.
 
-`right` 복사할 튜플입니다.
+*right*  
+ 복사할 튜플입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -269,13 +275,13 @@ template <class U1, class U2>
 
 두 번째 생성자는 요소가 각 `Pi`로 `i - 1` 인덱스의 요소를 초기화하여 `P1`, `P2`, ..., `PN` 인수에서 복사 생성되는 개체를 생성합니다.
 
-세 번째 및 네 번째 생성자는 요소가 `right`의 해당 요소에서 복사 생성되는 개체를 생성합니다.
+요소가 복사의 해당 요소에서 생성 되는 개체를 생성 하는 세 번째와 네 번째 생성자 *오른쪽*합니다.
 
 다섯 번째 생성자는 인덱스 0의 요소가 `right.first`에서 복사 생성되고 인덱스 1의 요소가 `right.second`에서 복사 생성되는 개체를 생성합니다.
 
 나머지 생성자도 앞의 생성자와 동일하지만 [Rvalue 참조 선언자: &&](../cpp/rvalue-reference-declarator-amp-amp.md)를 사용합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__tuple__tuple_tuple.cpp

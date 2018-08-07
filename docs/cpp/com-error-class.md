@@ -16,36 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95550c81235db58b1f8d372bf028750c003c7a9f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60fc445d51cfa72a6c72984ff19b877d916ded53
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407763"
 ---
 # <a name="comerror-class"></a>_com_error 클래스
 **Microsoft 전용**  
   
- A `_com_error` 개체 형식 라이브러리에서 생성 된 헤더 파일의 오류 처리 래퍼 함수에서 또는 COM 지원 클래스 중 하나를 통해 검색 되는 예외 상태를 나타냅니다. `_com_error` 클래스 캡슐화는 `HRESULT` 오류 코드와 모든 관련 `IErrorInfo Interface` 개체입니다.  
+ A **_com_error** 개체 형식 라이브러리에서 생성 된 헤더 파일의 오류 처리 래퍼 함수를 통해 또는 COM 지원 클래스 중 하나를 검색 하는 예외 상태를 나타냅니다. 합니다 **_com_error** HRESULT 오류 코드 및 연결 된 클래스에서 캡슐화 `IErrorInfo Interface` 개체입니다.  
   
 ### <a name="construction"></a>생성  
   
 |||  
 |-|-|  
-|[_com_error](../cpp/com-error-com-error.md)|`_com_error` 개체를 생성합니다.|  
+|[_com_error](../cpp/com-error-com-error.md)|생성 된 **_com_error** 개체입니다.|  
   
 ### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[operator =](../cpp/com-error-operator-equal.md)|기존 `_com_error` 개체를 다른 개체에 할당합니다.|  
+|[operator =](../cpp/com-error-operator-equal.md)|기존 할당 **_com_error** 다른 개체입니다.|  
   
-### <a name="extractor-functions"></a>기능 추출기  
+### <a name="extractor-functions"></a>Extractor 함수  
   
 |||  
 |-|-|  
-|[오류](../cpp/com-error-error.md)|생성자에 전달된 `HRESULT`를 검색합니다.|  
+|[오류](../cpp/com-error-error.md)|생성자에 전달 된 HRESULT를 검색 합니다.|  
 |[ErrorInfo](../cpp/com-error-errorinfo.md)|검색 된 `IErrorInfo` 개체 생성자에 전달 합니다.|  
-|[WCode](../cpp/com-error-wcode.md)|캡슐화된 `HRESULT`에 매핑되는 16비트 오류 코드를 검색합니다.|  
+|[WCode](../cpp/com-error-wcode.md)|캡슐화 된 HRESULT에 매핑된 16 비트 오류 코드를 검색 합니다.|  
   
 ### <a name="ierrorinfo-functions"></a>IErrorInfo 함수  
   
@@ -61,22 +62,22 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
-|[ErrorMessage](../cpp/com-error-errormessage.md)|에 저장 된 HRESULT에 대 한 문자열 메시지를 검색 하는 `_com_error` 개체입니다.|  
+|[ErrorMessage](../cpp/com-error-errormessage.md)|에 저장 된 HRESULT에 대 한 문자열 메시지를 검색 합니다 **_com_error** 개체입니다.|  
   
 ### <a name="exepinfowcode-to-hresult-mappers"></a>HRESULT 매퍼를 ExepInfo.wCode  
   
 |||  
 |-|-|  
-|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|32 비트 매핑합니다 `HRESULT` 에 16 비트 `wCode`합니다.|  
-|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|16비트 `wCode`를 32비트 `HRESULT`로 매핑합니다.|  
+|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|16 비트에서 32 비트 HRESULT 매핑됩니다 `wCode`합니다.|  
+|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|16 비트 매핑합니다 `wCode` 32 비트 hresult입니다.|  
   
 **Microsoft 전용 종료**  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<comdef.h >  
   
- `Lib:` 에서는 comsuppw.lib 또는 comsuppwd.lib (참조 [/zc: wchar_t (wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 자세한 내용은)  
+ `Lib:` 에서는 comsuppw.lib 또는 comsuppwd.lib (참조 [/zc: wchar_t (wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 자세한)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [컴파일러 COM 지원 클래스](../cpp/compiler-com-support-classes.md)   
- [IErrorInfo 인터페이스](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)
+ [IErrorInfo 인터페이스](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)

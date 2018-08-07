@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290165"
 ---
 # <a name="compiler-warning-level-3-c4267"></a>컴파일러 경고(수준 3) C4267
 'var' : 'size_t'에서 'type'으로 변환하면서 데이터가 손실될 수 있습니다.  

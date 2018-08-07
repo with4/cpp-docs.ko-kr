@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14b918747d9b7bee1b661eebd61fbb35325861e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cbbee8a404b679c8411470215821b8cdcccc695e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885223"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule 클래스
 이 클래스는 ATL windowing 구성 요소에 대 한 지원을 제공합니다.  
@@ -73,14 +74,14 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pData`  
- 에 대 한 포인터는 `_AtlCreateWndData` 구조를 초기화 하 고 현재 모듈에 추가 합니다.  
+ *pData*  
+ 에 대 한 포인터를 `_AtlCreateWndData` 구조를 초기화 하 고 현재 모듈에 추가 합니다.  
   
- `pObject`  
- 개체의에 대 한 포인터 **이** 포인터입니다.  
+ *pObject*  
+ 개체에 대 한 포인터 **이** 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드를 호출 [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) 어떤 초기화는 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) 구조입니다. 이 구조는 저장 된 **이** 창 프로시저의 클래스 인스턴스를 가져오는 데 포인터입니다.  
+ 이 메서드를 호출 [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) 는 초기화 된 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) 구조입니다. 이 구조는 저장 된 **이** 창 프로시저에서 클래스 인스턴스를 가져오는 데 포인터입니다.  
   
 ##  <a name="catlwinmodule"></a>  CAtlWinModule::CAtlWinModule  
  생성자입니다.  
@@ -90,7 +91,7 @@ CAtlWinModule();
 ```  
   
 ### <a name="remarks"></a>설명  
- 초기화에 실패 하면는 **EXCEPTION_NONCONTINUABLE** 예외가 발생 합니다.  
+ 초기화에 실패 하면를 **EXCEPTION_NONCONTINUABLE** 예외가 발생 합니다.  
   
 ##  <a name="dtor"></a>  CAtlWinModule:: ~ CAtlWinModule  
  소멸자입니다.  
@@ -110,7 +111,7 @@ void* ExtractCreateWndData();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터를 반환 합니다.는 `_AtlCreateWndData` 구조와 이전에 추가한 [CAtlWinModule::AddCreateWndData](#addcreatewnddata), 또는 개체가 사용할 수 없으면 NULL입니다.  
+ 에 대 한 포인터를 반환 합니다 `_AtlCreateWndData` 구조를 사용 하 여 이전에 추가한 [CAtlWinModule::AddCreateWndData](#addcreatewnddata), 또는 개체가 사용할 수 없으면 NULL.  
   
 ## <a name="see-also"></a>참고 항목  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)   

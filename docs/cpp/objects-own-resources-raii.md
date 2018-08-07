@@ -12,17 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd3f1df54e5b5881ed15efeb98a6e6070f400a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 265eccc4c1a9f51a03e5a84433a9f7e9cc6d6a92
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402138"
 ---
 # <a name="objects-own-resources-raii"></a>개체가 리소스 소유(RAII)
-직접 리소스 개체가 있는지 확인 합니다. 이 원칙은 라고도 "resource acquisition 초기화" 또는 "RAII."  
+고유한 리소스 개체는 있는지 확인 합니다. 이 원칙은 라고도 하며 "resource acquisition is 초기화" 또는 "RAII."  
   
 ## <a name="example"></a>예제  
- 생성자 인수로 (거의 항상: unique_ptr) 소유 하는 다른 명명 된 개체에 "새" 모든 개체를 전달 합니다.  
+ 생성자 인수로 (거의 항상 unique_ptr) 소유 하는 다른 명명 된 개체에 "새" 모든 개체를 전달 합니다.  
   
 ```cpp  
 void f() {  
@@ -43,7 +44,7 @@ void g() {
   // automatic exception safety, as if "finally { y.file.dispose(); }"  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C + +의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)

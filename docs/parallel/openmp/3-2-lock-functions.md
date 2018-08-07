@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696255"
 ---
 # <a name="32-lock-functions"></a>3.2 Lock 함수
 이 섹션에서 설명 하는 함수에는 동기화에 사용 되는 잠금을 조작 합니다.  

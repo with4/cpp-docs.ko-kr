@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346677"
 ---
 # <a name="dialog-boxes"></a>대화 상자
 Windows 용 응용 프로그램은 자주 대화 상자를 통해 사용자와 통신 합니다. 클래스 [CDialog](../mfc/reference/cdialog-class.md) 인터페이스 대화 상자 관리, Visual c + + 대화 상자 편집기를 사용 하면 대화 상자를 디자인 하 고 해당 대화 상자 템플릿 리소스를 만드는 쉽게 있으며의 초기화 프로세스를 간소화 하는 코드 마법사를 제공 하 고 사용자가 입력 한 값을 수집 하 고 대화 상자에서 컨트롤의 유효성 검사.  

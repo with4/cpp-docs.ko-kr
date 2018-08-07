@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386854"
 ---
 # <a name="storage-of-arrays"></a>배열 저장소
 배열 형식과 관련된 저장소는 배열의 모든 요소에 필요한 저장소입니다. 배열의 요소는 첫 번째 요소부터 마지막 요소까지 연속적으로 증가하는 메모리 위치에 저장됩니다.  

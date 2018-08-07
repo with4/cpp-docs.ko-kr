@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 703204541a05c260e77562729703677b98fb8e9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9750f0d49f4c7a580b2c99d0c833c5381ba20997
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467341"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator== 연산자
-두 ComPtr 개체가 같은지를 나타냅니다.  
+나타냅니다 두 **ComPtr** 개체는 동일 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,20 +42,19 @@ bool operator==(
    decltype(__nullptr),  
    const ComPtr<T>& a  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `a`  
- ComPtr 개체에 대 한 참조입니다.  
+ *a*  
+ 에 대 한 참조를 **ComPtr** 개체입니다.  
   
- `b`  
- 다른 ComPtr 개체에 대 한 참조입니다.  
+ *b*  
+ 다른에 대 한 참조가 **ComPtr** 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 첫 번째 연산자 수확량 `true` 경우 개체 `a` 개체가 같은지를 `b`, 그렇지 않으면 `false`합니다.  
+ 첫 번째 연산자 생성 **true** 하는 경우 개체 *는* 개체와 동일한 지 *b*고, 그렇지 않으면 **false**합니다.  
   
- 두 번째 및 세 번째 연산자에서 생성 `true` 경우 개체 `a` 같으면 `nullptr`, 그렇지 않으면 `false`합니다.  
+ 두 번째와 세 번째 연산자에서 생성 **true** 하는 경우 개체 *는* 값과 같음 **nullptr**고, 그렇지 않으면 **false**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

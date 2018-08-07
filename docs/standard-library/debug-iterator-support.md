@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9153d5e85540c50e11e096c33c474f1344d3ad2f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 237ce1e956cd05f21a34d0b2b159ba104167ca37
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959594"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -37,7 +38,7 @@ C++ 표준은 멤버 함수로 인해 컨테이너에 대한 반복기가 어떻
 
 - push 또는 insert를 사용하여 [vector](../standard-library/vector.md)의 크기를 줄이면 `vector`에 대한 반복기가 무효화됩니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 샘플 프로그램을 디버그 모드에서 컴파일하면 이 프로그램이 런타임에 어설션되고 종료됩니다.
 
@@ -68,7 +69,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 전처리기 매크로 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)을 사용하여 디버그 빌드에서 반복기 디버깅 기능을 끌 수 있습니다. 이 프로그램은 어설션되지 않지만 정의되지 않은 동작을 계속 트리거합니다.
 
@@ -105,7 +106,7 @@ int main() {
 -572662307
 ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음과 같이 반복기가 초기화되기 전에 반복기를 사용하려고 하면 어설션이 발생합니다.
 
@@ -122,7 +123,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 [for_each](../standard-library/algorithm-functions.md#for_each) 알고리즘에 대한 두 개의 반복기가 호환되지 않으므로 다음 코드 예제는 어설션을 발생시킵니다. 알고리즘은 알고리즘에 제공되는 반복기가 같은 컨테이너를 참조하는지 확인합니다.
 
@@ -152,9 +153,9 @@ int main()
 
 이 예제에서는 함수 대신 람다 식 `[] (int& elem) { elem *= 2; }`를 사용합니다. 이 선택은 비슷한 함수가 같은 실패를 일으키는 어설션 실패와 아무런 관련이 없지만 람다는 간단한 함수 개체 작업을 수행하는 매우 유용한 방법입니다. 람다 식에 대한 자세한 내용은 [람다 식](../cpp/lambda-expressions-in-cpp.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-디버그 반복기 확인을 실행하면 `for` 루프 범위가 끝날 때 루프에 선언된 반복기 변수가 `for` 범위를 벗어납니다.
+디버그 반복기 확인 길어질에 선언 된 반복기 변수를 **에 대 한** 루프의 수를 범위 합니다 **에 대 한** 루프 범위가 끝날 합니다.
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -174,7 +175,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 디버그 반복기에 non-trivial 소멸자가 있습니다. 소멸자가 실행되지 않으면 이유가 무엇이든 액세스 위반 및 데이터 손상이 발생할 수 있습니다. 다음 예제를 고려해 보세요.
 

@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d9c60ee3601cd4055e963997a6cd4f8bbd48b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3278824e565f34a61943b466ccc6ffef9c4f0be0
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337025"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar 클래스
 `CMFCAutoHideBar` 클래스는 자동 숨기기 기능을 구현하는 특수 도구 모음 클래스입니다.  
@@ -79,7 +80,7 @@ class CMFCAutoHideBar : public CPane
 |[CMFCAutoHideBar::AddAutoHideWindow](#addautohidewindow)||  
 |[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(`CPane::AllowShowOnPaneMenu`를 재정의합니다.)|  
 |[CMFCAutoHideBar::CalcFixedLayout](#calcfixedlayout)|(재정의 [cbasepane:: Calcfixedlayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
-|[CMFCAutoHideBar::Create](#create)|컨트롤 막대를 만들고 연결 하는 [CPane](../../mfc/reference/cpane-class.md) 개체입니다. (재정의 [cpane:: Create](../../mfc/reference/cpane-class.md#create).)|  
+|[CMFCAutoHideBar::Create](#create)|컨트롤 막대를 만들고에 연결 합니다 [CPane](../../mfc/reference/cpane-class.md) 개체입니다. (재정의 [cpane:: Create](../../mfc/reference/cpane-class.md#create).)|  
 |[CMFCAutoHideBar::GetFirstAHWindow](#getfirstahwindow)||  
 |[CMFCAutoHideBar::GetVisibleCount](#getvisiblecount)||  
 |[CMFCAutoHideBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|특수 창 메뉴를 표시하려고 할 때 프레임워크에서 호출됩니다. (재정의 [cpane:: Onshowcontrolbarmenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|  
@@ -93,18 +94,18 @@ class CMFCAutoHideBar : public CPane
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
-|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|사용자 위에 마우스 커서를 배치 하는 경우는 순간 사이의 지연 시간을 [CMFCAutoHideButton 클래스](../../mfc/reference/cmfcautohidebutton-class.md) 프레임 워크 연결된 된 창이 표시 되 면 순간과 합니다.|  
+|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|사용자 위에 마우스 커서를 배치 하는 경우 현재 사이의 지연 시간을 [CMFCAutoHideButton 클래스](../../mfc/reference/cmfcautohidebutton-class.md) 및 프레임 워크에 연결 된 창이 표시 되는 경우 현재 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 사용자가 도킹 창을 자동 숨기기 모드로 전환하면 프레임워크에서 자동으로 `CMFCAutoHideBar` 개체를 만듭니다. 또한 필요한 만듭니다 [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) 및 [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) 개체입니다. 각 `CAutoHideDockSite` 개체는 개별 `CMFCAutoHideButton`에 연결됩니다.  
+ 사용자가 도킹 창을 자동 숨기기 모드로 전환하면 프레임워크에서 자동으로 `CMFCAutoHideBar` 개체를 만듭니다. 또한 필요한을 만듭니다 [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) 하 고 [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) 개체입니다. 각 `CAutoHideDockSite` 개체는 개별 `CMFCAutoHideButton`에 연결됩니다.  
   
  `CMFCAutoHideBar` 클래스는 사용자의 마우스로 `CMFCAutoHideButton`을 가리킬 때 `CAutoHideDockSite`의 표시를 구현합니다. 도구 모음에서 WM_MOUSEMOVE 메시지를 받으면 `CMFCAutoHideBar`에서 타이머를 시작합니다. 타이머가 완료되면 도구 모음에 WM_TIMER 이벤트 알림을 보냅니다. 도구 모음은 마우스 포인터가 타이머가 시작될 때 배치되었던 것과 동일한 자동 숨기기 단추에 배치되었는지 확인하여 이 이벤트를 처리합니다. 그럴 경우 연결된 `CAutoHideDockSite`가 표시됩니다.  
   
  `m_nShowAHWndDelay`를 설정하여 타이머의 지연 길이를 제어할 수 있습니다. 기본값은 400ms입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCAutoHideBar` 개체를 생성하고 해당 `GetDockSiteRow` 메서드를 사용하는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#26](../../mfc/reference/codesnippet/cpp/cmfcautohidebar-class_1.cpp)]  
@@ -135,24 +136,24 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pAutoHideWnd`  
+ [in] *pAutoHideWnd*  
  숨기려는 창입니다.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  응용 프로그램 창에 자동 숨기기 단추의 맞춤을 지정하는 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
   
 ### <a name="remarks"></a>설명  
- `dwAlignment` 매개 변수는 자동 숨기기 단추가 응용 프로그램에 있음을 나타냅니다. 이 매개 변수는 다음 값 중 하나가 될 수 있습니다.  
+ 합니다 *dwAlignment* 자동 숨기기 단추가 응용 프로그램에 있는 매개 변수를 나타냅니다. 이 매개 변수는 다음 값 중 하나가 될 수 있습니다.  
   
-- `CBRS_ALIGN_LEFT`  
+- CBRS_ALIGN_LEFT  
   
-- `CBRS_ALIGN_RIGHT`  
+- CBRS_ALIGN_RIGHT  
   
-- `CBRS_ALIGN_TOP`  
+- CBRS_ALIGN_TOP  
   
-- `CBRS_ALIGN_BOTTOM`  
+- CBRS_ALIGN_BOTTOM  
   
 ##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu  
 
@@ -175,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -206,13 +207,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszClassName`  
- [in] `dwStyle`  
- [in] `rect`  
- [in] `pParentWnd`  
- [in] `nID`  
- [in] `dwControlBarStyle`  
- [in] `pContext`  
+ [in] *lpszClassName*  
+ [in] *dwStyle*  
+ [in] *rect*  
+ [in] *pParentWnd*  
+ [in] *nID*  
+ [in] *dwControlBarStyle*  
+ [in] *pContext*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -243,14 +244,14 @@ int GetVisibleCount();
 ### <a name="remarks"></a>설명  
   
 ##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay  
- 사용자 위에 마우스 커서를 배치 하는 경우는 순간 사이의 지연 시간을 [CMFCAutoHideButton 클래스](../../mfc/reference/cmfcautohidebutton-class.md) 프레임 워크 연결된 된 창이 표시 되 면 순간과 합니다.  
+ 사용자 위에 마우스 커서를 배치 하는 경우 현재 사이의 지연 시간을 [CMFCAutoHideButton 클래스](../../mfc/reference/cmfcautohidebutton-class.md) 및 프레임 워크에 연결 된 창이 표시 되는 경우 현재 합니다.  
   
 ```  
 int CMFCAutoHideBar::m_nShowAHWndDelay = 400;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 사용자 위에 마우스 커서를 배치 하는 경우는 `CMFCAutoHideButton`, 프레임 워크에 연결된 된 창이 표시 되기 전에 약간의 지연이 있습니다. 이 매개 변수 (밀리초)에 해당 지연의 길이 결정합니다.  
+ 사용자 위에 마우스 커서를 배치 하는 경우는 `CMFCAutoHideButton`, 프레임 워크에 연결 된 창이 표시 되기까지 약간의 지연이 발생 합니다. 이 매개 변수는 지연 (밀리초)의 길이 결정합니다.  
   
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu  
 
@@ -260,7 +261,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `CPoint`  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -274,7 +275,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- CDockablePane * `pAutoHideWnd`  
+ CDockablePane * *pAutoHideWnd*  
  제거할 자동 숨기기 창입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -290,7 +291,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] BOOL `bActive`  
+ [in] BOOL *bActive*  
  활성으로 설정하려면 TRUE이고, 그러지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -304,7 +305,7 @@ void SetRecentVisibleState(BOOL bState);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bState`  
+ [in] *bState*  
   
 ### <a name="remarks"></a>설명  
   
@@ -319,11 +320,11 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] CDockablePane * `pAutoHideWnd`  
- [in] BOOL `bShow`  
+ [in] CDockablePane * *pAutoHideWnd*  
+ [in] BOOL *bShow*  
  창을 표시하려면 TRUE입니다.  
   
- [in] BOOL `bDelay`  
+ [in] BOOL *bDelay*  
  이 매개 변수는 무시됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -343,11 +344,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nLength`  
+ [in] *nLength*  
  값이 기본 구현에서 사용되지 않습니다. 파생된 구현에서는 이 값을 사용하여 크기 조정된 창의 길이를 나타냅니다.  
   
- [in] `bVert`  
- 값이 기본 구현에서 사용되지 않습니다. 파생 된 구현에서 사용 하 여 `TRUE` 자동 숨기기 막대가 세로로 축소 되는 경우를 처리 하 고 `FALSE` 자동 숨기기 막대가 가로로 축소 되는 경우에 대 한 합니다.  
+ [in] *bVert*  
+ 값이 기본 구현에서 사용되지 않습니다. 파생 된 구현에서 사용 하 여 자동 숨기기 막대 세로로 축소 된 경우 핸들 및 FALSE는 true로 설정 하면 자동 숨기기 막대가 가로로 축소 되는 경우.  
   
 ### <a name="return-value"></a>반환 값  
  크기 조정된 창의 결과 크기입니다.  

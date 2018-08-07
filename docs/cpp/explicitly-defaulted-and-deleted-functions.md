@@ -1,5 +1,5 @@
 ---
-title: 명시적으로 기본 설정 및 삭제 된 함수 | Microsoft Docs
+title: 삭제 된 함수를 명시적으로 기본값으로 설정 하 고 초기화 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8558a2fac4995d89d0745917e6e1be5ad99d56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 887ab1e29cf2a0eab656cc6d1b4587252871d328
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402824"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>명시적으로 기본 설정 및 삭제된 함수
 C++ 11에서 기본 설정 및 삭제된 함수를 사용하면 특수 멤버 함수가 자동으로 생성되는지 여부를 명시적으로 제어할 수 있습니다. 함수를 삭제하면 간단한 언어로 일반적인 멤버 함수와 비멤버 함수뿐 아니라 특수 멤버 함수까지 모든 형식의 함수에 대한 인수에서 문제가 발생할 수 있는 형식 승격을 방지할 수 있습니다. 그렇지 않은 경우 원하지 않는 함수 호출 시 문제가 발생할 수 있습니다.  
   
 ## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>명시적으로 기본 설정 및 삭제된 함수의 이점  
- C++에서 컴파일러는 형식을 자체적으로 선언하지 않을 경우 기본 생성자, 복사 생성자, 복사 할당 연산자 및 소멸자를 자동으로 생성합니다. 이러한 함수 라고는 *특수 멤버 함수*, 간단한 사용자 정의 형식에서 c + + 동작 C.의 구조와 유사 하 게 하 고 즉, 만들 하 고, 복사 하 고, 추가 코딩 작업 없이 제거할 수 수 있습니다. C++11은 언어에 이동 의미 체계를 가져오고 이동 생성자와 이동 할당 연산자를 컴파일러가 자동으로 생성할 수 있는 특수 멤버 함수 목록에 추가합니다.  
+ C++에서 컴파일러는 형식을 자체적으로 선언하지 않을 경우 기본 생성자, 복사 생성자, 복사 할당 연산자 및 소멸자를 자동으로 생성합니다. 이러한 함수 라고 합니다 *특수 멤버 함수*, 간단한 사용자 정의 형식 c + +에서 c에서 구조와 유사 하 게 동작 하 게 하 고 즉, 만들 하 고, 복사 하 고, 추가 코딩 작업 없이 파기 수 있습니다. C++11은 언어에 이동 의미 체계를 가져오고 이동 생성자와 이동 할당 연산자를 컴파일러가 자동으로 생성할 수 있는 특수 멤버 함수 목록에 추가합니다.  
   
  따라서 단순 형식에는 편리하지만 복합 형식은 종종 하나 이상의 특수 멤버 함수 자체를 정의하므로 다른 특수 멤버 함수가 자동으로 생성되지 않도록 할 수 있습니다. 실제로는 다음과 같습니다.  
   
@@ -50,11 +51,11 @@ C++ 11에서 기본 설정 및 삭제된 함수를 사용하면 특수 멤버 �
 >   
 >  두 경우 모두 Visual Studio에서는 필요한 함수가 암시적으로 자동 생성되며 경고를 생성하지 않습니다.  
   
- 이러한 규칙으로 인해 개체 계층 구조에 누수가 발생할 수도 있습니다. 예를 들어 어떤 이유로든 파생 클래스에서 호출할 수 있는 기본 생성자가 기본 클래스에 없으면 즉, `public` 또는 `protected` 생성자에 매개 변수가 없으면 파생되는 클래스에서 기본 생성자를 자동으로 생성할 수 없습니다.  
+ 이러한 규칙으로 인해 개체 계층 구조에 누수가 발생할 수도 있습니다. 예를 들어, 어떤 이유로 든 기본 클래스를 파생 클래스에서 호출할 수 있는 기본 생성자가 실패 하는 경우-즉, 한 **공개** 또는 **보호** 매개 변수가 없는 생성자-클래스에 다음 파생 되는 자체 기본 생성자를 자동으로 생성할 수 없습니다.  
   
  이러한 규칙으로 인해 간단해야 하는 사용자 정의 형식 및 일반적인 C++ 관용구의 구현이 복잡해질 수 있습니다. 예를 들어 복사 생성자 및 복사 할당 연산자를 정의하지 않고 비공개적으로 선언하여 사용자 정의 형식을 복사할 수 없게 만들 수 있습니다.  
   
-```  
+```cpp 
 struct noncopyable  
 {  
   noncopyable() {};  
@@ -77,7 +78,7 @@ private:
   
  C++ 11에서는 복사할 수 없는 관용구를 더 간단한 방법으로 구현할 수 있습니다.  
   
-```  
+```cpp 
 struct noncopyable  
 {  
   noncopyable() =default;  
@@ -103,7 +104,7 @@ struct noncopyable
   
  다음 예제와 같이 선언하여 특수 멤버 함수를 기본 설정합니다.  
   
-```  
+```cpp 
 struct widget  
 {  
   widget()=default;  
@@ -121,7 +122,7 @@ inline widget& widget::operator=(const widget&) =default;
 ## <a name="deleted-functions"></a>삭제된 함수  
  특수 멤버 함수뿐만 아니라 일반 멤버 함수와 비멤버 함수도 삭제하여 정의되거나 호출되지 않도록 할 수 있습니다. 특수 멤버 함수의 삭제는 컴파일러에서 원하지 않는 특수 멤버 함수를 생성할 수 없도록 하는 보다 명확한 방법을 제공합니다. 함수는 선언할 때 삭제해야 합니다. 그 이후에는 함수를 선언한 다음 나중에 기본값으로 지정할 수 있으므로 삭제할 수 없습니다.  
   
-```  
+```cpp 
 struct widget  
 {  
   // deleted operator new prevents widget from being dynamically allocated.  
@@ -131,18 +132,17 @@ struct widget
   
  일반 멤버 함수 또는 비멤버 함수를 삭제하면 문제가 있는 형식 승격에서 의도하지 않은 함수를 호출하는 것을 방지할 수 있습니다. 이 기능은 삭제된 함수가 오버로드 확인에 계속 참여하고 형식이 승격된 후 호출될 수 있는 함수보다 더 우수한 일치를 제공하기 때문에 작동합니다. 함수 호출은 보다 구체적이지만 삭제된 함수가 되고 컴파일러 오류를 발생시킵니다.  
   
-```  
+```cpp 
 // deleted overload prevents call through type promotion of float to double from succeeding.  
 void call_with_true_double_only(float) =delete;  
 void call_with_true_double_only(double param) { return; }  
 ```  
   
- `call_with_true_double_only` 인수를 사용하여 `float`를 호출하는 앞의 예제에서는 컴파일러 오류가 발생하지만 `call_with_true_double_only` 인수를 사용하여 `int`를 호출하면 컴파일러 오류가 발생하지 않습니다. `int`의 경우 인수는 의도하지 않은 경우에도 `int`에서 `double`로 승격되고 함수의 `double` 버전을 성공적으로 호출합니다. double이 아닌 인수를 사용하여 이 함수를 호출할 때 컴파일러 오류가 발생하게 하려면 삭제된 템플릿 버전의 함수를 선언합니다.  
+ 호출 하는 이전 샘플에서 확인할 수 있습니다 `call_with_true_double_only` 를 사용 하 여는 **float** 인수는 컴파일러 오류가 발생 하는 호출 하지만 `call_with_true_double_only` 사용 하 여는 **int** 하지 않습니다; 합니다 **int** 경우에서 인수 승격 됩니다 **int** 하 **double** 성공적으로 호출 합니다 **double** 함수 버전 경우에 수 의도 합니다. double이 아닌 인수를 사용하여 이 함수를 호출할 때 컴파일러 오류가 발생하게 하려면 삭제된 템플릿 버전의 함수를 선언합니다.  
   
-```  
+```cpp 
 template < typename T >  
 void call_with_true_double_only(T) =delete; //prevent call through type promotion of any T to double from succeeding.  
   
 void call_with_true_double_only(double param) { return; } // also define for const double, double&, etc. as needed.  
-  
 ```

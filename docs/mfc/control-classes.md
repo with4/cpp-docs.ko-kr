@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358653"
 ---
 # <a name="control-classes"></a>컨트롤 클래스
 컨트롤 클래스에 정적 텍스트 컨트롤에서 트리 컨트롤에 이르기까지 표준 Windows 컨트롤의 다양 한 캡슐화 합니다. 또한 MFC는 비트맵 및 컨트롤 막대를 사용 하는 단추 등의 몇 가지 새로운 컨트롤을 제공 합니다.  

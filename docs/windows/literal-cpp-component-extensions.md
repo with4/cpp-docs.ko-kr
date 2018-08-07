@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879359"
 ---
 # <a name="literal-c-component-extensions"></a>리터럴(C++ 구성 요소 확장명)
 로 표시 된 변수 (데이터 멤버) `literal` 에 **/clr** 컴파일이입니다. 해당 하는 네이티브는 `static const` 변수입니다.  

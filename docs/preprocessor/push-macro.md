@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33912994"
 ---
 # <a name="pushmacro"></a>push_macro
 값을 저장 된 *macro_name* 이 매크로 대 한 스택의 맨 위에 매크로입니다.  

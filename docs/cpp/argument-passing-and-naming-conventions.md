@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43aa3430b641f6333c6c35d618f9e9de123b7390
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e1a6a8e837a44a966f262f581db04f1589233c8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404043"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>인수 전달 및 명명 규칙
 **Microsoft 전용**  
@@ -41,9 +42,9 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  구조체, 공용 구조체 또는 클래스가 값으로 함수에서 반환되는 경우 형식의 모든 정의가 동일해야 하며, 그렇지 않으면 프로그램이 런타임에 실패할 수 있습니다.  
   
- 사용자 고유의 함수 프롤로그 및 에필로그 코드를 정의 하는 방법에 대 한 정보를 참조 하십시오. [Naked 함수 호출](../cpp/naked-function-calls.md)합니다.  
+ 사용자 고유의 함수 프롤로그 및 에필로그 코드를 정의 하는 방법에 대 한 자세한 내용은 [Naked 함수 호출](../cpp/naked-function-calls.md)합니다.  
   
- 대상 x64 플랫폼에서 참조 하는 코드에서 호출 규칙에 대 한 기본 정보에 대 한 [개요 x64 호출 규칙](../build/overview-of-x64-calling-conventions.md)합니다. ARM 플랫폼을 대상으로 하는 코드에서 호출 규칙 문제에 대 한 정보를 참조 하십시오. [일반적인 Visual c + + ARM 마이그레이션 문제](../build/common-visual-cpp-arm-migration-issues.md)합니다.  
+ 대상을 x64 플랫폼에서 참조 하는 코드의 호출 규칙 기본값에 대 한 자세한 [개요 x64 호출 규칙](../build/overview-of-x64-calling-conventions.md)합니다. ARM 플랫폼을 대상으로 하는 코드의 호출 규칙 문제에 대 한 자세한 내용은 [일반적인 Visual c + + ARM 마이그레이션 문제](../build/common-visual-cpp-arm-migration-issues.md)합니다.  
   
  다음과 같은 호출 규칙이 Visual C/C++ 컴파일러에서 지원됩니다.  
   
@@ -53,12 +54,12 @@ ms.lasthandoff: 05/03/2018
 |[__clrcall](../cpp/clrcall.md)|N/A|CLR 식 스택에 매개 변수를 순서대로(왼쪽에서 오른쪽으로) 로드합니다.|  
 |[__stdcall](../cpp/stdcall.md)|호출 수신자|매개 변수를 스택에 역순으로(오른쪽에서 왼쪽으로) 푸시합니다.|  
 |[__fastcall](../cpp/fastcall.md)|호출 수신자|레지스터에 저장된 다음 스택에 푸시됩니다.|  
-|[__thiscall](../cpp/thiscall.md)|호출 수신자|스택에 푸시됩니다. **이** 포인터가 ECX에에서 저장|  
+|[__thiscall](../cpp/thiscall.md)|호출 수신자|스택에; **이** 포인터가 ECX에에서 저장|  
 |[__vectorcall](../cpp/vectorcall.md)|호출 수신자|레지스터에 저장된 다음 스택에 역순으로(오른쪽에서 왼쪽으로) 푸시됩니다.|  
   
- 관련된 정보를 참조 하십시오. [사용 되지 않는 호출 규칙](../cpp/obsolete-calling-conventions.md)합니다.  
+ 관련 정보를 참조 하세요 [사용 되지 않는 호출 규칙](../cpp/obsolete-calling-conventions.md)합니다.  
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [호출 규칙](../cpp/calling-conventions.md)

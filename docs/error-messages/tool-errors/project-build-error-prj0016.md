@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319054"
 ---
 # <a name="project-build-error-prj0016"></a>프로젝트 빌드 오류 PRJ0016
 사용자의 보안 설정 때문에 프로세스 만들어지지 않도록 합니다. 이 설정은 빌드에 필요 합니다.  

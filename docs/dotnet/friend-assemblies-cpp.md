@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113761"
 ---
 # <a name="friend-assemblies-c"></a>Friend 어셈블리(C++)
 적용 가능한 런타임에 대 한는 *friend 어셈블리* 언어 기능을 사용 하면 네임 스페이스 범위 또는 전역 범위에서 하나 이상의 클라이언트 어셈블리 또는.netmodules에 액세스할 수 있는 어셈블리 구성 요소에서 사용 중인 형식입니다.  

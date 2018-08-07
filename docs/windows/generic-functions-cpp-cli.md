@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878836"
 ---
 # <a name="generic-functions-ccli"></a>제네릭 함수(C++/CLI)
 제네릭 함수는 형식 매개 변수 선언 된 함수입니다. 호출 되 면 실제 형식은 형식 매개 변수 대신 사용 됩니다.  

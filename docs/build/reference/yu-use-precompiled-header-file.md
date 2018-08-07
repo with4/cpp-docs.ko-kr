@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378719"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu(미리 컴파일된 헤더 파일 사용)
 현재 컴파일에서 기존의 미리 컴파일된 헤더 (.pch) 파일을 사용 하려면 컴파일러를 지시 합니다.  

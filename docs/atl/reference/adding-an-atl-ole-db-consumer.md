@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356356"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>ATL OLE DB 소비자 추가
 이 마법사를 사용 하 여 프로젝트에 ATL OLE DB 소비자를 추가 합니다. ATL OLE DB 소비자는 데이터 원본에 액세스 하는 데 필요한 OLE DB 접근자 클래스 및 데이터 바인딩으로 구성 됩니다. 프로젝트 (ATL OLE DB 소비자 마법사를 추가 하는 자동으로) ATL 지원을 포함 하는 MFC 또는 Win32 응용 프로그램 또는 ATL COM 응용 프로그램으로 만든 것 이어야 합니다.  

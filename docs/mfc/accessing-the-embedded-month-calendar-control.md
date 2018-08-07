@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332129"
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>포함된 MonthCalendar 컨트롤 액세스
 포함 된 month calendar 컨트롤 개체에서 액세스할 수는 `CDateTimeCtrl` 을 호출 하 여 개체는 [GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl) 멤버 함수입니다.  

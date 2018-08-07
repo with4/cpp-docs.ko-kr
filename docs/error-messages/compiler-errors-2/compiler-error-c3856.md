@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275319"
 ---
 # <a name="compiler-error-c3856"></a>컴파일러 오류 C3856
 'type': 클래스 클래스 형식이 아닙니다  

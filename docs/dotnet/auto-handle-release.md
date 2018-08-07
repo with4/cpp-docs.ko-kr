@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106663"
 ---
 # <a name="autohandlerelease"></a>auto_handle::release
 개체를 해제 `auto_handle` 관리 합니다.  

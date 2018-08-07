@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688143"
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock 클래스
 D3D 액세스 잠금 accelerator_view 개체에 대 한 RAII 래퍼.  

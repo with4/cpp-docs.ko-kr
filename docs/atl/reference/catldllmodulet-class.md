@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b1ea8b5922454d32961f0e7d87eda16f55fe52c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86fae3c77f06ab7dd3fb2104eda928c1a72b8cc3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883546"
 ---
 # <a name="catldllmodulet-class"></a>CAtlDllModuleT 클래스
 이 클래스는 DLL에 대 한 모듈을 나타냅니다.  
@@ -41,7 +42,7 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `T`  
+ *T*  
  클래스에서 파생 된 `CAtlDllModuleT`합니다.  
   
 ## <a name="members"></a>멤버  
@@ -57,17 +58,17 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
   
 |이름|설명|  
 |----------|-----------------|  
-|[CAtlDllModuleT::DllCanUnloadNow](#dllcanunloadnow)|DLL이 언로드될 수 있는지 테스트 합니다.|  
+|[CAtlDllModuleT::DllCanUnloadNow](#dllcanunloadnow)|DLL을 로드할 수 있는지 테스트 합니다.|  
 |[CAtlDllModuleT::DllGetClassObject](#dllgetclassobject)|클래스 팩터리를 반환합니다.|  
-|[CAtlDllModuleT::DllMain](#dllmain)|선택적 진입점에 동적 연결 라이브러리 (DLL)입니다.|  
+|[CAtlDllModuleT::DllMain](#dllmain)|선택적 진입점 동적 연결 라이브러리 (DLL)입니다.|  
 |[CAtlDllModuleT::DllRegisterServer](#dllregisterserver)|DLL의 개체에 대 한 시스템 레지스트리에 항목을 추가합니다.|  
 |[CAtlDllModuleT::DllUnregisterServer](#dllunregisterserver)|DLL의 개체에 대 한 시스템 레지스트리에 항목을 제거합니다.|  
-|[CAtlDllModuleT::GetClassObject](#getclassobject)|클래스 팩터리를 반환합니다. 호출 된 [DllGetClassObject](#dllgetclassobject)합니다.|  
+|[CAtlDllModuleT::GetClassObject](#getclassobject)|클래스 팩터리를 반환합니다. 호출 하 여 [DllGetClassObject](#dllgetclassobject)합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CAtlDllModuleT` 동적 연결 라이브러리 (DLL)에 대 한 모듈을 나타내며 모든 DLL 프로젝트에서 사용 되는 함수를 제공 합니다. 이 특수화의 [CAtlModuleT](../../atl/reference/catlmodulet-class.md) 등록에 대 한 지원 클래스를 포함 합니다.  
+ `CAtlDllModuleT` 동적 연결 라이브러리 (DLL)에 대 한 모듈을 나타내며 모든 DLL 프로젝트에서 사용 되는 함수를 제공 합니다. 이 특수화 [CAtlModuleT](../../atl/reference/catlmodulet-class.md) 클래스 등록에 대 한 지원이 포함 되어 있습니다.  
   
- ATL에서 모듈에 대 한 자세한 내용은 참조 하십시오. [ATL 모듈 클래스](../../atl/atl-module-classes.md)합니다.  
+ ATL에서 모듈에 대 한 자세한 내용은 참조 하세요. [ATL 모듈 클래스](../../atl/atl-module-classes.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
@@ -96,14 +97,14 @@ CAtlDllModuleT() throw();
 ```  
   
 ##  <a name="dllcanunloadnow"></a>  CAtlDllModuleT::DllCanUnloadNow  
- DLL이 언로드될 수 있는지 테스트 합니다.  
+ DLL을 로드할 수 있는지 테스트 합니다.  
   
 ```
 HRESULT DllCanUnloadNow() throw();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 그렇지 않을 경우 DLL을 언로드할 수 하면 s_ok이 고 또는 S_FALSE를 반환 합니다.  
+ 불가능 한 경우 DLL을 로드할 수 있으면 S_OK 또는 S_FALSE를 반환 합니다.  
   
 ##  <a name="dllgetclassobject"></a>  CAtlDllModuleT::DllGetClassObject  
  클래스 팩터리를 반환합니다.  
@@ -116,28 +117,28 @@ HRESULT DllGetClassObject(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rclsid`  
+ *rclsid*  
  만들 개체의 CLSID입니다.  
   
- `riid`  
+ *riid*  
  요청된 된 인터페이스의 IID입니다.  
   
- `ppv`  
- 로 식별 되는 인터페이스 포인터에 대 한 포인터 `riid`합니다. 개체가이 인터페이스를 지원 하지 않는 경우 `ppv` NULL로 설정 됩니다.  
+ *ppv*  
+ 로 식별 되는 인터페이스 포인터에 대 한 포인터 *riid*합니다. 개체는이 인터페이스를 지원 하지 않는 경우 *ppv* NULL로 설정 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+ 성공 하면 s_ok이 고, 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ##  <a name="dllmain"></a>  CAtlDllModuleT::DllMain  
- 선택적 진입점에 동적 연결 라이브러리 (DLL)입니다.  
+ 선택적 진입점 동적 연결 라이브러리 (DLL)입니다.  
   
 ```
 BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwReason`  
- DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH 및 DLL_THREAD_DETACH 알림 호출으로 설정 된 사용할 수 없습니다.  
+ *dwReason*  
+ DLL_PROCESS_ATTACH, 활발 및 DLL_THREAD_DETACH 알림 호출으로 사용 하지 않도록 설정 합니다.  
   
  *lpReserved*  
  예약됨.  
@@ -146,7 +147,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
  항상 TRUE를 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
- DLL_THREAD_ATTACH 사용 해제 및 DLL_THREAD_DETACH 알림 호출이 여러 Dll이 있는 다중 스레드 응용 프로그램에 대 한 유용한 최적화 될 수 있는 Dll의 이러한 스레드 수준의 알림이 필요는 없습니다 및 자주 만들고 있는 스레드를 삭제 첨부 파일/분리 합니다.  
+ 활발을 사용 하지 않도록 설정 하 고 DLL_THREAD_DETACH 알림 호출에는 여러 Dll이 있는 다중 스레드 응용 프로그램에 대 한 유용한 최적화 수, 자주 만들고 있는 스레드를 삭제 합니다. 해당 Dll의 이러한 스레드 수준 알림이 필요가 없습니다. 첨부/분리 합니다.  
   
 ##  <a name="dllregisterserver"></a>  CAtlDllModuleT::DllRegisterServer  
  DLL의 개체에 대 한 시스템 레지스트리에 항목을 추가합니다.  
@@ -156,11 +157,11 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bRegTypeLib`  
- TRUE 이면 형식 라이브러리를 등록 해야입니다. 기본값은 TRUE입니다.  
+ *bRegTypeLib*  
+ TRUE 이면 형식 라이브러리 등록 됩니다. 기본값은 TRUE입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+ 성공 하면 s_ok이 고, 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ##  <a name="dllunregisterserver"></a>  CAtlDllModuleT::DllUnregisterServer  
  DLL의 개체에 대 한 시스템 레지스트리에 항목을 제거합니다.  
@@ -170,11 +171,11 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bUnRegTypeLib`  
- 형식 라이브러리는 레지스트리에서 제거 될 경우 TRUE입니다. 기본값은 TRUE입니다.  
+ *bUnRegTypeLib*  
+ 형식 라이브러리를 레지스트리에서 제거할 이면 TRUE입니다. 기본값은 TRUE입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+ 성공 하면 s_ok이 고, 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ##  <a name="getclassobject"></a>  CAtlDllModuleT::GetClassObject  
  지정된 된 CLSID의 개체를 만듭니다.  
@@ -187,20 +188,20 @@ HRESULT GetClassObject(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rclsid`  
+ *rclsid*  
  만들 개체의 CLSID입니다.  
   
- `riid`  
+ *riid*  
  요청된 된 인터페이스의 IID입니다.  
   
- `ppv`  
- 로 식별 되는 인터페이스 포인터에 대 한 포인터 `riid`합니다. 개체가이 인터페이스를 지원 하지 않는 경우 `ppv` NULL로 설정 됩니다.  
+ *ppv*  
+ 로 식별 되는 인터페이스 포인터에 대 한 포인터 *riid*합니다. 개체는이 인터페이스를 지원 하지 않는 경우 *ppv* NULL로 설정 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+ 성공 하면 s_ok이 고, 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 [CAtlDllModuleT::DllGetClassObject](#dllgetclassobject) 이전 버전과 호환성을 위해 포함 됩니다.  
+ 이 메서드는 [CAtlDllModuleT::DllGetClassObject](#dllgetclassobject) 되며 이전 버전과 호환성을 위해 포함 되었습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CAtlModuleT 클래스](../../atl/reference/catlmodulet-class.md)   

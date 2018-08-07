@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317481"
 ---
 # <a name="project-build-error-prj0006"></a>프로젝트 빌드 오류 PRJ0006
 'File' 임시 파일을 열 수 없습니다. 파일이 있는지, 그리고 디렉터리 쓰기 금지 되어 있는지 확인 합니다.  

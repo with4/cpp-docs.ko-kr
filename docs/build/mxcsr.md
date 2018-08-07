@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368628"
 ---
 # <a name="mxcsr"></a>MxCsr
 레지스터 상태 MxCsr 포함 됩니다. 호출 규칙 휘발성 부분과 비휘발성 부분에이 레지스터를 나눕니다. MXCSR 6 상태 플래그의 휘발성 부분 구성 [0:5], [6:15] MXCSR 레지스터의 나머지 부분에서는 일시적이 아닌 것으로 간주 됩니다.  

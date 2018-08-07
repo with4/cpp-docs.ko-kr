@@ -43,6 +43,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686648"
 ---
 # <a name="float2-class"></a>float_2 클래스
 두 개의 부동 소수점의 short 벡터를 나타냅니다.  

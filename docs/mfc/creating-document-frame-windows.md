@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342945"
 ---
 # <a name="creating-document-frame-windows"></a>문서 프레임 창 만들기
 [문서/뷰 만들기](../mfc/document-view-creation.md) 표시 방법을 [CDocTemplate](../mfc/reference/cdoctemplate-class.md) 프레임 창, 문서 및 뷰를 만들고 모두 함께 연결 개체를 조정 합니다. 세 가지 [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) 에 대 한 인수는 `CDocTemplate` 생성자 프레임 창, 문서 및 문서 템플릿 파일에 새 명령 같은 사용자 명령에 대 한 응답에서 동적으로 작성 하는 뷰 클래스를 지정 합니다. 메뉴 또는 MDI 창 메뉴에서 새 창 명령을 합니다. 문서 서식 파일 보기 및 문서에 대 한 프레임 창을 만들 때 나중에 사용할이이 정보를 저장 합니다.  

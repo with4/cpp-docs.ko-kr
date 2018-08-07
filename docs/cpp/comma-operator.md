@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8533012a921cbfb2861bcc7e1c5f2a6de81aadd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a139efed1fadd8f7b821363b7cb9cdbf97c9a29
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409188"
 ---
 # <a name="comma-operator-"></a>쉼표 연산자: ,
 하나의 문이 예상되는 곳에서 두 문을 그룹화할 수 있도록 합니다.  
@@ -28,7 +29,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 expression , expression  
 ```  
   
@@ -41,20 +41,20 @@ expression , expression
   
  *e1* , *e2*  
   
- 유형 및 값의 유형 및 식의 값은 *e2*;의 계산 결과 *e1* 삭제 됩니다. 결과는 오른쪽 피연산자가 l-value인 경우 l-value입니다.  
+ 형식 및 값의 형식 및 식의 값은 *e2*;의 계산 결과 *e1* 삭제 됩니다. 결과는 오른쪽 피연산자가 l-value인 경우 l-value입니다.  
   
  쉼표가 일반적으로 구분 기호로 사용되는 경우(예: 함수에 대한 실제 인수 또는 집합체 이니셜라이저), 쉼표 연산자와 피연산자는 괄호로 묶어야 합니다. 예를 들어:  
   
-```  
+```cpp 
 func_one( x, y + 2, z );  
 func_two( (x--, y + 2), z );  
 ```  
   
  위 `func_one`에 대한 함수 호출에서 쉼표로 구분된 세 인수, `x`, `y + 2`, `z`가 전달됩니다. `func_two`에 대한 함수 호출에서 괄호는 컴파일러가 첫 번째 쉼표를 순차적 계산 연산자로 해석하도록 합니다. 이 함수 호출은 두 인수를 `func_two`에 전달합니다. 첫 번째 인수는 `(x--, y + 2)` 식의 값과 형식을 가진 순차적 계산 연산 `y + 2`의 결과이며, 두 번째 인수는 `z`입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp 
 // cpp_comma_operator.cpp  
 #include <stdio.h>  
 int main () {  
@@ -72,7 +72,7 @@ int main () {
 30  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [이항 연산자가 있는 식](../cpp/expressions-with-binary-operators.md)   
  [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [순차적 확인 연산자](../c-language/sequential-evaluation-operator.md)

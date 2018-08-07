@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301137"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>링커 도구 경고 LNK4219
 픽스업 이름 픽스업 오버플로입니다. 대상 '대상 symbol name' 범위를 벗어남 썽크가 삽입 됩니다.  

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cda5485fee6ae0d8a7de8c9212e7e27c76f430ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8e3ec18d00c50db29c6a08956d4c3375a4dc7ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962386"
 ---
 # <a name="isvolatile-class"></a>is_volatile 클래스
 
@@ -36,13 +37,13 @@ struct is_volatile;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 형식이 쿼리입니다.
+*Ty* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `Ty`가 `volatile-qualified`인 경우 true입니다.
+형식 조건자의 인스턴스 형태인 경우 true *Ty* 는 `volatile-qualified`합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__is_volatile.cpp

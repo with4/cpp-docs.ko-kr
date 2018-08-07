@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344135"
 ---
 # <a name="inserting-a-form-into-a-project"></a>프로젝트에 폼 삽입
 폼은 컨트롤에 대 한 편리한 컨테이너를 제공합니다. 응용 프로그램이 MFC 라이브러리를 지 원하는 응용 프로그램에 MFC 기반 형식을 삽입할 수 있습니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371532"
 ---
 # <a name="cresourceexception-class"></a>CResourceException 클래스
 Windows에서 요청된 리소스를 찾거나 할당할 수 없을 경우 발생합니다.  

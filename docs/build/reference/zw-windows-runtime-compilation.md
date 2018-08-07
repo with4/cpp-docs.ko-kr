@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380068"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW(Windows Runtime 컴파일)
 소스 지원 하기 위해 코드를 컴파일합니다 [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)])을 유니버설 Windows 플랫폼 (UWP) 앱을 만들 수 있도록 합니다.  

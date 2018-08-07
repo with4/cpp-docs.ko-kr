@@ -21,6 +21,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255540"
 ---
 # <a name="platformtype-class"></a>Platform::Type 클래스
 특정 형식에 대한 런타임 정보(문자열 이름 및 형식 코드)를 포함합니다. 호출 하 여 가져온 [object:: gettype](../cppcx/platform-object-class.md#gettype) 임의 개체에서 또는 또는 사용 하 여는 [typeid](../windows/typeid-cpp-component-extensions.md) 클래스 또는 구조체 이름에는 연산자입니다.  

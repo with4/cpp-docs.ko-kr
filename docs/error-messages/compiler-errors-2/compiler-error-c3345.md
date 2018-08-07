@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254237"
 ---
 # <a name="compiler-error-c3345"></a>컴파일러 오류 C3345
 'identifier': 모듈 이름의 식별자가 잘못되었습니다.  

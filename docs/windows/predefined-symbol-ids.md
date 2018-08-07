@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876425"
 ---
 # <a name="predefined-symbol-ids"></a>미리 정의된 기호 ID
 새 프로젝트를 시작하면 프로젝트 형식에 따라 일부 기호 ID가 바로 사용할 수 있도록 미리 정의되어 있습니다. 이러한 기호 ID는 다양한 라이브러리와 MFC 등의 프로젝트 형식을 지원합니다. 이 ID는 응용 프로그램에 대체로 포함되는 일반 작업 또는 마우스나 프린터와 같은 하드웨어 항목의 작업 등을 나타냅니다.  

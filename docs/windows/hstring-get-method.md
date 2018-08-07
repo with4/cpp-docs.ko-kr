@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881239"
 ---
 # <a name="hstringget-method"></a>HString::Get 메서드
 기본 HSTRING 핸들의 값을 검색 합니다.  

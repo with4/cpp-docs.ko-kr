@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170917"
 ---
 # <a name="compiler-error-c2289"></a>컴파일러 오류 C2289
 동일한 형식 한정자를 두 번 이상 사용했습니다.  

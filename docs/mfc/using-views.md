@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384064"
 ---
 # <a name="using-views"></a>뷰 사용
 뷰는 사용자에 게 문서의 데이터를 그래픽으로 표시 하를 수락 하 고 문서에 대 한 작업으로 사용자 입력 해석 합니다. 뷰 클래스를 작성할에서 작업에는 것입니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378387"
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/Ox (대부분의 속도 최적화 사용에 필요)
 

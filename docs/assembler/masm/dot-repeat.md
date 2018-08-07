@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052452"
 ---
 # <a name="repeat"></a>.REPEAT
 블록의 실행을 반복 하는 코드를 생성 *문을* 될 때까지 `condition` true가 됩니다. [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md), 됩니다 CX이 0 인 경우 true를 대체 수 [합니다. 될 때까지](../../assembler/masm/dot-until.md)합니다. `condition` 는 선택적 **합니다. UNTILCXZ**합니다.  

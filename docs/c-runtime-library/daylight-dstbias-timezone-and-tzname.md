@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391459"
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight, _dstbias, _timezone 및 _tzname
 `_daylight`, `_dstbias`, `_timezone` 및 `_tzname`은 일부 시간 및 날짜 루틴에서 현지 시간을 조정하는 데 사용됩니다. 이러한 전역 변수는 전역 변수 대신 사용되어야 할 보안 기능이 보다 강화된 버전에 대해서는 더 이상 사용되지 않습니다.  

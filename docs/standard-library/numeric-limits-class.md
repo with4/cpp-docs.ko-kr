@@ -80,11 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73c8d98157e81f087bf382c3733a2ade909349a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a14d5012e1db8dec0f1aa6c39d8764232169dec2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954879"
 ---
 # <a name="numericlimits-class"></a>numeric_limits 클래스
 
@@ -99,13 +100,13 @@ class numeric_limits
 
 ### <a name="parameters"></a>매개 변수
 
-`Type` 속성을 가진 되는 기본 요소 데이터 형식 테스트 또는 쿼리 또는 설정 합니다.
+*형식* 속성이 되는 기본 요소 데이터 형식 테스트, 쿼리 또는 설정 합니다.
 
 ## <a name="remarks"></a>설명
 
-헤더는 `wchar_t`, `bool`, `char`, `signed char`, `unsigned char`, `short`, `unsigned short`, `int`, `unsigned int`, `long`, `unsigned long`, `float`, `double`, `long double`**,** `long long`, `unsigned long long`, `char16_t`및 `char32_t`형식에 대한 명시적 특수화를 정의합니다. 이러한 명시적 특수화의 경우 [numeric_limits::is_specialized](#is_specialized) 멤버가 `true`이며 모든 관련 멤버에 의미 있는 값이 있습니다. 프로그램에서 추가 명시적 특수화를 제공할 수 있습니다. 클래스의 대다수 멤버 함수는 `float`의 가능한 구현을 설명하거나 테스트합니다.
+형식에 대 한 명시적 특수화를 정의 하는 헤더 **wchar_t**, **bool**를 **char**를 **char 서명**, **부호 없는 char**, **짧은**를 **unsigned short**를 **int**를 **부호 없는 int**, **장기**, **부호 없는 long**를 **float**를 **double**를 **long double *** **long long**하십시오 **부호 없는 long long**, `char16_t`, 및 `char32_t`합니다. 이러한 명시적 특수화의 경우 멤버에 대 한 [numeric_limits:: is_specialized](#is_specialized) 됩니다 **true**, 및 모든 관련 멤버에 의미 있는 값입니다. 프로그램에서 추가 명시적 특수화를 제공할 수 있습니다. 클래스의 대다수 멤버 함수에 설명 하거나 테스트의 가능한 구현을 **float**합니다.
 
-임의 특수화의 경우 멤버에 의미 있는 값이 없습니다. 의미 있는 값이 없는 멤버 개체는 0(또는 `false`)를 저장하고 의미 있는 값을 반환하지 않는 멤버 함수는 `Type(0)`을 반환합니다.
+임의 특수화의 경우 멤버에 의미 있는 값이 없습니다. 0을 저장 하는 의미 있는 값이 없는 멤버 개체 (또는 **false**)는 의미 있는 값을 반환 하지 않는 멤버 함수가 반환 하 고 `Type(0)`입니다.
 
 ### <a name="static-functions-and-constants"></a>정적 함수 및 상수
 
@@ -164,11 +165,11 @@ static Type denorm_min() throw();
 
 ### <a name="remarks"></a>설명
 
-`long double`은 C++ 컴파일러용 **double**과 동일합니다.
+**long double** 같습니다 **double** c + + 컴파일러.
 
-함수는 해당 형식의 최소값을 반환합니다. [has_denorm](#has_denorm)이 **denorm_present**와 같지 않은 경우 최소값은 [min](#min)과 동일합니다.
+동일한 형식에 대 한 최소값을 반환 하는 함수도 [min](#min) 경우 [has_denorm](#has_denorm) 같지 않은 `denorm_present`합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_denorm_min.cpp
@@ -225,7 +226,7 @@ static const int digits = 0;
 
 구성원은 형식이 변경 없이 나타낼 수 있는 기수 자릿수를 저장합니다. 이 자릿수는 미리 정의된 정수 형식의 경우 부호 비트를 제외한 비트의 수이고, 미리 정의된 부동 소수점 형식의 경우에는 가수의 자릿수입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_digits_min.cpp
@@ -265,7 +266,7 @@ static const int digits10 = 0;
 
 정밀도의 손실 없이 형식이 나타낼 수 있는 10진수 자릿수입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_digits10.cpp
@@ -313,7 +314,7 @@ static Type epsilon() throw();
 
 **float** 형식의 경우 값은 FLT_EPSILON입니다. 형식의 `epsilon`은 *N* + `epsilon` + *N*을 나타낼 수 있도록 하는 최소 양수 부동 소수점 숫자 *N*입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_epsilon.cpp
@@ -363,9 +364,9 @@ static const float_denorm_style has_denorm = denorm_absent;
 
 ### <a name="remarks"></a>설명
 
-구성원은 비정규화된 값을 포함하는 부동 소수점 형식에 대해 **denorm_present**(실제로는 지수 비트의 가변 수)를 저장합니다.
+멤버 저장소 `denorm_present` 에 비 정규화 하는 부동 소수점 형식 값을 효과적으로 다양 한 지 수 비트에 대 한 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_has_denorm.cpp
@@ -411,7 +412,7 @@ static const bool has_denorm_loss = false;
 
 구성원은 값이 정규화된 값으로 나타내기에는 너무 작아서 비정규화된 결과로 전송되었거나 부정확하여(지수 범위와 정밀도의 제한이 적용되지 않은 결과와 동일하지 않음) 정확도가 손실되었는지를 결정하는 형식의 경우 true를 저장합니다. 이는 일부 결과에 영향을 줄 수 있는 IEC 559 부동 소수점 표현에서 사용 가능한 옵션입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_has_denorm_loss.cpp
@@ -457,7 +458,7 @@ static const bool has_infinity = false;
 
 구성원은 [is_iec559](#is_iec559)가 **true**이면 **true**를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_has_infinity.cpp
@@ -503,7 +504,7 @@ static const bool has_quiet_NaN = false;
 
 자동 NAN은 식에 포함되어 있다는 신호를 보내지 않는 숫자가 아닌 항목에 대한 인코딩입니다. [is_iec559](#is_iec559)가 true이면 반환 값은 **true**입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_has_quiet_nan.cpp
@@ -549,7 +550,7 @@ static const bool has_signaling_NaN = false;
 
 신호 NAN은 식에 포함되어 있다는 신호를 보내는 숫자가 아닌 항목에 대한 인코딩입니다. [is_iec559](#is_iec559)가 true이면 반환 값은 **true**입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_has_signaling_nan.cpp
@@ -595,7 +596,7 @@ static Type infinity() throw();
 
 반환 값은 [has_infinity](#has_infinity)가 **true**인 경우에만 의미가 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_infinity.cpp
@@ -649,7 +650,7 @@ static const bool is_bounded = false;
 
 모든 미리 정의된 형식은 경계가 지정된 표현 가능한 값 집합을 포함하므로 **true**를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_is_bounded.cpp
@@ -703,7 +704,7 @@ static const bool is_exact = false;
 
 모든 미리 정의된 정수 형식은 값에 대한 정확한 표현을 포함하므로 **false**를 반환합니다. 고정 소수점 또는 유리수 표현도 정확한 표현으로 간주하지만 부동 소수점 표현은 정확한 표현으로 간주하지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_is_exact.cpp
@@ -757,7 +758,7 @@ static const bool is_iec559 = false;
 
 IEC 559는 부동 소수점 값을 나타내기 위한 국제 표준으로, 미국에서는 IEEE 754라고도 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_is_iec559.cpp
@@ -807,7 +808,7 @@ static const bool is_integer = false;
 
 미리 정의된 모든 정수 형식에는 정수 표현이 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_is_integer.cpp
@@ -857,7 +858,7 @@ static const bool is_modulo = false;
 
 모듈로 표현은 모든 결과가 일부 모듈로 값으로 감소하는 표현입니다. 미리 정의된 모든 부호 없는 정수 형식에는 모듈로 표현이 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_is_modulo.cpp
@@ -907,7 +908,7 @@ static const bool is_signed = false;
 
 구성원은 부호 있는 표현이 있는 형식에 대해 true를 저장합니다. 미리 정의된 모든 부동 소수점 및 부호 있는 정수 형식의 경우 true가 저장됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_is_signaled.cpp
@@ -957,7 +958,7 @@ static const bool is_specialized = false;
 
 포인터를 제외한 모든 스칼라 형식에는 템플릿 클래스 `numeric_limits`에 대해 명시적 특수화가 정의되어 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_is_specialized.cpp
@@ -1009,7 +1010,7 @@ static Type lowest() throw();
 
 ### <a name="remarks"></a>설명
 
-형식에 최대한의 음의 무한대 값을 반환 (일반적으로 `min()` 정수 형식에 대해 및 `-max()` 부동 소수점 형식에 대 한). 반환 값은 `is_bounded`가 `true`일 경우 의미가 있습니다.
+형식에 대해 최대한의 음의 무한대 값을 반환 (일반적으로 `min()` 정수 형식에 대 한 및 `-max()` 부동 소수점 형식에 대 한). 반환 값은 의미 있는 경우 `is_bounded` 됩니다 **true**합니다.
 
 ## <a name="max"></a>  numeric_limits::max
 
@@ -1025,9 +1026,9 @@ static Type max() throw();
 
 ### <a name="remarks"></a>설명
 
-유한 최대값은 `int` 형식의 경우 INT_MAX이고 **float**의 경우 FLT_MAX입니다. 반환 값은 [is_bounded](#is_bounded)가 **true**인 경우 의미가 있습니다.
+형식에 대 한 유한 최대값이 int_max 인 **int** 및 형식에 대 한 FLT_MAX **float**합니다. 반환 값은 [is_bounded](#is_bounded)가 **true**인 경우 의미가 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_max.cpp
@@ -1085,7 +1086,7 @@ static const int max_exponent = 0;
 
 구성원 함수 반환 값은 부동 소수점 형식에만 의미가 있습니다. `max_exponent`는 **float** 형식의 경우 값 FLT_MAX_EXP입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_max_exponent.cpp
@@ -1131,7 +1132,7 @@ static const int max_exponent10 = 0;
 
 구성원 함수 반환 값은 부동 소수점 형식에만 의미가 있습니다. `max_exponent`는 **float** 형식의 경우 값 FLT_MAX_10입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_max_exponent10.cpp
@@ -1175,9 +1176,9 @@ static Type min() throw();
 
 ### <a name="remarks"></a>설명
 
-정규화된 최소값은 `int` 형식의 경우 INT_MIN이고 `float` 형식의 경우 FLT_MIN입니다. 반환 값은 [is_bounded](#is_bounded)가 `true`이거나 [is_signed](#is_signed)가 `false`인 경우 의미가 있습니다.
+정규화 된 최소값 형식 INT_MIN입니다 **int** 및 형식의 경우 FLT_MIN입니다 **float**합니다. 반환 값은 의미 있는 경우 [is_bounded](#is_bounded) 됩니다 **true** 이거나 [is_signed](#is_signed) 는 **false**합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_min.cpp
@@ -1227,7 +1228,7 @@ static const int min_exponent = 0;
 
 구성원 함수는 부동 소수점 형식에만 의미가 있습니다. `min_exponent`는 **float** 형식의 경우 값 FLT_MIN_EXP입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_min_exponent.cpp
@@ -1273,7 +1274,7 @@ static const int min_exponent10 = 0;
 
 구성원 함수는 부동 소수점 형식에만 의미가 있습니다. `min_exponent10`는 **float** 형식의 경우 값 FLT_MIN_10입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_min_exponent10.cpp
@@ -1319,7 +1320,7 @@ static Type quiet_NaN() throw();
 
 반환 값은 [has_quiet_NaN](#has_quiet_nan)이 **true**인 경우에만 의미가 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_quiet_nan.cpp
@@ -1365,7 +1366,7 @@ static const int radix = 0;
 
 밑수는 미리 정의된 정수 형식의 경우 2이며 미리 정의된 부동 소수점 형식의 경우 지수가 증가하는 밑수 또는 FLT_RADIX입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_radix.cpp
@@ -1407,7 +1408,7 @@ static Type round_error() throw();
 
 형식에 대한 최대 반올림 오차입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_round_error.cpp
@@ -1455,7 +1456,7 @@ static const float_round_style round_style = round_toward_zero;
 
 반올림 스타일은 이 구현에 하드 코드되므로 프로그램이 다른 반올림 모드에서 시작되더라도 해당 값은 변경되지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_round_style.cpp
@@ -1500,7 +1501,7 @@ static Type signaling_NaN() throw();
 
 반환 값은 [has_signaling_NaN](#has_signaling_nan)이 **true**인 경우에만 의미가 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_signaling_nan.cpp
@@ -1534,13 +1535,13 @@ static const bool tinyness_before = false;
 
 ### <a name="return-value"></a>반환 값
 
-반올림 전에 형식이 매우 작은 값을 검색할 수 있으면 `true`이고 검색할 수 없으면 `false`입니다.
+**true** 반올림 전에 형식이 매우 작은 값을 검색할 수 있는 경우 **false** 수 없는 경우.
 
 ### <a name="remarks"></a>설명
 
 작은 값을 검색할 수 있는 형식은 IEC 559 부동 소수점 표현을 사용하는 옵션으로 포함되었으며, 해당 구현은 일부 결과에 영향을 줄 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_tinyness_before.cpp
@@ -1586,7 +1587,7 @@ static const bool traps = false;
 
 형식에 대해 트래핑이 구현되면 **true**이고 그렇지 않으면 **false**입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // numeric_limits_traps.cpp

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382221"
 ---
 # <a name="using-ctreectrl"></a>CTreeCtrl 사용
 트리 컨트롤을 클래스 [CTreeCtrl](../mfc/reference/ctreectrl-class.md), 디스크에 인덱스 또는 파일 및 디렉터리의 항목 제목과 문서를 같은 항목의 계층 목록을 표시 하는 창입니다. 각 항목 레이블 및 선택적 비트맵 이미지로 구성 되며 각 항목에 연결 된 하위 항목 목록이 있을 수 있습니다. 항목을 클릭 하 여 사용자 확장명 및 축소할 수 하위 항목의 관련된 목록입니다. 파일 탐색기의 왼쪽 창에서 다음 디렉터리 트리는의 트리 컨트롤의 예시입니다.  

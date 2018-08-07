@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877049"
 ---
 # <a name="modulereleasenotifierrelease"></a>Module::ReleaseNotifier::Release
 `true`의 매개 변수로 개체를 생성한 경우 현재 Module::ReleaseNotifier 개체를 삭제합니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103706"
 ---
 # <a name="autohandlereset"></a>auto_handle::reset
 현재 소유한 개체를 삭제 하 고 필요에 따라 새 개체를 소유한을 수행 합니다.  

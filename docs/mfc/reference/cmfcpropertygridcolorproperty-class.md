@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de336692a821ba374996fac9ee7d282d2990bd08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 164e54ccbd9365e7e4fb2c1989f84891e5813c2f
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849175"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty 클래스
 `CMFCPropertyGridColorProperty` 클래스는 색 선택 항목 대화 상자를 여는 속성 목록 컨트롤 항목을 지원합니다.  
@@ -58,11 +59,11 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
   
 |이름|설명|  
 |----------|-----------------|  
-|[CMFCPropertyGridColorProperty::EnableAutomaticButton](#enableautomaticbutton)|사용 하도록 설정 된 *자동* 색 선택 대화 상자에서 단추입니다. (표준 자동 단추 레이블이 **자동**.)|  
-|[CMFCPropertyGridColorProperty::EnableOtherButton](#enableotherbutton)|사용 하도록 설정 된 *다른* 색 선택 대화 상자에서 단추입니다. (표준 기타 단추 레이블이 **다른 색**.)|  
+|[CMFCPropertyGridColorProperty::EnableAutomaticButton](#enableautomaticbutton)|사용 하도록 설정 합니다 *자동* 색 선택 대화 상자에서 단추입니다. (표준 자동 단추인 **자동**.)|  
+|[CMFCPropertyGridColorProperty::EnableOtherButton](#enableotherbutton)|사용 하도록 설정 합니다 *다른* 색 선택 대화 상자에서 단추입니다. (표준 기타 단추 라고 **다른 색**.)|  
 |`CMFCPropertyGridColorProperty::FormatProperty`|속성 값의 텍스트 표현에 서식을 지정합니다. (재정의 [cmfcpropertygridproperty:: Formatproperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|  
 |[CMFCPropertyGridColorProperty::GetColor](#getcolor)|속성의 현재 색을 가져옵니다.|  
-|`CMFCPropertyGridColorProperty::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에서는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식과 연결 된 개체입니다.|  
+|`CMFCPropertyGridColorProperty::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에 의해 합니다 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식과 연결 된 개체입니다.|  
 |`CMFCPropertyGridColorProperty::OnClickButton`|사용자가 속성에 포함된 단추를 클릭하면 프레임워크에서 호출됩니다. (재정의 [cmfcpropertygridproperty:: Onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
 |`CMFCPropertyGridColorProperty::OnDrawValue`|속성 값을 표시하기 위해 프레임워크에서 호출됩니다. (재정의 [cmfcpropertygridproperty:: Ondrawvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue).)|  
 |`CMFCPropertyGridColorProperty::OnEdit`|사용자가 속성 값을 수정하려고 할 때 프레임워크에서 호출됩니다. (재정의 [cmfcpropertygridproperty:: Onedit](../../mfc/reference/cmfcpropertygridproperty-class.md#onedit).)|  
@@ -74,8 +75,8 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 ## <a name="remarks"></a>설명  
  `CMFCPropertyGridColorProperty` 클래스는 속성 목록 컨트롤에 추가할 수 있는 색 속성을 지원합니다. 자세한 내용은 참조는 [CMFCPropertyGridCtrl 클래스](../../mfc/reference/cmfcpropertygridctrl-class.md)합니다.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 `CMFCPropertyGridColorProperty` 클래스의 개체를 생성하고 `CMFCPropertyGridColorProperty` 클래스의 다양한 메서드를 사용하여 이 개체를 구성하는 방법을 보여 줍니다. 코드에서는 자동 및 기타 단추를 사용하도록 설정하는 방법과 색 및 열 번호를 설정하는 방법을 설명합니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
+## <a name="example"></a>예  
+ 다음 예제에서는 `CMFCPropertyGridColorProperty` 클래스의 개체를 생성하고 `CMFCPropertyGridColorProperty` 클래스의 다양한 메서드를 사용하여 이 개체를 구성하는 방법을 보여 줍니다. 코드에서는 자동 및 기타 단추를 사용하도록 설정하는 방법과 색 및 열 번호를 설정하는 방법을 설명합니다. 이 예제는의 일부를 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#13](../../mfc/reference/codesnippet/cpp/cmfcpropertygridcolorproperty-class_1.cpp)]  
   
@@ -102,23 +103,23 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `strName`  
+ [in] *strName*  
  속성의 이름입니다.  
   
- [in] `color`  
- 속성의 색상 값입니다.  
+ [in] *색*  
+ 속성의 색 값입니다.  
   
- [in] `pPalette`  
- 색의 팔레트에 대 한 포인터입니다. 기본값은 `NULL`입니다.  
+ [in] *pPalette*  
+ 색의 팔레트에 대 한 포인터입니다. 기본값은 NULL입니다.  
   
- [in] `lpszDescr`  
- 속성 설명입니다. 기본값은 `NULL`입니다.  
+ [in] *lpszDescr*  
+ 속성 설명입니다. 기본값은 NULL입니다.  
   
- [in] `dwData`  
- 정수 또는 속성에 연관 된 다른 데이터에 대 한 포인터 등 응용 프로그램별 데이터입니다. 기본값은 0입니다.  
+ [in] *dwData*  
+ 응용 프로그램별 데이터, 정수 등의 속성을 사용 하 여 연결 된 다른 데이터에 대 한 포인터입니다. 기본값은 0입니다.  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
- 사용 하도록 설정 된 *자동* 색 선택 대화 상자에서 단추입니다. (표준 자동 단추 레이블이 **자동**.)  
+ 사용 하도록 설정 합니다 *자동* 색 선택 대화 상자에서 단추입니다. (표준 자동 단추인 **자동**.)  
   
 ```  
 void EnableAutomaticButton(
@@ -128,19 +129,19 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszLabel`  
- 자동 단추 레이블 텍스트입니다.  
+ [in] *lpszLabel*  
+ 자동 단추의 레이블 텍스트입니다.  
   
- [in] `colorAutomatic`  
- 자동 (기본) 색의 RGB 색상 값입니다.  
+ [in] *colorAutomatic*  
+ 자동 (기본값) 색의 RGB 색 값입니다.  
   
- [in] `bEnable`  
- `TRUE` 자동 단추를 사용 하도록 설정 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
+ [in] *bEnable*  
+ 자동 단추를 사용 하도록 설정 그렇지 않으면 FALSE입니다. 기본값은 TRUE입니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="enableotherbutton"></a>  CMFCPropertyGridColorProperty::EnableOtherButton  
- 사용 하도록 설정 된 *다른* 색 선택 대화 상자에서 단추입니다. (표준 기타 단추 레이블이 **다른 색**.)  
+ 사용 하도록 설정 합니다 *다른* 색 선택 대화 상자에서 단추입니다. (표준 기타 단추 라고 **다른 색**.)  
   
 ```  
 void EnableOtherButton(
@@ -150,14 +151,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszLabel`  
- 다른 단추 레이블 텍스트입니다.  
+ [in] *lpszLabel*  
+ 다른 단추의 레이블 텍스트입니다.  
   
- [in] `bAltColorDlg`  
- `TRUE` 표시 하는 `CMFCColorDialog` 대화 상자 `FALSE` 표준 색 선택 대화 상자를 표시 합니다. 기본값은 `TRUE`입니다.  
+ [in] *bAltColorDlg*  
+ True로 설정 하면 여 `CMFCColorDialog` 대화 상자 표준 색 선택 대화 상자를 표시 하려면 FALSE입니다. 기본값은 TRUE입니다.  
   
- [in] `bEnable`  
- `TRUE` 다른 단추를 표시 하려면 그렇지 않으면 `FALSE`합니다.  기본값은 `TRUE`입니다.  
+ [in] *bEnable*  
+ 다른 단추를 표시 그렇지 않으면 FALSE입니다.  기본값은 TRUE입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -169,7 +170,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- RGB 색상 값입니다.  
+ RGB 색 값입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -181,8 +182,8 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `color`  
- RGB 색상 값입니다.  
+ [in] *색*  
+ RGB 색 값입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -194,8 +195,8 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nColumnsNumber`  
- 기본 색 속성 표의 열 수입니다.  
+ [in] *nColumnsNumber*  
+ 기본 색 속성 표의 열 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
  값을 설정 하는이 메서드는 `m_nColumnsNumber` 데이터 멤버를 보호 합니다.  
@@ -208,11 +209,11 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `varValue`  
+ [in] *varValue*  
  값입니다.  
   
 ### <a name="remarks"></a>설명  
- 사용 하 여는 [cmfcpropertygridproperty:: Resetoriginalvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue) 메서드를 편집된 된 속성의 원래 값을 다시 설정 합니다.  
+ 사용 된 [cmfcpropertygridproperty:: Resetoriginalvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue) 편집된 된 속성의 원래 값을 다시 설정 하는 방법입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   

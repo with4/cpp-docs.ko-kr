@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379694"
 ---
 # <a name="sample-makefile"></a>샘플 메이크파일
 이 항목에서는 샘플 메이크파일입니다.  

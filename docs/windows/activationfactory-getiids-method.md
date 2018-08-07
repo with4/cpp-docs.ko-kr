@@ -17,11 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f411f3b2f9e777a4e458b64176ace77a8d13e86
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8f937bf3da7aab803164ca968ba9fa3de227ce03
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463526"
 ---
 # <a name="activationfactorygetiids-method"></a>ActivationFactory::GetIids 메서드
 구현된 인터페이스 ID의 배열을 가져옵니다.  
@@ -35,10 +36,10 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `iidCount`  
- 이 작업이 완료될 때 `iids` 배열의 인터페이스 ID 수입니다.  
+ *iidCount*  
+ 이 작업이 완료 되 면 인터페이스 Id 수는 *iid* 배열입니다.  
   
- `iids`  
+ *iid*  
  이 작업이 완료될 대 구현된 인터페이스 ID의 배열입니다.  
   
 ## <a name="return-value"></a>반환 값  

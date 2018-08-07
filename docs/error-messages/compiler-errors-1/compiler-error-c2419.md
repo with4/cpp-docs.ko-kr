@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33223736"
 ---
 # <a name="compiler-error-c2419"></a>컴파일러 오류 C2419
 'context'에서 0으로 나머지 연산을 수행했습니다.  

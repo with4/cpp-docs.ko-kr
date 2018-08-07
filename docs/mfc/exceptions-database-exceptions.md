@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83b3f4f54f467ca7f4fbd2a179fdbf01d54dfa89
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930240"
 ---
 # <a name="exceptions-database-exceptions"></a>예외: 데이터베이스 예외
 이 문서에서는 데이터베이스 예외를 처리 하는 방법을 설명 합니다. 이 문서에서 대부분 사용 하는 mfc ODBC Open Database Connectivity () 또는 MFC 클래스에 대 한 데이터 액세스 개체 (DAO) 여부를 적용 합니다. 하나 또는 다른 모델에 특정 자료 명시적으로 표시 됩니다. 다음과 같은 내용을 다룹니다.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/04/2018
   
 -   [m_nAfxDaoError](../mfc/reference/cdaoexception-class.md#m_nafxdaoerror) MFC DAO 클래스에서 확장 된 오류 코드를 포함 합니다. 폼의 이름을 포함 하는 이러한 오류 코드 **AFX_DAO_ERROR_XXX**의 데이터 멤버 아래에서 설명 `CDaoException`합니다.  
   
--   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) OLE 포함 `SCODE` 에서 DAO, 해당 하는 경우. 그러나이 오류 코드로 작업 하려면 거의 해야 합니다. 일반적으로 자세한 정보는 다른 두 데이터 멤버에 있습니다. 자세한 내용은 데이터 멤버에 대 한 참조 `SCODE` 값입니다.  
+-   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) OLE 포함 **SCODE** 에서 DAO, 해당 하는 경우. 그러나이 오류 코드로 작업 하려면 거의 해야 합니다. 일반적으로 자세한 정보는 다른 두 데이터 멤버에 있습니다. 자세한 내용은 데이터 멤버에 대 한 참조 **SCODE** 값입니다.  
   
  클래스에서 DAO 오류, DAO 오류 개체 유형 및 DAO Errors 컬렉션에 대 한 추가 정보는 [CDaoException](../mfc/reference/cdaoexception-class.md)합니다.  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/04/2018
  다음 예제에서는 생성 하려고는 [CRecordset](../mfc/reference/crecordset-class.md)-파생 된 개체를 사용 하 여 힙에 **새** 연산자 및 다음의 레코드 집합 (ODBC 데이터 원본)를 엽니다. DAO 클래스에 대 한 유사한 예 "DAO 예외 아래 예제에서는"를 참조 합니다.  
   
 ### <a name="odbc-exception-example"></a>ODBC 예외 예제  
- [열려](../mfc/reference/crecordset-class.md#open) 멤버 함수는 예외를 throw 할 수 있습니다 (형식의 [잠금을](../mfc/reference/cdbexception-class.md) ODBC 클래스에 대 한), 되므로이 대괄호 코드는 **열려** 하 여 호출는 **시도**  블록입니다. 후속 **catch** 블록은 catch는 `CDBException`합니다. 예외 개체를 직접 호출을 검토할 수 있습니다 `e`,이 경우에 레코드 집합을 만들려는 시도가 실패 했음을 알고 충분 하지만 합니다. **catch** 블록 메시지 상자를 표시 하 고 레코드 집합 개체를 삭제 하 여 정리 합니다.  
+ [열려](../mfc/reference/crecordset-class.md#open) 멤버 함수는 예외를 throw 할 수 있습니다 (형식의 [잠금을](../mfc/reference/cdbexception-class.md) ODBC 클래스에 대 한), 되므로이 대괄호 코드는 `Open` 하 여 호출는 **시도** 블록입니다. 후속 **catch** 블록은 catch는 `CDBException`합니다. 예외 개체를 직접 호출을 검토할 수 있습니다 `e`,이 경우에 레코드 집합을 만들려는 시도가 실패 했음을 알고 충분 하지만 합니다. **catch** 블록 메시지 상자를 표시 하 고 레코드 집합 개체를 삭제 하 여 정리 합니다.  
   
  [!code-cpp[NVC_MFCDatabase#36](../mfc/codesnippet/cpp/exceptions-database-exceptions_1.cpp)]  
   

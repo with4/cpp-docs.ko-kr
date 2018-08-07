@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7066ffe50dc76c26528e7bfcd3dc9e9778e1473a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c640f1b338fa4b0aa6dbcc408e0729fbf8ff90a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963552"
 ---
 # <a name="constructing-input-stream-objects"></a>입력 스트림 개체 생성
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/07/2018
 
 입력 파일 스트림을 만드는 방법에는 두 가지가 있습니다.
 
-- `void` 인수 생성자를 사용한 다음 `open` 멤버 함수를 호출합니다.
+- 사용 된 **void** 인수 생성자 호출을 `open` 멤버 함수:
 
    ```cpp
    ifstream myFile; // On the stack

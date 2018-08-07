@@ -15,12 +15,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7188cba0655e2ca89f82b60ffe9ee4b8ce94633a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fbd80f649b27bcb3af720871d6d1378f5fe220c8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089093"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208486"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator 클래스
 Windows Runtime에서 파생 된 컬렉션에 대 한 표준 템플릿 라이브러리 InputIterator를 제공 합니다.  
@@ -44,7 +44,7 @@ class InputIterator;
 |----------|-----------------|  
 |`difference_type`|포인터 차이(ptrdiff_t)입니다.|  
 |`iterator_category`|입력 반복기의 범주(::std::input_iterator_tag)입니다.|  
-|`pointer`|에 대 한 포인터는 `const X`|  
+|`pointer`|에 대 한 포인터를 `const X`|  
 |`reference`|에 대 한 참조는 `const X`|  
 |`value_type`|`X` 형식 이름입니다.|  
   
@@ -102,7 +102,7 @@ pointer operator->() const;
   
 
 
-## <a name="operator-dereference"></a>  InputIterator::operator* Operator
+## <a name="operator-dereference"></a>  Inputiterator:: Operator\* 연산자
 현재 InputIterator가 지정하는 요소에 대한 참조를 검색합니다.  
   
 ### <a name="syntax"></a>구문  

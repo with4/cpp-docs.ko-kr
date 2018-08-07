@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362354"
 ---
 # <a name="interfaces-atl-control-wizard"></a>인터페이스, ATL 컨트롤 마법사
 마법사의이 페이지는 컨트롤이 지 원하는 인터페이스를 식별 합니다. 기본적으로 지원 되는 인터페이스는 일반적으로 대부분의 컨테이너에서 사용 하는 것입니다.  

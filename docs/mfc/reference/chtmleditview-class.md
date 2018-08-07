@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0519373a46e1c25feda7a3130b420c565a96eece
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339545"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView 클래스
 MFC의 문서/뷰 아키텍처 컨텍스트 내에서 WebBrowser 편집 플랫폼의 기능을 제공합니다.  
@@ -52,7 +53,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 |이름|설명|  
 |----------|-----------------|  
 |[CHtmlEditView::Create](#create)|새 창 개체를 만듭니다.|  
-|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|반환 된 **IHTMLDocument2** 현재 문서에 대 한 인터페이스입니다.|  
+|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|반환 된 `IHTMLDocument2` 현재 문서에 대 한 인터페이스입니다.|  
 |[CHtmlEditView::GetStartDocument](#getstartdocument)|이 보기에 대 한 기본 문서의 이름을 검색합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
@@ -99,40 +100,40 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszClassName`  
- Windows 클래스의 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다. 클래스 이름에 등록 된 모든 이름일 수 있습니다는 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) 전역 함수 또는 **RegisterClass** Windows 함수입니다. 경우 **NULL**, 미리 정의 된 기본값을 사용 하 여 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 특성입니다.  
+ *lpszClassName*  
+ Windows 클래스의 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다. 클래스 이름을 사용 하 여 등록 된 모든 이름 수는 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) 전역 함수 또는 `RegisterClass` Windows 함수입니다. NULL 인 경우 미리 정의 된 기본값을 사용 하 여 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 특성입니다.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  창 이름을 나타내는 null로 끝나는 문자열을 가리킵니다.  
   
- `dwStyle`  
- 창 스타일 특성을 지정합니다. 기본적으로는 **WS_VISIBLE** 및 **WS_CHILD** 창 스타일 설정 됩니다.  
+ *dwStyle*  
+ 창 스타일 특성을 지정합니다. WS_VISIBLE 및 WS_CHILD Windows 스타일은 기본적으로 설정 됩니다.  
   
- `rect`  
- 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와 창의 위치를 지정 하는 구조입니다. `rectDefault` 크기와 새 창의 위치를 지정 하려면 Windows를 허용 하는 값입니다.  
+ *rect*  
+ 에 대 한 참조를 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조 크기와 창의 위치를 지정 합니다. 합니다 *rectDefault* 값 크기와 새 창의 위치를 지정 하는 Windows를 허용 합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  컨트롤의 부모 창에 대 한 포인터입니다.  
   
- `nID`  
- 보기의 ID. 기본적으로로 설정 **AFX_IDW_PANE_FIRST**합니다.  
+ *nID*  
+ 뷰의 ID. 기본적으로 AFX_IDW_PANE_FIRST로 설정 합니다.  
   
- `pContext`  
- 에 대 한 포인터는 [CCreateContext](../../mfc/reference/ccreatecontext-structure.md)합니다. **NULL** 기본적으로 합니다.  
+ *pContext*  
+ 에 대 한 포인터를 [CCreateContext](../../mfc/reference/ccreatecontext-structure.md)합니다. 기본적으로 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드에서 포함 된 WebBrowser 호출 또한 **탐색** 기본 문서를 로드 하는 메서드 (참조 [CHtmlEditView::GetStartDocument](#getstartdocument)).  
+ 이 메서드는 포함 된 WebBrowser를 호출할 수도 `Navigate` 기본 문서를 로드 하는 방법 (참조 [CHtmlEditView::GetStartDocument](#getstartdocument)).  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument  
- 반환 된 **IHTMLDocument2** 현재 문서에 대 한 인터페이스입니다.  
+ 반환 된 `IHTMLDocument2` 현재 문서에 대 한 인터페이스입니다.  
   
 ```  
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ppDocument`  
- [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) 인터페이스입니다.  
+ *ppDocument*  
+ 합니다 [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) 인터페이스입니다.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  
  이 보기에 대 한 기본 문서의 이름을 검색합니다.  

@@ -32,6 +32,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693759"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler 클래스
 호출 컨텍스트와 연결된 현재 스케줄러에 대한 추상화를 나타냅니다.  

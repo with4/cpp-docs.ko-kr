@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839782"
 ---
 # <a name="undef-directive-cc"></a>#undef 지시문 (C/C++)
 전에 `#define`으로 만든 이름을 제거(정의 해제)합니다.  

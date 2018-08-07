@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352065"
 ---
 # <a name="frame-windows"></a>프레임 창
 Windows에서 실행 되는 응용 프로그램 프레임 창에 표시 되는 문서와 사용자 상호 작용 합니다. 문서 프레임 창에 두 가지 주요 구성 요소: 프레임과 들어가는 내용이 있습니다. 문서 프레임 창 수는 [단일 문서 인터페이스](../mfc/sdi-and-mdi.md) (SDI) 프레임 창 또는 [다중 문서 인터페이스](../mfc/sdi-and-mdi.md) 자식 창을 (mdi 다중). Windows에서 대부분의 프레임 창에 사용자의 상호 작용: 이동 및 창 크기 조정, 닫기 및 최소화 및 최대화 합니다. 프레임 내의 내용을 관리할 수 있습니다.  

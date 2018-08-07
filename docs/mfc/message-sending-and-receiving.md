@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7ded8dd0c818b95d6f45a722bd7b8516d48ff1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55f450085c446503ebf86960dbee1b0d930691c2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932006"
 ---
 # <a name="message-sending-and-receiving"></a>메시지 보내기 및 받기
 프로세스 및 프레임 워크의 응답의 송신 부분을 고려 합니다.  
   
  대부분의 메시지 프로그램과 사용자 상호 작용으로 발생 합니다. 메뉴 항목 또는 도구 모음 단추에서 마우스 클릭 하거나 액셀러레이터 키 명령이 생성 됩니다. 또한 사용자 예를 들어 여 Windows 메시지를 생성 이동 하거나 창 크기를 조정 합니다. 다른 Windows 메시지가 windows와 가져오기 또는 포커스를 손실 등 프로그램 시작 또는 종료와 같은 이벤트가 발생할 때 전송 됩니다. 컨트롤 알림 메시지는 마우스 클릭 또는 대화 상자에서 단추 또는 목록 상자 컨트롤 같은 컨트롤을 다른 사용자 상호 작용에 의해 생성 됩니다.  
   
- **실행** 클래스의 멤버 함수 `CWinApp` 메시지를 검색 하 고 적절 한 창에 디스패치합니다. 대부분의 명령 메시지는 응용 프로그램의 주 프레임 창에 전송 됩니다. `WindowProc` 메시지 클래스 라이브러리 gets에서 미리 정의 하 고 수신 되는 메시지의 범주에 따라 서로 다르게 라우팅합니다.  
+ `Run` 클래스의 멤버 함수 `CWinApp` 메시지를 검색 하 고 적절 한 창에 디스패치합니다. 대부분의 명령 메시지는 응용 프로그램의 주 프레임 창에 전송 됩니다. `WindowProc` 메시지 클래스 라이브러리 gets에서 미리 정의 하 고 수신 되는 메시지의 범주에 따라 서로 다르게 라우팅합니다.  
   
  프로세스의 수신 부분을 알아보겠습니다.  
   

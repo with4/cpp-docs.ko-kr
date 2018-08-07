@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389064"
 ---
 # <a name="setapptype"></a>__set_app_type
 현재 응용 프로그램 형식을 설정합니다.  

@@ -1,5 +1,5 @@
 ---
-title: '방법: 예외 안전성을 위한 디자인 | Microsoft Docs'
+title: '방법: 예외 안전성을 위한 설계 | Microsoft Docs'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbad81c5014c2aa3bcf10b083fa974615e4669e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a9eaee55c806ea2efc82300cad47cc744c0a491
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403695"
 ---
 # <a name="how-to-design-for-exception-safety"></a>방법: 예외 안전성을 위한 디자인
 예외에 대한 데이터와 함께 예외 메커니즘의 장점 중 하나는, 예외를 throw하는 문에서 이를 처리하는 첫 번째 catch 문으로 직접 이동할 수 있다는 점입니다. 처리기는 호출 스택에서 아무 상위 수준에나 있을 수 있습니다. try 문과 throw 문 사이에 호출되는 함수는 throw된 예외에 대한 정보를 알아야 할 필요가 없습니다.  하지만 예외가 위쪽으로 전파될 수 있는 어느 지점에서든 "예기치 않게" 범위 밖으로 이동할 수 있고, 부분적으로 생성된 개체, 누출된 메모리 또는 불안정한 상태의 데이터 구조를 벗어나지 않고도 그렇게 할 수 있도록 설계되어야 합니다.  
@@ -27,7 +28,7 @@ ms.lasthandoff: 05/03/2018
  함수가 예외를 어떻게 처리하든 간에, "예외에 대한 안전성"을 보장하기 위해서는 다음과 같은 기본 규칙에 따라 설계해야 합니다.  
   
 ### <a name="keep-resource-classes-simple"></a>리소스 클래스를 간단하게 유지  
- 클래스에 수동 리소스 관리를 캡슐화할 때는 각 리소스 관리만 수행하는 클래스를 사용합니다. 그렇지 않으면 누출이 발생할 수 있습니다. 사용 하 여 [스마트 포인터](../cpp/smart-pointers-modern-cpp.md) 가능한 경우 다음 예제와 같이 합니다. 이 예제는 의도적으로 만들어졌으며, `shared_ptr`이 사용될 때의 차이점을 보여주기 위해 단순화한 것입니다.  
+ 클래스에 수동 리소스 관리를 캡슐화할 때는 각 리소스 관리만 수행하는 클래스를 사용합니다. 그렇지 않으면 누출이 발생할 수 있습니다. 사용 하 여 [스마트 포인터](../cpp/smart-pointers-modern-cpp.md) 가능한 경우 다음 예와에서 같이 합니다. 이 예제는 의도적으로 만들어졌으며, `shared_ptr`이 사용될 때의 차이점을 보여주기 위해 단순화한 것입니다.  
   
 ```cpp  
 // old-style new/delete version  
@@ -85,14 +86,13 @@ private:
 public:  
     SPShapeResourceClass() : m_p(new Circle), m_q(new Triangle) { }  
 };  
-  
 ```  
   
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>RAII 이디엄을 사용해서 리소스 관리  
- 예외에 대한 안전성을 확보할 수 있으려면 `malloc` 또는 `new`를 사용해서 할당한 개체가 삭제되도록 하고, 예외가 throw되더라도 파일 핸들과 같은 모든 리소스가 닫히거나 릴리스되도록 함수가 보장해야 합니다. *Resource Acquisition Is Initialization* (RAII) 이디 엄 자동 변수의 수명에 이러한 리소스의 관리를 연결 합니다. 정상적인 반환 또는 예외로 인해 함수가 범위를 벗어나면 모든 완전히 생성된 자동 변수에 대한 소멸자가 호출됩니다. 스마트 포인터와 같은 RAII 래퍼 개체는 해당 소멸자에서 적합한 delete 또는 close 함수를 호출합니다. 예외로부터 안전한 코드에서는 각 리소스의 소유권을 특정 종류의 RAII 개체로 즉시 전달하는 것이 매우 중요합니다. `vector`, `string`, `make_shared`, `fstream`, 유사한 클래스 처리를 리소스의 확보 합니다.  그러나 `unique_ptr` 테이블과 `shared_ptr` 생성은 리소스 획득 개체 대신 사용자가 수행 되기 때문에 특수; 따라서으로 계산 *리소스 릴리스는 소멸* 하지만 RAII 여지가 있습니다.  
+ 예외 로부터 안전한 되도록 함수를 사용 하 여 할당 된 개체를 확인 해야 합니다 `malloc` 또는 **새** 소멸 됩니다 파일 핸들과 같은 모든 리소스 폐쇄 되어 있거나 예외가 발생 하는 경우에 출시 하 고 있습니다. 합니다 *Resource Acquisition Is Initialization* (RAII) 관용구 자동 변수의 수명에 이러한 리소스의 관리를 연결 합니다. 정상적인 반환 또는 예외로 인해 함수가 범위를 벗어나면 모든 완전히 생성된 자동 변수에 대한 소멸자가 호출됩니다. 스마트 포인터와 같은 RAII 래퍼 개체는 해당 소멸자에서 적합한 delete 또는 close 함수를 호출합니다. 예외로부터 안전한 코드에서는 각 리소스의 소유권을 특정 종류의 RAII 개체로 즉시 전달하는 것이 매우 중요합니다. `vector`, `string`, `make_shared`, `fstream`, 유사한 클래스 처리 리소스를 취득 하 고 있습니다.  그러나 `unique_ptr` 테이블과 `shared_ptr` 생성은 리소스 취득이 개체 대신 사용자가 수행 되기 때문에 특수;로 계산 되므로 *Resource Release Is Destruction* 되지만 RAII로 불확실 합니다.  
   
 ## <a name="the-three-exception-guarantees"></a>세 가지 예외 보증  
- 일반적으로 예외 안전성 함수를 제공할 수 있는 세 가지 예외 보증 측면에서 설명:는 *오류 없음 보증*, *강력한 보증*, 및 *기본 보증* .  
+ 일반적으로 예외 안전성 함수를 제공할 수 있는 세 가지 예외 보증 측면에서 설명: 합니다 *오류 없음 보증*의 *강력한 보증*, 및 *기본 보증* .  
   
 ### <a name="no-fail-guarantee"></a>오류 없음 보증  
  오류 없음(?또는 "throw 없음") 보증은 함수가 제공할 수 있는 가장 강력한 보증입니다. 이 형태의 보증에서 함수는 예외를 throw하지 않거나 예외가 전파되는 것을 허용하지 않습니다. 하지만 (a) 이 함수가 호출하는 모든 함수도 오류 없음 보장을 제공하는지 알고 있고, (b) throw되는 모든 예외가 이 함수에 도달하기 전에 catch된다는 것을 알고 있고, (c) 이 함수에 도달할 수 있는 모든 예외를 catch하고 올바르게 처리하는 방법을 알고 있는 경우를 제외하고는 그러한 보증을 안정적으로 제공할 수 없을 것입니다.  
@@ -118,6 +118,6 @@ public:
   
 -   예외가 소멸자로부터 벗어나도록 허용하지 않습니다. C++의 기본 원리에서는 소멸자가 호출 스택으로 예외를 전파하도록 허용해서는 안됩니다. 소멸자가 잠재적 예외를 throw할 수 있는 작업을 수행해야 하는 경우에는 try catch 블록에서 작업을 수행하고 예외를 무시해야 합니다. 표준 라이브러리에는 여기에서 정의하는 모든 소멸자에 대해 이 수준의 보증을 제공합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [오류 및 예외 처리](../cpp/errors-and-exception-handling-modern-cpp.md)   
  [방법: 예외 코드와 예외가 아닌 코드 간 인터페이스](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

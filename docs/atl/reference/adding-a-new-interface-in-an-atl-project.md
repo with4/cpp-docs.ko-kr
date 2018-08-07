@@ -1,5 +1,5 @@
 ---
-title: ATL 프로젝트에 새 인터페이스를 추가 | Microsoft Docs
+title: ATL 프로젝트에 새 인터페이스 추가 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2c9d0ef4c14760d596a4aa26fa2a929da26c67b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 057e70faf22a2e0cabe20bbcc80c18301011291c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956611"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>ATL 프로젝트에 새 인터페이스 추가
-개체 또는 컨트롤에는 인터페이스를 추가 하면 해당 인터페이스의 각 메서드에 대 한 스텁 아웃 함수를 만듭니다. 개체 또는 컨트롤에서 현재 기존의 형식 라이브러리에서 찾은 인터페이스만 추가할 수 있습니다. 또한 인터페이스를 추가할 클래스 구현 해야 합니다는 [BEGIN_COM_MAP](com-map-macros.md#begin_com_map) 매크로 프로젝트 특성을 사용 하는 경우에 있어야 하거나는 `coclass` 특성입니다.  
+개체 또는 컨트롤 인터페이스를 추가 하면 해당 인터페이스의 각 메서드에 대 한 스텁 아웃 함수를 만듭니다. 개체 또는 컨트롤에서 현재 기존 형식 라이브러리에서 찾을 인터페이스만 추가할 수 있습니다. 또한 인터페이스를 추가할 클래스를 구현 해야 합니다는 [BEGIN_COM_MAP](com-map-macros.md#begin_com_map) 매크로 프로젝트 특성을 사용 하는 경우에 있어야 또는 `coclass` 특성입니다.  
   
- 두 가지 방법 중 하나에 사용자 컨트롤에 새 인터페이스를 추가할 수 있습니다: 수동으로 또는 코드 마법사를 사용 하 여 클래스 뷰에서 합니다.  
+ 두 가지 방법 중 하나에서 컨트롤에는 새 인터페이스를 추가할 수 있습니다: 수동으로 또는 클래스 뷰에서 코드 마법사를 사용 하 여 합니다.  
   
-### <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>기존 개체 또는 컨트롤에 인터페이스를 추가 하려면 클래스 보기에서 코드 마법사를 사용 하려면  
+### <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>클래스 뷰에서 코드 마법사를 사용 하 여 기존 개체 또는 컨트롤에 인터페이스를 추가 하려면  
   
-1.  [클래스 뷰](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)를 컨트롤의 클래스 이름을 마우스 오른쪽 단추로 클릭 합니다. 예를 들어, 모든 권한 또는 합성 컨트롤 또는 BEGIN_COM_MAP 매크로 헤더 파일에 구현 하는 다른 컨트롤 클래스입니다.  
+1.  [클래스 뷰](/visualstudio/ide/viewing-the-structure-of-code), 컨트롤의 클래스 이름을 마우스 오른쪽 단추로 클릭 합니다. 예를 들어, 전체 컨트롤을 복합 컨트롤 또는 BEGIN_COM_MAP 매크로 헤더 파일에 구현 하는 다른 컨트롤 클래스입니다.  
   
-2.  바로 가기 메뉴를 클릭 **추가**, 클릭 하 고 **인터페이스 구현**합니다.  
+2.  바로 가기 메뉴에서 클릭 **추가**를 클릭 하 고 **인터페이스 구현**합니다.  
   
-3.  선택 인터페이스에서 구현 하는 [인터페이스 구현 마법사](../../ide/implement-interface-wizard.md)합니다. 인터페이스 사용 가능한 모든 typelib에 없는 경우 다음 추가 해야 수동으로.idl 파일입니다.  
+3.  구현에 대 한 인터페이스를 선택 합니다 [인터페이스 구현 마법사](../../ide/implement-interface-wizard.md)합니다. 모든 사용 가능한 typelib에 들어 있는 인터페이스 없으면 다음 추가 해야 수동으로.idl 파일입니다.  
   
 ### <a name="to-add-a-new-interface-manually"></a>새 인터페이스를 수동으로 추가 하려면  
   
@@ -50,8 +51,8 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>참고 항목  
  [ATL 프로젝트 마법사](../../atl/reference/atl-project-wizard.md)   
- [Visual c + + 프로젝트 형식](../../ide/visual-cpp-project-types.md)   
- [응용 프로그램 마법사를 사용 하 여 데스크톱 프로젝트 만들기](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [Visual C++ 프로젝트 형식](../../ide/visual-cpp-project-types.md)   
+ [응용 프로그램 마법사를 사용하여 데스크톱 프로젝트 만들기](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [ATL 및 C 런타임 코드를 사용한 프로그래밍](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [ATL COM 개체의 기본 사항](../../atl/fundamentals-of-atl-com-objects.md)   
  [기본 ATL 프로젝트 구성](../../atl/reference/default-atl-project-configurations.md)

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33166376"
 ---
 # <a name="compiler-error-c2034"></a>컴파일러 오류 C2034
 'identifier': 비트 수에 비해 너무 작음을 비트 필드의 유형  

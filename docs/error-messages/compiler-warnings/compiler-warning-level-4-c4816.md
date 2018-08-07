@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33303591"
 ---
 # <a name="compiler-warning-level-4-c4816"></a>컴파일러 경고(수준 4) C4816
 'param': 매개 변수에 크기가 0인 배열이 있으면 잘리게 됩니다(개체가 참조로 전달된 경우 제외).  

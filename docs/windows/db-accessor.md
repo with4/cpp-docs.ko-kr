@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874527"
 ---
 # <a name="dbaccessor"></a>db_accessor
 그룹 **db_column** 에 참여 하는 특성 `IAccessor`-바인딩을 기반으로 합니다.  

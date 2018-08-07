@@ -17,11 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d004fd43a6cad78df62a19e5b703867a990861f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: add94320728ad21d07a1953f14ac911883580982
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461238"
 ---
 # <a name="criticalsectionisvalid-method"></a>CriticalSection::IsValid 메서드
 현재 임계 영역이 유효한지 여부를 나타냅니다.  
@@ -33,7 +34,7 @@ bool IsValid() const;
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 기본적으로 항상 `true`를 반환합니다.  
+ 기본적으로 항상 반환 **true**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391209"
 ---
 # <a name="return-statement-c"></a>return 문 (C)
 `return` 문은 함수 실행을 종료하고 호출 함수로 컨트롤을 반환합니다. 호출 바로 다음 지점의 호출 함수에서 실행을 다시 시작합니다. `return` 문은 호출 함수로 값을 반환할 수도 있습니다. 자세한 내용은 [반환 형식](../c-language/return-type.md)을 참조하세요.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376717"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX(예외 처리 사용)
 더 이상 사용되지 않습니다. 동기 예외 처리 기능 하는 가정을 사용 하 여 사용 하 여 선언 하면 `extern "C"` 예외를 throw 하지 않습니다.  

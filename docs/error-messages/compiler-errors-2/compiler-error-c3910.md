@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269246"
 ---
 # <a name="compiler-error-c3910"></a>컴파일러 오류 C3910
 'event': 'method' 멤버를 정의 해야 합니다  

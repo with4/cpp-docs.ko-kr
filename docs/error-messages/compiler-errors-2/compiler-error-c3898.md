@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270718"
 ---
 # <a name="compiler-error-c3898"></a>컴파일러 오류 C3898
 'var': 형식 데이터 멤버 관리 되는 형식의 멤버만 될 수 있습니다  

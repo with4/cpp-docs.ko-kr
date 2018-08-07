@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255983"
 ---
 # <a name="compiler-error-c3461"></a>컴파일러 오류 C3461
 'type': 관리되는 형식만 전달할 수 있습니다.  

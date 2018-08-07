@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385021"
 ---
 # <a name="pragmas"></a>Pragma
 **ANSI 3.8.6** 인식된 각 #pragma 지시문에 대한 동작입니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345543"
 ---
 # <a name="exceptions-ole-exceptions"></a>예외: OLE 예외
 기술 및 OLE의 예외를 처리 하기 위한 기능 다른 예외를 처리 하는 것에 대 한 것과 동일 합니다. 예외 처리에 대 한 자세한 내용은 문서 참조 [c + + 예외 처리](../cpp/cpp-exception-handling.md)합니다.  

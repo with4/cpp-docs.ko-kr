@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bedb88ae44faaea9d65b41dcc98a4e83354ea71b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 222aef46fb8080ba044904dbbedd5546cec51929
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963091"
 ---
 # <a name="uniformrealdistribution-class"></a>uniform_real_distribution 클래스
 
@@ -80,7 +81,7 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-*RealType* 부동 소수점 결과 형식 기본값이 `double`합니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
+*RealType* 부동 소수점 결과 형식에 기본값이 **double**합니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
@@ -103,7 +104,7 @@ public:
 
 분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // compile with: /EHsc /W4
@@ -198,17 +199,20 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>매개 변수
 
- 임의 값을 포함에 대 한 하한값입니다.
+*a*  
+난수 값의 하한으로, 하한 값도 포함됩니다.
 
-*b* 단독 임의 값에 대 한 상한 값입니다.
+*b*  
+난수 값의 상한으로, 상한 값은 제외됩니다.
 
-*매개 변수* 는 `param_type` 분포를 생성 하는 데 사용 되는 구조입니다.
+*parm*  
+분포를 생성하는 데 사용되는 `param_type` 구조체입니다.
 
 ### <a name="remarks"></a>설명
 
 **사전 조건:** `a < b`
 
-첫 번째 생성자는 저장된 `a` 값이 *a* 값을 갖고 저장된 `b` 값이 *b* 값을 갖는 개체를 생성합니다.
+개체를 생성 하는 첫 번째 생성자는 해당 저장 *는* 값을 보유 하는 값 *는* 을 저장 *b* 값을 보유 하는 값 *b*합니다.
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
@@ -230,11 +234,14 @@ struct param_type {
 
 ### <a name="parameters"></a>매개 변수
 
- 임의 값을 포함에 대 한 하한값입니다.
+*a*  
+난수 값의 하한으로, 하한 값도 포함됩니다.
 
-*b* 단독 임의 값에 대 한 상한 값입니다.
+*b*  
+난수 값의 상한으로, 상한 값은 제외됩니다.
 
-*오른쪽* 는 `param_type` 이 비교할 개체입니다.
+*right*  
+이 매개 변수와 비교할 `param_type` 개체입니다.
 
 ### <a name="remarks"></a>설명
 

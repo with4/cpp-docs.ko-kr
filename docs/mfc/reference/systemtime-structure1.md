@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372394"
 ---
 # <a name="systemtime-structure1"></a>SYSTEMTIME 구조 1
 `SYSTEMTIME` 구조는 날짜 및 시간을 월, 일, 연도, 요일, 시, 분, 초 및 밀리초에 대 한 개별 멤버를 사용 하 여 나타냅니다.  

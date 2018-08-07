@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873721"
 ---
 # <a name="dbsource"></a>db_source
 데이터 원본에 대 한 연결을 만듭니다.  

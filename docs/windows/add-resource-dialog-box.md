@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857521"
 ---
 # <a name="add-resource-dialog-box"></a>리소스 추가 대화 상자
 이 대화 상자는 C++ Windows 데스크톱 응용 프로그램 프로젝트에 리소스를 추가하는 데 사용합니다.  

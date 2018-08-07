@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345067"
 ---
 # <a name="frame-window-classes-windows"></a>프레임 창 클래스(Windows)
 프레임 창에는 응용 프로그램 또는 응용 프로그램의 일부를 작성 하는 창입니다. 프레임 창에는 일반적으로 보기, 도구 모음 및 상태 표시줄 같은 다른 창에 포함 합니다. 경우 `CMDIFrameWnd`, 포함 될 수 있습니다 `CMDIChildWnd` 직접 개체입니다.  

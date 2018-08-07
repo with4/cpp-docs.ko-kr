@@ -1,5 +1,5 @@
 ---
-title: 프롤로그 에필로그 코드 작성 시 고려 사항 | Microsoft Docs
+title: 프롤로그 / 에필로그 코드 작성 시 고려 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd87d4af4c797d324e6f882cc5c2e139a784543
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b581a57db7e66d1547ffd90509c62353d78d478b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464124"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>프롤로그/에필로그 코드 작성 시 고려 사항
-## <a name="microsoft-specific"></a>Microsoft 전용  
- 자신의 prolog 및 epilog 코드 시퀀스를 작성하기 전에 스택 프레임을 배치하는 방법을 이해하는 것이 중요합니다. 사용 하는 방법을 알고도 유용는 **__LOCAL_SIZE** 기호입니다.  
+ **Microsoft 전용**  
+ 자신의 prolog 및 epilog 코드 시퀀스를 작성하기 전에 스택 프레임을 배치하는 방법을 이해하는 것이 중요합니다. 사용 하는 방법만 알면 유용 합니다 `__LOCAL_SIZE` 기호입니다.  
   
 ##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> 스택 프레임 레이아웃  
  이 예제에서는 32비트 함수에 표시될 수 있는 표준 prolog 코드를 보여 줍니다.  
@@ -50,16 +51,16 @@ ret                       ; Return from function
  스택은 항상 높은 메모리 주소에서 낮은 메모리 주소로 감소합니다. 기본 포인터(`ebp`)는 `ebp`의 푸시된 값을 가리킵니다. 지역 변수 영역은 `ebp-4`에서 시작합니다. 지역 변수에 액세스하려면 `ebp`에서 적절한 값을 빼는 방법으로 `ebp`에서 오프셋을 계산합니다.  
   
 ##  <a name="_pluslang___local_size"></a> __LOCAL_SIZE  
- 컴파일러는 기호를 제공 **__LOCAL_SIZE**를 함수 프롤로그 코드의 인라인 어셈블러 블록에서 사용 하기 위해 합니다. 이 기호는 사용자 지정 프롤로그 코드에서 스택 프레임에 지역 변수를 위한 공간을 할당하는 데 사용됩니다.  
+ 컴파일러에서 기호를 제공 `__LOCAL_SIZE`를 함수 프롤로그 코드의 인라인 어셈블러 블록에서 사용 합니다. 이 기호는 사용자 지정 프롤로그 코드에서 스택 프레임에 지역 변수를 위한 공간을 할당하는 데 사용됩니다.  
   
- 컴파일러는 **__LOCAL_SIZE**의 값을 결정합니다. 이 값은 모든 사용자 정의 지역 변수와 컴파일러에서 생성된 임시 변수의 총 바이트 수입니다. **__LOCAL_SIZE**는 즉시 피연산자로만 사용할 수 있으며 식에서는 사용할 수 없습니다. 이 기호의 값을 변경하거나 다시 정의하면 안 됩니다. 예를 들어:  
+ 값을 결정 하는 컴파일러 `__LOCAL_SIZE`합니다. 이 값은 모든 사용자 정의 지역 변수와 컴파일러에서 생성된 임시 변수의 총 바이트 수입니다. `__LOCAL_SIZE` 즉시 피연산자; 으로만 사용할 수 있습니다. 식에서 사용할 수 없습니다. 이 기호의 값을 변경하거나 다시 정의하면 안 됩니다. 예를 들어:  
   
 ```  
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay  
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error  
 ```  
   
- 시퀀스를 사용 하 여 사용자 지정 프롤로그 및 에필로그를 포함 하는 naked 함수의 다음 예제는 **__LOCAL_SIZE** 프롤로그 시퀀스에서 기호:  
+ 사용자 지정 프롤로그 및 에필로그를 포함 하는 naked 함수의 다음 예제에서는 시퀀스를 사용 하 여 `__LOCAL_SIZE` prolog 시퀀스에서 기호:  
   
 ```  
 // the__local_size_symbol.cpp  
@@ -85,5 +86,5 @@ __declspec ( naked ) int main() {
   
 **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [Naked 함수 호출](../cpp/naked-function-calls.md)

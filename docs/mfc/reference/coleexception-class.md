@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f554e375e8c0185e8c2b75c81eeae5ee615c51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 731ec7b359995fc8ecbfdeae89595442d8186eeb
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851394"
 ---
 # <a name="coleexception-class"></a>COleException 클래스
 OLE 작업과 관련된 예외 조건을 나타냅니다.  
@@ -41,7 +42,7 @@ class COleException : public CException
   
 |이름|설명|  
 |----------|-----------------|  
-|[COleException::Process](#process)|예외가 OLE 반환 코드로 변환합니다.|  
+|[COleException::Process](#process)|OLE 반환 코드로 예외가 변환합니다.|  
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
   
@@ -50,11 +51,11 @@ class COleException : public CException
 |[COleException::m_sc](#m_sc)|예외에 대 한 이유를 나타내는 상태 코드를 포함 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `COleException` 클래스는 예외에 대 한 이유를 나타내는 상태 코드를 보유 하는 공용 데이터 멤버를 포함 합니다.  
+ `COleException` 클래스 예외 이유를 나타내는 상태 코드를 포함 하는 공용 데이터 멤버를 포함 합니다.  
   
- 일반적으로 만들면 안 한 `COleException` 개체 직접; 대신 호출 해야 [AfxThrowOleException](exception-processing.md#afxthrowoleexception)합니다.  
+ 일반적으로 만들면 안을 `COleException` 개체 직접; 대신 호출 해야 [AfxThrowOleException](exception-processing.md#afxthrowoleexception)합니다.  
   
- 예외에 대 한 자세한 내용은 문서를 참조 [예외 처리 (MFC)](../../mfc/exception-handling-in-mfc.md) 및 [예외: OLE 예외](../../mfc/exceptions-ole-exceptions.md)합니다.  
+ 예외에 대 한 자세한 내용은 문서를 참조 하세요 [예외 처리 (MFC)](../../mfc/exception-handling-in-mfc.md) 하 고 [예외: OLE 예외](../../mfc/exceptions-ole-exceptions.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -74,15 +75,15 @@ SCODE m_sc;
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 변수 값을 설정한 [AfxThrowOleException](exception-processing.md#afxthrowoleexception)합니다.  
+ 이 변수의 값을 설정한 [AfxThrowOleException](exception-processing.md#afxthrowoleexception)합니다.  
   
- 대 한 자세한 내용은 `SCODE`, 참조 [COM 오류 코드 구조](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows sdk에서입니다.  
+ SCODE에 대 한 자세한 내용은 참조 하세요. [COM 오류 코드 구조](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK에 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]  
   
 ##  <a name="process"></a>  COleException::Process  
- 호출 된 **프로세스** 예외가 OLE 상태 코드로 변환 하는 멤버 함수입니다.  
+ 호출을 **프로세스** 멤버 함수는 예외가 OLE 상태 코드로 변환 합니다.  
   
 ```  
 static SCODE PASCAL Process(const CException* pAnyException);
@@ -90,7 +91,7 @@ static SCODE PASCAL Process(const CException* pAnyException);
   
 ### <a name="parameters"></a>매개 변수  
  *pAnyException*  
- 포인터 예외가 검색 되었습니다.  
+ 포착된 된 예외에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  OLE 상태 코드입니다.  
@@ -100,10 +101,10 @@ static SCODE PASCAL Process(const CException* pAnyException);
 > [!NOTE]
 >  이 함수는 **정적**합니다.  
   
- 대 한 자세한 내용은 `SCODE`, 참조 [COM 오류 코드 구조](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows sdk에서입니다.  
+ SCODE에 대 한 자세한 내용은 참조 하세요. [COM 오류 코드 구조](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK에 있습니다.  
   
-### <a name="example"></a>예제  
-  예를 참조 [coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)합니다.  
+### <a name="example"></a>예  
+  예를 참조 하세요 [coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CALCDRIV MFC 샘플](../../visual-cpp-samples.md)   

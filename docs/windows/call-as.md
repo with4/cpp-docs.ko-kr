@@ -17,35 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68707ea7e00665d12165c7838b1a2ad3440f944d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465872"
 ---
 # <a name="callas"></a>call_as
-수 있도록는 [로컬](../windows/local-cpp.md) 함수를 로컬 함수를 호출 하는 원격 함수를 호출할 때 되도록 원격 함수에 매핑할 수 있습니다.  
+사용 하도록 설정 된 [로컬](../windows/local-cpp.md) 원격 함수 호출 되 면 로컬 함수가 호출 되도록 원격 함수에 매핑할 함수.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ call_as(  
+[ call_as(  
    function  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
  *function*  
- 원격 함수 호출 될 때 호출 될 원하는 로컬 함수입니다.  
+ 원격 함수가 호출 되 면 호출할 하려는 로컬 함수입니다.  
   
 ## <a name="remarks"></a>설명  
- **call_as** c + + 특성에 동일한 기능을는 [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL 특성입니다.  
+ 합니다 **call_as** c + + 특성에 동일한 기능을 합니다 [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 다음 코드는 사용 하는 방법을 보여 줍니다. **call_as** 원격 가능 하지 함수에 매핑할 (**f1**) 원격 능력이 함수 (**Remf1**):  
+## <a name="example"></a>예  
+ 다음 코드를 사용 하는 방법을 보여 줍니다 **call_as** 사용 불가능 한 함수에 매핑할 (**f1**) 원격으로 사용 가능한 함수 (**Remf1**):  
   
-```  
+```cpp  
 // cpp_attr_ref_call_as.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857901"
 ---
 # <a name="assigning-access-keys-to-menu-commands"></a>메뉴 명령에 대한 선택키 할당
 액세스 키(사용자가 키보드로 메뉴를 선택할 수 있게 하는 니모닉)를 메뉴 및 메뉴 명령에 할당할 수 있습니다.  

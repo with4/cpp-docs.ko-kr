@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049612"
 ---
 # <a name="date"></a>@Date
 시스템 날짜 형식이 mm/dd/yy (텍스트 매크로)입니다.  

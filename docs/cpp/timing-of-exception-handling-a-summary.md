@@ -21,17 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446925b6e00f4771229357effee0707af3fae52a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f45b6ee85924106e949a7487f133b8e3fbe0b9e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465011"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>예외 처리에서의 타이밍: 요약
-종료 처리기는 `__try` 문 블록이 종료되는 방법과 관계없이 실행됩니다. `__try` 블록 밖으로의 점프, 제어를 블록 밖으로 전송하는 `longjmp` 문, 예외 처리로 인한 스택 해제 등이 원인입니다.  
+종료 처리기가 실행 하는 방법과 관계 없이 **__try** 문 블록 종료 됩니다. 원인의 점프,는 **__try** 블록을 `longjmp` 블록 및 예외 처리로 인 한 스택 해제 밖으로 제어를 전송 하는 문.  
   
 > [!NOTE]
->  Visual C++는 `setjmp` 및 `longjmp` 문의 두 가지 형태를 지원합니다. 빠른 버전은 종료 처리를 건너뛰지만 더 효율적입니다. 이 버전을 사용 하려면 파일을 포함 \<setjmp.h > 합니다. 다른 버전은 이전 단락에 설명된 대로 종료 처리를 지원합니다. 이 버전을 사용 하려면 파일을 포함 \<setjmpex.h > 합니다. 빠른 버전의 성능 향상 정도는 하드웨어 구성에 따라 달라집니다.  
+>  Visual C++는 `setjmp` 및 `longjmp` 문의 두 가지 형태를 지원합니다. 빠른 버전은 종료 처리를 건너뛰지만 더 효율적입니다. 이 버전을 사용 하려면 파일을 포함 \<setjmp.h >. 다른 버전은 이전 단락에 설명된 대로 종료 처리를 지원합니다. 이 버전을 사용 하려면 파일을 포함 \<setjmpex.h >. 빠른 버전의 성능 향상 정도는 하드웨어 구성에 따라 달라집니다.  
   
  운영 체제는 다른 코드를 실행하기 전에 예외 처리기의 본문을 포함한 모든 종료 처리기를 적절한 순서대로 실행합니다.  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  이 필터가 제어를 전달하는 경우(0을 반환함) 제어를 전달하지 않는 필터가 발견될 때까지 프로세스가 계속됩니다.  
   
-4.  이 필터-1을 반환 하는 경우 여기서는 예외가 발생 하 고 없는 종료가 계속 실행.  
+4.  이 필터-1이 반환 하는 경우 예외가 발생 했습니다 종료가 발생 하지 않았고 계속 실행.  
   
 5.  필터가 1을 반환하는 경우 다음 이벤트가 발생합니다.  
   
@@ -55,6 +56,6 @@ ms.lasthandoff: 05/03/2018
   
     -   코드 줄에서 이 예외 처리기 끝 다음으로 제어가 전달됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [종료 처리기 작성](../cpp/writing-a-termination-handler.md)   
  [구조적 예외 처리(C/C++)](../cpp/structured-exception-handling-c-cpp.md)

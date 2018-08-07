@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe943bcc0a1e1a027e432911bd2ad722fc7c7c1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: face2637f308a56d95baa7563a6409dd38870d73
+ms.sourcegitcommit: 2f571220e16f6c20e1fdb005f6cbc9e7ef5608f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070079"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -71,13 +72,13 @@ int feclearexcept(
 |FE_INVALID|초기 부동 소수점 작업에서 도메인 오류가 발생했습니다.|
 |FE_OVERFLOW|범위 오류가 발생했습니다. 초기 부동 소수점 작업 결과가 표시하기에 너무 큽니다.|
 |FE_UNDERFLOW|초기 부동 소수점 작업 결과가 완전히 정확하게 표시하기에 너무 작습니다. 비정상적인 값이 생성되었습니다.|
-|FE_ALLEXCEPT|모든 지원되는 부동 소수점 예외의 비트 OR입니다.|
+|FE_ALL_EXCEPT|모든 지원되는 부동 소수점 예외의 비트 OR입니다.|
 
 *excepts* 인수는 0 또는 하나 이상의 지원 되는 예외 매크로의 비트 OR 될 수 있습니다. 기타 인수 값의 결과는 정의 해제됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|함수|C 헤더|C++ 헤더|
+|기능|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
 |**feclearexcept**|\<fenv.h>|\<cfenv>|
 

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878673"
 ---
 # <a name="previewing-resources"></a>리소스 미리 보기
 리소스 미리 보기를 열지 않고 그래픽 리소스를 볼 수 있습니다. 리소스 식별자를 숫자로 변경 되므로 컴파일된 한 후 미리 보기는 실행 파일에 대 한 유용 합니다. 종종 이러한 숫자 식별자 충분 한 정보를 제공 하지 않습니다, 리소스 미리 보기를 사용 하면 신속 하 게 식별 합니다.  

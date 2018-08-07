@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368124"
 ---
 # <a name="inline-files-in-a-makefile"></a>메이크파일의 인라인 파일
 인라인 파일 메이크파일의에 지정한 텍스트를 포함 합니다. 해당 이름을 사용할 수 명령에서 (예를 들어 링크 명령 파일)을 입력으로 또는 운영 체제에 명령을 전달할 수 있습니다. 파일을 만드는 명령이 실행 되는 경우 파일이 디스크에 만들어집니다.  

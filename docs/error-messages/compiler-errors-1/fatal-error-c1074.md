@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198653"
 ---
 # <a name="fatal-error-c1074"></a>심각한 오류 C1074
 'IDB'는 PDB 파일 filename에 적합한 확장명이 아닙니다.  

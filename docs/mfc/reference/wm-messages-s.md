@@ -52,6 +52,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380388"
 ---
 # <a name="wm-messages-s"></a>WM_ 메시지: S
 다음 맵 항목 함수 프로토타입을에 해당합니다.  

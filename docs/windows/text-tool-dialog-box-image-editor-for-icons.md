@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890290"
 ---
 # <a name="text-tool-dialog-box-image-editor-for-icons"></a>텍스트 도구 대화 상자(아이콘에 대한 이미지 편집기)
 사용 하 여는 **텍스트 도구** 텍스트 커서, 비트맵, 아이콘 리소스를 추가 하는 대화 상자.  

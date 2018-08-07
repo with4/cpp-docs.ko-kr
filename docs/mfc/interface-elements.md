@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25f9de4ab5f7d12d240625e0fdf5f857563e8ce2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1906505e75273cc62a0eac55e6ed1a9686a3b76f
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078446"
 ---
 # <a name="interface-elements"></a>인터페이스 요소
-이 문서에서 도입 된 인터페이스 요소에 설명 [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] s p 1에서는 라이브러리의 이전 버전으로 차이 설명 합니다.  
+이 문서는 Visual Studio 2008 s p 1에서 도입 된 인터페이스 요소에 설명 하 고도 라이브러리의 이전 버전으로 차이 설명 합니다.  
   
  다음 그림에서는 새로운 인터페이스 요소를 사용 하 여 작성 하는 응용 프로그램을 보여 줍니다.  
   

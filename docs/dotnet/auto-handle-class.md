@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103280"
 ---
 # <a name="autohandle-class"></a>auto_handle 클래스
 관리 되는 형식에 가상 핸들을 포함 하는 데 사용할 수 있는 자동 리소스 관리.  

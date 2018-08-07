@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f2bd65fa7145325fd4c5c2f1a2483851d0738b7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aa7b831790804005f0649dbae0dbb98df5121106
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954736"
 ---
 # <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible 클래스
 
@@ -35,21 +36,21 @@ struct is_trivially_default_constructible;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 형식이 쿼리입니다.
+*Ty* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `Ty` 형식이 Trivial 생성자가 있는 클래스인 경우 true이고 그렇지 않은 경우 false입니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *Ty* 는 클래스에 trivial 생성자가 있는 그렇지 않으면 false입니다.
 
-클래스 `Ty`에 대한 기본 생성자는 다음의 경우 Trivial입니다.
+클래스에 대 한 기본 생성자 *Ty* 간단 하는 경우:
 
 - 암시적으로 선언된 기본 생성자인 경우
 
-- 클래스 `Ty`에 가상 함수가 없는 경우
+- 클래스 *Ty* 에 가상 함수가 없는
 
-- 클래스 `Ty`에 가상 기본이 없는 경우
+- 클래스 *Ty* 에 없는 가상 기본
 
-- 클래스 `Ty`의 모든 직접 기본에 Trivial 생성자가 있는 경우
+- 모든 직접 기본 클래스의 *Ty* trivial 생성자가 있는 경우
 
 - 클래스 형식의 모든 비정적 데이터 멤버의 클래스에 Trivial 생성자가 있는 경우
 

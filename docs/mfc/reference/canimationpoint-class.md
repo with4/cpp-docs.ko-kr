@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b81c49ce96fd026cd1974e505ac50dec131611
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58c8c9aaaf212e98fdeff1e639bb09423304e643
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957405"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint 클래스
 좌표에 애니메이션을 적용할 수 있는 점 기능을 구현합니다.  
@@ -85,7 +86,7 @@ class CAnimationPoint : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAnimationPoint::m_xValue](#m_xvalue)|X 나타내는 캡슐화 된 애니메이션 변수 애니메이션 점의 좌표입니다.|  
 |[CAnimationPoint::m_yValue](#m_yvalue)|캡슐화 된 애니메이션 변수 애니메이션 점의 Y 좌표를 나타내는입니다.|  
@@ -113,10 +114,10 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pXTransition`  
+ *pXTransition*  
  X 좌표에 대 한 전환에 대 한 포인터입니다.  
   
- `pYTransition`  
+ *pYTransition*  
  Y에 대 한 전환에 대 한 포인터를 조정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -137,16 +138,16 @@ CAnimationPoint(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ptDefault`  
+ *ptDefault*  
  기본 좌표를 시작점 좌표를 지정합니다.  
   
- `nGroupID`  
+ *nGroupID*  
  그룹 ID를 지정 합니다.  
   
- `nObjectID`  
+ *nObjectID*  
  개체 ID를 지정 합니다.  
   
- `dwUserData`  
+ *dwUserData*  
  사용자 정의 데이터를 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -160,7 +161,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lst`  
+ *lst*  
  함수가 반환할 때 X 및 Y 좌표를 나타내는 두 개의 CAnimationVariable 개체에 대 한 포인터를 포함 합니다.  
   
 ##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue  
@@ -184,7 +185,7 @@ BOOL GetValue(CPoint& ptValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ptValue`  
+ *ptValue*  
  출력입니다. 이 메서드가 반환 될 때 현재 값을 포함 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -254,7 +255,7 @@ void operator=(const CPoint& ptSrc);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ptSrc`  
+ *ptSrc*  
  CPoint 또는 포인트를 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
@@ -268,7 +269,7 @@ void SetDefaultValue(const POINT& ptDefault);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ptDefault`  
+ *ptDefault*  
  기본 점 값을 지정합니다.  
   
 ### <a name="remarks"></a>설명  

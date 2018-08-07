@@ -19,6 +19,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842290"
 ---
 # <a name="import-attributes-c"></a>#import 특성 (C++)
 #import 지시문에 사용된 특성에 대한 링크를 제공합니다.  

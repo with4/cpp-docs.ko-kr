@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33160018"
 ---
 # <a name="ptroperator-gt"></a>ptr::operator-&gt;
 멤버 액세스 연산자를 소유 하는 COM 개체에서 메서드를 호출 하는 데 사용 합니다.  

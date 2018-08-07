@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355048"
 ---
 # <a name="dual-interfaces-and-atl"></a>이중 인터페이스 및 ATL
 이중 인터페이스에 액세스 하 여 vtable 메서드 또는 dispinterface 메서드도 해당 메서드를 사용 합니다. 이 섹션에서는 ATL 측면에서 이중 인터페이스의 기능 중 일부에 대해 설명 합니다.  

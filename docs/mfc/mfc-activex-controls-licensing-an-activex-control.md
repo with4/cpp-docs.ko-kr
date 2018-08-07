@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 725e6cf167ec01635a3072f09ecaa2f5055b1891
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0b1e8f0c54cf4d409aedb99fc3195b927d5f127
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929746"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX 컨트롤: ActiveX 컨트롤 라이선스
 ActiveX 컨트롤의 선택적 기능 사용자 수를 사용 또는 컨트롤 배포를 제어 시스템 있습니다 수 라이센스 지원. (라이선스 문제에 대 한 자세한 논의 라이선스 문제에서을 참조 하십시오. [기존 ActiveX 컨트롤 업그레이드](../mfc/upgrading-an-existing-activex-control.md).)  
@@ -43,7 +44,7 @@ ActiveX 컨트롤의 선택적 기능 사용자 수를 사용 또는 컨트롤 �
  ActiveX 컨트롤 라이선스를 구현 하는 다른 사용자는 ActiveX 컨트롤을 사용할 방법을 결정 하는 컨트롤 개발자로 사용 하면, 있습니다. 컨트롤에서 컨트롤 구매자에 게 제공 하 고 있습니다. 구매자에 게 컨트롤을 있지 않고 배포할 수 있습니다 규약과-사용권 계약 파일은 합니다. 컨트롤을 사용 하는 응용 프로그램 된-사용권 계약 파일입니다. 이렇게 하면 쓰기 첫 번째 라이선스를 제어 하지 않고 컨트롤을 사용 하는 새 응용 프로그램에서 해당 응용 프로그램의 사용자가 않습니다.  
   
 ##  <a name="_core_overview_of_activex_control_licensing"></a> ActiveX 컨트롤 라이선스의 개요  
- ActiveX 컨트롤에 대 한 라이선스 지원을 제공 하는 [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md) 클래스의 여러 함수에 대 한 구현을 제공는 **IClassFactory2** 인터페이스: **IClassFactory2 :: RequestLicKey**, **IClassFactory2::GetLicInfo**, 및 **IClassFactory2::CreateInstanceLic**합니다. 컨테이너 응용 프로그램 개발자는 컨트롤에 대 한 호출의 인스턴스를 만드는 요청을 수행 하는 경우 `GetLicInfo` 되어 있는지 확인 하려고 하는 컨트롤입니다. -사용권 계약 파일은 있습니다. 컨트롤의 사용이 허가 되는 경우 컨트롤의 인스턴스를 생성 하 고 컨테이너에 배치 수 있습니다. 컨테이너 응용 프로그램 개발자가 완료 한 후 다른 함수 호출,이 이번에는 `RequestLicKey`, 이루어집니다. 이 함수는 컨테이너 응용 프로그램 라이선스 키 (단순한 문자 문자열)를 반환합니다. 그러면는 반환 된 값은 응용 프로그램에 포함 됩니다.  
+ ActiveX 컨트롤에 대 한 라이선스 지원을 제공 하는 [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md) 클래스의 여러 함수에 대 한 구현을 제공는 `IClassFactory2` 인터페이스: `IClassFactory2::RequestLicKey`, `IClassFactory2::GetLicInfo`, 및 `IClassFactory2::CreateInstanceLic`합니다. 컨테이너 응용 프로그램 개발자는 컨트롤에 대 한 호출의 인스턴스를 만드는 요청을 수행 하는 경우 `GetLicInfo` 되어 있는지 확인 하려고 하는 컨트롤입니다. -사용권 계약 파일은 있습니다. 컨트롤의 사용이 허가 되는 경우 컨트롤의 인스턴스를 생성 하 고 컨테이너에 배치 수 있습니다. 컨테이너 응용 프로그램 개발자가 완료 한 후 다른 함수 호출,이 이번에는 `RequestLicKey`, 이루어집니다. 이 함수는 컨테이너 응용 프로그램 라이선스 키 (단순한 문자 문자열)를 반환합니다. 그러면는 반환 된 값은 응용 프로그램에 포함 됩니다.  
   
  아래 그림에서는 ActiveX 컨트롤 컨테이너 응용 프로그램을 개발 하는 동안 사용 될 라이선스 확인을 보여 줍니다. 앞에서 설명한 대로 컨테이너 응용 프로그램 개발자는 적절 한이 있어야 합니다. 컨트롤의 인스턴스를 만들려면 개발 컴퓨터에 설치-사용권 계약 파일입니다.  
   
@@ -78,15 +79,15 @@ ActiveX 컨트롤의 선택적 기능 사용자 수를 사용 또는 컨트롤 �
   
 -   [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)  
   
-     컨트롤 라이선스 파일의 존재 여부에 대 한 시스템을 확인 하 여 디자인 타임에 사용할 컨트롤을 허용 하는지 확인 합니다. 이 함수는 처리의 일부로 프레임 워크에서 호출 됩니다 **IClassFactory2::GetLicInfo** 및 **IClassFactory::CreateInstanceLic**합니다.  
+     컨트롤 라이선스 파일의 존재 여부에 대 한 시스템을 확인 하 여 디자인 타임에 사용할 컨트롤을 허용 하는지 확인 합니다. 이 함수는 처리의 일부로 프레임 워크에서 호출 됩니다 `IClassFactory2::GetLicInfo` 및 `IClassFactory::CreateInstanceLic`합니다.  
   
 -   [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)  
   
-     컨트롤 DLL에서에서 고유 키를 요청합니다. 이 키는 컨테이너 응용 프로그램에 포함 되며 나중와 함께 사용할 `VerifyLicenseKey`, 컨트롤의 인스턴스를 만듭니다. 이 함수는 처리의 일부로 프레임 워크에서 호출 됩니다 **IClassFactory2::RequestLicKey**합니다.  
+     컨트롤 DLL에서에서 고유 키를 요청합니다. 이 키는 컨테이너 응용 프로그램에 포함 되며 나중와 함께 사용할 `VerifyLicenseKey`, 컨트롤의 인스턴스를 만듭니다. 이 함수는 처리의 일부로 프레임 워크에서 호출 됩니다 `IClassFactory2::RequestLicKey`합니다.  
   
 -   [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)  
   
-     포함된 된 키와 컨트롤의 고유 키가 동일한 지 확인 합니다. 따라서 컨테이너를 사용에 대 한 컨트롤의 인스턴스를 만들 수 있습니다. 이 함수는 처리의 일부로 프레임 워크에서 호출 됩니다 **IClassFactory2::CreateInstanceLic** 라이선스 키의 사용자 지정된 확인 기능을 제공 하는 재정의 될 수 있습니다. 기본 구현은 문자열 비교를 수행 합니다. 자세한 내용은 참조 [ActiveX 컨트롤 라이선스를 사용자 지정](#_core_customizing_the_licensing_of_an_activex_control)이 문서의 뒷부분에 나오는 합니다.  
+     포함된 된 키와 컨트롤의 고유 키가 동일한 지 확인 합니다. 따라서 컨테이너를 사용에 대 한 컨트롤의 인스턴스를 만들 수 있습니다. 이 함수는 처리의 일부로 프레임 워크에서 호출 됩니다 `IClassFactory2::CreateInstanceLic` 라이선스 키의 사용자 지정된 확인 기능을 제공 하는 재정의 될 수 있습니다. 기본 구현은 문자열 비교를 수행 합니다. 자세한 내용은 참조 [ActiveX 컨트롤 라이선스를 사용자 지정](#_core_customizing_the_licensing_of_an_activex_control)이 문서의 뒷부분에 나오는 합니다.  
   
 ###  <a name="_core_header_file_modifications"></a> 헤더 파일 수정  
  ActiveX 컨트롤 마법사 컨트롤 헤더 파일에 다음 코드를 추가 합니다. 이 예제에서는 두 개의 멤버 함수에 `CSampleCtrl`개체의 `factory` 선언, 컨트롤의 현재 상태를 확인 하는 합니다. -사용권 계약 파일 및 다른 컨트롤이 포함 된 응용 프로그램에서 사용 될 라이선스 키를 검색 합니다.  
@@ -99,7 +100,7 @@ ActiveX 컨트롤의 선택적 기능 사용자 수를 사용 또는 컨트롤 �
  [!code-cpp[NVC_MFC_AxUI#40](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_2.cpp)]  
   
 > [!NOTE]
->  수정 하는 경우 **szLicString** 어떤 방식으로든에서 수정 해야 컨트롤의 첫 번째 줄. -사용권 계약 파일 또는 라이선스 제대로 작동 하지 않습니다.  
+>  수정 하는 경우 `szLicString` 어떤 방식으로든에서 수정 해야 컨트롤의 첫 번째 줄. -사용권 계약 파일 또는 라이선스 제대로 작동 하지 않습니다.  
   
  컨트롤 클래스를 정의 하는 컨트롤 구현 파일에 다음 코드를 배치 하는 ActiveX 컨트롤 마법사 `VerifyUserLicense` 및 `GetLicenseKey` 함수:  
   

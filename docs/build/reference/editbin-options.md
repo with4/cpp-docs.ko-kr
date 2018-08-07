@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378524"
 ---
 # <a name="editbin-options"></a>EDITBIN 옵션
 개체 파일, 실행 파일 및 동적 연결 라이브러리 (Dll)를 수정 하려면 EDITBIN를 사용할 수 있습니다. 옵션에 따라 EDITBIN이 수행하는 변경 사항이 지정됩니다.  

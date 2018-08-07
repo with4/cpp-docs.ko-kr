@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879063"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew(C++ 구성 요소 확장)
 `ref new` 핸들을 반환 하 고 개체에 액세스할 수 없을 때 가비지가 수집 되는 형식의 인스턴스를 할당 하는 집계 키워드 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md))에 할당 된 개체입니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376223"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor(아키텍처에 맞게 최적화)
 **/favor:** `option` 특정 아키텍처에 대 한 또는 AMD 및 Intel 아키텍처에서 마이크로 아키텍처 사양에 최적화 된 코드를 생성 합니다.  

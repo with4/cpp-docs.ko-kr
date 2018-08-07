@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049117"
 ---
 # <a name="datasize"></a>@DataSize
 에 대 한 0 **아주 작음**, **작은**, **보통**, 및 **플랫** 모델링에 대 한 1 **COMPACT** 및  **큰** 모델 및 2에 대 한 **가장 크게** 모델 (숫자와 같습니다.).  

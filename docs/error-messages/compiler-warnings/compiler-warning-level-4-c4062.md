@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293600"
 ---
 # <a name="compiler-warning-level-4-c4062"></a>컴파일러 경고(수준 4) C4062
 열거형 'enumeration'의 switch에 있는 'identifier' 열거자가 처리되지 않습니다.  

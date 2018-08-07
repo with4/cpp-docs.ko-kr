@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 867313625ccc90924eed0c0c9405970f2cb90f8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b2ce26ea9cba7f0c38d06546eb0d162332d047
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408299"
 ---
 # <a name="reference-type-function-returns"></a>참조 형식 함수 반환
 참조 형식을 반환하도록 함수를 선언할 수 있습니다. 이렇게 선언하는 데에는 다음과 같은 두 가지 이유가 있습니다.  
@@ -31,14 +32,14 @@ ms.lasthandoff: 05/03/2018
   
 -   함수가 반환할 때 참조 개체는 범위를 벗어나지 않습니다.  
   
- 것이 큰 개체를 전달 하는 것 처럼 *를* 함수 참조로도 효율적일 수 있습니다 더 큰 개체를 반환 하려면 *에서* 함수를 참조 하 여 합니다. 참조 반환 프로토콜을 사용하면 반환하기 전에 개체를 임시 위치로 복사할 필요가 없어집니다.  
+ 큰 개체를 전달할 더 효율적일 수와 마찬가지로 *하* 함수를도 수 많은 개체를 반환 하는 것이 효율적 *에서* 함수. 참조 반환 프로토콜을 사용하면 반환하기 전에 개체를 임시 위치로 복사할 필요가 없어집니다.  
   
- 함수가 l-value로 계산되어야 하는 경우에도 참조 반환 형식이 유용할 수 있습니다. 대부분의 오버로드된 연산자, 특히 할당 연산자가 이 범주에 속합니다. 오버 로드 된 연산자에 대해서는 설명 [오버 로드 된 연산자](../cpp/operator-overloading.md)합니다.  
+ 함수가 l-value로 계산되어야 하는 경우에도 참조 반환 형식이 유용할 수 있습니다. 대부분의 오버로드된 연산자, 특히 할당 연산자가 이 범주에 속합니다. 오버 로드 된 연산자에 나와 [오버 로드 된 연산자](../cpp/operator-overloading.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `Point` 예제를 참조하십시오.  
   
-```  
+```cpp 
 // refType_function_returns.cpp  
 // compile with: /EHsc  
   
@@ -82,7 +83,7 @@ cout << "x = " << ThePoint.x() << "\n"
   
 ## <a name="output"></a>출력  
   
-```  
+```Output  
 x = 7  
 y = 9  
 ```  
@@ -93,7 +94,7 @@ y = 9
   
  참조 형식의 선언에는 다음 경우를 제외하고 이니셜라이저를 포함해야 합니다.  
   
--   명시적 `extern` 선언  
+-   명시적 **extern** 선언  
   
 -   클래스 멤버의 선언  
   
@@ -104,7 +105,7 @@ y = 9
 ## <a name="caution-returning-address-of-local"></a>로컬의 주소 반환 시 주의 사항  
  로컬 범위에서 개체를 선언하는 경우 함수가 반환할 때 이 개체는 제거됩니다. 함수가 이 개체에 대한 참조를 반환하는 경우 호출자가 null 참조를 사용하려고 하면 해당 참조는 런타임에 액세스 위반을 일으킬 수 있습니다.  
   
-```  
+```cpp 
 // C4172 means Don’t do this!!!  
 Foo& GetFoo()  
 {  
@@ -116,5 +117,5 @@ Foo& GetFoo()
   
  이 경우에 경고를 컴파일러가: `warning C4172: returning address of local variable or temporary`합니다. 간단한 프로그램에서는 메모리 위치를 덮어쓰기 전에 호출자가 참조에 액세스하는 경우 일반적으로 액세스 위반이 발생하지 않습니다. 이 경우는 순전히 운이 작용한 것입니다. 경고에 주의하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [참조](../cpp/references-cpp.md)

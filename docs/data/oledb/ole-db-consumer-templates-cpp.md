@@ -18,11 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 39264ed7485e67377963316730689645c73f185f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 636f98337cacdeddbdd42dd74e498c0fbd12e4f8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339401"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB 소비자 템플릿(C++)
 OLE DB 소비자 템플릿은 OLE DB 버전 2.6 사양을 지원합니다. OLE DB 소비자 템플릿은 OLE DB 2.6에 대해 테스트되지만 사양에서 모든 인터페이스를 지원하지는 않습니다. 소비자 템플릿은 OLE DB 소비자를 구현하기 위해 작성해야 하는 코드의 양을 최소화합니다. 이 템플릿은 다음과 같은 장점이 있습니다.  
@@ -33,7 +34,7 @@ OLE DB 소비자 템플릿은 OLE DB 버전 2.6 사양을 지원합니다. OLE D
   
 -   OLE DB 프로그래밍을 위한 네이티브 C/C++ 데이터 형식을 제공합니다.  
   
- OLE DB 템플릿을 사용하려면 C++ 템플릿, COM 및 OLE DB 인터페이스에 대해 잘 알고 있어야 합니다. OLE DB에 익숙하지 않은 경우 [OLE DB 프로그래머 참조](https://msdn.microsoft.com/en-us/library/ms718124.aspx)를 참조하세요.  
+ OLE DB 템플릿을 사용하려면 C++ 템플릿, COM 및 OLE DB 인터페이스에 대해 잘 알고 있어야 합니다. OLE DB를 사용 하 여 잘 모르는 경우 [OLE DB Programmer's Reference](https://msdn.microsoft.com/library/ms718124.aspx)합니다.  
   
  OLE DB 템플릿은 새로운 개체 모델을 추가하는 대신 기존 OLE DB 개체 모델을 지원합니다. OLE DB 소비자 템플릿의 최상위 계층 클래스는 OLE DB 사양에 정의된 구성 요소와 유사합니다. OLE DB 소비자 템플릿의 디자인에는 행 집합의 여러 접근자와 같은 고급 기능이 포함됩니다. 템플릿과 다중 상속을 사용하면 라이브러리가 작고 유연해집니다.  
   
@@ -67,5 +68,5 @@ OLE DB 소비자 템플릿은 OLE DB 버전 2.6 사양을 지원합니다. OLE D
 ## <a name="see-also"></a>참고 항목  
  [OLE DB 프로그래밍](../../data/oledb/ole-db-programming.md)   
  [데이터 액세스](../data-access-in-cpp.md)   
- [OLE DB SDK 설명서](https://msdn.microsoft.com/en-us/library/ms722784.aspx)   
- [OLE DB 프로그래머 참조](https://msdn.microsoft.com/en-us/library/ms713643.aspx)
+ [OLE DB SDK 설명서](https://msdn.microsoft.com/library/ms722784.aspx)   
+ [OLE DB 프로그래머 참조](https://msdn.microsoft.com/library/ms713643.aspx)

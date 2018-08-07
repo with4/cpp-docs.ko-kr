@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412545"
 ---
 # <a name="cc-language-and-standard-libraries"></a>C/c + + 언어 및 표준 라이브러리
 지침 및 참조 내용을 C 및 c + +에 대 한 ISO 표준의 Microsoft 구현에 대 한 설명서의이 섹션에 포함 되어 있습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371610"
 ---
 # <a name="sockaddr-structure"></a>SOCKADDR 구조체
 `SOCKADDR` 구조체는 Windows 소켓 통신에 참여하는 컴퓨터에 대한 IP(인터넷 프로토콜) 주소를 저장하는 데 사용됩니다.  

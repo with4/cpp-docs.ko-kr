@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0627eaa2606d13ced457ae336bd2a0fb4dc83801
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 25370d7b7e5ddf460ace1ce349c9fc501feb2343
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407077"
 ---
 # <a name="character-sets"></a>문자 집합
 C++ 프로그램의 텍스트는 특정 문자 인코딩을 사용하는 소스 파일에 저장됩니다. C++ 표준에서는 소스 파일에 대해 기본 소스 문자 집합을 지정하고 컴파일된 파일에 대해 기본 실행 문자 집합을 지정합니다. Visual C++에서는 추가 로캘별 문자 집합을 소스 파일 및 컴파일된 파일에서 사용할 수 있습니다.  
@@ -56,7 +57,6 @@ C++ 프로그램의 텍스트는 특정 문자 인코딩을 사용하는 소스 
 ```cpp  
 auto \u30AD = 42; // \u30AD is 'キ'  
 if (キ == 42) return true; // \u30AD and キ are the same to the compiler  
-  
 ```  
   
  Windows 클립보드의 확장된 문자 형식은 응용 프로그램 로캘 설정과 관련이 있습니다. 다른 응용 프로그램에서 이러한 문자를 잘라내어 코드에 붙여 넣으면 예기치 않은 문자 인코딩이 발생할 수 있습니다. 그러면 표시되는 원인 없이 코드에서 구문 분석 오류가 발생할 수 있습니다. 따라서 확장된 문자를 붙여 넣기 전에 소스 파일 인코딩을 유니코드 코드 페이지로 설정하는 것이 좋습니다. 또한 IME 또는 문자표 앱을 사용하여 확장된 문자를 생성하는 것이 좋습니다.  
@@ -64,4 +64,4 @@ if (キ == 42) return true; // \u30AD and キ are the same to the compiler
  **Microsoft 전용 종료**  
   
 ### <a name="basic-execution-character-set"></a>기본 실행 문자 집합  
- *기본 실행 문자 집합* 및 *기본 실행 와이드 문자 집합* 은 기본 소스 문자 집합의 모든 문자와 경고, 백스페이스, 캐리지 리턴 및 null 문자를 나타내는 제어 문자로 구성됩니다.   *실행 문자 집합* 및 *실행 와이드 문자 집합* 은 기본 집합의 상위 집합입니다. 여기에는 기본 소스 문자 집합 이외에 구현 시 정의된 소스 문자가 포함됩니다. 실행 문자 집합에는 로캘별 표현이 있습니다.
+ *기본 실행 문자 집합* 및 *기본 실행 와이드 문자 집합* 은 기본 소스 문자 집합의 모든 문자와 경고, 백스페이스, 캐리지 리턴 및 null 문자를 나타내는 제어 문자로 구성됩니다. *실행 문자 집합* 및 *실행 와이드 문자 집합* 은 기본 집합의 상위 집합입니다. 여기에는 기본 소스 문자 집합 이외에 구현 시 정의된 소스 문자가 포함됩니다. 실행 문자 집합에는 로캘별 표현이 있습니다.

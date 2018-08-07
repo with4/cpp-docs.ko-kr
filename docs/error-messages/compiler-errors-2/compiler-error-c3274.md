@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250966"
 ---
 # <a name="compiler-error-c3274"></a>컴파일러 오류 C3274
 짝이 되는 try 없이 __finally/finally만 있습니다.  

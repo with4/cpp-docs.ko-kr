@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368410"
 ---
 # <a name="pseudotargets"></a>의사 대상
 의사 대상은 종속 줄에서 파일 이름 대신 사용 되는 레이블입니다. 존재 하지 않는 이므로 오래 된 파일으로 해석 됩니다. NMAKE는 의사 타임 스탬프는 모든 종속 파일 중 가장 최근 가정 합니다. 종속이 없는 경우 현재 시간으로 가정 됩니다. 의사 대상을 대상으로 사용할 경우 해당 명령은 항상 실행 됩니다. 종속으로 사용 하는 의사 해야 다른 종속성의 대상으로도 표시 됩니다. 그러나 해당 종속성 명령 블록을 소유 하지 않아도 됩니다.  

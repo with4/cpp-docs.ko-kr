@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230692"
 ---
 # <a name="compiler-error-c2594"></a>컴파일러 오류 C2594
 'operator': 'type1'에서 'type2'의 모호한 변환입니다.  

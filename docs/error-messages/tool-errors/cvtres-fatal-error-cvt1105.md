@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295963"
 ---
 # <a name="cvtres-fatal-error-cvt1105"></a>CVTRES 심각한 오류 CVT1105
 파일에서 찾을 수 없습니다.  

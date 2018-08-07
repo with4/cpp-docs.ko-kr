@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171824"
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR 라이브러리 참조
 STL/CLR 라이브러리는 c + + 및.NET Framework 공용 언어 런타임 (CLR) 사용 하기 위해 c + + 표준 라이브러리의 하위 집합의 패키징. STL/CLR 컨테이너, 반복기 및 알고리즘의 관리 되는 환경에서 표준 라이브러리를 사용할 수 있습니다.  

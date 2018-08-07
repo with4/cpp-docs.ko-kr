@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357775"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>ATL 프로젝트에 개체 및 컨트롤 추가
 ATL 또는 MFC 기반 프로젝트에는 개체 또는 컨트롤을 추가 하는 ATL 코드 마법사 중 하나를 사용할 수 있습니다. 추가 각 COM 개체 또는 컨트롤에 대 한 마법사 레지스트리 스크립트 기반 지원 위한.rgs 파일 뿐만 아니라.cpp 및.h 파일을 생성 합니다. 다음 ATL 코드 마법사 Visual Studio에서 사용할 수 있습니다.  

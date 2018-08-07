@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 376b61dbbbfe734ecc49263718902dd387c7fce8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea2c87a3ce87bbf15f99609a643a9a72f6d2058e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853487"
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog 클래스
 OLE 소스 변경 대화 상자에 사용합니다.  
@@ -63,24 +64,24 @@ class COleChangeSourceDialog : public COleDialog
 |----------|-----------------|  
 |[COleChangeSourceDialog::DoModal](#domodal)|OLE 소스 변경 대화 상자를 표시합니다.|  
 |[COleChangeSourceDialog::GetDisplayName](#getdisplayname)|전체 소스 표시 이름을 가져옵니다.|  
-|[COleChangeSourceDialog::GetFileName](#getfilename)|원본 이름에서 파일 이름을 가져옵니다.|  
-|[COleChangeSourceDialog::GetFromPrefix](#getfromprefix)|이전 소스 접두사를 가져옵니다.|  
+|[COleChangeSourceDialog::GetFileName](#getfilename)|원본 이름과에서 파일 이름을 가져옵니다.|  
+|[COleChangeSourceDialog::GetFromPrefix](#getfromprefix)|이전 소스의 접두사를 가져옵니다.|  
 |[COleChangeSourceDialog::GetItemName](#getitemname)|원본 이름에서 항목 이름을 가져옵니다.|  
 |[COleChangeSourceDialog::GetToPrefix](#gettoprefix)|새 원본의 접두사를 가져옵니다.|  
-|[COleChangeSourceDialog::IsValidSource](#isvalidsource)|소스가 유효한 나타냅니다.|  
+|[COleChangeSourceDialog::IsValidSource](#isvalidsource)|올바른 원본 인지 나타냅니다.|  
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
   
 |이름|설명|  
 |----------|-----------------|  
-|[COleChangeSourceDialog::m_cs](#m_cs)|대화 상자의 동작을 제어 하는 구조입니다.|  
+|[COleChangeSourceDialog::m_cs](#m_cs)|대화 상자의 동작을 제어 하는 구조체입니다.|  
   
 ## <a name="remarks"></a>설명  
- 클래스의 개체를 만들 `COleChangeSourceDialog` 이 대화 상자를 호출 하려는 경우. 후는 `COleChangeSourceDialog` 개체 생성 되었으며, 사용할 수 있습니다는 [m_cs](#m_cs) 구조를 값 이나 대화 상자에서 컨트롤의 상태를 초기화 합니다. `m_cs` 형식의 구조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)합니다. 이 대화 상자 클래스를 사용 하는 방법에 대 한 자세한 내용은 참조는 [DoModal](#domodal) 멤버 함수입니다.  
+ 클래스의 개체를 만들려면 `COleChangeSourceDialog` 이 대화 상자를 호출 하려는 경우. 후는 `COleChangeSourceDialog` 생성 된 개체를 사용할 수 있습니다 합니다 [m_cs](#m_cs) 값 또는 대화 상자에서 컨트롤의 상태를 초기화 하는 구조입니다. 합니다 `m_cs` 형식의 구조체가 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)합니다. 이 대화 상자 클래스를 사용 하는 방법에 대 한 자세한 내용은 참조는 [DoModal](#domodal) 멤버 함수입니다.  
   
- 자세한 내용은 참조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK에는 구조입니다.  
+ 자세한 내용은 참조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK의 구조입니다.  
   
- 특정 대화 상자에 대 한 자세한 내용은 문서 참조 [OLE의 대화 상자](../../mfc/dialog-boxes-in-ole.md)합니다.  
+ OLE 관련 대화 상자에 대 한 자세한 내용은 문서 참조 [OLE의 대화 상자](../../mfc/dialog-boxes-in-ole.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -110,16 +111,16 @@ explicit COleChangeSourceDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pItem`  
+ *pItem*  
  연결에 대 한 포인터 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 원본이 업데이트 해야 합니다.  
   
- `pParentWnd`  
- 부모 또는 소유자 창 개체를 가리키는 (형식의 `CWnd`) 대화 상자 개체 속해 있는 합니다. 이 경우 **NULL**, 대화 상자의 부모 창 주 응용 프로그램 창으로 설정 됩니다.  
+ *pParentWnd*  
+ 부모 또는 소유자 창 개체 (형식의 `CWnd`) 대화 상자 개체 속한 합니다. NULL 인 경우 대화 상자의 부모 창 주 응용 프로그램 창에 설정 됩니다.  
   
 ### <a name="remarks"></a>설명  
- 대화 상자를 표시 하려면 호출는 [DoModal](#domodal) 함수입니다.  
+ 대화 상자를 표시 하려면 호출을 [DoModal](#domodal) 함수입니다.  
   
- 자세한 내용은 참조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) 구조 및 [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) Windows SDK의 함수입니다.  
+ 자세한 내용은 참조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) 구조 및 [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) Windows SDK에는 함수입니다.  
   
 ##  <a name="domodal"></a>  COleChangeSourceDialog::DoModal  
  OLE 소스 변경 대화 상자를 표시 하려면이 함수를 호출 합니다.  
@@ -131,16 +132,16 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>반환 값  
  대화 상자에 대 한 완료 상태입니다. 다음 값 중 하나입니다.  
   
-- **IDOK** 대화 상자가 성공적으로 표시 된 경우.  
+- IDOK 대화 상자를 성공적으로 표시 된 경우입니다.  
   
-- **IDCANCEL** 대화 상자를 취소 합니다.  
+- 사용자가 대화 상자를 취소 하는 경우 IDCANCEL 합니다.  
   
-- **IDABORT** 오류가 발생 합니다. 경우 **IDABORT** 은 호출 반환 되는 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) 형식 발생 한 오류에 대 한 자세한 정보를 보려면 멤버 함수입니다. 가능한 오류 목록을 참조 하십시오.는 [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) Windows SDK의 함수입니다.  
+- IDABORT 오류가 발생 합니다. IDABORT 반환 되 면 호출 된 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) 발생 한 오류 유형에 대 한 자세한 정보를 보려면 멤버 함수입니다. 목록을 가능한 오류에 대 한 참조를 [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) Windows SDK에는 함수입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버를 설정 하 여 다양 한 대화 상자 컨트롤을 초기화 하려는 경우는 [m_cs](#m_cs) 구조를 호출 하기 전에이 작업을 수행 해야 `DoModal`, 대화 상자 개체를 생성 한 후 하지만 합니다.  
+ 멤버를 설정 하 여 다양 한 대화 상자 컨트롤을 초기화 하려는 경우는 [m_cs](#m_cs) 구조를 호출 하기 전에이 작업을 수행 해야 `DoModal`, 대화 상자 개체에서 생성 된 후 있지만.  
   
- 경우 `DoModal` 반환 **IDOK**, 대화 상자에서 사용자가 입력 한 설정이 나 정보를 검색 하는 함수 멤버를 호출할 수 있습니다. 다음 목록에서는 일반적인 쿼리 함수를 가지:  
+ 경우 `DoModal` IDOK 반환 대화 상자에서 사용자가 입력 한 설정 또는 정보를 검색 하는 함수 멤버를 호출할 수 있습니다. 다음은 일반적인 쿼리 함수 이름:  
   
 - [GetFileName](#getfilename)  
   
@@ -156,20 +157,20 @@ CString GetDisplayName();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 전체 원본 표시 이름 (모니커)는 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 생성자에 지정 합니다.  
+ 에 대 한 전체 소스 표시 이름 (모니커)는 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 생성자에 지정 합니다.  
   
 ##  <a name="getfilename"></a>  COleChangeSourceDialog::GetFileName  
- 연결 된 클라이언트 항목에 대 한 표시 이름의 파일 모니커 부분을 검색 하려면이 함수를 호출 합니다.  
+ 연결 된 클라이언트 항목에 대 한 표시 이름 파일 모니커 부분을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
 CString GetFileName();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 원본 표시 이름에 대 한 파일 모니커 부분은 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 생성자에 지정 합니다.  
+ 원본 표시 이름에 대 한 파일 모니커 부분 합니다 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 생성자에 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 항목 모니커 함께 파일 모니커 전체 표시 이름을 제공합니다.  
+ 항목 모니커와 함께 파일 모니커 전체 표시 이름을 제공합니다.  
   
 ##  <a name="getfromprefix"></a>  COleChangeSourceDialog::GetFromPrefix  
  원본에 대 한 이전 접두사 문자열을 가져오려면이 함수를 호출 합니다.  
@@ -182,24 +183,24 @@ CString GetFromPrefix();
  소스의 이전 접두사 문자열입니다.  
   
 ### <a name="remarks"></a>설명  
- 호출 후에이 기능 [DoModal](#domodal) 반환 **IDOK**합니다.  
+ 한 후에이 함수 호출 [DoModal](#domodal) IDOK를 반환 합니다.  
   
- 이 값에서 직접 가져온는 **lpszFrom** 의 멤버는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) 구조입니다.  
+ 직접이 값을 가져옵니다 합니다 `lpszFrom` 의 멤버는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) 구조입니다.  
   
- 자세한 내용은 참조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK에는 구조입니다.  
+ 자세한 내용은 참조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK의 구조입니다.  
   
 ##  <a name="getitemname"></a>  COleChangeSourceDialog::GetItemName  
- 연결 된 클라이언트 항목에 대 한 표시 이름의 항목 모니커 부분을 검색 하려면이 함수를 호출 합니다.  
+ 연결 된 클라이언트 항목에 대 한 표시 이름 항목 모니커 부분을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
 CString GetItemName();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 원본 표시 이름 항목 모니커 부분은 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 생성자에 지정 합니다.  
+ 항목 모니커 부분에 대 한 원본 표시 이름 합니다 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 생성자에 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 항목 모니커 함께 파일 모니커 전체 표시 이름을 제공합니다.  
+ 항목 모니커와 함께 파일 모니커 전체 표시 이름을 제공합니다.  
   
 ##  <a name="gettoprefix"></a>  COleChangeSourceDialog::GetToPrefix  
  원본에 대 한 새 접두사 문자열을 가져오려면이 함수를 호출 합니다.  
@@ -212,14 +213,14 @@ CString GetToPrefix();
  원본의 새 접두사 문자열입니다.  
   
 ### <a name="remarks"></a>설명  
- 호출 후에이 기능 [DoModal](#domodal) 반환 **IDOK**합니다.  
+ 한 후에이 함수 호출 [DoModal](#domodal) IDOK를 반환 합니다.  
   
- 이 값에서 직접 가져온는 **lpszTo** 의 멤버는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) 구조입니다.  
+ 직접이 값을 가져옵니다 합니다 `lpszTo` 의 멤버는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) 구조입니다.  
   
- 자세한 내용은 참조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK에는 구조입니다.  
+ 자세한 내용은 참조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK의 구조입니다.  
   
 ##  <a name="m_cs"></a>  COleChangeSourceDialog::m_cs  
- 이 데이터 멤버는 형식의 구조 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)합니다.  
+ 이 데이터 멤버는 형식의 구조체 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)합니다.  
   
 ```  
 OLEUICHANGESOURCE m_cs;  
@@ -228,22 +229,22 @@ OLEUICHANGESOURCE m_cs;
 ### <a name="remarks"></a>설명  
  `OLEUICHANGESOURCE` OLE 소스 변경 대화 상자의 동작을 제어 하는 데 사용 됩니다. 이 구조체의 멤버는 직접 수정할 수 있습니다.  
   
- 자세한 내용은 참조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK에는 구조입니다.  
+ 자세한 내용은 참조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK의 구조입니다.  
   
 ##  <a name="isvalidsource"></a>  COleChangeSourceDialog::IsValidSource  
- 새 소스 유효한 지 확인 하려면이 함수를 호출 합니다.  
+ 새 원본 유효한 지 확인 하려면이 함수를 호출 합니다.  
   
 ```  
 BOOL IsValidSource();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 새 소스가 유효한, 0이 아니고 그렇지 않으면 0입니다.  
+ 새 원본 유효 하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 호출 후에이 기능 [DoModal](#domodal) 반환 **IDOK**합니다.  
+ 한 후에이 함수 호출 [DoModal](#domodal) IDOK를 반환 합니다.  
   
- 자세한 내용은 참조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK에는 구조입니다.  
+ 자세한 내용은 참조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK의 구조입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [COleDialog 클래스](../../mfc/reference/coledialog-class.md)   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198471"
 ---
 # <a name="fatal-error-c1312"></a>심각한 오류 C1312
 함수에 조건부 분기가 너무 많습니다. 소스 코드를 단순화하거나 리팩터링하세요.  

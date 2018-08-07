@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325268"
 ---
 # <a name="nmake-fatal-error-u1000"></a>NMAKE 심각한 오류 U1000
 구문 오류: ')' 매크로 호출에 없습니다.  

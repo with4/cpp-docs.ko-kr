@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341028"
 ---
 # <a name="closing-files"></a>파일 닫기
 평소와 같이 I/O 작업에서 파일을 완료 한 후 닫아야 합니다.  

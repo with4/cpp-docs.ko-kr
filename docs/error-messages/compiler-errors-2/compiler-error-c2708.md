@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234762"
 ---
 # <a name="compiler-error-c2708"></a>컴파일러 오류 C2708
 'identifier': 이전 호출 또는 참조에서와 다른 실제 매개 변수 길이 (바이트)  

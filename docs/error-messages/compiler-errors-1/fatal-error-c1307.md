@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227137"
 ---
 # <a name="fatal-error-c1307"></a>심각한 오류 C1307
 프로필 데이터가 수집된 이후 프로그램이 편집되었습니다.  

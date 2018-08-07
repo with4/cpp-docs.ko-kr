@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289960"
 ---
 # <a name="compiler-warning-level-3-c4557"></a>컴파일러 경고(수준 3) C4557
 '__assume'에 'effect' 효과가 있습니다.  

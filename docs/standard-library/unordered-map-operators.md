@@ -9,11 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: 69a53ae6b54248f5b9938e2c9137a24f441c061d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a43528b270571a9994187711e2a21ca5a0e1f096
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958905"
 ---
 # <a name="ltunorderedmapgt-operators"></a>&lt;unordered_map&gt; 연산자
 
@@ -31,19 +32,21 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 `unordered_map`합니다.
+*left*  
+ `unordered_map` 형식의 개체입니다.
 
-`right` 형식의 개체 `unordered_map`합니다.
+*right*  
+ `unordered_map` 형식의 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
-unordered_map이 같으면 `true`이고 같지 않으면 `false`입니다.
+**true** unordered_map 같지 않으면 하는 경우 **false** 같으면 합니다.
 
 ### <a name="remarks"></a>설명
 
 unordered_map 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_map은 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // unordered_map_op_ne.cpp
@@ -94,19 +97,21 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 `unordered_map`합니다.
+*left*  
+ `unordered_map` 형식의 개체입니다.
 
-`right` 형식의 개체 `unordered_map`합니다.
+*right*  
+ `unordered_map` 형식의 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
-unordered_map이 같으면 `true`이고 같지 않으면 `false`입니다.
+**true** unordered_map이 같으면; **false** 동일 하지 않은 경우.
 
 ### <a name="remarks"></a>설명
 
 unordered_map 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_map은 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // unordered_map_op_eq.cpp
@@ -157,19 +162,21 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 `unordered_multimap`합니다.
+*left*  
+ `unordered_multimap` 형식의 개체입니다.
 
-`right` 형식의 개체 `unordered_multimap`합니다.
+*right*  
+ `unordered_multimap` 형식의 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
-unordered_multimap이 같지 않으면 `true`이고 같으면 `false`입니다.
+**true** unordered_multimap 같지 않으면 하는 경우 **false** 같으면 합니다.
 
 ### <a name="remarks"></a>설명
 
 unordered_multimap 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_multimap은 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 두 unordered_multimap은 같지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // unordered_multimap_op_ne.cpp
@@ -221,19 +228,21 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 `unordered_multimap`합니다.
+*left*  
+ `unordered_multimap` 형식의 개체입니다.
 
-`right` 형식의 개체 `unordered_multimap`합니다.
+*right*  
+ `unordered_multimap` 형식의 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
-unordered_multimap이 같으면 `true`이고 같지 않으면 `false`입니다.
+**true** unordered_multimap이 같지 않으면 **false** 동일 하지 않은 경우.
 
 ### <a name="remarks"></a>설명
 
 unordered_multimap 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_multimap은 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // unordered_multimap_op_eq.cpp

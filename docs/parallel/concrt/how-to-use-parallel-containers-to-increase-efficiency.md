@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696203"
 ---
 # <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>방법: 병렬 컨테이너를 사용하여 효율성 향상
 이 항목에서는 효율적으로 저장 하 고 데이터를 병렬로 액세스할 병렬 컨테이너를 사용 하는 방법을 보여 줍니다.  

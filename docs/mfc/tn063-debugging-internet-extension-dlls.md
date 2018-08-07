@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380468"
 ---
 # <a name="tn063-debugging-internet-mfc-extension-dlls"></a>TN063: 인터넷 MFC 확장 Dll 디버깅
 이 정보는 사용 되지 않으며 제거 되었습니다.  

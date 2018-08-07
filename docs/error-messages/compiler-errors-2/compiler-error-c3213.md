@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246006"
 ---
 # <a name="compiler-error-c3213"></a>컴파일러 오류 C3213
 기본 클래스 'base_type'이 'derived_type'보다 액세스하기 어렵습니다.  

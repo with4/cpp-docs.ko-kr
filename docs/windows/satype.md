@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888684"
 ---
 # <a name="satype"></a>satype
 데이터 형식을 지정 된 **SAFEARRAY** 구조입니다.  

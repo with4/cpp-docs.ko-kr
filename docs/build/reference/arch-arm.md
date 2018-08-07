@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369866"
 ---
 # <a name="arch-arm"></a>/arch(ARM)
 ARM에서 코드 생성 아키텍처를 지정합니다. 참고 항목 [(x86) /arch](../../build/reference/arch-x86.md) 및 [(x64) /arch](../../build/reference/arch-x64.md)합니다.  

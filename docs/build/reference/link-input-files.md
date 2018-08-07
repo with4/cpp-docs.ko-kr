@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374829"
 ---
 # <a name="link-input-files"></a>LINK 입력 파일
 개체, 가져오기 및 표준 라이브러리, 리소스, 모듈 정 및 명령 입력을 포함 하는 파일에 링커를 제공 합니다. 링크 파일의 내용에 대해 정도 파일 확장명을 사용 하지 않습니다. 대신, 링크는 어떤 종류의 파일 인지 확인 하려면 각 입력된 파일을 검사 합니다.  

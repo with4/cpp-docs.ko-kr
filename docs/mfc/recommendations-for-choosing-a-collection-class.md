@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353134"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>컬렉션 클래스 선택에 대한 권장 사항
 이 문서에서는 특정 응용 프로그램 요구 사항에 적합한 컬렉션을 선택하는 데 도움이 되는 자세한 정보를 제공합니다.  

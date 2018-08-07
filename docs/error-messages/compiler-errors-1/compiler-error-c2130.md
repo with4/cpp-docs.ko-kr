@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172078"
 ---
 # <a name="compiler-error-c2130"></a>컴파일러 오류 C2130
 \#줄에 파일 이름을 'token'를 포함 하는 문자열이 있어야 하는데  

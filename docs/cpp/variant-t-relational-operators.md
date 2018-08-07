@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 663d8e24af8362de8ea809bc37a68c33d3278bc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32f9a45fcfaaff02cfb7cf765857957f20c41ba1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463043"
 ---
 # <a name="variantt-relational-operators"></a>_variant_t 관계형 연산자
 **Microsoft 전용**  
@@ -39,35 +40,30 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      bool operator==(  
-   const VARIANT& varSrc   
-) const;  
 bool operator==(  
-   const VARIANT* pSrc   
-) const;  
+   const VARIANT& varSrc) const;  
+bool operator==(  
+   const VARIANT* pSrc) const;  
 bool operator!=(  
-   const VARIANT& varSrc   
-) const;  
+   const VARIANT& varSrc) const;  
 bool operator!=(  
-   const VARIANT* pSrc   
-) const;  
+   const VARIANT* pSrc) const;  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
  *varSrc*  
- A **VARIANT** 와 비교 되는 `_variant_t` 개체입니다.  
+ A `VARIANT` 와 비교 되는 `_variant_t` 개체입니다.  
   
- `pSrc`  
- 에 대 한 포인터는 **VARIANT** 와 비교 되는 `_variant_t` 개체입니다.  
+ *pSrc*  
+ 에 대 한 포인터를 `VARIANT` 와 비교 되는 `_variant_t` 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
  반환 **true** 비교를 보유 하는 경우 **false** 그렇지 않은 경우.  
   
 ## <a name="remarks"></a>설명  
- 비교는 `_variant_t` 개체는 **VARIANT**, 같음 또는 같지 않음을 테스트 합니다.  
+ 비교는 `_variant_t` 개체는 `VARIANT`, 같음 또는 같지 않음을 테스트 합니다.  
   
  **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [_variant_t 클래스](../cpp/variant-t-class.md)

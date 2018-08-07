@@ -40,11 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e7ec812ffeb50e83d59df764224ed9dcdaf07d8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58765b254069524f28b5edd171c10da92ab2f457
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956151"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf 클래스
 
@@ -60,11 +61,11 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>매개 변수
 
-`Alloc` 할당자 클래스입니다.
+*Alloc* 할당자 클래스입니다.
 
-`Elem` 형식 문자열의 기본 요소입니다.
+*Elem* 문자열 기본 요소의 형식입니다.
 
-`Tr` 문자열의 기본 요소에서 특수화 된 문자 특성입니다.
+*Tr* 문자열의 기본 요소에서 특수화 된 문자 특성입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -86,12 +87,12 @@ basic_stringbuf< `Elem`, `Tr`, `Alloc`> 클래스의 개체는 해당 생성자�
 
 |형식 이름|설명|
 |-|-|
-|[allocator_type](#allocator_type)|이 형식은 템플릿 매개 변수 `Alloc`의 동의어입니다.|
-|[char_type](#char_type)|형식 이름을 `Elem` 템플릿 매개 변수와 연결합니다.|
-|[int_type](#int_type)|`Tr` 범위에 있는 동일한 이름의 형식에 해당하는 `basic_filebuf`의 범위 내에 이 형식을 만듭니다.|
-|[off_type](#off_type)|`Tr` 범위에 있는 동일한 이름의 형식에 해당하는 `basic_filebuf`의 범위 내에 이 형식을 만듭니다.|
-|[pos_type](#pos_type)|`Tr` 범위에 있는 동일한 이름의 형식에 해당하는 `basic_filebuf`의 범위 내에 이 형식을 만듭니다.|
-|[traits_type](#traits_type)|형식 이름을 `Tr` 템플릿 매개 변수와 연결합니다.|
+|[allocator_type](#allocator_type)|형식은 템플릿 매개 변수에 대 한 동의어 *Alloc*합니다.|
+|[char_type](#char_type)|형식 이름을 *Elem* 템플릿 매개 변수와 연결합니다.|
+|[int_type](#int_type)|내에서이 형식을 만듭니다 `basic_filebuf`의 범위에 있는 동일한 이름의 형식과 동일 합니다 *Tr* 범위입니다.|
+|[off_type](#off_type)|내에서이 형식을 만듭니다 `basic_filebuf`의 범위에 있는 동일한 이름의 형식과 동일 합니다 *Tr* 범위입니다.|
+|[pos_type](#pos_type)|내에서이 형식을 만듭니다 `basic_filebuf`의 범위에 있는 동일한 이름의 형식과 동일 합니다 *Tr* 범위입니다.|
+|[traits_type](#traits_type)|형식 이름을 *Tr* 템플릿 매개 변수와 연결합니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
@@ -113,7 +114,7 @@ basic_stringbuf< `Elem`, `Tr`, `Alloc`> 클래스의 개체는 해당 생성자�
 
 ## <a name="allocator_type"></a>  basic_stringbuf::allocator_type
 
-이 형식은 템플릿 매개 변수 `Alloc`의 동의어입니다.
+형식은 템플릿 매개 변수에 대 한 동의어 *Alloc*합니다.
 
 ```cpp
 typedef Alloc allocator_type;
@@ -134,19 +135,19 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>매개 변수
 
-`_Mode` 열거 중 하나 [ios_base:: openmode](../standard-library/ios-base-class.md#openmode)합니다.
+*모드 (_m)* 의 열거형 중 하나 [ios_base:: openmode](../standard-library/ios-base-class.md#openmode)합니다.
 
-`str` 형식의 개체 [basic_string](../standard-library/basic-string-class.md)합니다.
+*str* 형식의 개체 [basic_string](../standard-library/basic-string-class.md)합니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 입력 버퍼와 출력 버퍼를 제어하는 모든 포인터에 null 포인터를 저장합니다. 자세한 내용은 [basic_streambuf 클래스](../standard-library/basic-streambuf-class.md)의 설명 섹션을 참조하세요. 또한 `_Mode`를 stringbuf 모드로서 저장합니다. 자세한 내용은 [basic_stringbuf 클래스](../standard-library/basic-stringbuf-class.md)의 설명 섹션을 참조하세요.
+첫 번째 생성자는 입력 버퍼와 출력 버퍼를 제어하는 모든 포인터에 null 포인터를 저장합니다. 자세한 내용은 [basic_streambuf 클래스](../standard-library/basic-streambuf-class.md)의 설명 섹션을 참조하세요. 또한 저장 *모드 (_m)* stringbuf 모드입니다. 자세한 내용은 [basic_stringbuf 클래스](../standard-library/basic-stringbuf-class.md)의 설명 섹션을 참조하세요.
 
-두 번째 생성자는 `str` 문자열 객체로 제어되는 시퀀스의 복사본을 할당합니다. `_Mode & ios_base::in`이 0이 아닌 경우 시퀀스 시작 시 읽기를 시작하도록 입력 버퍼를 설정합니다. `_Mode & ios_base::out`이 0이 아닌 경우 시퀀스 시작 시 쓰기를 시작하도록 출력 버퍼를 설정합니다. 또한 `_Mode`를 stringbuf 모드로서 저장합니다. 자세한 내용은 [basic_stringbuf 클래스](../standard-library/basic-stringbuf-class.md)의 설명 섹션을 참조하세요.
+두 번째 생성자는 문자열 개체에 의해 제어 되는 시퀀스의 복사본을 할당 *str*합니다. `_Mode & ios_base::in`이 0이 아닌 경우 시퀀스 시작 시 읽기를 시작하도록 입력 버퍼를 설정합니다. `_Mode & ios_base::out`이 0이 아닌 경우 시퀀스 시작 시 쓰기를 시작하도록 출력 버퍼를 설정합니다. 또한 저장 *모드 (_m)* stringbuf 모드입니다. 자세한 내용은 [basic_stringbuf 클래스](../standard-library/basic-stringbuf-class.md)의 설명 섹션을 참조하세요.
 
 ## <a name="char_type"></a>  basic_stringbuf::char_type
 
-형식 이름을 **Elem** 템플릿 매개 변수와 연결합니다.
+형식 이름을 *Elem* 템플릿 매개 변수와 연결합니다.
 
 ```cpp
 typedef Elem char_type;
@@ -154,7 +155,7 @@ typedef Elem char_type;
 
 ## <a name="int_type"></a>  basic_stringbuf::int_type
 
-**Tr** 범위에 있는 동일한 이름의 형식에 해당하는 basic_filebuf의 범위 내에 이 형식을 만듭니다.
+Basic_filebuf의 범위 내에 있는 동일한 이름의 형식에 해당 하는이 형식을 만듭니다는 `Tr` 범위입니다.
 
 ```cpp
 typedef typename traits_type::int_type int_type;
@@ -162,7 +163,7 @@ typedef typename traits_type::int_type int_type;
 
 ## <a name="off_type"></a>  basic_stringbuf::off_type
 
-**Tr** 범위에 있는 동일한 이름의 형식에 해당하는 basic_filebuf의 범위 내에 이 형식을 만듭니다.
+Basic_filebuf의 범위 내에 있는 동일한 이름의 형식에 해당 하는이 형식을 만듭니다는 `Tr` 범위입니다.
 
 ```cpp
 typedef typename traits_type::off_type off_type;
@@ -178,11 +179,11 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>매개 변수
 
-`_Meta` 버퍼에 삽입 하는 문자 또는 **traits_type::eof**합니다.
+*_Meta* 버퍼에 삽입할 문자 또는 `traits_type::eof`합니다.
 
 ### <a name="return-value"></a>반환 값
 
-함수가 성공할 수 없는 경우 **traits_type::eof**를 반환합니다. 아닌 경우 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)를 반환합니다.
+함수는 정상적으로 실행되지 않으면 `traits_type::eof`를 반환합니다. 아닌 경우 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -202,15 +203,15 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>매개 변수
 
-`_Meta` 버퍼에 삽입 하는 문자 또는 **traits_type::eof**합니다.
+*_Meta* 버퍼에 삽입할 문자 또는 `traits_type::eof`합니다.
 
 ### <a name="return-value"></a>반환 값
 
-함수가 성공할 수 없는 경우 **traits_type::eof**를 반환합니다. 아닌 경우 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)를 반환합니다.
+함수는 정상적으로 실행되지 않으면 `traits_type::eof`를 반환합니다. 아닌 경우 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-`_Meta`가 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)와 비교하여 같은 경우 다시 푸시할 요소는 실제로 현재 요소 이전 스트림에 이미 있는 요소입니다. 같지 않은 경우 해당 요소는 **byte** = **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*)로 바뀝니다. 함수는 여러 가지 방법으로 요소를 다시 넣을 수 있습니다.
+하는 경우 *_Meta* 비교 하 여 같은 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), 다시 푸시할 요소는 실제로 현재 요소 이전 스트림에 이미 있는 것입니다. 같지 않은 경우 해당 요소는 **byte** = **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*)로 바뀝니다. 함수는 여러 가지 방법으로 요소를 다시 넣을 수 있습니다.
 
 - putback 위치를 사용할 수 있고 여기에 저장된 요소가 byte와 비교 시 같으면 입력 버퍼에 대한 다음 포인터를 감소시킬 수 있습니다.
 
@@ -218,7 +219,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ## <a name="pos_type"></a>  basic_stringbuf::pos_type
 
-**Tr** 범위에 있는 동일한 이름의 형식에 해당하는 basic_filebuf의 범위 내에 이 형식을 만듭니다.
+Basic_filebuf의 범위 내에 있는 동일한 이름의 형식에 해당 하는이 형식을 만듭니다는 `Tr` 범위입니다.
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
@@ -237,11 +238,11 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>매개 변수
 
-`_Off` 기준으로 찾을 대 한 위치 `_Way`합니다. 자세한 내용은 [basic_stringbuf::off_type](#off_type)을 참조하세요.
+*_Off* 위치를 기준으로 찾을 *_Way*합니다. 자세한 내용은 [basic_stringbuf::off_type](#off_type)을 참조하세요.
 
-`_Way` 오프셋된 작업에 대 한 시작 지점입니다. 가능한 값은 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)을 참조하세요.
+*_Way* 오프셋된 작업에 대 한 시작점입니다. 가능한 값은 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)을 참조하세요.
 
-`_Mode` 포인터 위치에 대 한 모드를 지정합니다. 기본적으로는 읽기 및 쓰기 위치를 수정할 수 있습니다. 자세한 내용은 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)를 참조하세요.
+*모드 (_m)* 포인터 위치에 대 한 모드를 지정 합니다. 기본적으로는 읽기 및 쓰기 위치를 수정할 수 있습니다. 자세한 내용은 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)를 참조하세요.
 
 ### <a name="return-value"></a>반환 값
 
@@ -253,13 +254,13 @@ virtual pos_type seekoff(
 
 새 위치는 다음과 같이 결정됩니다.
 
-- `_Way` == `ios_base::beg`인 경우 새 위치는 스트림 시작 부분에 `_Off`를 더한 위치입니다.
+- 하는 경우 `_Way`  ==  `ios_base::beg`에 새 위치는 더하기 스트림의 처음 *_Off*합니다.
 
-- `_Way` == `ios_base::cur`인 경우 새 위치는 현재 스트림 위치에 `_Off`를 더한 위치입니다.
+- 하는 경우 `_Way`  ==  `ios_base::cur`에 새 위치는 현재 스트림 위치가 plus *_Off*합니다.
 
-- `_Way` == `ios_base::end`인 경우 새 위치는 스트림 끝에 `_Off`를 더한 위치입니다.
+- 하는 경우 `_Way`  ==  `ios_base::end`에 새 위치는 더하기 스트림의 끝 *_Off*합니다.
 
-`_Mode & ios_base::in`이 0이 아닌 경우 함수는 입력 버퍼에서 읽을 다음 위치를 변경합니다. `_Mode & ios_base::out`이 0이 아닌 경우 함수는 출력 버퍼에서 읽을 다음 위치를 변경합니다. 스트림이 영향을 받으려면 버퍼가 존재해야 합니다. 위치 지정 작업을 정상적으로 수행하려면 결과 스트림 위치가 제어되는 시퀀스 내에 있어야 합니다. 함수가 두 스트림 위치에 모두 영향을 미치는 경우 `_Way`는 `ios_base::beg` 또는 `ios_base::end`여야 하며 두 스트림은 동일한 요소에 배치됩니다. 아닌 경우(또는 두 위치 모두 영향을 받지 않는 경우) 배치 작업이 실패합니다.
+`_Mode & ios_base::in`이 0이 아닌 경우 함수는 입력 버퍼에서 읽을 다음 위치를 변경합니다. `_Mode & ios_base::out`이 0이 아닌 경우 함수는 출력 버퍼에서 읽을 다음 위치를 변경합니다. 스트림이 영향을 받으려면 버퍼가 존재해야 합니다. 위치 지정 작업을 정상적으로 수행하려면 결과 스트림 위치가 제어되는 시퀀스 내에 있어야 합니다. 함수가 두 스트림 위치에 영향을 주는 경우 *_Way* 있어야 `ios_base::beg` 또는 `ios_base::end` 고 두 스트림은 동일한 요소에 배치 됩니다. 아닌 경우(또는 두 위치 모두 영향을 받지 않는 경우) 배치 작업이 실패합니다.
 
 두 스트림 위치 중 하나 또는 모두를 정상적으로 변경하는 경우 함수는 결과 스트림 위치를 반환합니다. 아닌 경우 함수는 실패하며 잘못된 스트림 위치를 반환합니다.
 
@@ -273,9 +274,9 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 
 ### <a name="parameters"></a>매개 변수
 
-`_Sp` 에 대 한 검색 위치입니다.
+*_Sp* 를 위치에 대 한 검색입니다.
 
-`_Mode` 포인터 위치에 대 한 모드를 지정합니다. 기본적으로는 읽기 및 쓰기 위치를 수정할 수 있습니다.
+*모드 (_m)* 포인터 위치에 대 한 모드를 지정 합니다. 기본적으로는 읽기 및 쓰기 위치를 수정할 수 있습니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -299,7 +300,7 @@ void str(
 
 ### <a name="parameters"></a>매개 변수
 
-`_Newstr` 새 문자열입니다.
+*_Newstr* 새 문자열입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -315,9 +316,9 @@ void str(
 
 - 아닌 경우 복사된 시퀀스는 비어 있습니다.
 
-두 번째 멤버 함수는 현재 **\*this**에 의해 제어되는 시퀀스의 할당을 취소합니다. 그런 다음 `_Newstr`에 의해 제어되는 시퀀스의 복사본을 할당합니다. **mode & ios_base::in**이 0이 아닌 경우 시퀀스 시작 시 읽기를 시작하도록 입력 버퍼를 설정합니다. **mode & ios_base::out**이 0이 아닌 경우 시퀀스 시작 시 쓰기를 시작하도록 출력 버퍼를 설정합니다.
+두 번째 멤버 함수는 현재 **\*this**에 의해 제어되는 시퀀스의 할당을 취소합니다. 그런 다음 제어 하는 시퀀스의 복사본을 할당 *_Newstr*합니다. **mode & ios_base::in**이 0이 아닌 경우 시퀀스 시작 시 읽기를 시작하도록 입력 버퍼를 설정합니다. **mode & ios_base::out**이 0이 아닌 경우 시퀀스 시작 시 쓰기를 시작하도록 출력 버퍼를 설정합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // basic_stringbuf_str.cpp
@@ -351,7 +352,7 @@ be
 
 ## <a name="traits_type"></a>  basic_stringbuf::traits_type
 
-형식 이름을 **Tr** 템플릿 매개 변수와 연결합니다.
+형식 이름을 *Tr* 템플릿 매개 변수와 연결합니다.
 
 ```cpp
 typedef Tr traits_type;
@@ -359,7 +360,7 @@ typedef Tr traits_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 템플릿 매개 변수 **Tr**의 동의어입니다.
+이 형식은 템플릿 매개 변수 *Tr*의 동의어입니다.
 
 ## <a name="underflow"></a>  basic_stringbuf::underflow
 
@@ -375,7 +376,7 @@ virtual int_type underflow();
 
 ### <a name="remarks"></a>설명
 
-보호된 가상 멤버 함수는 입력 버퍼에서 현재 요소 **byte** 추출을 시도한 다음 현재 스트림 위치로 이동하여 요소를 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **byte**)로서 반환합니다. 이 경우 한 가지 방법을 사용할 수 있습니다. 읽기 위치를 사용할 수 있으면 함수는 읽기 위치에 저장된 요소로 **byte**를 가져온 후 입력 버퍼의 다음 포인터로 이동합니다.
+보호 된 가상 멤버 함수를 현재 요소를 추출 하려고 `byte` 입력된 버퍼에서 현재 스트림 위치로 이동 하 고 요소로 반환 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **바이트**). 한 방식으로 수행할 수 있는: 읽기 위치를 사용할 수 있으면 `byte` 읽기 위치에 저장 되는 요소와 입력된 버퍼의 다음 포인터로 이동 합니다.
 
 ## <a name="swap"></a>  basic_streambuf::swap
 
@@ -387,7 +388,7 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
 
 ### <a name="parameters"></a>매개 변수
 
-`other` 이 basic_stringbuf로 교체 될 내용이 들어 basic_stringbuf입니다.
+*다른* 해당 내용이이 basic_stringbuf로 basic_stringbuf입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -401,7 +402,7 @@ basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
 
 ### <a name="parameters"></a>매개 변수
 
-`other` 연산자의 좌 변에 stringbuf에 할당 될 로캘 특성을 포함 하 여 내용이 basic_stringbuf입니다.
+*다른* 는 basic_stringbuf입니다 로캘 특성을 포함 하 여 내용이 연산자의 좌 변에 있는 stringbuf에 할당 됩니다.
 
 ### <a name="remarks"></a>설명
 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372362"
 ---
 # <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>방법: Visual Studio 개발 환경에서 LIB.EXE 옵션 설정
 ### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>LIB를 설정 합니다. Visual Studio 개발 환경에서 EXE 옵션  

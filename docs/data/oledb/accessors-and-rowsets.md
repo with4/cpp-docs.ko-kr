@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094497"
 ---
 # <a name="accessors-and-rowsets"></a>접근자 및 행 집합
 설정 하 고 데이터를 검색 하려면 OLE DB 템플릿 사용 접근자 및 행 집합을 통해는 [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) 클래스입니다. 이 클래스는 서로 다른 유형의 여러 접근자를 처리할 수 있습니다.  

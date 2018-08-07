@@ -20,11 +20,12 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b2f425e37d9471db42fa9ceec69048e3936f07c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99209063e8856ffe9ea26ffaaf0917e1f6cd487b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954262"
 ---
 # <a name="timepoint-class"></a>time_point 클래스
 
@@ -72,7 +73,7 @@ class time_point;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<c h >
+**헤더:** \<chrono >
 
 **네임스페이스:** std::chrono
 
@@ -110,7 +111,8 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>매개 변수
 
-`Dur` A `duration` 개체입니다.
+*기간*  
+ `duration` 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -126,7 +128,8 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>매개 변수
 
-`Dur` A `duration` 개체입니다.
+*기간*  
+ `duration` 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -147,15 +150,17 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>매개 변수
 
-`Dur` A [기간](../standard-library/duration-class.md) 개체입니다.
+*기간*  
+ [duration](../standard-library/duration-class.md) 개체입니다.
 
-`Tp` A `time_point` 개체입니다.
+*Tp*  
+ `time_point` 개체입니다.
 
 ### <a name="remarks"></a>설명
 
 첫 번째 생성자는 저장된 `duration` 값이 [duration::zero](../standard-library/duration-class.md#zero)와 같은 개체를 생성합니다.
 
-두 번째 생성자는 저장된 duration 값이 `Dur`과 같은 개체를 생성합니다. `is_convertible<Duration2, duration>`*이 true*인 상황이 아니라면 두 번째 생성자는 오버로드 확인에 참여하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.
+두 번째 생성자는 저장된 된 duration 값 같음은 개체를 생성 *기간*합니다. `is_convertible<Duration2, duration>`*이 true*인 상황이 아니라면 두 번째 생성자는 오버로드 확인에 참여하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.
 
 세 번째 생성자는 `Tp.time_since_epoch()`를 사용하여 `duration` 값을 초기화합니다.
 

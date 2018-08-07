@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 882248ab4f9ed692aa36bac5873251867b2fff54
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1695306ddc53a8150917eef8b27f5d3edce2bf3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961866"
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 
-`char` 개체의 할당된 배열에 저장된 시퀀스에 대한 Iostreams 작업을 지원하는 여러 클래스를 정의합니다. 이러한 시퀀스는 C 문자열로/에서 쉽게 변환됩니다.
+할당 된 배열에 저장 된 시퀀스에 대 한 iostreams 작업을 지 원하는 여러 클래스를 정의 **char** 개체입니다. 이러한 시퀀스는 C 문자열로/에서 쉽게 변환됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -38,13 +39,13 @@ ms.lasthandoff: 05/08/2018
 `strstream` 형식의 개체는 C 문자열인 `char` *로 작업합니다. [basic_string](../standard-library/basic-string-class.md) 형식의 개체로 작업하려면 [\<sstream>](../standard-library/sstream.md)을 사용합니다.
 
 > [!NOTE]
-> 클래스 \<a m >는 사용 되지 않습니다. 클래스를 사용 하는 것이 좋습니다. \<a m > 대신 합니다.
+> 클래스 \<strstream >는 사용 되지 않습니다. 클래스를 사용 하는 것이 좋습니다 \<sstream > 대신 합니다.
 
 ### <a name="classes"></a>클래스
 
 |클래스|설명|
 |-|-|
-|[strstreambuf 클래스](../standard-library/strstreambuf-class.md)|이 클래스는 `char` 배열 개체에 저장된 요소의 시퀀스로/에서 요소의 전송을 제어하는 스트림 버퍼를 설명합니다.|
+|[strstreambuf 클래스](../standard-library/strstreambuf-class.md)|에 저장 된 요소의 시퀀스에서 요소의 전송을 제어 하는 스트림 버퍼를 설명 하는 클래스를 **char** 배열 개체입니다.|
 |[istrstream 클래스](../standard-library/istrstream-class.md)|이 클래스는 [strstreambuf](../standard-library/strstreambuf-class.md) 클래스의 스트림 버퍼에서 요소 및 인코드된 개체 추출을 제어하는 개체를 설명합니다.|
 |[ostrstream 클래스](../standard-library/ostrstream-class.md)|이 클래스는 [strstreambuf](../standard-library/strstreambuf-class.md) 클래스의 스트림 버퍼로 요소 및 인코드된 개체 삽입을 제어하는 개체를 설명합니다.|
 |[strstream 클래스](../standard-library/strstream-class.md)|이 클래스는 [strstreambuf](../standard-library/strstreambuf-class.md) 클래스의 스트림 버퍼를 사용한 요소 및 인코드된 개체 삽입 및 추출을 제어하는 개체를 설명합니다.|

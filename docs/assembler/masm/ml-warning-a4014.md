@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056943"
 ---
 # <a name="ml-warning-a4014"></a>ML 경고 A4014
 지침 및 BSS 세그먼트에서 지원 하지 않는 초기화 된 데이터  

@@ -16,19 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d421f00839d21236741e8d33f1415fe129b18c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1369614cfd20d39fee3f2c2dd1ca7436ae742d2b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405381"
 ---
 # <a name="nonstandard-behavior"></a>비표준 동작
 다음 섹션은 Visual C++ 구현이 C++ 표준을 준수하지 않는 일부 알려진 장소를 나열합니다. 아래의 섹션 번호는 C++ 11 표준(ISO/IEC 14882:2011(E))의 섹션 번호를 나타냅니다.  
   
- 에 지정 된 c + + 표준에 정의 된 것과 다른 컴파일러 한계 목록은 [컴파일러 한계](../cpp/compiler-limits.md)합니다.  
+ C + + 표준에 정의 된 것과 다른 컴파일러 한계 목록은에서 제공 됩니다 [컴파일러 한계](../cpp/compiler-limits.md)합니다.  
   
 ## <a name="covariant-return-types"></a>공변 반환 형식  
- 가상 함수에 개수가 가변적인 인수가 있을 때 가상 기본 클래스는 공변(covariant) 반환 형식으로 지원되지 않습니다. 이것은 C++ ISO 사양의 단원 10.3, 7항에 맞지 않습니다. 다음 샘플은 컴파일하지 컴파일러 오류 [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
+ 가상 함수에 개수가 가변적인 인수가 있을 때 가상 기본 클래스는 공변(covariant) 반환 형식으로 지원되지 않습니다. 이것은 C++ ISO 사양의 단원 10.3, 7항에 맞지 않습니다. 다음 샘플을 컴파일되지 않습니다, 컴파일러 오류 [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
   
 ```cpp  
 // CovariantReturn.cpp  
@@ -66,7 +67,6 @@ int main() {
     g('c');  
 }  
 // Output: f(char)  
-  
 ```  
   
 ## <a name="function-exception-specifiers"></a>함수 예외 지정자  
@@ -77,10 +77,10 @@ void f() throw(int); // parsed but not used
 void g() throw();    // parsed and used  
 ```  
   
- 예외 사양에 대 한 자세한 내용은 참조 하십시오. [예외 사양](../cpp/exception-specifications-throw-cpp.md)합니다.  
+ 예외 사양에 대 한 자세한 내용은 참조 하세요. [예외 사양](../cpp/exception-specifications-throw-cpp.md)합니다.  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- C + + 표준에서는 [char_traits](../standard-library/char-traits-struct.md#eof) 유효한에 해당 하지 해야 `char_type` 값입니다. Visual C++ 컴파일러는 `char` 형식이 아니라 `wchar_t` 형식에 이 제약 조건을 적용합니다. 이것은 C++ ISO 사양의 단원 12.1.1, 표 62의 요구 사항에 맞지 않습니다. 아래 예제에서는 이 작업을 보여 줍니다.  
+ C + + 표준에서는 [char_traits:: eof](../standard-library/char-traits-struct.md#eof) 유효한에 해당 하면 안 `char_type` 값입니다. Visual c + + 컴파일러는 형식에 대 한이 제약 조건은 **char**, 형식이 아니라 **wchar_t**합니다. 이것은 C++ ISO 사양의 단원 12.1.1, 표 62의 요구 사항에 맞지 않습니다. 아래 예제에서는 이 작업을 보여 줍니다.  
   
 ```cpp  
 #include <iostream>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385743"
 ---
 # <a name="statements-limits-on-switch-statements"></a>문: Switch 문의 제한
 **ANSI 3.6.4.2** `switch` 문에 있는 **case** 값의 최대 수  

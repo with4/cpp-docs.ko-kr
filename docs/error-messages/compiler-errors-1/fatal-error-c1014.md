@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33224813"
 ---
 # <a name="fatal-error-c1014"></a>심각한 오류 C1014
 포함 파일이 너무 많습니다. 수준 = level  

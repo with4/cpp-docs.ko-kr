@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81d28a7c5fdb48201cc1f4f2998fd0904749445d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23f8aaf1e485d7ba38a561639f81b36d494a98f2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930435"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX 컨트롤: 속성 페이지
 속성 페이지 보기 및 ActiveX 컨트롤 속성을 변경 하는 ActiveX 컨트롤 사용자를 사용 합니다. 이러한 속성 보기 및 편집 컨트롤 속성에 대 한 사용자 지정,이 그래픽 인터페이스를 제공 하는 하나 이상의 속성 페이지를 포함 하는 컨트롤 속성 대화 상자를 호출 하 여 액세스 됩니다.  
@@ -79,13 +80,13 @@ ms.lasthandoff: 05/04/2018
   
 2.  두 번 클릭 하 고 **대화** 디렉터리 아이콘입니다.  
   
-3.  열기는 **IDD_PROPPAGE_SAMPLE** 대화 상자.  
+3.  IDD_PROPPAGE_SAMPLE 대화 상자를 엽니다.  
   
      ActiveX 컨트롤 마법사는 대화 ID,이 경우 샘플의 끝에 프로젝트의 이름을 추가합니다.  
   
 4.  도구 상자 대화 상자의 영역으로 선택한 컨트롤을 끌어서 설정.  
   
-5.  이 예제에서는 텍스트 레이블 컨트롤 "캡션:"와 편집 상자 컨트롤 및는 **IDC_CAPTION** 식별자는 충분 합니다.  
+5.  이 예제에서는 텍스트 레이블 컨트롤 "캡션:" 및 편집 상자 컨트롤 IDC_CAPTION 식별자로는 충분 합니다.  
   
 6.  클릭 **저장** 변경 내용을 저장 하려면 도구 모음에서 합니다.  
   
@@ -98,9 +99,9 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFC_AxUI#31](../mfc/codesnippet/cpp/mfc-activex-controls-property-pages_1.cpp)]  
   
- 이 함수는 속성 페이지의 연결 `m_caption` 라는 캡션이 있는 멤버 변수를 사용 하는 `DDP_TEXT` 함수입니다.  
+ 이 함수는 속성 페이지의 연결 *m_caption* 라는 캡션이 있는 멤버 변수를 사용 하는 `DDP_TEXT` 함수입니다.  
   
- 속성 페이지 컨트롤 사이의 연결을 설정 해야 하는 삽입 속성 페이지 컨트롤을 사용 하는 다음 `IDC_CAPTION`, 캡션, 실제 컨트롤 속성을 사용 하는 **DDP_Text** 위에서 설명한 것 처럼 작동 합니다.  
+ 속성 페이지 컨트롤, IDC_CAPTION, 및 실제 컨트롤 속성 사이의 연결을 설정 해야 하는 삽입 속성 페이지 컨트롤을 사용 하는 다음 캡션를 사용 하는 `DDP_Text` 위에서 설명한 것 처럼 작동 합니다.  
   
  [속성 페이지](../mfc/reference/property-pages-mfc.md) 목록 상자 및 확인란, 라디오 단추 등의 다른 대화 상자 컨트롤 형식에 사용할 수 있습니다. 아래 표에 속성 페이지의 전체 집합 **DDP_** 함수 및 해당 용도:  
   
@@ -116,7 +117,7 @@ ms.lasthandoff: 05/04/2018
 |`DDP_LBString`|컨트롤 속성으로 목록 상자에서 선택한 문자열입니다. 선택 된 문자열 속성의 값으로 동일한 문자로 시작할 수 있지만 완벽 하 게 일치 하지 않아도 합니다.|  
 |`DDP_LBStringExact`|컨트롤 속성으로 목록 상자에서 선택한 문자열입니다. 선택한 문자열 및 속성의 문자열 값이 정확히 일치 해야 합니다.|  
 |`DDP_Radio`|컨트롤 속성을 갖는 라디오 단추입니다.|  
-|**DDP_Text**|컨트롤 속성을 갖는 텍스트입니다.|  
+|`DDP_Text`|컨트롤 속성을 갖는 텍스트입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [MFC ActiveX 컨트롤](../mfc/mfc-activex-controls.md)   

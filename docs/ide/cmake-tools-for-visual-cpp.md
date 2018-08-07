@@ -1,7 +1,9 @@
 ---
 title: Visual C++의 CMake 프로젝트 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 04/28/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,18 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a65ae6cc58f649fee5f47b33a146263a3b6c55
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 38bcd102e94ac98aba56a4eb98b69df6d3f16111
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337433"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238567"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual C++의 CMake 프로젝트
 
 이 문서에서는 여러 플랫폼에서 실행되는 빌드 프로세스를 정의하는 플랫폼 간 오픈 소스 도구인 CMake에 익숙하다고 가정합니다.
 
-최근까지 Visual Studio 사용자는 CMake를 사용하여 MSBuild 프로젝트 파일을 생성한 다음, IDE에서 IntelliSense, 검색 및 컴파일을 수행하는 데 이 파일을 사용했습니다. Visual Studio 2017부터 **CMake용 Visual C++ 도구** 구성 요소에서 **폴더 열기** 기능을 사용하여 IDE에서 IntelliSense 및 검색을 수행하는 데 CMake 프로젝트 파일(예: CMakeLists.txt)을 직접 사용할 수 있습니다. Visual Studio 생성기를 사용하는 경우 임시 프로젝트 파일이 생성되어 msbuild.exe에 전달되지만 IntelliSense 또는 검색을 위해 로드되지는 않습니다. 
+Visual Studio 2015에서 Visual Studio 사용자는 [CMake 생성기](https://cmake.org/cmake/help/v3.9/manual/cmake-generators.7.html)를 사용하여 MSBuild 프로젝트 파일을 생성합니다. 그러면 IDE에서는 IntelliSense, 검색 및 컴파일에 사용합니다. 
+
+Visual Studio 2017부터 **CMake용 Visual C++ 도구** 구성 요소에서 **폴더 열기** 기능을 사용하여 IDE에서 IntelliSense 및 검색을 수행하는 데 CMake 프로젝트 파일(예: CMakeLists.txt)을 직접 사용할 수 있습니다. Visual Studio 생성기를 사용하는 경우 임시 프로젝트 파일이 생성되어 msbuild.exe에 전달되지만 IntelliSense 또는 검색을 위해 로드되지는 않습니다. 
 
 **Visual Studio 2017 버전 15.3**: Ninja 및 Visual Studio 생성기 모두에 대한 지원이 제공됩니다.
 
@@ -33,6 +37,7 @@ ms.locfileid: "33337433"
 
 **Visual Studio 2017 버전 15.5**: 기존 CMake 캐시 가져오기에 대한 지원이 추가되었습니다. Visual Studio는 자동으로 사용자 지정 변수를 추출하고 미리 채워진 CMakeSettings.json 파일을 만듭니다.
 
+**Visual Studio 2017 버전 15.7**: 자동 캐시 생성, **솔루션 탐색기**의 대상 보기 및 단일 파일 컴파일을 사용하지 않도록 지원이 추가됩니다.
 
 ## <a name="installation"></a>설치
 
@@ -46,16 +51,25 @@ ms.locfileid: "33337433"
 
 - Visual Studio에서 CMake 스크립트를 보고 편집하는 명령이 있는 **CMake** 메뉴 항목이 주 메뉴에 추가됩니다.
 - **솔루션 탐색기**에서 폴더 구조와 파일이 표시됩니다.
-- Visual Studio에서 CMake.exe를 실행하고 x86 디버그인 기본 *구성*에 대한 CMake 캐시를 생성합니다. CMake 명령줄이 CMake의 추가 출력과 함께 **출력 창**에 표시됩니다.
+- Visual Studio에서 CMake.exe를 실행하고 x86 디버그인 기본 *구성*에 대한 CMake 캐시를 생성합니다. CMake 명령줄이 CMake의 추가 출력과 함께 **출력 창**에 표시됩니다.  **Visual Studio 2017 버전 15.7 이상**: 자동 캐시 생성은 **도구 | 옵션 | CMake | 일반** 대화 상자에서 비활성화할 수 있습니다.
 - IntelliSense, 검색 정보, 리팩터링 등을 사용할 수 있도록 하기 위해 Visual Studio에서 백그라운드로 소스 파일을 인덱싱합니다. 작업하는 동안 Visual Studio에서 편집기와 디스크의 변경 내용을 모니터링하여 인덱스가 소스와 동기화되도록 유지합니다.
  
 여러 CMake 프로젝트가 포함된 폴더를 열 수 있습니다. Visual Studio에서는 작업 영역의 모든 "루트" CMakeLists.txt 파일을 검색하고 구성합니다. C++ IntelliSense 및 검색뿐만 아니라 CMake 작업(구성, 빌드, 디버그)도 작업 영역의 모든 CMake 프로젝트에서 사용할 수 있습니다.
 
-![여러 루트가 있는 CMake 프로젝트](media/cmake-multiple-roots.png) 
+![여러 루트가 있는 CMake 프로젝트](media/cmake-multiple-roots.png)  
+
+**Visual Studio 2017 버전 15.7 이상**: 대상별로 논리적으로 구성된 프로젝트를 볼 수도 있습니다. **솔루션 탐색기** 도구 모음의 드롭다운 목록에서 **대상 보기**를 선택합니다.
+
+![CMake 대상 보기 단추](media/cmake-targets-view.png)
 
 ## <a name="import-an-existing-cache"></a>기존 캐시 가져오기
 
-기존 CMakeCache.txt 파일을 가져오면 Visual Studio에서 자동으로 사용자 지정 변수를 추출하고 이에 따라 미리 채워진 CMakeSettings.json 파일을 만듭니다. 원래 캐시는 어떤 방식으로든 수정되지 않으며, 명령줄 또는 생성하는 데 사용된 도구 또는 IDE를 통해 계속 사용할 수 있습니다. 새 CMakeSettings.json 파일은 프로젝트의 루트 CMakeLists.txt와 함께 배치됩니다. Visual Studio에서는 설정 파일을 기반으로 하여 새 캐시를 생성합니다. 캐시의 모든 항목을 가져오지는 않습니다.  생성기 및 컴파일러 위치와 같은 속성은 IDE에서 제대로 작동하는 것으로 알려진 기본값으로 대체됩니다.
+기존 CMakeCache.txt 파일을 가져오면 Visual Studio에서 자동으로 사용자 지정 변수를 추출하고 이에 따라 미리 채워진 CMakeSettings.json 파일을 만듭니다. 원래 캐시는 어떤 방식으로든 수정되지 않으며, 명령줄 또는 생성하는 데 사용된 도구 또는 IDE를 통해 계속 사용할 수 있습니다. 새 CMakeSettings.json 파일은 프로젝트의 루트 CMakeLists.txt와 함께 배치됩니다. Visual Studio에서는 설정 파일을 기반으로 하여 새 캐시를 생성합니다.  
+
+
+**Visual Studio 2017 버전 15.7 이상**: **도구 | 옵션 | CMake | 일반** 대화 상자에서 자동 캐시 생성을 재정의할 수 있습니다.
+
+캐시의 모든 항목을 가져오지는 않습니다.  생성기 및 컴파일러 위치와 같은 속성은 IDE에서 제대로 작동하는 것으로 알려진 기본값으로 대체됩니다.
 
 ### <a name="to-import-an-existing-cache"></a>기존 캐시를 가져오려면
 
@@ -98,8 +112,7 @@ Visual Studio 생성기가 활성 구성으로 선택되면 `-m -v:minimal` 인�
 
 CMake 프로젝트를 디버그하려면 원하는 구성을 선택하고 **F5** 키를 누르거나 도구 모음에서 **실행** 단추를 누릅니다. **실행** 단추에서 "시작 항목 선택"이라고 표시되면 드롭다운 화살표를 선택하고 실행할 대상을 선택합니다. (CMake 프로젝트에서 "현재 문서" 옵션은 .cpp 파일에만 유효합니다.) 
 
-![CMake 실행 단추](media/cmake-run-button.png "Cmake 실행 단추")
-
+![CMake 실행 단추](media/cmake-run-button.png "CMake 실행 단추")
 
 **실행** 또는 **F5** 명령은 이전 빌드 이후 변경된 경우 프로젝트를 먼저 빌드합니다.
 
@@ -168,7 +181,6 @@ CMakeLists.txt 파일을 편집하려면 **솔루션 탐색기**에서 파일을
 
    ![설정 변경에 대한 CMake 주 메뉴 명령](media/cmake-change-settings.png)
 
-
 JSON IntelliSense를 사용하면 CMakeSettings.json 파일을 편집할 수 있습니다.
 
    ![CMake JSON IntelliSense](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
@@ -192,7 +204,6 @@ JSON IntelliSense를 사용하면 CMakeSettings.json 파일을 편집할 수 있
 
 1. **name**: C++ 구성 드롭다운에 표시되는 이름입니다. 이 속성 값은 매크로(`${name}`)로 사용되어 다른 속성 값을 지정할 수 있습니다. 예를 들어 CMakeSettings.json의 **buildRoot** 정의를 참조합니다.
 1. **generator**: **-G** 스위치에 매핑되고 사용할 생성기를 지정합니다. 이 속성도 매크로(`${generator}`)로 사용되어 다른 속성 값을 지정할 수 있도록 합니다. Visual Studio에서 현재 지원하는 CMake 생성기는 다음과 같습니다.
-
 
     - "Ninja"
     - "Visual Studio 14 2015"
@@ -363,3 +374,11 @@ CMakeSettings.json 또는 CMakeLists.txt 파일을 크게 변경하면 Visual St
 - **캐시 폴더 열기**는 빌드 루트 폴더에 대한 탐색기 창을 엽니다.  
 - **캐시 정리**는 다음 CMake 구성 단계를 정리된 캐시에서 시작하도록 빌드 루트 폴더를 삭제합니다.
 - **캐시 생성**은 Visual Studio에서 최신 환경으로 간주하는 경우에도 생성 단계를 강제로 수행합니다.
+ 
+**Visual Studio 2017 버전 15.7 이상**: 자동 캐시 생성은 **도구 | 옵션 | CMake | 일반** 대화 상자에서 비활성화할 수 있습니다.
+
+## <a name="single-file-compilation"></a>단일 파일 컴파일
+
+**Visual Studio 2017 버전 15.7 이상**: CMake 프로젝트에서 단일 파일을 빌드하려면 **솔루션 탐색기**의 파일을 마우스 오른쪽 단추로 클릭하고 **컴파일**을 선택합니다. 또한 기본 CMake 메뉴를 사용하여 편집기에서 현재 열려 있는 파일을 빌드할 수 있습니다.
+
+![CMake 단일 파일 컴파일](media/cmake-single-file-compile.png)

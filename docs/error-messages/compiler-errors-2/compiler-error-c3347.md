@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253110"
 ---
 # <a name="compiler-error-c3347"></a>컴파일러 오류 C3347
 'arg': idl_module 특성에 필수 인수를 지정하지 않았습니다.  

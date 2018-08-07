@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249563"
 ---
 # <a name="compiler-error-c3619"></a>컴파일러 오류 C3619
 관리되는 형식 또는 WinRT 형식 내에 템플릿을 선언할 수 없습니다.  

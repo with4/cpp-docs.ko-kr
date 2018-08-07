@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274656"
 ---
 # <a name="compiler-warning-level-1-c4010"></a>컴파일러 경고 (수준 1) C4010
 단일 줄으로 된 주석 줄 연속 문자를 포함합니다.  

@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2073e432dd0d0792e358a3f159892aea405197c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33068a96d8d0ca0a228012385da6437c455468e5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928543"
 ---
 # <a name="document-classes"></a>문서 클래스
 문서 클래스 개체, 문서 템플릿 개체에서 만든 응용 프로그램의 데이터를 관리 합니다. 이러한 클래스 중 하나에서 문서에 대 한 클래스를 파생 합니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/04/2018
  문서 클래스 개체의 뷰 개체와 상호 작용 합니다. 창의 클라이언트 영역 나타내고 문서의 데이터를 표시할 사용자가 상호 작용할 수 있도록 하는 개체 보기. 문서 및 뷰 문서 템플릿 개체에 의해 생성 됩니다.  
   
  [CDocument](../mfc/reference/cdocument-class.md)  
- 응용 프로그램 관련 문서에 대 한 기본 클래스입니다. 문서 클래스 또는 클래스에서 파생 **CDocument**합니다.  
+ 응용 프로그램 관련 문서에 대 한 기본 클래스입니다. 문서 클래스 또는 클래스에서 파생 `CDocument`합니다.  
   
  [COleDocument](../mfc/reference/coledocument-class.md)  
  기본 컨테이너 지원 뿐 아니라 복합 문서 구현에 사용 합니다. 파생 된 클래스에 대 한 컨테이너 역할 [CDocItem](../mfc/reference/cdocitem-class.md)합니다. 이 클래스 컨테이너에 설명 하며 기본 클래스에 대 한 기본 클래스로 사용할 수 있습니다 `COleServerDoc`합니다.  

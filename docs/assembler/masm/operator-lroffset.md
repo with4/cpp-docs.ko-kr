@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056592"
 ---
 # <a name="operator-lroffset"></a>연산자 LROFFSET
 오프셋을 반환 *식*합니다. 와 동일 **오프셋**, 하지만 Windows 코드 세그먼트를 다시 할당할 수 있는 로더 해결된 오프셋을 생성 합니다.  

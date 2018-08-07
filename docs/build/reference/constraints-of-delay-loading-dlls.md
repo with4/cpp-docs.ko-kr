@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375918"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>DLL 지연 로드의 제약 조건
 가져오기 지연 로드에 대한 제약 조건이 있습니다.  

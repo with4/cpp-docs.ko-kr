@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384167"
 ---
 # <a name="reading-pointer-values"></a>포인터 값 읽기
 **ANSI 4.9.6.2** `fscanf`함수의 **%p** 변환에 대한 입력  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874098"
 ---
 # <a name="default-control-events"></a>기본 컨트롤 이벤트
 다음 컨트롤 이름 함께 제공 되는 기본 이벤트를 갖습니다.  

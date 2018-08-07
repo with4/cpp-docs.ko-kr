@@ -16,18 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce914f47f62a742b24830d848fd9d82b91796f31
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408055"
 ---
 # <a name="arrays-c"></a>배열 (C++)
 배열은 서로 유사한 개체의 컬렉션입니다. 가장 간단한 배열은 다음과 같은 시퀀스로 선언될 수 있는 벡터입니다.  
   
 ```  
-  
-      decl-specifier identifier [ constant-expression ]  
+decl-specifier identifier [ constant-expression ]  
 decl-specifier identifier []  
 decl-specifier identifer [][ constant-expression] . . .  
 decl-specifier identifier [ constant-expression ]  
@@ -38,7 +38,7 @@ decl-specifier identifier [ constant-expression ]
   
 -   선택적 저장소 클래스 지정자.  
   
--   선택적 **const** 및/또는 `volatile` 지정자입니다.  
+-   선택적 **상수** 및/또는 **volatile** 지정자입니다.  
   
 -   배열 요소의 형식 이름입니다.  
   
@@ -46,17 +46,17 @@ decl-specifier identifier [ constant-expression ]
   
 -   식별자입니다.  
   
--   괄호 안의 정수 계열 형식의 상수 식은 **.** 추가 대괄호를 사용 하 여 여러 차원을 선언 하는 경우 첫 번째 대괄호 집합에서 상수 식을 생략할 수 있습니다.  
+-   대괄호로 묶인 정수 계열 형식의 상수 식 **[]** 합니다. 추가 대괄호를 사용 하 여 여러 차원을 선언 하는 경우 첫 번째 대괄호 집합에서 상수 식을 생략할 수 있습니다.  
   
 -   상수 식을 묶는 선택적 추가 대괄호입니다.  
   
  3. 선택적 이니셜라이저입니다.  참조 [이니셜라이저](../cpp/initializers.md)합니다.  
   
- 배열의 요소 수는 상수 식으로 지정됩니다. 배열의 첫 번째 요소는 0 번째 요소가 고 마지막 요소는는 (*n*-1) 요소를 여기서 *n* 수의 요소를 배열에 포함 될 수 있습니다. *문* 정수 계열 형식 이어야 하며 0 보다 커야 합니다. 크기가 0 인 배열이 배열에서 마지막 필드가 경우에 법적는 `struct` 또는 **union** 있고 Microsoft 확장명 (/Ze)을 사용 합니다.  
+ 배열의 요소 수는 상수 식으로 지정됩니다. 배열의 첫 번째 요소는 0 번째 요소 이며 마지막 요소는 (*n*-1) 요소에 있는 *n* 요소 배열에 포함 될 수입니다. 합니다 *상수-식* 정수 계열 형식 이어야 하며 0 보다 커야 합니다. 크기가 0 인 배열은 배열이의 마지막 필드가 있는 경우에 유효는 **구조체** 하거나 **union** Microsoft 확장 (/Ze)을 사용 하는 경우 및 합니다.  
   
  다음 예제에서는 런타임에 배열을 정의하는 방법을 보여 줍니다.  
   
-```  
+```cpp 
 // arrays.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -77,22 +77,22 @@ int main() {
 }  
 ```  
   
- 배열은 파생 형식이므로 함수, 참조 및 `void`를 제외하고 다른 모든 파생 형식 또는 기본 형식에서 생성될 수 있습니다.  
+ 배열은 파생 형식 및 함수에 대 한 참조를 제외 하 고 다른 파생 또는 기본 형식에서 생성할 수 있습니다 하 고 **void**합니다.  
   
  다른 배열에서 생성된 배열은 다차원 배열입니다. 이러한 다차원 배열은 여러 개의 대괄호로 묶인 상수 식을 순서대로 배치하여 지정됩니다. 예를 들어 다음 선언을 생각해 볼 수 있습니다.  
   
-```  
+```cpp 
 int i2[5][7];  
 ```  
   
- 이는 다음 그림과 같이 5개의 행과 7개의 열로 된 2차원 행렬에 개념적으로 정렬된 `int` 형식의 배열을 지정합니다.  
+ 형식의 배열을 지정 합니다 **int**, 다음 그림에 표시 된 대로 5 개의 행과 7 개의 열, 2 차원 행렬에 개념적으로 정렬 합니다.  
   
- ![다중의 개념적 레이아웃&#45;차원 배열](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![다중의 개념적 레이아웃&#45;차원 배열인](../cpp/media/vc38rc1.gif "vc38RC1")  
 다차원 배열의 개념적 레이아웃  
   
  이니셜라이저 목록이 있는 다차원 배열의 선언에서 (에 설명 된 대로 [이니셜라이저](../cpp/initializers.md)), 첫 번째 차원에 대 한 범위를 지정 하는 상수 식을 생략할 수 있습니다. 예를 들어:  
   
-```  
+```cpp 
 // arrays2.cpp  
 // compile with: /c  
 const int cMarkets = 4;  
@@ -118,10 +118,10 @@ double TransportCosts[][cMarkets] = {
   
 -   [C++ 배열 순서 지정](../cpp/ordering-of-cpp-arrays.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다차원 배열의 첫 번째 차원에 대한 범위 지정을 생략하는 기술은 함수 선언에 다음과 같이 사용할 수도 있습니다.  
   
-```  
+```cpp 
 // multidimensional_arrays.cpp  
 // compile with: /EHsc  
 // arguments: 3  
@@ -173,7 +173,4 @@ The minimum cost to Market 3 is: 17.29
 ```  
   
 ## <a name="comments"></a>설명  
- `FindMinToMkt` 함수는 새 공장을 추가할 때 코드 변경 내용 없이 다시 컴파일하기만 하는 방식으로 작성됩니다.  
-  
-## <a name="see-also"></a>참고 항목  
- 
+ `FindMinToMkt` 함수는 새 공장을 추가할 때 코드 변경 내용 없이 다시 컴파일하기만 하는 방식으로 작성됩니다. 

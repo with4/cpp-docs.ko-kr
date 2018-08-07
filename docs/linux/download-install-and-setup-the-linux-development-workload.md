@@ -1,7 +1,8 @@
 ---
-title: Linux 작업 다운로드, 설치, 설정 | Microsoft Docs
+title: Visual Studio에서 C++ Linux 워크로드 설치 | Microsoft Docs
+description: Visual Studio에서 C++에 대한 Linux 워크로드를 다운로드하고, 설치하고, 설정하는 방법을 설명합니다.
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,13 +13,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 1d28f0db0ff91dbdb08c9ca88dfe197e8942a7f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e33b9ac72ca7691ccbb80a9a30349d3a1e31e194
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207561"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Linux 작업 다운로드, 설치, 설정
+
+Visual Studio IDE를 사용하여 Linux에서 C++ 프로젝트를 만들고 디버깅하려면 **C++를 사용한 Linux 개발** 워크로드를 설치해야 합니다.
 
 ## <a name="visual-studio-setup"></a>Visual Studio 설치
 1. Visual Studio 설치 관리자를 시작하고 **C++를 사용한 Linux 개발** 작업을 선택합니다.

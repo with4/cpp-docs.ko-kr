@@ -19,16 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 96db2ea0c28e14f7a8e614d94e18cd3fad3cda53
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339012"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC에서 사용하는 콜백 함수
-Microsoft Foundation Class 라이브러리에 3 개의 콜백 함수가 나타납니다. 이러한 콜백 함수에 전달 되 [cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects), [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring), 및 [cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)합니다. 모든 콜백 함수 콜백 경계를 넘어 예외를 throw 할 수 없는 이후 창에 반환 하기 전에 MFC 예외를 트래핑 해야 참고 합니다. 예외에 대 한 자세한 내용은 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
+Microsoft Foundation Class 라이브러리에 세 개의 콜백 함수가 나타납니다. 이러한 콜백 함수에 전달 되 [cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects)하십시오 [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring), 및 [cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)합니다. 콜백 경계를 넘어 예외를 throw 할 수 없습니다 때문에 Windows를 반환 하기 전에 모든 콜백 함수가 MFC 예외를 트래핑 해야 하는 참고 합니다. 예외에 대 한 자세한 내용은 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
 
-|이름||  
+|name||  
 |----------|-----------------|  
 |[CDC::EnumObjects에 대한 콜백 함수](#enum_objects)||  
 |[CDC::GrayString에 대한 콜백 함수](#graystring)||
@@ -38,7 +39,7 @@ Microsoft Foundation Class 라이브러리에 3 개의 콜백 함수가 나타�
  **헤더:** afxwin.h 
 
 ## <a name="enum_objects"></a> Cdc:: enumobjects에 대 한 콜백 함수
-*ObjectFunc* 이름은 응용 프로그램 제공 하는 함수 이름에 대 한 자리 표시자입니다.  
+합니다 *ObjectFunc* 이름은 응용 프로그램 제공 함수 이름의 자리 표시자입니다.  
   
 ### <a name="syntax"></a>구문  
   
@@ -50,19 +51,19 @@ int CALLBACK EXPORT ObjectFunc(
   
 ### <a name="parameters"></a>매개 변수  
  *lpszLogObject*  
- 가리키는 [LOGPEN](../../mfc/reference/logpen-structure.md) 또는 [LOGBRUSH](../../mfc/reference/logbrush-structure.md) 개체의 논리적 특성에 대 한 정보를 포함 하는 데이터 구조입니다.  
+ 가리키는 [LOGPEN](../../mfc/reference/logpen-structure.md) 하거나 [LOGBRUSH](../../mfc/reference/logbrush-structure.md) 개체의 논리적 특성에 대 한 정보를 포함 하는 데이터 구조입니다.  
   
- `lpData`  
- 에 전달 되는 응용 프로그램에서 제공 하는 데이터를 가리키는 `EnumObjects` 함수입니다.  
+ *lpData*  
+ 응용 프로그램에서 제공한 데이터를 가리킵니다. 전달 된 `EnumObjects` 함수입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 콜백 함수는 반환 된 `int`합니다. 이 반환 값은 사용자 정의입니다. 콜백 함수가 0을 반환 하는 경우 `EnumObjects` 열거형 일찍 중지 합니다.  
+ 콜백 함수에서 반환 된 **int**합니다. 이 반환 값은 사용자 정의입니다. 콜백 함수가 0을 반환 하는 경우 `EnumObjects` 열거형 조기에 중지 됩니다.  
   
 ### <a name="remarks"></a>설명  
  실제 이름을 내보내야 합니다.  
   
 ## <a name="graystring"></a>  Cdc:: graystring에 대 한 콜백 함수
-*OutputFunc* 는 응용 프로그램에서 제공 하는 콜백 함수 이름에 대 한 자리 표시자입니다.  
+*OutputFunc* 응용 프로그램에서 제공한 콜백 함수 이름에 대 한 자리 표시자입니다.  
   
 ### <a name="syntax"></a>구문  
   
@@ -74,23 +75,23 @@ BOOL CALLBACK EXPORT OutputFunc(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hDC`  
- 최소한의 비트맵으로 메모리 장치 컨텍스트를 식별 너비와 높이에서 지정한 `nWidth` 및 `nHeight` 를 `GrayString`합니다.  
+ *hDC*  
+ 최소한의 비트맵을 사용 하 여 메모리 장치 컨텍스트를 식별 너비와 높이 지정 된 `nWidth` 하 고 `nHeight` 에 `GrayString`입니다.  
   
- `lpData`  
+ *lpData*  
  그릴 문자열을 가리킵니다.  
   
- `nCount`  
+ *nCount*  
  출력에 문자 수를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 콜백 함수의 반환 값 이어야 합니다 **TRUE** 성공을 나타내기 위해 그렇지 않은 경우 **FALSE**합니다.  
+ 콜백 함수의 반환 값 TRUE 성공을 나타내려면를 해야 합니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 콜백 함수 (*OutputFunc*) 좌표 (0, 0)를 기준으로 이미지를 그리기 해야 대신 (*x*, *y*).  
+ 콜백 함수 (*OutputFunc*) (0, 0) 좌표를 기준으로 이미지를 그리기 해야 대신 (*x*에 *y*).  
 
 ## <a name="setabortproc"></a>  Cdc:: setabortproc에 대 한 콜백 함수
-이름을 *AbortFunc* 는 응용 프로그램 제공 하는 함수 이름에 대 한 자리 표시자입니다.  
+이름을 *AbortFunc* 응용 프로그램 제공 함수 이름에 대 한 자리 표시자입니다.  
   
 ### <a name="syntax"></a>구문  
   
@@ -104,14 +105,14 @@ BOOL CALLBACK EXPORT AbortFunc(
  *hPr*  
  장치 컨텍스트를 식별합니다.  
   
- `code`  
- 오류가 발생 했는지를 지정 합니다. 오류가 발생 하지 않은 경우 0입니다. **SP_OUTOFDISK** 인쇄 관리자가 현재 디스크 공간이 부족 하 고 더 많은 디스크 공간이 응용 프로그램이 대기 하는 경우에 사용할 수 있게 됩니다. 경우 `code` 은 **SP_OUTOFDISK**, 응용 프로그램에서 인쇄 작업을 중단할 필요가 없습니다. 호출 하 여 인쇄 관리자를 생성 해야 표시 되지 않는 경우는 **PeekMessage** 또는 **GetMessage** Windows 함수입니다.  
+ *코드*  
+ 오류가 발생 했는지 여부를 지정 합니다. 오류가 발생 하지 않은 경우 0입니다. 이 경우 SP_OUTOFDISK 인쇄 관리자의 현재 디스크 공간이 부족 하 고 더 많은 디스크 공간을 사용할 수 있게 됩니다 응용 프로그램이 대기 하는 경우입니다. 하는 경우 *코드* SP_OUTOFDISK에는 응용 프로그램에서 인쇄 작업을 중단할 필요가 없습니다. 호출 하 여 인쇄 관리자를 생성 해야 표시 되지 않는 경우는 `PeekMessage` 또는 `GetMessage` Windows 함수입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 중단-처리기 함수의 반환 값은 인쇄 작업을 계속 하려면는 0이 아닌 하 고 0 취소 된 경우.  
+ 중단-처리기 함수의 반환 값은 인쇄 작업을 계속 하려면 이면 0이 아닌 값 및 0 취소 되 면 합니다.  
   
 ### <a name="remarks"></a>설명  
- 설명 섹션에 설명 된 대로 실제 이름으로 내보내야 하며 [cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)합니다.  
+ 실제 이름을의 설명 섹션에 설명 된 대로 내보내야 [cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)합니다.  
  
   
 ## <a name="see-also"></a>참고 항목  

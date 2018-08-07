@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136004"
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>방법: 대리자 정의 및 사용(C++/CLI)
 이 문서에서는 C + 대리자 정의 및 사용 하는 방법을 보여 줍니다. + CLI 합니다.  

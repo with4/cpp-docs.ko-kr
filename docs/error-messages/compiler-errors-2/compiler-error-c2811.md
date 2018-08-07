@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236081"
 ---
 # <a name="compiler-error-c2811"></a>컴파일러 오류 C2811
 'type1': ref 'type2'에서 상속할 수 없습니다는 ref 클래스 또는 인터페이스 클래스에서 클래스 에서만 상속할 수 있습니다  

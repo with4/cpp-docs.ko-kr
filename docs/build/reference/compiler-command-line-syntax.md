@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370123"
 ---
 # <a name="compiler-command-line-syntax"></a>컴파일러 명령줄 구문
 CL 명령줄에 다음 구문을 사용합니다.  

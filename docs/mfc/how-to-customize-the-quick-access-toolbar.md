@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349648"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>방법: 빠른 실행 도구 모음 사용자 지정
 QAT(빠른 실행 도구 모음)는 응용 프로그램 단추 옆 또는 범주 탭 아래에 표시된 명령 집합이 포함된 사용자 지정 가능한 도구 모음입니다. 다음 그림에서는 일반적인 빠른 실행 도구 모음을 보여 줍니다.  

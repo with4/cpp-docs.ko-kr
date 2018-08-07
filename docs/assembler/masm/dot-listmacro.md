@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050963"
 ---
 # <a name="listmacro"></a>.LISTMACRO
 코드 또는 데이터를 생성 하는 매크로 확장 문 목록 시작 합니다.  

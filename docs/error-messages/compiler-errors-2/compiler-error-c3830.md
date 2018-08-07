@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267256"
 ---
 # <a name="compiler-error-c3830"></a>컴파일러 오류 C3830
 'type1': 값 형식 인터페이스 클래스에서 에서만 상속할 수 있습니다 'type2'에서 상속할 수 없습니다  

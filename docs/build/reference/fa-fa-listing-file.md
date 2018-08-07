@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378953"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa(목록 파일)
 어셈블러 코드가 포함 된 목록 파일을 만듭니다.  

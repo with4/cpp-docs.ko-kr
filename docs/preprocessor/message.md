@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846365"
 ---
 # <a name="message"></a>message
 컴파일이 종료되지 않은 상태에서 문자열 리터럴을 표준 출력에 보냅니다.  

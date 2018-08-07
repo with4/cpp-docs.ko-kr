@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342035"
 ---
 # <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl vs입니다. CTreeView
 트리 컨트롤을 캡슐화 하는 두 개의 클래스를 제공 하는 MFC: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) 및 [CTreeView](../mfc/reference/ctreeview-class.md)합니다. 각 클래스는 여러 가지 상황에서 유용 합니다.  

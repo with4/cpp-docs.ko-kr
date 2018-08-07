@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877542"
 ---
 # <a name="new-toolbar-resource-dialog-box"></a>새 도구 모음 리소스 대화 상자
 새 도구 모음 리소스 대화 상자를 사용 하는 도구 모음 리소스를 추가 하는 단추의 높이 너비를 지정할 수 있습니다. 기본값은 16 x 15 픽셀입니다.  

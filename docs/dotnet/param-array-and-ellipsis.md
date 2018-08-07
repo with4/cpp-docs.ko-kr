@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33158523"
 ---
 # <a name="param-array-and-ellipsis"></a>매개 변수 배열 및 가변 매개 변수(...)
 오버 로드 된 함수 호출을 확인 하는 것에 대 한 매개 변수 배열의 우선 순위 Visual c + + Managed Extensions for c + + 변경 되었습니다.  

@@ -1,7 +1,7 @@
 ---
 title: EXIT_SUCCESS, EXIT_FAILURE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -18,25 +18,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22bb302e89ae8bb6c4586c09c38a51b8c848eb7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 671946045de5cfd2a7a34e163b459ebfc3bb5479
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954350"
 ---
 # <a name="exitsuccess-exitfailure"></a>EXIT_SUCCESS, EXIT_FAILURE
-## <a name="syntax"></a>구문  
-  
-```  
-  
-#include <stdlib.h>  
-```  
-  
-## <a name="remarks"></a>설명  
- **exit** 및 `_exit` 함수에 대한 인수이자 `atexit` 및 `_onexit` 함수의 반환 값입니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [atexit](../c-runtime-library/reference/atexit.md)   
- [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)   
- [전역 상수](../c-runtime-library/global-constants.md)
+
+## <a name="required-header"></a>필수 헤더
+
+```c
+#include <stdlib.h>
+```
+
+## <a name="remarks"></a>설명
+
+[exit](reference/exit-exit-exit.md) 및 [_exit](reference/exit-exit-exit.md) 함수에 대한 인수이자 [atexit](reference/atexit.md) 및 [_onexit](reference/onexit-onexit-m.md) 함수의 반환 값입니다.
+
+|상수|정의된 값|
+|-|-|
+|EXIT_SUCCESS|0|
+|EXIT_FAILURE|1|
+
+## <a name="see-also"></a>참고 항목
+
+[전역 상수](../c-runtime-library/global-constants.md)

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891768"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>사용자 정의 특성(C++ 구성 요소 확장)
 사용자 지정 특성을 사용 하는 인터페이스, 클래스 또는 구조, 메서드, 매개 변수 또는 열거형의 메타 데이터를 확장할 수 있습니다.  

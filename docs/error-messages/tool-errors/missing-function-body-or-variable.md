@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316727"
 ---
 # <a name="missing-function-body-or-variable"></a>함수 본문 또는 변수 누락
 함수 프로토타입 컴파일러 오류 없이 계속할 수 있지만 함수 코드 또는 예약 된 변수 공간이 없을 링커가 주소에 대 한 호출을 확인할 수 없습니다. 링커에서 확인 해야 하는 함수에 대 한 호출을 만들 때까지이 오류가 나타나지 않습니다.  

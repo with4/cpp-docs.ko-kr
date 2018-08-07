@@ -6,11 +6,12 @@ ms.topic: reference
 f1_keywords:
 - memory/std::pointer_safety
 ms.assetid: b9be0a7b-0beb-40b2-8183-911de371c6b9
-ms.openlocfilehash: 4d33cf941341f26c88f3a73c5a3d9ac0326db545
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b9ea485bb66292c3c0509036c22dd161a694dd3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961424"
 ---
 # <a name="ltmemorygt-enums"></a>&lt;memory&gt; 열거형
 
@@ -26,7 +27,7 @@ class pointer_safety { relaxed, preferred, strict };
 
 ### <a name="remarks"></a>설명
 
-범위 `enum`은 `get_pointer_safety()`에서 반환할 수 있는 값을 정의합니다.
+범위 **enum** 에서 반환 될 수 있는 값을 정의 `get_pointer_safety()`:
 
 `relaxed` - 안전하게 파생되지 않은 포인터(선언되거나 할당된 개체에 대한 포인터)를 안전하게 파생된 포인터와 동일하게 처리합니다.
 

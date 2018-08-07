@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253369"
 ---
 # <a name="compiler-error-c3603"></a>컴파일러 오류 C3603
 'Symbol': ' type' 아직 지원 하지 않습니다  

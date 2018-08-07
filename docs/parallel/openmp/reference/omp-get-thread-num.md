@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690740"
 ---
 # <a name="ompgetthreadnum"></a>omp_get_thread_num
 해당 스레드 팀 내에서 실행 중인 스레드의 스레드 수를 반환 합니다.  

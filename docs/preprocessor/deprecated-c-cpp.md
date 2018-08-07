@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839821"
 ---
 # <a name="deprecated-cc"></a>사용되지 않음 (C/C++)
 **사용 되지 않는** pragma는 함수, 형식 또는 다른 식별자 더 이상 지원 되지 않을 이후에서 표시를 사용 하면 임대 해제 또는 더 이상 사용 해야 합니다.  

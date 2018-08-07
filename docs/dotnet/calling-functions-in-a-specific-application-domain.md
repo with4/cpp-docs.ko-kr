@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104908"
 ---
 # <a name="calling-functions-in-a-specific-application-domain"></a>특정 응용 프로그램 도메인에서 함수 호출
 특정 응용 프로그램 도메인에서 함수 호출을 지원 합니다.  

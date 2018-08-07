@@ -12,17 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c5217b1860affd05f433c6a3bf944afeb6c13f9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97447189419bad8d3ad6f2026a7ee5f701ebca04
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466958"
 ---
 # <a name="template-friends"></a>템플릿 friend
 
-클래스 템플릿은 점이 [친구](friend-cpp.md)합니다. 클래스 또는 클래스 템플릿, 함수 또는 함수 템플릿은 템플릿 클래스에 대한 friend일 수 있습니다. friends는 클래스 템플릿 또는 함수 템플릿의 특수화가 될 수도 있지만 부분 특수화는 될 수 없습니다.  
+클래스 템플릿 있을 수 있습니다 [친구](friend-cpp.md)합니다. 클래스 또는 클래스 템플릿, 함수 또는 함수 템플릿은 템플릿 클래스에 대한 friend일 수 있습니다. friends는 클래스 템플릿 또는 함수 템플릿의 특수화가 될 수도 있지만 부분 특수화는 될 수 없습니다.  
   
-**C + + 11**: 폼을 사용 하 여 형식 매개 변수는 friend로 선언할 수 있습니다 `friend T;`합니다.  
+**C + + 11**: 양식을 사용 하 여 형식 매개 변수는 friend로 선언할 수 있습니다 `friend T;`합니다.  
   
 ```cpp
 template <typename T>  
@@ -33,7 +34,7 @@ class my_class
 };  
 ```  
   
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서 friend 함수는 클래스 템플릿 내에서 함수 템플릿으로 정의됩니다. 이 코드는 모든 템플릿 인스턴스화에 대한 friend 함수 버전을 만듭니다. 이 구문은 사용자의 friend 함수가 클래스와 같은 템플릿 매개 변수로 결정될 경우 유용합니다.  
   
@@ -113,7 +114,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z   
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
 다음 예제에서는 템플릿 특수화를 가진 friend를 다룹니다. 원본 함수 템플릿이 friend인 경우 함수 템플릿 특수화는 자동으로 friend입니다.  
   
@@ -203,7 +204,7 @@ int main()
 10 int  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  
 다음 예제에서는 클래스 템플릿 내에 선언된 friend 클래스 템플릿을 보여 줍니다. 클래스 템플릿은 friend 클래스의 템플릿 인수로 사용됩니다. friend 클래스 템플릿은 선언된 클래스 템플릿의 외부에 정의되어야 합니다. 또한 friend 템플릿의 모든 특수화 또는 부분 특수화는 원본 클래스 템플릿의 friend입니다.  
   
@@ -259,6 +260,5 @@ A
 a  
 ```  
   
-## <a name="see-also"></a>참고 항목  
-
-[기본 인수](../cpp/default-arguments.md)
+## <a name="see-also"></a>참고자료  
+ [기본 인수](../cpp/default-arguments.md)

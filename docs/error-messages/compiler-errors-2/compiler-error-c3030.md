@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245698"
 ---
 # <a name="compiler-error-c3030"></a>컴파일러 오류 C3030
 'var': 'reduction' 절/지시문의 변수는 참조 형식이 될 수 없습니다.  

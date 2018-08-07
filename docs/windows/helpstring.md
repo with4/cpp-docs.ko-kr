@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879008"
 ---
 # <a name="helpstring"></a>helpstring
 적용 되는 요소에 설명 하는 데 사용 되는 문자열을 지정 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254500"
 ---
 # <a name="compiler-error-c3373"></a>컴파일러 오류 C3373
 'attribute' 특성은 coclass의 경우를 제외하고 인수를 사용하지 않습니다.  

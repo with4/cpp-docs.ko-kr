@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300448"
 ---
 # <a name="linker-tools-error-lnk1312"></a>링커 도구 오류 LNK1312
 잘못 되었거나 손상 된 파일: 어셈블리를 가져올 수 없습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254136"
 ---
 # <a name="compiler-error-c3393"></a>컴파일러 오류 C3393
 제약 조건 절의 구문 오류: 'identifier'가 형식이 아닙니다.  

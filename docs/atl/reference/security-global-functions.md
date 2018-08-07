@@ -1,5 +1,5 @@
 ---
-title: 전역 함수를 보안 | Microsoft Docs
+title: 보안 전역 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad9ad170706b72c9d236e095db0e2b6df00031ff
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e6dcaeed793a81580b9ca5ed93ad7e267b534fe
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881177"
 ---
 # <a name="security-global-functions"></a>보안 전역 함수
 이러한 함수는 SID 및 ACL 개체를 수정 하기 위한 지원을 제공 합니다.  
   
 > [!IMPORTANT]
->  다음 표에 나열 된 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
+>  다음 표에 나열 된 함수를 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 |||  
 |-|-|  
@@ -67,20 +68,20 @@ inline bool AtlGetDacl(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hObject`  
- 보안 정보를 검색할에 대 한 개체에 대 한 핸들입니다.  
+ *hObject*  
+ 보안 정보를 검색 하는 개체에 대 한 핸들입니다.  
   
- `ObjectType`  
- 값을 지정 된 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 로 식별 된 개체의 형식을 나타내는 열거형은 `hObject` 매개 변수입니다.  
+ *ObjectType*  
+ 값을 지정 합니다 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 식별 되는 개체의 형식을 나타내는 열거형입니다 합니다 *hObject* 매개 변수입니다.  
   
- `pDacl`  
- 검색 된 보안 정보를 포함 하는 DACL 개체에 대 한 포인터입니다.  
+ *pDacl*  
+ 검색된 된 보안 정보를 포함 하는 DACL 개체에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 디버그 빌드에서 경우 어설션 오류가 발생 합니다 `hObject` 또는 `pDacl` 올바르지 않습니다.  
+ 디버그 빌드에서 경우 어설션 오류가 발생 합니다 *hObject* 하거나 *pDacl* 올바르지 않습니다.  
   
 ##  <a name="atlsetdacl"></a>  AtlSetDacl  
  지정된 개체의 DACL(임의 액세스 제어 목록) 정보를 설정하려면 이 함수를 호출합니다.  
@@ -97,23 +98,23 @@ inline bool AtlSetDacl(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hObject`  
- 보안 정보를 설정 하려는 개체에 대 한 핸들입니다.  
+ *hObject*  
+ 보안 정보를 설정 하는 개체에 대 한 핸들입니다.  
   
- `ObjectType`  
- 값을 지정 된 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 로 식별 된 개체의 형식을 나타내는 열거형은 `hObject` 매개 변수입니다.  
+ *ObjectType*  
+ 값을 지정 합니다 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 식별 되는 개체의 형식을 나타내는 열거형입니다 합니다 *hObject* 매개 변수입니다.  
   
- `rDacl`  
- 새 보안 정보를 포함 하는 DACL 합니다.  
+ *rDacl*  
+ 새 보안 정보를 포함 하는 DACL입니다.  
   
- `dwInheritanceFlowControl`  
- 상속 흐름 제어 합니다. 이 값은 0 (기본값) 이면 PROTECTED_DACL_SECURITY_INFORMATION 또는 UNPROTECTED_DACL_SECURITY_INFORMATION 일 수 있습니다.  
+ *dwInheritanceFlowControl*  
+ 상속 흐름 제어 합니다. 이 값은 0 (기본값), PROTECTED_DACL_SECURITY_INFORMATION 또는 UNPROTECTED_DACL_SECURITY_INFORMATION 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 디버그 빌드에 어설션 오류가 발생 하는 경우 발생 합니다 `hObject` 유효 하지 않을 경우 또는 `dwInheritanceFlowControl` 허용 되는 세 가지 값 중 하나가 아닙니다.  
+ 디버그 빌드에서 어설션 오류가 발생 하는 경우 *hObject* 유효 하지 않은 경우 *dwInheritanceFlowControl* 허용 되는 세 가지 값 중 하나가 아닙니다.  
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h 
 
@@ -131,14 +132,14 @@ inline bool AtlGetGroupSid(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hObject`  
- 보안 정보를 검색할 수 있는 개체에 대 한 핸들입니다.  
+ *hObject*  
+ 보안 정보를 검색 하는 개체에 대 한 핸들입니다.  
   
- `ObjectType`  
- 값을 지정 된 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 로 식별 된 개체의 형식을 나타내는 열거형은 `hObject` 매개 변수입니다.  
+ *ObjectType*  
+ 값을 지정 합니다 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 식별 되는 개체의 형식을 나타내는 열거형입니다 합니다 *hObject* 매개 변수입니다.  
   
- `pSid`  
- 에 대 한 포인터는 `CSid` 새 보안 정보를 포함 하는 개체입니다.  
+ *pSid*  
+ 에 대 한 포인터를 `CSid` 개체는 새 보안 정보가 포함 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
@@ -160,13 +161,13 @@ inline bool AtlSetGroupSid(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hObject`  
- 보안 정보를 설정 하려는 개체에 대 한 핸들입니다.  
+ *hObject*  
+ 보안 정보를 설정 하는 개체에 대 한 핸들입니다.  
   
- `ObjectType`  
- 값을 지정 된 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 로 식별 된 개체의 형식을 나타내는 열거형은 `hObject` 매개 변수입니다.  
+ *ObjectType*  
+ 값을 지정 합니다 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 식별 되는 개체의 형식을 나타내는 열거형입니다 합니다 *hObject* 매개 변수입니다.  
   
- `rSid`  
+ *rSid*  
  `CSid` 새 보안 정보를 포함 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -189,14 +190,14 @@ inline bool AtlGetOwnerSid(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hObject`  
- 보안 정보를 검색할 수 있는 개체에 대 한 핸들입니다.  
+ *hObject*  
+ 보안 정보를 검색 하는 개체에 대 한 핸들입니다.  
   
- `ObjectType`  
- 값을 지정 된 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 로 식별 된 개체의 형식을 나타내는 열거형은 `hObject` 매개 변수입니다.  
+ *ObjectType*  
+ 값을 지정 합니다 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 식별 되는 개체의 형식을 나타내는 열거형입니다 합니다 *hObject* 매개 변수입니다.  
   
- `pSid`  
- 에 대 한 포인터는 `CSid` 새 보안 정보를 포함 하는 개체입니다.  
+ *pSid*  
+ 에 대 한 포인터를 `CSid` 개체는 새 보안 정보가 포함 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
@@ -218,13 +219,13 @@ inline bool AtlSetOwnerSid(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hObject`  
- 보안 정보를 설정 하려는 개체에 대 한 핸들입니다.  
+ *hObject*  
+ 보안 정보를 설정 하는 개체에 대 한 핸들입니다.  
   
- `ObjectType`  
- 값을 지정 된 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 로 식별 된 개체의 형식을 나타내는 열거형은 `hObject` 매개 변수입니다.  
+ *ObjectType*  
+ 값을 지정 합니다 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 식별 되는 개체의 형식을 나타내는 열거형입니다 합니다 *hObject* 매개 변수입니다.  
   
- `rSid`  
+ *rSid*  
  `CSid` 새 보안 정보를 포함 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -248,23 +249,23 @@ inline bool AtlGetSacl(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hObject`  
- 보안 정보를 검색할 수 있는 개체에 대 한 핸들입니다.  
+ *hObject*  
+ 보안 정보를 검색 하는 개체에 대 한 핸들입니다.  
   
- `ObjectType`  
- 값을 지정 된 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 로 식별 된 개체의 형식을 나타내는 열거형은 `hObject` 매개 변수입니다.  
+ *ObjectType*  
+ 값을 지정 합니다 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 식별 되는 개체의 형식을 나타내는 열거형입니다 합니다 *hObject* 매개 변수입니다.  
   
- `pSacl`  
- 검색 된 보안 정보를 포함 하는 SACL 개체에 대 한 포인터입니다.  
+ *pSacl*  
+ 검색된 된 보안 정보를 포함할 SACL 개체에 대 한 포인터입니다.  
   
- `bRequestNeededPrivileges`  
- True 이면 함수는 se_security_name 권한을 권한을 설정 하 고 완료에서 복원 하려고 합니다.  
+ *bRequestNeededPrivileges*  
+ True 이면 함수는 SE_SECURITY_NAME 권한을 설정 하 고 완료 되 면 복원 하려고 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `AtlGetSacl` 많은 다른 개체를 여러 번 호출 되는 것 보다 효율적으로 함수를 호출 하기 전에 한 번 se_security_name 권한을 권한을 설정 하려면 `bRequestNeededPrivileges` false로 설정 합니다.  
+ 하는 경우 `AtlGetSacl` 많은 다른 개체를 여러 번 호출 되는 것은 SE_SECURITY_NAME 사용 하 여 함수를 호출 하기 전에 한 번 설정 하는 것이 효율적 *bRequestNeededPrivileges* false로 설정 합니다.  
 
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h 
@@ -285,28 +286,28 @@ inline bool AtlSetSacl(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hObject`  
- 보안 정보를 설정 하려는 개체에 대 한 핸들입니다.  
+ *hObject*  
+ 보안 정보를 설정 하는 개체에 대 한 핸들입니다.  
   
- `ObjectType`  
- 값을 지정 된 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 로 식별 된 개체의 형식을 나타내는 열거형은 `hObject` 매개 변수입니다.  
+ *ObjectType*  
+ 값을 지정 합니다 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 식별 되는 개체의 형식을 나타내는 열거형입니다 합니다 *hObject* 매개 변수입니다.  
   
  *rSacl*  
- 새 보안 정보가 포함 된 SACL 합니다.  
+ 새 보안 정보를 포함 하는 SACL입니다.  
   
- `dwInheritanceFlowControl`  
- 상속 흐름 제어 합니다. 이 값은 0 (기본값) 이면 PROTECTED_SACL_SECURITY_INFORMATION 또는 UNPROTECTED_SACL_SECURITY_INFORMATION 일 수 있습니다.  
+ *dwInheritanceFlowControl*  
+ 상속 흐름 제어 합니다. 이 값은 0 (기본값), PROTECTED_SACL_SECURITY_INFORMATION 또는 UNPROTECTED_SACL_SECURITY_INFORMATION 수 있습니다.  
   
- `bRequestNeededPrivileges`  
- True 이면 함수는 se_security_name 권한을 권한을 설정 하 고 완료에서 복원 하려고 합니다.  
+ *bRequestNeededPrivileges*  
+ True 이면 함수는 SE_SECURITY_NAME 권한을 설정 하 고 완료 되 면 복원 하려고 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 디버그 빌드에 어설션 오류가 발생 하는 경우 발생 합니다 `hObject` 유효 하지 않을 경우 또는 `dwInheritanceFlowControl` 허용 되는 세 가지 값 중 하나가 아닙니다.  
+ 디버그 빌드에서 어설션 오류가 발생 하는 경우 *hObject* 유효 하지 않은 경우 *dwInheritanceFlowControl* 허용 되는 세 가지 값 중 하나가 아닙니다.  
   
- 경우 `AtlSetSacl` 많은 다른 개체를 여러 번 호출 되는 것 보다 효율적으로 함수를 호출 하기 전에 한 번 se_security_name 권한을 권한을 설정 하려면 `bRequestNeededPrivileges` false로 설정 합니다.  
+ 하는 경우 `AtlSetSacl` 많은 다른 개체를 여러 번 호출 되는 것은 SE_SECURITY_NAME 사용 하 여 함수를 호출 하기 전에 한 번 설정 하는 것이 효율적 *bRequestNeededPrivileges* false로 설정 합니다.  
 
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h 
@@ -330,25 +331,25 @@ inline bool AtlGetSecurityDescriptor(
   
 ### <a name="parameters"></a>매개 변수  
  *pszObjectName*  
- 보안 정보를 검색할 수 있는 개체의 이름을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다.  
+ 보안 정보를 검색할 개체의 이름을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다.  
   
- `ObjectType`  
- 값을 지정 된 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 로 식별 된 개체의 형식을 나타내는 열거형의 *pszObjectName* 매개 변수입니다.  
+ *ObjectType*  
+ 값을 지정 합니다 [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) 식별 되는 개체의 형식을 나타내는 열거형입니다 합니다 *pszObjectName* 매개 변수입니다.  
   
  *pSecurityDescriptor*  
  요청 된 보안 설명자를 수신 하는 개체입니다.  
   
  *requestedInfo*  
- 집합이 [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) 비트 검색할 보안 정보 형식을 나타내는 플래그입니다. 이 매개 변수는 다음 값의 조합 수 있습니다.  
+ 집합이 [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) 비트 보안 정보를 검색 하 형식을 나타내는 플래그입니다. 이 매개 변수는 다음 값의 조합일 수 있습니다.  
   
- `bRequestNeededPrivileges`  
- True 이면 함수는 se_security_name 권한을 권한을 설정 하 고 완료에서 복원 하려고 합니다.  
+ *bRequestNeededPrivileges*  
+ True 이면 함수는 SE_SECURITY_NAME 권한을 설정 하 고 완료 되 면 복원 하려고 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `AtlGetSecurityDescriptor` 많은 다른 개체를 여러 번 호출 되는 것 보다 효율적으로 함수를 호출 하기 전에 한 번 se_security_name 권한을 권한을 설정 하려면 `bRequestNeededPrivileges` false로 설정 합니다.  
+ 하는 경우 `AtlGetSecurityDescriptor` 많은 다른 개체를 여러 번 호출 되는 것은 SE_SECURITY_NAME 사용 하 여 함수를 호출 하기 전에 한 번 설정 하는 것이 효율적 *bRequestNeededPrivileges* false로 설정 합니다.  
 
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h 

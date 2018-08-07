@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353686"
 ---
 # <a name="controls-mfc"></a>컨트롤(MFC)
 컨트롤은 사용자가 데이터를 입력하거나 조작하기 위해 상호 작용할 수 있는 개체입니다. 일반적으로 대화 상자 또는 도구 모음에 나타납니다. 이 항목 군에서는 다음 세 가지 주요 컨트롤 종류를 설명합니다.  

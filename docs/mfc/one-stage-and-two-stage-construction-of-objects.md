@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346014"
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>1단계 및 2단계 개체 생성
 펜과 브러시와 같은 그래픽 개체를 만들기 위한 다음 두 가지 기술 중 하나를 선택을 해야 합니다.  

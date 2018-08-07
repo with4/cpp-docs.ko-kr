@@ -20,11 +20,12 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 7966d428dd200f0cbb280c679c4072e1ad75757a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4dd02275364b611ef5f9011041840a10709aa3f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965632"
 ---
 # <a name="ltforwardlistgt-operators"></a>&lt;forward_list&gt; 연산자
 
@@ -47,8 +48,8 @@ bool operator==(
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`left`|`forward_list` 형식의 개체입니다.|
-|`right`|`forward_list` 형식의 개체입니다.|
+|*left*|`forward_list` 형식의 개체입니다.|
+|*right*|`forward_list` 형식의 개체입니다.|
 
 ### <a name="remarks"></a>설명
 
@@ -68,8 +69,8 @@ bool operator!=(
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`left`|`forward_list` 형식의 개체입니다.|
-|`right`|`forward_list` 형식의 개체입니다.|
+|*left*|`forward_list` 형식의 개체입니다.|
+|*right*|`forward_list` 형식의 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -93,12 +94,12 @@ bool operator<(
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`left`|`forward_list` 형식의 개체입니다.|
-|`right`|`forward_list` 형식의 개체입니다.|
+|*left*|`forward_list` 형식의 개체입니다.|
+|*right*|`forward_list` 형식의 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-연산자 좌변의 목록이 연산자 우변의 목록보다 작으며 같지 않으면 `true`이고 그렇지 않으면 `false`입니다.
+연산자 좌변의 목록이 연산자 우변의 목록보다 작지만 같지 않으면 **true**이고 그렇지 않으면 **false**입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -118,12 +119,12 @@ bool operator<=(
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`left`|`forward_list` 형식의 개체입니다.|
-|`right`|`forward_list` 형식의 개체입니다.|
+|*left*|`forward_list` 형식의 개체입니다.|
+|*right*|`forward_list` 형식의 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-연산자 좌변의 목록이 연산자 우변의 목록보다 작거나 같으면 `true`이고 그렇지 않으면 `false`입니다.
+연산자 좌변의 목록이 연산자 우변의 목록보다 작거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -143,12 +144,12 @@ bool operator>(
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`left`|`forward_list` 형식의 개체입니다.|
-|`right`|`forward_list` 형식의 개체입니다.|
+|*left*|`forward_list` 형식의 개체입니다.|
+|*right*|`forward_list` 형식의 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-연산자 좌변의 목록이 연산자 우변의 목록보다 크면 `true`이고 그렇지 않으면 `false`입니다.
+연산자 좌변의 목록이 연산자 우변의 목록보다 크면 **true**이고 그렇지 않으면 **false**입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -168,12 +169,12 @@ bool operator>=(
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`left`|`forward_list` 형식의 개체입니다.|
-|`right`|`forward_list` 형식의 개체입니다.|
+|*left*|`forward_list` 형식의 개체입니다.|
+|*right*|`forward_list` 형식의 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-연산자 좌변의 목록이 연산자 우변의 목록보다 크거나 같으면 `true`이고 그렇지 않으면 `false`입니다.
+**true 이면** 연산자의 좌 변에 있는 정방향 목록 보다 큰 또는 연산자의 오른쪽에 있는 정방향 목록에는 같지 않으면 이면 **false**합니다.
 
 ### <a name="remarks"></a>설명
 

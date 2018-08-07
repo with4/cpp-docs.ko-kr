@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687285"
 ---
 # <a name="319-ompsetnested-function"></a>3.1.9 omp_set_nested 함수
 **omp_set_nested** 함수 사용 하거나 중첩 된 병렬 처리를 사용 하지 않도록 설정 합니다. 형식은 다음과 같습니다.  

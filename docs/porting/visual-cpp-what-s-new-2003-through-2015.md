@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 98c8bd78f465054e4d86a1bd16450aba9a0d8258
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705607"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209055"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ~ 2015의 새로운 기능
 
@@ -1494,7 +1494,7 @@ Microsoft Visual C++ 컴파일러에서 지원하는 ISO C++11 언어 기능은 
 - 별칭 템플릿
 - 삭제된 함수
 - NSDMI(비정적 데이터 멤버 이니셜라이저)
-- 기본값으로 설정된 함수 *
+- 기본값으로 설정된 함수 \*
 - 다음과 같은 ISO C99 언어 기능을 지원합니다.
 - _Bool
 - 복합 리터럴
@@ -1585,7 +1585,7 @@ C++11 명시적 변환 연산자, 이니셜라이저 목록, 범위가 지정된
 
 - 클래스 형식에 세미콜론을 추가합니다.
 - 원시 문자열 리터럴에 대한 괄호를 완성합니다.
-- 여러 줄 주석(/* */)을 완성합니다.
+- 여러 줄 주석(/\* \*/)을 완성합니다.
 
 **모든 참조 찾기**에서 텍스트 일치 목록을 표시한 후 백그라운드에서 참조를 자동으로 확인하고 필터링합니다.
 

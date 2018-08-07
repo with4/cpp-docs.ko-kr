@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387585"
 ---
 # <a name="c-relational-and-equality-operators"></a>C 관계 및 같음 연산자
 이진 관계형 연산자와 같음 연산자는 첫 번째 피연산자와 두 번째 피연산자를 비교하여 지정된 관계의 유효성을 테스트합니다. 테스트된 관계가 true이면 관계식 결과는 1이고, 테스트된 관계가 false이면 결과는 0입니다. 결과의 형식은 `int`입니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357885"
 ---
 # <a name="cautovectorptrelementtraits-class"></a>CAutoVectorPtrElementTraits 클래스
 이 클래스는 메서드, 정적 함수 및 형식 정의 대 한 새 벡터를 사용 하 여 스마트 포인터 컬렉션을 만들고 운영자를 삭제할 때 유용한를 제공 합니다.  

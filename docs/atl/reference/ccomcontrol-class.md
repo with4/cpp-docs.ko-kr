@@ -29,14 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6017d06715146a0440887a2a2e10828398d5044b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 77b0c115dbd820ea715b739dd3e4d6eb2c5f4950
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883452"
 ---
 # <a name="ccomcontrol-class"></a>CComControl 클래스
-이 클래스는 만들고 ATL 컨트롤을 관리 하기 위한 메서드를 제공 합니다.  
+이 클래스를 만들고 ATL 컨트롤을 관리 하기 위한 메서드를 제공 합니다.  
   
 > [!IMPORTANT]
 >  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
@@ -50,11 +51,11 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `T`  
+ *T*  
  컨트롤을 구현 하는 클래스입니다.  
   
  *WinBase*  
- 기간 이동 함수를 구현 하는 기본 클래스입니다. 기본적으로 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)합니다.  
+ 기간 이동 함수를 구현 하는 기본 클래스입니다. 기본값으로 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -69,17 +70,17 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 |이름|설명|  
 |----------|-----------------|  
 |[CComControl::ControlQueryInterface](#controlqueryinterface)|요청된 인터페이스에 대한 포인터를 검색합니다.|  
-|[CComControl::CreateControlWindow](#createcontrolwindow)|컨트롤에 대 한 창을 만듭니다.|  
+|[CComControl::CreateControlWindow](#createcontrolwindow)|컨트롤의 창을 만듭니다.|  
 |[CComControl::FireOnChanged](#fireonchanged)|컨테이너의 싱크를 컨트롤 속성이 변경 되었음을 알립니다.|  
-|[CComControl::FireOnRequestEdit](#fireonrequestedit)|컨트롤 속성이 변경 되기 하 고 계속 하는 방법을 개체는 싱크는 질문 및 컨테이너의 싱크를에 알립니다.|  
+|[CComControl::FireOnRequestEdit](#fireonrequestedit)|컨트롤 속성 변경 방법은 진행 방법 개체는 싱크는 요청 및 컨테이너의 싱크를에 알립니다.|  
 |[CComControl::MessageBox](#messagebox)|만들기, 표시 및 메시지 상자를 작동 하려면이 메서드를 호출 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CComControl` 유용한 컨트롤 도우미 함수 및 ATL 컨트롤에 대 한 필수 데이터 멤버의 집합이 허용 합니다. 표준 컨트롤 또는 ATL 컨트롤 마법사를 사용 하 여 DHTML 컨트롤을 만들 때 마법사는 자동으로에서 파생 `CComControl`합니다. `CComControl` 대부분의 메서드는 파생 [CComControlBase](../../atl/reference/ccomcontrolbase-class.md)합니다.  
+ `CComControl` 유용한 컨트롤 도우미 함수 및 ATL 컨트롤에 대 한 필수 데이터 멤버의 집합이 있습니다. 표준 컨트롤 또는 ATL 컨트롤 마법사를 사용 하 여 DHTML 컨트롤을 만들 때 마법사는 자동으로에서 파생 `CComControl`합니다. `CComControl` 해당 메서드 중 대부분은 파생 [CComControlBase](../../atl/reference/ccomcontrolbase-class.md)합니다.  
   
  컨트롤을 만드는 방법에 대 한 자세한 내용은 참조는 [ATL 자습서](../../atl/active-template-library-atl-tutorial.md)합니다. ATL 프로젝트 마법사에 대 한 자세한 내용은 문서 참조 [ATL 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)합니다.  
   
- 데모를 보려면 `CComControl` 메서드 및 데이터 멤버 참조는 [CIRC](../../visual-cpp-samples.md) 샘플.  
+ 데모를 보려면 `CComControl` 메서드 및 데이터 멤버를 참조 합니다 [CIRC](../../visual-cpp-samples.md) 샘플입니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `WinBase`  
@@ -99,7 +100,7 @@ CComControl();
 ```  
   
 ### <a name="remarks"></a>설명  
- 호출 된 [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase) 전달 하는 생성자는 `m_hWnd` 데이터 멤버를 통해 상속 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)합니다.  
+ 호출 된 [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase) 생성자에 전달 합니다 `m_hWnd` 데이터 멤버를 통해 상속 [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
   
 ##  <a name="controlqueryinterface"></a>  CComControl::ControlQueryInterface  
  요청된 인터페이스에 대한 포인터를 검색합니다.  
@@ -109,16 +110,16 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `iid`  
+ *iid*  
  [in] 요청 된 인터페이스의 GUID입니다.  
   
- `ppv`  
- [out] 으로 식별 된 인터페이스 포인터에 대 한 포인터 `iid`, 또는 **NULL** 인터페이스를 찾을 수 없는 경우.  
+ *ppv*  
+ [out] 로 식별 되는 인터페이스 포인터에 대 한 포인터 *iid*, 또는 인터페이스를 찾을 수 없으면 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
- 에서는 COM 맵 테이블의 인터페이스만 처리 됩니다.  
+ COM 맵 테이블의 인터페이스만 처리 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
   
 ##  <a name="createcontrolwindow"></a>  CComControl::CreateControlWindow  
@@ -129,16 +130,16 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hWndParent`  
- [in] 부모 또는 소유자 창에 대 한 핸들입니다. 유효한 창 핸들을 제공 해야 합니다. 제어 창 부모 창의 영역으로 제한 됩니다.  
+ *hWndParent*  
+ [in] 부모 또는 소유자 창에 대 한 핸들입니다. 유효한 창 핸들을 제공 해야 합니다. 컨트롤 창은 부모 창의 영역으로 제한 됩니다.  
   
- `rcPos`  
- [in] 초기 크기와 창 만들어질 위치입니다.  
+ *rcPos*  
+ [in] 초기 크기 및 만들려는 창의 위치입니다.  
   
 ### <a name="remarks"></a>설명  
- 되돌리기 작업을 수행 하려는 경우이 메서드를 재정의 합니다. 이외의 다른 단일 창을 만들고, 예를 들어 두 개의 창을 만들려면 중 하나는 되는 도구 모음 컨트롤에 대 한 합니다.  
+ 이 메서드를 재정의 하 여 작업을 수행 하려는 경우 아닌 단일 창을 만들고, 예를 들어 두 개의 창을 만들려면 중 하나는 도구 모음이 됩니다 컨트롤에 대 한 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
   
 ##  <a name="fireonchanged"></a>  CComControl::FireOnChanged  
@@ -156,15 +157,15 @@ HRESULT FireOnChanged(DISPID dispID);
  HRESULT 값 중 하나입니다.  
   
 ### <a name="remarks"></a>설명  
- 컨트롤 클래스에서 파생 된 경우 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638),이 메서드를 호출 [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) 연결 모두에 알리기 위해 `IPropertyNotifySink` 인터페이스 지정된 된 컨트롤 속성이 변경 되었습니다. 컨트롤 클래스에서 파생 되지 않은 경우 `IPropertyNotifySink`,이 메서드가 반환 `S_OK`합니다. 
+ 컨트롤 클래스에서 파생 되는 경우 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638),이 메서드를 호출 [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) 연결 된 모든 알림 `IPropertyNotifySink` 하는 인터페이스 지정된 된 컨트롤 속성이 변경 되었습니다. 컨트롤 클래스에서 파생 되지 않은 경우 `IPropertyNotifySink`,이 메서드는 S_OK를 반환 합니다. 
   
- 이 메서드는 안전 컨트롤 연결 지점을 지원 하지 않는 경우에 호출 합니다.  
+ 이 메서드는 안전 컨트롤 연결점을 지원 하지 않습니다 하는 경우에 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_COM#17](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
   
 ##  <a name="fireonrequestedit"></a>  CComControl::FireOnRequestEdit  
- 컨트롤 속성이 변경 되기 하 고 계속 하는 방법을 개체는 싱크는 질문 및 컨테이너의 싱크를에 알립니다.  
+ 컨트롤 속성 변경 방법은 진행 방법 개체는 싱크는 요청 및 컨테이너의 싱크를에 알립니다.  
   
 ```
 HRESULT FireOnRequestEdit(DISPID dispID);
@@ -178,12 +179,12 @@ HRESULT FireOnRequestEdit(DISPID dispID);
  HRESULT 값 중 하나입니다.  
   
 ### <a name="remarks"></a>설명  
- 컨트롤 클래스에서 파생 된 경우 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638),이 메서드를 호출 [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) 연결 모두에 알리기 위해 `IPropertyNotifySink` 인터페이스를 지정 된 컨트롤 속성을 변경 하려고 합니다. 컨트롤 클래스에서 파생 되지 않은 경우 `IPropertyNotifySink`,이 메서드가 반환 `S_OK`합니다.  
+ 컨트롤 클래스에서 파생 되는 경우 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638),이 메서드를 호출 [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) 연결 된 모든 알림 `IPropertyNotifySink` 하는 인터페이스를 지정 된 컨트롤 속성 변경 되려고 합니다. 컨트롤 클래스에서 파생 되지 않은 경우 `IPropertyNotifySink`,이 메서드는 S_OK를 반환 합니다.  
 
   
- 이 메서드는 안전 컨트롤 연결 지점을 지원 하지 않는 경우에 호출 합니다.  
+ 이 메서드는 안전 컨트롤 연결점을 지원 하지 않습니다 하는 경우에 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_COM#18](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]  
   
 ##  <a name="messagebox"></a>  CComControl::MessageBox  
@@ -197,20 +198,20 @@ int MessageBox(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszText`  
+ *lpszText*  
  메시지 상자에 표시할 텍스트입니다.  
   
- `lpszCaption`  
- 대화 상자 제목입니다. 경우 NULL (기본값), "Error"가 사용 되는 제목입니다.  
+ *lpszCaption*  
+ 대화 상자 제목입니다. 경우 NULL (기본값), "Error"는 제목입니다.  
   
- `nType`  
- 내용과 대화 상자의 동작을 지정합니다. 참조는 [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) 사용할 수 있는 다양 한 메시지 상자는 목록에 대 한 Windows SDK 설명서의 항목입니다. 기본 제공 단순 **확인** 단추입니다.  
+ *n 형식*  
+ 내용 및 대화 상자의 동작을 지정합니다. 참조 된 [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) 목록 사용할 수 있는 다양 한 메시지 상자는 Windows SDK 설명서의 항목입니다. 기본 제공 단순 **확인** 단추입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 아래 나열 된 메뉴 항목 값 중 하나를 지정 하는 정수 값을 반환 [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) Windows SDK 설명서에서입니다.  
+ 아래에 나열 된 메뉴 항목 값 중 하나를 지정 하는 정수 값 반환 [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) Windows SDK 설명서의 합니다.  
   
 ### <a name="remarks"></a>설명  
- `MessageBox` 개발 및 사용자에 게 오류 또는 경고 메시지를 표시 하는 쉬운 방법으로는 유용 합니다.  
+ `MessageBox` 사용자에 게 오류 또는 경고 메시지를 표시 하는 쉬운 방법을 개발 중에 유용 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CWindowImpl 클래스](../../atl/reference/cwindowimpl-class.md)   

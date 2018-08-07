@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347888"
 ---
 # <a name="frame-window-classes"></a>프레임 창 클래스
 각 응용 프로그램 "주 프레임 창," 캡션을 응용 프로그램 이름은 일반적으로 사용 하는 데스크톱 창 하나를 취합니다. 각 문서 일반적으로 개가 "문서 프레임 창입니다." 문서 프레임 창에 문서의 데이터를 표시 하는 하나 이상의 보기가 있습니다.  

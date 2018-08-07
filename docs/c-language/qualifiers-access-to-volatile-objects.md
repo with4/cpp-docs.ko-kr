@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384687"
 ---
 # <a name="qualifiers-access-to-volatile-objects"></a>한정자: 휘발성 개체에 대한 액세스
 **ANSI 3.5.5.3** volatile 한정 형식의 개체에 대한 액세스를 구성  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873029"
 ---
 # <a name="creating-a-new-toolbar-button"></a>새 도구 모음 단추 만들기
 ### <a name="to-create-a-new-toolbar-button"></a>새 도구 모음 단추를 만들려면  

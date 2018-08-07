@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246293"
 ---
 # <a name="compiler-error-c3036"></a>컴파일러 오류 C3036
 'operator': OpenMP 'reduction' 절에 잘못된 연산자 토큰이 있습니다.  

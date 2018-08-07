@@ -28,11 +28,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b4a87cadedb11368d7803231b96d0f7a5acfb99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bfabbd938f2258f7e1a75fd77eaac7b2cd23b2b8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957625"
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex 클래스
 
@@ -111,11 +112,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>반환 값
 
-메서드가 `mutex`의 소유권을 정상적으로 가져오거나 호출 스레드가 `mutex`를 이미 소유하고 있으면 `true`이고 그렇지 않으면 `false`입니다.
+**true** 메서드가 소유권을 정상적으로의 경우는 `mutex` 호출 스레드가 이미 소유 하는 경우 또는 합니다 `mutex`이 고, 그렇지 않으면 **false**합니다.
 
 ### <a name="remarks"></a>설명
 
-호출 스레드가 `mutex`를 이미 소유하고 있으면 함수는 `true`를 즉시 반환하며 이전 잠금은 적용된 상태로 유지됩니다.
+호출 스레드가 이미 소유 하는 경우는 `mutex`를 즉시 반환 **true**, 이전 잠금은 적용 상태로 유지 됩니다.
 
 ## <a name="try_lock_for"></a>  try_lock_for
 
@@ -128,15 +129,15 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>매개 변수
 
-`Rel_time` A [chrono::](../standard-library/duration-class.md) 메서드의 소유권을 가져오려고 시도 하는 최대 기간을 지정 하는 개체는 `mutex`합니다.
+*Rel_time* A [chrono:: duration](../standard-library/duration-class.md) 메서드는의 소유권을 가져오려고 시도 하는 최대 기간을 지정 하는 개체는 `mutex`합니다.
 
 ### <a name="return-value"></a>반환 값
 
-메서드가 `mutex`의 소유권을 정상적으로 가져오거나 호출 스레드가 `mutex`를 이미 소유하고 있으면 `true`이고 그렇지 않으면 `false`입니다.
+**true** 메서드는 성공적으로의 소유권을 가져올 경우 합니다 `mutex` 호출 스레드가 이미 소유 하는 경우 또는 `mutex`이 고, 그렇지 않으면 **false**합니다.
 
 ### <a name="remarks"></a>설명
 
-호출 스레드가 `mutex`를 이미 소유하고 있으면 메서드는 `true`를 즉시 반환하며 이전 잠금은 적용된 상태로 유지됩니다.
+호출 스레드가 이미 소유 하는 경우는 `mutex`, 메서드가 즉시 반환 **true**, 이전 잠금은 적용 상태로 유지 됩니다.
 
 ## <a name="try_lock_until"></a>  try_lock_until
 
@@ -151,15 +152,15 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>매개 변수
 
-`Abs_time` 지정 시간에는 메서드가 더 이상 소유권을 가져오려고 시도의 임계값을 지정 하는 `mutex`합니다.
+*Abs_time* 지나면 메서드를 더 이상 소유권을 가져오려고 시도의 임계값을 지정 하는 시점을 `mutex`입니다.
 
 ### <a name="return-value"></a>반환 값
 
-메서드가 `mutex`의 소유권을 정상적으로 가져오거나 호출 스레드가 `mutex`를 이미 소유하고 있으면 `true`이고 그렇지 않으면 `false`입니다.
+**true** 메서드는 성공적으로의 소유권을 가져올 경우 합니다 `mutex` 호출 스레드가 이미 소유 하는 경우 또는 `mutex`이 고, 그렇지 않으면 **false**합니다.
 
 ### <a name="remarks"></a>설명
 
-호출 스레드가 `mutex`를 이미 소유하고 있으면 메서드는 `true`를 즉시 반환하며 이전 잠금은 적용된 상태로 유지됩니다.
+호출 스레드가 이미 소유 하는 경우는 `mutex`, 메서드가 즉시 반환 **true**, 이전 잠금은 적용 상태로 유지 됩니다.
 
 ## <a name="unlock"></a>  unlock
 

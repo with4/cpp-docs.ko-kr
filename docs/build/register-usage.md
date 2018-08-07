@@ -17,6 +17,7 @@ ms.sourcegitcommit: 4fc6869067d533b175207befd2dc60346afee285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225221"
 ---
 # <a name="register-usage"></a>레지스터 사용
 

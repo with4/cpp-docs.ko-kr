@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196963"
 ---
 # <a name="fatal-error-c1088"></a>심각한 오류 C1088
 filetype 파일을 플러시할 수 없습니다. 'file': message  

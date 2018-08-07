@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0093c92604013e4c1aef4046f244d7bcd3f71958
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f7c25f55263270ad797b231a21e60fe4b0e552c4
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336115"
 ---
 # <a name="cd2dsizef-class"></a>CD2DSizeF 클래스
 D2D1_SIZE_F에 대 한 래퍼입니다.  
@@ -47,13 +48,13 @@ class CD2DSizeF : public D2D1_SIZE_F;
   
 |이름|설명|  
 |----------|-----------------|  
-|[CD2DSizeF::IsNull](#isnull)|반환 된 `boolean` 유효 하지 않은 데이터 식에 포함 되어 있는지 여부를 나타내는 값 ( `null`).|  
+|[CD2DSizeF::IsNull](#isnull)|반환 된 **부울** 식에 유효 하지 않은 데이터 (NULL)이 포함 되어 있는지 여부를 나타내는 값입니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[CD2DSizeF::operator CSize](#operator_csize)|변환 `CD2DSizeF` 를 `CSize` 개체입니다.|  
+|[CD2DSizeF::operator CSize](#operator_csize)|변환 `CD2DSizeF` 에 `CSize` 개체입니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `D2D1_SIZE_F`  
@@ -64,7 +65,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
  **헤더:** afxrendertarget.h  
   
 ##  <a name="cd2dsizef"></a>  CD2DSizeF::CD2DSizeF  
- CD2DSizeF CSize 개체에서 개체를 만듭니다.  
+ CSize 개체에서 CD2DSizeF 개체를 생성합니다.  
   
 ```  
 CD2DSizeF(const CSize& size);  
@@ -78,13 +79,13 @@ CD2DSizeF(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `size`  
- 소스 크기  
+ *size*  
+ 원본 크기  
   
- `cx`  
- 소스 너비  
+ *cx*  
+ 원본 너비  
   
- `cy`  
+ *cy*  
  원본 높이  
   
 ##  <a name="isnull"></a>  CD2DSizeF::IsNull  
@@ -95,7 +96,7 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 너비와 높이; 비어 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
+ 너비와 높이 비어 있으면 TRUE 그렇지 않으면 FALSE입니다.  
   
 ##  <a name="operator_csize"></a>  CD2DSizeF::operator CSize  
  CD2DSizeF CSize 개체로 변환합니다.  

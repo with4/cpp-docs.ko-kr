@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687428"
 ---
 # <a name="unsupportedos-class"></a>unsupported_os 클래스
 이 클래스는 지원되지 않는 운영 체제를 사용할 때 throw되는 예외를 설명합니다.  

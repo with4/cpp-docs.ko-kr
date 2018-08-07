@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093375"
 ---
 # <a name="sql-making-direct-sql-calls-odbc"></a>SQL: SQL 직접 호출(ODBC)
 이 항목에 설명 합니다.  

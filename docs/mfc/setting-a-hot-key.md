@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379647"
 ---
 # <a name="setting-a-hot-key"></a>바로 가기 키 설정
 응용 프로그램 바로 가기 키 제공 하는 정보를 사용할 수 ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) 다음 두 가지 방법 중 하나에서 제어 합니다.  

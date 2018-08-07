@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316451"
 ---
 # <a name="project-build-error-prj0015"></a>프로젝트 빌드 오류 PRJ0015
 에 NULL 장치가 시스템에서 누락 되었습니다. 빌드를 시작 하지 못합니다.  

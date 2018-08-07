@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523fc0f5c87712cd61ec0709d94edcb7bcbde72c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd3376e19d7780922102240ae1bfaa1b4eb89b2b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931725"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC ActiveX 컨트롤: 앰비언트 속성 액세스
 이 문서에서는 ActiveX 컨트롤 컨트롤 컨테이너의 앰비언트 속성에 액세스할 수는 방법을 설명 합니다.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/04/2018
 -   [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)  
   
     > [!NOTE]
-    >  호출자에 게 호출 해야 **()를 릴리스** 반환 되는 글꼴에 있습니다.  
+    >  호출자에 게 호출 해야 `Release( )` 반환 되는 글꼴에 있습니다.  
   
 -   [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/04/2018
   
 -   [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)  
   
- 앰비언트 속성의 값 (작업 컨테이너의)을 통해 변경 되 면는 **OnAmbientPropertyChanged** 컨트롤의 멤버 함수를 호출 합니다. 이러한 알림 메시지를 처리 하려면이 멤버 함수를 재정의 합니다. 에 대 한 매개 변수 **OnAmbientPropertyChanged** 영향을 받는 앰비언트 속성의 디스패치 ID입니다. 이 디스패치 ID의 값이 경우도 **DISPID_UNKNOWN**, 하나 이상의 앰비언트 속성이 변경 되었지만 영향을 받은 속성에 대 한 정보를 사용할 수 없으면 나타냅니다.  
+ 앰비언트 속성의 값 (작업 컨테이너의)을 통해 변경 되 면는 `OnAmbientPropertyChanged` 컨트롤의 멤버 함수를 호출 합니다. 이러한 알림 메시지를 처리 하려면이 멤버 함수를 재정의 합니다. 에 대 한 매개 변수 `OnAmbientPropertyChanged` 영향을 받는 앰비언트 속성의 디스패치 ID입니다. 이 디스패치 ID의 값은 하나 이상의 앰비언트 속성이 변경 되었음을 나타내는, DISPID_UNKNOWN 일 수 있지만 영향을 받은 속성에 대 한 정보를 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [MFC ActiveX 컨트롤](../mfc/mfc-activex-controls.md)

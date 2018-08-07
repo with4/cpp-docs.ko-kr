@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391365"
 ---
 # <a name="language-strings"></a>Language Strings
 `setlocale` 및 `_create_locale` 함수는 유니코드 코드 페이지를 사용하지 않는 운영 체제에서 Windows NLS API를 지원하는 언어를 사용할 수 있습니다. 운영 체제 버전에서 지원되는 언어 목록은 [NLS(국가별 언어 지원) API 참조](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)를 참조하세요. 언어 문자열은 지원되는 언어 목록의 **언어** 및 **언어 이름 약어** 열에 있는 임의의 값일 수 있습니다. 운영 체제 버전별 언어 지원에 대한 자세한 내용은 [MS-LCID]: Windows LCID(언어 코드 식별자) 참조의 [부록 A: 제품 동작(영문)](http://msdn.microsoft.com/goglobal/bb896001.aspx)을 참조하세요.   

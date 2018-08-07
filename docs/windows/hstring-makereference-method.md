@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882643"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference 메서드
 지정 된 문자열 매개 변수에서 HStringReference 개체를 만듭니다.  

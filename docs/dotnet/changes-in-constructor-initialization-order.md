@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110356"
 ---
 # <a name="changes-in-constructor-initialization-order"></a>생성자 초기화 순서 변경 사항
 클래스 생성자에 대 한 초기화 순서에 Visual c + + Managed Extensions for c + + 변경 되었습니다.  

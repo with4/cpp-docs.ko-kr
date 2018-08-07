@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321641"
 ---
 # <a name="resource-compiler-error-rc2170"></a>리소스 컴파일러 오류 RC2170
 비트맵 파일의 파일 이름이 3.00 형식이 아닙니다.  

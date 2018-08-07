@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368046"
 ---
 # <a name="inferred-dependents-and-rules"></a>유추된 종속 파일과 규칙
 NMAKE 유추 해당 규칙이 있는 경우 대상에 대해 유추 된 종속을 가정 합니다. 규칙을 적용 하는 경우 됩니다.  

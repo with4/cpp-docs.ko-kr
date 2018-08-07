@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857840"
 ---
 # <a name="aligning-controls-on-a-guide"></a>안내선에 컨트롤 맞추기
 컨트롤의 크기 조정 핸들 컨트롤을 이동 하 고 (이전에 가이드에 맞춤 컨트롤이 없는 경우) 안내선 컨트롤에 맞춤 안내선에 맞춤 합니다. 안내선을 이동할 때 여기에 맞춘 컨트롤도 이동 합니다. 컨트롤 둘 이상의 안내선에 맞춤 안내선 중 하나를 이동할 때 크기가 조정 됩니다.  

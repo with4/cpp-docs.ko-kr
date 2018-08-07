@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361956"
 ---
 # <a name="which-atl-classes-facilitate-activex-control-containment"></a>ATL 클래스에 ActiveX 컨트롤 포함 용이?
 ATL의 컨트롤 호스팅 코드 모든 ATL 클래스;를 사용 하도록 요구 하지 않습니다. 간단히 만들 수 있습니다는 **"AtlAxWin80"** 창 및 필요한 경우 컨트롤 호스팅 API 사용 하 여 (자세한 내용은 참조 **ATL 컨트롤 호스팅 API를 이란**합니다. 그러나 다음 클래스의 포함 기능 사용 하기 쉽도록 합니다.  

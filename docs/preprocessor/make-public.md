@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849589"
 ---
 # <a name="makepublic"></a>make_public
 네이티브 형식이 공용 어셈블리 액세스 가능성을 갖도록 지정합니다.  

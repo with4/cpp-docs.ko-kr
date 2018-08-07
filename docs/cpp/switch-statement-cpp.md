@@ -1,5 +1,5 @@
 ---
-title: 문 (c + +) 전환 | Microsoft Docs
+title: switch 문 (c + +) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cea2c7e4bff895f9ccabc044ed5b7f5ae506b32
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a5a8858d48a38d42dea7fba0fdce7c3a4d407a3a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462188"
 ---
 # <a name="switch-statement-c"></a>switch 문 (C++)
 정수 계열 식의 값에 따라 코드의 여러 섹션 중에서 선택할 수 있습니다.  
@@ -38,23 +39,23 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="remarks"></a>설명  
- *식* 정수 계열 형식 또는 정수 계열 형식으로 명확한 변환이 되는 클래스 형식 이어야 합니다. 에 설명 된 대로 정수 계열 확장은 수행 되며 [표준 변환](standard-conversions.md)합니다.  
+ 합니다 *식* 는 정수 계열 형식으로 변환 하는 명확한 변환을 하는 클래스 형식 또는 정수 계열 형식 이어야 합니다. 에 설명 된 대로 정수 계열 확장 이루어집니다 [표준 변환](standard-conversions.md)합니다.  
   
- `switch` 문 본문이 일련의 구성 **대/소문자** 레이블과 선택적 **기본** 레이블. 없는 두 상수 식도 **대/소문자** 문은 동일한 값으로 계산할 수 있습니다. **기본** 레이블은 한 번만 나타날 수 있습니다. 레이블 문은 구문적 요구 사항이 아니지만 `switch` 문은 레이블 문이 없으면 의미가 없습니다.   기본 문은 끝에 오지 않아도 되며 switch 문의 본문 중 어느 위치에나 나타날 수 있습니다. case 또는 default 레이블은 switch 문 내에만 나타날 수 있습니다.  
+ 합니다 **전환** 일련의 문 본문으로 구성 됩니다 **사례** 레이블 및 선택적 **기본** 레이블. 없는 두 상수 식도 **사례** 문이 동일한 값으로 계산할 수 있습니다. 합니다 **기본** 레이블은 한 번만 나타날 수 있습니다. 레이블된 문은 구문적 요구 사항이 있지만 **전환** 문을 없으면 의미가 없습니다.   기본 문은 끝에 오지 않아도 되며 switch 문의 본문 중 어느 위치에나 나타날 수 있습니다. case 또는 default 레이블은 switch 문 내에만 나타날 수 있습니다.  
   
- *문* 각 **대/소문자** 레이블의 유형으로 변환할 *식* 와 비교 하 고 *식* 에 대 한 같음입니다. 해당 문으로 제어가 전달 **대/소문자** *문* 의 값과 일치 *식*합니다. 결과적으로 발생하는 동작은 다음 표에 나와 있습니다.  
+ 합니다 *상수-식* 각 **사례** 레이블 형식으로 변환 됩니다 *식* 과 비교 *식* 에 대 한 같음입니다. 해당 문으로 제어가 전달 **사례** *상수-식* 값과 일치 *식*합니다. 결과적으로 발생하는 동작은 다음 표에 나와 있습니다.  
   
 ### <a name="switch-statement-behavior"></a>switch 문 동작  
   
 |조건|작업|  
 |---------------|------------|  
 |변환된 값이 승격된 제어 식의 값과 일치합니다.|제어가 해당 레이블 뒤에 오는 문으로 전송됩니다.|  
-|상수 조건과 일치 하는 상수는 **대/소문자** 레이블의 **기본** 레이블이 있습니다.|제어가 **기본** 레이블.|  
-|상수 조건과 일치 하는 상수는 **대/소문자** 레이블의 **기본** 레이블이 나타나지 않습니다.|제어가 `switch` 문 뒤의 문으로 전송됩니다.|  
+|상수를 일치 하는 상수 없을 합니다 **사례** 레이블의 **기본** 레이블이 합니다.|제어가 합니다 **기본** 레이블.|  
+|상수를 일치 하는 상수 없을 합니다 **사례** 레이블의 **기본** 레이블이 없습니다.|뒤의 문으로 제어가 합니다 **전환** 문입니다.|  
   
- 이후 제어가 방해 되지 않습니다는 일치 하는 식이 발견 되는 경우 **대/소문자** 또는 **기본** 레이블을 합니다. [나누기](../cpp/break-statement-cpp.md) 문을 사용 실행을 중지 하 고 뒤의 문으로 제어를 전송 하는 `switch` 문. 없이 **나누기** 문, 일치 하는 모든 문을 **대/소문자** 의 끝에 레이블은 `switch`를 포함 하 여는 **기본**, 실행 됩니다. 예를 들어:  
+ 이후 일치 하는 식이 발견 되 면 경우 제어가 방해 되지 않습니다 **사례** 하거나 **기본** 레이블. [중단](../cpp/break-statement-cpp.md) 문 실행을 중지 하 고 뒤의 문으로 제어를 전송 되는 **전환** 문입니다. 없이 **중단** 문, 일치에서 모든 문 **사례** 의 끝에 레이블을 **전환**등을 **기본**는 실행 합니다. 예를 들어:  
   
-```  
+```cpp 
 // switch_statement1.cpp  
 #include <stdio.h>  
   
@@ -83,9 +84,9 @@ int main() {
 }  
 ```  
   
- 위의 예제에서 `capa`는 `c`가 대문자 `A`인 경우 증가됩니다. `break` 뒤의 `capa++` 문이 `switch` 문 본문의 실행을 종료하고 제어를 `while` 루프로 전달합니다. 없이 `break` 문의 실행은 "이동" 다음 레이블 문으로 있도록 `lettera` 및 `nota` 도 증가 됩니다. `break`에 대한 `case 'a'` 문도 비슷한 역할을 합니다. `c`가 소문자 `a`인 경우 `lettera`가 증가하고 `break` 문이 `switch` 문 본문을 종료합니다. `c`가 `a` 또는 `A`가 아닌 경우 `default` 문이 실행됩니다.  
+ 위의 예제에서 `capa`는 `c`가 대문자 `A`인 경우 증가됩니다. **중단** 뒤의 문으로 `capa++` 의 실행을 종료 합니다 **전환** 문 본문 및 제어를 전달 합니다 **하는 동안** 루프. 없이 합니다 **나누기** 문의 실행은 "이동" 다음 레이블이 지정 된 문, 있도록 `lettera` 및 `nota` 도 증가 됩니다. 용도 비슷하지만 의해 제공 되는 **나누기** 방침 `case 'a'`합니다. 경우 `c` 는 소문자 `a`, `lettera` 증가 및 **중단** 문이 종료 되는 **전환** 문 본문입니다. 하는 경우 `c` 아닙니다를 `a` 또는 `A`의 **기본** 문이 실행 됩니다.  
 
- **2017 이상 visual Studio:** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md))는 `[[fallthrough]]` C + + 17 표준에 특성을 지정 합니다. 사용할 수는 `switch` 문을 해당 fall 통해 동작이 지정 된 컴파일러에 (또는 코드를 읽는 사람에 게) 힌트로 합니다. Visual c + + 컴파일러 현재 경고 하지 않습니다 fallthrough 동작에 있으므로이 특성에 영향을 주지 컴파일러 동작이 없습니다. 특성이 빈 문을; labeled 문 내에 적용 되는 참고 즉 세미콜론은 필요 합니다.
+ **Visual Studio 2017 이상:** (사용할 수 있습니다 [/std: c + + 17](../build/reference/std-specify-language-standard-version.md))는 `[[fallthrough]]` 표준 C + + 17 특성을 지정 합니다. 사용할 수는 **전환** 문을 해당 제어 이동 동작이 의도 된 컴파일러 (또는 코드를 읽는 사람에 게) 힌트로 합니다. Visual c + + 컴파일러 현재 경고 하지 않습니다 fallthrough 동작에 있으므로이 특성에 컴파일러 동작에 영향을 주지 않습니다. Labeled 문; 내에서 빈 문에 특성이 적용 되는 참고 즉 세미콜론 필요는 없습니다.
 
 ```cpp
 int main()
@@ -113,7 +114,7 @@ int main()
 }
 ```
 
- **Visual Studio 2017 15.3 이상 버전** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): switch 문에 소개 하 고 범위가 switch 문의 제한 된 변수를 초기화할 수 있습니다.
+ **Visual Studio 2017 버전 15.3 이상** (사용할 수 있습니다 [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): switch 문을 소개 하 고 범위가 블록 switch 문의 제한 된 변수를 초기화할 수 있습니다.
 
 ```cpp
  switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -126,7 +127,7 @@ int main()
         };
 ```
 
- `switch` 문의 내부 블록은 도달할 수 있는 한, 즉 가능한 모든 실행 경로에 의해 건너뛰어지지 않는 한 초기화를 사용하는 정의를 포함할 수 있습니다. 이러한 선언을 사용하여 정의된 이름에는 로컬 범위가 있습니다. 예를 들어:  
+ 내부 블록을 **전환** 문은으로 연결할 수는 초기화를 사용 하 여 정의 포함할 수 있습니다-즉, 모든 가능한 실행 경로 의해 무시 되지 않습니다. 이러한 선언을 사용하여 정의된 이름에는 로컬 범위가 있습니다. 예를 들어:  
   
 ```cpp  
 // switch_statement2.cpp  
@@ -161,17 +162,15 @@ int main(int argc, char *argv[])
 }  
 ```  
   
- `switch` 문은 중첩될 수 있습니다. 이러한 경우 **대/소문자** 또는 **기본** 가장 가까운 바깥쪽에 레이블을 연결 `switch` 문에 합니다.  
+ A **전환** 문은 중첩 될 수 있습니다. 이러한 경우 **사례** 또는 **기본** 레이블을 연결 가장 가까운 **전환** 바깥쪽 문을 합니다.  
 
- 
 ## <a name="microsoft-specific"></a>Microsoft 전용  
- Microsoft C는 `switch` 문의 case 값 수를 제한하지 않습니다. 이 수는 사용 가능한 메모리에 의해서만 제한됩니다. ANSI C의 경우 `switch` 문에서 257개 이상의 case 레이블이 허용되어야 합니다.  
+ Microsoft C의 경우 값의 수를 제한 하지 않습니다는 **전환** 문입니다. 이 수는 사용 가능한 메모리에 의해서만 제한됩니다. ANSI C 257 개 이상의 case 레이블이 허용을 **전환** 문입니다.  
   
- 기본적으로 Microsoft C에는 Microsoft 확장을 사용하도록 설정되어 있습니다. 사용 하 여는 [/Za](../build/reference/za-ze-disable-language-extensions.md) 컴파일러 옵션을 이러한 확장을 사용 하지 않도록 설정 합니다.  
+ 기본적으로 Microsoft C에는 Microsoft 확장을 사용하도록 설정되어 있습니다. 사용 된 [/Za](../build/reference/za-ze-disable-language-extensions.md) 컴파일러 옵션을 이러한 확장을 사용 하지 않도록 설정 합니다.  
   
 **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [선택 문](../cpp/selection-statements-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)   
- 

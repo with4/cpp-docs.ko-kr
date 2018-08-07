@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687994"
 ---
 # <a name="sample-multithread-c-program"></a>샘플 다중 스레드 C 프로그램
 Bounce.c 샘플 다중 스레드 프로그램에서는 새입니다 스레드 때마다 문자는 **는** 또는 **A** 를 입력 합니다. 각 스레드는 화면 다른 색상의 웃는 얼굴을 반송 합니다. 최대 32 개의 스레드를 만들 수 있습니다. 프로그램의 정상적으로 종료 때 `q` 또는 **Q** 를 입력 합니다. 컴파일 및 Bounce.c 연결 하는 방법에 대 한 정보를 참조 하십시오. [프로그램 컴파일 및 링크 다중 스레드](../parallel/compiling-and-linking-multithread-programs.md)합니다.  

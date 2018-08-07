@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235300"
 ---
 # <a name="compiler-error-c2700"></a>컴파일러 오류 C2700
 'identifier': Throw될 수 없습니다. 자세한 내용을 보려면 /W4를 사용하세요.  

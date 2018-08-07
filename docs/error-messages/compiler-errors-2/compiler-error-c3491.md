@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257295"
 ---
 # <a name="compiler-error-c3491"></a>컴파일러 오류 C3491
 'var': 변경 불가능한 람다에서 값 방식 캡처를 수정할 수 없습니다.  

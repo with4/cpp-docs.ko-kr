@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690870"
 ---
 # <a name="a18---nested-for-directives"></a>A.18   지시문에 중첩됨
 다음 예제에서는 `for` 지시문 중첩 ([섹션 2.9](../../parallel/openmp/2-9-directive-nesting.md) 페이지 33) 규격이 때문에 내부 및 외부 `for` 지시문 병렬 서로 다른 지역에 바인딩:  

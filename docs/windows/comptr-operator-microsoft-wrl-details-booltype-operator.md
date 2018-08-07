@@ -13,14 +13,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5efd641e5c908e5f1c4d4a3cdb78cd146b634f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a4ec737c3f24899e50220c3e862283b88a826b9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461166"
 ---
 # <a name="comptroperator-microsoftwrldetailsbooltype-operator"></a>ComPtr::operator Microsoft::WRL::Details::BoolType 연산자
-ComPtr이 인터페이스의 개체 수명을 관리하고 있는지 여부를 나타냅니다.  
+나타냅니다 여부는 **ComPtr** 인터페이스의 개체 수명을 관리 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -29,7 +30,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 인터페이스는이 ComPtr의 주소와 연결 하는 경우는 [boolstruct:: Member](../windows/boolstruct-member-data-member.md) 데이터 멤버, 그렇지 않으면 `nullptr`합니다.  
+ 인터페이스와 연결 된 경우 **ComPtr**의 주소를 [boolstruct:: Member](../windows/boolstruct-member-data-member.md) 데이터 멤버가 고, 그렇지 않으면 **nullptr**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

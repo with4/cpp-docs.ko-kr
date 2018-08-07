@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efd633fb4617a5058afd9bd55b40ccb4fbcee06e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22f96b81836a8c1a9daa971ff8fb1961edb60cfb
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209006"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator 클래스
 
@@ -39,7 +40,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>매개 변수
 
-`Container` 어떤 요소가 뒷면에 컨테이너의 유형으로 삽입할은 한 `back_insert_iterator`합니다.
+*컨테이너* 요소 뒤의 컨테이너 형식을 삽입 하려는 `back_insert_iterator`합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -62,9 +63,9 @@ class back_insert_iterator;
 
 |연산자|설명|
 |-|-|
-|[operator*](#op_star)|후면 삽입을 위해 출력 반복기 식 * `i` = `x`를 구현하는 데 사용되는 역참조 연산자입니다.|
+|[operator*](#op_star)|출력 반복기 식을 구현 하는 데 사용 된 역참조 연산자 \* `i`  =  `x` 후면 삽입을 위해.|
 |[operator++](#op_add_add)|값을 저장할 다음 위치에 `back_insert_iterator`를 증가시킵니다.|
-|[operator=](#op_eq)|후면 삽입을 위해 출력 반복기 식 * `i` = `x`를 구현하는 데 사용되는 할당 연산자입니다.|
+|[operator=](#op_eq)|출력 반복기 식을 구현 하는 데 사용 되는 대입 연산자 \* `i`  =  `x` 후면 삽입을 위해.|
 
 ## <a name="requirements"></a>요구 사항
 
@@ -82,13 +83,13 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Cont` 컨테이너는는 `back_insert_iterator` 에 요소를 삽입 하는 것입니다.
+*_Cont* 컨테이너는는 `back_insert_iterator` 에 요소를 삽입 하는 것입니다.
 
 ### <a name="return-value"></a>반환 값
 
 매개 변수 컨테이너에 대한 `back_insert_iterator`입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // back_insert_iterator_back_insert_iterator.cpp
@@ -149,7 +150,7 @@ container_type;
 
 이 형식은 템플릿 매개 변수 **Container**의 동의어입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // back_insert_iterator_container_type.cpp
@@ -190,7 +191,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="op_star"></a>  back_insert_iterator::operator*
+## <a name="op_star"></a>  back_insert_iterator:: operator\*
 
 출력 반복기 식 \* *i* = *x*을 구현하는 데 사용되는 역참조 연산자입니다.
 
@@ -206,7 +207,7 @@ back_insert_iterator<Container>& operator*();
 
 출력 반복기 식 **\*Iter** = **value**를 구현하는 데 사용됩니다. **Iter**이 시퀀스에서 요소의 주소를 지정하는 반복기인 경우 **\*Iter** = **value**는 해당 요소를 값과 바꾸며 시퀀스에서 총 요소 수를 변경하지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // back_insert_iterator_back_insert.cpp
@@ -267,7 +268,7 @@ back_insert_iterator<Container> operator++(int);
 
 preincrementation과 postincrementation 연산자는 둘 다 동일한 결과를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // back_insert_iterator_op_incre.cpp
@@ -322,7 +323,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>매개 변수
 
-`val` 컨테이너에 삽입할 값입니다.
+*val* 컨테이너에 삽입할 값입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -338,7 +339,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 그런 다음 `*this`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // back_insert_iterator_op_assign.cpp
@@ -389,7 +390,7 @@ typedef typename Container::reference reference;
 
 이 형식은 연관 컨테이너에서 제어하는 시퀀스의 요소에 대한 참조를 제공합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // back_insert_iterator_reference.cpp

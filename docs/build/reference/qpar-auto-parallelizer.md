@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375690"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar(자동 평행화 도우미)
 사용 하도록 설정 된 [자동 평행 화](../../parallel/auto-parallelization-and-auto-vectorization.md) 를 자동으로 코드에서 루프를 평행 화할 수 있는 컴파일러 기능입니다.  

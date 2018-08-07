@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693379"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency 네임스페이스(C++ AMP)
 클래스와 데이터 병렬 하드웨어에서 c + + 코드의 실행을 가속화 하는 함수를 제공 합니다. 자세한 내용은 참조 [c + + AMP 개요](../cpp-amp-overview.md)  

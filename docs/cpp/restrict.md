@@ -17,17 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5f91288671eaa3dcf4700ec35dae63ffaef172
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b3eb361d0b92a3977547388ebfd612915431ec98
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463683"
 ---
 # <a name="restrict"></a>restrict
 
 **Microsoft 전용**
 
-함수 선언 또는 포인터 형식을 반환 하는 정의에 적용 될 때 `restrict` 함수가 아닌 개체를 반환 하도록 컴파일러에 지시 *별칭*, 즉, 다른 포인터에서 참조 합니다. 따라서 컴파일러 최적화를 수행할 수 있습니다.
+함수 선언 또는 포인터 형식을 반환 하는 정의 적용할 때 **제한할** 반환 되지 않는 개체는 컴파일러에 알립니다 *별칭이 지정*, 즉, 다른 모든 참조 이 대 한 포인터입니다. 이렇게 하면 컴파일러가 추가 최적화를 수행 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -35,21 +36,21 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="remarks"></a>설명
 
-컴파일러는 전파 `__declspec(restrict)`합니다. 예를 들어 CRT `malloc` 함수에는 `__declspec(restrict)` 장식 및 이므로 컴파일러 가정 하 여 메모리 위치로 초기화 된 포인터 `malloc` 도 별칭을 지정 하 여 없는 이전에 기존 포인터입니다.
+컴파일러에 전파 **__declspec(restrict)** 합니다. 예를 들어 CRT `malloc` 함수에는 **__declspec(restrict)** 장식 및 따라서 컴파일러 가정 하 여 메모리 위치로 초기화 된 포인터는 `malloc` 별칭이 지정 되지 않습니다도 이전에 기존 포인터입니다.
 
-컴파일러는 반환 된 포인터가 실제로 별칭이 지정 되지 않음을 확인 하지 않습니다. 프로그램에서 `restrict __declspec` 한정자로 표시된 포인터에 별칭을 지정하지 않도록 확인하는 것은 개발자의 책임입니다.  
+컴파일러는 반환 된 포인터가 실제로 별칭이 지정 되지 않음을 확인 하지 않습니다. 개발자의 책임 프로그램 별칭을 지정 하지로 표시 된 포인터를 확인 하는 것은 **__declspec 제한** 한정자입니다.  
   
-변수에서와 유사한 의미 체계에 대 한 참조 [__restrict](../cpp/extension-restrict.md)합니다.
+변수에서 비슷한 의미 체계를 참조 하세요 [__restrict](../cpp/extension-restrict.md)합니다.
  
-함수 내에서 앨리어싱에 적용 되는 다른 주석 참조 [__declspec(noalias)](../cpp/noalias.md)합니다.
+함수에는 앨리어싱에 적용 되는 다른 주석을 참조 하세요 [__declspec(noalias)](../cpp/noalias.md)합니다.
   
-에 대 한 내용은 **제한** c + + AMP의 일부인 키워드 참조 [제한 (c + + AMP)](../cpp/restrict-cpp-amp.md)합니다.  
+에 대 한 자세한 합니다 **제한** c + + AMP의 일부인 키워드 참조 [(c + + AMP) 제한](../cpp/restrict-cpp-amp.md)합니다.  
  
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
-다음 샘플의 사용법을 보여줍니다 `__declspec(restrict)`합니다.
+다음 샘플의 사용법을 보여 줍니다 **__declspec(restrict)** 합니다.
 
-때 `__declspec(restrict)` 는 포인터를 반환이는 컴파일러가 반환 값에서 가리키는 메모리가 별칭이 지정 되지 않는 함수에 적용 됩니다. 이 예제에서는 포인터 `mempool` 및 `memptr` 은 전체적으로 되므로 컴파일러가 참조 하는 메모리가 별칭이 지정 되지 않는 확신할 수 없습니다. 내에서 사용 되는 반면 `ma` 와 해당 호출자가 `init` 하므로 프로그램에서 참조 하지 않으면 되지 않으면 메모리를 반환 하는 방식으로 `__decslpec(restrict)` 최적화 프로그램이 하는 데 사용 됩니다. 어떻게 CRT 헤더를 장식 하는 할당 함수와 같은 것과 비슷합니다 `malloc` 를 사용 하 여 `__declspec(restrict)` 를 나타내는 항상 기존 포인터에 의해 별칭이 지정 될 수 없는 메모리를 반환 합니다.
+때 **__declspec(restrict)** 는 포인터를 반환 합니다, 그러면 컴파일러가 반환 값으로 가리키는 메모리 별칭이 지정 되지 함수에 적용 됩니다. 이 예제에서는 포인터 `mempool` 고 `memptr` 전역 되므로 컴파일러는 참조 하는 메모리 별칭이 지정 되지 않음을 확인할 수 없습니다. 내에서 사용 되는 반면 `ma` 와 해당 호출자 `init` 따라서 프로그램에 의해 참조이 고, 그렇지 되지 않는 메모리를 반환 하는 방식으로 **__decslpec(restrict)** 최적화 하는 데 사용 됩니다. 이것은 어떻게 CRT 헤더를 데코 레이트 하는 할당 함수 같은 비슷합니다 `malloc` 를 사용 하 여 **__declspec(restrict)** 기존 포인터 별칭이 지정 되지 않는 메모리는 항상 반환을 나타냅니다.
 
 ```C
 // declspec_restrict.c
@@ -121,7 +122,6 @@ int main()
 **Microsoft 전용 종료**
 
 ## <a name="see-also"></a>참고자료
-
-[키워드](../cpp/keywords-cpp.md)  
-[__declspec](../cpp/declspec.md)  
-[__declspec(noalias)](../cpp/noalias.md)  
+ [키워드](../cpp/keywords-cpp.md)  
+ [__declspec](../cpp/declspec.md)  
+ [__declspec(noalias)](../cpp/noalias.md)  

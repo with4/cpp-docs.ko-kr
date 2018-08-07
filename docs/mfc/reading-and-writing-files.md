@@ -22,24 +22,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 102f5f5de591f8a4475232ad8f0f5383c276e5d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e30ee5b326833b45365c422238ecfcd4f82c556d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930913"
 ---
 # <a name="reading-and-writing-files"></a>파일 읽기 및 쓰기
 C 런타임 라이브러리 파일 처리 함수를 사용한 경우 읽기 및 쓰기 작업이 MFC 쉬울 것입니다. 이 문서에서는 직접 읽기 및 쓰기에 직접 설명는 `CFile` 개체입니다. 있습니다 수 또한 않습니다 버퍼링 파일 I/O에는 [CArchive](../mfc/reference/carchive-class.md) 클래스입니다.  
   
 #### <a name="to-read-from-and-write-to-the-file"></a>읽고 파일에 쓸  
   
-1.  사용 하 여는 **읽기** 및 **쓰기** 읽고 파일에 데이터를 기록 하는 멤버 함수입니다.  
+1.  사용 하 여는 `Read` 및 `Write` 읽고 파일에 데이터를 기록 하는 멤버 함수입니다.  
   
-     -또는-  
+     또는  
   
 2.  `Seek` 멤버 함수는 파일 내에서 특정 오프셋으로 이동 가능 합니다.  
   
- **읽기** 읽을 바이트 수와 버퍼에 대 한 포인터를 사용 하 고 실제 읽은 바이트 수를 반환 합니다. 필요한 바이트 수가 로드할 수 때문에 파일 끝 (EOF)에 도달 하면, 실제 읽은 바이트 수가 반환 됩니다. 읽기 오류가 발생 하는 경우 예외가 throw 됩니다. **쓰기** 비슷합니다 **읽기**, 하지만 쓴 바이트 수가 반환 되지 않습니다. 를 지정 하는 모든 바이트를 쓰지 않습니다. 포함 하 여 쓰기 오류가 발생 하면 예외가 throw 됩니다. 유효한 있으면 `CFile` 개체에서 읽거나 다음 예제와 같이에 쓸 수 있습니다.  
+ `Read` 읽을 바이트 수와 버퍼에 대 한 포인터를 사용 하 고 실제 읽은 바이트 수를 반환 합니다. 필요한 바이트 수가 로드할 수 때문에 파일 끝 (EOF)에 도달 하면, 실제 읽은 바이트 수가 반환 됩니다. 읽기 오류가 발생 하는 경우 예외가 throw 됩니다. `Write` 유사한 `Read`, 하지만 쓴 바이트 수가 반환 되지 않습니다. 를 지정 하는 모든 바이트를 쓰지 않습니다. 포함 하 여 쓰기 오류가 발생 하면 예외가 throw 됩니다. 유효한 있으면 `CFile` 개체에서 읽거나 다음 예제와 같이에 쓸 수 있습니다.  
   
  [!code-cpp[NVC_MFCFiles#2](../atl-mfc-shared/reference/codesnippet/cpp/reading-and-writing-files_1.cpp)]  
   

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376035"
 ---
 # <a name="structure-and-constant-definitions"></a>구조체 및 상수 정의
 기본 도우미 루틴은 후크 함수 및 모든 예외는 동안 통신에 몇 가지 구조를 사용 합니다. 알림 및 실패 값, 정보 구조 및 후크에 전달 된 함수 후크 포인터 형식을 다음과 같습니다.  

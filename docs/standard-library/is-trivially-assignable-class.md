@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b604a4c9a2fc11a9c7274d0e29ab98acfd260907
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47fabb7120cc13eeca38bc9d06428f686fc9f1b9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955568"
 ---
 # <a name="istriviallyassignable-class"></a>is_trivially_assignable 클래스
 
@@ -42,7 +43,7 @@ struct is_trivially_assignable;
 
 ## <a name="remarks"></a>설명
 
-`declval<To>() = declval<From>()` 식은 올바른 형식이어야 하며 특수한 작업이 필요 없는 것으로 컴파일러에 알려져 있어야 합니다. `From`과 `To`는 둘 다 완전한 형식이거나, `void`이거나, 범위를 알 수 없는 배열이어야 합니다.
+`declval<To>() = declval<From>()` 식은 올바른 형식이어야 하며 특수한 작업이 필요 없는 것으로 컴파일러에 알려져 있어야 합니다. 둘 다 `From` 하 고 `To` 완전 한 형식 이어야 합니다 **void**, 또는 범위를 알 수 없는 배열입니다.
 
 ## <a name="requirements"></a>요구 사항
 

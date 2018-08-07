@@ -17,14 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5327b706fb6b461d7bbe449df5482c8f0c485ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6d089e9639d83150e501b32577de94fc43b516c1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463943"
 ---
 # <a name="chaininterfacesiidcount-constant"></a>ChainInterfaces::IidCount 상수
-템플릿 매개 변수 `I0`부터 `I9`까지에서 지정한 인터페이스에 포함된 인터페이스 ID의 총 개수입니다.  
+템플릿 매개 변수에서 지정한 인터페이스에 포함 된 인터페이스 Id의 총 *I0* 를 통해 *I9*합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,7 +37,7 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
  인터페이스 ID의 총 개수입니다.  
   
 ## <a name="remarks"></a>설명  
- 템플릿 매개 변수 `I0` 및 `I1`이 필수이고, 매개 변수 `I2`부터 `I9`는 선택 사항입니다. 각 인터페이스의 ID 개수는 일반적으로 1개입니다.  
+ 템플릿 매개 변수 *I0* 하 고 *I1* 필요 및 매개 변수 *I2* 를 통해 *I9* 는 선택 사항입니다. 각 인터페이스의 IID 수는 일반적으로 1입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

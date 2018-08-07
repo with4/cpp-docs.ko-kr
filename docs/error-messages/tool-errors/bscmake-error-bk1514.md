@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302278"
 ---
 # <a name="bscmake-error-bk1514"></a>BSCMAKE 오류 BK1514
 모든 합니다. SBR 파일 잘림 파일 이름에 찾을 수 없습니다.  

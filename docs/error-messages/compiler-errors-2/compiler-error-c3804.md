@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267159"
 ---
 # <a name="compiler-error-c3804"></a>컴파일러 오류 C3804
 'property_accessor': 접근자 메서드에 속성 수행 해야 할 해서는 모두 static 이거나 모두 static  

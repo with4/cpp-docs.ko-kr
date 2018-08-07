@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379205"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>DDE(동적 데이터 교환)에 응답
 프레임 창 (있는 경우 파일 확장명은 등록 또는 연결 된 응용 프로그램) 파일을 파일 관리자에서 열을 동적 데이터 교환 (DDE) 요청에 응답할 수 있습니다. 참조 [등록 셸](../mfc/special-cwinapp-services.md)합니다.  

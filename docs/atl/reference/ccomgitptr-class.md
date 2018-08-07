@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 049873ce6ff630e8f00ea5ad5ec9b3786bd5e71b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90da5e8394ea4f630a817b68edf60d4242b40be9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884176"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr 클래스
 이 클래스는 인터페이스 포인터를 처리 하기 위한 메서드 및 전역 인터페이스 테이블 (GIT)를 제공합니다.  
@@ -57,17 +58,17 @@ class CComGITPtr
   
 |이름|설명|  
 |----------|-----------------|  
-|[CComGITPtr::Attach](#attach)|(GIT) 전역 인터페이스 테이블에 인터페이스 포인터를 등록 하려면이 메서드를 호출 합니다.|  
-|[CComGITPtr::CopyTo](#copyto)|전달 된 포인터에 전역 인터페이스 테이블 (GIT)에서 인터페이스를 복사 하려면이 메서드를 호출 합니다.|  
-|[CComGITPtr::Detach](#detach)|이 메서드는 인터페이스를 분리할를 호출 하는 `CComGITPtr` 개체입니다.|  
-|[CComGITPtr::GetCookie](#getcookie)|호출에서 쿠키를 반환 하려면이 메서드는 `CComGITPtr` 개체입니다.|  
+|[CComGITPtr::Attach](#attach)|인터페이스 포인터를 전역 인터페이스 테이블 (GIT)에 등록 하려면이 메서드를 호출 합니다.|  
+|[CComGITPtr::CopyTo](#copyto)|전달 된 포인터에 대 한 전역 인터페이스 테이블 (GIT)에서 인터페이스를 복사 하려면이 메서드를 호출 합니다.|  
+|[CComGITPtr::Detach](#detach)|해당 인터페이스를 분리 하려면이 메서드는 `CComGITPtr` 개체입니다.|  
+|[CComGITPtr::GetCookie](#getcookie)|쿠키를 반환 하려면이 메서드를 호출 합니다 `CComGITPtr` 개체입니다.|  
 |[CComGITPtr::Revoke](#revoke)|전역 인터페이스 테이블 (GIT)에서 인터페이스를 제거 하려면이 메서드를 호출 합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[DWORD CComGITPtr::operator](#operator_dword)|쿠키를 반환 된 `CComGITPtr` 개체입니다.|  
+|[CComGITPtr::operator DWORD](#operator_dword)|쿠키를 반환 합니다 `CComGITPtr` 개체입니다.|  
 |[CComGITPtr::operator =](#operator_eq)|대입 연산자입니다.|  
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
@@ -77,16 +78,16 @@ class CComGITPtr
 |[CComGITPtr::m_dwCookie](#m_dwcookie)|쿠키입니다.|  
   
 ## <a name="remarks"></a>설명  
- 자유 스레드된 마샬러를 집계 하 고 다른 개체에서 가져온 인터페이스 포인터를 사용 해야 하는 개체는 인터페이스 올바르게 마샬링 되므로 추가 단계를 수행 해야 합니다. 일반적으로이 사용할 때마다 GIT에서 포인터를 가져오는 및 GIT에 인터페이스 포인터를 저장 해야 합니다. 클래스 `CComGITPtr` GIT에 저장 된 인터페이스 포인터를 사용할 수 있도록 제공 됩니다.  
+ 자유 스레드된 마샬러를 집계 하 고 다른 개체에서 가져온 인터페이스 포인터를 사용 해야 하는 개체 인터페이스를 올바르게 마샬링되는 게 하려면 추가 단계를 수행 해야 합니다. 일반적으로 GIT에서 인터페이스 포인터를 저장 하 고 포인터 GIT에서 사용 될 때마다 시작 해야 합니다. 클래스 `CComGITPtr` GIT에 저장 하는 인터페이스 포인터를 사용할 수 있도록 제공 됩니다.  
   
 > [!NOTE]
->  전역 인터페이스 테이블 시설은 버전 1.1 dcom Windows 95 및 이상, Windows 98, Windows NT 4.0 서비스 팩 3 이상 및 Windows 2000에서 사용할 수만 있습니다.  
+>  전역 인터페이스 테이블 시설만 DCOM 버전 1.1 사용 하 여 Windows 95 이상 Windows 98, Windows NT 4.0 서비스 팩 3 이상 및 Windows 2000에서 제공 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
 ##  <a name="attach"></a>  CComGITPtr::Attach  
- (GIT) 전역 인터페이스 테이블에 인터페이스 포인터를 등록 하려면이 메서드를 호출 합니다.  
+ 인터페이스 포인터를 전역 인터페이스 테이블 (GIT)에 등록 하려면이 메서드를 호출 합니다.  
   
 ```
 HRESULT Attach(T* p) throw();
@@ -95,17 +96,17 @@ HRESULT Attach(DWORD dwCookie) throw();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `p`  
+ *p*  
  GIT에 추가 될 인터페이스 포인터입니다.  
   
- `dwCookie`  
+ *dwCookie*  
  인터페이스 포인터를 식별 하는 데 사용 되는 쿠키입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+ 성공 하면 s_ok이 고, 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 디버그 빌드에 어설션 오류가 발생은 쿠키 NULL과 같으면 또는 GIT 유효 하지 않을 경우 발생 합니다.  
+ 디버그 빌드에서 GIT 유효 하지 않은 경우 또는 쿠키 NULL과 동일한 경우 어설션 오류가 발생 합니다.  
   
 ##  <a name="ccomgitptr"></a>  CComGITPtr::CComGITPtr  
  생성자입니다.  
@@ -119,22 +120,22 @@ CComGITPtr(CComGITPtr&& rv);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `p`  
- (GIT) 전역 인터페이스 테이블에 저장 되는 인터페이스 포인터입니다.  
+ [in] *p*  
+ (GIT) 전역 인터페이스 테이블에 저장 하는 인터페이스 포인터입니다.  
   
- [in] `git`  
+ [in] *git*  
  기존에 대 한 참조 `CComGITPtr` 개체입니다.  
   
- [in] `dwCookie`  
+ [in] *dwCookie*  
  인터페이스 포인터를 식별 하는 데 사용 되는 쿠키입니다.  
   
- [in] `rv`  
- 소스 `CComGITPtr` 개체에서 데이터를 이동 합니다.  
+ [in] *rv*  
+ 원본 `CComGITPtr` 개체 데이터를 이동 합니다.  
   
 ### <a name="remarks"></a>설명  
- 새 `CComGITPtr` 개체, 필요에 따라 기존를 사용 하 여 `CComGITPtr` 개체입니다.  
+ 새로 만듭니다 `CComGITPtr` 개체를 필요에 따라 기존 사용 하 여 `CComGITPtr` 개체입니다.  
   
- 사용 하 여 생성자 `rv` 는 이동 생성자입니다. 원본에서 데이터를 이동할 `rv`, 차례로 `rv` 지워집니다.  
+ 사용 하 여 생성자 *rv* 이동 생성자입니다. 원본에서 데이터를 이동할 *rv*를 차례로 *rv* 지워집니다.  
   
 ##  <a name="dtor"></a>  CComGITPtr:: ~ CComGITPtr  
  소멸자입니다.  
@@ -144,40 +145,40 @@ CComGITPtr(CComGITPtr&& rv);
 ```  
   
 ### <a name="remarks"></a>설명  
- (GIT) 전역 인터페이스 테이블에서 제거 하는 인터페이스를 사용 하 여 [CComGITPtr::Revoke](#revoke)합니다.  
+ 전역 인터페이스 테이블 (GIT)에서 인터페이스를 제거를 사용 하 여 [CComGITPtr::Revoke](#revoke)합니다.  
   
 ##  <a name="copyto"></a>  CComGITPtr::CopyTo  
- 전달 된 포인터에 전역 인터페이스 테이블 (GIT)에서 인터페이스를 복사 하려면이 메서드를 호출 합니다.  
+ 전달 된 포인터에 대 한 전역 인터페이스 테이블 (GIT)에서 인터페이스를 복사 하려면이 메서드를 호출 합니다.  
   
 ```
 HRESULT CopyTo(T** pp) const throw();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pp`  
+ *pp*  
  인터페이스를 수신 하는 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+ 성공 하면 s_ok이 고, 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- GIT에서 인터페이스는 전달 된 포인터에 복사 됩니다. 포인터가 더 이상 필요한 경우 호출자에 의해 해제 되어야 합니다.  
+ GIT에서 해당 인터페이스는 전달 된 포인터에 복사 됩니다. 포인터가 더 이상 필요한 경우 호출자에 의해 해제 되어야 합니다.  
   
 ##  <a name="detach"></a>  CComGITPtr::Detach  
- 이 메서드는 인터페이스를 분리할를 호출 하는 `CComGITPtr` 개체입니다.  
+ 해당 인터페이스를 분리 하려면이 메서드는 `CComGITPtr` 개체입니다.  
   
 ```
 DWORD Detach() throw();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 쿠키를 반환 된 `CComGITPtr` 개체입니다.  
+ 쿠키를 반환 합니다 `CComGITPtr` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- GIT에서 인터페이스를 제거 하려면 호출자에 게이 사용 하 여 [CComGITPtr::Revoke](#revoke)합니다.  
+ Git에서 인터페이스를 제거 하려면 호출자에 게 달려를 사용 하 여 [CComGITPtr::Revoke](#revoke)합니다.  
   
 ##  <a name="getcookie"></a>  CComGITPtr::GetCookie  
- 호출에서 쿠키를 반환 하려면이 메서드는 `CComGITPtr` 개체입니다.  
+ 쿠키를 반환 하려면이 메서드를 호출 합니다 `CComGITPtr` 개체입니다.  
   
 ```
 DWORD GetCookie() const;
@@ -187,7 +188,7 @@ DWORD GetCookie() const;
  쿠키를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 쿠키는 인터페이스와 해당 위치를 확인 하는 데 사용 하는 변수입니다.  
+ 쿠키는 인터페이스 및 해당 위치를 식별 하는 데는 변수입니다.  
   
 ##  <a name="m_dwcookie"></a>  CComGITPtr::m_dwCookie  
  쿠키입니다.  
@@ -197,7 +198,7 @@ DWORD m_dwCookie;
 ```  
   
 ### <a name="remarks"></a>설명  
- 쿠키는 인터페이스와 해당 위치를 확인 하는 데 사용 하는 멤버 변수입니다.  
+ 쿠키는 인터페이스 및 해당 위치를 식별 하는 데는 멤버 변수입니다.  
   
 ##  <a name="operator_eq"></a>  CComGITPtr::operator =  
  대입 연산자입니다.  
@@ -210,17 +211,17 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `p`  
- 인터페이스에 대 한 포인터입니다.  
+ [in] *p*  
+ 인터페이스 포인터입니다.  
   
- [in] `git`  
+ [in] *git*  
  `CComGITPtr` 개체에 대한 참조입니다.  
   
- [in] `dwCookie`  
+ [in] *dwCookie*  
  인터페이스 포인터를 식별 하는 데 사용 되는 쿠키입니다.  
   
- [in] `rv`  
- `CComGITPtr` 에서 데이터를 이동 합니다.  
+ [in] *rv*  
+ `CComGITPtr` 데이터를 이동 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  업데이트 된 반환 `CComGITPtr` 개체입니다.  
@@ -228,25 +229,25 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ### <a name="remarks"></a>설명  
  에 새 값을 할당 한 `CComGITPtr` 전역 인터페이스 테이블에 대 한 참조 또는 기존 개체에서 개체입니다.  
   
-##  <a name="operator_dword"></a>  DWORD CComGITPtr::operator  
- 와 연관 된 쿠키를 반환 합니다.는 `CComGITPtr` 개체입니다.  
+##  <a name="operator_dword"></a>  CComGITPtr::operator DWORD  
+ 연결 된 쿠키를 반환 합니다 `CComGITPtr` 개체입니다.  
   
 ```  
 operator DWORD() const;
 ```  
   
 ### <a name="remarks"></a>설명  
- 쿠키는 인터페이스와 해당 위치를 확인 하는 데 사용 하는 변수입니다.  
+ 쿠키는 인터페이스 및 해당 위치를 식별 하는 데는 변수입니다.  
   
 ##  <a name="revoke"></a>  CComGITPtr::Revoke  
- (GIT) 전역 인터페이스 테이블에서 현재 인터페이스를 제거 하려면이 메서드를 호출 합니다.  
+ 전역 인터페이스 테이블 (GIT)에서 현재 인터페이스를 제거 하려면이 메서드를 호출 합니다.  
   
 ```
 HRESULT Revoke() throw();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+ 성공 하면 s_ok이 고, 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ### <a name="remarks"></a>설명  
  GIT에서 인터페이스를 제거합니다.  

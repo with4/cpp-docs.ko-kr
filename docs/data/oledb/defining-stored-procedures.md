@@ -1,5 +1,5 @@
 ---
-title: 저장된 프로시저 정의 | Microsoft Docs
+title: 저장된 프로시저를 정의 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1e03a5ae2e7c75d905216a6be92630376484d047
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2856418da13cc80d47c10295234b47813071a4ec
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336955"
 ---
 # <a name="defining-stored-procedures"></a>저장 프로시저 정의
-저장된 프로시저를 호출 하기 전에 먼저 정의 해야를 사용 하 여 [DEFINE_COMMAND](../../data/oledb/define-command.md) 매크로입니다. 명령을 정의 하는 경우 매개 변수 표식으로 물음표 (?) 매개 변수를 나타냅니다.  
+저장된 프로시저를 호출 하기 전에 먼저 정의 해야 하지만 사용 하 여 [DEFINE_COMMAND](../../data/oledb/define-command.md) 매크로입니다. 명령을 정의할 때 매개 변수 표식으로 물음표 (?)를 사용 하 여 매개 변수를 표기 합니다.  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{INSERT {name, phone} into shippers  (?,?)}")  
 ```  
   
- 이 항목의 코드 예제에 사용 되는 구문 (중괄호 등에 사용)은 SQL Server에만 확인 합니다. 저장된 프로시저에서 사용 하는 구문을 사용 하는 공급자에 따라 달라질 수 있습니다.  
+ 이 항목의 코드 예제에 사용 된 구문 (중괄호 등에 사용)은 SQL Server에만 해당 하는 참고 합니다. 저장된 프로시저에 사용 하는 구문을 사용 하는 공급자에 따라 달라질 수 있습니다.  
   
- 다음으로 매개 변수 맵의 매개 변수는 명령에서 발생 하는 순서로 나열 하는 명령에서 사용 매개 변수를 지정 합니다.  
+ 다음으로, 매개 변수 맵을 명령에서 발생 하는 순서 대로 매개 변수를 나열 하는 명령에서 사용 하는 매개 변수를 지정 합니다.  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -44,22 +45,22 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- 되는 것 만큼 앞의 예제는 저장된 프로시저를 정의 합니다. 일반적으로 코드의 효율적인 재사용에 대 한 데이터베이스 집합이 포함 되어 "Year Sales" 또는 "dt_adduserobject" 같은 이름 가진 미리 정의 된 저장된 프로시저 SQL Server 엔터프라이즈 관리자를 사용 하 여 해당 정의 볼 수 있습니다. 다음과 같이 호출 (위치는 '?' 매개 변수는 저장된 프로시저의 인터페이스에 따라 다릅니다):  
+ 앞의 예제 때 저장된 프로시저를 정의 합니다. 일반적으로 코드의 효율적인 재사용에 대 한 데이터베이스 집합이 포함 되어 "Year Sales" 또는 "dt_adduserobject."와 같은 이름으로 미리 정의 된 저장된 프로시저 SQL Server 엔터프라이즈 관리자를 사용 하 여 해당 정의 볼 수 있습니다. 다음과 같이 호출 (배치는 '?' 매개 변수는 저장된 프로시저 인터페이스에 따라 달라 집니다).  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }")  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }")  
 ```  
   
- 그런 다음 명령 클래스를 선언 합니다.  
+ 다음으로 명령 클래스를 선언 합니다.  
   
-```  
+```cpp  
 class CMySProc : public CCommand<CAccessor<CMySProcAccessor>>  
 ```  
   
  마지막으로 저장된 프로시저 호출 `OpenRowset` 다음과 같습니다.  
   
-```  
+```cpp  
 CSession m_session;  
 
 HRESULT OpenRowset()  
@@ -68,9 +69,9 @@ HRESULT OpenRowset()
 }  
 ```  
   
- 또한 데이터베이스에서 특성을 사용 하 여 저장된 프로시저를 정의할 수 참고 [db_command](../../windows/db-command.md) 다음과 같습니다.  
+ 또한 데이터베이스 특성을 사용 하 여 저장된 프로시저를 정의할 수는 참고 [db_command](../../windows/db-command.md) 다음과 같습니다.  
   
-```  
+```cpp  
 db_command("{ ? = CALL dbo.dt_adduserobject }")  
 ```  
   

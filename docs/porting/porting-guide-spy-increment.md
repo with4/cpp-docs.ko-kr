@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 28c99f5f45aba2c77b84dce63ea200fb33b76f84
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208811"
 ---
 # <a name="porting-guide-spy"></a>포팅 가이드: Spy++
 이 포팅 사례 연구는 일반적인 포팅 프로젝트, 발생할 수 있는 문제 유형 및 포팅 문제를 다루기 위한 몇 가지 일반적인 팁과 트릭에 대한 아이디어를 제공하도록 설계되었습니다. 프로젝트 포팅 경험은 코드의 세부 사항에 따라 달라지므로 결정적인 포팅 가이드는 아닙니다.  
@@ -194,7 +195,7 @@ MOUT << _T(" chUser:'") << chUser
   
 ```  
   
- `MOUT` 매크로는 `mstream` 형식의 개체인 *g_pmout으로 확인됩니다. mstream 클래스는 표준 출력 문자열 클래스인 `std::basic_ostream<TCHAR>.`에서 파생됩니다. 그러나 유니코드로 변환하기 위해 삽입한 문자열 리터럴 앞뒤의 _T로 인해 << 연산자에 대한 오버로드 확인이 실패하고 다음 오류 메시지가 표시됩니다.  
+ `MOUT` 매크로는 `mstream` 형식의 개체인 \*g_pmout로 확인됩니다. mstream 클래스는 표준 출력 문자열 클래스인 `std::basic_ostream<TCHAR>.`에서 파생됩니다. 그러나 유니코드로 변환하기 위해 삽입한 문자열 리터럴 앞뒤의 _T로 인해 << 연산자에 대한 오버로드 확인이 실패하고 다음 오류 메시지가 표시됩니다.  
   
 ```Output  
 1>winmsgs.cpp(4612): error C2666: 'mstream::operator <<': 2 overloads have similar conversions

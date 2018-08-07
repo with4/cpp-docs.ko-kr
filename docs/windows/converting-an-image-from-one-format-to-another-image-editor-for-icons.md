@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871042"
 ---
 # <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>이미지를 한 형식에서 다른 형식으로 변환(아이콘에 대한 이미지 편집기)
 GIF 나 JPEG 이미지 이미지 편집기에서 열고 비트맵으로 저장할 수 있습니다. 또한 비트맵 파일을 열고 GIF 또는 JPEG로 저장 수 있습니다. 이미지를 사용 하 여 작업할 개발 환경에서 편집을 위해 프로젝트의 일부가 필요는 없습니다 (참조 [외부의 이미지 편집](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).  

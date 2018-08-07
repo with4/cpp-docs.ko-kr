@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225079"
 ---
 # <a name="fatal-error-c1086"></a>심각한 오류 C1086
 filetype 파일을 찾을 수 없습니다. 'file': message  

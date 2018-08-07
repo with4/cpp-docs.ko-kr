@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349534"
 ---
 # <a name="methods-of-creating-tool-tips"></a>도구 설명을 만드는 방법
 MFC는 세 가지 클래스를 만들고 관리 도구 설명 컨트롤을 제공: [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) 및 [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md). 이러한 클래스에 도구 설명 멤버 함수는 Windows 공용 컨트롤을 API를 래핑합니다. 클래스 `CToolBarCtrl` 및 클래스 `CToolTipCtrl` 클래스에서 파생 된 `CWnd`합니다.  

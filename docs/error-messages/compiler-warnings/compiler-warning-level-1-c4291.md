@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282381"
 ---
 # <a name="compiler-warning-level-1-c4291"></a>컴파일러 경고(수준 1) C4291
 'declaration':를 찾을 수 없는 일치 하는 연산자 삭제 초기화는 예외를 throw 하는 경우 메모리를 해제 되지 않습니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380580"
 ---
 # <a name="tool-tips"></a>도구 설명
 MFC 클래스에서 파생 된 창에 포함 된 컨트롤에 도구 설명 추가 절차는 distinct [CFrameWnd](../mfc/reference/cframewnd-class.md) 에서 파생 되지 않은 windows 및 `CFrameWnd`합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879785"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new(vtable의 새 슬롯)(C++ 구성 요소 확장)
 `new` 키워드 나타냅니다 가상 멤버가 vtable의 new 슬롯을 받게 됩니다.  

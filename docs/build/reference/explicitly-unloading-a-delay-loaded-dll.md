@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374176"
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>지연 로드된 DLL의 명시적 언로드
 [지연/](../../build/reference/delay-delay-load-import-settings.md): unload 링커 옵션을 사용 하면 지연 로드 된 DLL을 언로드할 수 있습니다. 기본적으로 코드 DLL을 언로드할 때 (/delay: unload를 사용 하 여 및 **__FUnloadDelayLoadedDLL2**)을 지연 로드 가져오기 가져오기 주소 테이블 (IAT)에 유지 합니다. 그러나 /delay: unload 링커 명령줄에서를 사용 하는 도우미 함수가 지원 됩니다 원래 형태로; IAT를 다시 설정 하는 DLL의 명시적 언로드 지금은 적합 하지 않은 포인터를 덮어쓰게 됩니다. IAT는 필드는 [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) (있는 경우)의 원래 IAT 복사본의 주소를 포함 하 합니다.  

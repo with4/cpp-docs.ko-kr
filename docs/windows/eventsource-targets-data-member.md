@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871746"
 ---
 # <a name="eventsourcetargets-data-member"></a>EventSource::targets_ 데이터 멤버
 하나 이상의 이벤트 처리기 배열입니다.  

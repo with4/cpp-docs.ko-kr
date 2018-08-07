@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057941"
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
 중 하나를 생성 한 `UWOP_SAVE_XMM128` 또는 `UWOP_SAVE_XMM128_FAR` 지정된 XMM 레지스터에 대 한 코드 항목을 해제 하 고 현재 프롤로그 오프셋을 사용 하 여 오프셋 합니다. MASM 가장 효율적인 인코딩 선택 합니다.  

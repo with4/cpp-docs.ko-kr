@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342201"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>코드 마법사로 대화 상자 클래스 만들기
 다음 표에서 관리 코드 마법사 데 도움이 되는 대화 관련 태스크를 나열 합니다.  

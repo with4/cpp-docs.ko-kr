@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345822"
 ---
 # <a name="exchanging-data"></a>데이터 교환
 대부분의 대화 상자와 마찬가지로 속성 시트 및 응용 프로그램 간의 데이터 교환을 속성 시트의 가장 중요 한 기능 중 하나입니다. 이 문서에서는이 작업을 수행 하는 방법을 설명 합니다.  

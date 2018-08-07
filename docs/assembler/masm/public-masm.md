@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056011"
 ---
 # <a name="public-masm"></a>PUBLIC (MASM)
 각 변수, 레이블 또는로 지정 하는 절대 기호를 사용 하면 *이름* 프로그램의 다른 모든 모듈을 사용할 수 있습니다.  

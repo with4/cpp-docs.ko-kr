@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196453"
 ---
 # <a name="compiler-error-c2489"></a>컴파일러 오류 C2489
 'identifier': 'naked' 함수에서 함수 범위에서 허용 되지 자동 또는 레지스터 변수를 초기화 합니다.  

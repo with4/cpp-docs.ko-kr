@@ -15,11 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bea67bd87e4ca9a63b7fc5d00a8d49d04647440
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d099f8c527708f937bcbb9978c2dd72ab7a2961
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460986"
 ---
 # <a name="composablebase-class"></a>ComposableBase 클래스
 ## <a name="syntax"></a>구문  
@@ -32,7 +33,7 @@ class ComposableBase;
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `FactoryInterface`  
+ *FactoryInterface*  
   
 ## <a name="remarks"></a>설명  
   

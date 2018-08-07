@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236455"
 ---
 # <a name="compiler-error-c2764"></a>컴파일러 오류 C2764
 'param': 템플릿 매개 변수 사용 하거나 부분 특수화 'specialization'에서 추론할 수 없습니다  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878881"
 ---
 # <a name="override--c-component-extensions"></a>override(C++ 구성 요소 확장)
 `override` 상황에 맞는 키워드는 형식의 멤버가 기본 클래스 또는 기본 인터페이스 멤버를 재정의함을 나타냅니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373155"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh(_penter 후크 함수 사용)
 에 대 한 호출으로 인해는 `_penter` 모든 메서드 또는 함수의 시작 부분에 함수입니다.  

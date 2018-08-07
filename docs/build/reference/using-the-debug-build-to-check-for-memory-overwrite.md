@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376695"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>디버그 빌드를 사용한 메모리 덮어쓰기 확인
 메모리 덮어쓰기 확인 하려면 디버그 빌드를 사용 하려면 디버그에 대 한 프로젝트를 먼저 빌드해야 할 합니다. 그런 다음 응용 프로그램의 처음 부분을 이동 `InitInstance` 다음 줄을 추가 합니다.  

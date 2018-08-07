@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33912981"
 ---
 # <a name="null-directive"></a>Null 지시문
 Null 전처리기 지시문은 한 개의 숫자 기호 (**#**) 일 경우 줄. 아무런 영향을 주지 않습니다.  

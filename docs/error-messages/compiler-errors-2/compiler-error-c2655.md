@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199381"
 ---
 # <a name="compiler-error-c2655"></a>컴파일러 오류 C2655
 'identifier': 정의 또는 재선언 현재 범위에  

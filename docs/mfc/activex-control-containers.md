@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338977"
 ---
 # <a name="activex-control-containers"></a>ActiveX 컨트롤 컨테이너
 ActiveX 컨트롤 컨테이너는 ActiveX 컨트롤을 완전히 지원하는 컨테이너이며, 이를 고유한 창 또는 대화 상자에 포함할 수 있습니다. ActiveX 컨트롤은 여러 개발 프로젝트에서 사용할 수 있는 재사용 가능한 소프트웨어 요소입니다. 컨트롤은 응용 프로그램의 사용자가 데이터베이스에 액세스하고, 데이터를 모니터링하고, 응용 프로그램 내에서 여러 항목을 선택할 수 있게 해줍니다. ActiveX 컨트롤에 대 한 자세한 내용은 문서 참조 [MFC ActiveX 컨트롤](../mfc/mfc-activex-controls.md)합니다.  

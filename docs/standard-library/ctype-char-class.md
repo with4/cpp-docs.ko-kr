@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edbc96419e68cf584222e4008f58fd96169b2fb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47ac9fa5431b5edfb4885dfdbf39be6c6b89cee6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960663"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 클래스
 
-이 클래스는 `char` 형식에 대한 템플릿 클래스 **ctype\<CharType**>의 명시적 특수화입니다. `char` 형식 문자의 다양한 속성에 대해 특징을 지정하기 위한 로캘 패싯으로 사용할 수 있는 개체를 설명합니다.
+클래스는 템플릿 클래스의 명시적 특수화 `ctype\<CharType>` 입력할 **char**, 형식 문자의 다양 한 속성을 특성화 하기 위해 로캘 패싯으로 사용할 수 있는 개체에 설명 **char**.
 
 ## <a name="syntax"></a>구문
 
@@ -131,15 +132,15 @@ protected:
 
 명시적 특수화는 다음과 같은 여러 가지 면에서 템플릿 클래스와 다릅니다.
 
-- ctype<`char`> 클래스의 개체는 **ctype_base::mask** 형식의 UCHAR_MAX + 1 요소로 구성된 배열인, ctype 마스크 테이블의 첫 번째 요소에 대한 포인터를 저장합니다. 또한 ctype\< **Elem**> 개체가 삭제된 경우 배열을 삭제해야 할지(`operator delete[]`를 사용하여) 여부를 나타내는 부울 개체도 저장합니다.
+- Ctype 클래스의 개체 < `char`>는 ctype 마스크 테이블의 첫 번째 요소를 배열 uchar_max + 1 개 요소 형식의 포인터를 저장 `ctype_base::mask`합니다. 또한 ctype\< **Elem**> 개체가 삭제된 경우 배열을 삭제해야 할지(`operator delete[]`를 사용하여) 여부를 나타내는 부울 개체도 저장합니다.
 
-- 유일한 공용 생성자를 사용하여 ctype 마스크 테이블, **tab**을 지정하고 ctype<`char`> 개체가 삭제되었을 때 배열을 삭제해야 하는 경우 true인 부울 개체, **del**을 지정하고 참조 횟수 매개 변수 refs도 지정할 수 있습니다.
+- 유일한 공용 생성자를 지정할 수 있습니다 `tab`, ctype 마스크 테이블 및 `del`, 배열의 되어야 하면 true 인 부울 개체 삭제 ctype < `char`> 참조-카운트 뿐만 아니라 개체가 제거 될 매개 변수 참조입니다.
 
-- 보호된 멤버 함수 **table**은 저장된 ctype 마스크 테이블을 반환합니다.
+- 보호 된 멤버 함수 `table` 저장 된 ctype 마스크 테이블을 반환 합니다.
 
-- 정적 멤버 개체 **table_size**는 ctype 마스크 테이블의 최소 요소 수를 지정합니다.
+- 정적 멤버 개체 `table_size` ctype 마스크 테이블의 최소 요소 수를 지정 합니다.
 
-- 보호된 정적 멤버 함수 **classic_table**은 "C" 로캘에 적합한 ctype 마스크 테이블을 반환합니다.
+- 보호 된 정적 멤버 함수 `classic_table`(반환 ctype 마스크 테이블 "C" 로캘에 적합 한 합니다.
 
 - 보호된 가상 멤버 함수 [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is) 또는 [do_scan_not](../standard-library/ctype-class.md#do_scan_not)이 없습니다. 해당 공용 멤버 함수는 동일한 작업을 자체적으로 수행합니다.
 

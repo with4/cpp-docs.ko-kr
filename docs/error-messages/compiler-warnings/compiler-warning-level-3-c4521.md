@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298007"
 ---
 # <a name="compiler-warning-level-3-c4521"></a>컴파일러 경고(수준 3) C4521
 'class': 복사 생성자를 여러 개 지정  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302726"
 ---
 # <a name="c-runtime-error-r6017"></a>C 런타임 오류 R6017
 다중 스레드 잠금 예기치 않은 오류  

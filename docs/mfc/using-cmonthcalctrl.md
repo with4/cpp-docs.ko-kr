@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382381"
 ---
 # <a name="using-cmonthcalctrl"></a>CMonthCalCtrl 사용
 Month calendar 컨트롤 ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) 달력 형태의 사용자 인터페이스를 구현 합니다. 해당 컨트롤은 날짜를 입력하거나 선택하는 매우 직관적인 인식 방법을 사용자에게 제공합니다. 또한 기존의 데이터 형식을 사용하여 컨트롤에서 날짜 정보를 가져오고 설정하는 방법을 응용 프로그램에 제공합니다. 기본적으로 Month Calendar 컨트롤에는 현재 요일과 월이 표시됩니다. 그러나 사용자는 이전 및 다음 달로 스크롤하고 특정 월 및/또는 연도를 선택할 수 있습니다.  

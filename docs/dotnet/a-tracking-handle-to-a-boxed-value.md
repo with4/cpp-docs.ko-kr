@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108291"
 ---
 # <a name="a-tracking-handle-to-a-boxed-value"></a>boxed 값에 대한 추적 핸들
 참조 값 형식에 대 한 추적 핸들 사용 Visual c + + Managed Extensions for c + + 변경 되었습니다.  

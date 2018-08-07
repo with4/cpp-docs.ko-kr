@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872704"
 ---
 # <a name="ftmbasemarshaller-data-member"></a>FtmBase::marshaller_ 데이터 멤버
 자유 스레드된 마샬러에 대 한 참조를 보유합니다.  

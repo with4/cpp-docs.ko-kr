@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418538"
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>보안이 강화된 CRT 함수 버전
 

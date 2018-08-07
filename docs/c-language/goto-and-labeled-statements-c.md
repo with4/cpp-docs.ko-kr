@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386416"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto 및 레이블 문 (C)
 `goto` 문은 레이블에 제어를 전송합니다. 지정된 레이블은 동일한 함수에 있어야 하며 동일한 함수에서 하나의 문 앞에만 나타날 수 있습니다.  

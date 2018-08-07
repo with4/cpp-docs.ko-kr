@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883983"
 ---
 # <a name="copying-a-device-image-image-editor-for-icons"></a>장치 이미지 복사(아이콘에 대한 이미지 편집기)
 ### <a name="to-copy-a-device-image"></a>장치 이미지 복사  

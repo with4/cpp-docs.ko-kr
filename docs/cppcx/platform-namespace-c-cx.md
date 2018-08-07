@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091961"
 ---
 # <a name="platform-namespace-ccx"></a>Platform 네임스페이스(C++/CX)
 Windows 런타임과 호환되는 기본 제공 형식을 포함합니다.  

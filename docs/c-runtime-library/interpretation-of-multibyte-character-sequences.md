@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390013"
 ---
 # <a name="interpretation-of-multibyte-character-sequences"></a>멀티바이트 문자 시퀀스 해석
 

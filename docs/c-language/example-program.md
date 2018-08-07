@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387634"
 ---
 # <a name="example-program"></a>예제 프로그램
 다음 C 소스 프로그램은 두 개의 소스 파일로 구성됩니다. 이 프로그램에서는 C 프로그램에서 가능한 다양한 선언 및 정의 중 몇 가지를 간략하게 보여 줍니다. 이 설명서의 이후 섹션에서는 이러한 선언, 정의 및 초기화를 작성하는 방법과 **static** 및 `extern` 등의 C 키워드를 사용하는 방법을 설명합니다. `printf` 함수는 C 헤더 파일 STDIO.H에서 선언됩니다.  

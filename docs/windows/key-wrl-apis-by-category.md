@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881460"
 ---
 # <a name="key-wrl-apis-by-category"></a>범주별 키 WRL API
 다음 표에서 기본 Windows 런타임 c + + 템플릿 라이브러리 클래스, 구조체, 함수 및 매크로 나열합니다. 도우미 네임 스페이스 및 클래스의 구문 생략 됩니다. 네임 스페이스에 의해 정렬 된 API 설명서를 확장 하는 이러한 목록입니다.  

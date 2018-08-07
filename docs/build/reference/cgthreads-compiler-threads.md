@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371423"
 ---
 # <a name="cgthreads-compiler-threads"></a>/CGTHREADS(컴파일러 스레드)
 링크 타임 코드 생성이 지정된 경우 최적화 및 코드 생성에 사용할 cl.exe 스레드의 수를 설정합니다.  

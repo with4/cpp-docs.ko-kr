@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344398"
 ---
 # <a name="framework-mfc"></a>프레임워크(MFC)
 Microsoft Foundation 클래스 (MFC) 라이브러리 프레임 워크를 사용 하 여 주로 몇 가지 주요 클래스와 여러 가지 Visual c + + 도구에 기반 합니다. 일부 클래스는 Win32 응용 프로그래밍 인터페이스 (API)의 많은 부분을 캡슐화합니다. 다른 클래스에는 문서, 뷰 및 응용 프로그램 자체와 같은 응용 프로그램 개념 캡슐화합니다. 여전히 다른 OLE 기능이 및 ODBC / DAO 데이터 액세스 기능을 캡슐화합니다.  

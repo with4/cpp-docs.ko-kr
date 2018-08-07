@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256616"
 ---
 # <a name="compiler-error-c3391"></a>컴파일러 오류 C3391
 'type_arg': 제네릭 'generic_type'의 ' param' 제네릭 매개 변수에 대 한 잘못 된 형식 인수가 nullable이 아닌 값 형식 이어야 합니다.  

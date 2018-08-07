@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33222165"
 ---
 # <a name="compiler-error-c2344"></a>컴파일러 오류 C2344
 align(#): 맞춤은 2의 거듭제곱이어야 합니다.  

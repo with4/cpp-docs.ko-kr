@@ -31,11 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ac243333c8dc778486dd18323658f262c6d6610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b221bd97d9ee943e19b043bcc9be6aba0fa1672
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929597"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>대화 상자 개체에서 데이터 검색
 프레임 워크 대화 상자에서 컨트롤의 값을 초기화 하 고 컨트롤에서 값을 검색 하는 쉬운 방법을 제공 합니다. 더 어려운 수동 방법은 같은 함수를 호출 하는 것은 `SetDlgItemText` 및 `GetDlgItemText` 클래스의 멤버 함수 `CWnd`, 제어 창을에 적용 되는 합니다. 이러한 함수를 사용 하면 액세스할 각 컨트롤을 개별적으로 설정 하거나 해당 값을 가져올와 같은 함수를 호출 `SetWindowText` 및 `GetWindowText`합니다. 프레임 워크의 접근 방식을 모두 초기화 및 검색을 자동화합니다.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/04/2018
   
  DDX 및 DDV에서 더 자세하게에서 설명 [대화 상자 데이터 교환 및 유효성 검사](../mfc/dialog-data-exchange-and-validation.md)합니다.  
   
- 모달 대화 상자에 대 한 사용자가 입력 한 경우 모든 데이터를 검색할 수 있습니다 `DoModal` 반환 **IDOK** 하지만 개체가 소멸 되기 전에 대화 상자. 모덜리스 대화 상자를 검색할 수 있습니다 데이터 대화 상자 개체에서 언제 든 지 호출 하 여 `UpdateData` 인수와 함께 **TRUE** 하 고 다음 대화 상자 클래스 멤버 변수를 액세스 합니다. 이 주제에서 더 자세하게에서 설명 [대화 상자 데이터 교환 및 유효성 검사](../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ 모달 대화 상자에 대 한 사용자가 입력 한 경우 모든 데이터를 검색할 수 있습니다 `DoModal` IDOK 반환 하지만 개체가 소멸 되기 전에 대화 상자. 모덜리스 대화 상자를 검색할 수 있습니다 데이터 대화 상자 개체에서 언제 든 지 호출 하 여 `UpdateData` 인수와 함께 **TRUE** 하 고 다음 대화 상자 클래스 멤버 변수를 액세스 합니다. 이 주제에서 더 자세하게에서 설명 [대화 상자 데이터 교환 및 유효성 검사](../mfc/dialog-data-exchange-and-validation.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [대화 상자의 수명 주기](../mfc/life-cycle-of-a-dialog-box.md)

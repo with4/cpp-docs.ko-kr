@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171642"
 ---
 # <a name="compiler-error-c2143"></a>컴파일러 오류 C2143
 구문 오류: 'token2' 하기 전에 1 누락  

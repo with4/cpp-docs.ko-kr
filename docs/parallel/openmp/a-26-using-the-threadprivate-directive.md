@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690532"
 ---
 # <a name="a26---using-the-threadprivate-directive"></a>A.26   threadprivate 지시문 사용
 다음 예에서는 사용 하는 방법을 보여 줍니다는 `threadprivate` 지시문 ([2.7.1 섹션](../../parallel/openmp/2-7-1-threadprivate-directive.md) 23 페이지) 각 스레드는 별도 카운터를 제공 합니다.  

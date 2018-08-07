@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391915"
 ---
 # <a name="pointer-declarations"></a>포인터 선언
 "포인터 선언"은 포인터 변수의 이름을 지정하고 변수가 가리키는 개체의 형식을 지정합니다. 포인터로 선언된 변수는 메모리 주소를 갖습니다.  

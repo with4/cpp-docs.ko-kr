@@ -41,6 +41,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377576"
 ---
 # <a name="running-lib"></a>LIB 실행
 제어 LIB에 다양 한 명령줄 옵션을 사용할 수 있습니다.  

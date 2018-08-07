@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051867"
 ---
 # <a name="cpu"></a>@Cpu
 비트 마스크를 프로세서 모드 지정 (숫자와 같습니다.).  

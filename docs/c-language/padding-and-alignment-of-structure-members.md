@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385379"
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>구조체 멤버 채우기 및 맞춤
 **ANSI 3.5.2.1** 구조체 멤버의 채우기 및 맞춤과 비트 필드가 저장소 단위 경계에 걸쳐 있을 수 있는지 여부  

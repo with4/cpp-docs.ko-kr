@@ -17,14 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6d05ac97846f55cf65d4010179b28d2b543ef66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e56f71a427fda2444992cc0ed2c3b6166993af1d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341025"
 ---
 # <a name="cdynamicstringaccessora-class"></a>CDynamicStringAccessorA 클래스
-데이터베이스 스키마 (기본 구조)의 모를 때 데이터 소스에 액세스할 수 있습니다.  
+이 기능을 사용 하면 데이터베이스 스키마 (내부 구조)에 대 한 지식이 없는 경우 데이터 소스에 액세스할 수 있습니다.  
   
 ## <a name="syntax"></a>구문
 
@@ -35,7 +36,7 @@ typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;
 ## <a name="remarks"></a>설명  
  공급자 문자열 데이터로 데이터 저장소에서 액세스 하는 모든 데이터를 인출 하는 요청 모두 있지만 `CDynamicStringAccessor` 요청 ANSI 문자열 데이터입니다.  
   
- `CDynamicStringAccessorA` 상속 **GetString** 및 `SetString` 에서 `CDynamicStringAccessor`합니다. 이러한 메서드를 사용 하는 경우는 `CDynamicStringAccessorA` 개체 ***BaseType*** 은 **CHAR**합니다.  
+ `CDynamicStringAccessorA` 상속 `GetString` 하 고 `SetString` 에서 `CDynamicStringAccessor`합니다. 이러한 메서드를 사용 하는 경우는 `CDynamicStringAccessorA` 개체를 ***BaseType*** 됩니다 **CHAR**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더**: atldbcli.h  

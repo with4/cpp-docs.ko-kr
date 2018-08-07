@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243433"
 ---
 # <a name="compiler-error-c2947"></a>컴파일러 오류 C2947
 construct을(를) 끝내려면 '>' 기호가 있어야 하는데 'syntax'이(가) 있습니다.  

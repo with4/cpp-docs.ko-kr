@@ -9,24 +9,31 @@ f1_keywords:
 - ATL::IRowsetIdentityImpl
 - ATL.IRowsetIdentityImpl
 - IRowsetIdentityImpl
+- IsSameRow
+- IRowsetIdentityImpl.IsSameRow
+- ATL.IRowsetIdentityImpl.IsSameRow
+- IRowsetIdentityImpl::IsSameRow
+- ATL::IRowsetIdentityImpl::IsSameRow
 dev_langs:
 - C++
 helpviewer_keywords:
 - IRowsetIdentityImpl class
+- IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 29ec88546a622ee42ce0e81efa9400305e2e14ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55c9b4b7e14a9572f5a8922b65a41a9a92a0d688
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337711"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl 클래스
-OLE DB 구현 [IRowsetIdentity](https://msdn.microsoft.com/en-us/library/ms715913.aspx) 행 id에 대 한 테스트 수 있도록 하는 인터페이스입니다.  
+OLE DB 구현 [IRowsetIdentity](https://msdn.microsoft.com/library/ms715913.aspx) 행 id에 대 한 테스트 수 있도록 하는 인터페이스입니다.  
   
 ## <a name="syntax"></a>구문
 
@@ -36,12 +43,15 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
    : public IRowsetIdentity  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T`  
- 클래스에서 파생 `IRowsetIdentityImpl`합니다.  
+### <a name="parameters"></a>매개 변수  
+ *T*  
+ 파생 된 클래스 `IRowsetIdentityImpl`합니다.  
   
- `RowClass`  
- 에 대 한 저장소 단위는 **HROW**합니다.  
+ *RowClass*  
+ 에 대 한 저장소 단위는 `HROW`합니다.  
+
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
 ## <a name="members"></a>멤버  
   
@@ -49,10 +59,23 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
   
 |||  
 |-|-|  
-|[IsSameRow](../../data/oledb/irowsetidentityimpl-issamerow.md)|동일한 행을 참조 하는 경우를 확인 하려면 두 개의 행 핸들을 비교 합니다.|  
+|[IsSameRow](#issamerow)|동일한 행을 참조 하는 경우를 확인 하려면 두 개의 행 핸들을 비교 합니다.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** atldb.h  
+## <a name="issamerow"></a> Irowsetidentityimpl:: Issamerow
+동일한 행을 참조 하는 경우를 확인 하려면 두 개의 행 핸들을 비교 합니다.  
+  
+### <a name="syntax"></a>구문  
+  
+```cpp
+STDMETHOD(IsSameRow )(HROW hThisRow,  
+   HROW hThatRow);  
+```  
+  
+#### <a name="parameters"></a>매개 변수  
+ 참조 [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/library/ms719629.aspx) 에 *OLE DB Programmer's Reference*합니다.  
+  
+### <a name="remarks"></a>설명  
+ 행 핸들을 비교 하려면이 메서드는 다음과 같이 캐스팅 됩니다.는 `HROW` 핸들 `RowClass` 멤버 및 호출 `memcmp` 는 포인터에 대 한 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   

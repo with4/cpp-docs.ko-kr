@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7caea3a32c0bb983518f7610918c78c8c31c63a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baf3678d204042bdea5e892a6e89d041b5091f38
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467081"
 ---
 # <a name="scope-resolution-operator-"></a>범위 해결 연산자: ::
-범위 확인 연산자 `::`는 여러 범위에 사용된 식별자를 식별하고 구분하는 데 사용됩니다. 범위에 대 한 자세한 내용은 참조 [범위](../cpp/scope-visual-cpp.md)합니다.  
+범위 결정 연산자 **::** 식별 하 고 다양 한 범위에서 사용 되는 식별자를 구분 하는 데 사용 됩니다. 범위에 대 한 자세한 내용은 참조 하세요. [범위](../cpp/scope-visual-cpp.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -61,9 +62,7 @@ int main() {
     // A class name used to disambiguate  
     NamespaceA::ClassA a1;  
     a1.x = 2;  
-  
 }  
-  
 ```  
   
  범위 한정자가 없는 범위 확인 연산자는 전역 네임스페이스를 참조합니다.  
@@ -100,7 +99,6 @@ namespace NamespaceB {
   
 namespace NamespaceC{  
     using namespace B;  
-  
 }  
 int main() {  
     NamespaceB::ClassB c_b;  
@@ -109,7 +107,6 @@ int main() {
     c_b.x = 3;  
     c_c.x = 4;  
 }  
-  
 ```  
   
  범위 확인 연산자를 연쇄적으로 사용할 수 있습니다. 다음 예제에서 `NamespaceD::NamespaceD1`은 중첩된 네임스페이스 `NamespaceD1`을 식별하고 `NamespaceE::ClassE::ClassE1`은 중첩된 클래스 `ClassE1`을 식별합니다.  
@@ -122,7 +119,6 @@ namespace NamespaceD{
 }  
   
 namespace NamespaceE{  
-  
     class ClassE{  
     public:  
         class ClassE1{  
@@ -137,7 +133,6 @@ int main() {
     NamespaceE::ClassE::ClassE1 e1;  
     e1.x = 7  ;  
 }  
-  
 ```  
   
 ## <a name="with-static-members"></a>정적 멤버에 사용  
@@ -157,11 +152,10 @@ int main() {
     int gx1 = ClassG::x;  
     int gx2 = ClassG::get_x();   
 }  
-  
 ```  
   
 ## <a name="with-scoped-enumerations"></a>범위가 지정된 열거형에 사용  
- 범위 확인 연산자를 범위가 지정 된 열거형의 값으로는 또한 [열거형 선언](../cpp/enumerations-cpp.md)다음 예제와 같이,:  
+ 범위 확인 연산자를 범위가 지정 된 열거형의 값을 사용 하 여 에서도 [Enumeration Declarations](../cpp/enumerations-cpp.md)다음 예제와 같이:  
   
 ```cpp  
 enum class EnumA{  
@@ -171,12 +165,10 @@ enum class EnumA{
 };  
   
 int main() {  
-  
     EnumA enum_value = EnumA::First;  
 }  
-  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [네임스페이스](../cpp/namespaces-cpp.md)   

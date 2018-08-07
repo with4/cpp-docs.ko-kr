@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363323"
 ---
 # <a name="build-system-changes"></a>빌드 시스템 변경 사항
 MSBuild 시스템은 Visual C++ 프로젝트를 빌드하는 데 사용됩니다. 하지만 Visual Studio 2008 및 이전 버전에서는 VCBuild 시스템이 사용되었습니다. 특정 파일 형식 및 개념 VCBuild에 의존 하는 존재 하지 않는 또는 현재 시스템에서 다르게 표현 됩니다. 이 문서는 현재 빌드 시스템의 차이점을 설명 합니다.  

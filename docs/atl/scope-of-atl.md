@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360033"
 ---
 # <a name="scope-of-atl"></a>ATL의 범위
 ATL을 사용 하면 COM 개체, 자동화 서버 및 ActiveX 컨트롤을 쉽게 만들 수 있습니다. ATL에는 여러 가지 기본 COM 인터페이스에 대 한 기본 제공 지원을 제공합니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358834"
 ---
 # <a name="understanding-parse-trees"></a>구문 분석 트리 이해
 각 구문 분석 트리의 형식은 등록자 스크립트에서 하나 이상의 구문 분석 트리를 정의할 수 있습니다.  

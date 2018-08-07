@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233020"
 ---
 # <a name="compiler-error-c2687"></a>컴파일러 오류 C2687
 'type': 예외 선언은 'void' 수 없고는 불완전 한 형식 또는 포인터 또는 불완전 한 형식에 대 한 참조를 표시 합니다.  

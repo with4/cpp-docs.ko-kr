@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b99d87db2fee3cf80c25157cdb2b2d2b54903b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f553f6fdf789e1b7130b5ca4b4d1fe4a762b7e9b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886039"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>표준 대화 상자 데이터 유효성 검사 루틴
 이 항목에서는 일반적인 MFC 대화 상자 컨트롤에 사용 되는 표준 대화 상자 데이터 유효성 검사 (DDV) 루틴을 나열 합니다.  
@@ -30,26 +31,26 @@ ms.lasthandoff: 05/04/2018
   
 |||  
 |-|-|  
-|[DDV_MaxChars](#ddv_maxchars)|지정한 컨트롤 값의 문자 수가 지정된 된 최대를 초과 하지 않는 것을 확인 합니다.|  
-|[DDV_MinMaxByte](#ddv_minmaxbyte)|제공 된 컨트롤의 값을 초과 하지 않는 확인는 주어진 **바이트** 범위입니다.|  
-|[DDV_MinMaxDateTime](#ddv_minmaxdatetime)|제공 된 컨트롤의 값을 특정된 시간 범위를 초과 하지 않는 것을 확인 합니다.|  
-|[DDV_MinMaxDouble](#ddv_minmaxdouble)|제공 된 컨트롤의 값을 초과 하지 않는 확인는 주어진 **double** 범위입니다.|  
-|[DDV_MinMaxDWord](#ddv_minmaxdword)|제공 된 컨트롤의 값을 초과 하지 않는 확인는 주어진 **DWORD** 범위입니다.|  
-|[DDV_MinMaxFloat](#ddv_minmaxfloat)|제공 된 컨트롤의 값을 초과 하지 않는 확인는 주어진 **float** 범위입니다.|  
-|[DDV_MinMaxInt](#ddv_minmaxint)|제공 된 컨트롤의 값을 초과 하지 않는 확인는 주어진 **int** 범위입니다.|  
-|[DDV_MinMaxLong](#ddv_minmaxlong)|제공 된 컨트롤의 값을 초과 하지 않는 확인는 주어진 **긴** 범위입니다.|  
-|[DDV_MinMaxLongLong](#ddv_minmaxlonglong)|제공 된 컨트롤의 값을 초과 하지 않는 확인는 주어진 **LONGLONG** 범위입니다.|  
-|[DDV_MinMaxMonth](#ddv_minmaxmonth)|제공 된 컨트롤의 값을 지정된 된 날짜 범위를 초과 하지 않는 것을 확인 합니다.|  
-|[DDV_MinMaxShort](#ddv_minmaxshort)|제공 된 컨트롤의 값을 초과 하지 않는 확인는 주어진 **짧은** 범위입니다.|  
-|[DDV_MinMaxSlider](#ddv_minmaxslider)|주어진된 슬라이더 컨트롤 값이 지정된 된 범위에 속하는지 확인 합니다.|  
-|[DDV_MinMaxUInt](#ddv_minmaxuint)|제공 된 컨트롤의 값을 초과 하지 않는 확인는 주어진 **UINT** 범위입니다.|  
-|[DDV_MinMaxUnsigned](#ddv_minmaxuint)|지정 된 두 값 사이 제공 된 컨트롤의 값을 해당 확인 합니다.| 
-|[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|제공 된 컨트롤의 값을 초과 하지 않는 확인는 주어진 **ULONGLONG** 범위입니다.|  
+|[DDV_MaxChars](#ddv_maxchars)|지정 된 컨트롤 값의 문자 수가 지정된 된 최대 초과 하지 확인 합니다.|  
+|[DDV_MinMaxByte](#ddv_minmaxbyte)|지정 된 컨트롤 값을 초과 하지 확인을 주어진 **바이트** 범위입니다.|  
+|[DDV_MinMaxDateTime](#ddv_minmaxdatetime)|지정 된 컨트롤을 지정 된 시간 범위를 초과 하지 확인 합니다.|  
+|[DDV_MinMaxDouble](#ddv_minmaxdouble)|지정 된 컨트롤 값을 초과 하지 확인을 지정 **이중** 범위입니다.|  
+|[DDV_MinMaxDWord](#ddv_minmaxdword)|지정 된 컨트롤 값을 초과 하지 확인을 주어진 **DWORD** 범위입니다.|  
+|[DDV_MinMaxFloat](#ddv_minmaxfloat)|지정 된 컨트롤 값을 초과 하지 확인을 주어진 **float** 범위입니다.|  
+|[DDV_MinMaxInt](#ddv_minmaxint)|지정 된 컨트롤 값을 초과 하지 확인을 주어진 **int** 범위입니다.|  
+|[DDV_MinMaxLong](#ddv_minmaxlong)|지정 된 컨트롤 값을 초과 하지 확인을 주어진 **긴** 범위.|  
+|[DDV_MinMaxLongLong](#ddv_minmaxlonglong)|지정 된 컨트롤 값을 초과 하지 확인을 주어진 **LONGLONG** 범위입니다.|  
+|[DDV_MinMaxMonth](#ddv_minmaxmonth)|지정 된 컨트롤을 지정 된 날짜 범위를 초과 하지 확인 합니다.|  
+|[DDV_MinMaxShort](#ddv_minmaxshort)|지정 된 컨트롤 값을 초과 하지 확인을 주어진 **짧은** 범위입니다.|  
+|[DDV_MinMaxSlider](#ddv_minmaxslider)|지정 된 범위에 속하는 지정 된 슬라이더 컨트롤을 확인 합니다.|  
+|[DDV_MinMaxUInt](#ddv_minmaxuint)|지정 된 컨트롤 값을 초과 하지 확인을 주어진 **UINT** 범위입니다.|  
+|[DDV_MinMaxUnsigned](#ddv_minmaxuint)|지정 된 컨트롤을 지정 된 두 값 사이 확인 합니다.| 
+|[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|지정 된 컨트롤 값을 초과 하지 확인을 주어진 **ULONGLONG** 범위입니다.|  
   
 
   
 ##  <a name="ddv_maxchars"></a>  DDV_MaxChars  
- 호출 `DDV_MaxChars` 컨트롤에 있는 문자의 크기 연관 확인 하려면 *값* 초과 하지 않는 *nChars*합니다.  
+ 호출 `DDV_MaxChars` 컨트롤에 있는 문자의 크기 연관 확인 하려면 *값* 넘지 *nChars*합니다.  
   
 ```   
 void AFXAPI DDV_MaxChars(
@@ -59,23 +60,23 @@ void AFXAPI DDV_MaxChars(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
  *값*  
- 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
+ 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성이 검사의 멤버 변수 참조입니다.  
   
- `nChars`  
- 허용 되는 문자의 최대 수입니다.  
+ *nChars*  
+ 최대 허용 문자 수입니다.  
   
 ### <a name="remarks"></a>설명  
- DDV에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ DDV에 대 한 자세한 내용은 참조 하세요. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
 ##  <a name="ddv_minmaxbyte"></a>  DDV_MinMaxByte  
- 호출 `DDV_MinMaxByte` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
+ 호출 `DDV_MinMaxByte` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 *minVal* 하 고 *maxVal*합니다.  
   
 ```   
 void AFXAPI DDV_MinMaxByte(
@@ -86,26 +87,26 @@ void AFXAPI DDV_MinMaxByte(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
  *값*  
- 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
+ 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성이 검사의 멤버 변수 참조입니다.  
   
- `minVal`  
- 최소값 (형식의 **바이트**) 허용 합니다.  
+ *minVal*  
+ 최소값 (BYTE 형식의)입니다.  
   
- `maxVal`  
- 최 댓 값 (형식의 **바이트**) 허용 합니다.  
+ *maxVal*  
+ (BYTE 형식의) 허용 되는 최대값입니다.  
   
 ### <a name="remarks"></a>설명  
- DDV에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ DDV에 대 한 자세한 내용은 참조 하세요. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
 ##  <a name="ddv_minmaxdatetime"></a>  DDV_MinMaxDateTime  
- 호출 `DDV_MinMaxDateTime` 컨트롤 날짜 및 시간 선택에서 날짜/시간 값을 확인 하려면 ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md))와 관련 된 *refValue* 사이가 `refMinRange` 및 `refMaxRange`합니다.  
+ 호출 `DDV_MinMaxDateTime` 컨트롤에서 날짜 및 시간 선택 날짜/시간 값을 확인 하려면 ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md))와 연결 된 *refValue* 사이가 *refMinRange*하 고 *refMaxRange*합니다.  
   
 ```   
 void AFXAPI DDV_MinMaxDateTime(
@@ -122,26 +123,26 @@ void AFXAPI DDV_MinMaxDateTime(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다. 이 개체를 삭제할 필요가 없습니다.  
+ *pDX*  
+ 에 대 한 포인터를 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다. 이 개체를 삭제할 필요가 없습니다.  
   
  *refValue*  
- 에 대 한 참조는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 또는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 멤버 변수 연관 된 개체입니다. 이 개체는 데이터 유효성을 검사할 수를 포함 합니다.  
+ 에 대 한 참조를 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 하거나 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 멤버 변수를 사용 하 여 연결 된 개체입니다. 이 개체의 유효성을 검사 데이터를 포함 합니다.  
   
- `refMinRange`  
- 최소 날짜/시간 값을 사용할 수 있습니다.  
+ *refMinRange*  
+ 최소 날짜/시간 값을 허용 합니다.  
   
- `refMaxRange`  
+ *refMaxRange*  
  허용 되는 최대 날짜/시간 값입니다.  
   
 ### <a name="remarks"></a>설명  
- DDV에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ DDV에 대 한 자세한 내용은 참조 하세요. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
 ##  <a name="ddv_minmaxdouble"></a>  DDV_MinMaxDouble  
- 호출 `DDV_MinMaxDouble` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
+ 호출 `DDV_MinMaxDouble` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 *minVal* 하 고 *maxVal*합니다.  
   
 ```   
 void AFXAPI DDV_MinMaxDouble(
@@ -152,26 +153,26 @@ void AFXAPI DDV_MinMaxDouble(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
  *값*  
- 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
+ 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성이 검사의 멤버 변수 참조입니다.  
   
- `minVal`  
- 최소값 (형식의 **double**) 허용 합니다.  
+ *minVal*  
+ 최 솟 값 (형식 **이중**) 허용 합니다.  
   
- `maxVal`  
- 최 댓 값 (형식의 **double**) 허용 합니다.  
+ *maxVal*  
+ 최 댓 값 (형식 **이중**) 허용 합니다.  
   
 ### <a name="remarks"></a>설명  
- DDV에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ DDV에 대 한 자세한 내용은 참조 하세요. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
 ##  <a name="ddv_minmaxdword"></a>  DDV_MinMaxDWord  
- 호출 `DDV_MinMaxDWord` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
+ 호출 `DDV_MinMaxDWord` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 *minVal* 하 고 *maxVal*합니다.  
   
 ```   
 void AFXAPI DDV_MinMaxDWord(
@@ -182,26 +183,26 @@ void AFXAPI DDV_MinMaxDWord(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
  *값*  
- 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
+ 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성이 검사의 멤버 변수 참조입니다.  
   
- `minVal`  
- 최소값 (형식의 `DWORD`) 허용 합니다.  
+ *minVal*  
+ 최소값 (DWORD 유형의)입니다.  
   
- `maxVal`  
- 최 댓 값 (형식의 `DWORD`) 허용 합니다.  
+ *maxVal*  
+ (DWORD 유형의) 허용 되는 최대값입니다.  
   
 ### <a name="remarks"></a>설명  
- DDV에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ DDV에 대 한 자세한 내용은 참조 하세요. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
 ##  <a name="ddv_minmaxfloat"></a>  DDV_MinMaxFloat  
- 호출 `DDV_MinMaxFloat` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
+ 호출 `DDV_MinMaxFloat` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 *minVal* 하 고 *maxVal*합니다.  
   
 ```   
 void AFXAPI DDV_MinMaxFloat(
@@ -212,26 +213,26 @@ void AFXAPI DDV_MinMaxFloat(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
  *값*  
- 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
+ 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성이 검사의 멤버 변수 참조입니다.  
   
- `minVal`  
- 최소값 (형식의 **float**) 허용 합니다.  
+ *minVal*  
+ 최 솟 값 (형식 **float**) 허용 합니다.  
   
- `maxVal`  
- 최 댓 값 (형식의 **float**) 허용 합니다.  
+ *maxVal*  
+ 최 댓 값 (형식 **float**) 허용 합니다.  
   
 ### <a name="remarks"></a>설명  
- DDV에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ DDV에 대 한 자세한 내용은 참조 하세요. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
 ##  <a name="ddv_minmaxint"></a>  DDV_MinMaxInt  
- 호출 `DDV_MinMaxInt` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
+ 호출 `DDV_MinMaxInt` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 *minVal* 하 고 *maxVal*합니다.  
   
 ```   
 void AFXAPI DDV_MinMaxInt(
@@ -242,26 +243,26 @@ void AFXAPI DDV_MinMaxInt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
  *값*  
- 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
+ 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성이 검사의 멤버 변수 참조입니다.  
   
- `minVal`  
- 최소값 (형식의 `int`) 허용 합니다.  
+ *minVal*  
+ 최 솟 값 (형식 **int**) 허용 합니다.  
   
- `maxVal`  
- 최 댓 값 (형식의 `int`) 허용 합니다.  
+ *maxVal*  
+ 최 댓 값 (형식 **int**) 허용 합니다.  
   
 ### <a name="remarks"></a>설명  
- DDV에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ DDV에 대 한 자세한 내용은 참조 하세요. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
 ##  <a name="ddv_minmaxlong"></a>  DDV_MinMaxLong  
- 호출 `DDV_MinMaxLong` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
+ 호출 `DDV_MinMaxLong` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 *minVal* 하 고 *maxVal*합니다.  
   
 ```   
 void AFXAPI DDV_MinMaxLong(
@@ -272,26 +273,26 @@ void AFXAPI DDV_MinMaxLong(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
  *값*  
- 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
+ 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성이 검사의 멤버 변수 참조입니다.  
   
- `minVal`  
- 최소값 (형식의 **긴**) 허용 합니다.  
+ *minVal*  
+ 최 솟 값 (형식 **긴**) 허용 합니다.  
   
- `maxVal`  
- 최 댓 값 (형식의 **긴**) 허용 합니다.  
+ *maxVal*  
+ 최 댓 값 (형식 **긴**) 허용 합니다.  
   
 ### <a name="remarks"></a>설명  
- DDV에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ DDV에 대 한 자세한 내용은 참조 하세요. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
 ##  <a name="ddv_minmaxlonglong"></a>  DDV_MinMaxLongLong  
- 호출 `DDV_MinMaxLongLong` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
+ 호출 `DDV_MinMaxLongLong` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 *minVal* 하 고 *maxVal*합니다.  
   
 ```   
 void AFXAPI DDV_MinMaxLongLong(
@@ -302,26 +303,26 @@ void AFXAPI DDV_MinMaxLongLong(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
  *값*  
- 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
+ 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성이 검사의 멤버 변수 참조입니다.  
   
- `minVal`  
- 최소값 (형식의 **LONGLONG**) 허용 합니다.  
+ *minVal*  
+ 최소값 (LONGLONG 유형)의 수입니다.  
   
- `maxVal`  
- 최 댓 값 (형식의 **LONGLONG**) 허용 합니다.  
+ *maxVal*  
+ 최대 값 (형식 LONGLONG) 허용 합니다.  
   
 ### <a name="remarks"></a>설명  
- DDV에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ DDV에 대 한 자세한 내용은 참조 하세요. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
 ##  <a name="ddv_minmaxmonth"></a>  DDV_MinMaxMonth  
- 호출 `DDV_MinMaxMonth` 컨트롤 월 달력에서 날짜/시간 값을 확인 하려면 ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md))와 관련 된 *refValue* 사이가 `refMinRange` 및 `refMaxRange`합니다.  
+ 호출 `DDV_MinMaxMonth` 컨트롤 월 달력에서 날짜/시간 값을 확인 하려면 ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md))와 연결 된 *refValue* 사이가 *refMinRange* 및 *refMaxRange*합니다.  
   
 ```   
 void AFXAPI DDV_MinMaxMonth(
@@ -338,26 +339,26 @@ void AFXAPI DDV_MinMaxMonth(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ *pDX*  
+ 에 대 한 포인터를 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
  *refValue*  
- 형식의 개체에 대 한 참조 `CTime` 또는 `COleDateTime` 폼 보기, 또는 컨트롤 뷰 개체와 연결 된 멤버 변수 대화 상자입니다. 이 개체는 데이터 유효성을 검사할 수를 포함 합니다. 이 경우 참조는 MFC 전달 `DDV_MinMaxMonth` 라고 합니다.  
+ 형식의 개체에 대 한 참조가 `CTime` 또는 `COleDateTime` 폼 보기에서 대화 상자의 멤버 변수를 사용 하 여 연결 하거나 뷰 개체를 제어 합니다. 이 개체의 유효성을 검사 데이터를 포함 합니다. 이 참조의 경우 MFC 전달 `DDV_MinMaxMonth` 라고 합니다.  
   
- `refMinRange`  
- 최소 날짜/시간 값을 사용할 수 있습니다.  
+ *refMinRange*  
+ 최소 날짜/시간 값을 허용 합니다.  
   
- `refMaxRange`  
+ *refMaxRange*  
  허용 되는 최대 날짜/시간 값입니다.  
   
 ### <a name="remarks"></a>설명  
- DDV에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ DDV에 대 한 자세한 내용은 참조 하세요. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
 ##  <a name="ddv_minmaxshort"></a>  DDV_MinMaxShort  
- 호출 `DDV_MinMaxShort` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
+ 호출 `DDV_MinMaxShort` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 *minVal* 하 고 *maxVal*합니다.  
   
 ```   
 void AFXAPI DDV_MinMaxShort(
@@ -368,26 +369,26 @@ void AFXAPI DDV_MinMaxShort(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
  *값*  
- 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
+ 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성이 검사의 멤버 변수 참조입니다.  
   
- `minVal`  
- 최소값 (형식의 **짧은**) 허용 합니다.  
+ *minVal*  
+ 최 솟 값 (형식 **짧은**) 허용 합니다.  
   
- `maxVal`  
- 최 댓 값 (형식의 **짧은**) 허용 합니다.  
+ *maxVal*  
+ 최 댓 값 (형식 **짧은**) 허용 합니다.  
   
 ### <a name="remarks"></a>설명  
- DDV에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ DDV에 대 한 자세한 내용은 참조 하세요. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
 ##  <a name="ddv_minmaxslider"></a>  DDV_MinMaxSlider  
- 호출 `DDV_MinMaxSlider` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
+ 호출 `DDV_MinMaxSlider` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 *minVal* 하 고 *maxVal*합니다.  
   
 ```   
 void AFXAPI DDV_MinMaxSlider(
@@ -398,26 +399,26 @@ void AFXAPI DDV_MinMaxSlider(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ *pDX*  
+ 에 대 한 포인터를 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
  *값*  
- 유효성을 검사할 값에 대 한 참조입니다. 이 매개 변수를 보유 하거나 슬라이더 컨트롤의 현재 스크롤 상자 위치를 설정 합니다.  
+ 유효성을 검사할 값에 대 한 참조입니다. 이 매개 변수를 보유 하거나 슬라이더 컨트롤의 현재 위치를 설정 합니다.  
   
- `minVal`  
- 최소 허용 값입니다.  
+ *minVal*  
+ 허용 되는 최소값입니다.  
   
- `maxVal`  
+ *maxVal*  
  허용 되는 최대값입니다.  
   
 ### <a name="remarks"></a>설명  
- DDV에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 슬라이더 컨트롤에 대 한 정보를 참조 하십시오. [CSliderCtrl 사용 하 여](../../mfc/using-csliderctrl.md)합니다.  
+ DDV에 대 한 자세한 내용은 참조 하세요. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 슬라이더 컨트롤에 대 한 자세한 내용은 [CSliderCtrl 사용 하 여](../../mfc/using-csliderctrl.md)입니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
 ##  <a name="ddv_minmaxuint"></a>  DDV_MinMaxUInt  
- 호출 `DDV_MinMaxUInt` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
+ 호출 `DDV_MinMaxUInt` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 *minVal* 하 고 *maxVal*합니다.  
   
 ```   
 void AFXAPI DDV_MinMaxUInt(
@@ -428,26 +429,26 @@ void AFXAPI DDV_MinMaxUInt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
  *값*  
- 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
+ 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성이 검사의 멤버 변수 참조입니다.  
   
- `minVal`  
- 최소값 (형식의 **UINT**) 허용 합니다.  
+ *minVal*  
+ 최소값 (of 형식 UINT)입니다.  
   
- `maxVal`  
- 최 댓 값 (형식의 **UINT**) 허용 합니다.  
+ *maxVal*  
+ 최대 값 (형식 UINT) 허용 합니다.  
   
 ### <a name="remarks"></a>설명  
- DDV에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ DDV에 대 한 자세한 내용은 참조 하세요. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
 ##  <a name="ddv_minmaxulonglong"></a>  DDV_MinMaxULongLong  
- 호출 `DDV_MinMaxULongLong` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
+ 호출 `DDV_MinMaxULongLong` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 *minVal* 하 고 *maxVal*합니다.  
   
 ```   
 void AFXAPI DDV_MinMaxULongLong(
@@ -458,20 +459,20 @@ void AFXAPI DDV_MinMaxULongLong(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
  *값*  
- 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
+ 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성이 검사의 멤버 변수 참조입니다.  
   
- `minVal`  
- 최소값 (형식의 **ULONGLONG**) 허용 합니다.  
+ *minVal*  
+ 최소값 (of ULONGLONG 형식)입니다.  
   
- `maxVal`  
- 최 댓 값 (형식의 **ULONGLONG**) 허용 합니다.  
+ *maxVal*  
+ 유형의 ULONGLONG 허용 되는 최대값입니다.  
   
 ### <a name="remarks"></a>설명  
- DDV에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ DDV에 대 한 자세한 내용은 참조 하세요. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
 
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
@@ -481,7 +482,7 @@ void AFXAPI DDV_MinMaxULongLong(
  [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
 
  ## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
-호출 `DDV_MinMaxUnsigned` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
+호출 `DDV_MinMaxUnsigned` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 *minVal* 하 고 *maxVal*합니다.  
    
 ### <a name="syntax"></a>구문    
 ```
@@ -492,20 +493,20 @@ void AFXAPI DDV_MinMaxULongLong(
        unsigned maxVal );  
 ```
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
  *값*  
- 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
+ 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성이 검사의 멤버 변수 참조입니다.  
   
- `minVal`  
- 최소값 (형식의 **서명 되지 않은** ) 허용 합니다.  
+ *minVal*  
+ 최 솟 값 (형식 **부호 없는** ) 허용 합니다.  
   
- `maxVal`  
- 최 댓 값 (형식의 **서명 되지 않은** ) 허용 합니다.  
+ *maxVal*  
+ 최 댓 값 (형식 **부호 없는** ) 허용 합니다.  
    
 ### <a name="remarks"></a>설명  
- DDV에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../dialog-data-exchange-and-validation.md)합니다.  
+ DDV에 대 한 자세한 내용은 참조 하세요. [대화 상자 데이터 교환 및 유효성 검사](../dialog-data-exchange-and-validation.md)합니다.  
    
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxdd_.h  

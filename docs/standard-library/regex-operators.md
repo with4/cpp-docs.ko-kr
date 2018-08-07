@@ -14,11 +14,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 73469182938a51d89a9ca9777f5481824e54dbeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccabc523ed502a3841cb9299ea2ccd2115115743
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961544"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 연산자
 
@@ -69,21 +70,21 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>매개 변수
 
-`BidIt` 반복기 형식입니다.
+*BidIt* 반복기 형식입니다.
 
-`IOtraits` 문자열 특성 클래스입니다.
+*IOtraits* 문자열 특성 클래스입니다.
 
-`Alloc` 할당자 클래스입니다.
+*Alloc* 할당자 클래스입니다.
 
-`left` 비교할 왼쪽된 개체입니다.
+*왼쪽* 비교할 왼쪽된 개체입니다.
 
-`right` 비교할 오른쪽 개체입니다.
+*오른쪽* 비교할 오른쪽 개체입니다.
 
 ### <a name="remarks"></a>설명
 
 각 템플릿 연산자는 `!(left == right)`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__operator_ne.cpp
@@ -180,21 +181,21 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>매개 변수
 
-`BidIt` 반복기 형식입니다.
+*BidIt* 반복기 형식입니다.
 
-`IOtraits` 문자열 특성 클래스입니다.
+*IOtraits* 문자열 특성 클래스입니다.
 
-`Alloc` 할당자 클래스입니다.
+*Alloc* 할당자 클래스입니다.
 
-`left` 비교할 왼쪽된 개체입니다.
+*왼쪽* 비교할 왼쪽된 개체입니다.
 
-`right` 비교할 오른쪽 개체입니다.
+*오른쪽* 비교할 오른쪽 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-각 템플릿 연산자는 해당 인수를 문자열 형식으로 변환하고 `left`의 변환된 값이 `right`의 변환된 값과 비교하여 더 작은 경우에만 true를 반환합니다.
+각 템플릿 연산자는 인수를 문자열 형식으로 변환 및 경우에 true를 반환으로 변환된 된 값 *왼쪽* 으로 변환된 된 값 보다 작음 비교 *오른쪽*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__operator_lt.cpp
@@ -261,23 +262,23 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>매개 변수
 
-`Elem` 요소 형식입니다.
+*Elem* 요소 형식입니다.
 
-`IOtraits` 문자열 특성 클래스입니다.
+*IOtraits* 문자열 특성 클래스입니다.
 
-`Alloc` 할당자 클래스입니다.
+*Alloc* 할당자 클래스입니다.
 
-`BidIt` 반복기 형식입니다.
+*BidIt* 반복기 형식입니다.
 
-`os` 출력 스트림입니다.
+*os* 출력 스트림에 합니다.
 
-`right` 삽입할 개체입니다.
+*오른쪽* 삽입할 개체입니다.
 
 ### <a name="remarks"></a>설명
 
 템플릿 연산자는 `os << right.str()`을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__operator_ins.cpp
@@ -341,21 +342,21 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>매개 변수
 
-`BidIt` 반복기 형식입니다.
+*BidIt* 반복기 형식입니다.
 
-`IOtraits` 문자열 특성 클래스입니다.
+*IOtraits* 문자열 특성 클래스입니다.
 
-`Alloc` 할당자 클래스입니다.
+*Alloc* 할당자 클래스입니다.
 
-`left` 비교할 왼쪽된 개체입니다.
+*왼쪽* 비교할 왼쪽된 개체입니다.
 
-`right` 비교할 오른쪽 개체입니다.
+*오른쪽* 비교할 오른쪽 개체입니다.
 
 ### <a name="remarks"></a>설명
 
 각 템플릿 연산자는 `!(right < left)`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__operator_le.cpp
@@ -451,15 +452,15 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>매개 변수
 
-`BidIt` 반복기 형식입니다.
+*BidIt* 반복기 형식입니다.
 
-`IOtraits` 문자열 특성 클래스입니다.
+*IOtraits* 문자열 특성 클래스입니다.
 
-`Alloc` 할당자 클래스입니다.
+*Alloc* 할당자 클래스입니다.
 
-`left` 비교할 왼쪽된 개체입니다.
+*왼쪽* 비교할 왼쪽된 개체입니다.
 
-`right` 비교할 오른쪽 개체입니다.
+*오른쪽* 비교할 오른쪽 개체입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -473,7 +474,7 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 그 외의 모든 인수 형식은 템플릿 클래스 `basic_string`의 적절한 특수화를 위한 생성자로 인수 값을 전달하여 변환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__operator_eq.cpp
@@ -570,21 +571,21 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>매개 변수
 
-`BidIt` 반복기 형식입니다.
+*BidIt* 반복기 형식입니다.
 
-`IOtraits` 문자열 특성 클래스입니다.
+*IOtraits* 문자열 특성 클래스입니다.
 
-`Alloc` 할당자 클래스입니다.
+*Alloc* 할당자 클래스입니다.
 
-`left` 비교할 왼쪽된 개체입니다.
+*왼쪽* 비교할 왼쪽된 개체입니다.
 
-`right` 비교할 오른쪽 개체입니다.
+*오른쪽* 비교할 오른쪽 개체입니다.
 
 ### <a name="remarks"></a>설명
 
 각 템플릿 연산자는 `right < left`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__operator_gt.cpp
@@ -676,21 +677,21 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>매개 변수
 
-`BidIt` 반복기 형식입니다.
+*BidIt* 반복기 형식입니다.
 
-`IOtraits` 문자열 특성 클래스입니다.
+*IOtraits* 문자열 특성 클래스입니다.
 
-`Alloc` 할당자 클래스입니다.
+*Alloc* 할당자 클래스입니다.
 
-`left` 비교할 왼쪽된 개체입니다.
+*왼쪽* 비교할 왼쪽된 개체입니다.
 
-`right` 비교할 오른쪽 개체입니다.
+*오른쪽* 비교할 오른쪽 개체입니다.
 
 ### <a name="remarks"></a>설명
 
 각 템플릿 연산자는 `!(left < right)`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__operator_ge.cpp

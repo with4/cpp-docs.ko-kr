@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343007"
 ---
 # <a name="cwinapp-the-application-class"></a>CWinApp: 응용 프로그램 클래스
 MFC의 기본 응용 프로그램 클래스 초기화, 실행 중, 및 Windows 운영 체제에 대 한 응용 프로그램의 종료를 캡슐화합니다. 프레임 워크에서 빌드된 응용 프로그램을 하나 있어야 하며에서 파생 된 클래스의 개체를 하나만 [CWinApp](../mfc/reference/cwinapp-class.md)합니다. 이 개체는 창을 만들기 전에 만들어집니다.  

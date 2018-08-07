@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342607"
 ---
 # <a name="debugging-support-classes"></a>디버깅 지원 클래스
 MFC는 동적 메모리 할당 문제를 디버그할 수 있도록 다음 클래스를 제공 합니다.  

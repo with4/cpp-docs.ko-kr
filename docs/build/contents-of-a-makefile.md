@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367071"
 ---
 # <a name="contents-of-a-makefile"></a>메이크파일의 내용
 메이크파일을 포함 되어 있습니다.  

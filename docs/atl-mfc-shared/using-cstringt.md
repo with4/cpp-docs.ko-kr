@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354883"
 ---
 # <a name="using-cstringt"></a>CStringT를 사용 하 여
 이 섹션의 항목 템플릿 클래스를 사용 하는 프로그래밍에 설명 [CStringT](../atl-mfc-shared/reference/cstringt-class.md)합니다.  

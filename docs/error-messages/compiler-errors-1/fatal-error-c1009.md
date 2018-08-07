@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198731"
 ---
 # <a name="fatal-error-c1009"></a>심각한 오류 C1009
 컴파일러 한계: 매크로가 너무 많이 중첩  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332142"
 ---
 # <a name="nmake-fatal-error-u1064"></a>NMAKE 심각한 오류 U1064
 MAKEFILE을 찾을 수 및 지정 된 대상이 없습니다.  

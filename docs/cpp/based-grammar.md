@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e1c14cd7add01f8583c24541987b2980da794a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69d1713b0cc8e1d5d53d3b30f3dd48a0b54a3782
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401963"
 ---
 # <a name="based-grammar"></a>__based 문법
 ## <a name="microsoft-specific"></a>Microsoft 전용  
  기반 주소 지정은 개체가 할당된(정적 및 동적 기반 데이터) 세그먼트를 정밀하게 제어해야 할 때 유용합니다.  
   
- 32비트와 64비트 컴파일이 호환되는 유일한 주소 지정 방식은 32비트/64비트 기반에 대해 32비트/64비트 치환을 포함하거나 `void`를 기반으로 하는 형식을 정의하는 "포인터 기반"입니다.  
+ 기반 주소 지정의 32 비트 및 64 비트 컴파일 허용 되는 "포인터 기반" 유일한 형식에 따라 또는 32 비트 또는 64 비트 자료에는 32 비트 또는 64 비트 치환을 포함 하는 형식 정의 하는 **void**합니다.  
   
 ## <a name="grammar"></a>문법  
  *범위 기반-한정자*:  
@@ -39,10 +40,10 @@ ms.lasthandoff: 05/03/2018
  *기반-추상 선언 자*:  
  *추상 선언 자*  
   
- *기본 형식의*:  
+ *기본 형식*:  
  *type-name*  
   
 **Microsoft 전용 종료**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [기반 포인터](../cpp/based-pointers-cpp.md)

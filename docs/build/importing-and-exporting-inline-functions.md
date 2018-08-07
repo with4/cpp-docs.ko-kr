@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368579"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>인라인 함수 가져오기 및 내보내기
 가져온된 함수를 인라인으로 정의할 수 있습니다. 효과 거의 표준 함수 인라인;와 동일 함수 호출에는 인라인 코드로 매크로 매우 유사 하 게 확장 됩니다. C + +를 지 원하는 효율성에 대 한 함수 일부 멤버를 인라인 할 수 있는 DLL의 클래스 주로 유용 합니다.  

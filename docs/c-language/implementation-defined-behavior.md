@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383440"
 ---
 # <a name="implementation-defined-behavior"></a>구현 정의 동작
 ANSI X3.159-1989, *American National Standard for Information Systems* - *프로그래밍 언어* - *C*에는 "이식성 문제"라는 섹션이 포함되어 있습니다. 이 ANSI 섹션에는 ANSI에서 각각의 특정 구현에 열어 놓은 C 언어의 영역이 나열되어 있습니다. 이 단원에서는 Microsoft C에서 이러한 구현 시 정의되는 C 언어의 영역을 처리하는 방식을 설명합니다.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379967"
 ---
 # <a name="zf-faster-pdb-generation"></a>/Zf (더 빠르게 PDB 생성)
 

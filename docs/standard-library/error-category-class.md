@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ec1929becbfcd3f98124e4274687854ef2f455
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f37029491c4a438f44c9f1bb27a9d192c14d1f12
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028231"
 ---
 # <a name="errorcategory-class"></a>error_category 클래스
 
@@ -87,7 +88,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`_Errval`|[error_condition](../standard-library/error-condition-class.md)에 저장할 오류 코드 값입니다.|
+|*_Errval*|[error_condition](../standard-library/error-condition-class.md)에 저장할 오류 코드 값입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -111,13 +112,13 @@ virtual bool equivalent(const error_code& _Code,
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`_Errval`|비교할 오류 코드 값입니다.|
-|`_Cond`|비교할 [error_condition](../standard-library/error-condition-class.md) 개체입니다.|
-|`_Code`|비교할 [error_code](../standard-library/error-code-class.md) 개체입니다.|
+|*_Errval*|비교할 오류 코드 값입니다.|
+|*_Cond*|비교할 [error_condition](../standard-library/error-condition-class.md) 개체입니다.|
+|*(_C)*|비교할 [error_code](../standard-library/error-code-class.md) 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-범주와 값이 같으면 `true`이고, 그렇지 않으면 `false`입니다.
+**true 이면** 범주 및 값 같으면이 고, 그렇지 않으면 **false**합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -137,11 +138,11 @@ virtual string message(error_code::value_type val) const = 0;
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`val`|설명할 오류 코드 값입니다.|
+|*val*|설명할 오류 코드 값입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-범주에 대한 오류 코드 `val`의 설명이 포함된 이름을 반환합니다.
+오류 코드의 설명이 포함 된 이름을 반환 *val* 범주에 대 한 합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -171,7 +172,7 @@ bool operator==(const error_category& right) const;
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`right`|같은지 테스트할 개체입니다.|
+|*right*|같은지 테스트할 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -193,11 +194,11 @@ bool operator!=(const error_category& right) const;
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`right`|같지 않은지 테스트할 개체입니다.|
+|*right*|같지 않은지 테스트할 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-`error_category` 개체가 `right`에 전달된 `error_category` 개체와 같지 않으면 **true**이고, 그렇지 않으면 **false**입니다.
+**true** 경우는 `error_category` 개체와 같지 않습니다. 합니다 `error_category` 개체가 전달 *오른쪽*이 고 그렇지 않으면 **false**합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -215,7 +216,7 @@ bool operator<(const error_category& right) const;
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`right`|비교할 `error_category` 개체입니다.|
+|*right*|비교할 `error_category` 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -235,7 +236,7 @@ typedef int value_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식 정의는 `int`의 동의어입니다.
+이 형식 정의 대 한 동의어가 **int**합니다.
 
 ## <a name="see-also"></a>참고자료
 

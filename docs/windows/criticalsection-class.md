@@ -17,11 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b5eda8fb22f72bd1f50801f9993b9bd7a864d35
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b8aa37f6ac12cad91fa02a2387c95911227319d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466139"
 ---
 # <a name="criticalsection-class"></a>CriticalSection 클래스
 임계 영역 개체를 나타냅니다.  
@@ -36,22 +37,22 @@ class CriticalSection;
   
 ### <a name="constructor"></a>생성자  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CriticalSection::CriticalSection 생성자](../windows/criticalsection-criticalsection-constructor.md)|뮤텍스 개체와 유사하지만 단일 프로세스의 스레드에만 사용할 수 있는 동기화 개체를 초기화합니다.|  
-|[CriticalSection::~CriticalSection 소멸자](../windows/criticalsection-tilde-criticalsection-destructor.md)|현재 CriticalSection 개체의 초기화를 취소하고 제거합니다.|  
+|[CriticalSection::~CriticalSection 소멸자](../windows/criticalsection-tilde-criticalsection-destructor.md)|초기화를 취소 하 고 현재 소멸 **CriticalSection** 개체입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[CriticalSection::TryLock 메서드](../windows/criticalsection-trylock-method.md)|임계 영역을 차단 하지 않고 입력 하려고 합니다. 호출이 성공 하면 호출 스레드에서 임계 영역의 소유권을 갖습니다.|  
+|[CriticalSection::TryLock 메서드](../windows/criticalsection-trylock-method.md)|임계 영역을 차단 하지 않고 입력 하려고 합니다. 호출이 성공 하면 호출 스레드가 중요 섹션의 소유권을 갖습니다.|  
 |[CriticalSection::Lock 메서드](../windows/criticalsection-lock-method.md)|지정된 임계 영역 개체의 소유권을 기다립니다. 함수가 호출 스레드가 소유권을 부여받는 시기를 반환합니다.|  
 |[CriticalSection::IsValid 메서드](../windows/criticalsection-isvalid-method.md)|현재 임계 영역이 유효한지 여부를 나타냅니다.|  
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CriticalSection::cs_ 데이터 멤버](../windows/criticalsection-cs-data-member.md)|임계 영역 데이터 멤버를 선언합니다.|  
   

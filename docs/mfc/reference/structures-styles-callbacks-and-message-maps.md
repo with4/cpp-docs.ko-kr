@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371102"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>구조체, 스타일, 콜백 및 메시지 맵
 이 단원에서는 MFC 라이브러리와 MFC 메시지 맵에 사용되는 구조체, 스타일 및 콜백 함수를 설명합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347167"
 ---
 # <a name="dragging-images-from-an-image-list"></a>이미지 목록에서 이미지 끌기
 [CImageList](../mfc/reference/cimagelist-class.md) 화면에 이미지를 끌어 올 함수가 포함 됩니다. 끌기 함수가 컬러 상태로 커서의 깜빡임 없이 이미지를 원활 하 게 이동합니다. 마스크 및 마스크 해제 된 이미지를 끌 수 있습니다.  

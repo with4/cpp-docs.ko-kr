@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317182"
 ---
 # <a name="nmake-warning-u4004"></a>NMAKE 경고 U4004
 대상 'targetname'에 대 한 너무 많은 규칙  

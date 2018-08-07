@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379512"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>시간 중심의 코드 성능 향상을 위한 팁
 코드를 빠르게 작성하려면 응용 프로그램의 모든 측면과 응용 프로그램이 시스템과 상호 작용하는 방법을 파악하고 있어야 합니다. 이 항목에서는 코드에서 시간이 중요한 부분이 만족스럽게 수행됨을 확신하는 데 도움이 되는 보다 명백한 일부 코딩 기술에 대한 대안을 제시합니다.  

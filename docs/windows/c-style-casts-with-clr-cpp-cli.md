@@ -1,5 +1,5 @@
 ---
-title: Clr이-C 스타일 캐스팅 (C + + /cli CLI) | Microsoft Docs
+title: -Clr을 사용한 C 스타일 캐스트 (C + + /cli CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384aa6d1d7a4329f52157f1d002dcda2feb5cb8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ffb2e5a7276925c5f03d06a909803d001532f35
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464586"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>/clr을 사용한 C 스타일 캐스트(C++/CLI)
-다음 항목 공용 언어 런타임에만 적용 됩니다.  
+다음 항목에서는 공용 언어 런타임만 적용 됩니다.  
   
- 와 CLR 형식을 함께 사용 하면 컴파일러에서는 C 스타일 캐스트는 다음 순서 대로 아래에 나열 된 캐스트 중 하나에 매핑할 수 있습니다:  
+ CLR 형식에서 사용할 경우 컴파일러는 C 스타일 캐스트의 순서로 아래에 나열 된 변환 중 하나에 매핑할 하려고 합니다.  
   
 1.  const_cast  
   
@@ -34,16 +35,16 @@ ms.lasthandoff: 05/08/2018
   
 4.  static_cast  
   
-5.  static_cast 플러스 const_cast  
+5.  static_cast plus const_cast  
   
- 위에 나열 된 캐스트 중 올바른지 및 식의 형식과 대상 형식을 CLR 참조 형식인 경우 C 스타일 캐스트는 런타임 검사 (castclass MSIL 명령)에 매핑됩니다. 그렇지 않은 경우, C 스타일 캐스트는 잘못 된 것으로 간주 됩니다 하 고 컴파일러에서 오류가 발생 합니다.  
+ 위에 나열 된 캐스트 하나도 유효 및 식의 형식과 대상 형식의 CLR 참조 형식인 경우 C 스타일 캐스트는 런타임 검사 (castclass MSIL 명령)에 매핑됩니다. 그렇지 않으면 C 스타일 캐스트를 잘못 된 것으로 간주 됩니다 하 고 컴파일러 오류가 발생 합니다.  
   
 ## <a name="remarks"></a>설명  
- C 스타일 캐스트 권장 되지 않습니다. 로 컴파일할 때 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)를 사용 하 여 [safe_cast](../windows/safe-cast-cpp-component-extensions.md)합니다.  
+ C 스타일 캐스트 권장 되지 않습니다. 사용 하 여 컴파일하면 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)를 사용 하 여 [safe_cast](../windows/safe-cast-cpp-component-extensions.md)합니다.  
   
- 다음 샘플은 C 스타일 캐스팅에 매핑되는 `const_cast`합니다.  
+ 다음 샘플에서는 C 스타일 캐스트에 매핑되는 **const_cast**합니다.  
   
-```  
+```cpp  
 // cstyle_casts_1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -55,9 +56,9 @@ int main() {
 }  
 ```  
   
- 다음 샘플은 C 스타일 캐스팅에 매핑되는 `safe_cast`합니다.  
+ 다음 샘플에서는 C 스타일 캐스트에 매핑되는 **safe_cast**합니다.  
   
-```  
+```cpp  
 // cstyle_casts_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -67,9 +68,9 @@ int main() {
 }  
 ```  
   
- 다음 샘플은 C 스타일 캐스팅에 매핑되는 `safe_cast` 플러스 `const_cast`합니다.  
+ 다음 샘플에서는 C 스타일 캐스트에 매핑되는 **safe_cast** plus **const_cast**합니다.  
   
-```  
+```cpp  
 // cstyle_casts_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -88,9 +89,9 @@ int main() {
 }  
 ```  
   
- 다음 샘플은 C 스타일 캐스팅에 매핑되는 `static_cast`합니다.  
+ 다음 샘플에서는 C 스타일 캐스트에 매핑되는 **static_cast**합니다.  
   
-```  
+```cpp  
 // cstyle_casts_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -109,9 +110,9 @@ int main() {
 }  
 ```  
   
- 다음 샘플은 C 스타일 캐스팅에 매핑되는 `static_cast` 플러스 `const_cast`합니다.  
+ 다음 샘플에서는 C 스타일 캐스트에 매핑되는 **static_cast** plus **const_cast**합니다.  
   
-```  
+```cpp  
 // cstyle_casts_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -132,7 +133,7 @@ int main() {
   
  다음 샘플에서는 C 스타일 캐스트는 런타임 검사에 매핑되는 보여 줍니다.  
   
-```  
+```cpp  
 // cstyle_casts_6.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -151,9 +152,9 @@ int main() {
 }  
 ```  
   
- 다음 샘플에는 잘못 된 C 스타일 캐스팅을 사용 하면 컴파일러는 오류를 보여 줍니다.  
+ 다음 샘플에는 잘못 된 C 스타일 캐스트, 컴파일러가 오류를 보여 줍니다.  
   
-```  
+```cpp  
 // cstyle_casts_7.cpp  
 // compile with: /clr  
 using namespace System;  

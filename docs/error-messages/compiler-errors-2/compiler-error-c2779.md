@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233930"
 ---
 # <a name="compiler-error-c2779"></a>컴파일러 오류 C2779
 'declaration': 속성 메서드만 비정적 데이터 멤버와 연결할 수  

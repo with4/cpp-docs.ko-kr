@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092000"
 ---
 # <a name="record-field-exchange-using-rfx"></a>레코드 필드 교환: RFX 사용
 이 프레임 워크에서 수행 하는 작업을 기준으로 RFX 사용 수행할 설명 합니다.  

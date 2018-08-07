@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b3d2c37b73d79619aeb16e7b1b81ad71819b09b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 101d987574ca789ce674c7ed01726847a66a4747
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962015"
 ---
 # <a name="isfinal-class"></a>is_final 클래스
 
@@ -36,11 +37,11 @@ struct is_final;
 
 ### <a name="parameters"></a>매개 변수
 
-`T` 형식이 쿼리입니다.
+*T* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `T` 형식이 `final`로 표시된 클래스 형식인 경우 true이고, 그렇지 않으면 false입니다. `T`가 클래스 형식일 경우 완전한 형식이어야 합니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *T* 클래스 형식이 표시 되어 `final`, 그렇지 않으면 false입니다. 하는 경우 *T* 클래스 형식에는 완전 한 형식 이어야 합니다.
 
 ## <a name="requirements"></a>요구 사항
 

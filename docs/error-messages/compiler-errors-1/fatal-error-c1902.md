@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33228201"
 ---
 # <a name="fatal-error-c1902"></a>심각한 오류 C1902
 프로그램 데이터베이스 관리자 일치 하지 않습니다. 설치를 확인 하십시오  

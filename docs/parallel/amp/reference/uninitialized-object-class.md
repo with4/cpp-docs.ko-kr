@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696177"
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object 클래스
 초기화 되지 않은 개체를 사용 하는 경우 throw 되는 예외입니다.  

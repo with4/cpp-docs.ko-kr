@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341286"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Rich Edit 컨트롤의 클립보드 작업
 응용 프로그램를 서식 있는 편집 컨트롤로 클립보드의 내용을 붙여 넣을 수 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 사용 가능한 최상의 클립보드 형식 또는 특정 클립보드 형식을 사용 하 여 합니다. 또한 서식 있는 편집 컨트롤에서 클립보드 형식 붙여넣기가 지원되는지 여부도 확인할 수 있습니다.  
