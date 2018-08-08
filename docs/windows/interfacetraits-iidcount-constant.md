@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2664292324ebb395f3a5f260dec57360027c60e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf8808074e347f70290498adc83f55f488a75790
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874069"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602729"
 ---
 # <a name="interfacetraitsiidcount-constant"></a>InterfaceTraits::IidCount 상수
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,7 +34,7 @@ static const unsigned long IidCount = 1;
 ```  
   
 ## <a name="remarks"></a>설명  
- 현재 InterfaceTraits 개체와 연결 된 Id 인터페이스의 수를 보유 합니다.  
+ 인터페이스 Id 현재 연결 수를 보유 **InterfaceTraits** 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

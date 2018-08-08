@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cd8fa2106ac3792c0352aa40ea34b049c1e5ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4f284514472796f22d176325a0223848a827c85c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878527"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606451"
 ---
 # <a name="interfacetraitscasttobase-method"></a>InterfaceTraits::CastToBase 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -36,12 +36,12 @@ static __forceinline Base* CastToBase(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T`  
- 매개 변수 형식의 `ptr`합니다.  
+### <a name="parameters"></a>매개 변수  
+ *T*  
+ 매개 변수의 유형을 *ptr*합니다.  
   
- `ptr`  
- 형식에 대 한 포인터 `T`합니다.  
+ *ptr*  
+ 형식에 대 한 포인터 *T*합니다.  
   
 ## <a name="return-value"></a>반환 값  
  에 대 한 포인터 `Base`합니다.  
@@ -49,7 +49,7 @@ static __forceinline Base* CastToBase(
 ## <a name="remarks"></a>설명  
  지정된 된 포인터에 대 한 포인터를 캐스팅 `Base`합니다.  
   
- 에 대 한 자세한 내용은 `Base`, 공용 Typedefs 섹션을 참조 [InterfaceTraits 구조체](../windows/interfacetraits-structure.md)합니다.  
+ 에 대 한 자세한 내용은 `Base`에서 공용 Typedefs 섹션을 참조 하세요 [InterfaceTraits 구조체](../windows/interfacetraits-structure.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

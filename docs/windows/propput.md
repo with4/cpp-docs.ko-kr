@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0605220b9eecce3ba042ddd0b46abd63a06c9dea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 679b019c15d72586b5ca186e0b54c9a9172db53a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882955"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608458"
 ---
 # <a name="propput"></a>propput
 속성 설정 함수를 지정합니다.  
@@ -30,16 +30,14 @@ ms.locfileid: "33882955"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [propput]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **propput** c + + 특성에 동일한 기능을는 [propput](http://msdn.microsoft.com/library/windows/desktop/aa367146) MIDL 특성입니다.  
+ 합니다 **propput** c + + 특성에 동일한 기능을 합니다 [propput](http://msdn.microsoft.com/library/windows/desktop/aa367146) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 예를 참조 [바인딩 가능한](../windows/bindable.md) 의 샘플 사용에 대 한 **propput**합니다.  
+## <a name="example"></a>예  
+ 예를 참조 하세요 [bindable](../windows/bindable.md) 의 샘플 사용에 대 한 **propput**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -50,7 +48,7 @@ ms.locfileid: "33882955"
 |**적용 대상**|메서드|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못된 특성**|**propget**, **propputref**|  
+|**잘못된 특성**|`propget`, `propputref`|  
   
  특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   

@@ -1,5 +1,5 @@
 ---
-title: 데이터 멤버 Module::MethodReleaseNotifier::object_ | Microsoft Docs
+title: Module::MethodReleaseNotifier::object_ 데이터 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2ed7505943f71e2fb1817d075d7afaf69323160
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bcc6efe59c71314837ff9c47d9c86c5b7f36c608
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881538"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607234"
 ---
 # <a name="modulemethodreleasenotifierobject-data-member"></a>Module::MethodReleaseNotifier::object_ 데이터 멤버
-멤버 함수가 현재 Module::MethodReleaseNotifier 개체의 이벤트 처리기인 개체에 대한 포인터를 보유합니다.  
+멤버 함수가 이벤트 처리기를 현재 개체에 대 한 포인터를 보유 **module:: methodreleasenotifier** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   

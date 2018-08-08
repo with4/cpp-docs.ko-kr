@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4203fbb639b06e7e421809f9d901c70933d586d1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63725d5d3e0edaea328d5753640aa74bdf35c7e0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878686"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606750"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits 구조체
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -41,17 +41,17 @@ template<>
 struct __declspec(novtable) InterfaceTraits<Nil>;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `I0`  
+### <a name="parameters"></a>매개 변수  
+ *I0*  
  인터페이스의 이름입니다.  
   
- `CloakedType`  
- RuntimeClass, Implements 및 ChainInterfaces에 대 한 인터페이스를 목록에 저장 되지 않습니다 인터페이스 Id를 지원 합니다.  
+ *CloakedType*  
+ 에 대 한 `RuntimeClass`, `Implements` 고 `ChainInterfaces`, 목록의 수 없는 인터페이스는 인터페이스 Id를 지원 합니다.  
   
 ## <a name="remarks"></a>설명  
  인터페이스의 공통 특성을 구현 합니다.  
   
- 두 번째 템플릿은 숨겨진된 인터페이스에 대 한 특수화입니다. 세 번째 템플릿은 Nil 매개 변수에 대 한 특수화입니다.  
+ 두 번째 템플릿은 감추어진된 인터페이스에 대 한 특수화입니다. 세 번째 템플릿은 Nil 매개 변수에 대 한 특수화입니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -59,23 +59,23 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
   
 |이름|설명|  
 |----------|-----------------|  
-|`Base`|`I0` 템플릿 매개 변수의 동의어입니다.|  
+|`Base`|동의어는 *I0* 템플릿 매개 변수입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[InterfaceTraits::CanCastTo 메서드](../windows/interfacetraits-cancastto-method.md)|지정된 된 포인터에 대 한 포인터로 캐스팅 될 수 있는지 여부를 나타냅니다. `Base`합니다.|  
+|[InterfaceTraits::CanCastTo 메서드](../windows/interfacetraits-cancastto-method.md)|지정된 된 포인터에 대 한 포인터로 캐스팅 될 수 있는지 여부를 나타내는 `Base`합니다.|  
 |[InterfaceTraits::CastToBase 메서드](../windows/interfacetraits-casttobase-method.md)|지정된 된 포인터에 대 한 포인터를 캐스팅 `Base`합니다.|  
-|[InterfaceTraits::CastToUnknown 메서드](../windows/interfacetraits-casttounknown-method.md)|지정된 된 포인터를 IUnknown에 대 한 포인터를 캐스팅합니다.|  
-|[InterfaceTraits::FillArrayWithIid 메서드](../windows/interfacetraits-fillarraywithiid-method.md)|인터페이스 ID를 할당 `Base` index 인수로 지정 된 배열 요소에 있습니다.|  
-|[InterfaceTraits::Verify 메서드](../windows/interfacetraits-verify-method.md)|자료 제대로 파생 된 것을 확인 합니다.|  
+|[InterfaceTraits::CastToUnknown 메서드](../windows/interfacetraits-casttounknown-method.md)|지정된 된 포인터에 대 한 포인터를 캐스팅 `IUnknown`합니다.|  
+|[InterfaceTraits::FillArrayWithIid 메서드](../windows/interfacetraits-fillarraywithiid-method.md)|인터페이스 ID를 할당 `Base` 인덱스 인수에 의해 지정 된 배열 요소에 있습니다.|  
+|[InterfaceTraits::Verify 메서드](../windows/interfacetraits-verify-method.md)|기본 제대로 파생 되는 것을 확인 합니다.|  
   
 ### <a name="public-constants"></a>공용 상수  
   
 |이름|설명|  
 |----------|-----------------|  
-|[InterfaceTraits::IidCount 상수](../windows/interfacetraits-iidcount-constant.md)|현재 InterfaceTraits 개체와 연결 된 Id 인터페이스의 수를 보유 합니다.|  
+|[InterfaceTraits::IidCount 상수](../windows/interfacetraits-iidcount-constant.md)|인터페이스 Id 현재 연결 수를 보유 **InterfaceTraits** 개체입니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `InterfaceTraits`  

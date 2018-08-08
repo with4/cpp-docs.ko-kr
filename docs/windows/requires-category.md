@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a6822773292fd651eaae3be5c00fb2b693a80a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ddcfe01ec5bd838a84ddad351f43802a8142b44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882318"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606103"
 ---
 # <a name="requirescategory"></a>requires_category
 대상 클래스의 필수 구성 요소 범주를 지정합니다.  
@@ -30,8 +30,7 @@ ms.locfileid: "33882318"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-     [ requires_category(   
+[ requires_category(   
   requires_category  
 ) ]  
 ```  
@@ -41,14 +40,14 @@ ms.locfileid: "33882318"
  필요한 범주의 ID입니다.  
   
 ## <a name="remarks"></a>설명  
- **requires_category** c + + 특성 대상 클래스에 필요한 구성 요소 범주를 지정 합니다. 자세한 내용은 참조 [REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category)합니다.  
+ 합니다 **requires_category** c + + 특성 대상 클래스에 필요한 구성 요소 범주를 지정 합니다. 자세한 내용은 [REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category)합니다.  
   
  이 특성을 사용하려면 [coclass](../windows/coclass.md), [progid](../windows/progid.md)또는 [vi_progid](../windows/vi-progid.md) 특성(또는 이 중 하나를 암시하는 다른 특성)을 동일한 요소에 적용해야 합니다.  
   
-## <a name="example"></a>예제  
- 다음 코드는 개체가 컨트롤 범주를 구현 해야 합니다.  
+## <a name="example"></a>예  
+ 다음 코드는 개체 컨트롤 범주를 구현 하는 필요 합니다.  
   
-```  
+```cpp  
 // cpp_attr_ref_requires_category.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -68,9 +67,9 @@ class CMyClass {};
   
 |||  
 |-|-|  
-|**적용 대상**|**class**, `struct`|  
+|**적용 대상**|**클래스**, **구조체**|  
 |**반복 가능**|아니요|  
-|**필수 특성**|다음 중 하나 이상: **coclass**, **progid**또는 **vi_progid**.|  
+|**필수 특성**|다음 중 하나 이상의: `coclass`, `progid`, 또는 `vi_progid`합니다.|  
 |**잘못된 특성**|없음|  
   
  특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  

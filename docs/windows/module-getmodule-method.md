@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 014a2aeca7876e8fac7a8428388b4d3ead2860a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 79809a6c9f779e8323f78f3cda91850246350ff2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875164"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606919"
 ---
 # <a name="modulegetmodule-method"></a>Module::GetModule 메서드
 모듈의 인스턴스를 만듭니다.  
@@ -43,5 +43,4 @@ WRL_NOTHROW static Module& GetModule();
  **네임스페이스:** Microsoft::WRL  
   
 ## <a name="see-also"></a>참고 항목  
- 
-[Module 클래스](../windows/module-class.md)
+ [Module 클래스](../windows/module-class.md)

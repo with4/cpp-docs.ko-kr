@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb260114a8010d441f0556cf2a21734c0ac23cca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 12346ffa30b3e309dcb845117f311cd4a63b9ad9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881428"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603619"
 ---
 # <a name="nil-structure"></a>Nil 구조체
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -32,9 +32,9 @@ struct Nil;
 ```  
   
 ## <a name="remarks"></a>설명  
- 지정 되지 않은 선택적 템플릿 매개 변수를 나타내는 데 사용 합니다.  
+ 지정 되지 않은 (선택 사항) 템플릿 매개 변수를 나타내는 데 사용 합니다.  
   
- Nil 빈 구조입니다.  
+ **Nil** 빈 구조입니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `Nil`  

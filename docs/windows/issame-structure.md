@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52dd1920ad32719e4fbff5a0138e737367d97ff4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc770ce418f458109ab2b047a5bb0f7e006ae499
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877672"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603587"
 ---
 # <a name="issame-structure"></a>IsSame 구조체
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -41,11 +41,11 @@ template <
 struct IsSame<T1, T1>;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T1`  
+### <a name="parameters"></a>매개 변수  
+ *T1*  
  형식입니다.  
   
- `T2`  
+ *T2*  
  다른 형식입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -57,7 +57,7 @@ struct IsSame<T1, T1>;
   
 |이름|설명|  
 |----------|-----------------|  
-|[IsSame::value 상수](../windows/issame-value-constant.md)|한 형식이 다른 동일 인지를 나타냅니다.|  
+|[IsSame::value 상수](../windows/issame-value-constant.md)|한 형식이 다른 동일한 인지 여부를 나타냅니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `IsSame`  

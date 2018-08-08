@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d4385dd12fccafb154a637dd5260764667d3887a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 50029cea9e5bd7bf3a5032a2190fc71d4e893b5f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878725"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607675"
 ---
 # <a name="registrationscript"></a>registration_script
 지정 된 사용자 지정 등록 스크립트를 실행합니다.  
@@ -30,25 +30,24 @@ ms.locfileid: "33878725"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ registration_script(   
+[ registration_script(   
    script   
 ) ]  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
  *스크립트*  
- 사용자 지정 등록 스크립트 (.rgs) 파일에 대 한 전체 경로입니다. 값이 **none**와 같은 `script = "none"`, coclass 등록 요구 사항이 없습니다.에 있음을 나타냅니다.  
+ 사용자 지정 등록 스크립트 (.rgs) 파일에 전체 경로입니다. 값이 **none**와 같은 `script = "none"`, coclass 없는 등록 요구 사항이 있음을 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
- **registration_script** 로 지정 된 사용자 지정 등록 스크립트를 실행 하는 c + + 특성 **스크립트**합니다. 이 특성을 지정 하지는 표준.rgs 파일 (구성 요소를 등록 하는 중에 대 한 정보 포함)이 사용 됩니다. .Rgs 파일에 대 한 자세한 내용은 참조 하십시오. [ATL 레지스트리 구성 요소 (등록자)](../atl/atl-registry-component-registrar.md)합니다.  
+ 합니다 **registration_script** c + + 특성으로 지정 된 사용자 지정 등록 스크립트 실행 *스크립트*합니다. 이 특성은 지정 하지 않으면 표준.rgs 파일 (구성 요소를 등록 하는 것에 대 한 정보 포함)이 사용 됩니다. .Rgs 파일에 대 한 자세한 내용은 참조 하세요. [ATL 레지스트리 구성 요소 (등록자)](../atl/atl-registry-component-registrar.md)합니다.  
   
  이 특성을 사용하려면 [coclass](../windows/coclass.md), [progid](../windows/progid.md)또는 [vi_progid](../windows/vi-progid.md) 특성(또는 이 중 하나를 암시하는 다른 특성)을 동일한 요소에 적용해야 합니다.  
   
-## <a name="example"></a>예제  
- 다음 코드는 구성 요소 호출 cpp_attr_ref_registration_script.rgs 레지스트리 스크립트를 갖도록 지정 합니다.  
+## <a name="example"></a>예  
+ 다음 코드는 구성 요소 cpp_attr_ref_registration_script.rgs 라는 레지스트리 스크립트를 갖도록 지정 합니다.  
   
-```  
+```cpp  
 // cpp_attr_ref_registration_script.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -73,9 +72,9 @@ class CMyClass:public IFace {};
   
 |||  
 |-|-|  
-|**적용 대상**|**class**, `struct`|  
+|**적용 대상**|**클래스**, **구조체**|  
 |**반복 가능**|아니요|  
-|**필수 특성**|다음 중 하나 이상: **coclass**, **progid**또는 **vi_progid**.|  
+|**필수 특성**|다음 중 하나 이상의: `coclass`, `progid`, 또는 `vi_progid`합니다.|  
 |**잘못된 특성**|없음|  
   
  특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  

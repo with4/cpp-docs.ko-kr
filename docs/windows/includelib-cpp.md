@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 252a5d953dd05edc494daf8c4a45322d5511f979
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e10ab341dc4c90a26315ea5e30f03bc71e628b64
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878894"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603383"
 ---
 # <a name="includelib-c"></a>includelib(C++)
-.idl or.h 파일 생성된 된.idl 파일에 포함 하면 됩니다.  
+생성된 된.idl 파일에 포함 될.idl 또는.h 파일을 사용 하면 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ includelib(  
+[ includelib(  
    name.idl  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *name.idl*  
- 원하는 생성된 된.idl 파일의 일부로 포함 하는.idl 파일의 이름입니다.  
+ 생성된 된.idl 파일의 일부분으로 포함 하려는.idl 파일의 이름입니다.  
   
 ## <a name="remarks"></a>설명  
- `includelib` c + + 특성으로 인해 이후 생성 된.idl 파일에 포함 되어야 하는.idl 또는.h 파일의 `importlib` 문.  
+ 합니다 **includelib** c + + 특성을 한 후 생성 된.idl 파일에 포함 될.idl 또는.h 파일을 사용 하면는 `importlib` 문입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드는.cpp 파일에 표시 됩니다.  
   
-```  
+```cpp  
 // cpp_attr_ref_includelib.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  

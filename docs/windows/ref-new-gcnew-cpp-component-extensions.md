@@ -1,5 +1,5 @@
 ---
-title: ref new, gcnew (c + + 구성 요소 확장명) | Microsoft Docs
+title: ref new, gcnew (c + + 구성 요소 확장) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,41 +20,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9533675d2894b3c3d99e3fb57abded8ea4e99d7a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 51aec80ee24d96cf08d55778e108492d16ecfcc9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879063"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606187"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew(C++ 구성 요소 확장)
-`ref new` 핸들을 반환 하 고 개체에 액세스할 수 없을 때 가비지가 수집 되는 형식의 인스턴스를 할당 하는 집계 키워드 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md))에 할당 된 개체입니다.  
+합니다 **ref n e w** 집계 키워드는 가비지 수집 개체에 액세스할 수 없을 때 핸들을 반환 하는 형식의 인스턴스가 할당 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 할당된 된 개체에 있습니다.  
   
 ## <a name="all-runtimes"></a>모든 런타임  
- `ref new`에서 할당한 형식의 인스턴스에 대한 메모리가 자동으로 할당 취소됩니다.  
+ 할당 된 형식의 인스턴스에 대 한 메모리 **ref n e w** 자동으로 할당이 취소 됩니다.  
   
- 메모리를 할당할 수 없는 경우 `ref new` 작업에서 `OutOfMemoryException`이 throw됩니다.  
+ A **ref n e w** 작업이 throw `OutOfMemoryException` 메모리를 할당할 수 없는 경우.  
   
- 네이티브 c + + 형식에 대 한 메모리를 할당 하 고 할당 취소 하는 방법에 대 한 자세한 내용은 참조 [새 및 delete 연산자](../cpp/new-and-delete-operators.md)합니다.  
+ 네이티브 c + + 형식에 대 한 메모리를 할당 하 고 할당 취소 하는 방법에 대 한 자세한 내용은 참조 하세요. [새 및 delete 연산자](../cpp/new-and-delete-operators.md)합니다.  
   
 ## <a name="windows-runtime"></a>Windows 런타임  
- `ref new`를 사용하여 수명을 자동으로 관리하려는 Windows 런타임 개체에 대한 메모리를 할당할 수 있습니다. 참조 개수가 0이 되면 개체는 자동으로 할당 취소되며, 참조의 마지막 복사본이 범위를 벗어난 후에 발생합니다. 자세한 내용은 참조 [Ref 클래스 및 구조체](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)합니다.  
+ 사용 하 여 **ref n e w** 수명을 자동으로 관리 하려는 Windows 런타임 개체에 대 한 메모리를 할당할 수 있습니다. 참조 개수가 0이 되면 개체는 자동으로 할당 취소되며, 참조의 마지막 복사본이 범위를 벗어난 후에 발생합니다. 자세한 내용은 [Ref 클래스 및 구조체](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/ZW**  
+ 컴파일러 옵션: `/ZW`  
   
 ## <a name="common-language-runtime"></a>공용 언어 런타임 
- 관리되는 형식(참조 또는 값 형식)에 대한 메모리는 `gcnew`에 의해 할당되고 가비지 수집을 사용하여 할당 취소됩니다.  
+ 에 의해 관리 되는 형식 (참조 또는 값 형식)에 대 한 메모리 할당 되었습니다 **gcnew**, 고 가비지 수집을 사용 하 여 할당을 취소 합니다.  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/clr**  
+ 컴파일러 옵션: `/clr`  
   
 ### <a name="examples"></a>예제  
- **예제**  
   
- 다음 예제에서는 `gcnew`를 사용하여 Message 개체를 할당합니다.  
+ 다음 예제에서는 **gcnew** 메시지 개체를 할당 합니다.  
   
-```  
+```cpp  
 // mcppv2_gcnew_1.cpp  
 // compile with: /clr  
 ref struct Message {  
@@ -69,11 +68,9 @@ int main() {
 }  
 ```  
   
- **예제**  
+ 다음 예제에서는 **gcnew** 참조 형식 처럼 사용할 boxed 값 형식인을 만들려고 합니다.  
   
- 다음 예제에서는 `gcnew`를 사용하여 참조 형식처럼 사용할 boxed 값 형식을 만듭니다.  
-  
-```  
+```cpp  
 // example2.cpp : main project file.  
 // compile with /clr  
 using namespace System;  

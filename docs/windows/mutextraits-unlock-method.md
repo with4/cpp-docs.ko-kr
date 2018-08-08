@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11e4655c69e5ecb83cebf1225384c54c96be695b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1925755ca663ba82526fb8b8dae626165f1e4862
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880364"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606685"
 ---
 # <a name="mutextraitsunlock-method"></a>MutexTraits::Unlock 메서드
 공유 리소스의 한 독점적인 제어권을 해제합니다.  
@@ -35,8 +35,8 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `h`  
+### <a name="parameters"></a>매개 변수  
+ *h*  
  뮤텍스 개체에 대 한 핸들입니다.  
   
 ## <a name="return-value"></a>반환 값  

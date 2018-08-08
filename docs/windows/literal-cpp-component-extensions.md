@@ -1,5 +1,5 @@
 ---
-title: 리터럴 (c + + 구성 요소 확장명) | Microsoft Docs
+title: 리터럴 (c + + 구성 요소 확장) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,46 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6871f02a1c37def05b6450e7ffad18f6fa45b461
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 78dda3c52192b0d2755bdc8f8944eb0e1443e7af
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879359"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604176"
 ---
 # <a name="literal-c-component-extensions"></a>리터럴(C++ 구성 요소 확장명)
-로 표시 된 변수 (데이터 멤버) `literal` 에 **/clr** 컴파일이입니다. 해당 하는 네이티브는 `static const` 변수입니다.  
+변수 (데이터 멤버)로 표시 **리터럴** 에 **/clr** 해당 하는 네이티브 컴파일이 **정적 const** 변수.  
   
 ## <a name="all-platforms"></a>모든 플랫폼  
- **주의**  
+### <a name="remarks"></a>설명 
   
  (이 언어 기능에는 모든 런타임에 적용되는 설명이 없습니다.)  
   
 ## <a name="windows-runtime"></a>Windows 런타임  
- **주의**  
+### <a name="remarks"></a>설명 
   
  (이 언어 기능에는 Windows 런타임에만 적용되는 설명이 없습니다.)  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/ZW**  
+ 컴파일러 옵션: `/ZW`  
   
 ## <a name="common-language-runtime"></a>공용 언어 런타임  
   
 ## <a name="remarks"></a>설명  
- 로 표시 된 데이터 멤버는 `literal` 선언할 때 초기화 해야 하며 값은 정수 계열 상수, 열거형 또는 문자열 형식 이어야 합니다. 초기화 식의 형식에서 정적 const 데이터 멤버의 형식으로 변환하는 데 사용자 정의 변환이 필요 없어야 합니다.  
+ 으로 표시 된 데이터 멤버 **리터럴** 선언할 때 초기화 해야 하며 정수 계열 상수, 열거형 또는 문자열 형식의 값 이어야 합니다. 초기화 식의 형식에서 정적 const 데이터 멤버의 형식으로 변환하는 데 사용자 정의 변환이 필요 없어야 합니다.  
   
  메모리는 런타임에 리터럴 필드에 대해 할당되지 않습니다. 컴파일러는 클래스에 대한 메타데이터에 해당 값을 삽입하기만 합니다.  
   
- `static const`라고 표시된 변수는 다른 컴파일러가 메타데이터에서 사용할 수 없습니다.  
+ 변수 표시 **정적 const** 다른 컴파일러가 메타 데이터에서 사용할 수 없습니다.  
   
- 자세한 내용은 참조 [정적](../cpp/storage-classes-cpp.md) 및 [const](../cpp/const-cpp.md)합니다.  
+ 자세한 내용은 [정적](../cpp/storage-classes-cpp.md) 하 고 [const](../cpp/const-cpp.md)합니다.  
   
- `literal`는 상황에 맞는 키워드입니다. 참조 [상황에 맞는 키워드](../windows/context-sensitive-keywords-cpp-component-extensions.md) 자세한 정보에 대 한 합니다.  
+ **리터럴** 상황에 맞는 키워드입니다. 참조 [상황에 맞는 키워드](../windows/context-sensitive-keywords-cpp-component-extensions.md) 자세한 내용은 합니다.  
   
-## <a name="example"></a>예제  
- 이 예제에서는 `literal` 변수가 `static`을 의미함을 보여 줍니다.  
+## <a name="example"></a>예  
+ 이 예에서는 한 **리터럴** 변수에 의미 **정적**합니다.  
   
-```  
+```cpp  
 // mcppv2_literal.cpp  
 // compile with: /clr  
 ref struct X {  
@@ -69,10 +69,10 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 메타데이터에서 리터럴의 영향을 보여 줍니다.  
   
-```  
+```cpp  
 // mcppv2_literal2.cpp  
 // compile with: /clr /LD  
 public ref struct A {  
@@ -91,10 +91,10 @@ public ref struct A {
 .field public static literal int32 lit = int32(0x0000000A)  
 ```  
   
-## <a name="example"></a>예제  
- C#에서 작성된 다음 샘플은 이전 샘플에서 만든 메타데이터를 참조하고 `literal` 및 `static const` 변수의 영향을 보여 줍니다.  
+## <a name="example"></a>예  
+ 다음 샘플에서는 C#에서 작성 된 이전 샘플에서 만든 메타 데이터를 참조 하 고 영향을 보여 줍니다 **리터럴** 하 고 **정적 const** 변수:  
   
-```  
+```cs  
 // mcppv2_literal3.cs  
 // compile with: /reference:mcppv2_literal2.dll  
 // A C# program  
@@ -124,7 +124,7 @@ class B {
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/clr**  
+ 컴파일러 옵션: `/clr`  
   
 ## <a name="see-also"></a>참고 항목  
  [런타임 플랫폼용 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)

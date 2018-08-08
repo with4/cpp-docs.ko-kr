@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52acf2f0b9936903b4359e21e23ae50c95d2f31a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 267ef2d9e1b24028016831e050385997ac0037e6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876737"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604842"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList 구조체
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -37,15 +37,15 @@ template <
 struct InterfaceList;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T`  
- 인터페이스 이름입니다. 재귀 목록에서 첫 번째 인터페이스입니다.  
+### <a name="parameters"></a>매개 변수  
+ *T*  
+ 인터페이스 이름이; 재귀 목록의 첫 번째 인터페이스입니다.  
   
- `U`  
- 인터페이스 이름입니다. 재귀 목록에서 나머지 인터페이스입니다.  
+ *U*  
+ 인터페이스 이름이; 재귀 목록의 나머지 인터페이스입니다.  
   
 ## <a name="remarks"></a>설명  
- 인터페이스의 재귀 목록을 만드는 데 사용.  
+ 인터페이스의 재귀 목록을 만드는 데 사용 합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -53,8 +53,8 @@ struct InterfaceList;
   
 |이름|설명|  
 |----------|-----------------|  
-|`FirstT`|템플릿 매개 변수에 대 한 동의어 `T`합니다.|  
-|`RestT`|템플릿 매개 변수에 대 한 동의어 `U`합니다.|  
+|`FirstT`|템플릿 매개 변수에 대 한 동의어 *T*합니다.|  
+|`RestT`|템플릿 매개 변수에 대 한 동의어 *U*합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `InterfaceList`  

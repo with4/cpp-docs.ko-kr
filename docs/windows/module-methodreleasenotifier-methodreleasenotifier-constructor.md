@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91540ca3fff03f1f0a449413c2d1ca72781c70f1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8e48b6f8ec4a985bfa7fa5b8d0069e472df86e8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875229"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605992"
 ---
 # <a name="modulemethodreleasenotifiermethodreleasenotifier-constructor"></a>Module::MethodReleaseNotifier::MethodReleaseNotifier 생성자
-Module:: methodreleasenotifier 클래스의 새 인스턴스를 초기화합니다.  
+새 인스턴스를 초기화 합니다 **module:: methodreleasenotifier** 클래스입니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 MethodReleaseNotifier(  
    _In_ T* object,   
    _In_ void (T::* method)(),   
@@ -39,15 +38,15 @@ MethodReleaseNotifier(
             method_(method);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `object`  
+### <a name="parameters"></a>매개 변수  
+ *object*  
  개체 멤버 함수가 이벤트 처리기입니다.  
   
- `method`  
- 멤버 함수 매개 변수의 `object` 이벤트 처리기입니다.  
+ *method*  
+ 멤버 함수 매개 변수의 *개체* 이벤트 처리기입니다.  
   
- `release`  
- 지정 `true` 내부 호출을 사용 하도록 설정 하려면 [모듈:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) 메서드도 있습니다; 그렇지 않으면 지정 `false`합니다.  
+ *release*  
+ 지정할 **true** 내부 호출을 사용 하도록 설정 하려면 [모듈:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) 메서드를 지정이 고, 그렇지 **false**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** module.h  

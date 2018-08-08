@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ad091114d6be6f35f1a0341961dc5122840ace8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91012112cebf6fe33858df8904691944a810f69a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878049"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608133"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper 구조체
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -50,41 +50,41 @@ template <
 struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T0`  
- 템플릿 매개 변수 0는 반드시 필요 합니다.  
+### <a name="parameters"></a>매개 변수  
+ *T0*  
+ 템플릿 매개 변수 0 필요 합니다.  
   
- `T1`  
+ *T1*  
  템플릿 매개 변수 1에는 기본적으로 지정 되지 않았습니다.  
   
- `T2`  
+ *T2*  
  템플릿 매개 변수 2는 기본적으로 지정 되지 않았습니다. 세 번째 템플릿 매개 변수입니다.  
   
- `T3`  
- 템플릿 매개 변수 3, 기본적으로이 지정 되지 않았습니다.  
+ *T3*  
+ 템플릿 매개 변수 3, 기본적으로 지정 되지 않았습니다.  
   
- `T4`  
- 템플릿 매개 변수 4는 기본적으로 지정 되지 않았습니다.  
+ *T4*  
+ 템플릿 매개 변수 4, 기본적으로 지정 되지 않았습니다.  
   
- `T5`  
+ *T5*  
  템플릿 매개 변수 5는 기본적으로 지정 되지 않았습니다.  
   
- `T6`  
- 템플릿 매개 변수 6, 기본적으로이 지정 되지 않았습니다.  
+ *T6*  
+ 템플릿 매개 변수 6, 기본적으로 지정 되지 않았습니다.  
   
- `T7`  
- 템플릿 매개 변수 7, 기본적으로이 지정 되지 않았습니다.  
+ *T7*  
+ 템플릿 매개 변수 7, 기본적으로 지정 되지 않았습니다.  
   
- `T8`  
- 템플릿 매개 변수 8, 기본적으로이 지정 되지 않았습니다.  
+ *T8*  
+ 템플릿 매개 변수 8, 기본적으로 지정 되지 않았습니다.  
   
- `T9`  
- 템플릿 매개 변수 9, 기본적으로이 지정 되지 않았습니다.  
+ *T9*  
+ 템플릿 매개 변수 9, 기본적으로 지정 되지 않았습니다.  
   
 ## <a name="remarks"></a>설명  
- InterfaceList 유형을 재귀적으로 지정 된 템플릿 매개 변수 인수를 적용 하 여 빌드합니다.  
+ 빌드는 `InterfaceList` 재귀적으로 지정 된 템플릿 매개 변수 인수를 적용 하 여 형식입니다.  
   
- InterfaceListHelper 템플릿 템플릿 매개 변수를 사용 하 여 `T0` 첫 번째 데이터를 정의 하는 InterfaceList 구조체 한 다음 재귀적으로 멤버 나머지 템플릿 매개 변수를 InterfaceListHelper 서식 파일을 적용 합니다. InterfaceListHelper 나머지 템플릿 매개 변수가 없는 경우 중지 합니다.  
+ **InterfaceListHelper** 템플릿은 템플릿 매개 변수를 사용 하 여 *T0* 의 첫 번째 데이터 멤버를 정의 하는 `InterfaceList` 구조 및 재귀적으로 적용 되는  **InterfaceListHelper** 나머지 모든 템플릿 매개 변수는 템플릿. **InterfaceListHelper** 나머지 템플릿 매개 변수가 없는 경우 중지 합니다.  
   
 ## <a name="members"></a>멤버  
   

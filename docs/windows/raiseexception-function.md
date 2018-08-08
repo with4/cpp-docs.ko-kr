@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2af97ac13386db450318f4d1f384517a8dd77baf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e93b7281b079918641bf36ebcd72968a98eb95ec
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882185"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602668"
 ---
 # <a name="raiseexception-function"></a>RaiseException 함수
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -35,17 +35,17 @@ inline void __declspec(noreturn)   RaiseException(
       DWORD dwExceptionFlags = EXCEPTION_NONCONTINUABLE);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `hr`  
- 발생 중인; 예외의 예외 코드 즉, 작업 실패의 HRESULT입니다.  
+### <a name="parameters"></a>매개 변수  
+ *hr*  
+ 발생 중인 예외 예외 코드 HRESULT, 실패 한 작업입니다.  
   
- `dwExceptionFlags`  
- 비연속적 예외가 (플래그 값은 0), 또는 (플래그 값은 0이 아닌) noncontinuable 예외를 나타내는 플래그입니다. 기본적으로는 예외는 계속할 수 없는입니다.  
+ *dwExceptionFlags*  
+ 건의 예외 (플래그 값이 0) 또는 noncontinuable 예외 (플래그 값은 0이 아닌)를 나타내는 플래그입니다. 기본적으로 예외는 계속할 수 없는입니다.  
   
 ## <a name="remarks"></a>설명  
- 호출 스레드에서 예외가 발생합니다.  
+ 호출 스레드에서 예외가 발생 합니다.  
   
- 자세한 내용은 참조는 Windows **RaiseException** 함수입니다.  
+ 자세한 내용은 참조는 Windows `RaiseException` 함수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** internal.h  

@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc588950cc8752a7c2b8e1ddf00b2193aaf0f395
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98bd73d2c067e6d5bbb4425782de594bbaa47bc1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892633"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606626"
 ---
 # <a name="runtimeclassgettrustlevel-method"></a>RuntimeClass::GetTrustLevel 메서드
 
-현재 RuntimeClass 개체의 신뢰 수준을 가져옵니다.
+현재 신뢰 수준을 가져옵니다 **RuntimeClass** 개체입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -39,7 +39,7 @@ STDMETHOD(GetTrustLevel)(
 ### <a name="parameters"></a>매개 변수
 
 *trustLvl*  
-이 작업이 완료 될 때 현재 RuntimeClass 개체의 신뢰 수준입니다.
+이 작업이 완료 되 면, 현재 신뢰 수준 **RuntimeClass** 개체입니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -47,7 +47,7 @@ STDMETHOD(GetTrustLevel)(
 
 ## <a name="remarks"></a>설명
 
-어설션 오류가 발생 하는 경우 &#95; &#95;WRL_STRICT&#95; &#95; 또는 &#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95; 가 정의 되지 않았습니다.
+어설션 오류가 발생 하는 경우에 내보내집니다 &#95; &#95;WRL_STRICT&#95; &#95; 또는 &#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95; 정의 되어 있지 않습니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -56,5 +56,4 @@ STDMETHOD(GetTrustLevel)(
 **네임스페이스:** Microsoft::WRL
 
 ## <a name="see-also"></a>참고 항목
-
-[RuntimeClass 클래스](../windows/runtimeclass-class.md)
+ [RuntimeClass 클래스](../windows/runtimeclass-class.md)

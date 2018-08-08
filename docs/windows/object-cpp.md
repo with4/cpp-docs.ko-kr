@@ -1,5 +1,5 @@
 ---
-title: 개체 (c + +) | Microsoft Docs
+title: object (c + +) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 601d67fb48f0ae826474d33e7dca0fbffff9478c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c0705c5d841b63cd3f537ab39dbbe9122fea869
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879710"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607912"
 ---
 # <a name="object-c"></a>object(C++)
 사용자 지정 인터페이스를 식별합니다.  
@@ -30,18 +30,16 @@ ms.locfileid: "33879710"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [object]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- 인터페이스 정의 앞에 오는 경우는 **개체** c + + 특성을 사용 하면 사용자 지정 인터페이스는.idl 파일에 배치 하는 인터페이스입니다.  
+ 인터페이스 정의 이전 하는 경우는 **개체** c + + 특성을 사용 하면 사용자 지정 인터페이스.idl 파일에 배치 하는 인터페이스입니다.  
   
- 개체와 함께 표시 된 모든 인터페이스에서 상속 해야 **IUnknown**합니다. 모든 기본 인터페이스에서 상속 하는 경우이 조건이 만족 **IUnknown**합니다. 상속 된 기본 인터페이스가 없는 경우 **IUnknown**, 컴파일러로 표시 된 인터페이스 하면 **개체** 를 파생할 **IUnknown**합니다.  
+ 개체를 사용 하 여 표시 된 모든 인터페이스에서 상속 해야 `IUnknown`합니다. 기본 인터페이스에서 상속 하는 경우이 조건이 만족 `IUnknown`합니다. 상속 된 기본 인터페이스가 없는 경우 `IUnknown`, 컴파일러에 표시 된 인터페이스 하면 **개체** 에서 파생 `IUnknown`합니다.  
   
-## <a name="example"></a>예제  
- 참조 [nonbrowsable](../windows/nonbrowsable.md) 사용 하는 방법의 예 **개체**합니다.  
+## <a name="example"></a>예  
+ 참조 [nonbrowsable](../windows/nonbrowsable.md) 사용 하는 방법의 예제 **개체**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -49,7 +47,7 @@ ms.locfileid: "33879710"
   
 |||  
 |-|-|  
-|**적용 대상**|`interface`|  
+|**적용 대상**|**interface**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

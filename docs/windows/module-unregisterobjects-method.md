@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b711338c436eda3e64d9b51ef0d3137975d834a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb477b2d5c0a6eabf1e3304c0cadcb34d3910fe5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874121"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607442"
 ---
 # <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects 메서드
 다른 응용 프로그램에서 지정된 모듈의 개체에 연결할 수 없도록 이 개체의 등록을 취소합니다.  
@@ -35,11 +35,11 @@ HRESULT UnregisterObjects(
    const wchar_t* serverName);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `module`  
+### <a name="parameters"></a>매개 변수  
+ *모듈*  
  모듈에 대한 포인터입니다.  
   
- `serverName`  
+ *서버 이름*  
  이 작업으로 영향을 받는 개체의 하위 집합을 지정하는 정규화 이름입니다.  
   
 ## <a name="return-value"></a>반환 값  

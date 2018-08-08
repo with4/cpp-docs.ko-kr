@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0734f895315f1c8ba7577d531c54a9dc11381e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e31f666ca6263a9b9b770261a0899bcad1bc8fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877101"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606311"
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>MakeAllocator::~MakeAllocator 소멸자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,9 +34,9 @@ WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습
 ```  
   
 ## <a name="remarks"></a>설명  
- MakeAllocator 클래스의 현재 인스턴스 초기화를 취소 합니다.  
+ 현재 인스턴스 초기화를 해제 합니다 **MakeAllocator** 클래스입니다.  
   
- 이 소멸자는 또한 필요한 경우 기본 할당 된 메모리를 삭제 합니다.  
+ 이 소멸자는 또한 필요한 경우 할당된 된 기본 메모리를 삭제 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

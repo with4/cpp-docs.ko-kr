@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d07e941f3f8ee0d7df2df14216fa60ef3a2a706
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c1f9500abc1c92ea5f9aca64e379adfdcf84a44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888798"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607526"
 ---
 # <a name="runtimeclassrelease-method"></a>RuntimeClass::Release 메서드
-현재 RuntimeClass 개체에서 COM 릴리스 작업을 수행합니다.  
+현재 COM 릴리스 작업을 수행 **RuntimeClass** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +40,7 @@ STDMETHOD_(
  성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.  
   
 ## <a name="remarks"></a>설명  
- 참조 개수가 0개가 되면 RuntimeClass 개체가 삭제됩니다.  
+ 참조 횟수가 0 인 경우는 **RuntimeClass** 개체가 삭제 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

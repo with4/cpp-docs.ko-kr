@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b18d33b962c277347e74819e5ff34f3562821f45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c9d82f38e44f1d0c9562982da109a8deffa4fbff
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875892"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608932"
 ---
 # <a name="modulebasemodulebase-constructor"></a>ModuleBase::ModuleBase 생성자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,7 +34,8 @@ ModuleBase();
 ```  
   
 ## <a name="remarks"></a>설명  
- 클래스의 인스턴스를 초기화합니다.  
+ 
+          `Module` 클래스의 인스턴스를 초기화합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

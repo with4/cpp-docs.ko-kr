@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c21b97e50fa03861245a0c0881963387dd8a3102
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4563d1b24b3af6e450a67a21d6a083f1839bc3e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876760"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603070"
 ---
 # <a name="importlib"></a>importlib
 다른 형식 라이브러리에 이미 컴파일된 형식을 만들고 있는 형식 라이브러리에서 사용할 수 있도록 합니다.  
@@ -30,23 +30,22 @@ ms.locfileid: "33876760"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ importlib(  
+[ importlib(  
    "tlb_file"  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *tlb_file*  
  현재 프로젝트의 형식 라이브러리로 가져오려는 .tlb 파일의 이름으로, 따옴표로 묶습니다.  
   
 ## <a name="remarks"></a>설명  
- **importlib** c + + 특성을 사용 하면는 `importlib` 문이 생성된 된.idl 파일의 라이브러리 블록에 배치 됩니다. **importlib** 특성와 동일한 기능에는 [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) MIDL 특성입니다.  
+ 합니다 **importlib** c + + 특성을 사용 하면는 `importlib` 문이 생성된 된.idl 파일의 라이브러리 블록에 배치 합니다. 합니다 **importlib** 특성이 동일한 기능을 합니다 [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 다음 코드를 사용 하는 방법의 예를 보여 줍니다. **importlib**:  
+## <a name="example"></a>예  
+ 다음 코드를 사용 하는 방법의 예를 보여 줍니다 **importlib**:  
   
-```  
+```cpp  
 // cpp_attr_ref_importlib.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  

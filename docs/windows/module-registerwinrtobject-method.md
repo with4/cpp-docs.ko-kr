@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 097bf70ebd280d9494ff70ea1d80f53615f3d898
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42ec736126e2381b00542bf71afca0b9db187df7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874956"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603759"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject 메서드
 다른 응용 프로그램에 연결할 수 있도록 하나 이상의 Windows 런타임 개체를 등록 합니다.  
@@ -36,17 +36,17 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
    unsigned int count)  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `serverName`  
+### <a name="parameters"></a>매개 변수  
+ *서버 이름*  
  이 작업으로 영향을 받는 개체의 하위 집합을 지정하는 이름입니다.  
   
- `activatableClassIds`  
+ *activatableClassIds*  
  등록할 활성화 가능한 CLSID 배열입니다.  
   
- `cookie`  
+ *쿠키*  
  등록된 클래스 개체를 식별하는 값입니다. 이 값은 나중에 등록을 해지할 때 사용됩니다.  
   
- `count`  
+ *count*  
  등록할 개체의 수입니다.  
   
 ## <a name="return-value"></a>반환 값  

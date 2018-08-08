@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7647ca56e3159564826efa9caf438456b9ae3568
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3908a8f06d25416999fbf2c95dd258fbc19d456d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878959"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603124"
 ---
 # <a name="rdx"></a>rdx
 레지스트리 키를 만들거나 기존 레지스트리 키를 수정 합니다.  
@@ -30,28 +30,27 @@ ms.locfileid: "33878959"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ rdx(   
+[ rdx(   
    key,   
    valuename=NULL,   
    regtype   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `key`  
- 만들거나 열 키의 이름입니다.  
+### <a name="parameters"></a>매개 변수  
+ *key*  
+ 이름 키를 만들거나 열 수입니다.  
   
- `valuename`(선택 사항)  
- 설정할 값 필드를 지정 합니다. 이 이름 가진 값 필드는 아직 없으면 키에 추가 됩니다.  
+ *valuename* (선택 사항)  
+ 설정할 값 필드를 지정 합니다. 이 이름의 값 필드 없는 키에서에 추가 됩니다.  
   
  *regtype*  
- 추가 되는 레지스트리 키의 형식입니다. 다음 중 하나일 수 있습니다: **텍스트**, **dword**, **이진**, 또는 `CString`합니다.  
+ 추가 되는 레지스트리 키의 형식입니다. 다음 중 하나일 수 있습니다: `text`, `dword`를 `binary`, 또는 `CString`합니다.  
   
 ## <a name="remarks"></a>설명  
- **rdx** c + + 특성을 만들거나 기존 COM 구성 요소에 대 한 레지스트리 키를 수정 합니다. 특성 대상 멤버를 구현 하는 개체에 BEGIN_RDX_MAP 매크로 추가 합니다. `RegistryDataExchange`레지스트리 및 데이터 멤버 간에 데이터를 전송 BEGIN_RDX_MAP 매크로 결과로 삽입 하는 함수를 사용할 수 있습니다  
+ 합니다 **rdx** c + + 특성을 만들거나 기존 COM 구성 요소에 대 한 레지스트리 키를 수정 합니다. 특성 대상 멤버를 구현 하는 개체에 BEGIN_RDX_MAP 매크로 추가 합니다. `RegistryDataExchange`레지스트리 및 데이터 멤버 간 데이터 전송을 위해 BEGIN_RDX_MAP 매크로 결과 삽입 하는 함수를 사용할 수 있습니다  
   
- 이 특성은 함께에서 사용할 수 있습니다는 [coclass](../windows/coclass.md), [progid](../windows/progid.md), 또는 [vi_progid](../windows/vi-progid.md) 특성 또는 다음 중 하나를 의미 하는 기타 특성입니다.  
+ 이 특성은 함께에서 사용할 수 있습니다 합니다 [coclass](../windows/coclass.md), [progid](../windows/progid.md), 또는 [vi_progid](../windows/vi-progid.md) 특성 또는 다음 중 하나를 암시 하는 기타 특성입니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -59,17 +58,17 @@ ms.locfileid: "33878959"
   
 |||  
 |-|-|  
-|**적용 대상**|**클래스** 또는 `struct` 멤버|  
+|**적용 대상**|**클래스** 나 **구조체** 멤버|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  
   
  특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## <a name="example"></a>예제  
- 다음 코드는 MyValue CMyClass COM 구성 요소를 설명 하는 시스템에 라는 레지스트리 키를 추가 합니다.  
+## <a name="example"></a>예  
+ 다음 코드는 MyValue CMyClass COM 구성 요소를 설명 하는 시스템 이라는 레지스트리 키를 추가 합니다.  
   
-```  
+```cpp  
 // cpp_attr_ref_rdx.cpp  
 // compile with: /LD /link /OPT:NOREF  
 #define _ATL_ATTRIBUTES  

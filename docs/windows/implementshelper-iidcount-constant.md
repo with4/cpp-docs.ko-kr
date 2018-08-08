@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa63cfa765d54d20b943aa3a4aabf3dc51a16984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f08564088d00df332db43f207284dae9fc99109
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874004"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604257"
 ---
 # <a name="implementshelperiidcount-constant"></a>ImplementsHelper::IidCount 상수
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -30,12 +30,11 @@ WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 static const unsigned long IidCount;  
 ```  
   
 ## <a name="remarks"></a>설명  
- 구현 된 구현 된 인터페이스 Id의 수를 보유합니다.  
+ 현재에서 구현 된 인터페이스 Id의 수가 포함 `Implements` 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

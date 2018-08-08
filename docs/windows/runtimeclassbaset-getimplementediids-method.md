@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ea6ff871ef0ce886b393c948fc45accf3d8e245
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf29b5db15f88528012914476572cb1ccb21a07c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892236"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603253"
 ---
 # <a name="runtimeclassbasetgetimplementediids-method"></a>RuntimeClassBaseT::GetImplementedIIDS 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -38,24 +38,24 @@ __forceinline static HRESULT GetImplementedIIDS(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T`  
- `implements` 매개 변수의 형식입니다.  
+### <a name="parameters"></a>매개 변수  
+ *T*  
+ 형식의 합니다 *구현* 매개 변수입니다.  
   
- `implements`  
- 매개 변수로 지정 된 형식에 대 한 포인터 `T`합니다.  
+ *구현*  
+ 매개 변수에 의해 지정 된 형식에 대 한 포인터 *T*합니다.  
   
- `iidCount`  
+ *iidCount*  
  검색할 인터페이스 Id의 최대 수입니다.  
   
- `iids`  
- 이 작업이 완료 되는 경우 성공적으로, 인터페이스 형식에서 구현 된 Id의 배열을 `T`합니다.  
+ *iid*  
+ 이 작업 완료, 인터페이스 형식에 의해 구현 되는 Id의 배열을 *T*합니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공 하면 s_ok이 고 그렇지 않으면 오류를 설명 하는 HRESULT입니다.  
   
 ## <a name="remarks"></a>설명  
- 인터페이스를 지정 된 형식에서 구현 되는 Id의 배열을 검색 합니다.  
+ 지정된 된 형식에서 구현 되는 Id 인터페이스의 배열을 검색 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  
