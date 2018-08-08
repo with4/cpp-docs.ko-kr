@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5284c631813271f5682343c74cff693d1ea785e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd930ef70e5bb2b87c584c1d821cdf4528580a31
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877477"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607185"
 ---
 # <a name="importidl"></a>importidl
 생성된 된.idl 파일에 지정 된.idl 파일을 삽입합니다.  
@@ -30,24 +30,23 @@ ms.locfileid: "33877477"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ importidl(  
+[ importidl(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `idl_file`  
- 응용 프로그램에 대해 생성 되는.idl 파일과 병합 하려는.idl 파일의 이름을 식별 합니다.  
+### <a name="parameters"></a>매개 변수  
+ *idl_file*  
+ 응용 프로그램에 대해 생성 되는.idl 파일에 병합 하려는.idl 파일의 이름을 식별 합니다.  
   
 ## <a name="remarks"></a>설명  
- **importidl** 라이브러리 블록 밖에 서 단면을 배치 하는 c + + 특성 (에서 `idl_file`) 프로그램의 생성 된.idl 파일 및 라이브러리 섹션 (에서 `idl_file`) 프로그램의의 라이브러리 섹션에 생성 된.idl 파일입니다.  
+ 합니다 **importidl** 라이브러리 블록 외부에서 단면을 배치 하는 c + + 특성 (에서 *idl_file*) 프로그램의 생성 된.idl 파일을 라이브러리 섹션 (에서 *idl_file*) 프로그램의 부분을 라이브러리로.idl 파일을 생성 합니다.  
   
- 사용 하려는 경우 **importidl**, 예를 들어 직접 코딩 된.idl 파일 생성 된.idl 파일을 사용 하려는 경우.  
+ 사용 하려는 **importidl**, 예를 들어, 생성 된.idl 파일을 사용 하 여 직접 코딩 된.idl 파일을 사용 하려는 경우.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cpp_attr_ref_importidl.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  

@@ -27,8 +27,7 @@ ms.locfileid: "33088482"
 |옵션|설명|  
 |------------|-----------------|  
 |[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Windows 런타임 언어 확장을 사용 합니다.<br /><br /> `nostdlib` 매개 변수를 사용하면 컴파일러에서 미리 정의된 표준 검색 경로를 사용하여 어셈블리 및 .winmd 파일을 찾지 못합니다.<br /><br /> **/ZW** 컴파일러 옵션은 다음 컴파일러 옵션을 암시적으로 지정합니다.<br /><br /> -   **/FI** vccorlib.h는 컴파일러에 필요한 다양 한 형식을 정의 하는 vccorlib.h 헤더 파일을 강제로 포함 합니다.<br />-   [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd는 운영 체제에서 제공 하는 Windows 런타임에서 많은 종류를 정의 하는 Windows.winmd 메타 데이터 파일을 강제로 포함 합니다.<br />-   **/FU** Platform.winmd - 네임스페이스의 Platform 패밀리에서 대부분 형식을 정의하고 컴파일러에서 제공되는 Platform.winmd 메타데이터 파일을 강제로 포함합니다.|  
-|[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|
-            *dir* 매개 변수로 지정되는 디렉터리를 컴파일러에서 어셈블리 및 .winmd 파일을 찾는 데 사용하는 검색 경로에 추가합니다.|  
+|[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|*dir* 매개 변수로 지정되는 디렉터리를 컴파일러에서 어셈블리 및 .winmd 파일을 찾는 데 사용하는 검색 경로에 추가합니다.|  
 |**/FU**  *파일*|지정된 모듈 또는 .winmd 파일을 강제로 포함합니다. 즉, 소스 코드에서 `#using`*file* 을 지정할 필요가 없습니다. 컴파일러에서는 고유한 Windows 메타데이터 파일, Platform.winmd를 자동으로 강제 포함합니다.|  
 |/D "WINAPI_FAMILY=2"|Windows 런타임과 호환 되는 Win32 SDK의 하위 집합을 사용할 수 있는 정의 만듭니다.|  
   

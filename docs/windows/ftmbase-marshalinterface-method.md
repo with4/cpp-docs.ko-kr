@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc22b83aee62b03ec5e664d08440b00718325272
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff0c1a5e41dfe46f2d88aeeb3093dbc9ee4d4005
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874618"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570059"
 ---
 # <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface 메서드
-특정 클라이언트 프로세스에서 프록시 개체를 초기화 하는 데 필요한 데이터를 스트림으로 씁니다.  
+일부 클라이언트 프로세스에서 프록시 개체를 초기화 하는 데 필요한 데이터를 스트림으로 씁니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,38 +40,38 @@ STDMETHODIMP MarshalInterface(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `pStm`  
+### <a name="parameters"></a>매개 변수  
+ *pStm*  
  마샬링 중 사용할 스트림에 대 한 포인터입니다.  
   
- `riid`  
- 마샬링해야 하는 인터페이스의 식별자에 대 한 참조입니다. 이 인터페이스는 IUnknown 인터페이스에서 파생 되어야 합니다.  
+ *riid*  
+ 마샬링될 인터페이스의 식별자에 대 한 참조입니다. 이 인터페이스에서 파생 되어야 합니다는 `IUnknown` 인터페이스입니다.  
   
- `pv`  
- 인터페이스 포인터를 마샬링할 수;에 대 한 포인터 호출자는 원하는 인터페이스에 대 한 포인터 없는 경우 NULL이 될 수 있습니다.  
+ *pv*  
+ 마샬링될; 인터페이스 포인터에 대 한 포인터 호출자가 원하는 인터페이스에 대 한 포인터 없는 경우 NULL 일 수 있습니다.  
   
- `dwDestContext`  
- 대상 컨텍스트 마샬링해야 할 지정된 된 인터페이스입니다.  
+ *dwDestContext*  
+ 대상 위치 지정된 된 인터페이스를 컨텍스트 마샬링해야 합니다.  
   
  하나 이상의 MSHCTX 열거형 값을 지정 합니다.  
   
- 역마샬링 현재 프로세스 (MSHCTX_LOCAL)와 같은 컴퓨터에 다른 프로세스 또는 현재 프로세스 (MSHCTX_INPROC)의 다른 아파트에서 발생할 수 있습니다.  
+ 역마샬링 현재 프로세스 (MSHCTX_LOCAL)와 동일한 컴퓨터에서 다른 프로세스 또는 현재 프로세스 (MSHCTX_INPROC)의 다른 아파트에서 발생할 수 있습니다.  
   
- `pvDestContext`  
+ *pvDestContext*  
  나중에 사용하도록 예약되어 있습니다. 0이어야 합니다.  
   
- `mshlflags`  
- 마샬링될 데이터가 클라이언트 프로세스를 다시 전송할 되는지를 지정-일반적인 사례-여러 클라이언트에서 검색할 수 있는, 전역 테이블에 기록 합니다.  
+ *mshlflags*  
+ 클라이언트 프로세스에 다시 전송할 데이터를 마샬링할 수 인지 여부를 지정-일반적인 사례-여러 클라이언트에서 검색할 수 있는 전역 테이블에 기록 합니다.  
   
 ## <a name="return-value"></a>반환 값  
  S_OK  
- 인터페이스 포인터를 성공적으로 마샬링할 되었습니다.  
+ 인터페이스 포인터를 성공적으로 마샬링됩니다.  
   
  E_NOINTERFACE  
- 지정된 된 인터페이스를 지원 되지 않습니다.  
+ 지정된 된 인터페이스는 지원 되지 않습니다.  
   
  STG_E_MEDIUMFULL  
- 스트림이 가득 찼습니다.  
+ 스트림을 꽉 찼습니다.  
   
  E_FAIL  
  작업을 수행하지 못했습니다.  

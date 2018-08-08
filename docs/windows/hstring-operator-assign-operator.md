@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fd1082beb6d84c5dded008e20683f7292cbc1e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9cc496f4f1c23508b2ebba2788910ff9c9ca2066
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873874"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608601"
 ---
 # <a name="hstringoperator-operator"></a>HString::Operator= 연산자
-현재 HString 개체가 다른 HString 개체의 값을 이동합니다.  
+다른 값으로 이동 **HString** 개체를 현재 **HString** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,12 +31,12 @@ ms.locfileid: "33873874"
 HString& operator=(HString&& other) throw()  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `other`  
- 기존 HString 개체입니다.  
+### <a name="parameters"></a>매개 변수  
+ *other*  
+ 기존 **HString** 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 기존 값 `other` 개체는 현재 HString 개체에 복사 차례로 `other` 개체를 제거 합니다.  
+ 기존 값 *다른* 현재 개체를 복사할 **HString** 개체를 차례로 합니다 *다른* 개체는 소멸 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

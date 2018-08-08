@@ -1,5 +1,5 @@
 ---
-title: 가져오기 | Microsoft Docs
+title: 가져올 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b371cd1094a49f8a629cb6f8e880fd1210670f91
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b7498ce36243d2f7a7014b8fa9041a1a7378d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877269"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604709"
 ---
 # <a name="import"></a>import
 주 프로그램 IDL에서 참조 하려는 정의 포함 하는 다른.idl,.odl, 또는 헤더 파일을 지정 합니다.  
@@ -30,25 +30,24 @@ ms.locfileid: "33877269"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ import(  
+[ import(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `idl_file`  
- 현재 프로젝트의 형식 라이브러리로 가져오려는.idl 파일의 이름입니다.  
+### <a name="parameters"></a>매개 변수  
+ *idl_file*  
+ 현재 프로젝트의 형식 라이브러리에 가져와서 원하는.idl 파일의 이름입니다.  
   
 ## <a name="remarks"></a>설명  
- **가져올** c + + 특성을 사용 하면는 `#import` 문 아래에 배치 하는 `import "docobj.idl"` 생성 된.idl 파일의 문입니다. **가져올** 특성와 동일한 기능에는 [가져올](http://msdn.microsoft.com/library/windows/desktop/aa367047) MIDL 특성과 합니다.  
+ **가져오기** c + + 특성을 사용 하면는 `#import` 문 아래에 배치 하는 `import "docobj.idl"` 생성 된.idl 파일의 문. **가져오기** 특성에 동일한 기능을 합니다 [가져오기](http://msdn.microsoft.com/library/windows/desktop/aa367047) MIDL 특성입니다.  
   
- **가져올** 만 특성; 프로젝트에 의해 생성 되는.idl 파일에 지정된 된 파일을 배치는 **가져올** 특성 사용 소스 코드에서 지정한 파일에 구문 호출 프로젝트입니다.  구문에 지정된 된 파일에서 프로젝트의 소스 코드를 호출 하려면 사용 하거나 [#import](../preprocessor/hash-import-directive-cpp.md) 및 `embedded_idl` 특성 또는 있습니다.h 파일을 포함할 수는 `idl_file`.h 파일이 있는 경우, 합니다.  
+ **가져올** 만 특성; 프로젝트에서 생성 되는.idl 파일에 지정된 된 파일을 배치 합니다 **가져오기** 특성 수 없다는 소스 코드에서 지정된 된 파일의 생성 호출 프로젝트입니다.  프로젝트의 소스 코드에서 지정된 된 파일의 구문을 호출을 사용 하거나 [#import](../preprocessor/hash-import-directive-cpp.md) 및 `embedded_idl` 특성 이거나.h 파일을 포함할 수 있습니다 합니다 *idl_file*.h 파일이 있는 경우, 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예를 참조하십시오.  
   
-```  
+```cpp  
 // cpp_attr_ref_import.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  

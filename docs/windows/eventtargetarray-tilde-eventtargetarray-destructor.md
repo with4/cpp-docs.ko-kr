@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98f18c94a3e18a8e01e6ec58eddd8da702e4d97d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e2d817b803bb26c70390aa6f91c62ce5c28867
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871795"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571101"
 ---
 # <a name="eventtargetarrayeventtargetarray-destructor"></a>EventTargetArray::~EventTargetArray 소멸자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,7 +34,7 @@ WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습
 ```  
   
 ## <a name="remarks"></a>설명  
- 현재 초기화를 취소 `EventTargetArray` 클래스입니다.  
+ 현재 초기화 취소 **EventTargetArray** 클래스입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** event.h  

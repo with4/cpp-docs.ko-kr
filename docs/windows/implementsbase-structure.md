@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae5d91f5e7d8f2a057ba05ede5051e14f9787fb0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0b6584277586f8b9bbefca020b66fb00a0ad74a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875775"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603966"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase 구조체
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,9 +34,9 @@ struct ImplementsBase;
 ```  
   
 ## <a name="remarks"></a>설명  
- 템플릿 매개 변수 형식의 유효성을 검사 하는 데 사용 [Implements 구조체](../windows/implements-structure.md)합니다.  
+ 템플릿 매개 변수 형식의 유효성을 검사 하는 데 [Implements 구조체](../windows/implements-structure.md)합니다.  
   
- ImplementsBase 구조체 설계 비어 있습니다.  
+ 합니다 **ImplementsBase** 구조는 디자인으로 비어 있습니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `ImplementsBase`  

@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 961fc2f2050336469f5944f603c0db3c6291a176
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cbcb04229ea0d60c7bc5abfeb1db3f671c92c6b8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33895777"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604982"
 ---
 # <a name="safeintexception-class"></a>SafeIntException 클래스
-`SafeInt` 사용 하 여 `SafeIntException` 수학 작업 완료할 수 없는 이유를 식별 하 합니다.  
+합니다 `SafeInt` 클래스는 **SafeIntException** 수학 작업을 완료할 수 없습니다는 이유를 확인 하려면.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,11 +37,10 @@ class SafeIntException;
   
 ### <a name="public-constructors"></a>Public 생성자  
  [SafeIntException::SafeIntException](../windows/safeintexception-safeintexception.md)  
- 
-          `SafeIntException` 개체를 만듭니다.  
+ 만듭니다는 **SafeIntException** 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- [SafeInt 클래스](../windows/safeint-class.md) 유일한 클래스를 사용 하 여 `SafeIntException` 클래스입니다.  
+ 합니다 [SafeInt 클래스](../windows/safeint-class.md) 사용 하는 유일한 클래스는 **SafeIntException** 클래스입니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [SafeIntException 클래스](../windows/safeintexception-class.md)  
@@ -49,7 +48,7 @@ class SafeIntException;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** safeint.h  
   
- **Namespace:** msl::utilities  
+ **Namespace:** msl:: utilities  
   
 ## <a name="see-also"></a>참고 항목  
  [SafeInt 라이브러리](../windows/safeint-library.md)   

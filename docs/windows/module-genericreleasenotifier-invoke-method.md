@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1cb6ce12105d9e752a85b1252739ef37b5664780
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ce08cdb1cfcba5e63c94904af965f504f30a8e4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875333"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606412"
 ---
 # <a name="modulegenericreleasenotifierinvoke-method"></a>Module::GenericReleaseNotifier::Invoke 메서드
-현재 Module::GenericReleaseNotifier 개체에 연결된 이벤트 처리기를 호출합니다.  
+현재 연결 된 이벤트 처리기를 호출 **module:: genericreleasenotifier** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   

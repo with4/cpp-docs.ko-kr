@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 559d149cfbe2fac7a5d648d56cb4e34d427cedc8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 984731d85bafe3c0e6bb0d8f6092800019b40663
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877698"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608188"
 ---
 # <a name="odl"></a>odl
-개체 설명 언어 ODL () 인터페이스는 인터페이스를 식별합니다. MIDL 컴파일러 필요 하지 않습니다는 **odl** 특성; 이전.odl 파일의 호환에만 인식 됩니다.  
+개체 설명 언어 (ODL) 인터페이스는 인터페이스를 식별합니다. MIDL 컴파일러 않아도 합니다 **odl** ; 특성 이전.odl 파일을 사용 하 여 호환성을 위해서만 인식 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [odl]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **odl** c + + 특성에 동일한 기능을는 [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) MIDL 특성입니다.  
+ 합니다 **odl** c + + 특성에 동일한 기능을 합니다 [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cpp_attr_ref_odl.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -66,7 +64,7 @@ public:
   
 |||  
 |-|-|  
-|**적용 대상**|`interface`|  
+|**적용 대상**|**interface**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

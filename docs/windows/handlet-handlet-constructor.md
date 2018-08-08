@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0caad909803a0f73987f3e1132920b0948d8d1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f8126d4a31863ab556295946ffc170fc49f7d98
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881899"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569513"
 ---
 # <a name="handlethandlet-constructor"></a>HandleT::HandleT 생성자
-HandleT 클래스의 새 인스턴스를 초기화합니다.  
+새 인스턴스를 초기화 합니다 **HandleT** 클래스입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,12 +40,12 @@ HandleT(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `h`  
+### <a name="parameters"></a>매개 변수  
+ *h*  
  핸들입니다.  
   
 ## <a name="remarks"></a>설명  
- 첫 번째 생성자는 개체에 대 한 유효한 핸들 하지 않은 HandleT 개체를 초기화 합니다. 두 번째 생성자는 매개 변수에서 새 HandleT 개체를 만듭니다 `h`합니다.  
+ 첫 번째 생성자는 초기화를 **HandleT** 개체 개체에 대 한 유효한 핸들입니다. 두 번째 생성자를 만듭니다 **HandleT** 매개 변수에서 개체 *h*합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

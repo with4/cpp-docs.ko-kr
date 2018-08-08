@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bc56e13c8d07841ceb1f341228d7a963fda2dd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b469adedebda2beb64c531c82d10f90cc4114742
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872285"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570176"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>EventTargetArray::AddTail 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -35,14 +35,14 @@ void AddTail(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `element`  
+### <a name="parameters"></a>매개 변수  
+ *요소*  
  추가할 이벤트 처리기에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
  이벤트 처리기의 내부 배열의 끝에 지정된 된 이벤트 처리기를 추가합니다.  
   
- AddTail()는 EventSource 클래스에 의해 내부적으로 사용 되어야 하는 데 사용 됩니다.  
+ **AddTail()** 만 내부적으로 사용할 수는 `EventSource` 클래스입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** event.h  

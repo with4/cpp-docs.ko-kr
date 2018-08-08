@@ -17,12 +17,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 300959fe64d280ff3e2c19fd579e8f447a2402eb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 190b93fc9b3cfb299784d0c352c2f7e5bff25db4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889231"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606145"
 ---
 # <a name="safesubtract"></a>SafeSubtract
 오버플로 방지 하는 방식으로 두 개의 숫자를 뺍니다.  
@@ -38,26 +38,26 @@ inline bool SafeSubtract (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- [in] `t`  
- 빼기의 첫 번째 숫자입니다. T 형식이어야 합니다.  
+### <a name="parameters"></a>매개 변수  
+ [in] *t*  
+ 빼기의 첫 번째 숫자입니다. 이 형식 이어야 합니다 `T`합니다.  
   
- [in] `u`  
- 뺄 수 `t`합니다. U 형식이어야 합니다.  
+ [in] *u*  
+ 뺄 숫자입니다 *t*합니다. 이 형식 이어야 합니다 `U`합니다.  
   
- [out] `result`  
- 매개 변수가 있는 `SafeSubtract` 결과 저장 합니다.  
+ [out] *결과*  
+ 매개 변수가 있는 **SafeSubtract** 결과 저장 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true` 오류가 발생 하지 않으면; `false` 오류가 발생 합니다.  
+ **true** 오류가 발생 하지 않으면; **false** 오류가 발생 합니다.  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는의 일부 [SafeInt 라이브러리](../windows/safeint-library.md) 용인지 단일 빼기 작업의 인스턴스를 만들지 않고 및는 [SafeInt 클래스](../windows/safeint-class.md)합니다.  
+ 이 메서드는 부분 [SafeInt 라이브러리](../windows/safeint-library.md) 의 인스턴스를 만들지 않고 단일 빼기 작업을 위해 설계 되었습니다 합니다 [SafeInt 클래스](../windows/safeint-class.md)합니다.  
   
 > [!NOTE]
 >  이 메서드는 단일 수학 연산을 보호해야 하는 경우에만 사용해야 합니다. 작업이 여러 개 있으면 개별 독립 실행형 함수를 호출하는 대신 `SafeInt` 클래스를 사용해야 합니다.  
   
- T와 U 템플릿 형식에 대 한 자세한 내용은 참조 [SafeInt 함수](../windows/safeint-functions.md)합니다.  
+ 템플릿 형식에 대 한 자세한 `T` 하 고 `U`를 참조 하세요 [SafeInt 함수](../windows/safeint-functions.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** safeint.h  

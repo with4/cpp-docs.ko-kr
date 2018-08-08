@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce7cf5c8e92e7fd6e6e10d7bef0519b1ced4cf62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c7ce3c5b76dfa8602a46e947d1e8925ec2bf14c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880717"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569445"
 ---
 # <a name="dbparam"></a>db_param
-지정 된 멤버 변수는 입력 또는 출력 매개 변수 연결 하 고 변수를 구분 합니다.  
+입력 또는 출력 매개 변수를 사용 하 여 지정 된 멤버 변수를 연결 하 고 변수를 구분 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ db_param(   
+[ db_param(   
    ordinal,   
    paramtype="DBPARAMIO_INPUT",   
    dbtype,   
@@ -43,48 +42,48 @@ ms.locfileid: "33880717"
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `ordinal`  
- 열 번호 (**DBCOLUMNINFO** 서 수)를 바인딩할 데이터를 행 집합의 필드에 해당 합니다.  
+ *서 수*  
+ 데이터를 바인딩할 행 집합의 필드에 해당 열 번호 (DBCOLUMNINFO 서 수).  
   
  *가 paramtype과* (선택 사항)  
- 형식 매개 변수에 설정입니다. 공급자의 데이터 원본에서 지원 되는 매개 변수 I/O 형식만 지원 합니다. 형식은 하나 이상의 조합이 **DBPARAMIOENUM** 값:  
+ 형식 매개 변수에 설정입니다. 공급자의 데이터 원본에서 지원 되는 매개 변수 I/O 형식만 지원 합니다. 형식은 하나 이상의 DBPARAMIOENUM 값을 조합 합니다.  
   
--   **DBPARAMIO_INPUT** 입력 매개 변수입니다.  
+-   DBPARAMIO_INPUT 입력된 매개 변수입니다.  
   
--   **DBPARAMIO_OUTPUT** 출력 매개 변수입니다.  
+-   DBPARAMIO_OUTPUT 출력 매개 변수입니다.  
   
--   **DBPARAMIO_NOTPARAM** 이 접근자에는 매개 변수가 없습니다. 설정 **eParamIO** 행에서이 값을 접근자 알려 주고 매개 변수가 무시 됩니다.  
+-   DBPARAMIO_NOTPARAM 접근자 매개 변수가 없습니다. 설정 `eParamIO` 행에서이 값을 접근자 받으라는 매개 변수가 무시 됩니다.  
   
  *dbtype* (선택 사항)  
- OLE DB [유형 표시기](https://msdn.microsoft.com/en-us/library/ms711251.aspx) 열 항목에 대 한 합니다.  
+ OLE DB [유형 표시기](https://msdn.microsoft.com/library/ms711251.aspx) 열 항목에 대 한 합니다.  
   
  *전체 자릿수* (선택 사항)  
- 열 항목에 사용할 전체 자릿수입니다. 자세한 내용은 설명을 참조 **bPrecision** 의 요소는 [DBBINDING 구조](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ 열 항목에 사용할 전체 자릿수입니다. 세부 정보에 대 한 설명을 참조 하세요 `bPrecision` 의 요소는 [DBBINDING 구조](https://msdn.microsoft.com/library/ms716845.aspx)  
   
- *배율* (선택 사항)  
- 열 항목에 사용할 소수 자릿수입니다. 자세한 내용은 설명을 참조 **bScale** 의 요소는 [DBBINDING 구조](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ *확장* (선택 사항)  
+ 열 항목에 사용할 소수 자릿수입니다. 세부 정보에 대 한 설명을 참조 하세요 `bScale` 의 요소는 [DBBINDING 구조](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *상태* (선택 사항)  
- 이 열의 상태를 유지 하기 위해 사용 하는 멤버 변수입니다. 상태 인지를 나타냅니다 열 값 데이터 값 이나 다른 값으로 같은 **NULL**합니다. 가능한 값에 대 한 참조 [상태](https://msdn.microsoft.com/en-us/library/ms722617.aspx) 에 *OLE DB Programmer's Reference*합니다.  
+ 이 칼럼의 상태를 저장 하는 데 사용 되는 멤버 변수입니다. 상태는 데이터 값 또는 NULL 등의 다른 값 열 값이 있는지 여부를 나타냅니다. 가능한 값을 참조 하세요 [상태](https://msdn.microsoft.com/library/ms722617.aspx) 에 *OLE DB Programmer's Reference*합니다.  
   
  *길이* (선택 사항)  
- 열 크기 (바이트)를 저장 하는 데 사용 되는 멤버 변수입니다.  
+ 멤버 변수 (바이트)에서 열의 크기를 보유 하는 데 사용 합니다.  
   
 ## <a name="remarks"></a>설명  
- **db_param** 매개 변수를 정의 명령에서 사용 하 여; 함께 사용할 따라서 **db_command**합니다. 사용할 수는 예를 들어 **db_param** SQL 쿼리 또는 저장된 프로시저의 매개 변수 바인딩합니다. 물음표 (?)로 표시 됩니다. 저장된 프로시저의 매개 변수 및 매개 변수가 나타나는 순서에는 데이터 멤버를 바인딩해야 합니다.  
+ **db_param** 매개 변수를 정의 명령에서 사용할; 함께 사용할 따라서 `db_command`합니다. 예를 들어 사용할 수 있습니다 **db_param** SQL 쿼리 또는 저장된 프로시저의 매개 변수를 바인딩합니다. 물음표 (?)로 표시 되어 저장된 프로시저에서 매개 변수 및 매개 변수가 나타나는 순서 대로 데이터 멤버를 바인딩해야 합니다.  
   
- **db_param** OLE DB에 참여할 수 있는 멤버 데이터 구분 `ICommandWithParameters`-바인딩을 기반으로 합니다. 매개 변수 유형 (입력 또는 출력), OLE DB 형식, 정밀도, 배율, 상태 및 지정된 된 매개 변수의 길이 설정 합니다. 이 특성에는 OLE DB 소비자 매크로 BEGIN_PARAM_MAP 삽입... END_PARAM_MAP 합니다. 로 표시 하는 각 멤버는 **db_param** 특성은 COLUMN_ENTRY의 형태로 맵에서 하나의 항목을 차지 합니다.  
+ **db_param** OLE DB에 참여할 수 있는 멤버 데이터를 구분 `ICommandWithParameters`-바인딩을 기반으로 합니다. 매개 변수 형식 (입력 또는 출력), OLE DB 형식, 정밀도, 배율, 상태 및 지정된 된 매개 변수의 길이 설정 합니다. 이 특성에는 OLE DB 소비자 매크로 BEGIN_PARAM_MAP 삽입... END_PARAM_MAP 합니다. 각 멤버를 사용 하 여 표시 합니다 **db_param** 특성을 COLUMN_ENTRY 형식의 구조에 하나의 항목을 차지 합니다.  
   
- **db_param** 하나와 함께 사용 되는 [db_table](../windows/db-table.md) 또는 [db_command](../windows/db-command.md) 특성입니다.  
+ **db_param** 함께에서 사용 되는 [db_table](../windows/db-table.md) 또는 [db_command](../windows/db-command.md) 특성입니다.  
   
- 컴파일러는 클래스를 이름을 소비자 특성 공급자 클래스에이 특성을 적용 하는 경우 \_ *YourClassName*접근자 여기서 *YourClassName* 제공한 이름인는 클래스 및 컴파일러 라는 클래스를 만들 수도 됩니다 *YourClassName*에서 파생 되는 \_ *YourClassName*접근자입니다.  클래스 뷰에 두 클래스 모두 표시됩니다.  
+ 컴파일러는 클래스 이름을 소비자 특성 공급자가이 특성 클래스에 적용 될 때 \_ *YourClassName*접근자를 여기서 *YourClassName* 제공한 이름인는 클래스 및 컴파일러 라는 클래스를 만들 수도 됩니다 *YourClassName*에서 파생 되는 \_ *YourClassName*접근자입니다.  클래스 뷰에 두 클래스 모두 표시됩니다.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 Northwind 데이터베이스에 있는 SalesbyYear 저장 프로시저에 따라 명령 클래스를 만듭니다. 연결 된 저장된 프로시저에서 첫 번째 매개 변수는 `m_RETURN_VALUE` 변수인 하 고 출력 매개 변수로 정의 합니다. 마지막 두 (입력된) 매개 변수를 연결 `m_Beginning_Date` 및 `m_Ending_Date`합니다.  
+## <a name="example"></a>예  
+ 다음 예제에서는 Northwind 데이터베이스의 SalesbyYear 저장 프로시저를 기준으로 하는 명령 클래스를 만듭니다. 사용 하 여 저장된 프로시저의 첫 번째 매개 변수를 연결 하는 `m_RETURN_VALUE` 변수를 output 매개 변수로 정의 합니다. 마지막 두 (입력된) 매개 변수를 연결 `m_Beginning_Date` 고 `m_Ending_Date`입니다.  
   
- 다음 예제에서는 연결 된 `nOutput` 출력 매개 변수가 있는 변수입니다.  
+ 다음 예제에서는 연결 된 `nOutput` 출력 매개 변수를 사용 하 여 변수입니다.  
   
-```  
+```cpp  
 // db_param.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -124,7 +123,7 @@ struct CSalesbyYear {
   
 |||  
 |-|-|  
-|**적용 대상**|**클래스**, `struct`, 멤버, 메서드, 로컬|  
+|**적용 대상**|**클래스**하십시오 **구조체**, 멤버, 메서드, 로컬|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7d915d53b246c98372ce8647e35fb996e9a7c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66e195480814fe7ebf228b180ac5999d1ab92bab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875749"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603804"
 ---
 # <a name="licensed"></a>licensed
-적용 되는 COM 개체 사용이 허가 되 고 사용 하 여 인스턴스화되어야 나타냅니다 **IClassFactory2**합니다.  
+적용 되는 COM 개체 사용이 허가 되을 사용 하 여 인스턴스화해야 나타냅니다 `IClassFactory2`합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [licensed]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **사용이 허가 된** c + + 특성에 동일한 기능을는 [사용이 허가 된](http://msdn.microsoft.com/library/windows/desktop/aa367070) MIDL 특성입니다.  
+ **사용이 허가** c + + 특성에 동일한 기능을 합니다 [사용이 허가 된](http://msdn.microsoft.com/library/windows/desktop/aa367070) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cpp_attr_ref_licensed.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -65,9 +63,9 @@ public:
   
 |||  
 |-|-|  
-|**적용 대상**|**class**, `struct`|  
+|**적용 대상**|**클래스**, **구조체**|  
 |**반복 가능**|아니요|  
-|**필수 특성**|**coclass**|  
+|**필수 특성**|`coclass`|  
 |**잘못된 특성**|없음|  
   
  자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 922f7f74771125aed0122c408ef902da2569e5c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a02e20f2b87afc312c24683417f808d636c2757f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873773"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608958"
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass 매크로
 런타임 클래스 이름 및 신뢰 수준을 설정합니다.  
@@ -33,15 +33,15 @@ InspectableClass(
    trustLevel)  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `runtimeClassName`  
+### <a name="parameters"></a>매개 변수  
+ *runtimeClassName*  
  런타임 클래스의 전체 텍스트 이름입니다.  
   
- `trustLevel`  
- 중 하나는 [TrustLevel](http://msdn.microsoft.com/library/br224625.aspx) 열거 값입니다.  
+ *trustLevel*  
+ 중 하나는 [TrustLevel](http://msdn.microsoft.com/library/br224625.aspx) 열거형 값입니다.  
   
 ## <a name="remarks"></a>설명  
- `InspectableClass` 매크로 Windows 런타임 형식에만 사용할 수 있습니다.  
+ 합니다 **InspectableClass** 매크로 Windows 런타임 형식에만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e49703e96728e7287206aa264ce12deaad611495
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb0d5e6ca19749a4647ec85311e1fce0e7561b59
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888221"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608536"
 ---
 # <a name="runtimeclassgetweakreference-method"></a>RuntimeClass::GetWeakReference 메서드
-현재 RuntimeClass 개체에 대 한 약한 참조 개체에 대 한 포인터를 가져옵니다.  
+현재에 대 한 약한 참조 개체에 대 한 포인터를 가져옵니다 **RuntimeClass** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,9 +35,9 @@ STDMETHOD(
 )(_Deref_out_ IWeakReference **weakReference);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `weakReference`  
- 이 작업이 완료 될 때, 약한 참조 개체에 대 한 포인터입니다.  
+### <a name="parameters"></a>매개 변수  
+ *weakReference*  
+ 이 작업이 완료 될 때 약한 참조 개체에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
  항상 S_OK입니다.  

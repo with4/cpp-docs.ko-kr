@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb701b91fc1e076dcf4e6540bf8bcaf6141ec6c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f2e9587d3fa9bc9d8472c348e92555b5bbb4bb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872967"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570859"
 ---
 # <a name="default-c"></a>default(C++)
 coclass 내에 정의된 custom 또는 dispinterface가 기본 프로그래밍 인터페이스를 나타낸다는 것을 의미합니다.  
@@ -32,8 +32,7 @@ coclass 내에 정의된 custom 또는 dispinterface가 기본 프로그래밍 �
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ default(  
+[ default(  
    interface1,  
    interface2  
 ) ]  
@@ -53,10 +52,10 @@ coclass 내에 정의된 custom 또는 dispinterface가 기본 프로그래밍 �
 ## <a name="remarks"></a>설명  
  **default** C++ 특성에는 [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) MIDL 특성과 동일한 기능이 있습니다. **default** 특성을 [case](../windows/case-cpp.md) 특성과 함께 사용할 수도 있습니다.  
   
-## <a name="example"></a>예제  
- 다음 코드에서는 coclass 정의에서 **default** 를 사용하여 **ICustomDispatch** 를 기본 프로그래밍 인터페이스로 지정하는 방법을 보여 줍니다.  
+## <a name="example"></a>예  
+ 다음 코드에서는 어떻게 **기본** coclass 정의에서 지정 하는 데 사용 됩니다 `ICustomDispatch` 기본 프로그래밍 인터페이스로:  
   
-```  
+```cpp  
 // cpp_attr_ref_default.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -113,9 +112,9 @@ int main() {
   
 |||  
 |-|-|  
-|**적용 대상**|**클래스**, `struct`, 데이터 멤버|  
+|**적용 대상**|**클래스**하십시오 **구조체**, 데이터 멤버|  
 |**반복 가능**|아니요|  
-|**필수 특성**|**coclass** ( **클래스** 또는 `struct`에 적용된 경우)|  
+|**필수 특성**|**coclass** (적용할 때 **클래스** 하거나 **구조체**)|  
 |**잘못된 특성**|없음|  
   
  자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  

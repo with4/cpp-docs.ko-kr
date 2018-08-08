@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d80f475cf8a50dcb084ca6e953842e91c55e4502
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b272c733dab71e615a46cb4af25609c560bdbfef
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888411"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602681"
 ---
 # <a name="runtimeclassbase-structure"></a>RuntimeClassBase 구조체
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -32,9 +32,9 @@ struct RuntimeClassBase;
 ```  
   
 ## <a name="remarks"></a>설명  
- RuntimeClass에서 검색 하는 데는 [확인](../windows/make-function.md) 함수입니다.  
+ 검색 하는 데 `RuntimeClass` 에 [확인](../windows/make-function.md) 함수입니다.  
   
- RuntimeClassBase 빈 구조입니다.  
+ **RuntimeClassBase** 빈 구조입니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `RuntimeClassBase`  

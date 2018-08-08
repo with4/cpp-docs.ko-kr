@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9fab2ecd259e75767728a46448c06df4c4729ef3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705594"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606724"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper 클래스
 Windows 런타임을 초기화합니다.  
@@ -32,7 +32,7 @@ class RoInitializeWrapper
 ```  
   
 ## <a name="remarks"></a>설명  
- RoInitializeWrapper는 하는 Windows 런타임에서 초기화 작업이 성공 했는지 여부를 나타내는 HRESULT를 반환 합니다. 클래스 소멸자를 호출 하기 때문에 `::Windows::Foundation::Uninitialize`, 인스턴스의 `RoInitializeWrapper` 최상위 또는 전역 범위에서 선언 해야 합니다.  
+ **RoInitializeWrapper** 는 Windows 런타임을 초기화 작업이 성공 했는지 여부를 나타내는 HRESULT를 반환 하는 편리 합니다. 클래스 소멸자를 호출 하므로 `::Windows::Foundation::Uninitialize`, 인스턴스의 **RoInitializeWrapper** 전역 또는 최상위 범위에서 선언 되어야 합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -40,14 +40,14 @@ class RoInitializeWrapper
   
 |이름|설명|  
 |----------|-----------------|  
-|[RoInitializeWrapper::RoInitializeWrapper 생성자](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|RoInitializeWrapper 클래스의 새 인스턴스를 초기화합니다.|  
-|[RoInitializeWrapper::~RoInitializeWrapper 소멸자](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|RoInitializeWrapper 클래스의 현재 인스턴스를 제거합니다.|  
+|[RoInitializeWrapper::RoInitializeWrapper 생성자](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|새 인스턴스를 초기화 합니다 **RoInitializeWrapper** 클래스입니다.|  
+|[RoInitializeWrapper::~RoInitializeWrapper 소멸자](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|현재 인스턴스를 제거 합니다 **RoInitializeWrapper** 클래스입니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[RoInitializeWrapper::HRESULT() 연산자](../windows/roinitializewrapper-hresult-parens-operator.md)|RoInitializeWrapper 생성자에서 만드는 HRESULT를 가져옵니다.|  
+|[RoInitializeWrapper::HRESULT() 연산자](../windows/roinitializewrapper-hresult-parens-operator.md)|생성 된 HRESULT를 검색 합니다 **RoInitializeWrapper** 생성자입니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `RoInitializeWrapper`  

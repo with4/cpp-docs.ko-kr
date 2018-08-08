@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c0bf7ecd989b51a17c853c6d2986db204c3ce34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d6f17f44e520018f82dc82abe88427a2410d68e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888723"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606353"
 ---
 # <a name="retval"></a>retval
 멤버의 반환 값을 받는 매개 변수를 지정 합니다.  
@@ -30,18 +30,16 @@ ms.locfileid: "33888723"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [retval]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **retval** c + + 특성에 동일한 기능을는 [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) MIDL 특성입니다.  
+ 합니다 **retval** c + + 특성에 동일한 기능을 합니다 [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) MIDL 특성입니다.  
   
- **retval** 마지막 인수는 함수 선언에서에 표시 되어야 합니다.  
+ **retval** 함수 선언에서 마지막 인수에 표시 되어야 합니다.  
   
-## <a name="example"></a>예제  
- 예를 참조 [바인딩 가능한](../windows/bindable.md) 의 샘플 사용에 대 한 **retval**합니다.  
+## <a name="example"></a>예  
+ 예를 참조 하세요 [bindable](../windows/bindable.md) 의 샘플 사용에 대 한 **retval**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

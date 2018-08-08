@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac5f0e81a7d29d89e32735224afed67f3d9c9101
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8c7ab6dcfa4a085facf835343404de3ed4998a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877932"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603444"
 ---
 # <a name="range-c"></a>range(C++)
-형식 정의 나 런타임에 해당 값이 설정 되는 필드에 대 한 허용 가능한 값의 범위를 지정 합니다.  
+인수 값은 런타임에 설정 된 필드에 허용 되는 값의 범위를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ range(  
+[ range(  
    low,   
    high  
 ) ]  
@@ -45,11 +44,11 @@ ms.locfileid: "33877932"
  범위 상한 값입니다.  
   
 ## <a name="remarks"></a>설명  
- **범위** c + + 특성에 동일한 기능을는 [범위](http://msdn.microsoft.com/library/windows/desktop/aa367151) MIDL 특성입니다.  
+ 합니다 **범위** c + + 특성에 동일한 기능을 합니다 [범위](http://msdn.microsoft.com/library/windows/desktop/aa367151) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cpp_attr_ref_range.cpp  
 // compile with: /LD  
 #include <unknwn.h>  

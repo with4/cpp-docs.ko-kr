@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c674765a0dfc06648d64a2b3b4e820bb467e700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b36a45dad71f2144c3e3d0990ab7715d00e8ff21
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882449"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605710"
 ---
 # <a name="id"></a>ID
-지정 된 `dispid` 멤버 함수 (속성 또는 메서드를 인터페이스 또는 dispinterface)에 대 한 매개 변수입니다.  
+지정 된 *dispid* (속성 또는 메서드를 인터페이스나 dispinterface의) 멤버 함수에 대 한 매개 변수입니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ id(  
+[ id(  
    dispid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `dispid`  
+### <a name="parameters"></a>매개 변수  
+ *dispid*  
  인터페이스 메서드에 대 한 디스패치 ID입니다.  
   
 ## <a name="remarks"></a>설명  
- **id** c + + 특성에 동일한 기능을는 [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) MIDL 특성입니다.  
+ 합니다 **id** c + + 특성에 동일한 기능을 합니다 [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 예를 참조 [바인딩 가능한](../windows/bindable.md) 사용 하는 방법의 예 **id**합니다.  
+## <a name="example"></a>예  
+ 예를 참조 하세요 [바인딩 가능한](../windows/bindable.md) 사용 하는 방법의 예제 **id**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eaaf0b410861f28cd5b339f75a73c594b1bcba45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5d8e5cbbcbbdf3cefe5211eb4f2274ce3b2b79db
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875808"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608802"
 ---
 # <a name="isbaseofstrictvalue-constant"></a>IsBaseOfStrict::value 상수
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,9 +34,9 @@ static const bool value = __is_base_of(Base, Derived);
 ```  
   
 ## <a name="remarks"></a>설명  
- 한 형식이 다른 형식의 기본 인지를 나타냅니다.  
+ 한 형식이 다른 형식의 기본 인지 여부를 나타냅니다.  
   
- `value` `true` 경우 형식 `Base` 형식의 기본 클래스 `Derived`, 그렇지 않으면 `false`합니다.  
+ `value` 됩니다 **true** 경우 형식 `Base` 형식의 기본 클래스인 `Derived`, 그렇지 않으면 **false**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** internal.h  

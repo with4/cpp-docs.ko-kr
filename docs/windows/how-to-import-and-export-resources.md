@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e526ab335436730f4132b5b7127ec9079432a4a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49cdee9cfed3b5694fcea899b9250c5f9dd214b7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879180"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570482"
 ---
 # <a name="how-to-import-and-export-resources"></a>방법: 리소스 가져오기 및 내보내기
 Visual C++에서 사용하도록 그래픽 리소스(비트맵, 아이콘, 커서 및 도구 모음), HTML 파일 및 사용자 지정 리소스를 가져올 수 있습니다. Visual C++ 프로젝트에서 동일한 형식의 파일을 개발 환경 외부에서 사용할 수 있는 별도의 파일로 내보낼 수 있습니다.  
@@ -42,13 +42,13 @@ Visual C++에서 사용하도록 그래픽 리소스(비트맵, 아이콘, 커�
   
 ### <a name="to-import-an-individual-resource-into-your-current-resource-file"></a>현재 리소스 파일로 개별 리소스를 가져오려면  
   
-1.  [리소스 뷰](../windows/resource-view-window.md), 리소스 스크립트에 대 한 노드를 마우스 오른쪽 단추로 클릭 (*.rc) 리소스를 추가할 파일입니다.  
+1.  [리소스 뷰](../windows/resource-view-window.md), 리소스 스크립트에 대 한 노드를 마우스 오른쪽 단추로 클릭 (*.rc) 리소스를 추가 하려면 원하는 파일입니다.  
   
 2.  클릭 **가져오기** 바로 가기 메뉴.  
   
 3.  비트맵(.bmp), 아이콘(.ico), 커서(.cur), Html 파일(.htm) 또는 기타 가져오려는 파일의 파일 이름을 찾아 선택합니다.  
   
-4.  클릭 **확인** 에서 선택한 파일에 리소스를 추가할 **리소스** 보기.  
+4.  클릭 **확인** 에서 선택한 파일에 리소스를 추가 하려면 **리소스** 보기.  
   
     > [!NOTE]
     >  가져오기 프로세스는 선택한 특정 리소스 종류에 관계없이 동일한 방식으로 작동합니다. 가져온 리소스는 해당 리소스 종류에 적합한 노드에 자동으로 추가됩니다.  
@@ -59,13 +59,11 @@ Visual C++에서 사용하도록 그래픽 리소스(비트맵, 아이콘, 커�
   
 2.  클릭 **내보내기** 바로 가기 메뉴.  
   
-3.  에 **리소스 내보내기** 대화 상자, 현재 파일 이름을 적용 하거나 새 이름을 입력 합니다.  
+3.  에 **리소스 내보내기** 대화 상자에서 현재 파일 이름을 그대로 사용 하거나 새 이름을 입력 합니다.  
   
-4.  폴더로 이동 하 여 파일을 저장 하 고 클릭 하려는 **내보내기**합니다.  
+4.  파일을 저장 하 고 클릭 하려는 폴더로 이동한 후 **내보내기**합니다.  
   
-
-  
- 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
  Win32  
   

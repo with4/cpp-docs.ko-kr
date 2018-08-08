@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29683e68f1f5aadcd477cdc717b03a648c5cccc7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c6eaeb044cf3e169bf5927a2fec948cc8d4294c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892002"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606278"
 ---
 # <a name="roinitializewrapperroinitializewrapper-destructor"></a>RoInitializeWrapper::~RoInitializeWrapper 소멸자
 Windows 런타임 초기화를 취소 합니다.  
@@ -32,7 +32,7 @@ Windows 런타임 초기화를 취소 합니다.
 ```  
   
 ## <a name="remarks"></a>설명  
- RoInitializeWrapper 클래스는 Windows::Foundation::Uninitialize()를 호출합니다.  
+ 합니다 **RoInitializeWrapper** 클래스를 호출 `Windows::Foundation::Uninitialize()`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1fec2f00c40b833cc9a65db1db58920543aa90d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 82a9bc4000919d2bbe2b8598351d3fe6a4730ba9
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873380"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569032"
 ---
 # <a name="enableif-structure"></a>EnableIf 구조체
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -43,14 +43,14 @@ struct EnableIf<true, T>;
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `T`  
+ *T*  
  형식입니다.  
   
- `b`  
+ *b*  
  부울 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 첫 번째 템플릿 매개 변수를 평가 하는 경우 두 번째 템플릿 매개 변수로 지정 된 형식의 데이터 멤버 정의 `true`합니다.  
+ 첫 번째 템플릿 매개 변수를 평가 하는 경우 두 번째 템플릿 매개 변수로 지정 된 형식의 데이터 멤버를 정의 **true**합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -58,7 +58,7 @@ struct EnableIf<true, T>;
   
 |이름|설명|  
 |----------|-----------------|  
-|`type`|하는 경우 템플릿 매개 변수 `b` 계산 `true`, 데이터 멤버를 정의 하는 부분 특수화 `type` 형식이 되도록 `T`합니다.|  
+|`type`|경우 템플릿 매개 변수 *b* 로 평가 **true**, 데이터 멤버를 정의 하는 부분 특수화 `type` 형식으로 `T`입니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `EnableIf`  

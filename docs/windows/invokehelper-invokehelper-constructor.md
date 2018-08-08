@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7678f9e3092bdc6e9d5839085044708b0d400533
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6618d5fc219e5f4e6533eb4d31cf7cd14fc4b1d5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874852"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602551"
 ---
 # <a name="invokehelperinvokehelper-constructor"></a>InvokeHelper::InvokeHelper 생성자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -35,12 +35,12 @@ explicit InvokeHelper(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `callback`  
+### <a name="parameters"></a>매개 변수  
+ *콜백*  
  이벤트 처리기입니다.  
   
 ## <a name="remarks"></a>설명  
- InvokeHelper 클래스의 새 인스턴스를 초기화합니다.  
+ 새 인스턴스를 초기화 합니다 **InvokeHelper** 클래스입니다.  
   
  `TCallback` 템플릿 매개 변수는 이벤트 처리기의 유형을 지정 합니다.  
   

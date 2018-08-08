@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9313ade1f5731319732a2ee3efc0af191af14f05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da38eddae5ab9c49da98a4c5e9f383d59d110ee1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879925"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608324"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>ImplementsHelper::FillArrayWithIid 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -36,14 +36,14 @@ void FillArrayWithIid(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `index`  
- 이 작업에 대 한 시작 배열 요소를 나타내는 0부터 시작 인덱스입니다. 이 작업이 완료 되 면 `index` 1 씩 증가 합니다.  
+ *index*  
+ 이 작업에 대 한 시작 배열 요소를 나타내는 0부터 시작 인덱스입니다. 이 작업이 완료 되 면 *인덱스* 1 씩 증가 합니다.  
   
- `iids`  
+ *iid*  
  Iid 형식의 배열입니다.  
   
 ## <a name="remarks"></a>설명  
- 지정 된 배열 요소에 현재 0 번째 템플릿 매개 변수로 지정 된 인터페이스 ID를 삽입 합니다.  
+ 현재 0 번째 템플릿 매개 변수로 지정 된 배열 요소에 지정 된 인터페이스 ID를 삽입 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc2b6b88f9cfc095dfa6b2648dd81820b3454a1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf329199541ad0075044633d49d6ab654146b5e7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873744"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570966"
 ---
 # <a name="eventtraits-structure"></a>EventTraits 구조체
-이벤트 클래스 핸들의 특성을 정의합니다.  
+특성의 정의 `Event` 클래스 핸들입니다.  
   
 ## <a name="syntax"></a>구문  
   

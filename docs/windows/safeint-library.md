@@ -18,23 +18,23 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25090eefe4f07181490f650ea4d14add9fc6ac75
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16ec0ad37202acbae8b33f270cef15547edd77b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892054"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604189"
 ---
 # <a name="safeint-library"></a>SafeInt 라이브러리
-SafeInt 라이브러리는 응용 프로그램이 수학 연산을 수행할 때 발생할 수 있는 정수 오버플로를 방지합니다.  
+합니다 **SafeInt** 라이브러리에 응용 프로그램 수학 연산을 수행할 때 발생할 수 있는 정수 오버플로 방지 하는 데 도움이 됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
 |단원|설명|  
 |-------------|-----------------|  
 |[SafeInt 클래스](../windows/safeint-class.md)|이 클래스는 정수 오버플로를 방지할 수 있습니다.|  
-|[SafeInt 함수](../windows/safeint-functions.md)|`SafeInt` 개체를 만들지 않고 사용할 수 있는 함수 입니다.|  
-|[SafeIntException 클래스](../windows/safeintexception-class.md)|`SafeInt`클래스와 관련 있는 예외 클래스입니다.|  
+|[SafeInt 함수](../windows/safeint-functions.md)|만들지 않고도 사용할 수 있는 함수를 **SafeInt** 개체입니다.|  
+|[SafeIntException 클래스](../windows/safeintexception-class.md)|관련 된 예외 클래스는 **SafeInt** 클래스입니다.|  
   
 ## <a name="related-sections"></a>관련 단원  
   

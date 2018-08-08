@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d798d828dd252ce8b5f3f49d5a9aaf525acc986
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 071aed04c73702bdb63f19154353794bae34f8fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881733"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603608"
 ---
 # <a name="public-c-attributes"></a>public(C++ 특성)
-.Idl 파일 내에서 참조 하지 않는 경우에 형식 라이브러리로 typedef 상태로 진행 될를 확인 합니다.  
+.Idl 파일 내에서 참조 하지 않는 경우에 typedef 형식 라이브러리로 이동 됩니다 확인 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [public]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **공용** c + + 특성에 동일한 기능을는 [공용](http://msdn.microsoft.com/library/windows/desktop/aa367150) MIDL 특성입니다.  
+ **공개** c + + 특성에 동일한 기능을 합니다 [공용](http://msdn.microsoft.com/library/windows/desktop/aa367150) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 사용 하 여 **공용** 특성:  
   
-```  
+```cpp  
 // cpp_attr_ref_public.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -61,7 +59,7 @@ __interface IFireTabCtrl : IDispatch
   
 |||  
 |-|-|  
-|**적용 대상**|`typedef`|  
+|**적용 대상**|**typedef**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e16a2ab8a1ee0c9255f394d033bda2a7afc2b7e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 428004d3390b95c700c53fd157b62a1b3fbe3d0b
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878699"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571177"
 ---
 # <a name="generic-interfaces-visual-c"></a>제네릭 인터페이스(Visual C++)
-클래스에 매개 변수를 형식에 적용 되는 제한 사항을 인터페이스에 형식 매개 변수를 적용 하는 것과 동일 (참조 [제네릭 클래스 (C + + /cli CLI)](../windows/generic-classes-cpp-cli.md)).  
+클래스에서 형식 매개 변수에 적용 되는 제한을 인터페이스에서 형식 매개 변수에 적용 하는 것과 동일 (참조 [제네릭 클래스 (C + + /cli CLI)](../windows/generic-classes-cpp-cli.md)).  
   
- 함수 오버 로드를 제어 하는 규칙이 제네릭 인터페이스 또는 제네릭 클래스 내의 기능에 대해 동일 합니다.  
+ 함수 오버 로드를 제어 하는 규칙이 제네릭 인터페이스 또는 제네릭 클래스 내에서 함수에 대 한 동일 합니다.  
   
- 명시적 인터페이스 멤버 구현에서는 생성 된 인터페이스 형식에서 (다음 예제 참조)는 간단한 인터페이스 형식과 동일한 방식으로 작동 합니다.  
+ 명시적 인터페이스 멤버 구현 (다음 예제 참조) 하는 간단한 인터페이스 형식과 동일한 방식으로 생성 된 인터페이스 형식을 사용 합니다.  
   
- 인터페이스에 대 한 자세한 내용은 참조 하십시오. [인터페이스 클래스](../windows/interface-class-cpp-component-extensions.md)합니다.  
+ 인터페이스에 대 한 자세한 내용은 참조 하세요. [인터페이스 클래스](../windows/interface-class-cpp-component-extensions.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,11 +46,11 @@ ms.locfileid: "33878699"
  *클래스 키*  
  **클래스** 또는 **typename**  
   
- `type-parameter-identifier(s)`  
+ *type-parameter-identifier(s)*  
  쉼표로 구분 된 식별자 목록입니다.  
   
- `type-parameter-constraints-clauses`  
- 에 지정 된 형식을 취합니다 [제네릭 형식 매개 변수에 대 한 제약 조건 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ *형식 매개 변수-제약 조건 절*  
+ 에 지정 된 형식은 [제네릭 형식 매개 변수에 대 한 제약 조건 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
  *액세스 가능성 한정자* (선택 사항)  
  액세스 가능성 한정자 (예: **공개 / 개인**).  
@@ -58,19 +58,19 @@ ms.locfileid: "33878699"
  *identifier*  
  인터페이스 이름입니다.  
   
- *자료 목록* (선택 사항)  
+ *기본-목록* (선택 사항)  
  하나 이상의 명시적 기본 인터페이스 쉼표로 구분 하 여 포함 된 목록입니다.  
   
  *인터페이스 본문*  
  인터페이스 멤버를 선언 합니다.  
   
  *선언 자* (선택 사항)  
- 이 형식에 기반 하 여 변수를 선언 합니다.  
+ 이 형식에 따라 변수를 선언 합니다.  
   
-## <a name="example"></a>예제  
- 다음 예제에는 선언 하 고 제네릭 인터페이스를 인스턴스화하는 방법을 보여 줍니다. 예제에서는 제네릭 인터페이스 `IList<ItemType>` 선언 됩니다. 다음 두 개의 제네릭 클래스에 의해 구현 되며 `List1<ItemType>` 및 `List2<ItemType>`, 다른 구현으로 합니다.  
+## <a name="example"></a>예  
+ 다음 예제에서는 선언 하 고 제네릭 인터페이스를 인스턴스화하는 방법을 보여 줍니다. 예제에서는 제네릭 인터페이스 `IList<ItemType>` 선언 됩니다. 다음 두 개의 제네릭 클래스에 의해 구현 됩니다 `List1<ItemType>` 및 `List2<ItemType>`, 다른 구현 합니다.  
   
-```  
+```cpp  
 // generic_interface.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -243,10 +243,10 @@ Array List
 List2  
 ```  
   
-## <a name="example"></a>예제  
- 이 예제에서는 제네릭 인터페이스를 선언 `IMyGenIface`, 및 두 개의 제네릭이 아닌 인터페이스 `IMySpecializedInt` 및 `ImySpecializedString`을 특수화 하는 `IMyGenIface`합니다. 두 개의 특수 인터페이스는 다음 두 개의 클래스에서 구현 `MyIntClass` 및 `MyStringClass`합니다. 제네릭 인터페이스를 특수화할 제네릭 및 제네릭이 아닌 인터페이스를 인스턴스화하고 인터페이스에 명시적으로 구현 된 멤버를 호출 하는 방법을 보여 줍니다.  
+## <a name="example"></a>예  
+ 이 예제에서는 제네릭 인터페이스를 선언 `IMyGenIface`, 및 두 개의 제네릭이 아닌 인터페이스 `IMySpecializedInt` 하 고 `ImySpecializedString`, 특수화는 `IMyGenIface`합니다. 두 가지 특수화 된 인터페이스는 두 클래스에 의해 구현 됩니다 `MyIntClass` 고 `MyStringClass`입니다. 제네릭 인터페이스를 특수화 제네릭 및 제네릭이 아닌 인터페이스를 인스턴스화하고 인터페이스에서 명시적으로 구현 된 멤버를 호출 하는 방법을 보여 줍니다.  
   
-```  
+```cpp  
 // generic_interface2.cpp  
 // compile with: /clr  
 // Specializing and implementing generic interfaces.  

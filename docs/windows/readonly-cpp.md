@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87933b214dfe91f1c9f7db88127ef83da5b7201c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b4f4e6d7c3941b1e90e0c49d113afe02dfcd491
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876568"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604426"
 ---
 # <a name="readonly-c"></a>readonly(C++)
 데이터 멤버에 대한 할당을 금지합니다.  
@@ -30,9 +30,7 @@ ms.locfileid: "33876568"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [readonly]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
@@ -40,10 +38,10 @@ ms.locfileid: "33876568"
   
  메서드 매개 변수의 수정을 금지하려면 [in](../windows/in-cpp.md) 특성을 사용합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 **readonly** 특성의 사용을 보여줍니다.  
   
-```  
+```cpp  
 // cpp_attr_ref_readonly.cpp  
 // compile with: /LD  
 [idl_quote("midl_pragma warning(disable:2461)")];  

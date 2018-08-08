@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99ede64c239909956f1f767db34a2a6a14c02314
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0d49a6f0b5172b0971f755fc61b7767f0f4427d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874891"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603305"
 ---
 # <a name="modulecreate-method"></a>Module::Create 메서드
 모듈의 인스턴스를 만듭니다.  
@@ -42,18 +42,18 @@ WRL_NOTHROW static Module& Create(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T`  
+### <a name="parameters"></a>매개 변수  
+ *T*  
  모듈 유형입니다.  
   
- `callback`  
+ *콜백*  
  모듈의 마지막 인스턴스 개체가 해제 될 때 호출 됩니다.  
   
- `object`  
- `object` 및 `method` 조합 하 여 매개 변수가 사용 됩니다. 요소 마지막 인스턴스 개체는 모듈의 마지막 인스턴스 개체가 해제 될 때입니다.  
+ *object*  
+ 합니다 *개체* 하 고 *메서드* 조합 하 여 매개 변수를 사용 합니다. 요소 마지막 인스턴스 개체 모듈의 마지막 인스턴스 개체가 해제 될 때입니다.  
   
- `method`  
- `object` 및 `method` 조합 하 여 매개 변수가 사용 됩니다. 모듈의 마지막 인스턴스 개체가 해제 될 때 마지막 인스턴스 개체의 메서드를 가리킵니다.  
+ *method*  
+ 합니다 *개체* 하 고 *메서드* 조합 하 여 매개 변수를 사용 합니다. 모듈의 마지막 인스턴스 개체가 해제 될 때 마지막 인스턴스 개체의 메서드를 가리킵니다.  
   
 ## <a name="return-value"></a>반환 값  
  모듈에 대 한 참조입니다.  
@@ -65,5 +65,3 @@ WRL_NOTHROW static Module& Create(
   
 ## <a name="see-also"></a>참고 항목  
 [Module 클래스](../windows/module-class.md)
-
- 

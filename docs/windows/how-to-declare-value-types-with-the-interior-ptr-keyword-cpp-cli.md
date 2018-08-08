@@ -1,5 +1,5 @@
 ---
-title: '방법: interior_ptr 키워드를 값 형식 선언 (C + + /cli CLI) | Microsoft Docs'
+title: '방법: interior_ptr 키워드를 사용 하 여 값 형식 선언 (C + + /cli CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6015d5a61589b8ed2d38b6491392fd42e4f38ef1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38cbfb171e218f70d45e5ef2e6e850d791803611
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879479"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571190"
 ---
 # <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>방법: interior_ptr 키워드를 사용하여 값 형식 선언(C++/CLI)
-`interior_ptr`은 값 형식에 사용할 수 있습니다.  
+**interior_ptr** 값 형식과 함께 사용할 수 있습니다.  
   
 > [!IMPORTANT]
->  이 언어 기능으로 사용할 수는 **/clr** 컴파일러 옵션을 하지만 하지는 **/ZW** 컴파일러 옵션입니다.  
+>  이 언어 기능은 `/clr` 컴파일러 옵션에서 지원하지만 `/ZW` 컴파일러 옵션에서는 지원하지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
- 다음 C + + /cli CLI 샘플에서는 사용 하는 방법을 보여 줍니다.는 `interior_ptr` 값 형식을 사용 합니다.  
+ 다음 C + + /cli CLI 샘플을 사용 하는 방법을 보여 줍니다는 **interior_ptr** 값 형식을 사용 합니다.  
   
 ### <a name="code"></a>코드  
   
-```  
+```cpp  
 // interior_ptr_value_types.cpp  
 // compile with: /clr  
 value struct V {  
@@ -66,7 +66,7 @@ int main() {
   
 ### <a name="output"></a>출력  
   
-```  
+```Output  
 1  
 2  
 2  
@@ -75,16 +75,16 @@ int main() {
 3  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
- 값 형식에서 `this` 포인터는 interior_ptr로 계산됩니다.  
+ 값 형식에는 **이** 포인터는 interior_ptr로 계산 합니다.  
   
- `V` 값 형식의 비정적 멤버 함수 본문에서 `this`는 함수를 호출하는 개체의 주소 값을 갖는 `interior_ptr<V>` 형식의 표현입니다.  
+ 값 형식의 비정적 멤버 함수는 본문에 `V`, **이** 형식의 식 `interior_ptr<V>` 값 함수를 호출 하는 개체의 주소입니다.  
   
 ### <a name="code"></a>코드  
   
-```  
+```cpp  
 // interior_ptr_value_types_this.cpp  
 // compile with: /clr /LD  
 value struct V {  
@@ -105,7 +105,7 @@ value struct V {
   
 ### <a name="code"></a>코드  
   
-```  
+```cpp  
 // interior_ptr_value_static.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -131,7 +131,7 @@ int main() {
   
 ### <a name="output"></a>출력  
   
-```  
+```Output 
 22  
 23  
 hello  

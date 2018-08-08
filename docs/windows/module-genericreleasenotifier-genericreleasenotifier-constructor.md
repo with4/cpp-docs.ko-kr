@@ -17,32 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb07c7f53e27e380ba5775369611299cad0f60d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b0683220710a62c8583fa95fbfe3221ae93307eb
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875060"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603939"
 ---
 # <a name="modulegenericreleasenotifiergenericreleasenotifier-constructor"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier 생성자
-Module::GenericReleaseNotifier 클래스의 새 인스턴스를 초기화합니다.  
+새 인스턴스를 초기화 합니다 **module:: genericreleasenotifier** 클래스입니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      GenericReleaseNotifier(  
+GenericReleaseNotifier(  
    T callback,   
    bool release  
 ) throw() : ReleaseNotifier(release), callback_(callback);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `callback`  
- 람다, 함수 또는 함수 포인터 이벤트 처리기 함수 괄호 연산자와 함께 호출할 수 있는 (`()`).  
+### <a name="parameters"></a>매개 변수  
+ *콜백*  
+ 람다, 함수 또는 괄호 함수 연산자를 사용 하 여 호출할 수 있는 함수에 대 한 포인터 이벤트 처리기 (`()`).  
   
- `release`  
- 지정 `true` 내부 호출을 사용 하도록 설정 하려면 [모듈:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) 메서드도 있습니다; 그렇지 않으면 지정 `false`합니다.  
+ *release*  
+ 지정할 **true** 내부 호출을 사용 하도록 설정 하려면 [모듈:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) 메서드를 지정이 고, 그렇지 **false**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** module.h  

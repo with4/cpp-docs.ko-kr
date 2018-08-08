@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 84f5183d0273abfc23834099c07987dca6b3da7f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15f611a9fe361e401e1884cb1794f8d1ef1f5591
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892107"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603539"
 ---
 # <a name="runtimeclassqueryinterface-method"></a>RuntimeClass::QueryInterface 메서드
 지정 된 인터페이스 ID에 대 한 포인터를 검색합니다.  
@@ -30,7 +30,6 @@ ms.locfileid: "33892107"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 STDMETHOD(  
    QueryInterface  
 )  
@@ -38,12 +37,12 @@ STDMETHOD(
    _Deref_out_ void **ppvObject);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `riid`  
+### <a name="parameters"></a>매개 변수  
+ *riid*  
  인터페이스 ID입니다.  
   
- `ppvObject`  
- 이 opereation 완료 되 면 변수로 지정 된 인터페이스에 대 한 포인터는 `riid` 매개 변수입니다.  
+ *ppvObject*  
+ 완료 될 때이 opereation으로 지정한 인터페이스에 대 한 포인터를 *riid* 매개 변수입니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.  

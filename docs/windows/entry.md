@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db90390be5313ddbea1103105f47b55fe9e23d62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 933fc1db2a890fedd9d725c49bbeb6c363e2f4c8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872317"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569640"
 ---
 # <a name="entry"></a>entry
-DLL의 진입점을 식별 하 여 모듈에서 내보낸된 함수 또는 상수를 지정 합니다.  
+DLL의 진입점을 식별 하 여 모듈에는 내보낸된 함수 또는 상수를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ entry(  
+[ entry(  
    id  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `id`  
+ *ID*  
  진입점의 ID입니다.  
   
 ## <a name="remarks"></a>설명  
- **항목** c + + 특성에 동일한 기능을는 [항목](http://msdn.microsoft.com/library/windows/desktop/aa366815) MIDL 특성입니다.  
+ 합니다 **항목** c + + 특성에 동일한 기능을 합니다 [항목](http://msdn.microsoft.com/library/windows/desktop/aa366815) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 예를 참조 [idl_module](../windows/idl-module.md) 의 사용 예에 대 한 **항목**합니다.  
+## <a name="example"></a>예  
+ 예를 참조 하세요 [idl_module](../windows/idl-module.md) 의 사용 예에 대 한 **항목**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

@@ -1,5 +1,5 @@
 ---
-title: 전경색 또는 배경색 (아이콘에 대 한 이미지 편집기)를 선택 하면 | Microsoft Docs
+title: 전경색 또는 배경색 (아이콘에 대 한 이미지 편집기)를 선택 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: acd86e9a1d48465df4656b4b0cb8247712f4e12d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 108447dc3e18be84bf2875c49adb600ed9636dc4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888648"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605550"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>전경색 또는 배경색 선택(아이콘에 대한 이미지 편집기)
-제외 하 고는 **지우개**, 도구에 **이미지 편집기** 각각 마우스 왼쪽 또는 오른쪽 단추를 눌러는 현재 전경 또는 배경 색을 사용 하 여 도구 모음 그립니다.  
+제외 하 고는 **지우개**에서 도구를 **이미지 편집기** 현재 전경 또는 배경 색을 각각 마우스 왼쪽 또는 오른쪽 단추를 누를 때를 사용 하 여 도구 모음 그립니다.  
   
 ### <a name="to-select-a-foreground-color"></a>전경색을 선택하려면  
   
-1.  마우스 왼쪽된 단추 클릭에서 원하는 색의 [색상표](../windows/colors-window-image-editor-for-icons.md)합니다.  
+1.  왼쪽된 마우스 단추에서 원하는 색을 클릭 합니다 [색상표](../windows/colors-window-image-editor-for-icons.md)합니다.  
   
 ### <a name="to-select-a-background-color"></a>배경색을 선택하려면  
   
-1.  마우스 오른쪽 단추로 클릭에서 원하는 색의 **색** 팔레트입니다.  
+1.  마우스 오른쪽 단추를 사용 하 여에서 원하는 색을 클릭 합니다 **색** 색상표입니다.  
   
- 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.*  
+ 관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다.  
   
- 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
  없음  
   

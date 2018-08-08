@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 697eff3264c7e4a627086b072ae45b3c7ffedac2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3fae7ee95255d72d2799a5913821606f770e2b3b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878972"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608432"
 ---
 # <a name="maxis"></a>max_is
 유효한 배열 인덱스에 대 한 최대값을 지정합니다.  
@@ -30,8 +30,7 @@ ms.locfileid: "33878972"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ max_is(  
+[ max_is(  
    "expression"  
 ) ]  
 ```  
@@ -41,7 +40,7 @@ ms.locfileid: "33878972"
  하나 이상의 C 언어 식입니다. 빈 인수 슬롯 허용 됩니다.  
   
 ## <a name="remarks"></a>설명  
- **max_is** c + + 특성에 동일한 기능을는 [max_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) MIDL 특성입니다.  
+ 합니다 **max_is** c + + 특성에 동일한 기능을 합니다 [max_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) MIDL 특성입니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -49,14 +48,14 @@ ms.locfileid: "33878972"
   
 |||  
 |-|-|  
-|**적용 대상**|필드에 `struct` 또는 **union**, 매개 변수 인터페이스, 인터페이스 메서드|  
+|**적용 대상**|필드에 **구조체** 하거나 **union**인터페이스 매개 변수, 인터페이스 메서드|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|**size_is**|  
   
  자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  참조 [first_is](../windows/first-is.md) 배열 섹션을 지정 하는 방법의 예입니다.  
   
 ## <a name="see-also"></a>참고 항목  

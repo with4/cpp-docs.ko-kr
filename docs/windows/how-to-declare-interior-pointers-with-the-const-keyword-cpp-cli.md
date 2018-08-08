@@ -1,5 +1,5 @@
 ---
-title: '방법: const 키워드와 함께 내부 포인터 선언 (C + + /cli CLI) | Microsoft Docs'
+title: '방법: const 키워드를 사용 하 여 내부 포인터 선언 (C + + /cli CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a71de1ab8d0ae081274616d4c22a4d7f39c0bbbd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fdab21e0e8b9ad0b6fb1d58ba7d1bcd7020ffd10
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875047"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568617"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>방법: const 키워드(C++/CLI)를 사용하여 내부 포인터 선언
-다음 샘플에서는 사용 하는 방법을 보여 줍니다. `const` 내부 포인터의 선언에 있습니다.  
+다음 샘플에 사용 하는 방법을 보여 줍니다 **const** 내부 포인터 선언에 있습니다.  
   
 > [!IMPORTANT]
->  이 언어 기능으로 사용할 수는 **/clr** 컴파일러 옵션을 하지만 하지는 **/ZW** 컴파일러 옵션입니다.  
+>  이 언어 기능은 `/clr` 컴파일러 옵션에서 지원하지만 `/ZW` 컴파일러 옵션에서는 지원하지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // interior_ptr_const.cpp  
 // compile with: /clr  
 using namespace System;  

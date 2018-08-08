@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35d218666f785685e95d737574ff44e276ce84b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1174db6702fc68b01f60491ef203265bbd6f4c14
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892132"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607429"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>RuntimeClassBaseT::AsIID 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -38,18 +38,18 @@ __forceinline static HRESULT AsIID(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T`  
- 매개 변수로 지정 된 인터페이스 ID를 구현 하는 형식은 `riid`합니다.  
+### <a name="parameters"></a>매개 변수  
+ *T*  
+ 매개 변수로 지정 된 인터페이스 ID를 구현 하는 형식을 *riid*합니다.  
   
- `implements`  
- 템플릿 매개 변수로 지정 된 형식의 변수 `T`합니다.  
+ *구현*  
+ 템플릿 매개 변수로 지정 된 형식의 변수로 *T*합니다.  
   
- `riid`  
+ *riid*  
  검색할 인터페이스 ID입니다.  
   
- `ppvObject`  
- 에 대 한 포인터-에-a-포인터 인터페이스 매개 변수로 지정 된이 작업이 성공한 경우 `riid`합니다.  
+ *ppvObject*  
+ 이 작업에 성공한 경우 포인터-에-a-인터페이스에서 지정한 매개 변수 *riid*합니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공 하면 s_ok이 고 그렇지 않으면 오류를 설명 하는 HRESULT입니다.  

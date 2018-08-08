@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ea147ebddff03401f6151bcdc44d96efb233f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec10faf9733bbff3fb271b5465ee70a338c37898
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888996"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604995"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT 구조체
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,12 +34,12 @@ template <
 friend struct Details::RuntimeClassBaseT;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `RuntimeClassTypeT`  
- 플래그의 하나 이상 지정 하는 필드 [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거자입니다.  
+### <a name="parameters"></a>매개 변수  
+ *RuntimeClassTypeT*  
+ 플래그 중 하나 이상 지정 하는 필드 [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거자입니다.  
   
 ## <a name="remarks"></a>설명  
- 도우미 메서드를 제공 `QueryInterface` 작업과 가져오는 인터페이스 Id입니다.  
+ 도우미 메서드를 제공 `QueryInterface` 작업과 인터페이스 Id를 시작 합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -52,5 +52,5 @@ friend struct Details::RuntimeClassBaseT;
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>참고 항목  
- [참조 (Windows 런타임 라이브러리)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [참조 (Windows 런타임 라이브러리)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)   
  [Microsoft::WRL::Details 네임스페이스](../windows/microsoft-wrl-details-namespace.md)

@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef98cd3ac446c41143fc8e1f3f5a731f05ab3c45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87c3e84c0547751b03fba616df7c3f9bdd4dc06e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875996"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604332"
 ---
 # <a name="ptr"></a>ptr
-전체 포인터도 포인터를 지정합니다.  
+전체 포인터에 대 한 포인터를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [ptr]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **ptr** c + + 특성에 동일한 기능을는 [ptr](http://msdn.microsoft.com/library/windows/desktop/aa367149) MIDL 특성입니다.  
+ 합니다 **ptr** c + + 특성에 동일한 기능을 합니다 [ptr](http://msdn.microsoft.com/library/windows/desktop/aa367149) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 예를 참조 [defaultvalue](../windows/defaultvalue.md) 의 샘플 사용에 대 한 **ptr**합니다.  
+## <a name="example"></a>예  
+ 예를 참조 하세요 [defaultvalue](../windows/defaultvalue.md) 의 샘플 사용에 대 한 **ptr**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -47,7 +45,7 @@ ms.locfileid: "33875996"
   
 |||  
 |-|-|  
-|**적용 대상**|인터페이스 메서드를 인터페이스 매개 변수 `typedef`|  
+|**적용 대상**|인터페이스 매개 변수를 인터페이스 메서드를 **typedef**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

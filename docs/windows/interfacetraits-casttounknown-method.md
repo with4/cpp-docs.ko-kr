@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2fdc46f57f834c3e8217049574ea504aae16f03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad2c0a438eee870ac86301f0a56ef525eb53d8c8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878127"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608653"
 ---
 # <a name="interfacetraitscasttounknown-method"></a>InterfaceTraits::CastToUnknown 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -36,20 +36,20 @@ static __forceinline IUnknown* CastToUnknown(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T`  
- 매개 변수 형식의 `ptr`합니다.  
+### <a name="parameters"></a>매개 변수  
+ *T*  
+ 매개 변수의 유형을 *ptr*합니다.  
   
- `ptr`  
- 입력에 대 한 포인터 `T`합니다.  
+ *ptr*  
+ 입력에 대 한 포인터 *T*합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 올는 IUnknown에 대 한 포인터 `Base` 파생 됩니다.  
+ 에 대 한 포인터를 IUnknown는 `Base` 파생 됩니다.  
   
 ## <a name="remarks"></a>설명  
- 지정된 된 포인터를 IUnknown에 대 한 포인터를 캐스팅합니다.  
+ 지정된 된 포인터에 대 한 포인터를 캐스팅 `IUnknown`합니다.  
   
- 에 대 한 자세한 내용은 `Base`, 공용 Typedefs 섹션을 참조 [InterfaceTraits 구조체](../windows/interfacetraits-structure.md)합니다.  
+ 에 대 한 자세한 내용은 `Base`에서 공용 Typedefs 섹션을 참조 하세요 [InterfaceTraits 구조체](../windows/interfacetraits-structure.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

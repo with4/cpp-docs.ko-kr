@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1dc6de0d4c3bc5bb723b1dbb39f146a49fe7ba8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d648577d03507154c8e3b226fa00e3f03dc25abc
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876360"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608510"
 ---
 # <a name="modulebasemodulebase-destructor"></a>ModuleBase::~ModuleBase 소멸자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,7 +34,7 @@ virtual ~ModuleBase();
 ```  
   
 ## <a name="remarks"></a>설명  
- ModuleBase 클래스의 현재 인스턴스 초기화를 취소 합니다.  
+ 현재 인스턴스 초기화를 해제 합니다 **ModuleBase** 클래스입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

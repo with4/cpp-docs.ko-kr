@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fcfb3be07ff9d57b6837b956f821260f12a0f4af
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3823b752cb45d50230f399f38edca446429cbbf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875710"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607873"
 ---
 # <a name="modulemethodreleasenotifierinvoke-method"></a>Module::MethodReleaseNotifier::Invoke 메서드
-현재 module:: methodreleasenotifier 개체와 연결 된 이벤트 처리기를 호출 합니다.  
+현재 연결 된 이벤트 처리기를 호출 **module:: methodreleasenotifier** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   

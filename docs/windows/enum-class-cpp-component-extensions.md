@@ -1,5 +1,5 @@
 ---
-title: enum 클래스 (c + + 구성 요소 확장명) | Microsoft Docs
+title: enum 클래스 (c + + 구성 요소 확장) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e17c5e2055ef478dc7cafd5a7b2677f47bb9e074
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af936151b221b11c88f6dd054779b1a74fa50571
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880607"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570550"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum 클래스(C++ 구성 요소 확장)
 열거자라는 명명된 상수 집합으로 구성된 사용자 정의 형식인 열거형을 네임스페이스 범위에서 선언합니다.  
@@ -26,13 +26,12 @@ ms.locfileid: "33880607"
 ## <a name="all-runtimes"></a>모든 런타임  
  **주의**  
   
- C++/CX 및 C++/CLI는 표준 C++ `public enum class` 와 유사하지만 액세스 가능성 한정자가 추가된 `private enum class` 및 `enum class` 를 지원합니다. **/clr**에서 C++11 `enum class` 형식은 허용되지만, C++/CX 및 C++/CLI 형식이 아닌 원하는 ISO 열거형 형식을 보장하도록 만들어진 경고 C4472를 생성합니다. ISO 표준 c + +에 대 한 자세한 내용은 `enum` 키워드를 참조 [열거형](../cpp/enumerations-cpp.md)합니다.  
+ C + + /CX 및 C + + 지원 **public enum 클래스** 하 고 **개인 enum 클래스** 표준 c + +와 비슷합니다 **enum 클래스** 하지만 액세스 가능성의 추가 지정자입니다. 아래 **/clr**, C + + 11 **enum 클래스** 형식은 허용 되지만 원하는 ISO 열거형 형식 및 하지 C + 확인 하기 위해 만들어진 경고 C4472를 생성 + /CX 및 C + + CLI 형식입니다. ISO 표준 c + +에 대 한 자세한 내용은 **enum** 키워드를 참조 하십시오 [열거형](../cpp/enumerations-cpp.md)합니다.  
   
 ## <a name="windows-runtime"></a>Windows 런타임  
  **구문**  
   
 ```  
-  
       access  
       enum class  
       enumeration-identifier  
@@ -43,7 +42,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  **매개 변수**  
   
  *access*  
- 열거형의 접근성으로, `public` 또는 `private`일 수 있습니다.  
+ 해당 되는 열거형의 접근성 **공용** 하거나 **개인**합니다.  
   
  *enumeration-identifier*  
  열거형의 이름입니다.  
@@ -51,7 +50,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  *underlying-type*  
  (선택 사항) 열거형의 내부 형식입니다.  
   
- (선택 사항. Windows 런타임 전용) 될 수 있는 열거형의 내부 형식 `bool`, `char`, `char16`, `int16`, `uint16`, `int`, `uint32`, `int64`, 또는 `uint64`합니다.  
+ (선택 사항. Windows 런타임 전용) 수 있는 열거형의 내부 형식 **bool**, **char**를 `char16`를 `int16`를 `uint16`를 **int**, `uint32`하십시오 `int64`, 또는 `uint64`합니다.  
   
  *enumerator-list*  
  열거자 이름의 쉼표로 구분된 목록입니다.  
@@ -69,7 +68,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
   
 -   *underlying-type* 이 숫자이고, 열거자가 해당 형식의 최대값을 지정하는 경우, 그 다음에 암시적으로 정의되는 열거형 값은 표현할 수 없습니다.  
   
--   *underlying-type* 이 `bool`이고 세 개 이상의 열거자가 암시적으로 정의될 경우 처음 두 열거자 다음의 열거자는 표현할 수 없습니다.  
+-   경우 *기본 형식* 됩니다 **bool**, 고 세 개 이상의 열거자가 암시적 처음 두 개를 표현할 수 없는 후 열거자를 정의 합니다.  
   
 -   *underlying-type* 이 `char16`이고 열거형 값이 0xD800에서 0xDFFF까지이면 값을 표현할 수 있습니다. 그러나 이 값은 유니코드 서로게이트 쌍의 절반을 나타내므로 논리적으로 잘못된 값이며 격리에 표시되면 안 됩니다.  
   
@@ -80,7 +79,6 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  **구문**  
   
 ```  
-  
       access  
       enum class  
       name [:type] { enumerator-list } var;  
@@ -89,19 +87,19 @@ accessenum structname [:type] { enumerator-list } var;
   
  **매개 변수**  
   
- `access`  
- 열거형의 접근성입니다.  **public** 또는 `private`일 수 있습니다.  
+ *access*  
+ 열거형의 접근성입니다. 일 수 있습니다 **공개** 하거나 **개인**합니다.  
   
- `enumerator-list`  
+ *enumerator-list*  
  열거형에서 식별자(열거자)의 쉼표로 구분된 목록입니다.  
   
- `name`  
- 열거형의 이름입니다.  관리되는 익명 열거형은 허용되지 않습니다.  
+ *name*  
+ 열거형의 이름입니다. 관리되는 익명 열거형은 허용되지 않습니다.  
   
- `type` (선택 사항)  
- *식별자*의 내부 형식입니다.  서명되거나 서명되지 않은 버전의 int, short 또는 long과 같은 스칼라 형식일 수 있습니다.  `bool` 또는 `char` 도 사용할 수 있습니다.  
+ *형식* (선택 사항)  
+ *식별자*의 내부 형식입니다. 서명 되거나 서명 되지 않은 버전의 같은 스칼라 형식일 수 **int**를 **짧은**, 또는 **긴**합니다.  **bool** 나 **char** 사용할 수 있습니다.  
   
- `var` (선택 사항)  
+ *var* (선택 사항)  
  열거형 형식의 변수 이름입니다.  
   
  **주의**  
@@ -145,9 +143,9 @@ static const int mon = 1;
   
  Visual C++ 2002 및 Visual C++ 2003에서는 열거자가 약하게 삽입됩니다(동일한 이름을 가진 다른 식별자가 없을 경우 바깥쪽 범위에 표시됨).  
   
- 표준 C++ enum이 정의된 경우( **클래스** 또는 `struct`없이) **/clr** 을 사용하여 컴파일하면 열거형이 관리되는 enum으로 컴파일됩니다.  열거형이 여전히 관리되지 않는 열거형의 의미 체계를 사용합니다.  컴파일러는 Visual C++ 컴파일러가 인식하는 `Microsoft::VisualC::NativeEnumAttribute`특성을 삽입하여 열거형을 네이티브 열거형으로 만들려는 프로그래머의 의도를 확인합니다.  다른 컴파일러에는 표준 열거형이 관리되는 열거형으로 표시됩니다.  
+ 표준 c + + enum이 정의 된 경우 (없이 **클래스** 또는 **구조체**) 사용 하 여 컴파일하면 `/clr` 관리 되는 enum으로 컴파일됩니다 열거형에 발생 합니다.  열거형이 여전히 관리되지 않는 열거형의 의미 체계를 사용합니다.  컴파일러는 Visual C++ 컴파일러가 인식하는 `Microsoft::VisualC::NativeEnumAttribute`특성을 삽입하여 열거형을 네이티브 열거형으로 만들려는 프로그래머의 의도를 확인합니다.  다른 컴파일러에는 표준 열거형이 관리되는 열거형으로 표시됩니다.  
   
- /clr을 사용하여 컴파일된 명명된 표준 열거형은 어셈블리에 관리되는 열거형으로 표시되며 다른 관리되는 컴파일러에서 사용될 수 있습니다.   그러나 명명되지 않은 표준 열거형은 어셈블리에서 공개적으로 표시되지 않습니다.  
+ 명명에 사용 하 여 컴파일된 표준 열거형 `/clr` 열거형을 관리 되는 어셈블리에 표시 되 고 다른 관리 되는 컴파일러에서 사용할 수 있습니다.   그러나 명명되지 않은 표준 열거형은 어셈블리에서 공개적으로 표시되지 않습니다.  
   
  Visual C++ 2002 및 Visual C++ 2003에서 함수 매개 변수  
   
@@ -228,7 +226,6 @@ convert to int: 1
 1  
   
 1  
-  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

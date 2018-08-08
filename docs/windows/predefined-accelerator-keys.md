@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa5b42fc846f3b4f21dc8045e67d8ebc347601ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42f1151f90fa6a418564f30b9ec6570645a91b42
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880802"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608419"
 ---
 # <a name="predefined-accelerator-keys"></a>사전 정의된 액셀러레이터 키
 Windows 응용 프로그램 프로젝트에 포함될 수 있는 미리 정의된 많은 액셀러레이터 키가 있습니다. 이러한 가상 키 중 일부는 Windows 환경을 위한 것입니다. 기타 키는 브라우저 또는 유니코드 응용 프로그램을 지원합니다. 모든 액셀러레이터에 이러한 키 중 하나를 사용할 수 있습니다.  
@@ -83,7 +83,7 @@ Windows 응용 프로그램 프로젝트에 포함될 수 있는 미리 정의�
 |VK_XBUTTON1|Windows: X1 마우스 단추|  
 |VK_XBUTTON2|Windows: X2 마우스 단추|  
   
- 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.*  
+ 관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  Win32  

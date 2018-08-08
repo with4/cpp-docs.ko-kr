@@ -15,28 +15,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8738c44c11c69f8d2479335ce3effc4135dfe0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20a05bf603b874d260c95c010e6f0e8312b35649
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876068"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570991"
 ---
 # <a name="hstringattach-method"></a>HString::Attach 메서드
-현재 HString 개체가 지정 된 HString 개체를 연결합니다.  
+연결 된 **HString** 개체와 현재 **HString** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 void Attach(  
        HSTRING hstr  
        ) throw()  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `hstr`  
- 기존 HString 개체입니다.  
+ *hstr*  
+ 기존 **HString** 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

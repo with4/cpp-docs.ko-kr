@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 460e3f5316bc4b4509e563fda2354106164b3b1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b52359d1f50f5ea3bad4075432fd8ae0e468d2df
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872382"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571020"
 ---
 # <a name="dual"></a>dual
-.Idl 파일에는 이중 인터페이스로 인터페이스를 배치합니다.  
+.Idl 파일에 이중 인터페이스와 인터페이스를 배치합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [dual]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- 경우는 **이중** c + + 특성 인터페이스 앞, 생성된 된.idl 파일에 있는 라이브러리 블록 안에 배치 될 인터페이스를 수행 합니다.  
+ 경우는 **이중** c + + 특성이 인터페이스 앞에 오면, 생성된 된.idl 파일의 라이브러리 블록 안에 배치 하는 인터페이스입니다.  
   
-## <a name="example"></a>예제  
- 다음 코드는를 사용 하는 특성 블록 **이중** 인터페이스 정의 하기 전에:  
+## <a name="example"></a>예  
+ 다음 코드는 사용 하는 특성 블록 **이중** 인터페이스 정의 하기 전에:  
   
-```  
+```cpp  
 // cpp_attr_ref_dual.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -79,7 +77,7 @@ __interface IStatic : IDispatch
   
 |||  
 |-|-|  
-|**적용 대상**|`interface`|  
+|**적용 대상**|**interface**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|**dispinterface**|  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbf0480252fca342b8a690e93f92ae14ca5e84c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9dd026158a2bbc76e7a3e195bc5346f65821f2b7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874384"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569497"
 ---
 # <a name="eventsourceremove-method"></a>EventSource::Remove 메서드
-현재 EventSource 개체에 연결 된 이벤트 처리기의 집합에서 지정 된 이벤트 등록 토큰이 나타내는 이벤트 처리기를 삭제 합니다.  
+현재 연결 된 이벤트 처리기 집합에서 지정 된 이벤트 등록 토큰을 나타내는 이벤트 처리기를 삭제 **EventSource** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,15 +35,15 @@ HRESULT Remove(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `token`  
- 이벤트 처리기를 나타내는 핸들입니다. 이 토큰으로 이벤트 처리기가 등록 될 때 반환 된는 [add ()](../windows/eventsource-add-method.md) 메서드.  
+### <a name="parameters"></a>매개 변수  
+ *token*  
+ 이벤트 처리기를 나타내는 핸들입니다. 이 토큰은 이벤트 처리기를 등록 된 경우 반환 된 합니다 [add ()](../windows/eventsource-add-method.md) 메서드.  
   
 ## <a name="return-value"></a>반환 값  
  성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.  
   
 ## <a name="remarks"></a>설명  
- EventRegistrationToken 구조체에 대 한 자세한 내용은 Windows 런타임 참조 설명서에서 Windows::Foundation::EventRegistrationToken 구조 항목을 참조 합니다.  
+ EventRegistrationToken 구조체에 대 한 자세한 내용은 참조는 `Windows::Foundation::EventRegistrationToken` Windows 런타임 참조 문서의 구조 항목입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** event.h  

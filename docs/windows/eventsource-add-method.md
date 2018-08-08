@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92af8746b4d2b5ba2f379cc8660b5345b2c5f175
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90750f965768d5ecda40e074f9a136407613d2d2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873240"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570391"
 ---
 # <a name="eventsourceadd-method"></a>EventSource::Add 메서드
-현재 EventSource 개체에 대 한 이벤트 처리기의 집합에 지정 된 대리자 인터페이스를 나타내는 이벤트 처리기를 추가 합니다.  
+현재 이벤트 처리기 집합에 지정 된 대리자를 인터페이스에 의해 표시 되는 이벤트 처리기 추가 **EventSource** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,12 +36,12 @@ HRESULT Add(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `delegateInterface`  
- 이벤트 처리기를 나타내는 대리자 개체를 인터페이스입니다.  
+### <a name="parameters"></a>매개 변수  
+ *delegateInterface*  
+ 이벤트 처리기를 나타내는 대리자 개체에 대 한 인터페이스입니다.  
   
- `token`  
- 이 작업이 완료 될 때, 이벤트를 나타내는 하는 핸들입니다. 이 토큰에 대 한 매개 변수로 사용 하 여는 [remove ()](../windows/eventsource-remove-method.md) 메서드를 이벤트 처리기를 삭제 합니다.  
+ *token*  
+ 이 작업이 완료 될 때 이벤트를 나타내는 핸들입니다. 이 토큰에 대 한 매개 변수로 사용 합니다 [remove ()](../windows/eventsource-remove-method.md) 이벤트 처리기를 삭제 하는 방법입니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.  

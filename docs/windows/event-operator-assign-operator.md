@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d3da41ff7fd145889ec799bb2f8ebe99aed36934
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a523d6ba8679bf7d0bdf98563b86946e16e7bfca
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871125"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571300"
 ---
 # <a name="eventoperator-operator"></a>Event::operator= 연산자
-현재 이벤트 인스턴스를 지정된 이벤트 참조를 할당합니다.  
+지정 된 할당 **이벤트** 현재 참조 **이벤트** 인스턴스.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,11 +36,11 @@ WRL_NOTHROW Event& operator=(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `h`  
- Event 인스턴스에 대한 rvalue 참조입니다.  
+ *h*  
+ rvalue 참조를 **이벤트** 인스턴스.  
   
 ## <a name="return-value"></a>반환 값  
- 현재 Event 인스턴스에 대한 포인터입니다.  
+ 현재 포인터 **이벤트** 인스턴스.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

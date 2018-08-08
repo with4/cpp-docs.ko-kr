@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97b4b43f8cbd8f08cca4f6cf2f21294a625f289c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874579"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570001"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
-.Hlp 또는.chm 파일 도움말 항목의 ID를 지정합니다.  
+.hlp 또는.chm 파일에서 도움말 항목의 ID를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ helpstringcontext(  
+[ helpstringcontext(  
    contextID  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `contextID`  
- 도움말 파일에는 32 비트 도움말 컨텍스트 식별자입니다.  
+### <a name="parameters"></a>매개 변수  
+ *컨텍스트 Id*  
+ 도움말 파일의 32 비트 도움말 컨텍스트 식별자입니다.  
   
 ## <a name="remarks"></a>설명  
- **helpstringcontext** c + + 특성에 동일한 기능을는 [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL 특성입니다.  
+ 합니다 **helpstringcontext** c + + 특성에 동일한 기능을 합니다 [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringcontext.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -68,7 +67,7 @@ __interface IMyI
   
 |||  
 |-|-|  
-|**적용 대상**|**클래스**, `interface`, 인터페이스 메서드|  
+|**적용 대상**|**클래스**하십시오 **인터페이스**, 인터페이스 메서드|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

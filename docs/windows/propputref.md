@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ac9784e450746a4474879aae346a4242bbe2fd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc11561401ff34b629fecdc31a00ffb845d6a2d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878192"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606802"
 ---
 # <a name="propputref"></a>propputref
-값을 대신 참조를 사용 하는 속성 설정 함수를 지정 합니다.  
+값 대신 참조를 사용 하는 속성 설정 함수를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [propputref]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **propputref** c + + 특성에 동일한 기능을는 [propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) MIDL 특성입니다.  
+ 합니다 **propputref** c + + 특성에 동일한 기능을 합니다 [propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 예를 참조 [바인딩 가능한](../windows/bindable.md) 의 샘플 사용에 대 한 **propputref**합니다.  
+## <a name="example"></a>예  
+ 예를 참조 하세요 [bindable](../windows/bindable.md) 의 샘플 사용에 대 한 **propputref**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -50,7 +48,7 @@ ms.locfileid: "33878192"
 |**적용 대상**|메서드|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못된 특성**|**propget**, **propput**|  
+|**잘못된 특성**|`propget`, `propput`|  
   
  특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   

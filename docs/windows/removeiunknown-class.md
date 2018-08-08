@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb005bc3cbf411a7d5b5ddbfa44cd6aecf802105
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 69775303c5a12f82ef2a31cc61112af4b14d3aad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879544"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606171"
 ---
 # <a name="removeiunknown-class"></a>RemoveIUnknown 클래스
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -39,14 +39,14 @@ template <
 class RemoveIUnknown : public T;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `T`  
+### <a name="parameters"></a>매개 변수  
+ *T*  
  클래스입니다.  
   
 ## <a name="remarks"></a>설명  
- 에 해당 하는 형식을 만들 수는 `IUnknown`-기반된 형식 않았으나 비가상 `QueryInterface`, `AddRef`, 및 `Release` 멤버 함수입니다.  
+ 해당 하는 형식을 만들 수는 `IUnknown`-기반, 하지만 형식은 비가상 `QueryInterface`를 `AddRef`, 및 `Release` 멤버 함수입니다.  
   
- 기본적으로 COM 메서드 제공 가상 `QueryInterface`, `AddRef`, 메서드를 놓습니다. 그러나 `ComPtr` 가상 메서드는 오버 헤드가 필요 하지 않습니다. `RemoveIUnknown` 개인, 비가상 제공 하 여 오버 헤드를 제거 `QueryInterface`, `AddRef`, 및 `Release` 메서드.  
+ 기본적으로 COM 메서드 제공 가상 `QueryInterface`하십시오 `AddRef`, 및 `Release` 메서드. 그러나 `ComPtr` 가상 메서드의 오버 헤드가 필요 하지 않습니다. `RemoveIUnknown` 개인, 비가상 함으로써 오버 헤드를 제거 `QueryInterface`하십시오 `AddRef`, 및 `Release` 메서드.  
   
 ## <a name="members"></a>멤버  
   
@@ -54,7 +54,7 @@ class RemoveIUnknown : public T;
   
 |이름|설명|  
 |----------|-----------------|  
-|`ReturnType`|템플릿 매개 변수와 해당 형식에 대 한 동의어 `T` 되었지만 비가상 IUnknown 멤버입니다.|  
+|`ReturnType`|템플릿 매개 변수에 해당 하는 형식에 대 한 동의어 *T* 비가상 되었지만 `IUnknown` 멤버입니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `T`  

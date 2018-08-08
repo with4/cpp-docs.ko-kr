@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05166be14680b14d704095f5f1c9375bd97da7d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6206a167c8b7292db21b9466975d057fc36cbe2f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892028"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604936"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags 구조체
-인스턴스에 대 한 형식을 포함 한 [RuntimeClass](../windows/runtimeclass-class.md)합니다.  
+인스턴스에 대 한 형식이 포함 된 [RuntimeClass](../windows/runtimeclass-class.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,8 +36,8 @@ template <
 struct RuntimeClassFlags;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `flags`  
+### <a name="parameters"></a>매개 변수  
+ *flags*  
  A [RuntimeClassType 열거형](../windows/runtimeclasstype-enumeration.md) 값입니다.  
   
 ## <a name="members"></a>멤버  

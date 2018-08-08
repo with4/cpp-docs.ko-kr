@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e877015afb0d53bd8c9bb12c092086b06ae59c2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 88d3573c4dce5c2aba85d9482b12bd62ba9fa1ad
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881844"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569949"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>방법: 매니페스트 리소스 열기
 [리소스 뷰](../windows/resource-view-window.md)에서 매니페스트 리소스를 열면 리소스가 이진 형식으로 열립니다. 매니페스트 리소스의 콘텐츠를 더 많이 볼 수 있는 형식으로 보려면 솔루션 탐색기에서 리소스를 열어야 합니다.  
   
 ### <a name="to-open-a-manifest-resource-in-the-text-editor"></a>텍스트 편집기에서 매니페스트 리소스를 열려면  
   
-1.  `Solution Explorer`에서 프로젝트를 열고 **리소스 파일** 폴더를 확장합니다.  
+1.  프로젝트를 열고 사용 하 여 **솔루션 탐색기**를 확장 합니다 **리소스 파일** 폴더입니다.  
   
 2.  .manifest 파일을 두 번 클릭합니다.  
   
@@ -36,13 +36,13 @@ ms.locfileid: "33881844"
   
 ### <a name="to-open-a-manifest-resource-in-another-editor"></a>다른 편집기에서 매니페스트 리소스를 열려면  
   
-1.  솔루션 탐색기에서 .manifest 파일을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **연결 프로그램...** 을 선택합니다.  
+1.  **솔루션 탐색기**.manifest 파일을 마우스 오른쪽 단추로 클릭 하 고 선택 **연결 프로그램...**  바로 가기 메뉴에서.  
   
 2.  **연결 프로그램** 대화 상자에서 사용할 편집기를 지정하고 **열기**를 클릭합니다.  
   
- 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.*  
+ 관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다.  
   
- 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
  Win32  
   

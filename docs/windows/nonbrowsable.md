@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb752c02eb200e952cf247684675ebd377eeaaa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a7bdd285ed74c7792a34cfe99e0a900d42d6bc26
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877370"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604592"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 인터페이스 멤버를 속성 브라우저에 표시 되지 해야 나타냅니다.  
@@ -30,17 +30,15 @@ ms.locfileid: "33877370"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [nonbrowsable]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **nonbrowsable** c + + 특성에 동일한 기능을는 [nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117) MIDL 특성입니다.  
+ 합니다 **nonbrowsable** c + + 특성에 동일한 기능을 합니다 [nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cpp_attr_ref_nonbrowsable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
