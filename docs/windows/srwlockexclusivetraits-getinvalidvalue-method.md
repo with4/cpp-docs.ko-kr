@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 963c3cbc09a9ed7f56d8ec25c35af0868eeae326
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: efd4a7b7f67af28adc4f31e8528f3800596356d6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649236"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019275"
 ---
 # <a name="srwlockexclusivetraitsgetinvalidvalue-method"></a>SRWLockExclusiveTraits::GetInvalidValue 메서드
 검색을 **SRWLockExclusiveTraits** 항상 유효 하지 않은 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 inline static Type GetInvalidValue();  
 ```  
   

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 480baaf12c332f0a293374fe2317110eb186cbdf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6db5f5eb080f9d802090dda61afd296bc4e6dc3b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648986"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015045"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>연습: WRL 및 Media Foundation을 사용 하 여 UWP 앱 만들기
 사용 하는 유니버설 Windows 플랫폼 (UWP) 앱을 만들려면 Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 사용 하는 방법을 알아봅니다 [Microsoft 미디어 파운데이션](http://msdn.microsoft.com/library/windows/apps/ms694197)합니다.  
@@ -59,17 +59,17 @@ ms.locfileid: "39648986"
   
 ### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>사용 하는 Media Foundation 회색조를 만들려면 WRL 구성 요소를 변환  
   
-1.  Visual Studio에서 만들기를 **빈 솔루션** 프로젝트입니다. 예를 들어, 프로젝트 이름을 `MediaCapture`입니다.  
+1.  Visual Studio에서 만들기를 **빈 솔루션** 프로젝트입니다. 예를 들어, 프로젝트 이름을 *MediaCapture*합니다.  
   
-2.  추가 된 **DLL (유니버설 Windows)** 프로젝트를 솔루션입니다. 예를 들어, 프로젝트 이름을 `GrayscaleTransform`입니다.  
+2.  추가 된 **DLL (유니버설 Windows)** 프로젝트를 솔루션입니다. 예를 들어, 프로젝트 이름을 *GrayscaleTransform*합니다.  
   
-3.  추가 된 **Midl 파일 (.idl)** 프로젝트 파일입니다. 예를 들어, 파일 이름을 `GrayscaleTransform.idl`입니다.  
+3.  추가 된 **Midl 파일 (.idl)** 프로젝트 파일입니다. 예를 들어, 파일 이름을 *GrayscaleTransform.idl*합니다.  
   
 4.  이 코드를 GrayscaleTransform.idl에 추가합니다.  
   
      [!code-cpp[wrl-media-capture#1](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_1.idl)]  
   
-5.  다음 코드를 사용하여 pch.h의 내용을 바꿉니다.  
+5.  다음 코드를 사용 하 여의 내용을 바꿉니다 `pch.h`합니다.  
   
      [!code-cpp[wrl-media-capture#2](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_2.h)]  
   
@@ -77,9 +77,9 @@ ms.locfileid: "39648986"
   
      [!code-cpp[wrl-media-capture#3](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_3.h)]  
   
-7.  GrayscaleTransform.h는 이 예제에서 사용되지 않습니다. 원하는 경우 프로젝트에서 제거할 수 있습니다.  
+7.  `GrayscaleTransform.h` 이 예제에서 사용 되지 않습니다. 원하는 경우 프로젝트에서 제거할 수 있습니다.  
   
-8.  다음 코드를 사용하여 GrayscaleTransform.cpp의 내용을 바꿉니다.  
+8.  다음 코드를 사용 하 여의 내용을 바꿉니다 `GrayscaleTransform.cpp`합니다.  
   
      [!code-cpp[wrl-media-capture#4](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_4.cpp)]  
   
@@ -92,7 +92,7 @@ ms.locfileid: "39648986"
        DllGetClassObject                   PRIVATE
    ```   
   
-10. 다음 코드를 사용하여 dllmain.cpp의 내용을 바꿉니다.  
+10. 다음 코드를 사용 하 여의 내용을 바꿉니다 `dllmain.cpp`합니다.  
   
      [!code-cpp[wrl-media-capture#6](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_6.cpp)]  
   
@@ -106,21 +106,21 @@ ms.locfileid: "39648986"
   
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>WRL C# 앱에서 사용자 지정 Media Foundation 구성 요소를 사용 하려면  
   
-1.  새 **C# 빈 앱 (XAML)** 프로젝트를 `MediaCapture` 솔루션입니다. 예를 들어, 프로젝트 이름을 `MediaCapture`입니다.  
+1.  새 **C# 빈 앱 (XAML)** 프로젝트를 `MediaCapture` 솔루션입니다. 예를 들어, 프로젝트 이름을 *MediaCapture*합니다.  
   
 2.  에 **MediaCapture** 프로젝트에 대 한 참조를 추가 합니다는 `GrayscaleTransform` 프로젝트입니다. 자세한 내용은 [방법: 참조 추가 또는 제거 참조 관리자를 사용 하 여](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)입니다.  
   
-3.  Package.appxmanifest를에서는 **기능** 탭을 선택 **마이크** 하 고 **웹캠**. 두 기능 모두 웹캠에서 사진을 캡처하는 데 필요합니다.  
+3.  `Package.appxmanifest`에 **기능** 탭을 선택 **마이크** 하 고 **웹캠**. 두 기능 모두 웹캠에서 사진을 캡처하는 데 필요합니다.  
   
-4.  MainPage.xaml에서 루트에이 코드를 추가 [그리드](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) 요소:  
+4.  `MainPage.xaml`, 루트에이 코드를 추가 [Grid](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) 요소:  
   
      [!code-xml[wrl-media-capture#7](../windows/codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]  
   
-5.  다음 코드를 사용하여 MainPage.xaml.cs의 내용을 바꿉니다.  
+5.  다음 코드를 사용 하 여의 내용을 바꿉니다 `MainPage.xaml.cs`합니다.  
   
      [!code-cs[wrl-media-capture#8](../windows/codesnippet/CSharp/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_8.cs)]  
   
- 다음 그림에서는 MediaCapture 앱을 보여 줍니다.  
+ 다음 그림에 표시 된 `MediaCapture app`합니다.  
   
  ![사진을 캡처하는 MediaCapture 앱](../windows/media/wrl_media_capture.png "WRL_Media_Capture")  
   

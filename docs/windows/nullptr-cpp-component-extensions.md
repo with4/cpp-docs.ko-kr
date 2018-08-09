@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ccfb2b234550f5b7fc03e717d92e74b1fd5d5f74
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a52f2a11634ff79bcb58302d4b2a4d7ceed362cc
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604449"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017125"
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr(C++ 구성 요소 확장)
 합니다 **nullptr** 키워드를 나타내는 *포인터 값을 null*합니다. 개체 핸들, 내부 포인터 또는 네이티브 포인터가 개체를 가리키지 않습니다 나타내기 위해 null 포인터 값을 사용 합니다.  
@@ -116,8 +116,6 @@ int main() {
 }  
 ```  
   
- **출력**  
-  
 ```Output  
 pMyClass == nullptr  
   
@@ -184,8 +182,6 @@ int main() {
 }  
 ```  
   
- **출력**  
-  
 ```Output  
 test  
 ```  
@@ -212,8 +208,6 @@ int main() {
    x -> Test();  
 }  
 ```  
-  
- **출력**  
   
 ```Output  
 NULL  

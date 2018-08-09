@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd65b4294443de9f367ecc5a4ea64b524aabb4a2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 068fcf9e4cfb45bb3d20d54df69d5b4bceb7cd53
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882062"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018496"
 ---
 # <a name="mfc-predefined-symbols"></a>미리 정의된 MFC 기호
-MFC 프로젝트는 항상 기간을 지 원하는 여러 헤더 파일을 포함 합니다. 통해 추가한 #include 문을 StdAfx.h 파일에:  
+MFC 프로젝트는 항상 windows를 지 원하는 여러 헤더 파일을 포함 합니다. 이러한 항목을 통해 추가 됩니다 `#include` 문에서 `StdAfx.h` 파일:  
   
-```  
+```cpp  
 #include <afxwin.h>      //MFC core and standard components  
 #include <afxext.h>      //MFC extensions  
 #include <afxdisp.h      //MFC automation classes  
@@ -34,7 +34,7 @@ MFC 프로젝트는 항상 기간을 지 원하는 여러 헤더 파일을 포�
 #include <afxcmn.h>      //MFC support for Windows common controls.  
 ```  
   
- MFC 일반 값에 대 한 기호 ID 값을 포함 하는 헤더 파일입니다. 이러한 기호는 MFC 프로젝트에서 작업 하는 경우에 사용할 수 있습니다. 표준 기호 이름 접두사가 AFX_ 접두사 다음이 있는지 확인 합니다.  
+ 헤더 파일에 MFC 공통 값에 대 한 기호 ID 값을 포함 합니다. 이러한 기호는 MFC 프로젝트에서 작업할 때만 제공 됩니다. 표준 기호 이름 접두사가 뒤 AFX_ 접두사는 참고 합니다.  
   
 |||  
 |-|-|  
@@ -158,7 +158,7 @@ MFC 프로젝트는 항상 기간을 지 원하는 여러 헤더 파일을 포�
 |AFX_IDS_BOLD|AFX_IDS_BOLDITALIC|  
 |AFX_IDS_BORDERSTYLE_0|AFX_IDS_BORDERSTYLE_1|  
 |AFX_IDS_CHANGE_LINK|AFX_IDS_CHECKLISTBOX_CHECK|  
-|AFX_IDS_CHECKLISTBOX_MIXED|AFX_IDS_CHECKLISTBOX_의 선택을 취소합니다|  
+|AFX_IDS_CHECKLISTBOX_MIXED|AFX_IDS_CHECKLISTBOX_ 선택 취소|  
 |AFX_IDS_COLOR_ACTIVEBAR|AFX_IDS_COLOR_ACTIVEBORDER|  
 |AFX_IDS_COLOR_ACTIVETEXT|AFX_IDS_COLOR_APPWORKSPACE|  
 |AFX_IDS_COLOR_BTNFACE|AFX_IDS_COLOR_BTNHIGHLIGHT|  

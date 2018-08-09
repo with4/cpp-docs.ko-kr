@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60eb32017e824397af6e4535efa5ec55f314c4b8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d82e31e75cf0180670ebdbc875628fdefcef57bb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646733"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014639"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation 네임스페이스
 개체 및 팩터리 만들기와 같은 기본적인 Windows 런타임 기능을 사용 하도록 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 namespace Windows::Foundation;  
 ```  
   

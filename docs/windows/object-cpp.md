@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c0705c5d841b63cd3f537ab39dbbe9122fea869
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2667c8ecb14e31388737366c4de6c527bdc40f9d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607912"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012754"
 ---
 # <a name="object-c"></a>object(C++)
 사용자 지정 인터페이스를 식별합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [object]  
 ```  
   

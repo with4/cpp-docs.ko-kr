@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6b5309d62db094bf706fe7d3d1bcec99c3ec9a9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8dbb3bfbf61c4ad7303c6cee272e14fc91bc9656
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645453"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011857"
 ---
 # <a name="sizeis"></a>size_is
 메모리 크기의 할당 크기의 포인터에 대 한 크기의 포인터 및 단일 또는 다차원 배열에 대 한 포인터 크기 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ size_is(  
    "expression"  
 ) ]  

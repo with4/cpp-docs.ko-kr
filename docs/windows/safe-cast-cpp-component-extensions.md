@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57f59aa201a60fb2cf118b31eb4be377cd246ece
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 94973b62b83b8b574b8747febf2204251f1642d8
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606386"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017544"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast(C++ 구성 요소 확장명)
 합니다 **safe_cast** 작업이 성공 하면 지정된 된 형식으로 지정된 된 식을 반환 합니다; 그렇지 않으면 throw `InvalidCastException`합니다.  
@@ -97,8 +97,6 @@ int main(Array<String^>^ args) {
    }  
 }  
 ```  
-  
- **출력**  
   
 ```Output  
 Caught expected exception: InvalidCastException  
@@ -173,8 +171,6 @@ int main() {
    }  
 }  
 ```  
-  
- **출력**  
   
 ```Output  
 Caught expected exception  

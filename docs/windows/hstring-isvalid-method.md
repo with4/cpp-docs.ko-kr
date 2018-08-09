@@ -15,23 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26ca5d70f6632c35da64215376e0dddd6eca9fcb
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: ed78c9276603c8b6dbdab74a32ea1940bf39544f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571004"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012572"
 ---
 # <a name="hstringisvalid-method"></a>HString::IsValid 메서드
 나타냅니다 여부를 현재 **HString** 개체가 비어 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 bool IsValid() const throw()  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  **true 이면** 하는 경우 현재 **HString** 개체가 비어 있지 않으면 아닙니다 **false**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0f2f7fa3cd908612e912a58d8c789369f11fcc52
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606464"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010375"
 ---
 # <a name="implements-c"></a>implements(C++)
 IDL coclass의 구성원으로 강제 적용 되는 디스패치 인터페이스를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
@@ -44,7 +44,7 @@ IDL coclass의 구성원으로 강제 적용 되는 디스패치 인터페이스
  쉼표로 구분한 목록 IDL coclass 소속 될 dispinterface입니다. 단일 dispinterface 지정 하기 위한 줄임 메서드는 **구현(dispinterface** *= dispinterface_name***)** 합니다.  
   
 ## <a name="remarks"></a>설명  
- 기본적으로 COM 인터페이스는 coclass의 기본 클래스는 IDL coclass에 추가 됩니다. **구현** IDL coclass 구성원으로 다른 인터페이스를 강제할 수 있습니다.  
+ 기본적으로만 COM 인터페이스 기본 클래스는 `coclass` IDL coclass에 추가 됩니다. **구현** IDL 되도록 다른 인터페이스를 강제 적용 하면 `coclass` 멤버입니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

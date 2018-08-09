@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1850507b9d00ab717a2602d4e230968f5222f077
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fd5f7bb72e1107fe561acef4d6cc3f3ecb87ed59
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604283"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016858"
 ---
 # <a name="method-attributes"></a>메서드 특성
 다음과 같은 특성, coclass 등 클래스나 인터페이스의 메서드에 적용 됩니다.  
@@ -39,8 +39,8 @@ ms.locfileid: "39604283"
 |[defaultbind](../windows/defaultbind.md)|개체를 가장 잘 나타내는 단일, 바인딩 가능한 속성을 나타냅니다.|  
 |[defaultcollelem](../windows/defaultcollelem.md)|Visual Basic 코드 최적화를 위해 사용 합니다.|  
 |[displaybind](../windows/displaybind.md)|바인딩 가능한 사용자에 게 표시 하는 속성을 나타냅니다.|  
-|[helpcontext](../windows/helpcontext.md)|도움말 파일에서이 요소에 대 한 정보를 볼 수 있는 컨텍스트 ID를 지정 합니다.|  
-|[helpfile](../windows/helpfile.md)|형식 라이브러리에 대 한 도움말 파일의 이름을 설정합니다.|  
+|[helpcontext](../windows/helpcontext.md)|이 요소에 대 한 정보를 볼 수 있는 컨텍스트 ID를 지정 합니다 **도움말** 파일입니다.|  
+|[helpfile](../windows/helpfile.md)|이름을 가져오거나 설정 합니다 **도움말** 형식 라이브러리 파일입니다.|  
 |[helpstring](../windows/helpstring.md)|적용되는 요소를 설명하는 데 사용되는 문자열을 지정합니다.|  
 |[helpstringcontext](../windows/helpstringcontext.md)|.hlp 또는.chm 파일에서 도움말 항목의 ID를 지정합니다.|  
 |[helpstringdll](../windows/helpstringdll.md)|문서 문자열 조회 (지역화)를 수행 하는 데 DLL의 이름을 지정 합니다.|  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ad301ba081ad063ff58ebf7a749b0d32371d05b
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: dd166f39f28f01d2d6b30dce81080ec1b76fcad0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605034"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018402"
 ---
 # <a name="modulegenericreleasenotifiercallback-data-member"></a>Module::GenericReleaseNotifier::callback_ 데이터 멤버
 람다, 함수 또는 함수 포인터 이벤트 처리기에 연결 된 현재 보유 `Module::GenericReleaseNotifier` 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 T callback_;  
 ```  
   

@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98057773d6cbb51fe5aacc3ac814af89532bd887
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: efbf2910fb025370e3373b91b418a4e2a2df5bc5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607987"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015783"
 ---
 # <a name="progid"></a>progid
 COM 개체의 ProgID를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ progid(  
    name  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *name*  
  개체를 나타내는 ProgID입니다.  
   

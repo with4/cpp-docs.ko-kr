@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdaa1b23bbefb64071e5f1f330c8708f9f9516ad
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 04281b87584d10d36f5f2eeea05dfae0923b2d9f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605268"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013316"
 ---
 # <a name="moduleregisterobjects-method"></a>Module::RegisterObjects 메서드
 다른 응용 프로그램에 연결할 수 있도록 COM 또는 Windows 런타임 개체를 등록 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT RegisterObjects(  
    ModuleBase* module,   
    const wchar_t* serverName);  

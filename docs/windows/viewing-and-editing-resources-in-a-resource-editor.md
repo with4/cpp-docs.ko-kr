@@ -24,15 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97816db8075d04b6d05950bb65c25aa12382b728
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5fca755c46d3fc5628adc2c724b9307a346d1fe7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646932"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014005"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>리소스 편집기에서 리소스 보기 및 편집
-각 리소스 종류에 해당 리소스 형식에 특정 리소스 편집기입니다. 다시 정렬의 크기를 조정 하거나 컨트롤 및 기능을 추가 합니다. 그렇지 않으면 연결된 된 편집기를 사용 하 여 리소스의 기능을 수정할 수 있습니다. 리소스를 편집할 수도 있습니다 [텍스트 형식](../windows/how-to-open-a-resource-script-file-in-text-format.md) 하 고 [이진 형식](../windows/opening-a-resource-for-binary-editing.md)합니다.  
+각 리소스 종류에는 **리소스** 리소스 유형에 특정 한 편집기입니다. 다시 정렬의 크기를 조정 하거나 컨트롤 및 기능을 추가 합니다. 그렇지 않으면 연결된 된 편집기를 사용 하 여 리소스의 기능을 수정할 수 있습니다. 리소스를 편집할 수도 있습니다 [텍스트 형식](../windows/how-to-open-a-resource-script-file-in-text-format.md) 하 고 [이진 형식](../windows/opening-a-resource-for-binary-editing.md)합니다.  
   
  일부 리소스 종류는 개별 파일을 가져오고; 다양 한 방식에서으로 사용할 수 있습니다. 여기에 비트맵, 아이콘, 커서, 도구 모음 및 html 파일이 포함 됩니다. 이러한 리소스 파일 이름에는 뿐만 [리소스 식별자](../windows/symbols-resource-identifiers.md)합니다. 다른 Win32 프로젝트에 있는 문자열 테이블 대화 상자, 메뉴 등 존재 리소스 스크립트 (.rc) 파일 또는 리소스 템플릿 (.rct) 파일의 일부로 합니다.  
   
@@ -46,16 +46,16 @@ ms.locfileid: "39646932"
   
 1.  선택 **리소스 뷰** 에서 합니다 **보기** 메뉴.  
   
-2.  리소스 뷰 창에서 최상위 창이 아닌 경우 클릭 합니다 **리소스 뷰** 탭의 맨 위로 이동 합니다.  
+2.  경우는 **리소스 뷰** 최상위 창이 아닙니다를 클릭 합니다 **리소스 뷰** 를 맨 위로 이동 하려면 탭.  
   
-3.  리소스 보기에서 보려는 리소스를 포함 하는 프로젝트에 대 한 폴더를 확장 합니다. 예를 들어 대화 상자 리소스를 보려는 경우 대화 상자 폴더를 확장 합니다.  
+3.  **리소스 뷰**를 보려는 리소스를 포함 하는 프로젝트에 대 한 폴더를 확장 합니다. 대화 상자 리소스를 보려는 경우 확장 하는 예를 들어 합니다 **대화 상자** 폴더입니다.  
   
     > [!NOTE]
     >  프로젝트에 .rc 파일이 아직 없는 경우 [새 리소스 스크립트 파일 만들기](../windows/how-to-create-a-resource-script-file.md)를 참조하세요.  
   
-4.  예를 들어 IDD_ABOUTBOX 리소스를 두 번 클릭 합니다.  
+4.  예를 들어 리소스를 두 번 클릭 **IDD_ABOUTBOX**합니다.  
   
-     리소스가 해당 편집기에서 열립니다. 예를 들어, 대화 상자 리소스에 대 한 리소스 대화 상자 편집기에서 열립니다.  
+     리소스가 해당 편집기에서 열립니다. 예를 들어, 대화 상자 리소스에서 열립니다는 **대화 상자** 편집기입니다.  
   
      할 수도 있습니다 [프로젝트를 열지 않고도.rc (리소스 스크립트) 파일에서 리소스를 볼](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "39646932"
   
 ### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>리소스 편집기에서 관리 되는 리소스를 보려면  
   
-1.  **솔루션 탐색기**, 예를 들어 Bitmap1.bmp 리소스를 두 번 클릭 합니다.  
+1.  **솔루션 탐색기**, 예를 들어 리소스를 두 번 클릭 **Bitmap1.bmp**합니다.  
   
      리소스가 해당 편집기에서 열립니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "39646932"
   
 1.  **솔루션 탐색기**를 선택 하 고 삭제 하려는 리소스를 마우스 오른쪽 단추로 클릭 **삭제** 바로 가기 메뉴에서.  
   
-### <a name="requirements"></a>요구 사항  
+## <a name="requirements"></a>요구 사항  
  없음  
   
 ## <a name="see-also"></a>참고 항목  

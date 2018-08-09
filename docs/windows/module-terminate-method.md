@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c1822f8c1a854274ff30795096bb639520ea8cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40d374219e6b9eb05a74f5b62f710691b4e9342a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874722"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016894"
 ---
 # <a name="moduleterminate-method"></a>Module::Terminate 메서드
 모듈에 의해 인스턴스화되는 모든 팩터리가 종료됩니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void Terminate();  
 ```  
   

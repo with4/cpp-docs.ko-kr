@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 66d97de05956df985f4c0d699682210721b60c82
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651833"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011844"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>추적 참조 연산자(C++ 구성 요소 확장명)
 A *추적 참조* (`%`)는 일반 c + + 참조 처럼 동작 (`&`) 추적 참조에 개체를 할당 될 때를 제외 하 고 개체 참조 개수가 증가 합니다.  
@@ -46,7 +46,7 @@ A *추적 참조* (`%`)는 일반 c + + 참조 처럼 동작 (`&`) 추적 참조
 ## <a name="windows-runtime"></a>Windows 런타임  
  추적 참조는 %가 참조 개수를 계산한다는 점을 제외하면 표준 C++ 참조처럼 동작합니다. 다음 코드 조각에서는 % 형식과 ^ 형식을 변환하는 방법을 보여 줍니다.  
   
-```  
+```cpp  
 Foo^ spFoo = ref new Foo();  
 Foo% srFoo = *spFoo;  
 Foo^ spFoo2 = %srFoo;  
@@ -54,7 +54,7 @@ Foo^ spFoo2 = %srFoo;
   
  다음 예제에서는 %를 사용하는 함수에 ^를 전달하는 방법을 보여 줍니다.  
   
-```  
+```cpp  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -139,8 +139,6 @@ int main() {
    Console::WriteLine(a[0]);  
 }  
 ```  
-  
- **출력**  
   
 ```Output  
 21  

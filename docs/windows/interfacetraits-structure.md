@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63725d5d3e0edaea328d5753640aa74bdf35c7e0
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 6cb96b90a069c12e65c53158717d9a89fb0aed3d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606750"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014102"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits 구조체
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<  
    typename I0  
 >  
@@ -69,7 +69,7 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 |[InterfaceTraits::CastToBase 메서드](../windows/interfacetraits-casttobase-method.md)|지정된 된 포인터에 대 한 포인터를 캐스팅 `Base`합니다.|  
 |[InterfaceTraits::CastToUnknown 메서드](../windows/interfacetraits-casttounknown-method.md)|지정된 된 포인터에 대 한 포인터를 캐스팅 `IUnknown`합니다.|  
 |[InterfaceTraits::FillArrayWithIid 메서드](../windows/interfacetraits-fillarraywithiid-method.md)|인터페이스 ID를 할당 `Base` 인덱스 인수에 의해 지정 된 배열 요소에 있습니다.|  
-|[InterfaceTraits::Verify 메서드](../windows/interfacetraits-verify-method.md)|기본 제대로 파생 되는 것을 확인 합니다.|  
+|[InterfaceTraits::Verify 메서드](../windows/interfacetraits-verify-method.md)|확인 `Base` 제대로 파생 됩니다.|  
   
 ### <a name="public-constants"></a>공용 상수  
   

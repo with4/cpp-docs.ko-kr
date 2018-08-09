@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ddf76345234ba44b2634c04ee1e2899913ed2078
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5e07d218158ff5615fbdc26a5f48b7cf828596ed
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653061"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014171"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 자세한 오류 반환에 대한 지원을 구현합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ support_error_info(  
    error_interface=uuid  
 ) ]  

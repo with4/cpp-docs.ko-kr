@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ceaafd6230e6497ed2b7636ad5070141546cb8d6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6d4ff3393e30e72bc3378837ff11c41927249d1f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648167"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014197"
 ---
 # <a name="synclocktsynclockt-constructor"></a>SyncLockT::SyncLockT 생성자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 SyncLockT(  
    _Inout_ SyncLockT&& other  
 );  

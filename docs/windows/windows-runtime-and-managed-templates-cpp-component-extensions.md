@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6fe449842cc019520a3d73528db05a26b17dcd99
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641462"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011564"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows 런타임 및 관리되는 템플릿(C++ 구성 요소 확장명)
 템플릿을 사용하면 공용 언어 런타임 형식 또는 Windows 런타임의 프로토타입을 정의한 다음, 다른 템플릿 형식 매개 변수를 사용하여 해당 형식의 변형을 인스턴스화할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "39641462"
   
 ### <a name="examples"></a>예제  
   
- 관리되는 형식 템플릿 매개 변수로 제네릭 형식을 인스턴스화할 수 있지만 제네릭 형식 템플릿 매개 변수로 관리되는 템플릿을 인스턴스화할 수 없습니다.  이는 제네릭 형식이 런타임에 확인되기 때문입니다.  자세한 내용은 [제네릭과 템플릿 (Visual c + +)](../windows/generics-and-templates-visual-cpp.md)합니다.  
+ 관리되는 형식 템플릿 매개 변수로 제네릭 형식을 인스턴스화할 수 있지만 제네릭 형식 템플릿 매개 변수로 관리되는 템플릿을 인스턴스화할 수 없습니다. 이는 제네릭 형식이 런타임에 확인되기 때문입니다. 자세한 내용은 [제네릭과 템플릿 (Visual c + +)](../windows/generics-and-templates-visual-cpp.md)합니다.  
   
 ```cpp  
 // managed_templates.cpp  
@@ -77,7 +77,7 @@ template<class T> public ref class R {
 };  
 ```  
   
- C++/CLI 언어 구문으로 참조된 어셈블리에 정의된 템플릿을 액세스할 수 없지만 리플렉션을 사용할 수 있습니다.  템플릿을 인스턴스화하지 않으면 메타데이터로 내보낼 수 없습니다.  템플릿을 인스턴스화할 경우 참조된 멤버 함수만 메타데이터에 표시됩니다.  
+ C++/CLI 언어 구문으로 참조된 어셈블리에 정의된 템플릿을 액세스할 수 없지만 리플렉션을 사용할 수 있습니다. 템플릿을 인스턴스화하지 않으면 메타데이터로 내보낼 수 없습니다. 템플릿을 인스턴스화할 경우 참조된 멤버 함수만 메타데이터에 표시됩니다.  
   
 ```cpp  
 // managed_templates_3.cpp  

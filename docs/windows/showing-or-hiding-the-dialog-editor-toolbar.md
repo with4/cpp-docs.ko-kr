@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 862498b012955c3b77a13b37ae07bbee66dd8dfa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a8a19de393e7451f045d840552127743f87e00ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651407"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019175"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>대화 상자 편집기 도구 모음 표시 또는 숨기기
-대화 상자 편집기를 열면 솔루션의 맨 위에 있는 대화 상자 편집기 도구 모음에서 자동으로 나타납니다.  
+열면 합니다 **대화 상자** 편집기는 **대화 상자 편집기** 솔루션의 맨 위에 있는 도구 모음이 자동으로 나타납니다.  
   
 ### <a name="dialog-editor-toolbar"></a>대화 상자 편집기 도구 모음  
   
@@ -40,9 +40,9 @@ ms.locfileid: "39651407"
 |![세로 가운데 단추](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|세로|![눈금 단추를 토글](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|모눈 설정/해제|  
 |![가로 가운데 단추](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|가로|![안내선 설정/해제 단추](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|안내선 설정/해제|  
   
- 대화 상자 편집기 도구 모음에 크기 및 맞춤 예를 들어 대화 상자에서 컨트롤의 레이아웃을 정렬 하는 단추가 있습니다. 대화 상자 편집기 도구 모음 단추 서식 메뉴에서 명령에 해당합니다. 자세한 내용은 참조 하세요 [대화 상자 편집기의 액셀러레이터 키](../windows/accelerator-keys-for-the-dialog-editor.md)합니다.  
+ 합니다 **대화 상자 편집기** 도구 모음 단추가 대화 상자에서 예를 들어 크기 및 맞춤에서 컨트롤의 레이아웃을 정렬 합니다. **대화 상자 편집기** 도구 모음 단추에 명령에 해당 합니다 **형식** 메뉴. 자세한 내용은 참조 하세요 [대화 상자 편집기의 액셀러레이터 키](../windows/accelerator-keys-for-the-dialog-editor.md)합니다.  
   
- 대화 상자 편집기를 사용 하는 경우에 사용할 수 있는 도구 모음 및 창 목록에서 선택 하 여 대화 상자 편집기 도구 모음 표시를 전환할 수 있습니다.  
+ 있는 경우는 **대화 상자** 편집기의 표시를 전환할 수 있습니다는 **대화 상자 편집기** 사용할 수 있는 도구 모음 및 창 목록에서 선택 하 여 도구 모음입니다.  
   
 ### <a name="to-show-or-hide-the-dialog-editor-toolbar"></a>표시 하거나 대화 상자 편집기 도구 모음을 숨기려면  
   

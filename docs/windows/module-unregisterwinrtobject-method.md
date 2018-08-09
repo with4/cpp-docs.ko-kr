@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5bf681acc485b08448fcb4e936ca1096a8137384
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 93c804f9e7701ab3bf021902b62ae3f1b414d61c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607474"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019081"
 ---
 # <a name="moduleunregisterwinrtobject-method"></a>Module::UnregisterWinRTObject 메서드
 다른 응용 프로그램과 연결할 수 있도록 하나 이상의 Windows 런타임 개체를 등록 취소 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 virtual HRESULT UnregisterWinRTObject(  
    unsigned int,  
    _Inout_ WINRT_REGISTRATION_COOKIE* cookie  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *쿠키*  
  등록이 해지된 클래스 개체를 식별하는 값에 대한 포인터입니다.  
-  
-## <a name="return-value"></a>반환 값  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** module.h  

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 14b68f573452d9ab8894027fd4d83c0b89f2ddf1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603347"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018363"
 ---
 # <a name="identifier-ccli"></a>__identifier(C++/CLI)
 식별자로 Visual c + + 키워드를 사용 하도록 설정 합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "39603347"
 ## <a name="all-platforms"></a>모든 플랫폼  
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 __identifier(  
 Visual_C++_keyword  
 )  
@@ -49,7 +49,7 @@ Visual_C++_keyword
 ### <a name="examples"></a>예제  
  **예제**  
   
- 다음 예제에서는 클래스 이름이 `template` C#에서 만들어지고 DLL로 분산 합니다. 사용 하는 Visual c + + 프로그램에는 `template` 클래스를 **__identifier** 키워드는 팩트를 숨깁니다는 **템플릿** 는 표준 c + + 키워드입니다.  
+ 다음 예제에서는 클래스 이름이 **템플릿** C#에서 만들어지고 DLL로 분산 합니다. 사용 하는 Visual c + + 프로그램에는 **템플릿** 클래스를 **__identifier** 키워드는 팩트를 숨깁니다는 **템플릿** 는 표준 c + + 키워드입니다.  
   
 ```cs  
 // identifier_template.cs  
@@ -79,7 +79,7 @@ int main() {
   
 ### <a name="examples"></a>예제  
   
- 다음 예제에서는 클래스 이름이 `template` C#에서 만들어지고 DLL로 분산 합니다. 사용 하는 Visual c + + 프로그램에는 `template` 클래스를 **__identifier** 키워드는 팩트를 숨깁니다는 **템플릿** 는 표준 c + + 키워드입니다.  
+ 다음 예제에서는 클래스 이름이 **템플릿** C#에서 만들어지고 DLL로 분산 합니다. 사용 하는 Visual c + + 프로그램에는 **템플릿** 클래스를 **__identifier** 키워드는 팩트를 숨깁니다는 **템플릿** 는 표준 c + + 키워드입니다.  
   
 ```cs  
 // identifier_template.cs  

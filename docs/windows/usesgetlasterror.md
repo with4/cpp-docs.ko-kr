@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e5d7144f7e2a6fa3bf6937a377ccad0a711f746
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 011cf954a0b111e46afcaf6e55a54914075864db
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647062"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014564"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 해당 함수를 호출할 때 오류가 발생 하는, 하는 경우 다음 호출자가 호출할 수 있도록 다음 호출자에 게 지시 `GetLastError` 오류 코드를 검색 하려면.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [usesgetlasterror]  
 ```  
   

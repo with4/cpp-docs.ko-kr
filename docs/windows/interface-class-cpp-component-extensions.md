@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74b4ea6b82de65f691d5d0350e161725625e4e1f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cda56029b94d2c4be55ce133d96adb76663491ae
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604488"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012835"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface 클래스(C++ 구성 요소 확장)
 인터페이스를 선언합니다.  네이티브 인터페이스에 대 한 내용은 참조 하세요 [__interface](../cpp/interface.md)합니다.  
@@ -32,14 +32,13 @@ ms.locfileid: "39604488"
 
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 interface_access  
 interface class  
  name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
-  
  *interface_access*  
  어셈블리 외부에서 인터페이스의 접근성입니다.  가능한 값은 **공개** 하 고 **개인**합니다.  **개인** 가 기본값입니다. 중첩 된 인터페이스를 사용할 수 없습니다는 *interface_access* 지정자입니다.  
   
@@ -75,7 +74,7 @@ interface class
  개발 환경에서에서 얻을 수 있습니다 F1 도움말이 키워드 이러한 키워드를 강조 표시 하 여 (`interface class`예를 들어) F1 키를 누릅니다.  
   
 ## <a name="windows-runtime"></a>Windows 런타임  
- **주의**  
+### <a name="remarks"></a>설명 
   
  (이 언어 기능에는 Windows 런타임에만 적용되는 설명이 없습니다.)  
   
@@ -83,7 +82,7 @@ interface class
  컴파일러 옵션: `/ZW`  
   
 ## <a name="common-language-runtime"></a>공용 언어 런타임 
- **주의**  
+### <a name="remarks"></a>설명
   
  (이 언어 기능에는 공용 언어 런타임에만 적용되는 설명이 없습니다.)  
   
@@ -183,8 +182,6 @@ int main() {
    hi->Function_1();  
 }  
 ```  
-  
- **출력**  
   
 ```Output  
 in Function_3  

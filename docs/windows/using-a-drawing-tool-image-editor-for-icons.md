@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8345829e5d561ead3be0052770e022f704eabc3b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fde195d465116f2fa3055d5981c2c465c4bf31ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646126"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019466"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>그리기 도구 사용(아이콘에 대한 이미지 편집기)
-이미지 편집기의 자유롭게 그리기 및 지우기 도구 동일한 방식으로 작동: 도구를 선택 하 고 필요한 경우 [전경색 및 배경색을 선택](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) 크기 및 모양 옵션. 다음 이미지에 포인터를 이동 하 고 클릭 하거나 그리기 및 지우기으로 끌어 옵니다.  
+합니다 **이미지** 편집기의 그리기 및 지우기 동일한 방식으로 작동 하는 도구에 자유롭게: 도구를 선택 및 필요한 경우 [전경색 및 배경색을 선택](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) 크기 및 모양 옵션입니다. 다음 이미지에 포인터를 이동 하 고 클릭 하거나 그리기 및 지우기으로 끌어 옵니다.  
   
  선택 하는 경우는 **지우개** 도구인 **브러시** 도구인 또는 **에 어 브러시** 도구, 옵션 선택기에는 해당 도구의 옵션이 표시 됩니다.  
   

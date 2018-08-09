@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1b629f805cf07736dd7988cac6afb857a23b5e5
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fc0dcba6597b6b8a3b37c240bf1c4a58f30b6b23
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603422"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020345"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 컴파일러 특성 사용으로 인해 코드를 삽입 하지 못하도록 방지 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ no_injected_text(  
    boolean  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *부울* (선택 사항)  
  **true 이면** 없는 코드를 삽입 하려는 경우 **false** 코드를 삽입할 수 있도록 합니다. **true** 가 기본값입니다.  
   

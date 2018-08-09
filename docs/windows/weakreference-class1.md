@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71de341be0cb482a49cbf35ddd34e414be8afde4
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 78b9a62838508c2e97bdd04f56778a622343e6f1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645544"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012292"
 ---
 # <a name="weakreference-class1"></a>WeakReference 클래스 1
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 class WeakReference;  
 ```  
   

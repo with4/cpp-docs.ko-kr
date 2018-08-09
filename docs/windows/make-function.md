@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9941f2b1bce67fb09c69db6278de94c102f88473
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0076445f21bcbad5ca7028c088cddfdbdcacf8cd
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604871"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013703"
 ---
 # <a name="make-function"></a>Make 함수
 지정된 된 Windows 런타임 클래스를 초기화합니다. 이 함수를 사용 하 여 동일한 모듈에 정의 된 구성 요소를 인스턴스화합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template <  
    typename T,  
    typename TArg1,  
