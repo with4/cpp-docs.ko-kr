@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e05a1be5d84db52573d3c3235936ecf82dde5894
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6b27f45d3a9b9b308a56e1ac8f945969f8c49e2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892854"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643428"
 ---
 # <a name="synclockt-class"></a>SyncLockT 클래스
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -36,14 +36,14 @@ template <
 class SyncLockT;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `SyncTraits`  
- 리소스의 소유권을 사용할 수 있는 형식입니다.  
+### <a name="parameters"></a>매개 변수  
+ *SyncTraits*  
+ 리소스의 소유권을 가져올 수 있는 형식입니다.  
   
 ## <a name="remarks"></a>설명  
  단독으로 사용할 수 있는 형식을 나타내는 또는 리소스의 소유권을 공유 합니다.  
   
- SyncLockT 클래스는 사용, 예를 들어 구현할 수 있도록는 [SRWLock](../windows/srwlock-class.md) 클래스입니다.  
+ 합니다 **SyncLockT** 클래스가 사용 되며, 예를 들어 구현할 수 있도록 합니다 [SRWLock](../windows/srwlock-class.md) 클래스입니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -51,27 +51,27 @@ class SyncLockT;
   
 |이름|설명|  
 |----------|-----------------|  
-|[SyncLockT::SyncLockT 구조체](../windows/synclockt-synclockt-constructor.md)|SyncLockT 클래스의 새 인스턴스를 초기화합니다.|  
-|[SyncLockT::~SyncLockT 소멸자](../windows/synclockt-tilde-synclockt-destructor.md)|SyncLockT 클래스의 인스턴스 초기화를 취소 합니다.|  
+|[SyncLockT::SyncLockT 구조체](../windows/synclockt-synclockt-constructor.md)|새 인스턴스를 초기화 합니다 **SyncLockT** 클래스입니다.|  
+|[SyncLockT::~SyncLockT 소멸자](../windows/synclockt-tilde-synclockt-destructor.md)|인스턴스를 초기화 해제 합니다 **SyncLockT** 클래스입니다.|  
   
 ### <a name="protected-constructors"></a>Protected 생성자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[SyncLockT::SyncLockT 구조체](../windows/synclockt-synclockt-constructor.md)|SyncLockT 클래스의 새 인스턴스를 초기화합니다.|  
+|[SyncLockT::SyncLockT 구조체](../windows/synclockt-synclockt-constructor.md)|새 인스턴스를 초기화 합니다 **SyncLockT** 클래스입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[SyncLockT::IsLocked 메서드](../windows/synclockt-islocked-method.md)|현재 SyncLockT 개체는 리소스를 소유 하는지 여부를 나타냅니다. SyncLockT 개체 즉, *잠긴*합니다.|  
-|[SyncLockT::Unlock 메서드](../windows/synclockt-unlock-method.md)|있는 경우 현재 SyncLockT 개체에서 보유 하는 리소스의 제어를 해제 합니다.|  
+|[SyncLockT::IsLocked 메서드](../windows/synclockt-islocked-method.md)|나타냅니다 여부 현재 **SyncLockT** 리소스를 소유 하는 개체입니다. 즉, **SyncLockT** 개체가 *잠겨*합니다.|  
+|[SyncLockT::Unlock 메서드](../windows/synclockt-unlock-method.md)|현재 보유 한 리소스의 제어권을 해제 **SyncLockT** 개체에 있는 경우.|  
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
-|[SyncLockT::sync_ 데이터 멤버](../windows/synclockt-sync-data-member.md)|SyncLockT 클래스에 의해 표시 되는 기본 리소스를 보유 합니다.|  
+|[SyncLockT::sync_ 데이터 멤버](../windows/synclockt-sync-data-member.md)|표시 되는 기본 리소스를 보유 합니다 **SyncLockT** 클래스입니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `SyncLockT`  

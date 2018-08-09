@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a4fee4991459ddbab0ac370f025776529a6bd1e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ee66017edabf80349bf2960f7cb2ca2654c8c4cc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464550"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643581"
 ---
 # <a name="criticalsectionlock-method"></a>CriticalSection::Lock 메서드
 지정된 임계 영역 개체의 소유권을 기다립니다. 함수가 호출 스레드가 소유권을 부여받는 시기를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 SyncLock Lock();  
   
    static SyncLock Lock(  
@@ -37,7 +37,7 @@ SyncLock Lock();
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *cs*  
  사용자가 지정한 임계 영역 개체입니다.  
   

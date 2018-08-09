@@ -22,19 +22,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e44b5757ea7b9e469275688443ba7ed1e3810571
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: bd38dcf02de661a063df356b7d915eed9814f192
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571391"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652408"
 ---
 # <a name="eventsource"></a>event_source
 이벤트 소스를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ event_source(  
    type,  
    optimize=[speed | size],  
@@ -50,7 +50,7 @@ ms.locfileid: "39571391"
   
 -   `com` - COM 코드용. 사용 해야 합니다 `coclass` 때 `type` = `com`합니다. 이 값을 사용하려면 다음 헤더 파일을 포함해야 합니다.  
   
-    ```  
+    ```cpp  
     #define _ATL_ATTRIBUTES  
     #include <atlbase.h>  
     #include <atlcom.h>  

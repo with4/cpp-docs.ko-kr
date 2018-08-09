@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 36ae694365b58cb10666e5d8af67269b2c4f125c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a32fe0e66a8f61bc17e4512f63705635cd8b5263
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889373"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643678"
 ---
 # <a name="srwlocklockexclusive-method"></a>SRWLock::LockExclusive 메서드
-단독 모드의 SRWLock 개체를 가져옵니다.  
+획득 한 **SRWLock** 단독 모드의 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,12 +37,12 @@ static SyncLockExclusive LockExclusive(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `lock`  
- SRWLock 개체에 대한 포인터입니다.  
+### <a name="parameters"></a>매개 변수  
+ *lock*  
+ 에 대 한 포인터를 **SRWLock** 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 단독 모드의 SRWLock 개체입니다.  
+ **SRWLock** 단독 모드의 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

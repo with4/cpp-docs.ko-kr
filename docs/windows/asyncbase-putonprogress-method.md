@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a9460664ed58cf39f7b295e1406649ad1d66ca9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a99eee63496632b8f0918ee888e6a824424b757d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467419"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649892"
 ---
 # <a name="asyncbaseputonprogress-method"></a>AsyncBase::PutOnProgress 메서드
 진행률 이벤트 처리기의 주소를 지정된 된 값으로 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 STDMETHOD(  
    PutOnProgress  
 )(TProgress* progressHandler);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *progressHandler*  
  진행률 이벤트 처리기에 설정 된 주소입니다.  
   

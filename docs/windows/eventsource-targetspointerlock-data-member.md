@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b58aa072af5ff96093f9999d212f8b19ff0571c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 718a62d627f99eff24fd7c10e0280607a52e2be7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569819"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646889"
 ---
 # <a name="eventsourcetargetspointerlock-data-member"></a>EventSource::targetsPointerLock_ 데이터 멤버
 이 대 한 이벤트 처리기는 동안에 내부 데이터 멤버에 대 한 액세스를 동기화 **EventSource** 추가, 제거 또는 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 Wrappers::SRWLock targetsPointerLock_;  
 ```  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5da07f5328f6ff75f778e44ffafd3722e0cdfca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d00370014767d7b29de5f1efa592fd999af3d0bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882565"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641394"
 ---
 # <a name="criticalsectioncs-data-member"></a>CriticalSection::cs_ 데이터 멤버
 임계 영역 데이터 멤버를 선언합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 CRITICAL_SECTION cs_;  
 ```  
   

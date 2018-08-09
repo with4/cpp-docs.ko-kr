@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92add8f79abd3aac7c11142fa67ea3b4bcd237d5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dcf5a095167e48a52405978a105cadaddfa870f2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466204"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647816"
 ---
 # <a name="asyncbase-class"></a>AsyncBase 클래스
 Windows 런타임 비동기 상태 컴퓨터를 구현합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template <  
    typename TComplete,  
    typename TProgress = Details::Nil,  
@@ -44,7 +44,7 @@ template <
 class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Implements<IAsyncInfo>;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *TComplete*  
  비동기 작업이 완료 될 때 호출 되는 이벤트 처리기입니다.  
   
@@ -52,7 +52,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
  작업의 현재 진행률을 보고 하는 비동기 작업 실행을 때 호출 되는 이벤트 처리기입니다.  
   
  *resultType*  
- 중 하나는 [AsyncResultType](../windows/asyncresulttype-enumeration.md) 열거형 값입니다. 기본적으로 SingleResult입니다.  
+ 중 하나는 [AsyncResultType](../windows/asyncresulttype-enumeration.md) 열거형 값입니다. 기본적으로 `SingleResult`입니다.  
   
 ## <a name="members"></a>멤버  
   

@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0aed218fb12a1d115bbcd92f058ec72182864677
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872044"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645112"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>색상 창 표시 또는 숨기기(아이콘에 대한 이미지 편집기)
-### <a name="to-display-colors-window"></a>색상 창 표시 하려면  
+### <a name="to-display-colors-window"></a>색 창을 표시 하려면  
   
-1.  마우스 오른쪽 단추로 클릭 한 **이미지 편집기** 창 선택 **색상 창 표시** 바로 가기 메뉴에서.  
+1.  마우스 오른쪽 단추로 클릭는 **이미지 편집기** 창 선택 **색상 창 표시** 바로 가기 메뉴에서.  
   
      \- 또는 -  
   
@@ -36,14 +36,13 @@ ms.locfileid: "33872044"
   
 ### <a name="to-hide-the-colors-window"></a>색 창을 숨기려면  
   
-1.  창 고정을 해제 합니다. 이렇게 하면 자동 숨기기 창을 사용 중에서이 아닌 경우.  
+1.  창 고정을 해제 합니다. 이렇게 하면 자동 숨기기 창을 사용 하 여에 없는 경우.  
   
  \- 또는 -  
   
--   클릭는 **닫기** 단추입니다.  
+-   클릭 합니다 **닫기** 단추입니다.  
   
- 요구 사항  
-  
+## <a name="requirements"></a>요구 사항  
  없음  
   
 ## <a name="see-also"></a>참고 항목  

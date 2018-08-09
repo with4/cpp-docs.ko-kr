@@ -17,40 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e56793855b278e0631c39ebfcdc51669a001a24b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07258b2f7416b0747be81075f4c037a6be54e7a6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891534"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647075"
 ---
 # <a name="uuid-c-attributes"></a>uuid(C++ 특성)
-클래스 또는 인터페이스에 대 한 고유 ID를 지정합니다.  
+클래스 또는 인터페이스에 대 한 고유 ID를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ uuid(  
+[ uuid(  
    "uuid"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *uuid*  
- 128 비트, 고유 식별자입니다.  
+ 128 비트 고유 식별자입니다.  
   
 ## <a name="remarks"></a>설명  
- 인터페이스 또는 클래스의 정의 지정 하지 않은 경우는 `uuid` 하나는 c + + 특성을 설정한 다음 Visual c + + 컴파일러 제공 합니다. 지정 하는 경우는 `uuid`, 인용 부호를 포함 해야 합니다.  
+ 인터페이스 또는 클래스의 정의 지정 하지 않은 경우는 **uuid** c + + 특성을 Visual c + + 컴파일러 제공 됩니다. 지정 하는 경우는 **uuid**, 따옴표를 포함 해야 합니다.  
   
- 지정 하지 않으면 `uuid`, 컴파일러는 컴퓨터에서 서로 다른 특성을 프로젝트의 인터페이스 또는 동일한 이름 가진 클래스에 대해 동일한 GUID를 생성 합니다.  
+ 지정 하지 않는 경우 **uuid**, 컴파일러에서 컴퓨터에서 다른 특성 프로젝트에서 같은 이름의 클래스 또는 인터페이스에 대 한 동일한 GUID를 생성 합니다.  
   
- 사용자 고유의 고유 Id를 생성 하려면 Uuidgen.exe 또는 Guidgen.exe를 사용할 수 있습니다. (이러한 도구 중 하나를 실행 하려면 클릭 **시작** 클릭 **실행** 메뉴. 필요한 도구의 이름을 입력 합니다.)  
+ 자체 고유 Id를 생성 하려면 Uuidgen.exe 또는 Guidgen.exe를 사용할 수 있습니다. (이러한 도구 중 하나를 실행 하려면 클릭 **시작** 누릅니다 **실행** 메뉴. 필요한 도구를의 이름을 입력 합니다.)  
   
- 또한 ATL을 사용 하지는 않는 프로젝트를 사용할 경우 지정 하는 `uuid` 특성을 지정 하는 것과 같습니다는 [uuid](../cpp/uuid-cpp.md) __declspec 한정자입니다. 검색 하는 `uuid` 사용할 수는 클래스의 [__uuidof](../cpp/uuidof-operator.md)  
+ 또한 ATL을 사용 하지 않는 프로젝트를 사용 하는 경우를 지정 하는 **uuid** 특성이 지정 하는 것과 [uuid](../cpp/uuid-cpp.md) **__declspec** 한정자입니다. 검색 하는 **uuid** 클래스의 사용할 수 있습니다 [__uuidof](../cpp/uuidof-operator.md)  
   
-## <a name="example"></a>예제  
- 참조는 [바인딩 가능한](../windows/bindable.md) 의 샘플 사용에 대 한 예제 `uuid`합니다.  
+## <a name="example"></a>예  
+ 참조를 [bindable](../windows/bindable.md) 의 샘플 사용에 대 한 예제 **uuid**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -58,7 +57,7 @@ ms.locfileid: "33891534"
   
 |||  
 |-|-|  
-|**적용 대상**|**클래스**, `struct`, `interface`, **union**, `enum`|  
+|**적용 대상**|**클래스**, **구조체**합니다 **인터페이스**를 **union**, **열거형**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

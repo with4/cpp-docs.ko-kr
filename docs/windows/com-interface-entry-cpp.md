@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd6cc88ba01d7cfc5d7d5712ddeaaef0418bb12a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d79c371b98e0dd1091fc5db2280efdee3abbf6e9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462786"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646191"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry(C++)
 대상 클래스의 COM 맵에 인터페이스 항목을 추가 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ com_interface_entry(   
   com_interface_entry  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *com_interface_entry*  
  항목의 실제 텍스트를 포함 하는 문자열입니다. 가능한 값 목록을 참조 하세요 [COM_INTERFACE_ENTRY 매크로](../atl/reference/com-interface-entry-macros.md)합니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "39462786"
   
  ATL 인터페이스 맵의 첫 번째 항목 id로 사용 하기 때문에이 제한 사항은 반드시 `IUnknown`따라서 올바른 인터페이스를 입력 해야 합니다. 예를 들어, 다음 코드 샘플 올바르지 인터페이스 맵 첫 번째 항목이 실제 COM 인터페이스를 지정 하지 않으므로 합니다.  
   
-```  
+```cpp  
 [ coclass, com_interface_entry =  
     "COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"  
 ]  
@@ -100,7 +100,7 @@ class CMyClass: public IMyClass, public IDebugTest
   
  에 대 한 결과 COM 개체 맵의 `CMyBaseClass` 는 다음과 같습니다.  
   
-```  
+```cpp  
 BEGIN_COM_MAP(CMyClass)  
     COM_INTERFACE_ENTRY (IMyClass)  
     COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
@@ -119,7 +119,7 @@ END_COM_MAP()
 |-|-|  
 |**적용 대상**|**클래스**, **구조체**|  
 |**반복 가능**|예|  
-|**필수 특성**|다음 중 하나 이상: **coclass**, **progid**또는 **vi_progid**.|  
+|**필수 특성**|다음 중 하나 이상의: `coclass`, `progid`, 또는 `vi_progid`합니다.|  
 |**잘못된 특성**|없음|  
   
  특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  

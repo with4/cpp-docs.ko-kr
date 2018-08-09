@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e813ce223bad48aab3807bb01e042190d28aef74
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 7d20927b284de5c565c5fa9ebf00f8be00a4b486
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568672"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648852"
 ---
 # <a name="hidden"></a>hidden
 항목이 있지만 하지 사용자 기반 브라우저에 표시할지를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [hidden]  
 ```  
   

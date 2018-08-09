@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cc902a0bb90194c463ebb874234f65230cd502b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe9c73a09e2a0f220ee4454baefb07b7e65fcafa
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891313"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641649"
 ---
 # <a name="toolbar-editor"></a>도구 모음 편집기
 도구 모음 편집기에서는 도구 모음 리소스를 만들고 비트맵을 도구 모음 리소스로 변환할 수 있습니다. 도구 모음 편집기에서는 그래픽 표시를 사용하여 완료된 응용 프로그램에서 보이는 모양과 거의 유사한 도구 모음과 단추를 표시합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "33891313"
   
  도구 모음 편집기 기능은 이미지 편집기 기능과 유사합니다. 메뉴 항목, 그래픽 도구 및 비트맵 그리드는 이미지 편집기의 항목과 같습니다. 이미지 메뉴에는 도구 모음 편집기와 이미지 편집기 사이에서 전환할 수 있는 메뉴 명령이 있습니다. 그래픽 도구 모음, 색 색상표 또는 이미지 메뉴 사용에 대한 자세한 내용은 [이미지 편집기](../windows/image-editor-for-icons.md)를 참조하세요.  
   
- 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
+ 관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다. 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 내용은 참조 하세요 [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화 관리 되는 앱의 리소스에 대 한 내용은 참조 하세요 [Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  MFC 또는 ATL  
@@ -55,4 +55,3 @@ ms.locfileid: "33891313"
 ## <a name="see-also"></a>참고 항목  
  [리소스 편집기](../windows/resource-editors.md)   
  [메뉴 및 기타 리소스](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-

@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 751c7f9efe4f5db612419d5837cc2d6f304f43da
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: deeb40e54c0324874d9c99a42a98e7e852394dc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570674"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643191"
 ---
 # <a name="generic-classes-ccli"></a>제네릭 클래스(C++/CLI)
 제네릭 클래스는 다음 형식을 사용 하 여 선언 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [attributes]  
 generic <class-key type-parameter-identifier(s)>  
 [constraint-clauses]  
@@ -45,7 +45,7 @@ class-body
 ## <a name="remarks"></a>설명  
  위의 구문에서 다음과 같은 용어가 사용 됩니다.  
   
- `attributes`(선택 사항)  
+ *특성* (선택 사항)  
  추가 선언 정보입니다. 특성 및 특성 클래스에 대한 자세한 내용은 특성을 참조하십시오.  
   
  *클래스 키*  
@@ -57,7 +57,7 @@ class-body
  *제약 조건 절*  
  목록 (쉼표로 구분 되지 않습니다)의 **여기서** 절 형식 매개 변수 제약 조건을 지정 합니다. 형식을 사용 합니다.  
   
- `where`  *형식 매개 변수 식별자*`:`*제약 조건 목록*   `...`  
+ `where`  *형식 매개 변수 식별자*`:`*제약 조건 목록*  `...`  
   
  *제약 조건 목록*  
  *클래스 또는 인터페이스*[`,` *...* ]  
@@ -429,7 +429,7 @@ ref struct Outer {
 };  
 ```  
   
- 외부 형식\<int >:: 내부 외부 형식과 동일 하지는\<double >:: 내부.  
+ 형식 `Outer<int>::Inner` 형식으로 같지 않습니다 `Outer<double>::Inner`합니다.  
   
  제네릭 클래스에서 제네릭 메서드의 경우와 마찬가지로 중첩 된 형식에 대 한 추가 형식 매개 변수를 정의할 수 있습니다. 내부 및 외부 클래스에서 형식 매개 변수 이름과 사용 하는 경우 내부 형식 매개 변수가 외부 형식 매개 변수가 숨겨집니다.  
   
@@ -449,7 +449,7 @@ ref class Outer {
   
  외부 형식 매개 변수를 참조할 수 없으므로 이므로 컴파일러는이 상황에서 경고를 생성 합니다.  
   
- 생성 된 중첩 된 제네릭 형식을 명명 하는 경우 내부 형식을 외부 형식의 형식 매개 변수에 의해 암시적으로 매개 변수화 된 경우에 외부 형식의 형식 매개 변수는 내부 형식에 대 한 형식 매개 변수 목록에 포함 되지 않습니다. 위의 예에서 생성 된 형식의 이름을 것 Outer\<int >:: 내부\<문자열 >.  
+ 생성 된 중첩 된 제네릭 형식을 명명 하는 경우 내부 형식을 외부 형식의 형식 매개 변수에 의해 암시적으로 매개 변수화 된 경우에 외부 형식의 형식 매개 변수는 내부 형식에 대 한 형식 매개 변수 목록에 포함 되지 않습니다. 위의 예에서 생성 된 형식의 이름을 것 `Outer<int>::Inner<string>`입니다.  
   
  다음 예제에서는 제네릭 클래스에서 중첩 된 형식을 사용 하 여 연결된 된 목록을 읽고 빌드를 보여 줍니다.  
   
@@ -548,7 +548,7 @@ Reading nodes:
   
 -   속성, 이벤트, 인덱서 및 연산자 반환 값, 매개 변수 또는 지역 변수인 경우와 같이 바깥쪽 제네릭 클래스의 형식 매개 변수를 사용할 수 `ItemType` 클래스의 형식 매개 변수입니다.  
   
-    ```  
+    ```cpp  
     public ItemType MyProperty {}  
     ```  
   

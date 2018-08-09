@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d5605670e05f91f9f1293c8bff0f4d74e458d25
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c7e2161c5451fe82e12918f00e8cb2cde37d336
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890338"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642317"
 ---
 # <a name="weakreferencedecrementstrongreference-method"></a>WeakReference::DecrementStrongReference 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,9 +34,9 @@ ULONG DecrementStrongReference();
 ```  
   
 ## <a name="remarks"></a>설명  
- 현재 WeakReference 개체의 강력한 참조 횟수를 줄입니다.  
+ 현재는 강력한 참조 횟수를 감소 시킵니다 **WeakReference** 개체입니다.  
   
- 강력한 참조로 설정는 강력한 참조 횟수가 0 인 경우 `nullptr`합니다.  
+ 강력한 참조 횟수가 0이 되 면 강력한 참조로 설정 됩니다 **nullptr**합니다.  
   
 ## <a name="return-value"></a>반환 값  
  감소 된 강력한 참조 수입니다.  
@@ -47,5 +47,5 @@ ULONG DecrementStrongReference();
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>참고 항목  
-[WeakReference 클래스](../windows/weakreference-class1.md)  
+ [WeakReference 클래스](../windows/weakreference-class1.md)  
  [Microsoft::WRL::Details 네임스페이스](../windows/microsoft-wrl-details-namespace.md)

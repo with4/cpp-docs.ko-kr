@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6401d78f0c410057d41a80f2345255d4876adb23
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 44bd357ea5d7c8da0ffdb4e2886a97434a12a760
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464417"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641627"
 ---
 # <a name="comptrrefoperator-interfacetype-operator"></a>ComPtrRef::operator InterfaceType** 연산자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 operator InterfaceType**();  
 ```  
   

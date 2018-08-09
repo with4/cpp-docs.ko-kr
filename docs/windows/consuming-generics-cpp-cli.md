@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8282079099b0b67b144f768a69f724e39305385
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cf1c7c0894eacc828a011c8c5f9fef8c2d78fba8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460493"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652515"
 ---
 # <a name="consuming-generics-ccli"></a>제네릭 사용(C++/CLI)
 한 .NET 언어로 작성된 제네릭은 다른 .NET 언어에서 사용할 수 있습니다. 템플릿과는 달리, 컴파일된 어셈블리의 제네릭은 여전히 제네릭으로 남아있습니다. 따라서 제네릭 형식이 정의된 어셈블리보다 다른 어셈블리 및 다른 언어로 제네릭 형식을 인스턴스화할 수 있습니다.  
@@ -114,9 +114,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>출력  
-  
-```  
+```Output  
 90  
 80  
 70  

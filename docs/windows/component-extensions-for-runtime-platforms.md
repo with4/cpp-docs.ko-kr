@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e68e2b729f8120a33b296fa485d145101b3d6e5b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a9fa20fc180d9b77f5d909ea06d12d69c1ef89d1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466711"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652687"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>런타임 플랫폼의 구성 요소 확장명
 Visual C++에서는 런타임 플랫폼을 대상으로 프로그래밍할 수 있도록 언어 확장을 제공합니다. 사용 하 여 C + + /CX에서는 유니버설 Windows 플랫폼 앱 및 네이티브 코드로 컴파일되는 구성 요소 프로그래밍할 수 있습니다. C +를 사용 하 여 Windows 런타임 COM 인터페이스에 대해 직접 프로그래밍 하 여 유니버설 Windows 플랫폼 앱을 만들 수 있지만 + CX, 생성자, 예외 및 기타 최신 c + + 프로그래밍 관용구를 사용 하 여 작업할 수 있습니다. .NET 플랫폼에서 관리 되는 실행 환경에서 c + + 프로그래밍을 사용 하도록 설정 하려면 다음을 사용할 수 있습니다 C + + /cli CLI입니다.  
   
- **두 개의 런타임, 하나의 확장명 집합**  
+### <a name="two-runtimes-one-set-of-extensions"></a>두 개의 런타임, 하나의 확장명 집합  
   
- C + + /cli CX 하위 집합인 C + + /cli CLI입니다. C +에 공통적으로 적용 되는 확장 + /CX 및 C + + /cli CLI의 경우 의미 체계는 CLR (공용 언어 런타임) 또는 Windows 런타임 대상으로 하는지 여부에 따라 달라 집니다. Windows Runtime에서 실행 되도록 앱을 컴파일하려면 다음을 지정 합니다 **/ZW** 컴파일러 옵션입니다. CLR에서 실행 되도록 컴파일하려면를 지정 합니다 **/clr** 컴파일러 옵션입니다. 이러한 스위치는 Visual Studio를 사용하여 프로젝트를 만들 때 자동으로 설정됩니다.  
+ C + + /cli CX 하위 집합인 C + + /cli CLI입니다. C +에 공통적으로 적용 되는 확장 + /CX 및 C + + /cli CLI의 경우 의미 체계는 CLR (공용 언어 런타임) 또는 Windows 런타임 대상으로 하는지 여부에 따라 달라 집니다. Windows Runtime에서 실행 되도록 앱을 컴파일하려면 지정 된 `/ZW` 컴파일러 옵션입니다. CLR에서 실행되도록 컴파일하려면 `/clr` 컴파일러 옵션을 지정합니다. 이러한 스위치는 Visual Studio를 사용하여 프로젝트를 만들 때 자동으로 설정됩니다.  
   
  C + +에서 유니버설 Windows 플랫폼 앱을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [c + +를 사용 하 여 로드맵에 대 한 Windows 런타임 앱](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx)합니다.  
   
@@ -86,7 +86,7 @@ Visual C++에서는 런타임 플랫폼을 대상으로 프로그래밍할 수 �
 |**nullptr**|아니요|핸들 또는 포인터가 개체를 가리키지 않음을 나타냅니다.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>템플릿 구문  
- 다음 언어 구문은 키워드 대신 템플릿으로 구현됩니다. 지정 하는 경우는 **/ZW** 컴파일러 옵션에 정의 되어 있는지를 `lang` 네임 스페이스입니다. 지정 하는 경우는 **/clr** 컴파일러 옵션에 정의 되어 있는지를 `cli` 네임 스페이스입니다.  
+ 다음 언어 구문은 키워드 대신 템플릿으로 구현됩니다. `/ZW` 컴파일러 옵션을 지정하는 경우 `lang` 네임스페이스에 정의됩니다. `/clr` 컴파일러 옵션을 지정하는 경우 `cli` 네임스페이스에 정의됩니다.  
   
 |키워드|용도|참조|  
 |-------------|-------------|---------------|  

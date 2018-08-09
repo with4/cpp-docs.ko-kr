@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a564c4223b09d9295ff0ac3159e165944c4d885d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ebe723811efe62efa85a1cc2fa35736689306c7e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892555"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645635"
 ---
 # <a name="synclockwithstatustislocked-method"></a>SyncLockWithStatusT::IsLocked 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,10 +34,10 @@ bool IsLocked() const;
 ```  
   
 ## <a name="remarks"></a>설명  
- SyncLockWithStatusT 된; 리소스를 소유 하는지 여부를 나타냅니다. SyncLockWithStatusT 개체 즉, *잠긴*합니다.  
+ 나타냅니다 여부 현재 **SyncLockWithStatusT** 리소스를 소유 하는 개체입니다. 즉, **SyncLockWithStatusT** 개체가 *잠겨*합니다.  
   
 ## <a name="return-value"></a>반환 값  
- **true 이면** SyncLockWithStatusT 개체가 고, 그렇지 않으면 잠긴 **false**합니다.  
+ **true** 경우는 **SyncLockWithStatusT** 개체가 고, 그렇지 않으면 잠긴 **false**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

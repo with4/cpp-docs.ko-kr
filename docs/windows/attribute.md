@@ -20,19 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72506e3f384a784bce4d159e8e76e88098c79f7
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e7b1f849aff584da6f575bc822a71acc683520e6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461811"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646321"
 ---
 # <a name="attribute"></a>특성
 사용자 지정 특성을 만들 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ attribute(  
    AllowOn,  
    AllowMultiple=boolean,  
@@ -40,7 +40,7 @@ ms.locfileid: "39461811"
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *AllowOn*  
  사용자 지정 특성 적용 될 수 있는 언어 요소를 지정 합니다. 기본값은 `System::AttributeTargets::All` (참조 [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).  
   
@@ -48,16 +48,16 @@ ms.locfileid: "39461811"
  구문에 사용자 지정 특성 반복적으로 적용 될 수 있는지 여부를 지정 합니다. 기본값은 FALSE입니다.  
   
  *상속*  
- 서브 클래스에서 상속 될 특성 인지 여부를 나타냅니다. 컴파일러에서이 기능에 대 한 없는 특별 한 지원을 제공합니다 이 정보를 존중 하는 특성 소비자 (예: 리플렉션) 작업 것입니다. 하는 경우 *상속 된 항목* 가 TRUE 이면 특성 상속 됩니다. 하는 경우 *AllowMultiple* 가 TRUE 인 경우 특성 파생된 멤버는;에 누적 됩니다 *AllowMultiple* 은 FALSE 특성은 재정의 (또는 바꾸기) 상속에서 합니다. 하는 경우 *상속 된 항목* 은 FALSE 특성은 상속 되지 않습니다. 기본값은 TRUE입니다.  
+ 서브 클래스에서 상속 될 특성 인지 여부를 나타냅니다. 컴파일러에서이 기능에 대 한 없는 특별 한 지원을 제공합니다 특성 소비자 작업이 (`Reflection`예를 들어)이이 정보를 준수 하도록 합니다. 하는 경우 *상속 된 항목* 가 TRUE 이면 특성 상속 됩니다. 하는 경우 *AllowMultiple* 가 TRUE 인 경우 특성 파생된 멤버는;에 누적 됩니다 *AllowMultiple* 은 FALSE 특성은 재정의 (또는 바꾸기) 상속에서 합니다. 하는 경우 *상속 된 항목* 은 FALSE 특성은 상속 되지 않습니다. 기본값은 TRUE입니다.  
   
 ## <a name="remarks"></a>설명  
   
 > [!NOTE]
->  `attribute` 특성은 이제 사용 되지 않습니다.  공용 언어 런타임 특성 System.Attribute 직접 사용자 정의 특성을 만들려면 사용 합니다.  자세한 내용은 [사용자 정의 특성](../windows/user-defined-attributes-cpp-component-extensions.md)합니다.  
+>  합니다 **특성** 특성은 이제 사용 되지 않습니다.  공용 언어 런타임 특성을 사용 하 여 `System.Attribute` 를 직접를 사용자 정의 특성을 만듭니다. 자세한 내용은 [사용자 정의 특성](../windows/user-defined-attributes-cpp-component-extensions.md)합니다.  
   
- 정의 하는 [사용자 지정 특성](../windows/custom-attributes-cpp.md) 배치 하 여는 `attribute` 관리 되는 클래스 또는 구조체 정의 특성으로 합니다. 클래스의 이름을 사용자 지정 특성입니다. 예를 들어:  
+ 정의 하는 [사용자 지정 특성](../windows/custom-attributes-cpp.md) 배치 하 여는 **특성** 관리 되는 클래스 또는 구조체 정의 특성으로 합니다. 클래스의 이름을 사용자 지정 특성입니다. 예를 들어:  
   
-```  
+```cpp  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
@@ -115,7 +115,7 @@ ref class ClassC {};
   
  참조 [사용자 정의 특성](../windows/user-defined-attributes-cpp-component-extensions.md) 특성 대상에 대 한 논의 합니다.  
   
- 합니다 `attribute` 특성에는 *AllowMultiple* 사용자 지정 특성은 단일 사용 여부를 지정 하는 매개 변수 또는 multiuse (나타날 수 있음 두 번 이상 동일한 엔터티에).  
+ 합니다 **특성** 특성에는 *AllowMultiple* 사용자 지정 특성은 단일 사용 여부를 지정 하는 매개 변수 또는 multiuse (나타날 수 있음 두 번 이상 동일한 엔터티에).  
   
 ```cpp  
 // cpp_attr_ref_attribute_3.cpp  
@@ -130,21 +130,21 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- 사용자 지정 특성 클래스에 직접 또는 간접적으로에서 파생 됩니다 <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>를 쉽고 빠르게 메타 데이터에서 특성 정의 식별할 수 있도록 하는 합니다. `attribute` 특성 의미 system:: attribute에서 상속 하므로 명시적 파생 하지 않아도 됩니다.  
+ 사용자 지정 특성 클래스에 직접 또는 간접적으로에서 파생 됩니다 <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>를 쉽고 빠르게 메타 데이터에서 특성 정의 식별할 수 있도록 하는 합니다. **특성** 특성에서 상속 의미 `System::Attribute`이므로 명시적 파생 하지 않아도 됩니다.  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr  
 ```  
   
  위의 식은 아래의 식과 동일합니다.  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute` 에 대 한 별칭인 <xref:System.AttributeUsageAttribute?displayProperty=fullName> (있지 AttributeAttribute; 특성 명명 규칙에 대 한 예외입니다).  
+ **특성** 별칭인 <xref:System.AttributeUsageAttribute?displayProperty=fullName> (있지 AttributeAttribute; 특성 명명 규칙에 대 한 예외입니다).  
   
 ## <a name="requirements"></a>요구 사항  
   

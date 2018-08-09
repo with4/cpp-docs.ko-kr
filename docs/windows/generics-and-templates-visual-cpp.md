@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ebb476b0a8c384759c9d44101e7bac7083103b2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: fbe4837a347c78bb3b7c05094adf442b69fa2f39
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570768"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649493"
 ---
 # <a name="generics-and-templates-visual-c"></a>제네릭 및 템플릿(Visual C++)
 제네릭 및 템플릿 매개 변수가 있는 형식에 대 한 지원을 제공 하는 두 언어 기능 됩니다. 그러나 다른 되며 다른 용도로 사용 됩니다. 이 항목에서는 여러 차이점이 개요를 제공합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "39570768"
   
 ## <a name="combining-templates-and-generics"></a>템플릿과 Generic 결합  
   
--   제네릭의 기본적인 차이점은 템플릿과 제네릭 결합 하는 응용 프로그램을 구축 하는 것에 대 한 영향을 줍니다. 예를 들어, 해당 템플릿을 다른 언어를 제네릭으로 노출에 대 한 제네릭 래퍼를 만들려면 원하는 템플릿 클래스가 있다고 가정 합니다. 제네릭 사용 템플릿은 컴파일 시간에 해당 형식 매개 변수에 있는 해야 하므로 다음 템플릿에 있지만 전달 하는 형식 매개 변수에 사용할 수 없습니다 있지만 제네릭 형식 매개 변수를 런타임 시까지 해결 하지 못합니다. 중첩 제네릭 내에서 템플릿을 없으므로 작동 하지 않습니다 하거나 템플릿을 런타임에 인스턴스화할 수 있는 임의의 제네릭 형식에 대 한 컴파일 시간에 확장 방법이 있습니다.  
+제네릭의 기본적인 차이점은 템플릿과 제네릭 결합 하는 응용 프로그램을 구축 하는 것에 대 한 영향을 줍니다. 예를 들어, 해당 템플릿을 다른 언어를 제네릭으로 노출에 대 한 제네릭 래퍼를 만들려면 원하는 템플릿 클래스가 있다고 가정 합니다. 제네릭 사용 템플릿은 컴파일 시간에 해당 형식 매개 변수에 있는 해야 하므로 다음 템플릿에 있지만 전달 하는 형식 매개 변수에 사용할 수 없습니다 있지만 제네릭 형식 매개 변수를 런타임 시까지 해결 하지 못합니다. 중첩 제네릭 내에서 템플릿을 없으므로 작동 하지 않습니다 하거나 템플릿을 런타임에 인스턴스화할 수 있는 임의의 제네릭 형식에 대 한 컴파일 시간에 확장 방법이 있습니다.  
   
 ## <a name="example"></a>예  
   
@@ -94,8 +94,6 @@ int main() {
    MyRef<int>^ mref = gcnew MyRef<int>(11);  
 }  
 ```  
-  
-### <a name="output"></a>출력  
   
 ```Output  
 F  

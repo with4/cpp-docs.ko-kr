@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b10d130190308520771e37e97d34238f75670ad
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 149cb7fba3d0754e47ac656c137af2d9bf759f1a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466685"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642193"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 구조체
-잘못 된 임계 또는 중요 섹션을 해제 하는 함수를 지원 하기 위해 CriticalSection 개체를 전문으로 합니다.  
+전문적으로 다루는 `CriticalSection` 개체는 잘못 된 중요 한 섹션 또는 중요 섹션을 해제 하는 함수를 지원 합니다.  
   
 ## <a name="syntax"></a>구문  
   

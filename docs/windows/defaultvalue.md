@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11ec7cf883fe8c9454cf538efc0835b9c77b1f92
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: deda09913f2774a2b3b246a285df0c8b6f1c62eb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569988"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652827"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 형식화 된 선택적 매개 변수 기본값을 지정할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ defaultvalue= value ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *값*  
  매개 변수의 기본 값입니다.  
   

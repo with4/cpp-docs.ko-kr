@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7412968069963679db769cc2ce68169e7a8799b9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 90a2c582c2740846f90270fe9f45b96871329252
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462071"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642840"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource 클래스
 
@@ -30,7 +30,7 @@ ms.locfileid: "39462071"
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
 class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
@@ -38,7 +38,6 @@ class AgileEventSource
 
 ## <a name="parameters"></a>매개 변수  
  *TDelegateInterface*  
-
  인터페이스 이벤트 처리기를 나타내는 대리자입니다.
 
  *TEventSourceOptions*  
@@ -64,7 +63,7 @@ class AgileEventSource
 
 |이름|설명|
 |----------|-----------------|
-|[AgileEventSource::Add 메서드](#add)|현재 AgileEventSource 개체에 대 한 이벤트 처리기 집합에 지정 된 대리자를 인터페이스에 의해 표시 된 agile 이벤트 처리기를 추가 합니다.|
+|[AgileEventSource::Add 메서드](#add)|현재 이벤트 처리기 집합에 지정 된 대리자를 인터페이스에 의해 표시 agile 이벤트 처리기 추가 **AgileEventSource** 개체입니다.|
 
 ## <a name="add"></a> AgileEventSource::Add 메서드
 
@@ -85,7 +84,7 @@ HRESULT Add(
 이벤트 처리기를 나타내는 대리자 개체에 대 한 인터페이스입니다.
 
 *token*  
-이 작업이 완료 될 때 이벤트를 나타내는 핸들입니다. 이벤트 처리기를 삭제 하려면 remove () 메서드에 매개 변수로이 토큰을 사용 합니다.
+이 작업이 완료 될 때 이벤트를 나타내는 핸들입니다. 이 토큰을 사용 하 여 매개 변수로 `Remove()` 이벤트 처리기를 삭제 하는 방법입니다.
 
 ### <a name="return-value"></a>반환 값
 

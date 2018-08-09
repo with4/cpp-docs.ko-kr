@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0970fbdfd3b7c1885c6291b3a98f8f59775fa59
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: eba8dbe8ee0dad3f085104c914a731986d736e2b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569607"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647877"
 ---
 # <a name="handletisvalid-method"></a>HandleT::IsValid 메서드
 나타냅니다 여부 현재 **HandleT** 개체 핸들을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 bool IsValid() const;  
 ```  
   

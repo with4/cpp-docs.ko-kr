@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33829d868eb90cde7259a482b8fc80f9cd6fd677
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: bee7bf263e3537811be1b992f463b7f1269863ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465300"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649785"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>제네릭 형식 매개 변수에 대한 제약 조건(C++/CLI)
 제네릭 형식 또는 메서드 선언에는 제약 조건이 있는 형식 매개 변수를 한정할 수 있습니다. 제약 조건은 형식 인수로 사용되는 형식이 충족해야 하는 요구 사항입니다. 예를 들어, 형식 인수가 특정 인터페이스를 구현하거나 특정 클래스에서 상속해야 제한할 수 있습니다.  
@@ -32,11 +32,11 @@ ms.locfileid: "39465300"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 where type-parameter: constraint list  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *형식 매개 변수*  
  제한되는 형식 매개 변수 중 하나입니다.  
   
@@ -45,7 +45,7 @@ where type-parameter: constraint list
   
  이 목록은 클래스를 포함할 수도 있습니다. 형식 인수가 기본 클래스 제약 조건을 만족하려면 제약 조건과 같은 클래스이거나 제약 조건에서 파생되어야 합니다.  
   
- 지정할 수 있습니다 `gcnew()` 나타내려면 형식 인수에 매개 변수가 없는 public 생성자; 있어야 합니다. 또는 **ref 클래스** 인수 형식을 지정 하기 위해 클래스, 인터페이스, 대리자 또는 배열을 포함 하 여 참조 형식 이어야 합니다 입력 또는 **값 클래스** 형식을 지정 하기 위해 인수를 값 형식 이어야 합니다. Nullable 제외한 임의의 값 형식을\<T >를 지정할 수 있습니다.  
+ 지정할 수 있습니다 **gcnew ()** 나타내려면 형식 인수에 매개 변수가 없는 public 생성자; 있어야 합니다. 또는 **ref 클래스** 를 나타내는 형식 인수가 어떤 클래스를 포함 하 여 참조 형식 이어야 합니다. 인터페이스, 대리자 또는 배열 형식입니다. 또는 **값 클래스** 형식을 지정 하기 위해 인수를 값 형식 이어야 합니다. Nullable 제외한 임의의 값 형식을\<T >를 지정할 수 있습니다.  
   
  제네릭 매개 변수를 제약 조건으로 지정할 수도 있습니다. 제한된 형식에 대해 제공되는 형식 인수는 제약 조건의 형식이거나 제약 조건의 형식에서 파생되어야 합니다. 이를 naked 형식 제약 조건이라고 합니다.  
   

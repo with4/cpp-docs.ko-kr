@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b52359d1f50f5ea3bad4075432fd8ae0e468d2df
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 60a4326975f60455e6d2ef90575f5c940287042a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571020"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644114"
 ---
 # <a name="dual"></a>dual
 .Idl 파일에 이중 인터페이스와 인터페이스를 배치합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [dual]  
 ```  
   
@@ -80,7 +80,7 @@ __interface IStatic : IDispatch
 |**적용 대상**|**interface**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못된 특성**|**dispinterface**|  
+|**잘못된 특성**|`dispinterface`|  
   
  자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   

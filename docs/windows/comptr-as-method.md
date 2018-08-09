@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8307411994fb2f850a71e91b63b44052cca40e0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: debf10e3c3d7ca68bd277a32e55c21b3e8bf3421
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461012"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645427"
 ---
 # <a name="comptras-method"></a>ComPtr::As 메서드
 반환 된 **ComPtr** 지정 된 템플릿 매개 변수로 식별 된 인터페이스를 나타내는 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* p  
@@ -41,7 +41,7 @@ HRESULT As(
 ) const;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *U*  
  인터페이스를 매개 변수로 표시할 *p*합니다.  
   

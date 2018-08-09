@@ -1,5 +1,5 @@
 ---
-title: 이벤트 클래스 (Windows 런타임 c + + 템플릿 라이브러리) | Microsoft Docs
+title: 이벤트 클래스 (Windows Runtime c + + 템플릿 라이브러리) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 12c9e5bfe01de0a9864ff1e94364e0c42178ad11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c07d58f244bf2e7e6c9329196bae7b5bb323ce12
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872928"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644166"
 ---
 # <a name="event-class-windows-runtime-c-template-library"></a>Event 클래스(Windows Runtime C++ 템플릿 라이브러리)
 이벤트를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 class Event : public HandleT<HandleTraits::EventTraits>;  
 ```  
   
@@ -37,13 +37,13 @@ class Event : public HandleT<HandleTraits::EventTraits>;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Event::Event 생성자(Windows Runtime C++ 템플릿 라이브러리)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|이벤트 클래스의 새 인스턴스를 초기화합니다.|  
+|[Event::Event 생성자(Windows Runtime C++ 템플릿 라이브러리)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|새 인스턴스를 초기화 합니다 **이벤트** 클래스입니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[Event::operator= 연산자](../windows/event-operator-assign-operator.md)|현재 이벤트 인스턴스를 지정된 이벤트 참조를 할당합니다.|  
+|[Event::operator= 연산자](../windows/event-operator-assign-operator.md)|지정 된 할당 **이벤트** 현재 참조 **이벤트** 인스턴스.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `HandleT`  

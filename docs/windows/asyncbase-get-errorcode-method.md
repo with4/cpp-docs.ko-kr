@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fab750ce655add3ccdac9d955e1e3a36e46f8cc5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dc9ec0c0c68c2941991d0820265b9ee1499bf7cb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465131"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650835"
 ---
 # <a name="asyncbasegeterrorcode-method"></a>AsyncBase::get_ErrorCode 메서드
 현재 비동기 작업에 대 한 오류 코드를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 STDMETHOD(  
    get_ErrorCode  
 )(HRESULT* errorCode) override;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *오류 코드*  
  현재 오류 코드가 저장 된 위치입니다.  
   

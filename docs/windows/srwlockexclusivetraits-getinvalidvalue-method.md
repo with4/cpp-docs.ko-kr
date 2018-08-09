@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 599fb1d4b204e170a01f01c60e03959a30075c1f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 963c3cbc09a9ed7f56d8ec25c35af0868eeae326
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888957"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649236"
 ---
 # <a name="srwlockexclusivetraitsgetinvalidvalue-method"></a>SRWLockExclusiveTraits::GetInvalidValue 메서드
-항상 유효 하지 않은 SRWLockExclusiveTraits 개체를 검색 합니다.  
+검색을 **SRWLockExclusiveTraits** 항상 유효 하지 않은 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +34,7 @@ inline static Type GetInvalidValue();
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 빈 SRWLockExclusiveTraits 개체입니다.  
+ 빈 **SRWLockExclusiveTraits** 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21a1dd4f26db41f7e32f3f76fd3b4c82e513397a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 58ba6d598223e63f5b28adcaedad653ffc6f386a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461691"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645570"
 ---
 # <a name="arrays-c-component-extensions"></a>배열(C++ 구성 요소 확장명)
 `Platform::Array<T>` 형식에서 C + + CX, 또는 **배열** 키워드에서 C + + CLI 초기 값을 지정 된 형식 배열을 선언 합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "39461691"
   
  구문의 첫 번째 예제에서는 합니다 **ref n e w** 집계 키워드 배열을 할당 합니다. 두 번째 예제에는 로컬 배열을 선언합니다.  
   
-```  
+```cpp  
 [qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "39461691"
  형식을 사용 하 여 참조 횟수가 계산 되는 배열 인지 여부를 컴파일 시간에 감지할 수 있습니다 `__is_ref_array(type)`합니다. 자세한 내용은 [형식 특성에 대 한 컴파일러 지원](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/ZW**  
+ 컴파일러 옵션: `/ZW`  
   
 ### <a name="examples"></a>예제  
  다음 예제에서는 100 개의 요소가 포함 된 1 차원 배열을 만듭니다.  
@@ -106,7 +106,7 @@ int main() {
   
  구문의 첫 번째 예제에서는 합니다 **gcnew** 배열을 할당 하는 키워드입니다. 두 번째 예제에는 로컬 배열을 선언합니다.  
   
-```  
+```cpp  
 [qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]  
   
@@ -139,7 +139,7 @@ int main() {
   
 ### <a name="remarks"></a>설명  
   
- `array` 에 [Platform, default 및 cli 네임 스페이스](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) 네임 스페이스입니다.  
+ **배열** 에 [Platform, default 및 cli 네임 스페이스](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) 네임 스페이스입니다.  
   
  표준 c + +와 마찬가지로 배열 인덱스는 0부터 시작 합니다 하 고 대괄호 ()를 사용 하 여 배열 첨자 된 됩니다. 표준 c + +와 달리 다차원 배열의 인덱스는 각 차원에 대 한 대괄호 () 연산자 집합을 하는 대신 각 차원에 대 한 인덱스의 목록에 지정 됩니다. 예를 들어 *식별자*[*index1*하십시오 *index2*] 대신 *식별자*[*index1*] [ *index2*].  
   
@@ -152,7 +152,7 @@ int main() {
  형식에는 공용 언어 런타임 (CLR) 배열 인지 여부를 감지할 수 있습니다 컴파일 타임에 `__is_ref_array(type)`입니다. 자세한 내용은 [형식 특성에 대 한 컴파일러 지원](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/clr**  
+ 컴파일러 옵션: `/clr`  
   
 ### <a name="examples"></a>예제  
  다음 예제에서는 100 개의 요소를 포함 하는 1 차원 배열 및 첫 번째 차원의 3 개 요소, 5 개 요소, 두 번째에서 및 세 번째에서 6 개 요소가 있는 3 차원 배열을 만듭니다.  

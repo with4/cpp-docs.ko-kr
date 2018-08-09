@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8738d537aaa7cf4c257b95d1093e28441e828c9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ab88d2853f62932177858adb6bea3c991059f6f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890778"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650233"
 ---
 # <a name="srwlocksharedtraitsgetinvalidvalue-method"></a>SRWLockSharedTraits::GetInvalidValue 메서드
-항상 유효하지 않은 SRWLockSharedTraits 개체를 가져옵니다.  
+검색을 **SRWLockSharedTraits** 항상 유효 하지 않은 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +34,7 @@ inline static Type GetInvalidValue();
 ```  
   
 ## <a name="return-value"></a>반환 값  
- SRWLockSharedTraits 개체에 대한 핸들입니다.  
+ 에 대 한 핸들을 **SRWLockSharedTraits** 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

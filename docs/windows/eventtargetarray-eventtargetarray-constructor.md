@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 831c9a524f8120c855382d198a5f53ac312cada6
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 59753f592f099f80396f408fa531756ba91b308e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569790"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652541"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray 생성자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 EventTargetArray(  
    _Out_ HRESULT* hr,  
    size_t items  

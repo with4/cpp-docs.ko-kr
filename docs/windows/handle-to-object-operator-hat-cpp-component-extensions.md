@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc55ab1dad4ee9ba088aaae92f76e58b29683b29
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b74f4ca4ab2940dde9dfc567b8fa45ea8f03279e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569806"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642772"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>개체 연산자에 대한 핸들(^)(C++ 구성 요소 확장)
 합니다 *핸들 선언 자* (`^`, "햇"으로 발음), 형식이 수정 [지정자](../cpp/overview-of-declarators.md) 선언된 된 개체를 삭제 해야 함을 자동으로 시스템 개체 인지를 확인 함을 의미 하도록 더 이상 액세스할 수 없습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "39569806"
  개체를 인스턴스화하는 방법에 대 한 자세한 내용은 [ref n e w](../windows/ref-new-gcnew-cpp-component-extensions.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/ZW**  
+ 컴파일러 옵션: `/ZW`  
   
 ## <a name="common-language-runtime"></a>공용 언어 런타임 
  CLR을 사용 하 여 시스템 *가비지 수집기* 개체가 더 이상 사용 되지 및 삭제할 수 없습니다 하는 경우를 확인 하는 메커니즘입니다. 공용 언어 런타임은 개체를 할당하는 힙을 유지 관리하고 프로그램의 관리되는 참조(변수)를 사용하여 힙에서의 개체 위치를 나타냅니다. 더 이상 개체를 사용하지 않으면 힙에 점유된 메모리가 해제됩니다. 가비지 수집기는 해제된 메모리를 더 효율적으로 사용하기 위해 힙을 정기적으로 압축합니다. 힙을 압축하면 힙에서 개체가 이동할 수 있고, 그럴 경우 관리되는 참조에서 참조한 위치가 무효화됩니다. 하지만 가비지 수집기는 관리되는 모든 참조의 위치를 알고 있으며 해당 위치를 자동으로 업데이트하여 힙에서 개체의 현재 위치를 나타냅니다.  
@@ -48,7 +48,6 @@ ms.locfileid: "39569806"
  자세한 내용은 [방법: 네이티브 형식에 처리 선언](../dotnet/how-to-declare-handles-in-native-types.md)합니다.  
   
 ### <a name="examples"></a>예제  
- **예제**  
   
  이 샘플은 관리되는 힙에서 참조 형식의 인스턴스를 만드는 방법을 보여 줍니다.  이 샘플은 또한 한 가지 핸들을 다른 핸들로 초기화하여 관리되는 가비지-수집 힙의 동일한 개체에서 두 개의 참조를 만들 수 있다는 점을 보여 줍니다. 할당할 [nullptr](../windows/nullptr-cpp-component-extensions.md) 핸들 하나에 개체가 가비지 수집용으로 표시 되지 않습니다.  
   
@@ -77,14 +76,10 @@ int main() {
 }  
 ```  
   
- **출력**  
-  
 ```Output  
 1  
 2  
 ```  
-  
- **예제**  
   
  다음 예제는 개체 형식이 boxed 값 형식인 관리되는 힙에서 개체에 대해 핸들을 선언하는 방법을 보여 줍니다. 또한 boxed 개체에서 값 형식을 가져오는 방법을 보여 줍니다.  
   
@@ -109,18 +104,14 @@ int main() {
    int n = 100;  
    Test(n);  
 }  
-```  
-  
- **출력**  
+```   
   
 ```Output  
 Not a boxed int  
 100  
 ```  
   
- **예제**  
-  
- 이 샘플은 void* 포인터를 사용하여 임의의 개체를 가리키는 일반적인 C++ 관용구가 모든 참조 클래스에 대한 핸들을 보유할 수 있는 Object^로 대체되었음을 보여 줍니다. 또한 배열, 대리자 등의 모든 형식을 개체 핸들로 변환할 수 있음을 보여 줍니다.  
+ 이 샘플에서는 사용 하 여 일반적인 c + + 관용구는를 `void*` 임의의 개체를 가리키는 포인터로 바뀝니다 `Object^`, 모든 참조 클래스에 대 한 핸들을 포함할 수 있는 합니다. 또한 배열, 대리자 등의 모든 형식을 개체 핸들로 변환할 수 있음을 보여 줍니다.  
   
 ```cpp  
 // mcppv2_handle_3.cpp  
@@ -157,8 +148,6 @@ int main() {
 }  
 ```  
   
- **출력**  
-  
 ```Output  
 Type is System.Collections.ArrayList  
   
@@ -166,8 +155,6 @@ Type is System.Int32
   
 Type is MyDel  
 ```  
-  
- **예제**  
   
  이 샘플은 핸들을 역참조할 수 있으며 역참조된 핸들을 통해 멤버를 액세스할 수 있음을 보여 줍니다.  
   
@@ -209,17 +196,13 @@ int main() {
 }  
 ```  
   
- **출력**  
-  
 ```Output  
 Array value: 7  
   
 Cannot access array element 11, size is 10  
 ```  
   
- **예제**  
-  
- 이 샘플은 `&`가 가비지 수집 힙에 저장되어 있을 수 있고 네이티브 참조는 관리되는 힙에서 개체 이동을 추적하지 않기 때문에 네이티브 참조(`int`)가 관리되는 형식의 `int` 멤버에 바인딩할 수 없음을 보여 줍니다. 해결 방법은 로컬 변수를 사용하거나 `&`를 `%`로 변경하여 추적 참조로 만드는 것입니다.  
+ 이 샘플에 따르면 네이티브 참조 (`&`)에 바인딩할 수 없습니다는 **int** 관리 되는 형식의 멤버도는 **int** 가비지 수집 힙에서 저장 될 수도 있고 네이티브 참조 추적 하지 않습니다 관리 되는 힙에서 개체 이동 합니다. 해결 방법은 로컬 변수를 사용하거나 `&`를 `%`로 변경하여 추적 참조로 만드는 것입니다.  
   
 ```cpp  
 // mcppv2_handle_5.cpp  

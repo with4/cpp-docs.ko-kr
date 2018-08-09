@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96c4c878edb0125aca2d4782afd53ce0967452a5
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 5aa0bc804b3308a9b77c93cf40a2ba9cab7558a8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571313"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652911"
 ---
 # <a name="generic-delegates-visual-c"></a>제네릭 대리자(Visual C++)
 대리자에 제네릭 형식 매개 변수를 사용할 수 있습니다. 대리자에 대 한 자세한 내용은 참조 하세요. [delegate (c + + 구성 요소 확장)](../windows/delegate-cpp-component-extensions.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [attributes]   
 generic < [class | typename] type-parameter-identifiers>  
 [type-parameter-constraints-clauses]  
@@ -36,7 +36,7 @@ generic < [class | typename] type-parameter-identifiers>
 ([formal-parameters]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *특성* (선택 사항)  
  추가 선언 정보입니다. 특성 및 특성 클래스에 대한 자세한 내용은 특성을 참조하십시오.  
   

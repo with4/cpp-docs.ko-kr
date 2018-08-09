@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1ae5d4216efc790fae0bc4d86bbe828fc28c473
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 30cba8b29ad6100826f580dd625bc18e2b8f9e16
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463095"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641293"
 ---
 # <a name="comptrinternaladdref-method"></a>ComPtr::InternalAddRef 메서드
 와 연결 된 인터페이스의 참조 횟수를 증가 시킵니다 **ComPtr**합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void InternalAddRef() const;  
 ```  
   

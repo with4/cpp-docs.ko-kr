@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09480168f842adbcbd9e1c50056a9d16278bccc4
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 49ee69015837d27f7445db9f765739fc1d28152c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465833"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642876"
 ---
 # <a name="argtraitshelperargs-constant"></a>ArgTraitsHelper::args 상수
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 static const int args = Traits::args;  
 ```  
   

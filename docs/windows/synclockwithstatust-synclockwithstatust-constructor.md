@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f665866a43e45d6526aa33f17c05eacebdd84aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21ce2054cabf257594cb3fa376236b9a1e504a59
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891352"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647757"
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>SyncLockWithStatusT::SyncLockWithStatusT 생성자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -40,20 +40,20 @@ explicit SyncLockWithStatusT(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `other`  
- 다른 SyncLockWithStatusT 개체를 rvalue 참조입니다.  
+### <a name="parameters"></a>매개 변수  
+ *other*  
+ 다른 rvalue 참조 **SyncLockWithStatusT** 개체입니다.  
   
- `sync`  
- 다른 SyncLockWithStatusT 개체에 대 한 참조입니다.  
+ *sync*  
+ 다른에 대 한 참조가 **SyncLockWithStatusT** 개체입니다.  
   
- `status`  
- 값은 [status_](../windows/synclockwithstatust-status-data-member.md) 의 데이터 멤버는 `other` 매개 변수 또는 `sync` 매개 변수입니다.  
+ *status*  
+ 값을 [status_](../windows/synclockwithstatust-status-data-member.md) 의 데이터 멤버는 *다른* 매개 변수 또는 *동기화* 매개 변수입니다.  
   
 ## <a name="remarks"></a>설명  
- SyncLockWithStatusT 클래스의 새 인스턴스를 초기화합니다.  
+ 새 인스턴스를 초기화 합니다 **SyncLockWithStatusT** 클래스입니다.  
   
- 첫 번째 생성자는 매개 변수에서 지정한 다른 SyncLockWithStatusT에서 현재 SyncLockWithStatusT 개체 `other`, 되 고 다음 다른 SyncLockWithStatusT 개체를 무효화 합니다. 두 번째 생성자는 `protected`, 유효 하지 않은 상태로 현재 SyncLockWithStatusT 개체를 초기화 합니다.  
+ 첫 번째 생성자는 현재 초기화 **SyncLockWithStatusT** 개체에서 다른 **SyncLockWithStatusT** 매개 변수에서 지정한 *다른*, 고 다른 무효화 **SyncLockWithStatusT** 개체입니다. 두 번째 생성자는 **보호**, 및 현재 초기화 **SyncLockWithStatusT** 유효 하지 않은 상태로 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

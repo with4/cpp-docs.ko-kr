@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4778b5abb363f7d769fe8872b1d180c2a2cd701
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 9f0df83ff8848f27839254bd9b1645866d3904bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568925"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643464"
 ---
 # <a name="handlethandlet-destructor"></a>HandleT::~HandleT 소멸자
 인스턴스를 초기화 해제 합니다 **HandleT** 클래스입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 ~HandleT();  
 ```  
   

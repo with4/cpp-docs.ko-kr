@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9dd026158a2bbc76e7a3e195bc5346f65821f2b7
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 36a057bbad39e61576828c5a02f6863248b235cf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569497"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641407"
 ---
 # <a name="eventsourceremove-method"></a>EventSource::Remove 메서드
 현재 연결 된 이벤트 처리기 집합에서 지정 된 이벤트 등록 토큰을 나타내는 이벤트 처리기를 삭제 **EventSource** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT Remove(  
    EventRegistrationToken token  
 );  
@@ -43,7 +43,7 @@ HRESULT Remove(
  성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.  
   
 ## <a name="remarks"></a>설명  
- EventRegistrationToken 구조체에 대 한 자세한 내용은 참조는 `Windows::Foundation::EventRegistrationToken` Windows 런타임 참조 문서의 구조 항목입니다.  
+ 에 대 한 자세한 내용은 `EventRegistrationToken` 구조체를 참조 하세요를 **Windows::Foundation::EventRegistrationToken 구조** 항목에는 **Windows 런타임** 설명서를 참조 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** event.h  

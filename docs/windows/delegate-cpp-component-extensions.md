@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c2a1297fff3c4604ffb181a907b982f9d2e1de4
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: dd35674b61e61eead6118fdcc0aacccbafa6f3b4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570365"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649509"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate(C++ 구성 요소 확장)
 함수 포인터를 나타내는 형식을 선언 합니다.  
@@ -68,7 +68,7 @@ delegate-type-identifier
  사용 된 *대리자 형식 식별자* 대리자와 동일한 프로토타입 가진 이벤트를 선언 하 합니다. 자세한 내용은 [대리자 (C + + /cli CX)](../cppcx/delegates-c-cx.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/ZW**  
+ 컴파일러 옵션: `/ZW`  
   
 ## <a name="common-language-runtime"></a>공용 언어 런타임  
  공용 언어 런타임에서 다음 구문 사용 하 여 대리자를 지원합니다.  
@@ -124,10 +124,9 @@ function_declaration
 -   [제네릭 대리자(Visual C++)](../windows/generic-delegates-visual-cpp.md)  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/clr**  
+ 컴파일러 옵션: `/clr`  
   
 ### <a name="examples"></a>예제  
- **예제**  
   
  다음 예제에서는 선언, 초기화 및 대리자를 호출 하는 방법을 보여 줍니다.  
   
@@ -187,8 +186,6 @@ int main () {
    StaticDelInst(11);  
 }  
 ```  
-  
- **출력**  
   
 ```Output  
 in func1 8  

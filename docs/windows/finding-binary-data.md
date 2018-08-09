@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee50f78c4fcc39561fbd94ef3a0af28746cfbaa9
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4a5b880e9b0425ecb0de5e59a29b216af174fa8e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568688"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652284"
 ---
 # <a name="finding-binary-data"></a>이진 데이터 찾기
 ASCII 문자열 또는 16 진수 바이트를 검색할 수 있습니다. 예를 들어, "Hello"을 찾으려면 검색할 수 있습니다에 대 한 문자열 "Hello" 또는 "48 65 6C C 6F 6" (16 진수).  
@@ -44,7 +44,6 @@ ASCII 문자열 또는 16 진수 바이트를 검색할 수 있습니다. 예를
  관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다. 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 내용은 참조 하세요 [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화 관리 되는 앱의 리소스에 대 한 내용은 참조 하세요 [Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
-  
  없음  
   
 ## <a name="see-also"></a>참고 항목  

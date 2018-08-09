@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0babd7efcae7bbd91fd81362e7b0f612f177477f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1863acc925bf66aa10435f2dadd9d9d73a43300
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892594"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648024"
 ---
 # <a name="srwlockexclusivetraitsunlock-method"></a>SRWLockExclusiveTraits::Unlock 메서드
-지정된 된 SRWLock 개체의 한 독점적인 제어권을 해제합니다.  
+지정 된 한 독점적인 제어권을 해제 `SRWLock` 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,9 +35,9 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `srwlock`  
- SRWLock 개체에 대 한 핸들입니다.  
+### <a name="parameters"></a>매개 변수  
+ *srwlock*  
+ 에 대 한 핸들을 `SRWLock` 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

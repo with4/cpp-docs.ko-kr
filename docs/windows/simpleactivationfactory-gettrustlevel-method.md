@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b08ce574a8370eb0029a702f8fa4a4b12c6e93c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22fa30a3662897b171245da194573ec17da2f64e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892620"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645190"
 ---
 # <a name="simpleactivationfactorygettrustlevel-method"></a>SimpleActivationFactory::GetTrustLevel 메서드
-신뢰 수준에서 지정 된 클래스의 인스턴스를 가져옵니다는 `Base` 클래스 템플릿 매개 변수입니다.  
+신뢰 수준에서 지정한 클래스의 인스턴스를 가져옵니다는 `Base` 클래스 템플릿 매개 변수입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,8 +33,8 @@ STDMETHOD(
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `trustLvl`  
+### <a name="parameters"></a>매개 변수  
+ *trustLvl*  
  이 작업이 완료 될 때 현재 클래스 개체의 신뢰 수준입니다.  
   
 ## <a name="return-value"></a>반환 값  

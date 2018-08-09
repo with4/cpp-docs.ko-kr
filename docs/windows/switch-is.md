@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05805bff0044838aaea2af2013fa951c5d3be9a1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e77c29df5fa86ccdf88a6962577cd8c70e45e2ee
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892798"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651368"
 ---
 # <a name="switchis"></a>switch_is
-식 또는 공용 구조체 멤버를 선택 하 고 union 판별 역할 식별자를 지정 합니다.  
+식 또는 공용 구조체 멤버를 선택 하는 공용 구조체 판별 역할을 하는 식별자를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [switch_is]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **switch_is** c + + 특성에 동일한 기능을는 [switch_is](http://msdn.microsoft.com/library/windows/desktop/aa367275) MIDL 특성입니다.  
+ 합니다 **switch_is** c + + 특성에 동일한 기능을 합니다 [switch_is](http://msdn.microsoft.com/library/windows/desktop/aa367275) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 참조는 [대/소문자](../windows/case-cpp.md) 의 샘플 사용에 대 한 예제 **switch_is**합니다.  
+## <a name="example"></a>예  
+ 참조 된 [사례](../windows/case-cpp.md) 의 샘플 사용에 대 한 예제 **switch_is**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -47,7 +45,7 @@ ms.locfileid: "33892798"
   
 |||  
 |-|-|  
-|**적용 대상**|`typedef`|  
+|**적용 대상**|**typedef**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fccc72814ca5c4fff417e0b6221ef0f3c045a5bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8dfc50ae0732471f8cb91b2c380d4c4772350f47
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33895751"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652128"
 ---
 # <a name="srwlocklockshared-method"></a>SRWLock::LockShared 메서드
-공유 모드의 SRWLock 개체를 가져옵니다.  
+획득 한 **SRWLock** 공유 모드의 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,12 +37,12 @@ static SyncLockShared LockShared(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `lock`  
- SRWLock 개체에 대한 포인터입니다.  
+### <a name="parameters"></a>매개 변수  
+ *lock*  
+ 에 대 한 포인터를 **SRWLock** 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 공유 모드의 SRWLock 개체입니다.  
+ **SRWLock** 공유 모드의 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

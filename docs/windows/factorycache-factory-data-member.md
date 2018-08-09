@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a85fed4ff169c43762f82dd0524cc88a6e24370e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c714c13cb206fbc6535997c2ad32d9f652e229ea
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881441"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643526"
 ---
 # <a name="factorycachefactory-data-member"></a>FactoryCache::factory 데이터 멤버
-Windows 런타임 c + + 템플릿 라이브러리 인프라를 지원 하며 사용자 코드에서 직접 사용할 수 없습니다.  
+Windows Runtime c + + 템플릿 라이브러리 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 IUnknown* factory;  
 ```  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3bc6e7adfa99e2ce25c9913309b5c5bd486bee0
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 0206433d2b329501b10a8262e7b487ec83e99302
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569403"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642112"
 ---
 # <a name="handlenulltraitsclose-method"></a>HANDLENullTraits::Close 메서드
 지정된 된 핸들을 닫습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 inline static bool Close(  
    _In_ Type h  
 );  

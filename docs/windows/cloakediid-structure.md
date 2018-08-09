@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e0155006987165f5b192aac73bb31991081a231
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3b766858d0f558b4fdff3a703c612ec07c038abf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461225"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641922"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid 구조체
 에 `RuntimeClass`, `Implements` 및 `ChainInterfaces` 지정된 된 인터페이스 IID 목록에서 액세스할 수 없는 템플릿.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename T>  
 struct CloakedIid : T;  
 ```  
@@ -39,7 +39,7 @@ struct CloakedIid : T;
  인터페이스는 숨겨진 (숨김)입니다.  
   
 ## <a name="remarks"></a>설명  
- 다음은 방법의 예가 `CloakedIid` 는: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`합니다.  
+ 다음은 방법의 예가 **CloakedIid** 되: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `T`  

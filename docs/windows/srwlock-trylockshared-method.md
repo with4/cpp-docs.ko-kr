@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19ff9324f946f48f201678f9c9e7403ba774b2c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 289fa1fbec61140e213bef7219e440c8177e19e5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892285"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645814"
 ---
 # <a name="srwlocktrylockshared-method"></a>SRWLock::TryLockShared 메서드
-현재 또는 지정된 SRWLock 개체에 대해 공유 모드의 SRWLock 개체를 가져오기 위한 시도입니다.  
+획득 하 려는 **SRWLock** 개체를 현재 또는 지정 된 공유 모드로 **SRWLock** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,12 +36,12 @@ WRL_NOTHROW static SyncLockShared TryLockShared(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `lock`  
- SRWLock 개체에 대한 포인터입니다.  
+### <a name="parameters"></a>매개 변수  
+ *lock*  
+ 에 대 한 포인터를 **SRWLock** 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공하면 공유 모드 및 호출하는 스레드의 SRWLock 개체가 잠금에 대한 소유권을 갖습니다. 그렇지 않으면 상태가 유효하지 않은 SRWLock 개체입니다.  
+ 성공한 경우는 **SRWLock** 개체 공유 모드 및 호출 스레드는 잠금 소유권을 받습니다. 그렇지 않은 경우는 **SRWLock** 개체 상태가 올바르지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

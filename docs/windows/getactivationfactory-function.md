@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2cbb5be3603f79a7df1cb330ca06775357666854
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 3fe0d03ead29362ea2926f6326557df2ba6a2cd9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570313"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649249"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory 함수
 템플릿 매개 변수로 지정 된 형식에 대 한 활성화 팩터리를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename T>  
 inline HRESULT GetActivationFactory(  
    _In_ HSTRING activatableClassId,  

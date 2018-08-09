@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c9479180134e8a873e1d79f91deb3d29700d40a2
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 45cc86c873e7c45a7352f0035b2fd16e312e7c6c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467172"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644448"
 ---
 # <a name="chaininterfacescasttounknown-method"></a>ChainInterfaces::CastToUnknown 메서드
-정의한 형식의 인터페이스 포인터를 캐스팅 합니다 *I0* IUnknown에 대 한 포인터를 템플릿 매개 변수입니다.  
+정의한 형식의 인터페이스 포인터를 캐스팅 합니다 *I0* 포인터에 대 한 템플릿 매개 변수 `IUnknown`합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 __forceinline IUnknown* CastToUnknown();  
 ```  
   
 ## <a name="return-value"></a>반환 값  
- IUnknown에 대한 포인터입니다.  
+ 에 대 한 포인터 `IUnknown`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

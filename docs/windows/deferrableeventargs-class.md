@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 72f5ee2beca3a3985258b12cea9091665eb74cfa
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 8dd9452133267021effd307734b5c5cf55922720
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571264"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642304"
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs 클래스
 지연에 대한 이벤트 인수 형식에 사용되는 템플릿 클래스입니다.  
@@ -33,7 +33,7 @@ typename TEventArgsClass
 class DeferrableEventArgs : public TEventArgsInterface  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *TEventArgsInterface*  
  지연된 이벤트에 대한 인수를 선언하는 인터페이스 형식입니다.  
   

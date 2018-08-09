@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1aae09030ff6cad518028833ce5d4f7b06300a69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f722745b1283f25bd284adb3b55dcb340d78f07
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876650"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649915"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits 구조체
-핸들의 일반적인 특성을 정의합니다.  
+핸들의 공통 된 특징을 정의합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 struct HANDLETraits;  
 ```  
   
