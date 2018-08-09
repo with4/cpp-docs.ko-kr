@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8782d66683d0a242e5321e8e3a0c8ab24b6f358
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: ea08cdc8657100e1c1e0157a8a542a44ea34cd4d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568851"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642375"
 ---
 # <a name="eventsourcetargets-data-member"></a>EventSource::targets_ 데이터 멤버
 하나 이상의 이벤트 처리기 배열입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 ComPtr<Details::EventTargetArray> targets_;  
 ```  
   

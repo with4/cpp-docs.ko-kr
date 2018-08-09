@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de98932420cf5eb0d5b9b13011044e5bfc7b400d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: ae65169ac3f315aed170ba8dfc42b16fb4e9b328
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569006"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641319"
 ---
 # <a name="ftmbasecreateglobalinterfacetable-method"></a>FtmBase::CreateGlobalInterfaceTable 메서드
 (GIT) 전역 인터페이스 테이블을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 static HRESULT CreateGlobalInterfaceTable(  
    __out IGlobalInterfaceTable **git  
 );  
@@ -43,7 +43,7 @@ static HRESULT CreateGlobalInterfaceTable(
  성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.  
   
 ## <a name="remarks"></a>설명  
- 자세한 내용은 MSDN Library에서 "COM 참조" 항목의 "COM 인터페이스" 하위 항목인 "IGlobalInterfaceTable" 항목을 참조 하세요.  
+ 자세한 내용은 참조 하세요.는 `IGlobalInterfaceTable` 항목에는 **COM 인터페이스** 의 하위를 **COM 참조** MSDN 라이브러리의 항목입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** ftm.h  

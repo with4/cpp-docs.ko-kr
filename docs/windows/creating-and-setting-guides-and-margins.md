@@ -22,48 +22,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b548f48fc079fe26ae43c0553bef27f2348bad6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11631a2ac6a2c83cd667d14a490c57b1a191c1a7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873513"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642560"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>안내선과 여백 만들기 및 설정
-이동 하는 컨트롤에 컨트롤을 추가 하거나 현재 레이아웃을 다시 정렬, 안내선 수 있는지 여부를 정확 하 게 내 대화 상자에서 컨트롤 정렬 합니다. 안내선은 눈금자 (위쪽에 대화 상자 편집기의 왼쪽을 따라)에서 해당 화살표 편집기에 표시 되는 대화 상자에서 파란색 점선으로 나타납니다.  
+이동 하는 컨트롤, 컨트롤을 추가 또는 현재 레이아웃 다시 정렬 안내선 도움이 컨트롤 대화 상자 내에서 정확 하 게 맞춥니다. 가이드와 파란색 점선 편집기와 눈금자에서 해당 화살표에 표시 대화 상자에 나타나고 (위쪽 및 왼쪽의 합니다 **대화 상자** 편집기).  
   
- 대화 상자를 만들 때 네 가지 여백 제공 됩니다. 여백은 파란색 점선으로 표시 되는 수정 된 안내선입니다.  
+ 대화 상자를 만들 때 네 가지 여백 중 제공 됩니다. 여백은 수정 된 가이드, 파란색 점선으로 표시 합니다.  
   
 ### <a name="to-create-a-guide"></a>지침을 만들려면  
   
-1.  눈금자를 내에서 지침을 만들려면 두 번 클릭 합니다. (새로 만듭니다. 한 번의 클릭 가이드; 실행 하는 경우 두 번 클릭 하 여 [안내선 설정 대화 상자](../windows/guide-settings-dialog-box.md) 가이드 설정을 지정할 수 있습니다.)  
+1.  눈금자를에서 지침을 만들려면 한 번 클릭 합니다. (한 번의 클릭 새로 만들고 가이드; 시작을 두 번 클릭 합니다 [안내선 설정 대화 상자](../windows/guide-settings-dialog-box.md) 가이드 설정을 지정할 수 있습니다.)  
   
-### <a name="to-set-a-guide"></a>안내선 설정 하려면  
+### <a name="to-set-a-guide"></a>지침을 설정 하려면  
   
-1.  대화 상자에서 가이드를 클릭 하 고 새 위치로 끌어다 놓습니다. (클릭할 수도 있습니다 관련된 가이드를 끌기 눈금자에서 화살표.)  
+1.  대화 상자에서이 가이드를 클릭 하 고 새 위치로 끌어다 놓습니다. (또한 화살표를 클릭 합니다 관련된 가이드를 끌어서 눈금자의.)  
   
-     이 가이드의 좌표 눈금자에서 창의 맨 아래에 상태 표시줄에 표시 됩니다. 이 가이드의 정확한 위치를 표시 하려면 눈금자에서 화살표 위에 포인터를 이동 합니다.  
+     이 가이드의 좌표는 눈금자 창의 아래쪽 상태 표시줄에 표시 됩니다. 이 가이드의 정확한 위치를 표시 하려면 눈금자 화살표 위로 포인터를 이동 합니다.  
   
 ### <a name="to-delete-a-guide"></a>안내선을 삭제하려면  
   
-1.  대화 상자를 안내선을 끕니다.  
+1.  대화 상자에서이 가이드를 끕니다.  
   
  \- 또는 -  
   
--   눈금자 밖 대응 하는 화살표를 끕니다.  
+-   해당 화살표 눈금자 해제를 끕니다.  
   
-#### <a name="to-move-margins"></a>여백을 이동 하려면  
+### <a name="to-move-margins"></a>여백을 이동 하려면  
   
 1.  여백을 새 위치로 끕니다.  
   
-     여백을 표시 하지 않으려면을 하려면 여백을 0의 위치로 이동 합니다. 다시 여백 상태로 포인터 위로 여백을 0 위치 및 여백을 위치로 이동 합니다.  
+     사라집니다 여백을 있도록 여백을 0의 위치로 이동 합니다. 가져오고 여백을 다시, 0 위치는 여백 위에 포인터를 놓고 여백을 위치로 이동 합니다.  
   
- 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
+ 관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다. 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 내용은 참조 하세요 [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화 관리 되는 앱의 리소스에 대 한 내용은 참조 하세요 [Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)합니다.  
   
-### <a name="requirements"></a>요구 사항  
+## <a name="requirements"></a>요구 사항  
  Win32  
   
 ## <a name="see-also"></a>참고 항목  
  [대화 상자 편집기 상태 (안내선과 모눈)](../windows/dialog-editor-states-guides-and-grids.md)   
  [대화 상자의 컨트롤](../windows/controls-in-dialog-boxes.md)
-

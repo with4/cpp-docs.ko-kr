@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc7ddd6279dbdf177c8e478b7c1350647ac4a7c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3646e13818297b636a888e1ad00c998a120e8379
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888661"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643662"
 ---
 # <a name="semaphoresemaphore-constructor"></a>Semaphore::Semaphore 생성자
-Semaphore 클래스의 새 인스턴스를 초기화합니다.  
+새 인스턴스를 초기화 합니다 **세마포** 클래스입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,9 +39,9 @@ WRL_NOTHROW Semaphore(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `h`  
- Semaphore 개체에 대한 핸들 또는 rvalue 참조입니다.  
+### <a name="parameters"></a>매개 변수  
+ *h*  
+ 핸들 또는 rvalue 참조에는 **세마포** 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

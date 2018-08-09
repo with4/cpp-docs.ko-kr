@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e661e911cc0dd583f2ce079f8ac047a354fa596f
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: df452614bfd5ee95a810300809678e28abfbf8ef
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570933"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643162"
 ---
 # <a name="helpstring"></a>helpstring
 적용되는 요소를 설명하는 데 사용되는 문자열을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ helpstring(  
    "string"  
 ) ]  

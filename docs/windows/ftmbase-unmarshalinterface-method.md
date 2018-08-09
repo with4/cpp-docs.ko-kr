@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7b34f1af7734fa22db3a9f296bc021917356f8a
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: a1991454daa76fcf7878a7487080124b5a34dbeb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570030"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644036"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase::UnmarshalInterface 메서드
 새로 만든된 프록시를 초기화 하 고 해당 프록시에 인터페이스 포인터를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 STDMETHODIMP UnmarshalInterface(  
    __in IStream *pStm,  
    __in REFIID riid,  
@@ -37,7 +37,7 @@ STDMETHODIMP UnmarshalInterface(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *pStm*  
  인터페이스 포인터를 역 마샬링해야 하는 스트림에 대 한 포인터입니다.  
   

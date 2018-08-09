@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b71d8183921e0df66d6b9a82ff79faf24ccb41d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570001"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642336"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 .hlp 또는.chm 파일에서 도움말 항목의 ID를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ helpstringcontext(  
    contextID  
 ) ]  
@@ -37,7 +37,7 @@ ms.locfileid: "39570001"
   
 ### <a name="parameters"></a>매개 변수  
  *컨텍스트 Id*  
- 도움말 파일의 32 비트 도움말 컨텍스트 식별자입니다.  
+ 32 비트 도움말 컨텍스트 식별자에는 **도움말** 파일입니다.  
   
 ## <a name="remarks"></a>설명  
  합니다 **helpstringcontext** c + + 특성에 동일한 기능을 합니다 [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL 특성입니다.  

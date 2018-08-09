@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c76aee3ce1e56f60e966094bb2d634269cd5e3a9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0596b15daff5567e2572bf8c1f2b401cdf300a49
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466750"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642414"
 ---
 # <a name="asyncuuid"></a>async_uuid
 MIDL 컴파일러에 지시 합니다 COM 인터페이스의 동기 및 비동기 버전을 정의 하는 UUID를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [async_uuid (  
    uuid  
 )]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *uuid*  
  인터페이스의 버전을 식별 하는 UUID입니다.  
   

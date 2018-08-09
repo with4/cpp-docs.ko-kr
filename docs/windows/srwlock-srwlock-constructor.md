@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51bbd331c240079ccbb241aa970e99dd5c7d79ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 941a0b31224b67c9305c41e036d93744b98b915e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892493"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642613"
 ---
 # <a name="srwlocksrwlock-constructor"></a>SRWLock::SRWLock 생성자
-SRWLock 클래스의 새 인스턴스를 초기화합니다.  
+새 인스턴스를 초기화 합니다 **SRWLock** 클래스입니다.  
   
 ## <a name="syntax"></a>구문  
   

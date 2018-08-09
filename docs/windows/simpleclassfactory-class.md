@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: debb78ba4be2731b8cffce1133518b0b4a04f63d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21b52876cb2a6c7bbf110a06cdfb29abdf1930d6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892763"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641830"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory 클래스
 기본 클래스를 만드는 기본적인 메커니즘을 제공합니다.  
@@ -34,14 +34,14 @@ template<typename Base>
 class SimpleClassFactory : public ClassFactory<>;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `Base`  
+### <a name="parameters"></a>매개 변수  
+ *자료*  
  기본 클래스입니다.  
   
 ## <a name="remarks"></a>설명  
  기본 클래스 기본 생성자를 제공 해야 합니다.  
   
- 다음 코드 예제와 SimpleClassFactory를 사용 하는 방법을 보여 줍니다는 [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) 매크로입니다.  
+ 다음 코드 예제에 사용 하는 방법을 보여 줍니다 **SimpleClassFactory** 사용 하 여 합니다 [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) 매크로입니다.  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`  
   

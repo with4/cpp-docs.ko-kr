@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e362ec513cb7cb14f5fd3abb8a028c6e0eab616b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466126"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644231"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>상황에 맞는 키워드(C++ 구성 요소 확장)
 *상황에 맞는 키워드* 는 특정 컨텍스트에서만에서 인식 되는 언어 요소입니다. 특정 컨텍스트가 아닐 경우 상황에 맞는 키워드는 사용자 정의 기호일 수 있습니다.  
   
 ## <a name="all-runtimes"></a>모든 런타임  
- **주의**  
+### <a name="remarks"></a>설명
   
  다음은 상황에 맞는 키워드의 목록입니다.  
   
@@ -59,23 +59,22 @@ ms.locfileid: "39466126"
  가독성을 위해 사용자 정의 기호로 상황에 맞는 키워드의 사용을 제한 하는 것이 좋습니다.  
   
 ## <a name="windows-runtime"></a>Windows 런타임  
- **주의**  
+### <a name="remarks"></a>설명  
   
  (이 기능에는 플랫폼별 설명이 없습니다.)  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/ZW**  
+ 컴파일러 옵션: `/ZW`  
   
 ## <a name="common-language-runtime"></a>공용 언어 런타임 
- **주의**  
+### <a name="remarks"></a>설명  
   
  (이 기능에는 플랫폼별 설명이 없습니다.)  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/clr**  
+ 컴파일러 옵션: `/clr`  
   
 ### <a name="examples"></a>예제  
- **예제**  
   
  다음 코드 예제는 적절 한 컨텍스트에서 따르면 합니다 **속성** 속성 및 변수를 정의 하는 상황에 맞는 키워드를 사용할 수 있습니다.  
   
@@ -99,8 +98,6 @@ int main() {
    System::Console::WriteLine(++property);  
 }  
 ```  
-  
- **출력**  
   
 ```Output  
 100  

@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fcb46d4eeb4cede778aefc4210a022b08a22ca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fdd9efe3b60fa9dc53d1c63191e19657cb70d75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879889"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641742"
 ---
 # <a name="displaybind"></a>displaybind
-바인딩 가능한 사용자에 게 표시 되어야 하는 속성을 나타냅니다.  
+바인딩 가능한 사용자에 게 표시 하는 속성을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```cpp  
 [displaybind]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **displaybind** c + + 특성에 동일한 기능을는 [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) MIDL 특성입니다.  
+ 합니다 **displaybind** c + + 특성에 동일한 기능을 합니다 [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 예를 참조 [바인딩 가능한](../windows/bindable.md) 사용 하는 방법의 예 **displaybind**합니다.  
+## <a name="example"></a>예  
+ 예를 참조 하세요 [바인딩 가능한](../windows/bindable.md) 사용 하는 방법의 예제 **displaybind**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

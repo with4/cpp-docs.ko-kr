@@ -15,26 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 225580be17afcc1bda6feab63d3efe79f932b757
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 1dcf129f551900792638018fa846557120e53e96
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570326"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644354"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>명시적 재정의(C++ 구성 요소 확장명)
 이 항목에서는 기본 클래스 또는 인터페이스의 멤버를 명시적으로 재정의 하는 방법을 설명 합니다. 명명 된 (명시적) 재정의 다른 이름을 가진 파생된 메서드를 사용 하 여 메서드를 재정의 하려면 사용할 해야 합니다.  
   
 ## <a name="all-runtimes"></a>모든 런타임  
- **구문**  
+### <a name="syntax"></a>구문
   
-```  
+```cpp  
 overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
 overriding-function-declarator = function { overriding-function-definition }  
 ```  
-  
- **매개 변수**  
-  
+
+### <a name="parameters"></a>매개 변수 
  *재정의-함수-선언 자*  
  재정의 함수의 반환 형식, 이름 및 인수 목록입니다.  참고는 재정의 함수를 재정의 하는 함수와 같은 이름을 사용할 필요가 없습니다.  
   
@@ -47,7 +46,7 @@ overriding-function-declarator = function { overriding-function-definition }
  *재정의-함수-정의*  
  재정의 함수를 정의 하는 함수 본문 문입니다.  
   
- **주의**  
+### <a name="remarks"></a>설명
   
  사용 하 여 명시적 메서드 서명에 대 한 별칭을 만들려면 또는 동일한 서명이 메서드 사용에 대 한 다른 구현을 제공 하기를 재정의 합니다.  
   
@@ -59,15 +58,14 @@ overriding-function-declarator = function { overriding-function-definition }
  컴파일러 옵션: `/ZW`  
   
 ## <a name="common-language-runtime"></a>공용 언어 런타임 
- **주의**  
+### <a name="remarks"></a>설명
   
  네이티브 코드에서 명시적 방법은 재정의 하거나로 컴파일된 코드에 대 한 `/clr:oldSyntax`를 참조 하세요 [명시적으로 재정의](../cpp/explicit-overrides-cpp.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
  컴파일러 옵션: `/clr`  
   
-### <a name="examples"></a>예제  
- **예제**  
+### <a name="examples"></a>예제   
   
  다음 코드 예제에서는 간단 하 고 암시적 override 및 멤버의 구현을 기본 인터페이스에서 명시적 재정의 사용 하지 않는  
   
@@ -91,13 +89,9 @@ int main() {
 }  
 ```  
   
- **출력**  
-  
 ```Output  
 X::f override of I1::f  
 ```  
-  
- **예제**  
   
  다음 코드 예제에는 모든 인터페이스 멤버를 공용 시그니처를 사용 하 여 명시적 재정의 구문은 사용 하 여 구현 하는 방법을 보여 줍니다.  
   
@@ -126,18 +120,14 @@ int main() {
 }  
 ```  
   
- **출력**  
-  
 ```Output  
 X::f override of I1::f and I2::f  
 X::f override of I1::f and I2::f  
 ```  
   
- **예제**  
-  
  다음 코드 예제에서는 함수 재정의 구현 하는 함수에서 다른 이름이 수 하는 방법을 보여 줍니다.  
   
-```  
+```cpp  
 // explicit_override_3.cpp  
 // compile with: /clr  
 interface struct I1 {  
@@ -157,13 +147,9 @@ int main() {
 }  
 ```  
   
- **출력**  
-  
 ```Output  
 X::g  
 ```  
-  
- **예제**  
   
  다음 코드 예제에서는 형식 안전 컬렉션을 구현 하는 명시적 인터페이스 구현을 보여 줍니다.  
   
