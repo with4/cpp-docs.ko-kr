@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1cc9ee8a63d7403c3de408c924eeab07f1d0efa1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 993031604469aa09608f936f260869a3b53dbc9c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892659"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652772"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive 메서드
-현재 또는 지정 된 SRWLock 개체에 대 한 단독 모드의 SRWLock 개체를 얻으려고 합니다. 호출이 성공 하면 호출 스레드는 잠금의 소유권을 갖습니다.  
+획득 하 려는 **SRWLock** 개체의 현재 또는 지정 된 단독 모드 **SRWLock** 개체입니다. 호출이 성공 하면 호출 스레드는 잠금 소유권을 받습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,12 +37,12 @@ static SyncLockExclusive TryLockExclusive(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `lock`  
- SRWLock 개체에 대한 포인터입니다.  
+### <a name="parameters"></a>매개 변수  
+ *lock*  
+ 에 대 한 포인터를 **SRWLock** 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공 하면 단독 모드가 고 호출 스레드에 SRWLock 개체 잠금 소유권을 가져옵니다. 그렇지 않으면 상태가 유효하지 않은 SRWLock 개체입니다.  
+ 성공한 경우는 **SRWLock** 개체 단독 모드 및 호출 스레드는 잠금 소유권을 받습니다. 그렇지 않은 경우는 **SRWLock** 개체 상태가 올바르지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

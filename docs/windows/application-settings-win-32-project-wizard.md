@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6d2cd31306baaa0d9c8f137122fed1d4ae97295
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 948b720df6094ddd4124bb496cabb3c83a3cacf0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464693"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652990"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Win32 프로젝트 마법사, 응용 프로그램 설정
 마법사의이 페이지를 사용 하 여 Win32 프로젝트에 대 한 옵션을 설정 합니다.  
   
- **응용 프로그램 종류**  
+## <a name="application-type"></a>응용 프로그램 유형  
  지정 된 응용 프로그램 유형을 만듭니다.  
   
 |옵션|설명|  
@@ -38,7 +38,7 @@ ms.locfileid: "39464693"
 |**DLL**|Win32 동적 연결 라이브러리 (DLL)를 만듭니다. Win32 DLL은 C 또는 C++로 작성된 바이너리 파일로, MFC 클래스 대신 Win32 API를 호출하며 동시에 여러 응용 프로그램에서 사용할 수 있는 함수의 공유 라이브러리 역할을 합니다.<br /><br /> DLL 응용 프로그램에 MFC 또는 ATL 지원을 추가할 수 없습니다. DLL에서 기호를 내보내도록 할 수 있습니다.|  
 |**정적 라이브러리**|정적 라이브러리를 만듭니다. 정적 라이브러리는 개체와 개체 함수 그리고 실행 파일을 빌드할 때 프로그램에 연결되는 데이터를 포함하는 파일입니다. 이 항목에서는 시작 파일을 만드는 방법과 정적 라이브러리에 대한 [프로젝트 속성](../ide/property-pages-visual-cpp.md)에 대해 설명합니다.  정적 라이브러리 파일은 다음과 같은 이점을 제공합니다.<br /><br /> -Win32 정적 라이브러리는 작업 중인 응용 프로그램에서 MFC 클래스 대신 Win32 API를 호출하는 경우에 유용합니다.<br />-Windows 응용 프로그램의 나머지 부분의 C 또는 C++로 작성 여부와 관계없이 연결된 프로세스는 동일합니다.<br />-비 MFC 프로그램과 MFC 기반 프로그램 모두 정적 라이브러리를 연결할 수 있습니다.|  
   
- **추가 옵션**  
+## <a name="additional-options"></a>추가 옵션  
  지원 및 해당 형식에 따라 응용 프로그램에 대 한 옵션을 정의합니다.  
   
 |옵션|설명|  
@@ -48,7 +48,7 @@ ms.locfileid: "39464693"
 |**미리 컴파일된 헤더**|정적 라이브러리 프로젝트는 미리 컴파일된 헤더를 지정 합니다.|  
 |보안 개발 수명 주기 (SDL) 검사|SDL에 대 한 자세한 내용은 참조 하세요. [Microsoft Security Development Lifecycle (SDL) 프로세스 지침](../build/reference/sdl-enable-additional-security-checks.md)|  
   
- **추가 지원**  
+## <a name="add-support-for"></a>에 대 한 지원 추가  
  Visual C++에서 제공되는 라이브러리에 대한 지원을 추가합니다.   
   
 |옵션|설명|  

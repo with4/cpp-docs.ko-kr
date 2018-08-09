@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de0f68ee3e27f2ac3a7f87e64489a05a16dcdc91
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 8c2683d2e1875e7d68d27f7bde515b7a4ca70da0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571414"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649730"
 ---
 # <a name="eventevent-constructor-windows-runtime-c-template-library"></a>Event::Event 생성자(Windows Runtime C++ 템플릿 라이브러리)
-이벤트 클래스의 새 인스턴스를 초기화합니다.  
+새 인스턴스를 초기화 합니다 **이벤트** 클래스입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 explicit Event(  
    HANDLE h = HandleT::Traits::GetInvalidValue()  
 );  
@@ -36,7 +36,7 @@ WRL_NOTHROW Event(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *h*  
  이벤트에 대한 핸들. 기본적으로 *h* 으로 초기화 됩니다 **nullptr**합니다.  
   

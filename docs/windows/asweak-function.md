@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a51b7095ec654c4ebb393c9a83d1e30fb52ce019
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b0f4645a6008b954833bf282971a0d3912e1d598
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462627"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653146"
 ---
 # <a name="asweak-function"></a>AsWeak 함수
 지정된 인스턴스에 대한 약한 참조를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename T>  
 HRESULT AsWeak(  
    _In_ T* p,  
@@ -37,7 +37,7 @@ HRESULT AsWeak(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *T*  
  매개 변수의 형식에 대 한 포인터 *p*합니다.  
   

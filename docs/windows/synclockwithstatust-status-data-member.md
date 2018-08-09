@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a6d8fb587ed86063e19a44cd391ea04d75b2a68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d1dc6cbab11a41707aa60aa37d63ae0e5042ba5a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888454"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652850"
 ---
 # <a name="synclockwithstatuststatus-data-member"></a>SyncLockWithStatusT::status_ 데이터 멤버
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,7 +34,7 @@ DWORD status_;
 ```  
   
 ## <a name="remarks"></a>설명  
- 현재 SyncLockWithStatusT 개체를 기반으로 개체의 내부의 결과 잠금 작업 한 후 작업을 대기할 보류 합니다.  
+ 현재를 기준으로 개체에 대 한 잠금 작업이 후 기본 대기 작업의 결과 보유 **SyncLockWithStatusT** 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

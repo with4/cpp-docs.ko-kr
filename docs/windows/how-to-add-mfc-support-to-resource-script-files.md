@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7237366daeaa71ba423aa069bb634b1b9f6bc667
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 659c974fccec0e54dc42d6d1a5bdb019747f81ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569744"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647026"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>방법: 리소스 스크립트 파일에 MFC 지원 추가
 Windows를 사용 하 여 MFC 응용 프로그램을 빌드할 때 일반적으로 [MFC 응용 프로그램 마법사](../mfc/reference/mfc-application-wizard.md), Microsoft Foundation의 핵심 기능을 포함 하는 기본 파일 (리소스 스크립트 (.rc) 파일 포함) 집합을 생성 하는 마법사 클래스 (MFC)입니다. 그러나 MFC를 기반으로 하지 않는 Windows 응용 프로그램용 .rc 파일을 편집하는 경우에는 MFC 프레임워크와 관련된 다음 기능을 사용할 수 없습니다.  
@@ -55,7 +55,6 @@ Windows를 사용 하 여 MFC 응용 프로그램을 빌드할 때 일반적으�
     >  이 플래그를 설정하는 것 외에도 .rc 파일은 MFC 프로젝트의 일부여야 합니다. 예를 들어, 설정 하는 것 **MFC Mode** 하 **True** Win32에서.rc 파일에서 프로젝트를 제공 하지 않습니다 MFC 기능입니다.  
   
 ## <a name="requirements"></a>요구 사항  
-  
  MFC  
   
 ## <a name="see-also"></a>참고 항목  

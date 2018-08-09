@@ -1,5 +1,5 @@
 ---
-title: 빈 Win32 응용 프로그램에 파일을 추가 합니다. | Microsoft Docs
+title: 빈 Win32 응용 프로그램에 파일 추가 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 625b75a81773b45483c8b70c12530acfc9f75994
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e3ed2559457a7fd3231c625b285dea44f81da877
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856894"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646844"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>빈 Win32 응용 프로그램에 파일 추가
 ### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>빈 Windows 데스크톱 응용 프로그램에 파일을 추가하려면  
@@ -36,7 +36,7 @@ ms.locfileid: "33856894"
   
 4.  **확인**을 클릭합니다.  
   
- 소스, 헤더 또는 리소스 파일이 아닌 파일을 프로젝트에 추가하려면 솔루션 탐색기에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 동일한 방식으로 프로젝트에 파일을 추가합니다. 프로젝트의 기타 파일을 저장하는 기타 폴더가 생성됩니다.  
+ 모두 소스, 헤더 또는 프로젝트에 리소스 파일에 있는 파일을 추가 하려면 마우스 오른쪽 단추로 클릭 합니다 **솔루션** 노드에서 **솔루션 탐색기** 동일한 방식으로 프로젝트에 파일을 추가 합니다. A **기타** 프로젝트에서 다른 파일을 저장할 폴더를 만들 수는 있습니다.  
   
 > [!NOTE]
 >  프로젝트를 빌드하기 전에 이러한 파일에 대한 빌드 옵션을 지정해야 완성된 응용 프로그램에 해당 파일이 제대로 포함됩니다. 자세한 내용은 [속성 페이지를 사용하여 프로젝트 설정 지정](../ide/property-pages-visual-cpp.md) 및 [C/C++ 프로그램 빌드](../build/building-c-cpp-programs.md)를 참조하세요.  

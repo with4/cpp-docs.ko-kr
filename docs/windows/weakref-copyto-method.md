@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 817d984e995e7ac33ba80f978a282a8c0bac3e4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90756dc8ff515a8c956778bf8c6392332a8f9ca9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890637"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652749"
 ---
 # <a name="weakrefcopyto-method"></a>WeakRef::CopyTo 메서드
 사용 가능한 경우 지정된 포인터 변수에 인터페이스에 대한 포인터를 할당합니다.  
@@ -45,23 +45,23 @@ HRESULT CopyTo(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `U`  
- IInspectable 인터페이스의 포인터입니다. `U` 가 IInspectable에서 파생되지 않으면 오류가 발생합니다.  
+### <a name="parameters"></a>매개 변수  
+ *U*  
+ 포인터는 `IInspectable` 인터페이스입니다. 오류가 발생 하는 경우에 내보내집니다 *U* 에서 파생 되지 않은 `IInspectable`합니다.  
   
- `riid`  
- 인터페이스 ID입니다. 오류가 발생 하는 경우 `riid` 에서 파생 되지 않은 **IWeakReference**합니다.  
+ *riid*  
+ 인터페이스 ID입니다. 오류가 발생 하는 경우에 내보내집니다 *riid* 에서 파생 되지 않은 `IWeakReference`합니다.  
   
- `ptr`  
- IInspectable 또는 IWeakReference의 이중 간접 포인터입니다.  
+ *ptr*  
+ 에 대 한 이중 간접 포인터 `IInspectable` 또는 `IWeakReference`합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공하면 S_OK이고, 그렇지 않으면 실패를 설명하는 HRESULT가 발생합니다. 자세한 내용은 설명 부분을 참조하세요.  
+ 성공하면 S_OK이고, 그렇지 않으면 실패를 설명하는 HRESULT가 발생합니다. 자세한 내용은 **설명**을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
- 반환 값 S_OK는 이 작업이 성공했음을 의미하지만 약한 참조가 강한 참조로 확인되었는지를 나타내지 않습니다. S_OK가 반환되면 `p` 매개 변수가 강한 참조인지 테스트합니다. 즉, `p` 매개 변수가 `nullptr`과 같지 않은지 테스트합니다.  
+ 반환 값 S_OK는 이 작업이 성공했음을 의미하지만 약한 참조가 강한 참조로 확인되었는지를 나타내지 않습니다. S_OK가 반환 되 면 해당 매개 변수를 테스트 *p* 는 강력한 참조 매개 변수, 즉 *p* 같지 **nullptr**합니다.  
   
- Windows 10 SDK부터는 약한 참조를 가져올 수 없는 경우 이 메서드에서 WeakRef 인스턴스를 `nullptr` 로 설정하지 않으므로 `nullptr`에 대해 WeakRef를 검사하는 오류 검사 코드를 사용하지 않아야 합니다. 대신, 확인 `ptr` 에 대 한 `nullptr`합니다.  
+ Windows 10 SDK 부터는이 메서드는 설정 하지는 **WeakRef** 인스턴스의 **nullptr** 약한 참조를 가져올 수 없는 경우는 피할 수 오류 WeakRef를 검사 하는 코드를 검사 합니다. **nullptr**합니다. 대신 확인 합니다 *ptr* 에 대 한 **nullptr**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

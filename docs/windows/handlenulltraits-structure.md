@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4b7daa319b927d168d39f0981c00b5fbe92063c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e009b31f95f2cdf80231021c38848fbc30ce20d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877880"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645440"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits 구조체
-초기화 되지 않은 상태로 핸들의 일반적인 특성을 정의합니다.  
+초기화 되지 않은 핸들을의 일반적인 특성을 정의합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 struct HANDLENullTraits;  
 ```  
   

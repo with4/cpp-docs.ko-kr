@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0171c8cf836c95afecb74cf1909688bbbe030db
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 78cc02c4f4d39b2bcba4c79a07ec84b9657cb66b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466373"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651199"
 ---
 # <a name="appobject"></a>appobject
 전체.exe 응용 프로그램을 사용 하 여 연결 되며 함수 및 coclass의 속성에서이 전역적으로 사용할 수 있는지 나타냅니다는 응용 프로그램 개체는 coclass를 식별 [형식 라이브러리](../mfc/automation-clients-using-type-libraries.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [appobject]  
 ```  
   

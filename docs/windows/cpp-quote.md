@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dc81eacdbadb971ab86f4cfde1353e89bbe1342
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 21f986e227e9daca58731d03c40d6dae5b0c0a80
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463829"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653042"
 ---
 # <a name="cppquote"></a>cpp_quote
 생성된 된.idl 파일의 따옴표 없이 지정된 된 문자열을 내보냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ cpp_quote(  
    "statement"  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *statement*  
  C 명령입니다.  
   

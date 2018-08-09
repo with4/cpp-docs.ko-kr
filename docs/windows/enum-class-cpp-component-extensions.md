@@ -13,25 +13,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af936151b221b11c88f6dd054779b1a74fa50571
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 54c4e97458e1a7322d84e012ea5609d3e29bfb0a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570550"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647315"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum 클래스(C++ 구성 요소 확장)
 열거자라는 명명된 상수 집합으로 구성된 사용자 정의 형식인 열거형을 네임스페이스 범위에서 선언합니다.  
   
 ## <a name="all-runtimes"></a>모든 런타임  
- **주의**  
+### <a name="remarks"></a>설명
   
  C + + /CX 및 C + + 지원 **public enum 클래스** 하 고 **개인 enum 클래스** 표준 c + +와 비슷합니다 **enum 클래스** 하지만 액세스 가능성의 추가 지정자입니다. 아래 **/clr**, C + + 11 **enum 클래스** 형식은 허용 되지만 원하는 ISO 열거형 형식 및 하지 C + 확인 하기 위해 만들어진 경고 C4472를 생성 + /CX 및 C + + CLI 형식입니다. ISO 표준 c + +에 대 한 자세한 내용은 **enum** 키워드를 참조 하십시오 [열거형](../cpp/enumerations-cpp.md)합니다.  
   
 ## <a name="windows-runtime"></a>Windows 런타임  
- **구문**  
+### <a name="syntax"></a>구문  
   
-```  
+```cpp  
       access  
       enum class  
       enumeration-identifier  
@@ -39,8 +39,7 @@ ms.locfileid: "39570550"
 accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [var];  
 ```  
   
- **매개 변수**  
-  
+### <a name="parameters"></a>매개 변수  
  *access*  
  해당 되는 열거형의 접근성 **공용** 하거나 **개인**합니다.  
   
@@ -60,7 +59,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  *var*  
  (선택 사항) 열거형 형식의 변수 이름입니다.  
   
- **주의**  
+### <a name="remarks"></a>설명 
   
  자세한 내용과 예제는 [열거형](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)을 참조하세요.  
   
@@ -73,19 +72,19 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 -   *underlying-type* 이 `char16`이고 열거형 값이 0xD800에서 0xDFFF까지이면 값을 표현할 수 있습니다. 그러나 이 값은 유니코드 서로게이트 쌍의 절반을 나타내므로 논리적으로 잘못된 값이며 격리에 표시되면 안 됩니다.  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/ZW**  
+ 컴파일러 옵션: `/ZW`  
   
 ## <a name="common-language-runtime"></a>공용 언어 런타임 
- **구문**  
+### <a name="syntax"></a>구문
   
-```  
+```cpp  
       access  
       enum class  
       name [:type] { enumerator-list } var;  
 accessenum structname [:type] { enumerator-list } var;  
 ```  
   
- **매개 변수**  
+ ### <a name="parameters"></a>매개 변수  
   
  *access*  
  열거형의 접근성입니다. 일 수 있습니다 **공개** 하거나 **개인**합니다.  
@@ -102,7 +101,7 @@ accessenum structname [:type] { enumerator-list } var;
  *var* (선택 사항)  
  열거형 형식의 변수 이름입니다.  
   
- **주의**  
+### <a name="remarks"></a>설명 
   
  **enum 클래스** 및 **enum 구조체** 는 동일한 선언입니다.  
   
@@ -163,13 +162,13 @@ int main() {
   
  에 형식으로 사용된 표준 열거형은 함수 서명에 대해 MSIL에서 다음을 내보냅니다.  
   
-```  
+```cpp  
 void f(int32);  
 ```  
   
  그러나 현재 버전의 컴파일러에서는 표준 열거형이 [NativeEnumAttribute] 및 함수 서명에 대해 MSIL에서 다음을 사용하여 관리되는 열거형으로 내보내집니다.  
   
-```  
+```cpp  
 void f(E)  
 ```  
   
@@ -180,12 +179,9 @@ void f(E)
 -   [열거형의 내부 형식](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/clr**  
+ 컴파일러 옵션: `/clr`  
   
 ### <a name="examples"></a>예제  
- **예제**  
-  
- 내림차순  
   
 ```cpp  
 // mcppv2_enum_2.cpp  
@@ -215,8 +211,6 @@ int main()
    System::Console::WriteLine(o);  
 }   
 ```  
-  
- **출력**  
   
 ```Output  
 no automatic conversion to int: b  

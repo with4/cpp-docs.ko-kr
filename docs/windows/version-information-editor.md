@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a76dbb3d8b41c2366f354f9c3c8d66ccc3743f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e57e550527bc906d3c1170e410719c57a877eec
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890592"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647383"
 ---
 # <a name="version-information-editor"></a>버전 정보 편집기
 버전 정보는 회사 및 제품 ID, 제품 릴리스 번호, 저작권 및 상표 알림 등으로 이루어져 있습니다. 버전 정보 편집기를 사용하면 버전 정보 리소스에 저장되는 이 데이터를 만들고 유지 관리할 수 있습니다. 버전 정보 리소스는 응용 프로그램에 필요하지 않지만 응용 프로그램을 식별하는 정보를 수집하기에 유용한 장소입니다. 버전 정보는 설치 API에도 사용됩니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "33890592"
     > [!NOTE]
     >  버전 정보 편집기를 사용하는 동안 대개 마우스 오른쪽 단추를 클릭하면 리소스별 명령의 바로 가기 메뉴를 표시할 수 있습니다. 예를 들어 블록 헤더 항목을 가리키는 동안 클릭하면 바로 가기 메뉴에 새 버전 블록 정보 및 버전 블록 정보 삭제 명령이 표시됩니다.  
   
- 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
+ 관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다. 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 내용은 참조 하세요 [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화 관리 되는 앱의 리소스에 대 한 내용은 참조 하세요 [Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  Win32  
@@ -55,4 +55,3 @@ ms.locfileid: "33890592"
 ## <a name="see-also"></a>참고 항목  
  [리소스 편집기](../windows/resource-editors.md)   
  [메뉴 및 기타 리소스](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-

@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92cb3dd6d21f2ca7e4a119d110510d91085f38da
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 799d0631ce29fcebd739f29232236e7cf87b74ac
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461494"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652577"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Callback 함수(Windows Runtime C++ 템플릿 라이브러리)
 멤버 함수가 콜백 메서드인 개체를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<  
    typename TDelegateInterface,  
    typename TCallback  
@@ -198,7 +198,7 @@ ComPtr<TDelegateInterface> Callback(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *TDelegateInterface*  
  이벤트가 발생할 때 호출할 대리자의 인터페이스를 지정하는 템플릿 매개 변수입니다.  
   

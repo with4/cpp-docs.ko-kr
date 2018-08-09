@@ -1,5 +1,5 @@
 ---
-title: 추적 참조 연산자 (c + + 구성 요소 확장명) | Microsoft Docs
+title: 추적 참조 연산자 (c + + 구성 요소 확장) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c460174fad6a287acfd434b1589e73153aa0b121
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890872"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651833"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>추적 참조 연산자(C++ 구성 요소 확장명)
-A *추적 참조* (`%`) 일반 c + + 참조 처럼 동작 (`&`) 개체는 추적 참조에 할당 된 경우를 제외 하 고 개체의 참조 횟수가 증가 합니다.  
+A *추적 참조* (`%`)는 일반 c + + 참조 처럼 동작 (`&`) 추적 참조에 개체를 할당 될 때를 제외 하 고 개체 참조 개수가 증가 합니다.  
   
 ## <a name="all-platforms"></a>모든 플랫폼  
  추적 참조에는 다음과 같은 특징이 있습니다.  
   
 -   개체를 추적 참조에 할당하면 개체 참조 개수가 증가합니다.  
   
--   네이티브 참조(&)는 *를 역참조할 경우의 결과입니다. 추적 참조(%)는 ^를 역참조할 경우의 결과입니다. 개체에 %가 있을 경우 해당 개체는 메모리에 유지됩니다.  
+-   네이티브 참조 (`&`)은 역 참조할 경우 결과 `*`합니다. 추적 참조 (`%`)은 역 참조할 경우 결과 `^`합니다. 있는 그대로 `%` 개체에 개체를 메모리에 활성 상태로 유지 합니다.  
   
 -   개체 멤버에 액세스하는 데 점(`.`) 멤버 액세스 연산자가 사용됩니다.  
   
 -   추적 참조는 값 형식 및 핸들에만 유효합니다(예: `String^`).  
   
--   추적 참조는 null 또는 `nullptr` 값에 할당할 수 없습니다. 추적 참조는 필요한 횟수만큼 유효한 다른 개체에 다시 할당할 수 있습니다.  
+-   추적 참조는 null을 할당할 수 없습니다 또는 **nullptr** 값입니다. 추적 참조는 필요한 횟수만큼 유효한 다른 개체에 다시 할당할 수 있습니다.  
   
 -   추적 참조는 단항 주소 연산자로 사용할 수 없습니다.  
   
@@ -55,7 +55,6 @@ Foo^ spFoo2 = %srFoo;
  다음 예제에서는 %를 사용하는 함수에 ^를 전달하는 방법을 보여 줍니다.  
   
 ```  
-  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -85,11 +84,10 @@ ref class Foo sealed {};
 -   [방법: C++/CLI에서 추적 참조 사용](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
   
 ### <a name="examples"></a>예제  
- **예제**  
   
  C++/CLI에 대한 다음 샘플은 네이티브 및 관리되는 형식을 사용하여 추적 참조를 사용하는 방법을 보여 줍니다.  
   
-```  
+```cpp  
 // tracking_reference_1.cpp  
 // compile with: /clr  
 ref class MyClass {  
@@ -123,14 +121,11 @@ int main() {
   
    delete[] pi;  
 }  
-  
 ```  
-  
- **예제**  
   
  C++/CLI에 대한 다음 샘플은 배열에 추적 참조를 바인딩하는 방법을 보여 줍니다.  
   
-```  
+```cpp  
 // tracking_reference_2.cpp  
 // compile with: /clr  
 using namespace System;  

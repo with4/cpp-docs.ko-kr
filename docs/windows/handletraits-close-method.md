@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 581c7b8447b800d9a3401cd76f3adc5ada25994d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 561862427238a86dbb23ee05044c1d01558abab5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569832"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647601"
 ---
 # <a name="handletraitsclose-method"></a>HANDLETraits::Close 메서드
 지정된 된 핸들을 닫습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 inline static bool Close(  
    _In_ Type h  
 );  

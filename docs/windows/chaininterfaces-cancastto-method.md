@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5839edd90f61f9f4aa96ea1d921d2179660be554
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ff24ac92e5e84cb85127ef6e33805928fabd6f60
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461212"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647533"
 ---
 # <a name="chaininterfacescancastto-method"></a>ChainInterfaces::CanCastTo 메서드
 각 기본이 아닌 템플릿 매개 변수를 정의한 특수화에 지정 된 인터페이스 ID 캐스팅 될 수 있는지 여부를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 __forceinline bool CanCastTo(  
    REFIID riid,  
    _Deref_out_ void **ppv  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *riid*  
  인터페이스 ID입니다.  
   

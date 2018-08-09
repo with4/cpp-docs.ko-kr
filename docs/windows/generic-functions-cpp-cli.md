@@ -19,23 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40f79bc6afe47bfed92d096dace59ef97eed68e1
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2429b86ad872ea310d690187c7283b8498ece3f5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568880"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645128"
 ---
 # <a name="generic-functions-ccli"></a>제네릭 함수(C++/CLI)
 제네릭 함수는 형식 매개 변수를 사용 하 여 선언 된 함수가입니다. 호출 되 면 실제 형식은 형식 매개 변수 대신 사용 됩니다.  
   
 ## <a name="all-platforms"></a>모든 플랫폼  
- **주의**  
+### <a name="remarks"></a>설명
   
  이 기능은 모든 플랫폼에 적용 되지 않습니다.  
   
 ## <a name="windows-runtime"></a>Windows 런타임  
- **주의**  
+### <a name="remarks"></a>설명
   
  이 기능은 Windows 런타임에서 지원 되지 않습니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "39568880"
   
 ### <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [attributes] [modifiers]  
 return-type identifier<type-parameter identifier(s)>  
 [type-parameter-constraints clauses]  
@@ -94,7 +94,6 @@ return-type identifier<type-parameter identifier(s)>
  컴파일러 옵션: `/clr`  
   
 ### <a name="examples"></a>예제  
- **예제**  
   
  다음 코드 예제는 제네릭 함수를 보여 줍니다.  
   
@@ -129,8 +128,6 @@ int main() {
 }  
 ```  
   
- **예제**  
-  
  제네릭 함수 서명 또는 인자 수, 함수에 형식 매개 변수의 개수에 따라 오버 로드할 수 있습니다. 또한 제네릭 함수도 함수는 일부 형식 매개 변수에서과 다릅니다. 동일한 이름의 제네릭이 아닌 함수를 사용 하 여 오버 로드할 수 있습니다. 예를 들어, 다음 함수를 오버 로드할 수 있습니다.  
   
 ```cpp  
@@ -146,8 +143,6 @@ ref struct MyClass {
    void MyMythod(int i) {}  
 };  
 ```  
-  
- **예제**  
   
  다음 예제에서는 배열에서 첫 번째 요소를 찾는 제네릭 함수를 사용 합니다. 선언 `MyClass`, 기본 클래스에서 상속 하는 `MyBaseClass`합니다. `MyClass` 제네릭 함수를 포함 `MyFunction`, 다른 제네릭 함수를 호출 하는 `MyBaseClassFunction`, 기본 클래스 내에서. `main`, 제네릭 함수 `MyFunction`, 다양 한 형식 인수를 사용 하 여 호출 됩니다.  
   
@@ -184,8 +179,6 @@ int main() {
    myObj->MyFunction<String^>("Hello generic functions!"));  
 }  
 ```  
-  
- **출력**  
   
 ```Output  
 My function returned an int: 2003  

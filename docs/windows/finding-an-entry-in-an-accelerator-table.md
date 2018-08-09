@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 45f02bff270c7049e6207d797ed2d2ca5ae339f2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 805d50a04f76e359bbf7553ab9c31d10f0871c57
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571378"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647855"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>액셀러레이터 키 테이블에서 항목 찾기
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>열린 액셀러레이터 키 테이블에서 항목을 찾으려면  
@@ -38,7 +38,6 @@ ms.locfileid: "39571378"
  관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다.  
   
 ## <a name="requirements"></a>요구 사항  
-  
  Win32  
   
 ## <a name="see-also"></a>참고 항목  

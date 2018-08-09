@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f7c1f02c3791e75d3f42db6a942f5b2055234517
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 7d15c4cd43dd74b6c699027be9841f5f4a610518
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570612"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646113"
 ---
 # <a name="dbsource"></a>db_source
 데이터 원본에 연결을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ db_source(   
    db_source,   
    name,   
@@ -45,7 +45,7 @@ ms.locfileid: "39570612"
  사용 하는 경우 **db_source** 클래스에서 *이름* 있는 데이터 원본 개체의 인스턴스를 **db_source** 특성 (예 1 참조)를 적용 합니다. 사용 하는 경우 **db_source** 메서드 구현에서 인라인 *이름* 데이터 액세스에 사용할 수 있는 변수 (로컬 메서드에) 원본 (예 2 참조). 이 전달할 *이름* 에 *source_name* 의 매개 변수 `db_command` 명령을 사용 하 여 데이터 원본에 연결할 합니다.  
   
  *hresult* (선택 사항)  
- 이 데이터베이스 명령의 `HRESULT` 를 수신할 변수를 식별합니다. 변수가 없으면 특성에 의해 자동으로 삽입됩니다.  
+ 이 데이터베이스 명령의 HRESULT 받을 변수를 식별 합니다. 변수가 없으면 특성에 의해 자동으로 삽입됩니다.  
   
 ## <a name="remarks"></a>설명  
  **db_source** 만듭니다는 [CDataSource](../data/oledb/cdatasource-class.md) 와 [CSession](../data/oledb/csession-class.md) OLE DB 소비자 데이터 원본 사용 하 여 연결을 나타내는 개체입니다.  

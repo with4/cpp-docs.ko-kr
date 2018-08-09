@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20c651c6e671c7c4895fc7dba85d16fdeb998ad5
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: e5aa4c7279fcee6ffd7ca17bcf788bbef7737a9c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570703"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647520"
 ---
 # <a name="dbcolumn"></a>db_column
 행 집합의 변수를 지정된 된 열을 바인딩합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ db_column(   
    ordinal,   
    dbtype,   
@@ -44,7 +44,7 @@ ms.locfileid: "39570703"
  *서 수*  
  서 수 열 번호 (`DBCOLUMNINFO` 서 수) 또는 열 이름 (ANSI 또는 유니코드 문자열) 데이터를 바인딩할 행 집합의 필드에 해당 합니다. 숫자를 사용 하는 경우 연속 된 서 수를 건너뛸 수 있습니다 (예: 1, 2, 3, 5). 이름을 사용 하는 OLE DB 공급자에서 지 원하는 경우 공백을 포함할 수 있습니다. 예를 들어, 다음 형식 중 하나를 사용할 수 있습니다.  
   
-```  
+```cpp  
 [db_column("2")] TCHAR szCity[30];  
 [db_column(L"city_name")] TCHAR szCity[30];  
 ```  

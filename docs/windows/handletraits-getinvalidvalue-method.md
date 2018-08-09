@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 190c327a404d19da86fdb86c32411a8ffeb06e7c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c4690daabd84b8127913af0a96d5b929ee986e77
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873500"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651235"
 ---
 # <a name="handletraitsgetinvalidvalue-method"></a>HANDLETraits::GetInvalidValue 메서드
 잘못 된 핸들을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 inline static HANDLE GetInvalidValue();  
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 항상 INVALID_HANDLE_VALUE를 반환합니다. (INVALID_HANDLE_VALUE가 Windows에 의해 정의 됨).  
+ 항상 INVALID_HANDLE_VALUE를 반환합니다. (INVALID_HANDLE_VALUE Windows에서 정의 됩니다.)  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  
