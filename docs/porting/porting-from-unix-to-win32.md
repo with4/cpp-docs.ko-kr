@@ -1,7 +1,7 @@
 ---
 title: UNIX에서 Win32로 이식 | Microsoft 문서
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/02/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 628d032ff00205b3f511a613a866f025d62dc50a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 08958de9f756ac005f966245e22a44afd7125bc0
+ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843290"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496677"
 ---
 # <a name="porting-from-unix-to-win32"></a>UNIX에서 Win32로 이식
 UNIX에서 Windows로 응용 프로그램을 마이그레이션하는 경우 다음과 같은 여러 옵션이 있습니다.  
@@ -42,13 +42,9 @@ UNIX에서 Windows로 응용 프로그램을 마이그레이션하는 경우 다
  다음 목록에서는 Visual C++로의 포팅 및 UNIX 마이그레이션을 지원하는 Microsoft 및 타사 리소스를 제공합니다.  
   
 ### <a name="unix-migration-guides"></a>UNIX 마이그레이션 가이드  
- UNIX 사용자 지정 응용 프로그램 마이그레이션 가이드에서는 UNIX에서 Win32 환경으로의 코드 마이그레이션에 대한 기술 도움말을 제공합니다.  
+ [UNIX Custom Application Migration Guide](https://technet.microsoft.com/library/bb656290.aspx)(UNIX 사용자 지정 응용 프로그램 마이그레이션 가이드)에서는 UNIX에서 Win32 환경으로의 코드 마이그레이션에 대한 기술 도움말을 제공합니다.  
   
- [http://go.microsoft.com/fwlink/p/?linkid=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
-  
- Unix 마이그레이션 프로젝트 가이드에서는 UNIX에서 Win32로 많은 프로젝트를 마이그레이션하는 방법에 대한 개괄적인 도움말을 제공하여 UNIX 사용자 지정 응용 프로그램 마이그레이션 가이드를 보완합니다. 이 가이드에서는 프로젝트 마이그레이션의 각 단계에서 고려해야 할 문제에 대해 조언합니다. 이 가이드는 다음 위치에서 다운로드할 수 있습니다.  
-  
- [http://go.microsoft.com/fwlink/p/?linkid=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
+ [Unix Migration Project Guide](https://technet.microsoft.com/library/bb656287.aspx)(Unix 마이그레이션 프로젝트 가이드)에서는 UNIX에서 Win32로 많은 프로젝트를 마이그레이션하는 방법에 대한 개괄적인 도움말을 제공하여 UNIX 사용자 지정 응용 프로그램 마이그레이션 가이드를 보완합니다. 이 가이드에서는 프로젝트 마이그레이션의 각 단계에서 고려해야 할 문제에 대해 조언합니다.
   
 ### <a name="microsoft-windows-services-for-unix-sfu"></a>Microsoft Windows SFU(UNIX용 서비스)  
  Microsoft Windows SFU(UNIX용 서비스)에서는 Windows를 기존 UNIX 기반 환경으로 통합하기 위한 다양한 플랫폼 간 서비스를 제공합니다. UNIX용 서비스는 파일 공유, 원격 액세스 및 관리, 암호 동기화, 공통 디렉터리 관리, 공통 유틸리티 집합 및 셸을 제공합니다.  

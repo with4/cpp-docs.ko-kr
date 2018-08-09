@@ -23,26 +23,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b13acb5d637b4a733f2a2b9c66c8ded977c7847
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2b1b285437170c4059d5cd0d66d19188c99badd9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569936"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646788"
 ---
 # <a name="eventreceiver"></a>event_receiver
 이벤트 수신기(싱크)를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ event_receiver(  
    type   
    [, layout_dependent=false]   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *type*  
  다음 값 중 하나의 열거형:  
   
@@ -50,13 +50,13 @@ ms.locfileid: "39569936"
   
 -   `com` - COM 코드용. 이 값을 사용하려면 다음 헤더 파일을 포함해야 합니다.  
   
-    ```  
+    ```cpp  
     #define _ATL_ATTRIBUTES  
     #include <atlbase.h>  
     #include <atlcom.h>  
     ```  
   
- **layout_dependent**  
+ *layout_dependent*  
  지정할 *layout_dependent* 경우에만 `type` = **com**합니다. *layout_dependent* 는 부울입니다.  
   
 -   **true** 수신기 일치 해야 하는 후크 되어 이벤트 소스 이벤트에서 대리자의 시그니처와 의미 합니다. 이벤트 수신기 처리기 이름은 관련 이벤트 소스 인터페이스에 지정 된 이름과 일치 해야 합니다. 사용 해야 합니다 `coclass` 때 *layout_dependent* 됩니다 **true**합니다. 것이 약간 더 효율적 지정할 **true**합니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "39569936"
 |-|-|  
 |**적용 대상**|**클래스**, **구조체**|  
 |**반복 가능**|아니요|  
-|**필수 특성**|**coclass** 때 *layout_dependent*=**true**|  
+|**필수 특성**|`coclass` 때 *layout_dependent*=**true**|  
 |**잘못된 특성**|없음|  
   
  자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  

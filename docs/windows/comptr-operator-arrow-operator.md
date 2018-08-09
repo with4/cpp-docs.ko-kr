@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ff18dee2b8d951ab9233e92478eb967e4a02eb9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1530f7998f2597aeb2fe46dba09f4844b471cd93
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464300"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644832"
 ---
 # <a name="comptroperator-gt-operator"></a>Comptr:: Operator-&gt; 연산자
 현재 템플릿 매개 변수에 지정된 형식에 대한 포인터를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->() const;  
 ```  
   

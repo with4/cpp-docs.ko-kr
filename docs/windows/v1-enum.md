@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3156554f5d2b799a9e1ef5a067d1f2e8e600d38
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15e51719e1daecc440dc5945a54443e4bc5079ec
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890663"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644367"
 ---
 # <a name="v1enum"></a>v1_enum
-열거 형식이 지정된 된 16 비트 기본이 아닌 32 비트 엔터티 전송 될 지시 합니다.  
+지정된 된 열거형된 형식 16 비트 기본이 아닌 32 비트 엔터티를 전송할 수 있는지를 전달 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [v1_enum]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **v1_enum** c + + 특성에 동일한 기능을는 [v1_enum](http://msdn.microsoft.com/library/windows/desktop/aa367303) MIDL 특성입니다.  
+ 합니다 **v1_enum** c + + 특성에 동일한 기능을 합니다 [v1_enum](http://msdn.microsoft.com/library/windows/desktop/aa367303) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 다음 코드의 사용을 보여 줍니다. **v1_enum**:  
+## <a name="example"></a>예  
+ 다음 코드는 사용 방법을 보여 줍니다 **v1_enum**:  
   
-```  
+```cpp  
 // cpp_attr_ref_v1_enum.cpp  
 // compile with: /LD  
 [module(name="MyLibrary")];  

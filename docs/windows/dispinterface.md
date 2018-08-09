@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 18308cc66e2a01aa5e0396f098096ee9d49416bf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569216"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644332"
 ---
 # <a name="dispinterface"></a>dispinterface
 .Idl 파일의 인터페이스를 디스패치 인터페이스로 배치합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [dispinterface]  
 ```  
   
@@ -40,7 +40,7 @@ ms.locfileid: "39569216"
   
  MIDL 문서에 있는 [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) 의 사용 예:  
   
-```  
+```cpp  
 dispinterface helloPro   
    { interface hello; };   
 ```  
@@ -59,7 +59,7 @@ dispinterface helloPro
 |**적용 대상**|**interface**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못된 특성**|**dual**, **object**, **oleautomation**, `local`, **ms_union**|  
+|**잘못된 특성**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|  
   
  자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   

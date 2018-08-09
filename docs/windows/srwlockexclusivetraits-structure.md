@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b5d56c4e0c31b56e5bdc92a9d209b58cd15ffb1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49f1f50b3fa9e34da8831c1cec138b6aefec27a5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889279"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649275"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits 구조체
-배타적 잠금 모드의 SRWLock 클래스의 일반적인 특성에 설명합니다.  
+일반적인 특징을 설명 합니다 `SRWLock` 배타적 잠금 모드의 클래스입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,14 +39,14 @@ struct SRWLockExclusiveTraits;
   
 |이름|설명|  
 |----------|-----------------|  
-|`Type`|에 대 한 포인터에 대 한 동의어는 [SRWLOCK](../windows/srwlock-class.md) 클래스입니다.|  
+|`Type`|동의어에 대 한 포인터를 [SRWLOCK](../windows/srwlock-class.md) 클래스입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[SRWLockExclusiveTraits::GetInvalidValue 메서드](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|항상 유효 하지 않은 SRWLockExclusiveTraits 개체를 검색 합니다.|  
-|[SRWLockExclusiveTraits::Unlock 메서드](../windows/srwlockexclusivetraits-unlock-method.md)|지정된 된 SRWLock 개체의 한 독점적인 제어권을 해제합니다.|  
+|[SRWLockExclusiveTraits::GetInvalidValue 메서드](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|검색을 **SRWLockExclusiveTraits** 항상 유효 하지 않은 개체입니다.|  
+|[SRWLockExclusiveTraits::Unlock 메서드](../windows/srwlockexclusivetraits-unlock-method.md)|지정 된 한 독점적인 제어권을 해제 `SRWLock` 개체입니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `SRWLockExclusiveTraits`  

@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e694b4c86194402f48d335aac353e48c3de79a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 938c7c796bf88d4ea1e49f1f59d274b5017aa7de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890704"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649304"
 ---
 # <a name="weakrefas-method"></a>WeakRef::As 메서드
-지정된 인터페이스를 나타내도록 지정된 ComPtr 포인터 매개 변수를 설정합니다.  
+지정 된 `ComPtr` 포인터 매개 변수를 지정된 된 인터페이스를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* ptr  
@@ -42,27 +41,27 @@ HRESULT As(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `U`  
+### <a name="parameters"></a>매개 변수  
+ *U*  
  인터페이스 ID입니다.  
   
- `ptr`  
- 이 작업이 완료되었을 때 `U`매개 변수를 나타내는 개체입니다.  
+ *ptr*  
+ 이 작업이 완료 되 면 매개 변수를 나타내는 개체 *U*합니다.  
   
 ## <a name="return-value"></a>반환 값  
   
--   이 작업이 성공하면 S_OK이고, 실패하면 작업이 실패한 원인을 나타내는 HRESULT입니다. 그리고 `ptr` 이 `nullptr`로 설정됩니다.  
+-   이 작업이 성공 하면 s_ok이 고 이유를 나타내는 HRESULT 그렇지 않으면 작업이 실패 하 고 *ptr* 로 설정 된 **nullptr**합니다.  
   
--   이 작업이 성공하면 S_OK이지만, 현재 WeakRef 개체는 이미 해제되었습니다. `ptr` 매개 변수가 `nullptr`로 설정됩니다.  
+-   하지만 현재가이 작업이 성공 하면 S_OK **WeakRef** 개체는 이미 해제 되었습니다. 매개 변수 *ptr* 로 설정 된 **nullptr**합니다.  
   
--   이 작업이 성공하면 S_OK이지만, 현재 WeakRef 개체가 `U`매개 변수에서 파생되지 않습니다. `ptr` 매개 변수가 `nullptr`로 설정됩니다.  
+-   하지만 현재가이 작업이 성공 하면 S_OK **WeakRef** 개체가 매개 변수에서 파생 되지 않습니다 *U*합니다. 매개 변수 *ptr* 로 설정 된 **nullptr**합니다.  
   
 ## <a name="remarks"></a>설명  
- `U` 매개 변수가 IWeakReference이거나 IInspectable에서 파생되지 않은 경우 오류가 발생합니다.  
+ 오류가 발생 하는 경우에 내보내집니다 매개 변수 *U* 됩니다 `IWeakReference`에서 파생 되지 않은 또는 `IInspectable`합니다.  
   
  첫 번째 템플릿은 코드에서 사용해야 하는 폼입니다. 두 번째 템플릿은 [자동](../cpp/auto-cpp.md) 형식 추론 키워드와 같은 C++ 언어 기능을 지원하는 내부 도우미 특수화입니다.  
   
- Windows 10 SDK부터는 약한 참조를 가져올 수 없는 경우 이 메서드에서 WeakRef 인스턴스를 `nullptr` 로 설정하지 않으므로 WeakRef에서 `nullptr`을 검사하는 오류 검사 코드를 사용하지 않아야 합니다. 대신, 확인 `ptr` 에 대 한 `nullptr`합니다.  
+ Windows 10 SDK 부터는이 메서드는 설정 되지 합니다 **WeakRef** 인스턴스의 **nullptr** 약한 참조를 가져올 수 없는 경우는 피할 수에 대해 WeakRef를 검사 하는 오류 검사 코드 **nullptr**합니다. 대신 확인 합니다 *ptr* 에 대 한 **nullptr**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

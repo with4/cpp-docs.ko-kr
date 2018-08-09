@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c8221b405618b1879f4e4c865115a227eb09857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 125ffe998e7c3f225f72e3fb47df4ef3525c37f9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890118"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649050"
 ---
 # <a name="weakrefoperatoramp-operator"></a>WeakRef::operator&amp; 연산자
-현재 WeakRef 개체를 나타내는 ComPtrRef 개체를 반환합니다.  
+반환 된 `ComPtrRef` 현재를 나타내는 개체 **WeakRef** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,10 +34,10 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 현재 WeakRef 개체를 나타내는 ComPtrRef 개체입니다.  
+ A `ComPtrRef` 현재 나타내는 **WeakRef** 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 사용자 코드에서 사용할 수를 고려 하지 않은 내부 도우미 연산자입니다.  
+ 코드에서 사용할 고려 하지 않은 한 내부 도우미 연산자입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

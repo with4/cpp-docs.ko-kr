@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 667aa3d2d29e4ce541d957b20b2246380e237a6b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: df5f341382b7f9594d740b7e47fbb53b53188d75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462045"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643123"
 ---
 # <a name="argtraits-structure"></a>ArgTraits 구조체
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename TMemberFunction>  
 struct ArgTraits;  
 template<typename TDelegateInterface>  
@@ -117,7 +117,7 @@ template<
 struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9)>;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *TMemberFunction*  
  Typename 매개 변수 수와 일치 하는 ArgTraits 구조체에 대 한 `Invoke` 메서드 시그니처입니다.  
   
@@ -152,7 +152,7 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
  아홉 번째 인수의 형식은 `Invoke` 메서드.  
   
 ## <a name="remarks"></a>설명  
- `ArgTraits` 구조 인터페이스 및 지정 된 개수의 매개 변수를 가진 익명 멤버 함수는 지정 된 대리자를 선언 합니다.  
+ 합니다 **ArgTraits** 구조 인터페이스 및 지정 된 개수의 매개 변수를 가진 익명 멤버 함수는 지정 된 대리자를 선언 합니다.  
   
 ## <a name="members"></a>멤버  
   

@@ -19,29 +19,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7510d8bb9f356620e77d862edab71d852fdec65b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ee2b3a437f2b36d34fe9232356b171757643509
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855385"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644988"
 ---
 # <a name="changing-unassigned-symbols"></a>할당되지 않은 기호 변경
-에 있는 동안는 [리소스 기호 대화 상자](../windows/resource-symbols-dialog-box.md), 리소스 또는 개체에 아직 할당 되지 않은 기존 기호를 삭제 하거나 편집할 수 있습니다.  
+에 있는 동안 합니다 [리소스 기호 대화 상자](../windows/resource-symbols-dialog-box.md), 편집 하거나 이미 리소스 또는 개체에 할당 되지 않은 기존 기호를 삭제할 수 있습니다.  
   
 ### <a name="to-change-an-unassigned-symbol"></a>할당되지 않은 기호를 변경하려면  
   
-1.  에 **이름** 상자 할당 되지 않은 기호를 선택 하 고 클릭 **변경**합니다.  
+1.  에 **이름을** 상자, 할당 되지 않은 기호를 선택 하 고 클릭 **변경**합니다.  
   
-2.  기호의 이름 또는 값에 제공 된 상자에서 편집 된 **기호 변경** 대화 상자.  
+2.  기호 이름 또는 값에 제공 된 상자에서 편집 합니다 **기호 변경** 대화 상자.  
   
     > [!NOTE]
-    >  기호를 변경 하려면를 *는* 리소스 또는 개체에 할당 된 사용 해야 리소스 편집기 또는 속성 창. 자세한 내용은 참조 [기호 또는 기호 이름 변경](../windows/changing-a-symbol-or-symbol-name-id.md)합니다.  
+    >  기호를 변경 하는 *됩니다* 리소스 또는 개체에 할당할 리소스 편집기를 사용 해야 합니다 또는 **속성** 창입니다. 자세한 내용은 [기호 또는 기호 이름 변경](../windows/changing-a-symbol-or-symbol-name-id.md)합니다.  
   
- 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.*  
+ 관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다.  
   
- 요구 사항  
-  
+## <a name="requirements"></a>요구 사항  
  Win32  
   
 ## <a name="see-also"></a>참고 항목  

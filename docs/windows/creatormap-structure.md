@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fadba5993b7445af2386f6e0669f210e29560c6c
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 173b41c6d36d36b7d8a0f4e7b024e845eec6ae4a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464258"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650507"
 ---
 # <a name="creatormap-structure"></a>CreatorMap 구조체
 Windows Runtime c + + 템플릿 라이브러리 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 struct CreatorMap;  
 ```  
   

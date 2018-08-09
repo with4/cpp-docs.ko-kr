@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1b9d238d4f5475475e5dc367aae196937630a0e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 12d823cdefa90cad1e454996be274135d9e68fa9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465424"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647630"
 ---
 # <a name="criticalsectiontrylock-method"></a>CriticalSection::TryLock 메서드
 임계 영역을 차단 하지 않고 입력 하려고 합니다. 호출이 성공 하면 호출 스레드가 중요 섹션의 소유권을 갖습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 SyncLock TryLock();  
   
 static SyncLock TryLock(  
@@ -37,7 +37,7 @@ static SyncLock TryLock(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *cs*  
  사용자가 지정한 임계 영역 개체입니다.  
   

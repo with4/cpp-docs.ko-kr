@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad24d6e874b1c2efd9b57118e20fe78bfa037bd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef4cfba786bd5c310a24727b59575b9eb45bd183
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890153"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651615"
 ---
 # <a name="uidefault"></a>uidefault
-형식 정보 멤버의 사용자 인터페이스에 표시 하기 위한 기본 멤버 임을 나타냅니다.  
+형식 정보 멤버 사용자 인터페이스에 표시 하기 위한 기본 멤버 임을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [uidefault]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **uidefault** c + + 특성에 동일한 기능을는 [uidefault](http://msdn.microsoft.com/library/windows/desktop/aa367292) MIDL 특성입니다.  
+ 합니다 **uidefault** c + + 특성에 동일한 기능을 합니다 [uidefault](http://msdn.microsoft.com/library/windows/desktop/aa367292) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 다음 코드 예제를 보여 줍니다. **uidefault**:  
+## <a name="example"></a>예  
+ 다음 코드 예제를 보여 줍니다 **uidefault**:  
   
-```  
+```cpp  
 // cpp_attr_ref_uidefault.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

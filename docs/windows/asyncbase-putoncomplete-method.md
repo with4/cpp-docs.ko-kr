@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33ca905d25fb010eb6d5c511f22ba40446ffd385
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e982e6f053b207b1d57ed5c0df483a9d9ab778eb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465605"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646974"
 ---
 # <a name="asyncbaseputoncomplete-method"></a>AsyncBase::PutOnComplete 메서드
 완료 이벤트 처리기의 주소를 지정된 된 값으로 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 STDMETHOD(  
    PutOnComplete  
 )(TComplete* completeHandler);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *completeHandler*  
  완료 이벤트 처리기에 설정 된 주소입니다.  
   

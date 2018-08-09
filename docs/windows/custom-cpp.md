@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7222d7021665a76c7e087033f5152d2836008caa
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2c0f4f04adb9ddc847b1c22485d10512a9d684d0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460934"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651897"
 ---
 # <a name="custom-c"></a>custom(C++)
 형식 라이브러리의 개체에 대 한 메타 데이터를 정의합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ custom(  
    uuid,   
    value  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *uuid*  
  고유한 ID입니다.  
   

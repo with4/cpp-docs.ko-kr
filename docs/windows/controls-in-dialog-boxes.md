@@ -17,21 +17,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a837766bbbe57186f8355895c98ff04d8048bdc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: acbbbe0ecf1151f6159799592a8211bcf11fe7a1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873123"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646945"
 ---
 # <a name="controls-in-dialog-boxes"></a>대화 상자의 컨트롤
-사용 하 여 대화 상자에 컨트롤을 추가할 수 있습니다는 [대화 상자 편집기 탭](../windows/dialog-editor-tab-toolbox.md) 에 [도구 상자 창](/visualstudio/ide/reference/toolbox), 대화 상자도 끌어와 원하는 컨트롤을 선택할 수 있습니다. 기본적으로 도구 상자 창 자동 숨기기로 설정 됩니다. 대화 상자 편집기 열릴 때 솔루션의 왼쪽된 여백에 탭으로 나타납니다. 그러나 클릭 하 여 위치를 도구 상자 창을 고정할 수는는 **자동 숨기기** 창의 상단 오른쪽 모서리에 있는 단추입니다. 이 창의 동작을 제어 하는 방법에 대 한 자세한 내용은 참조 하십시오. [창 관리](/visualstudio/ide/customizing-window-layouts-in-visual-studio)합니다.  
+사용 하 여 대화 상자 컨트롤을 추가할 수 있습니다 합니다 [대화 상자 편집기 탭](../windows/dialog-editor-tab-toolbox.md) 에 [도구 상자 창](/visualstudio/ide/reference/toolbox), 대화 상자를 끌어 원하는 컨트롤을 선택할 수 있습니다. 기본적으로 도구 상자 창 자동 숨기기로 설정 됩니다. 대화 상자 편집기가 열려 있으면 솔루션의 왼쪽된 여백에 탭으로 나타납니다. 고정할 수 있습니다 합니다 **도구 상자** 창을 클릭 하 여 위치에는 **자동 숨기기** 창의 오른쪽 위 모퉁이의 단추입니다. 이 창의 동작을 제어 하는 방법에 대 한 자세한 내용은 참조 하세요. [창 관리](/visualstudio/ide/customizing-window-layouts-in-visual-studio)합니다.  
   
- 대화 상자에 컨트롤을 추가, 기존 컨트롤의 위치를 변경 또는 다른 한 대화 상자에서 컨트롤을 이동 하는 가장 빠른 방법은-drop 메서드를 사용 하는 것입니다. 대화 상자에 놓을 때까지 점선 컨트롤의 위치가 같습니다. 끌어서 놓기 방법을 대화 상자에 컨트롤을 추가 하면 컨트롤의 형식에 맞는 표준 높이 컨트롤에 제공 됩니다.  
+ 대화 상자에 컨트롤을 추가, 기존 컨트롤의 위치를 변경 하거나 다른 하나의 대화 상자에서 컨트롤을 이동 하는 가장 빠른 방법은 끌어서 놓기 메서드를 사용 하는 것입니다. 컨트롤의 위치는 대화 상자에 놓을 때까지 점선에 설명 된 합니다. 끌어서 놓기 메서드를 사용 하 여 대화 상자에 컨트롤을 추가 하면 컨트롤의 해당 형식에 적합 한 표준 높이 컨트롤에 지정 됩니다.  
   
- 대화 상자에 컨트롤을 추가 하거나 위치를 변경할 때의 최종 위치 확인할 수 있습니다 가이드 또는 여백, 아니면 레이아웃 모눈이 있습니다.  
+ 대화 상자에 컨트롤을 추가 하거나 위치를 변경할 때 가이드 또는 여백에서의 최종 위치를 확인할 수 있습니다 또는 레이아웃 모눈 켜져 있는지 여부입니다.  
   
- 대화 상자에 컨트롤을 추가한 후에 캡션 등의 속성을 변경할 수 있습니다는 [속성 창](/visualstudio/ide/reference/properties-window)합니다. 여러 컨트롤을 선택할 수 있으며 해당 속성을 한 번에 변경할 수 없습니다.  
+ 대화 상자에 컨트롤을 추가한 후에 해당 캡션 등의 속성을 변경할 수 있습니다 합니다 [속성 창](/visualstudio/ide/reference/properties-window)합니다. 여러 컨트롤을 선택할 수 있으며 해당 속성을 한 번에 변경할 수 있습니다.  
   
 -   [컨트롤 추가, 편집 및 삭제](adding-editing-or-deleting-controls.md)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33873123"
   
 -   [가로 스크롤 막대 너비 설정](../windows/setting-the-width-of-a-horizontal-scroll-bar.md)  
   
--   [대화 상자에 컨트롤 배치](../windows/arrangement-of-controls-on-dialog-boxes.md)  
+-   [대화 상자에서 컨트롤 정렬](../windows/arrangement-of-controls-on-dialog-boxes.md)  
   
 -   [대화 상자 편집기의 사용자 지정 컨트롤](custom-controls-in-the-dialog-editor.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "33873123"
   
 -   [대화 상자의 위치와 크기 지정](../windows/specifying-the-location-and-size-of-a-dialog-box.md)  
   
- 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
+ 관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다. 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 내용은 참조 하세요 [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화 관리 되는 앱의 리소스에 대 한 내용은 참조 하세요 [Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  Win32  
@@ -64,4 +64,3 @@ ms.locfileid: "33873123"
  [대화 상자 컨트롤에 대 한 이벤트 처리기를 추가합니다.](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [대화 상자 컨트롤 및 변수 형식](../ide/dialog-box-controls-and-variable-types.md)   
  [대화 상자 편집기](../windows/dialog-editor.md)
-

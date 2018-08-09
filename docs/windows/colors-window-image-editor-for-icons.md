@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ee53735c84d586aa41cd4a1c5d3e8a70051c88e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 23befed8800027553f69032a5f5cc32816396951
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460973"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648212"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>색상 창(아이콘에 대한 이미지 편집기)
 합니다 **색** 창에 두 부분으로 구성 합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "39460973"
 > [!NOTE]
 >  **색 화면** 하 고 **반전색** 도구 아이콘 및 커서에만 사용할 수 있습니다.  
   
- 색 창을 사용 하 여 사용할 수 있습니다 합니다 [이미지 편집기 도구 모음](../windows/toolbar-image-editor-for-icons.md)합니다.  
+ 사용할 수는 **색** 창에는 [이미지 편집기 도구 모음](../windows/toolbar-image-editor-for-icons.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  없음  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de317366d16748e9fb0a8a62f3602ad9d4ce025e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f1d960c634814df122202199be05149f47b01f28
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467279"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647666"
 ---
 # <a name="creating-a-console-application"></a>콘솔 응용 프로그램 만들기
-Win32 콘솔 응용 프로그램을 만드는 가장 쉬운 방법은 Win32 응용 프로그램 마법사를 사용 하는 것입니다.  
+Win32 콘솔 응용 프로그램을 만드는 가장 쉬운 방법은 사용 하는 것은 **Win32 응용 프로그램 마법사**합니다.  
   
 ### <a name="to-create-a-win32-console-application"></a>Win32 콘솔 응용 프로그램을 만들려면  
   

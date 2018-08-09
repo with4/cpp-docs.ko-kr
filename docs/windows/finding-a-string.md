@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c91e9523b063e9decbcb97ce9f5d8229a9c670b2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 67d3d4ba38563b4716a87d4b57a4753fe1b49e9c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568938"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652096"
 ---
 # <a name="finding-a-string"></a>문자열 찾기
 문자열 테이블에 하나 이상의 문자열을 검색 하 고 사용할 수 있습니다 [정규식](/visualstudio/ide/using-regular-expressions-in-visual-studio) 사용 하 여 합니다 **파일에서 찾기** 명령 (**편집** 메뉴) 문자열의 모든 인스턴스를 찾을 수 패턴을 일치 하는 합니다.  
@@ -49,7 +49,6 @@ ms.locfileid: "39568938"
  (대상으로 하는 공용 언어 런타임) 관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다. 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 내용은 참조 하세요 [연습: Windows Forms 지역화](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) 고[연습: ASP.NET에서 지역화에 리소스를 사용 하 여](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)입니다.  
   
 ## <a name="requirements"></a>요구 사항  
-  
  Win32  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,5 +1,5 @@
 ---
-title: Windows 런타임 및 관리 되는 템플릿 (c + + 구성 요소 확장명) | Microsoft Docs
+title: Windows 런타임 및 관리 되는 템플릿 (c + + 구성 요소 확장) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,37 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9053b101428ac26e96446d9c6756ec5de35e06c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891365"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641462"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows 런타임 및 관리되는 템플릿(C++ 구성 요소 확장명)
 템플릿을 사용하면 공용 언어 런타임 형식 또는 Windows 런타임의 프로토타입을 정의한 다음, 다른 템플릿 형식 매개 변수를 사용하여 해당 형식의 변형을 인스턴스화할 수 있습니다.  
   
 ## <a name="all-runtimes"></a>모든 런타임  
- 값 또는 참조 형식에서 템플릿을 만들 수 있습니다.  값 또는 참조 형식 만들기에 대 한 자세한 내용은 참조 [클래스 및 구조체](../windows/classes-and-structs-cpp-component-extensions.md)합니다.  
+ 값 또는 참조 형식에서 템플릿을 만들 수 있습니다.  값 또는 참조 형식 만들기에 대 한 자세한 내용은 참조 하세요. [클래스 및 구조체](../windows/classes-and-structs-cpp-component-extensions.md)합니다.  
   
- 표준 c + + 클래스 템플릿에 대 한 자세한 내용은 참조 하십시오. [클래스 템플릿](../cpp/class-templates.md)합니다.  
+ 표준 c + + 클래스 템플릿에 대 한 자세한 내용은 참조 하세요. [클래스 템플릿을](../cpp/class-templates.md)합니다.  
   
 ## <a name="windows-runtime"></a>Windows 런타임  
  (이 언어 기능에는 Windows 런타임에만 적용되는 설명이 없습니다.)  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/ZW**  
+ 컴파일러 옵션: `/ZW`  
   
 ## <a name="common-language-runtime"></a>공용 언어 런타임  
  다음 코드 예제에서 보여 주는 것처럼 관리되는 형식에서 클래스 템플릿을 만드는 데는 몇 가지 제한이 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/clr**  
+ 컴파일러 옵션: `/clr`  
   
 ### <a name="examples"></a>예제  
- **예제**  
   
- 관리되는 형식 템플릿 매개 변수로 제네릭 형식을 인스턴스화할 수 있지만 제네릭 형식 템플릿 매개 변수로 관리되는 템플릿을 인스턴스화할 수 없습니다.  이는 제네릭 형식이 런타임에 확인되기 때문입니다.  자세한 내용은 참조 [템플릿 (Visual c + +)](../windows/generics-and-templates-visual-cpp.md)합니다.  
+ 관리되는 형식 템플릿 매개 변수로 제네릭 형식을 인스턴스화할 수 있지만 제네릭 형식 템플릿 매개 변수로 관리되는 템플릿을 인스턴스화할 수 없습니다.  이는 제네릭 형식이 런타임에 확인되기 때문입니다.  자세한 내용은 [제네릭과 템플릿 (Visual c + +)](../windows/generics-and-templates-visual-cpp.md)합니다.  
   
 ```cpp  
 // managed_templates.cpp  
@@ -67,8 +66,6 @@ ref class R {
 };  
 ```  
   
- **예제**  
-  
  제네릭 형식이나 함수는 관리되는 템플릿에 중첩될 수 없습니다.  
   
 ```cpp  
@@ -79,8 +76,6 @@ template<class T> public ref class R {
    generic<class T> ref class W {};   // C2959  
 };  
 ```  
-  
- **예제**  
   
  C++/CLI 언어 구문으로 참조된 어셈블리에 정의된 템플릿을 액세스할 수 없지만 리플렉션을 사용할 수 있습니다.  템플릿을 인스턴스화하지 않으면 메타데이터로 내보낼 수 없습니다.  템플릿을 인스턴스화할 경우 참조된 멤버 함수만 메타데이터에 표시됩니다.  
   
@@ -112,8 +107,6 @@ int main() {
 }  
 ```  
   
- **예제**  
-  
  클래스 템플릿의 명시적 특수화 또는 부분 특수화에서 클래스의 관리되는 한정자를 변경할 수 있습니다.  
   
 ```cpp  
@@ -139,7 +132,6 @@ interface class A<T%> {};
 // native class  
 template <>  
 class A <int> {};  
-  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

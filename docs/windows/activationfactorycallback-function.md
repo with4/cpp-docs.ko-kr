@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e2e7b2301ae4dd38a40bdf4583e963e55a8b12d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 858232702367aef62d0228f2e8653774896bd87f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461395"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647185"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback 함수
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(  
    HSTRING activationId,  
    IActivationFactory **ppFactory  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *activationId*  
  런타임 클래스 이름을 지정 하는 문자열에 대 한 핸들입니다.  
   

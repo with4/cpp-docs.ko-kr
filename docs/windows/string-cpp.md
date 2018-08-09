@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bdcdc6557253f8be9c6ecb20300f2338ab35d07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef5a4453e0b7742a385815b5285b2aa04575eb75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889022"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645411"
 ---
 # <a name="string-c"></a>string(C++)
-나타냅니다는 1 차원 `char`, `wchar_t`, **바이트** (또는 동일한) 배열 또는 이러한 배열에 대 한 포인터를 문자열로 취급 되어야 합니다.  
+나타내는 1 차원 **char**를 **wchar_t**, `byte` (또는 이와 동등한) 배열 또는 이러한 배열에 대 한 포인터를 문자열로 간주 해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 [string]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **문자열** c + + 특성에 동일한 기능을는 [문자열](http://msdn.microsoft.com/library/windows/desktop/aa367270) MIDL 특성입니다.  
+ 합니다 **문자열** c + + 특성에 동일한 기능을 합니다 [문자열](http://msdn.microsoft.com/library/windows/desktop/aa367270) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 다음 코드를 사용 하는 방법을 보여 줍니다 **문자열** typedef와 인터페이스에:  
+## <a name="example"></a>예  
+ 다음 코드를 사용 하는 방법을 보여 줍니다 **문자열** typedef 및 인터페이스에서:  
   
-```  
+```cpp  
 // cpp_attr_ref_string.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -60,7 +58,7 @@ __interface IFireTabCtrl
   
 |||  
 |-|-|  
-|**적용 대상**|배열 또는 포인터 배열, 인터페이스 매개 변수, 인터페이스 메서드에|  
+|**적용 대상**|배열 또는 포인터는 배열, 인터페이스 매개 변수, 인터페이스 메서드|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

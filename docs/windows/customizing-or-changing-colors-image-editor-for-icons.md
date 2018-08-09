@@ -26,15 +26,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e94945212b9a7215397a1179432e87178d236b42
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: a2aacfcda168b3abdb5d46826a0351f85a4b3d48
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571287"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645398"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>색 사용자 지정 또는 변경(아이콘에 대한 이미지 편집기)
-이미지 편집기 [색상표](../windows/colors-window-image-editor-for-icons.md) 처음에 16 개의 표준 색을 표시 합니다. 표시된 색 외에도 사용자 지정 색을 직접 만들 수 있습니다. 그런 다음 [저장 하 고 사용자 지정된 색 색상표 로드](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)합니다.  
+합니다 **이미지** 편집자 [색상표](../windows/colors-window-image-editor-for-icons.md) 처음에 16 개의 표준 색을 표시 합니다. 표시된 색 외에도 사용자 지정 색을 직접 만들 수 있습니다. 그런 다음 [저장 하 고 사용자 지정된 색 색상표 로드](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)합니다.  
   
 ### <a name="to-change-colors-on-the-colors-palette"></a>색상표에서 색을 변경하려면  
   
@@ -51,7 +51,6 @@ ms.locfileid: "39571287"
 5.  클릭 **확인** 새로운 색을 추가 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
-  
  없음  
   
 ## <a name="see-also"></a>참고 항목  

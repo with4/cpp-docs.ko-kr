@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c825e7e67844fc094e4cf9ce775152d334664d5a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2a2ed2393f25dac416cf3b6dfd1b178190d368a6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465248"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647104"
 ---
 # <a name="activationfactoryqueryinterface-method"></a>ActivationFactory::QueryInterface 메서드
 지정된 된 인터페이스에 대 한 포인터를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 STDMETHOD(  
    QueryInterface  
 )(REFIID riid, _Deref_out_ void **ppvObject);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *riid*  
  인터페이스 ID입니다.  
   

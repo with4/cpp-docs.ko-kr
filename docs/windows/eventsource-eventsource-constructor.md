@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98927c0c6a4bc484b6babc3e74d772399e2f2f24
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: f1e3d250fe4365b9701485457393b85f1c55464e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569696"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649577"
 ---
 # <a name="eventsourceeventsource-constructor"></a>EventSource::EventSource 생성자
 새 인스턴스를 초기화 합니다 **EventSource** 클래스입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 EventSource();  
 ```  
   

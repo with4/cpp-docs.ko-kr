@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c366a379d15e50aabdc3c2157f57f85b6b5b33b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ddf76345234ba44b2634c04ee1e2899913ed2078
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889932"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653061"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 자세한 오류 반환에 대한 지원을 구현합니다.  
@@ -30,25 +30,24 @@ ms.locfileid: "33889932"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      [ support_error_info(  
+[ support_error_info(  
    error_interface=uuid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- **error_interface**  
- **IErrorInfo**를 구현하는 인터페이스의 식별자입니다.  
+### <a name="parameters"></a>매개 변수  
+ *error_interface*  
+ 구현 하는 인터페이스의 식별자 `IErrorInfo`합니다.  
   
 ## <a name="remarks"></a>설명  
- **support_error_info** C++ 특성은 대상 개체에서 발생한 자세한 상황별 오류를 클라이언트에 반환하는 작업에 대한 지원을 구현합니다. 오류를 지원하려면 개체는 **IErrorInfo** 인터페이스의 메서드를 구현해야 합니다. 자세한 내용은 [IDispatch 및 IErrorInfo 지원](../atl/supporting-idispatch-and-ierrorinfo.md)을 참조하세요.  
+ **support_error_info** C++ 특성은 대상 개체에서 발생한 자세한 상황별 오류를 클라이언트에 반환하는 작업에 대한 지원을 구현합니다. 오류를의 메서드를 지원 하려면 개체에 대 한는 `IErrorInfo` 개체에서 인터페이스를 구현 해야 합니다. 자세한 내용은 [IDispatch 및 IErrorInfo 지원](../atl/supporting-idispatch-and-ierrorinfo.md)을 참조하세요.  
   
- 이 특성은 [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) 클래스를 대상 개체에 기본 클래스로 추가합니다. 이는 **ISupportErrorInfo** 의 기본 구현으로 이어지며, 단일 인터페이스가 개체에서 오류를 일으킬 때 사용할 수 있습니다.  
+ 이 특성은 [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) 클래스를 대상 개체에 기본 클래스로 추가합니다. 기본 구현에서는이 인해 `ISupportErrorInfo` 단일 인터페이스가 개체에서 오류를 생성 하는 경우에 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
- 다음 코드는 **ISupportErrorInfo** 인터페이스에 대한 기본 지원을 `CMyClass` 개체에 추가합니다.  
+## <a name="example"></a>예  
+ 다음 코드에 대 한 기본 지원을 추가 합니다 `ISupportErrorInfo` 인터페이스는 `CMyClass` 개체입니다.  
   
-```  
+```cpp  
 // cpp_attr_ref_support_error_info.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c049aa192aeb253641ab473e5675b1ee5bd685a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ea83c97a5ee59e99b4ab743348ae2268d730e5c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891846"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650887"
 ---
 # <a name="symbols-resource-identifiers"></a>기호: 리소스 식별자
 기호는 두 부분 즉, 텍스트 문자열(기호 이름)과 이와 매핑되는 정수 값(기호 값)으로 구성된 리소스 식별자(ID)입니다. 예를 들어:  
@@ -44,7 +44,7 @@ IDC_EDITNAME = 5100
 > [!NOTE]
 >  .rc 파일 간에 리소스 또는 리소스 개체를 복사할 경우 Visual C++에서는 기존 파일에 있는 기호 이름 또는 값과의 충돌을 방지하려고 복사된 리소스의 기호 값 또는 기호 이름과 값을 변경할 수 있습니다.  
   
- 응용 프로그램의 크기가 커지고 복잡해질수록 리소스와 기호 수도 증가합니다. 여러 파일에 흩어져 있는 많은 기호를 추적하는 작업은 어려울 수 있습니다. 다음을 수행할 수 있는 중앙 집중식 도구를 제공하는 [리소스 기호 대화 상자](../windows/resource-symbols-dialog-box.md) 를 사용하면 기호를 간단하게 관리할 수 있습니다.  
+ 응용 프로그램의 크기가 커지고 복잡해질수록 리소스와 기호 수도 증가합니다. 여러 파일에 흩어져 있는 많은 기호를 추적하는 작업은 어려울 수 있습니다. 다음을 수행할 수 있는 중앙 집중식 도구를 제공하는 [리소스 기호 대화 상자](../windows/resource-symbols-dialog-box.md)를 사용하면 기호를 간단하게 관리할 수 있습니다.  
   
 - [리소스 기호 보기](../windows/viewing-resource-symbols.md)  
   
@@ -66,7 +66,7 @@ IDC_EDITNAME = 5100
   
 - [미리 정의된 기호 ID 보기](../windows/predefined-symbol-ids.md)  
   
- 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
+ 관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다. 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 내용은 참조 하세요 [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화 관리 되는 앱의 리소스에 대 한 내용은 참조 하세요 [Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  Win32  
@@ -75,4 +75,3 @@ IDC_EDITNAME = 5100
  [방법: 리소스에서 기호 검색](../windows/how-to-search-for-symbols-in-resources.md)   
  [리소스 편집기](../windows/resource-editors.md)   
  [리소스 파일](../windows/resource-files-visual-studio.md)
-

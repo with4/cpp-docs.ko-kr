@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 107d721e4603fc1f22a5ff793a867b290472f10c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 6b3ee48394eede37873ce074c275290307215815
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570404"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649138"
 ---
 # <a name="event--c-component-extensions"></a>event(C++ 구성 요소 확장)
 **이벤트** 키워드로 선언 된는 *이벤트*에 등록 된 구독자에 게 알리는 (*이벤트 처리기*) 특정 상황이 발생 합니다.  
@@ -31,9 +31,9 @@ ms.locfileid: "39570404"
 ## <a name="all-runtimes"></a>모든 런타임  
  C + + /cli CX 선언 하도록 지원를 *이벤트 멤버* 요소나 *이벤트 블록*합니다. 이벤트 멤버는 이벤트 블록을 선언하기 위한 약칭입니다. 기본적으로는 이벤트 멤버는 이벤트 블록에서 명시적으로 선언된 `add()`, `remove()` 및 `raise()` 함수를 선언합니다. 이벤트 멤버의 함수를 사용자 지정하려면 대신에 이벤트 블록을 선언하고 필요한 함수를 재정의합니다.  
   
- **구문**  
+### <a name="syntax"></a>구문
   
-```  
+```cpp  
 // event data member  
 modifiereventdelegate^ event_name;     
   
@@ -46,8 +46,7 @@ modifiereventdelegate^ event_name
 }  
 ```  
   
- **매개 변수**  
-  
+### <a name="parameters"></a>매개 변수
  *한정자*  
  이벤트 선언 또는 이벤트 접근자 메서드에 사용할 수 있는 한정자입니다.  가능한 값은 **정적** 하 고 **가상**합니다.  
   
@@ -63,7 +62,7 @@ modifiereventdelegate^ event_name
  *parameters*  
  (선택 사항) 에 대 한 매개 변수를 `raise` 의 서명과 일치 하는 메서드를 *대리자* 매개 변수입니다.  
   
- **주의**  
+### <a name="remarks"></a>설명
   
  이벤트는 대리자와 이벤트 트리거에 응답하는 멤버 함수(이벤트 처리기) 간의 연결이고 이를 통해 모든 클래스의 클라이언트가 기본 대리자의 서명 및 반환 형식을 준수하는 메서드를 등록할 수 있습니다.  
   
@@ -87,14 +86,14 @@ modifiereventdelegate^ event_name
  이벤트 처리기를 추가하고 나서 제거하려면 추가 작업에서 반환되는 EventRegistrationToken 구조체를 저장해야 합니다. 그다음에 제거 작업에서 저장된 EventRegistrationToken 구조체를 사용하여 제거할 이벤트 처리기를 식별해야 합니다.  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/ZW**  
+ 컴파일러 옵션: `/ZW`  
   
 ## <a name="common-language-runtime"></a>공용 언어 런타임 
  합니다 **이벤트** 키워드를 사용 하면 이벤트를 선언 합니다. 이벤트는 특정 상황이 발생할 때 클래스가 알림을 제공하는 한 가지 방법입니다.  
   
- **구문**  
+### <a name="syntax"></a>구문
   
-```  
+```cpp  
 // event data member  
 modifiereventdelegate^ event_name;   
   
@@ -107,8 +106,7 @@ modifiereventdelegate^ event_name
 }  
 ```  
   
- **매개 변수**  
-  
+### <a name="parameters"></a>매개 변수
  *한정자*  
  이벤트 선언 또는 이벤트 접근자 메서드에 사용할 수 있는 한정자입니다.  가능한 값은 **정적** 하 고 **가상**합니다.  
   
@@ -124,8 +122,7 @@ modifiereventdelegate^ event_name
  *parameters*  
  (선택 사항) 에 대 한 매개 변수를 `raise` 의 서명과 일치 하는 메서드를 *대리자* 매개 변수입니다.  
   
- **주의**  
-  
+### <a name="remarks"></a>설명
  이벤트는 대리자와 이벤트 트리거에 응답하는 멤버 함수(이벤트 처리기) 간의 연결이고 이를 통해 모든 클래스의 클라이언트가 기본 대리자의 서명 및 반환 형식을 준수하는 메서드를 등록할 수 있습니다.  
   
  대리자에는 코드에서 이벤트가 발생했음을 나타낼 때 호출될 하나 이상의 연결된 메서드가 있을 수 있습니다. 한 프로그램의 이벤트를 .NET Framework 공용 언어 런타임을 대상으로 하는 다른 프로그램에서 사용 가능하게 설정할 수 있습니다.  
@@ -171,11 +168,10 @@ modifiereventdelegate^ event_name
 -   [인터페이스의 이벤트](../dotnet/how-to-use-events-in-cpp-cli.md)  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/clr**  
+ 컴파일러 옵션: `/clr`  
   
 ### <a name="examples"></a>예제  
- **예제**  
-  
+
  다음 코드 예제에서는 대리자, 이벤트 및 이벤트 처리기의 쌍을 선언하고, 이벤트 처리기를 구독(추가)하고, 이벤트 처리기를 호출하고, 이벤트 처리기를 구독 취소(제거)하는 방법을 보여 줍니다.  
   
 ```cpp  
@@ -229,15 +225,11 @@ int main() {
 }  
 ```  
   
- **출력**  
-  
 ```Output  
 OnClick: 7, 3.14159  
   
 OnDblClick: Hello  
 ```  
-  
- **예제**  
   
  다음 코드 예제에서는 trivial 이벤트의 `raise` 메서드를 생성하는 데 사용되는 논리를 보여 줍니다. 이벤트에 하나 이상의 구독자가 있는 경우 `raise` 메서드를 암시적으로 또는 명시적으로 호출하면 대리자가 호출됩니다. 대리자의 반환 형식이 없으면 **void** 0 이벤트 구독자가 있는 경우 및는 `raise` 메서드는 대리자 형식의 기본값을 반환 합니다. 이벤트 구독자가 없는 경우 `raise` 메서드를 호출하면 단순히 반환하고 예외가 발생하지 않습니다. 대리자 반환 형식이 아닙니다 **void**, 대리자 형식이 반환 됩니다.  
   
@@ -272,8 +264,6 @@ int main() {
    Console::WriteLine(c.i);     
 }  
 ```  
-  
- **출력**  
   
 ```Output  
 0  

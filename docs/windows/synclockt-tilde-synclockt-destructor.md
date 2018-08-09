@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c91c677a18c66c875107f48c2e04ba45be88fb48
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87f32ce0583154deb2e3e5cd0afc77ce8728695d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892737"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646720"
 ---
 # <a name="synclocktsynclockt-destructor"></a>SyncLockT::~SyncLockT 소멸자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,9 +34,9 @@ WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습
 ```  
   
 ## <a name="remarks"></a>설명  
- SyncLockT 클래스의 인스턴스 초기화를 취소 합니다.  
+ 인스턴스를 초기화 해제 합니다 **SyncLockT** 클래스입니다.  
   
- 이 소멸자에는 현재 SyncLockT 인스턴스 잠금을 해제합니다.  
+ 이 소멸자에는 또한 현재 잠금 해제 **SyncLockT** 인스턴스.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

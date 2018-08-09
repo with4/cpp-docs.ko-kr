@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e72d53f478fb1660fd0ad2fb8704916c9f04e75
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 78f6eb9f3d0acf6a28479593d64616fa6881be76
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465228"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648092"
 ---
 # <a name="comptrasweak-method"></a>ComPtr::AsWeak 메서드
 현재 개체에 대한 약한 참조를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT AsWeak(  
    _Out_ WeakRef* pWeakRef  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *pWeakRef*  
  이 작업이 완료 될 때 약한 참조 개체에 대 한 포인터입니다.  
   

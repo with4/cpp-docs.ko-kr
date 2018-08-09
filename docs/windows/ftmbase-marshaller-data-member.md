@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a221cc7d460ed7db2a9eab6cc1ac2ea0200bbf92
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 37ad18c3daf6aee24c2e7c0c4c08c35caf87a602
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872704"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642038"
 ---
 # <a name="ftmbasemarshaller-data-member"></a>FtmBase::marshaller_ 데이터 멤버
 자유 스레드된 마샬러에 대 한 참조를 보유합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;  
 ```  
   

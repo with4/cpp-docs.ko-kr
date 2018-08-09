@@ -13,12 +13,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4cd8e8c6e3b9626000a8bef3d86a89f5e122d611
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 22f90be7d89a006ccbfdfde2f4c2580a7b2a13de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571531"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643847"
 ---
 # <a name="desktop-applications-visual-c"></a>데스크톱 응용 프로그램(Visual C++)
 C++를 이용한 *데스크톱 응용 프로그램*은 전체 Windows API를 모두 사용할 수 있으며 Windows나 시스템 콘솔 창에서 실행할 수 있는 네이티브 응용 프로그램입니다. 데스크톱 응용 프로그램은 Windows XP부터 Windows 10에 이르기까지 실행될 수 있습니다. (Windows XP는 더 이상 공식적으로 지원되지 않으며 이후 도입된 많은 Windows API가 존재합니다.)
@@ -26,11 +26,12 @@ C++를 이용한 *데스크톱 응용 프로그램*은 전체 Windows API를 모
 데스크톱 응용 프로그램은 Windows 10에서 실행하는 PC, XBox, Windows Phone, Surface Hub 및 기타 장치에서 실행할 수 있는 한 유니버설 Windows 플랫폼(UWP) 앱과 다릅니다. 데스크톱과 UWP 응용 프로그램을 참조 하세요 [기술을 선택](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx)합니다.  
 
 
-**데스크톱 브리지** Windows API 집합에 Windows 10 기존 데스크톱 응용 프로그램 또는 COM 개체로 UWP 앱 패키지를 UWP 터치, 또는 최신에서 Api 호출 등의 기능을 추가할 수 있습니다. 또한 Visual Studio 및 패키지 및 Windows Api를 사용 하 여 서로 통신 해야 단일에서 패키지에서 데스크톱 솔루션에 UWP 앱을 추가할 수 있습니다.  
+### <a name="desktop-bridge"></a>데스크톱 브리지
+Windows 10에서 기존 데스크톱 응용 프로그램 또는 UWP 앱으로 COM 개체를 패키지 및 UWP 등 터치를 추가 하거나 최신 Windows API 집합에서 Api를 호출할 수 있습니다. 또한 Visual Studio 및 패키지 및 Windows Api를 사용 하 여 서로 통신 해야 단일에서 패키지에서 데스크톱 솔루션에 UWP 앱을 추가할 수 있습니다.  
    
 Visual Studio 2017 버전 15.4 이상에서 크게 기존 데스크톱 응용 프로그램을 패키징하는 작업을 단순화 하는 Windows 응용 프로그램 패키지 프로젝트를 만들 수 있습니다. 어떤 레지스트리 호출에 대해 몇 가지 제한 사항이 적용 됩니다. 또는 데스크톱 응용 프로그램 Api 사용 하지만 대부분의 앱 패키지에 실행 하는 동안 유사한 기능을 달성 하기 위해 대체 코드 경로 만들 수 있습니다. 자세한 내용은 [데스크톱 브리지](/windows-uwp/porting/desktop-to-uwp-root)를 참조하세요.  
   
- **용어**  
+### <a name="terminology"></a>용어  
   
 -   A *Win32* 응용 프로그램은 네이티브 데스크톱 응용 프로그램 수 있도록 하는 c + +에서 사용 하는 Windows [Windows C Api 및/또는 COM Api](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT 및 표준 라이브러리 Api 및 타사 라이브러리입니다. Win32 응용 프로그램은 개발자가 Windows 프로시저 함수 내에서 Windows 메시지를 명시적으로 처리해준 Windows로 실행될 수 있습니다.  Win32 응용 프로그램이라는 공통된 이름을 사용하지만 32비트(x86) 또는 64비트(x64) 이진 파일로 컴파일할 수 있습니다. Visual Studio IDE에서 x86 용어 및 Win32는 동의어입니다.  
   

@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6edbe333ddb634d8657712695250ec627a171780
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 74f26f520be276de863c612718de8520bffc1219
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461086"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649707"
 ---
 # <a name="comptrreset"></a>ComPtr::Reset
 이 사용 하 여 연결 된 인터페이스 포인터에 대 한 모든 참조를 해제 **ComPtr**합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 unsigned long Reset();  
 ```  
   

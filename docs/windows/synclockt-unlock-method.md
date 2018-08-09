@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4073d6e2b8924ae08e6af10a8e028f273f1fdfd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fa03dd41b66bb36d5dc7059863e13267e5dd77bd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892308"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642125"
 ---
 # <a name="synclocktunlock-method"></a>SyncLockT::Unlock 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -34,7 +34,7 @@ void Unlock();
 ```  
   
 ## <a name="remarks"></a>설명  
- 있는 경우 현재 SyncLockT 개체에서 보유 하는 리소스의 제어를 해제 합니다.  
+ 현재 보유 한 리소스의 제어권을 해제 **SyncLockT** 개체에 있는 경우.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

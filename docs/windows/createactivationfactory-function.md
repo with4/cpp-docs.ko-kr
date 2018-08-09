@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fd2f65bb86cdd77d4e285cee5603416fa629f940
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 780fd8b6866af05007d9c99e3165b149eab956bd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466350"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642905"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory 함수
 Windows 런타임으로 활성화할 수 있는 지정된 클래스의 인스턴스를 생성하는 팩터리를 만듭니다.  
@@ -37,7 +37,7 @@ template<typename Factory>
      _Outptr_ IUnknown **ppFactory) throw();  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *flags*  
  하나 이상의 조합 [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거형 값입니다.  
   

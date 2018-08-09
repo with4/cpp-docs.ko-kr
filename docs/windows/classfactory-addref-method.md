@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e01ceee3b889a1755fe272366ab66b32a79ae6f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 276024be7b3d75edf308e43a08e4d2cbe9901c1e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462695"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652057"
 ---
 # <a name="classfactoryaddref-method"></a>ClassFactory::AddRef 메서드
 현재 참조 횟수를 증가 시킵니다 **ClassFactory** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 STDMETHOD_(  
    ULONG,  
    AddRef  
