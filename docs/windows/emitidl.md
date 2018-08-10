@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d508c6196ad9b9f32b4bcb0704272a500d0e952
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4c52b905420dcb576705d63be7d7bdce27c5eea6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643045"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015245"
 ---
 # <a name="emitidl"></a>emitidl
 모든 후속 IDL 특성 처리 되 고 생성된 된.idl 파일에 배치 하는지 여부를 지정 합니다.  
@@ -75,4 +75,4 @@ ms.locfileid: "39643045"
 ## <a name="see-also"></a>참고 항목  
 [컴파일러 특성](../windows/compiler-attributes.md)   
 [독립 실행형 특성](../windows/stand-alone-attributes.md)   
-[특성 샘플](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+[특성 샘플](http://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

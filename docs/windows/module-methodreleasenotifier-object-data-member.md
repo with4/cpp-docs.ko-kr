@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bcc6efe59c71314837ff9c47d9c86c5b7f36c608
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c8b4e7a66cff8c92164573259ebc59632b24283c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607234"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013680"
 ---
 # <a name="modulemethodreleasenotifierobject-data-member"></a>Module::MethodReleaseNotifier::object_ 데이터 멤버
 멤버 함수가 이벤트 처리기를 현재 개체에 대 한 포인터를 보유 **module:: methodreleasenotifier** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 T* object_;  
 ```  
   

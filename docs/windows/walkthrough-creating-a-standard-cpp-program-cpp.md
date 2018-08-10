@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0915f6f506b942a7ee52eec637c9ea6631339e79
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4f3f01ab95237a0401394d429443804ce65a4385
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643285"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017330"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>연습: 표준 C++ 프로그램(C++) 만들기
 표준 C++ 프로그램을 만들어 Visual Studio 통합 개발 환경(IDE)에서 Visual C++를 사용할 수 있습니다. 이 연습 단계를 수행하면 Visual Studio에서 프로젝트를 만들고, 만든 프로젝트에 파일을 추가하며 C++ 코드를 추가하고 컴파일 및 실행까지 일련의 과정을 수행할 수 있습니다[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
@@ -59,7 +59,7 @@ ms.locfileid: "39643285"
   
     2.  **코드** 노드에서 **C++ 파일(.cpp)** 을 클릭하고, 파일 이름을 입력한 다음 **추가**를 클릭합니다.  
   
-     .cpp 파일의 원본 파일 폴더에 나타납니다. **솔루션 탐색기**, Visual Studio 편집기에서 파일이 열립니다.  
+     .Cpp 파일이 합니다 **소스 파일** 폴더에서 **솔루션 탐색기**, 파일을 Visual Studio 편집기에서 연 합니다.  
   
 6.  편집기의 파일에서 C++ 표준 라이브러리를 사용하는 올바른 C++ 프로그램 입력 샘플 프로그램 중 하나를 복사하여 파일에 붙여넣습니다.
   

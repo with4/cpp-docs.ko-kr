@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3432ca82d9557fbcb47da65be148bedb0f47f8b8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1e6b594ad7fe1d805511d5e2cd1b67bd0d791e8e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889556"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013404"
 ---
 # <a name="symbol-value-restrictions"></a>기호 값 제한
 기호 값은 #define 전처리기 지시문에 대해 일반적인 방식으로 표현된 정수일 수 있습니다. 다음은 기호 값의 몇 가지 예입니다.  
@@ -45,23 +45,21 @@ ms.locfileid: "33889556"
   
 -   기호 값은 다른 기호 문자열을 사용하여 정의할 수 없습니다. 예를 들어 다음과 같은 기호 정의는 지원되지 않습니다.  
   
-    ```  
+    ```cpp  
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported  
     ```  
   
 -   인수가 있는 전처리기 매크로는 값 정의로 사용할 수 없습니다. 예를 들어:  
   
-    ```  
+    ```cpp  
     #define   IDD_ABOUT  ID(7) //not supported  
     ```  
   
      컴파일 시간에 `ID`가 계산되는 결과에 관계없이 유효한 식이 아닙니다.  
   
--   응용 프로그램에 식으로 정의된 기호를 포함하는 기존 파일이 있을 수 있습니다. 읽기 전용 기호로 포함 하는 방법에 대 한 자세한 내용은 참조 하십시오. [공유 (읽기 전용) 또는 계산 된 기호](../windows/including-shared-read-only-or-calculated-symbols.md)합니다.  
+-   응용 프로그램에 식으로 정의된 기호를 포함하는 기존 파일이 있을 수 있습니다. 읽기 전용 기호로 포함 하는 방법에 대 한 자세한 내용은 참조 하세요. [공유 (읽기 전용) 또는 계산 된 기호](../windows/including-shared-read-only-or-calculated-symbols.md)합니다.  
   
- 숫자 범위에 대 한 자세한 내용은 참조 하십시오. [TN023: 표준 MFC 리소스](../mfc/tn023-standard-mfc-resources.md)합니다.  
-  
-
+ 숫자 범위에 대 한 자세한 내용은 참조 하세요. [TN023: 표준 MFC 리소스](../mfc/tn023-standard-mfc-resources.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  Win32  

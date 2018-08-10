@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4c437035713634736a02afbce1325d14ba18229
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2d097c5c1193b74aa3e4d6ecea755390b0885a8d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604413"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013062"
 ---
 # <a name="module-class"></a>Module 클래스
 관련된 개체의 컬렉션을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<ModuleType moduleType>  
 class Module;  
   
@@ -96,7 +96,7 @@ class Module<OutOfProc> : public Module<InProc>;
 |name|설명|  
 |----------|-----------------|  
 |[Module::objectCount_ 데이터 멤버](../windows/module-objectcount-data-member.md)|얼마나 많은 클래스가 사용 하 여 만든 추적 합니다는 [있도록](../windows/make-function.md) 함수입니다.|  
-|[Module::releaseNotifier_ 데이터 멤버](../windows/module-releasenotifier-data-member.md)|ReleaseNotifier 개체에 대한 포인터를 보유합니다.|  
+|[Module::releaseNotifier_ 데이터 멤버](../windows/module-releasenotifier-data-member.md)|에 대 한 포인터를 보유 한 `ReleaseNotifier` 개체입니다.|  
   
 ### <a name="macros"></a>매크로  
   

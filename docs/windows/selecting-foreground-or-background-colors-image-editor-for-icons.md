@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 108447dc3e18be84bf2875c49adb600ed9636dc4
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: e9dc6b75cfa408ececeb533fcd75dbad0f124fda
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605550"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018831"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>전경색 또는 배경색 선택(아이콘에 대한 이미지 편집기)
 제외 하 고는 **지우개**에서 도구를 **이미지 편집기** 현재 전경 또는 배경 색을 각각 마우스 왼쪽 또는 오른쪽 단추를 누를 때를 사용 하 여 도구 모음 그립니다.  
@@ -39,7 +39,6 @@ ms.locfileid: "39605550"
  관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다.  
   
 ## <a name="requirements"></a>요구 사항  
-  
  없음  
   
 ## <a name="see-also"></a>참고 항목  

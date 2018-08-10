@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0188d3f08f0d4a06fb174163dc0a837e3dc9c041
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 923c1f46d8d4212eb61cd9834af1c47d521bf369
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605781"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020042"
 ---
 # <a name="safelessthan"></a>SafeLessThan
 1 개의 숫자 다른 노드보다 작은지 여부를 결정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename T, typename U>  
 inline bool SafeLessThan (  
    const T t,  

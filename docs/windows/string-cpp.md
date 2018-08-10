@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef5a4453e0b7742a385815b5285b2aa04575eb75
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 459f786863f7d10797008b87e276afb0c95e184a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645411"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020088"
 ---
 # <a name="string-c"></a>string(C++)
 나타내는 1 차원 **char**를 **wchar_t**, `byte` (또는 이와 동등한) 배열 또는 이러한 배열에 대 한 포인터를 문자열로 간주 해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [string]  
 ```  
   

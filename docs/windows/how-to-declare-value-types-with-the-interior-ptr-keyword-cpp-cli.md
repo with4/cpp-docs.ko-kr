@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38cbfb171e218f70d45e5ef2e6e850d791803611
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 9abba9937bfe425fa85cbce5b0795a3f9c784d22
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571190"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017229"
 ---
 # <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>방법: interior_ptr 키워드를 사용하여 값 형식 선언(C++/CLI)
 **interior_ptr** 값 형식과 함께 사용할 수 있습니다.  
@@ -63,9 +63,7 @@ int main() {
    System::Console::WriteLine(pv->data);  
 }  
 ```  
-  
-### <a name="output"></a>출력  
-  
+
 ```Output  
 1  
 2  
@@ -75,7 +73,7 @@ int main() {
 3  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  값 형식에는 **이** 포인터는 interior_ptr로 계산 합니다.  
@@ -128,8 +126,6 @@ int main() {
    Console::WriteLine(*p3);  
 }  
 ```  
-  
-### <a name="output"></a>출력  
   
 ```Output 
 22  

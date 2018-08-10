@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f0dd12df088d8fc55cc4f1a8eaf71bcbb7d4e93
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 508f83b1dde590a4a8a04980895ef247f2a16123
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603292"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014990"
 ---
 # <a name="iidis"></a>iid_is
 인터페이스 포인터에서 가리키는 COM 인터페이스의 IID를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ iid_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *식*  
  인터페이스 포인터를 가리키는 COM 인터페이스의 IID를 지정 하는 C 언어 식입니다.  
   

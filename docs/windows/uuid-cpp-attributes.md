@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07258b2f7416b0747be81075f4c037a6be54e7a6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 3ed96762429aa0d4a442fb7a82db310146a3424d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647075"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019971"
 ---
 # <a name="uuid-c-attributes"></a>uuid(C++ 특성)
 클래스 또는 인터페이스에 대 한 고유 ID를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ uuid(  
    "uuid"  
 ) ]  

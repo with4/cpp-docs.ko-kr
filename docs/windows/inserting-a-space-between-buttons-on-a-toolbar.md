@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 056d20420484b29bd66827607432ebe2d6543c52
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 985dbf5ca03af3edae0ecf25796690059868ffc1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607360"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019538"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>도구 모음의 단추 사이에 공백 삽입
 일반적으로 단추 사이 공백을 삽입할 끌어 놓으십시오 다른 도구 모음에서. 공간을 제거 하려면 다른 쪽으로 끌어 옵니다.  
@@ -41,7 +41,6 @@ ms.locfileid: "39607360"
  관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다. 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 내용은 참조 하세요 [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화 관리 되는 앱의 리소스에 대 한 내용은 참조 하세요 [Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
-  
  MFC 또는 ATL  
   
 ## <a name="see-also"></a>참고 항목  

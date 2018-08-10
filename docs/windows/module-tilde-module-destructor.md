@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f6c27924788be435a9388c1f8e3d24560a4279e
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 11b91d10ec71e83b89f7523224f6b87ddd427872
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604319"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019430"
 ---
 # <a name="modulemodule-destructor"></a>Module::~Module 소멸자
 현재 인스턴스 초기화를 해제 합니다 **모듈** 클래스입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 virtual ~Module();  
 ```  
   

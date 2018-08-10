@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c6c6731c4c7787f3d81a4e67eac2861a46bfe1a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9c8bc1962e946a48b6ebebaf072e4cb32559a6de
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644410"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014710"
 ---
 # <a name="simpleactivationfactorygetruntimeclassname-method"></a>SimpleActivationFactory::GetRuntimeClassName 메서드
 
@@ -35,7 +35,6 @@ STDMETHOD( GetRuntimeClassName )(
 ```
 
 ### <a name="parameters"></a>매개 변수
-
 *runtimeName*  
 이 작업이 완료 될 때 런타임 클래스 이름입니다.
 
@@ -45,7 +44,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ## <a name="remarks"></a>설명
 
-경우 &#95; &#95;WRL_STRICT&#95; &#95; 가 정의 assert 오류가 내보내집니다으로 지정 된 클래스는 `Base` 클래스 템플릿 매개 변수에서 파생 되지 않습니다 [RuntimeClass](../windows/runtimeclass-class.md), 않거나 사용 하 여 구성 되지 않았습니다는 WinRt 또는 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거형 값입니다.
+경우 `__WRL_STRICT__` 는 정의 된 assert 오류가 내보내집니다으로 지정 된 클래스를 `Base` 클래스 템플릿 매개 변수에서 파생 되지 않습니다 [RuntimeClass](../windows/runtimeclass-class.md), 않거나 WinRt 또는 WinRtClassicComMix 를사용하여구성되지않았습니다[RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거형 값입니다.
 
 ## <a name="requirements"></a>요구 사항
 

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93ced38ca30a2fd4a61bb3a3664967416fcaf599
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c21bb7cf58c3c397237768942d60f79958f3278a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603490"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013563"
 ---
 # <a name="include-c"></a>include(C++)
 생성된 된.idl 파일에 포함할 하나 이상의 헤더 파일을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ include(  
    header_file  
 ) ];  
@@ -45,7 +45,7 @@ ms.locfileid: "39603490"
  합니다 **포함** c + + 특성에 동일한 기능을 합니다 [포함](http://msdn.microsoft.com/library/windows/desktop/aa367052) MIDL 특성입니다.  
   
 ## <a name="example"></a>예  
- 다음 코드를 사용 하는 방법의 예를 보여 줍니다 **포함**합니다. 예를 들어 파일 include.h만 포함 된 #include 문을 합니다.  
+ 다음 코드를 사용 하는 방법의 예를 보여 줍니다 **포함**합니다. 예를 들어 파일 include.h만 포함 된 `#include` 문입니다.  
   
 ```cpp  
 // cpp_attr_ref_include.cpp  

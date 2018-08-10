@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 054d91881d136564cdfb956f240789ca5a425ef2
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 93cd229e93c4da36004c212cef0f09463926a0e5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642944"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015958"
 ---
 # <a name="variable-argument-lists--ccli"></a>가변 인수 목록(...)(C++/CLI)
 사용 하는 방법을 보여 주는이 예제는 `...` Visual c + + 가변 개수의 인수를 갖는 함수를 구현 하는 구문입니다.  
@@ -54,9 +54,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>출력  
-  
-```  
+```Output  
 3  
 ```  
   

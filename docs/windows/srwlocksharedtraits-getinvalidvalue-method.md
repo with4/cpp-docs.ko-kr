@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ab88d2853f62932177858adb6bea3c991059f6f
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 57444d41efffcb36e023c7055335159b69737a8a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650233"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018805"
 ---
 # <a name="srwlocksharedtraitsgetinvalidvalue-method"></a>SRWLockSharedTraits::GetInvalidValue 메서드
 검색을 **SRWLockSharedTraits** 항상 유효 하지 않은 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 inline static Type GetInvalidValue();  
 ```  
   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f25e85e59769f822a6c732cc0911c564c0104f96
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: aa0d48ba96c550ff6ee1248dccd0b4c8e3021212
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651082"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020306"
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>SimpleClassFactory::CreateInstance 메서드
 
@@ -39,7 +39,6 @@ STDMETHOD( CreateInstance )(
 ```
 
 ### <a name="parameters"></a>매개 변수
-
 *pUnkOuter*  
 여야 **nullptr**고, 그렇지 않으면 반환 값은 CLASS_E_NOAGGREGATION 합니다.
 
@@ -57,7 +56,7 @@ SimpleClassFactory 집계를 지원 하지 않습니다. 집계 된 지원 하 �
 
 ## <a name="remarks"></a>설명
 
-경우 &#95; &#95;WRL_STRICT&#95; &#95; 가 정의 된 assert 오류가 내보내집니다 클래스 템플릿 매개 변수에서 지정 된 기본 클래스에서 파생 되지 않습니다 [RuntimeClass](../windows/runtimeclass-class.md), 않거나는 ClassicCom를 사용 하 여 구성 되지 않았습니다 또는 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거형 값입니다.
+하는 경우 `__WRL_STRICT__` 가 정의 된 assert 오류가 내보내집니다 클래스 템플릿 매개 변수에서 지정 된 기본 클래스에서 파생 되지 않습니다 [RuntimeClass](../windows/runtimeclass-class.md), 않거나 ClassicCom 또는 WinRtClassicComMix 구성 되지 않았습니다 [ RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거형 값입니다.
 
 ## <a name="requirements"></a>요구 사항
 

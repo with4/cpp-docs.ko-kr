@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3040e89ee4c729953c1a56f0c8728ba4d5b9d7b6
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: a0635751fa052c6e6a54d958e9005fee80812f7d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570524"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012104"
 ---
 # <a name="how-to-search-for-symbols-in-resources"></a>방법: 리소스에서 기호 검색
 ### <a name="to-find-symbols-in-resources"></a>리소스에서 기호를 찾으려면  
@@ -43,7 +43,6 @@ ms.locfileid: "39570524"
  관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다. 를 참조하세요. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)를 선택합니다.  
   
 ## <a name="requirements"></a>요구 사항  
-  
  Win32  
   
 ## <a name="see-also"></a>참고 항목  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d777dd15e484ae296139bbe2bdc9b0cddcab2d59
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 7f76695cfe3dcad0f5c835577aa4cc9b7cd3ec62
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606334"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017645"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass 클래스
 지정된 된 인터페이스를 상속 하 고 지정 된 Windows 런타임, 클래식 COM 및 약한 참조 지원을 제공 하는 WinRT 또는 COM 클래스를 나타냅니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "39606334"
   
 ## <a name="syntax"></a>구문  
   
-```
+```cpp
 template <typename ...TInterfaces> class RuntimeClass
 template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 ```

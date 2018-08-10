@@ -22,15 +22,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03922c8ca9ba767991b3440e14e4928ab6c3b0ec
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2d1a59befd405e1412c2815694c40c8d24a99cec
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604462"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016998"
 ---
 # <a name="resource-editors"></a>리소스 편집기
-리소스 편집기는 Visual Studio 프로젝트에 포함된 리소스를 만들거나 수정하기 위해 만들어진 특수한 환경입니다. Visual Studio 리소스 편집기는 응용 프로그램 리소스를 쉽고 빠르게 만들고 수정할 수 있도록 기술 및 인터페이스를 공유합니다. 리소스 편집기를 사용하면 [적절한 편집기에서 리소스를 보고 편집](../windows/viewing-and-editing-resources-in-a-resource-editor.md) 하며 [리소스를 미리 볼](../windows/previewing-resources.md)수 있습니다.  
+A **리소스** 편집기를 만들거나 Visual Studio 프로젝트에 포함 된 리소스를 수정 하기 위한 특수 한 환경입니다. Visual Studio 리소스 편집기는 응용 프로그램 리소스를 쉽고 빠르게 만들고 수정할 수 있도록 기술 및 인터페이스를 공유합니다. 리소스 편집기를 사용하면 [적절한 편집기에서 리소스를 보고 편집](../windows/viewing-and-editing-resources-in-a-resource-editor.md) 하며 [리소스를 미리 볼](../windows/previewing-resources.md)수 있습니다.  
   
  리소스를 만들거나 열면 적절한 편집기가 자동으로 열립니다.  
   

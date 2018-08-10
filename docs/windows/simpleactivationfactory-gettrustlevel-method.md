@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22fa30a3662897b171245da194573ec17da2f64e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 1234c667426937f5d40937c5f2bcc72949e827ae
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645190"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012396"
 ---
 # <a name="simpleactivationfactorygettrustlevel-method"></a>SimpleActivationFactory::GetTrustLevel 메서드
 신뢰 수준에서 지정한 클래스의 인스턴스를 가져옵니다는 `Base` 클래스 템플릿 매개 변수입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 STDMETHOD(  
    GetTrustLevel  
 )(_Out_ TrustLevel* trustLvl);  

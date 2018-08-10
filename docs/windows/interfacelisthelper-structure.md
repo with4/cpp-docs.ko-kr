@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91012112cebf6fe33858df8904691944a810f69a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a5d4380109c7eb858c2b0eaeeb9156e4003fc581
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608133"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012091"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper 구조체
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template <  
    typename T0,  
    typename T1 = Nil,  

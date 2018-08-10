@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebe723811efe62efa85a1cc2fa35736689306c7e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 80c744431fe7df32be705fcf91eef0a8691b8fa4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645635"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015800"
 ---
 # <a name="synclockwithstatustislocked-method"></a>SyncLockWithStatusT::IsLocked 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 bool IsLocked() const;  
 ```  
   

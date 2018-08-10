@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0a42d1e1010f63436951beeadbd833e2a9d445d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b7601504c8d1caec02df4b70f97893848e7ff1a5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650526"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012601"
 ---
 # <a name="srwlocksharedtraitsunlock-method"></a>SRWLockSharedTraits::Unlock 메서드
 지정 된 한 독점적인 제어권을 해제 `SRWLock` 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 inline static void Unlock(  
    _In_ Type srwlock  
 );  

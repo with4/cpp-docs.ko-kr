@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c4091853274d04d27eb060655650a071ea64d4c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f91622e4d795b7c85cdf6f304ed6a76dd5a9364
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882695"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012783"
 ---
 # <a name="mfc-windows-programming-symbols"></a>MFC Windows 프로그래밍 기호
-이러한 기호 또한 MFC 지원 파일의 일부 하지만 표준 Windows 응용 프로그램 기능 및 동작을 지원 합니다. 이 기호는 메뉴와 주로 사용 됩니다. 메뉴 편집기에서 메뉴를 사용 하는 경우 이러한 기호는 일반 메뉴 명령과 연결 된 속성 창에 표시 됩니다. 예를 들어, 응용 프로그램의 종료 명령이 파일 메뉴에, 해당 명령을와 연결할 ID_APP_EXIT 기호에는 [속성 창](/visualstudio/ide/reference/properties-window)합니다.  
+이러한 기호는 MFC 지원 파일의 일부 이기도 하지만 표준 Windows 응용 프로그램 기능 및 동작을 지원 합니다. 이러한 기호를 메뉴를 사용 하 여 주로 사용 됩니다. 메뉴를 사용 하 여 작업할 때는 **메뉴 편집기**, 이러한 기호에 표시 됩니다는 **속성 창** 일반적인 메뉴 명령과 사용 하 여 연결 합니다. 예를 들어 응용 프로그램에 **파일** 메뉴를는 **종료** 명령, 명령이 기호 ID_APP_EXIT 연관 됩니다에 [속성 창](/visualstudio/ide/reference/properties-window)합니다.  
   
 ||||  
 |-|-|-|  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfda47ced14d7c112d27d0036b4d636e32c91907
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4ff8353bef24aa772621cee611519a8e7ab659af
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607562"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012117"
 ---
 # <a name="idlmodule"></a>idl_module
 .Dll 파일에는 진입점을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ idl_module (   
    name=module_name,   
    dllname=dll,   

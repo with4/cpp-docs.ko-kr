@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63c28a18723ad1dc39669ee5a367c870451c9943
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e2d42a108d461e3f0238612171b3445e28138194
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651761"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019617"
 ---
 # <a name="swap-function-windows-runtime-c-template-library"></a>Swap 함수(Windows Runtime C++ 템플릿 라이브러리)
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 WRL_NOTHROW inline void Swap(  
    _Inout_ T& left,  
    _Inout_ T& right  

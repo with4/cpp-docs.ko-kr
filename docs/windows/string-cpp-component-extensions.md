@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c60edae6e4eaf7cef3841a1ac03dea414f298b6a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9d7717c8449dd1a9271878aa51571180b85584d1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645995"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017918"
 ---
 # <a name="string--c-component-extensions"></a>문자열(C++ 구성 요소 확장)
 Visual c + + 컴파일러에서 지 원하는 *문자열*를 문자 시퀀스로 텍스트를 나타내는 개체입니다. Visual c + + 문자열 변수를 해당 값이 암시적, 및 해당 값은 명시적 따옴표 붙은 문자열 리터럴을 지원 합니다.  
@@ -135,8 +135,6 @@ int main() {
 }  
 ```  
   
- **출력**  
-  
 ```Output  
 abcdef  
   
@@ -213,8 +211,6 @@ int main() {
 }  
 ```  
   
- **출력**  
-  
 ```Output  
 overloaded +(String ^ a, String ^ b)   
   
@@ -265,8 +261,6 @@ int main() {
    func3("string" + "string");   // returns System::String  
 }  
 ```  
-  
- **출력**  
   
 ```Output  
 char *  

@@ -24,19 +24,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37d4d5391da4dfb6e25754eb1350224acb97e972
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3b1f5d0472fbe9ceb997460b525153a9ad87a69
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881652"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020254"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 네임스페이스
 Windows 런타임 c + + 템플릿 라이브러리를 구성 하는 기본 형식을 정의 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 namespace Microsoft::WRL;  
 ```  
   
@@ -70,16 +70,16 @@ namespace Microsoft::WRL;
 |이름|설명|  
 |----------|-----------------|  
 |[ChainInterfaces 구조체](../windows/chaininterfaces-structure.md)|인터페이스 ID 집합에 적용할 수 있는 확인 및 초기화 함수를 지정합니다.|  
-|[CloakedIid 구조체](../windows/cloakediid-structure.md)|IID 목록에서 지정된 인터페이스가 액세스할 수 없는 RuntimeClass, Implements 및 ChainInterfaces 템플릿에 대해 나타냅니다.|  
-|[Implements 구조체](../windows/implements-structure.md)|지정된 인터페이스에 대해 QueryInterface 및 GetIid를 구현합니다.|  
+|[CloakedIid 구조체](../windows/cloakediid-structure.md)|에 `RuntimeClass`, `Implements` 및 `ChainInterfaces` 지정된 된 인터페이스 IID 목록에서 액세스할 수 없는 템플릿.|  
+|[Implements 구조체](../windows/implements-structure.md)|구현 `QueryInterface` 고 `GetIid` 지정된 된 인터페이스에 대 한 합니다.|  
 |[MixIn 구조체](../windows/mixin-structure.md)|런타임 클래스가 Windows 런타임 인터페이스에서 파생되었는지 확인한 다음 있는 경우 클래식 COM 인터페이스를 확인합니다.|  
-|[RuntimeClassFlags 구조체](../windows/runtimeclassflags-structure.md)|인스턴스에 대 한 형식을 포함 한 [RuntimeClass](../windows/runtimeclass-class.md)합니다.|  
+|[RuntimeClassFlags 구조체](../windows/runtimeclassflags-structure.md)|인스턴스에 대 한 형식이 포함 된 [RuntimeClass](../windows/runtimeclass-class.md)합니다.|  
   
 ### <a name="enumerations"></a>열거형  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
-|[AsyncResultType 열거형](../windows/asyncresulttype-enumeration.md)|GetResults 메서드에서 반환되는 결과 형식을 지정합니다.|  
+|[AsyncResultType 열거형](../windows/asyncresulttype-enumeration.md)|반환 된 결과의 형식을 지정 합니다 `GetResults()` 메서드.|  
 |[ModuleType 열거형](../windows/moduletype-enumeration.md)|모듈이 in-process 서버를 지원하는지 out-of-process 서버를 지원해야 하는지 여부를 지정합니다.|  
 |[RuntimeClassType 열거형](../windows/runtimeclasstype-enumeration.md)|유형을 지정 [RuntimeClass](../windows/runtimeclass-class.md) 지원 되는 인스턴스.|  
   

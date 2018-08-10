@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77a6049216137da56cc79cc6f28f1f7591015a33
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 7a8705f6c1ed1030f1beeb7c2302f0d629c5d17d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604520"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012195"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++의 Windows 프로그래밍 개요
 
@@ -39,7 +39,7 @@ C +의 UWP 앱을 작성할 수 있습니다 + CX, c + + 언어 사용할 수는
 
    이 범주에는 서버 및 클라우드 프로그래밍의 컨텍스트에서 핵심 구성 요소 및 계산 코드에 C++를 사용하는 경우도 포함됩니다. 경우에 따라 서버 또는 클라우드 응용 프로그램의 핵심 부분에서 성능 집중적인 코드를 C++로 작성하여 성능을 최대화합니다. 해당 코드를 DLL로 컴파일하고 C# 또는 Visual Basic에서 이 코드를 사용할 수 있습니다.
 
-- **.NET Framework 응용 프로그램**. 대부분 .NET Framework 응용 프로그램은 C# 또는 Visual Basic으로 작성되지만 C++/CLI(Visual C++의 /clr 컴파일러 옵션)로 작성할 수도 있습니다. 관리되는 코드와 네이티브 코드를 포함하는 더 큰 응용 프로그램에서는 최소한 interop 레이어에 대해 C++/CLI를 사용하는 것이 좋습니다.
+- **.NET Framework 응용 프로그램**. 대부분의.NET Framework 응용 프로그램은 C# 또는 Visual Basic로 작성 하 고 있지만 C + + CLI (의 `/clr` Visual c + +에서 컴파일러 옵션). 관리되는 코드와 네이티브 코드를 포함하는 더 큰 응용 프로그램에서는 최소한 interop 레이어에 대해 C++/CLI를 사용하는 것이 좋습니다.
 
 ##  <a name="BK_WindowsUniversal"></a> Windows Universal Apps
 

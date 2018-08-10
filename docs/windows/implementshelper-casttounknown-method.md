@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed779d1655cb2ab4243bb7384d8ec2e07214d8df
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 99430222c0df705297f013381b4497730c7c9fa5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604241"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016238"
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 IUnknown* CastToUnknown();  
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 기본 IUnknown 인터페이스 포인터입니다.  
+ 기본 포인터 `IUnknown` 인터페이스입니다.  
   
 ## <a name="remarks"></a>설명  
  기본 포인터를 가져옵니다 `IUnknown` 현재 인터페이스 `Implements` 구조입니다.  

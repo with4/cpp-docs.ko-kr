@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dc93b6dc6d6a5fbf6bcd8899793e07bd6446de1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 3e7354dc422027207bc1dab357487ffcce48a4ca
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604358"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018596"
 ---
 # <a name="module-c"></a>module(C++)
 .Idl 파일의 라이브러리 블록을 정의합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ module (  
    type=dll,  
    name=string,  
@@ -50,8 +50,8 @@ ms.locfileid: "39604358"
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- *형식* (선택 사항)  
- 다음 중 하나일 수 있습니다.  
+*형식* (선택 사항)  
+다음 중 하나일 수 있습니다.  
   
 -   `dll` 결과 DLL에서 in-process COM 서버로 작동 하도록 허용 하는 함수 및 클래스를 추가 합니다. 기본값입니다.  
   
@@ -61,51 +61,51 @@ ms.locfileid: "39604358"
   
 -   `unspecified` 모듈 특성과 관련 된 ATL 코드의 삽입을 사용 하지 않도록 설정: ATL 모듈 클래스, 전역 인스턴스 _AtlModule 및 진입점의 삽입 함수를 가리킵니다. 프로젝트의 기타 특성으로 인한 ATL 코드의 삽입은 허용합니다.  
   
- *name* (선택 사항)  
- 라이브러리 블록의 이름입니다.  
+*name* (선택 사항)  
+라이브러리 블록의 이름입니다.  
   
- *버전* (선택 사항)  
- 라이브러리 블록에 할당하려는 버전 번호입니다. 기본값은 1.0입니다.  
+*버전* (선택 사항)  
+라이브러리 블록에 할당하려는 버전 번호입니다. 기본값은 1.0입니다.  
   
- *uuid*  
- 라이브러리에 대한 고유 ID입니다. 이 매개 변수를 생략하면 라이브러리에 대한 ID가 자동으로 생성됩니다. 검색 해야 합니다 *uuid* 의 라이브러리 블록의 식별자를 사용 하 여 수행할 수 있습니다 **__uuidof (***libraryname***)** 합니다.  
+*uuid*  
+라이브러리에 대한 고유 ID입니다. 이 매개 변수를 생략하면 라이브러리에 대한 ID가 자동으로 생성됩니다. 검색 해야 합니다 *uuid* 의 라이브러리 블록의 식별자를 사용 하 여 수행할 수 있습니다 **__uuidof (***libraryname***)** 합니다.  
   
- *lcid*  
- 지역화 매개 변수입니다. 자세한 내용은 [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) 를 참조하세요.  
+*lcid*  
+지역화 매개 변수입니다. 자세한 내용은 [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) 를 참조하세요.  
   
- *컨트롤* (선택 사항)  
- 라이브러리의 모든 coclass가 컨트롤임을 지정합니다.  
+*컨트롤* (선택 사항)  
+라이브러리의 모든 coclass가 컨트롤임을 지정합니다.  
   
- *helpstring*  
- 형식 라이브러리를 지정합니다.  
+*helpstring*  
+형식 라이브러리를 지정합니다.  
   
- *helpstringdll* (선택 사항)  
- 문서 문자열 조회를 수행하는 데 사용할 .dll 파일의 이름을 설정합니다. 자세한 내용은 [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) 을 참조하세요.  
+*helpstringdll* (선택 사항)  
+문서 문자열 조회를 수행하는 데 사용할 .dll 파일의 이름을 설정합니다. 자세한 내용은 [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) 을 참조하세요.  
   
- *helpfile* (선택 사항)  
- 형식 라이브러리에 대한 도움말 파일의 이름입니다.  
+*helpfile* (선택 사항)  
+이름을 합니다 **도움말** 형식 라이브러리 파일입니다.  
   
- *helpcontext* (선택 사항)  
- 이 형식 라이브러리에 대한 도움말 ID입니다.  
+*helpcontext* (선택 사항)  
+합니다 **도움말 ID** 이 형식 라이브러리에 대 한 합니다.  
   
- *helpstringcontext* (선택 사항)  
- 자세한 내용은 [helpstringcontext](../windows/helpstringcontext.md) 를 참조하세요.  
+*helpstringcontext* (선택 사항)  
+자세한 내용은 [helpstringcontext](../windows/helpstringcontext.md) 를 참조하세요.  
   
- *숨겨진* (선택 사항)  
- 전체 라이브러리가 표시되지 않도록 합니다. 이 사용법은 컨트롤과 함께 사용하기 위한 것입니다. 호스트는 확장된 속성을 사용하여 컨트롤을 래핑하는 새로운 형식 라이브러리를 만들어야 합니다. 자세한 내용은 [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 특성을 참조하세요.  
+*숨겨진* (선택 사항)  
+전체 라이브러리가 표시되지 않도록 합니다. 이 사용법은 컨트롤과 함께 사용하기 위한 것입니다. 호스트는 확장된 속성을 사용하여 컨트롤을 래핑하는 새로운 형식 라이브러리를 만들어야 합니다. 자세한 내용은 [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 특성을 참조하세요.  
   
- *제한 된* (선택 사항)  
- 라이브러리의 멤버를 임의로 호출할 수 없습니다. 자세한 내용은 [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 특성을 참조하세요.  
+*제한 된* (선택 사항)  
+라이브러리의 멤버를 임의로 호출할 수 없습니다. 자세한 내용은 [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 특성을 참조하세요.  
   
- *사용자 지정* (선택 사항)  
- 하나 이상의 특성입니다. [custom](../windows/custom-cpp.md) 특성과 비슷합니다. 첫 번째 매개 변수를 *사용자 지정* 특성의 GUID입니다. 예를 들어:  
+*사용자 지정* (선택 사항)  
+하나 이상의 특성입니다. [custom](../windows/custom-cpp.md) 특성과 비슷합니다. 첫 번째 매개 변수를 *사용자 지정* 특성의 GUID입니다. 예를 들어:  
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
 ```  
   
- *resource_name*  
- DLL, 실행 파일 또는 서비스의 APP ID를 등록하는 데 사용되는 .rgs 파일의 문자열 리소스 ID입니다. 모듈이 형식 서비스인 경우 서비스 이름을 포함하는 문자열의 ID를 가져오는 데에도 이 인수가 사용됩니다.  
+*resource_name*  
+DLL, 실행 파일 또는 서비스의 APP ID를 등록하는 데 사용되는 .rgs 파일의 문자열 리소스 ID입니다. 모듈이 형식 서비스인 경우 서비스 이름을 포함하는 문자열의 ID를 가져오는 데에도 이 인수가 사용됩니다.  
   
 > [!NOTE]
 >  서비스 이름을 포함하는 문자열과 .rgs 파일 모두 동일한 숫자 값을 포함해야 합니다.  

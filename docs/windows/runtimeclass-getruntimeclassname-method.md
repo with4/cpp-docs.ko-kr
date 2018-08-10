@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7706a16a860cf554068dd3416e7c1f8b1fcea311
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 126133c5e542414f1fb38635e1cb14314bc55d52
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608776"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020397"
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>RuntimeClass::GetRuntimeClassName 메서드
 
@@ -37,7 +37,6 @@ STDMETHOD( GetRuntimeClassName )(
 ```
 
 ### <a name="parameters"></a>매개 변수
-
 *runtimeName*  
 이 작업이 완료 될 때 런타임 클래스 이름입니다.
 
@@ -47,7 +46,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ## <a name="remarks"></a>설명
 
-어설션 오류가 발생 하는 경우에 내보내집니다 &#95; &#95;WRL_STRICT&#95; &#95; 또는 &#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95; 정의 되어 있지 않습니다.
+어설션 오류가 발생 하는 경우에 내보내집니다 `__WRL_STRICT__` 또는 `__WRL_FORCE_INSPECTABLE_CLASS_MACRO__` 정의 되어 있지 않습니다.
 
 ## <a name="requirements"></a>요구 사항
 

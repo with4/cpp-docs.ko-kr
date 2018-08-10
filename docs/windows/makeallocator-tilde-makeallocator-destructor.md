@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2e31f666ca6263a9b9b770261a0899bcad1bc8fd
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 09450b7883467640cc7176334ea18c07f43a098b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606311"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010875"
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>MakeAllocator::~MakeAllocator 소멸자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 ~MakeAllocator();  
 ```  
   

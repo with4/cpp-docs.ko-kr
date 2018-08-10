@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29877cf71d35f9c24001833a73192caa61f325be
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5ed8669a22be7e1a2b696ca9373c30e71f17c191
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606789"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012685"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>이미지 영역 선택(아이콘에 대한 이미지 편집기)
 잘라내기, 복사, 지우기, 크기를 조정, 반전, 또는 이동 하려는 이미지의 영역을 정의 하려면 선택 도구를 사용할 수 있습니다. 사용 하 여 합니다 **사각형 선택** 도구를 정의 하 고 이미지의 사각형 영역을 선택할 수 있습니다. 사용 하 여 합니다 **부정형** 도구 잘라내기, 복사 또는 다른 작업에 대 한 선택 하려는 영역의 윤곽선을 자유롭게 그릴 수 있습니다.  
@@ -52,7 +52,6 @@ ms.locfileid: "39606789"
  관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다. 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 내용은 참조 하세요 [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화 관리 되는 앱의 리소스에 대 한 내용은 참조 하세요 [Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
-  
  없음  
   
 ## <a name="see-also"></a>참고 항목  

@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1e4ac8898b48c4b64d0b12b945ab45b1c5f1436
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a575538d2527aba25d62dff1a8ba4d89402f5cfb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606158"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019334"
 ---
 # <a name="safeint-class"></a>SafeInt 클래스
 기본 정수형을 확장하여 정수 오버플로를 방지하고 다양한 유형의 정수를 비교할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename T, typename E = _SAFEINT_DEFAULT_ERROR_POLICY>  
 class SafeInt;  
 ```  
@@ -194,20 +194,20 @@ class SafeInt;
   
  사용할 때는 주의 해야 합니다 **SafeInt** 와 함께 클래스는 `?:` 삼항 연산자입니다. 다음 코드 줄을 고려 합니다.  
   
-```  
+```cpp  
 Int x = flag ? SafeInt<unsigned int>(y) : -1;  
 ```  
   
  컴파일러는 다음과 같이 변환합니다.   
   
-```  
+```cpp  
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);  
 ```  
   
  경우 `flag` 됩니다 **false**를-1 값을 할당 하는 대신 예외를 throw 하는 컴파일러 `x`합니다. 따라서 이 문제를 방지하려면 다음과 같이 올바른 코드를 사용해야 합니다.
   
   
-```  
+```cpp  
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
 ```  
   

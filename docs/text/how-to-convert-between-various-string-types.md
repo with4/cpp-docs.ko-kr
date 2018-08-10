@@ -16,12 +16,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d54cafaa2f0b4d3db79e8b4c8fc381457952794
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: bf7623c377e8fcce2a6a498176aaf9fb08a55b20
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208333"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015094"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>방법: 다양한 문자열 형식 간 변환
 이 항목에서는 다양 한 Visual c + + 문자열 형식을 다른 문자열로 변환 하는 방법에 설명 합니다. 적용 되는 문자열 형식 포함 `char *`, `wchar_t*`를 [_bstr_t](../cpp/bstr-t-class.md)를 [CComBSTR](../atl/reference/ccombstr-class.md)를 [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), 및 <xref:System.String?displayProperty=fullName>합니다. 모든 경우에 새 형식으로 변환할 때 문자열의 복사본이 만들어집니다. 새 문자열을 변경한 내용을 원래 문자열에서 영향을 주지 것입니다 그 반대로 가능 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "39208333"
   
 ### <a name="code"></a>코드  
   
-```  
+```cpp  
 // convert_from_char.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -115,9 +115,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>출력  
-  
-```  
+```Output  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
 Hello, World! (_bstr_t)  
@@ -137,7 +135,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>코드  
   
-```  
+```cpp  
 // convert_from_wchar_t.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -238,11 +236,9 @@ int main()
     Console::WriteLine("{0}", systemstring);  
     delete systemstring;  
 }  
-```  
+```   
   
-### <a name="output"></a>출력  
-  
-```  
+```Output  
 Hello, World! (wchar_t *)  
 Hello, World! (char *)  
 Hello, World! (_bstr_t)  
@@ -262,7 +258,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>코드  
   
-```  
+```cpp  
 // convert_from_bstr_t.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -339,11 +335,9 @@ int main()
     Console::WriteLine("{0}", systemstring);  
     delete systemstring;  
 }  
-```  
+```   
   
-### <a name="output"></a>출력  
-  
-```  
+```Output  
 Hello, World! (_bstr_t)  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
@@ -363,7 +357,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>코드  
   
-```  
+```cpp  
 // convert_from_ccombstr.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -452,9 +446,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>출력  
-  
-```  
+```Output  
 Hello, World! (CComBSTR)  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
@@ -476,7 +468,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>코드  
   
-```  
+```cpp  
 // convert_from_cstring.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -498,7 +490,7 @@ int main()
     cout << origa << " (CStringA)" << endl;  
 ```  
   
-```  
+```cpp  
 // Set up a wide character CStringW string.  
 CStringW origw("Hello, World!");  
 wcout << (LPCTSTR)origw << _T(" (CStringW)") << endl;  
@@ -587,7 +579,7 @@ Console::WriteLine("{0}", systemstring);
 delete systemstring;  
 ```  
   
-```  
+```cpp  
     // Convert a wide character CStringW to a   
     // System::String.  
     String ^systemstringw = gcnew String(origw);  
@@ -595,11 +587,9 @@ delete systemstring;
     Console::WriteLine("{0}", systemstringw);  
     delete systemstringw;  
 }  
-```  
+```   
   
-### <a name="output"></a>출력  
-  
-```  
+```Output  
 Hello, World! (CStringA)  
 Hello, World! (CStringW)  
 Hello, World! (char *)  
@@ -623,7 +613,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>코드  
   
-```  
+```cpp  
 // convert_from_basic_string.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -698,9 +688,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>출력  
-  
-```  
+```Output  
 Hello, World! (basic_string)  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
@@ -720,7 +708,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>코드  
   
-```  
+```cpp  
 // convert_from_system_string.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -806,9 +794,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>출력  
-  
-```  
+```Output  
 Hello, World! (System::String)  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  

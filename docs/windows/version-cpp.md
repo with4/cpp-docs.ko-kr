@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c2d0c72ffbb805b526429562a5f39a09285b70f
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 1ef27e86ae356ddc67555390b7e053daa8d32a09
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642281"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013355"
 ---
 # <a name="version-c"></a>version(C++)
 클래스의 여러 버전 중에서 특정 버전을 식별합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ version(  
    "version"  
 ) ]  

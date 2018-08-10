@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a9360a7b0ce0596e9fb1bffb71864526cf92e5c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e73b11ae5a29289c44bf762082397dd4ed4f826
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875021"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016693"
 ---
 # <a name="moduleobjectcount-data-member"></a>Module::objectCount_ 데이터 멤버
-추적으로 생성 된 클래스 수는 [확인](../windows/make-function.md) 함수입니다.  
+얼마나 많은 클래스가 사용 하 여 만든 추적 합니다는 [있도록](../windows/make-function.md) 함수입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 volatile long objectCount_;  
 ```  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa03dd41b66bb36d5dc7059863e13267e5dd77bd
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 01df0ea356d2c7a8b495d4c304d11a32377cd3ff
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642125"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013904"
 ---
 # <a name="synclocktunlock-method"></a>SyncLockT::Unlock 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void Unlock();  
 ```  
   

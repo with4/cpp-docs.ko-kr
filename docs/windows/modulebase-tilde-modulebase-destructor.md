@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d648577d03507154c8e3b226fa00e3f03dc25abc
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 223358d33fb7eab0663237e8eb8deb487b84109a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608510"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010440"
 ---
 # <a name="modulebasemodulebase-destructor"></a>ModuleBase::~ModuleBase 소멸자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 virtual ~ModuleBase();  
 ```  
   

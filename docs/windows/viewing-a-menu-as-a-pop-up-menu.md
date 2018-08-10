@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05695e834ae244d276141185a913e8f35ef45922
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef77de72a9120a774e3676d649adb267074e1a72
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652203"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015613"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>메뉴를 팝업 메뉴로 보기
-일반적으로 메뉴 편집기에서 작업하면 메뉴 리소스가 메뉴 모음으로 표시됩니다. 그러나 프로그램이 실행되는 동안 응용 프로그램의 메뉴 모음에 메뉴 리소스가 추가될 수 있습니다.  
+일반적으로 작업 하는 경우는 **메뉴** 편집기 메뉴 리소스 메뉴 모음으로 표시 됩니다. 그러나 프로그램이 실행되는 동안 응용 프로그램의 메뉴 모음에 메뉴 리소스가 추가될 수 있습니다.  
   
 ### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>메뉴 리소스를 팝업 메뉴로 보려면  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4a9c624f6f9e06108aa25930a2b035cbed685ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d6d767a77b68ad8585da711861d942abbe6b686
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876347"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013495"
 ---
 # <a name="invokehelpercallback-data-member"></a>InvokeHelper::callback_ 데이터 멤버
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 TCallback callback_;  
 ```  
   

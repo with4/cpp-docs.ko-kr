@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59ee6ce257609c4761e43630a66de9cb9b996269
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30852b22c9ff4cc74c8f0c57b3a5ed9d79a34838
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892337"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011450"
 ---
 # <a name="symbol-name-restrictions"></a>기호 이름 제한
 기호 이름에 대한 제한은 다음과 같습니다.  
@@ -52,8 +52,6 @@ ms.locfileid: "33892337"
 |컨트롤 및 자식 창|IDC_|Control|  
 |문자열|IDS_|문자열 테이블의 문자열|  
 |MFC|AFX_|미리 정의된 MFC 기호에 예약됨|  
-  
-
   
 ## <a name="requirements"></a>요구 사항  
  Win32  

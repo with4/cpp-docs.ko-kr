@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe78f8644768563507f98157ac859993776d7fe9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 93df4ebf46b187cab63fbfaed2e273c55e7c0d84
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646204"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013251"
 ---
 # <a name="weakreferenceresolve-method"></a>WeakReference::Resolve 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 STDMETHOD(Resolve)  
    (REFIID riid,   
    _Deref_out_opt_ IInspectable **ppvObject  

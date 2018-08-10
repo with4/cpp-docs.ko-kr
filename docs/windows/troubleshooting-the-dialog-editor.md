@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e7b7accec826bc6c52ab9c6f677ce980f40c6f20
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 242881100dfd9a27946bcbe74d449d078c373852
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648622"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011106"
 ---
 # <a name="troubleshooting-the-dialog-editor"></a>대화 상자 편집기 문제 해결
-대화 상자 편집기에서 작업할 때 알고 있어야 하는 몇 가지 문제는 다음과 같습니다.  
+다음 몇 가지 문제가 있는 작업할 때 알고 있어야 합니다 **대화 상자** 편집기입니다.  
   
 -   [대화 상자에 컨트롤을 추가하여 대화 상자가 작동하지 않는 경우](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md)  
   

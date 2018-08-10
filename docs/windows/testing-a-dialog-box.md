@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf9e5e24e77a14b3baf86c1b83d653dd833ebbbb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 307b5ffeeaa21b4cb90779a9d516229bf2ab3167
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652072"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019680"
 ---
 # <a name="testing-a-dialog-box"></a>대화 상자 테스트
 대화 상자를 디자인할 때 프로그램을 컴파일하지 않고 런타임에 동작을 시뮬레이션 및 테스트할 수 있습니다. 이 모드에서 다음 작업을 수행할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "39652072"
   
 ### <a name="to-test-a-dialog-box"></a>대화 상자를 테스트하려면  
   
-1.  대화 상자 편집기가 활성 창일 경우 메뉴 모음에서 **서식**, **대화 상자 테스트**를 선택합니다.  
+1.  경우는 **대화 상자** 편집기가 활성 창, 메뉴 모음에서 선택 합니다 **형식** > **테스트 대화 상자**합니다.  
   
 2.  시뮬레이션을 종료 하려면 키를 누릅니다 **Esc**를 선택 하거나 합니다 **닫기** 테스트 하는 대화 상자에서 단추입니다.  
   
