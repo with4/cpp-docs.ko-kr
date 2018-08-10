@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2960a95195e3f77194faf9df5ac626e09658e93
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a6478e8ee5474687928692763c5231091f7ad1ce
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605125"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017021"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr(C++/CLI)
 *내부 포인터* 개체 자체가 아니라 참조 형식 내부에 포인터를 선언 합니다. 내부 포인터는 참조 핸들, 값 형식, boxed 형식 핸들, 관리되는 형식의 멤버 또는 관리되는 배열의 요소를 가리킬 수 있습니다.  
@@ -116,9 +116,7 @@ int main() {
    (*p2)->data = 3;  
    Console::WriteLine((*p2)->data);  
 }  
-```  
-  
- **출력**  
+``` 
   
 ```Output  
 1  

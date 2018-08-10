@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae70dabdd86fedf82c26c0c7d9a09d842e2310e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e7b7d35fd8cae44c3f374a81cae572e4c9ee4f8
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891050"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011161"
 ---
 # <a name="weakrefweakref-constructor"></a>WeakRef::WeakRef 생성자
-WeakRef 클래스의 새 인스턴스를 초기화합니다.  
+새 인스턴스를 초기화 합니다 **WeakRef** 클래스입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 WeakRef();  
 WeakRef(  
    decltype(__nullptr)  
@@ -52,12 +52,12 @@ WeakRef(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `ptr`  
- 포인터, 참조 또는 rvalue 참조 현재 WeakRef 개체를 초기화 하는 기존 개체에 있습니다.  
+### <a name="parameters"></a>매개 변수  
+ *ptr*  
+ 포인터, 참조 또는 현재 초기화 하는 기존 개체에 대 한 rvalue 참조 **WeakRef** 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 첫 번째 생성자는 빈 WeakRef 개체를 초기화합니다. 두 번째 생성자는 IWeakReference 인터페이스에 대 한 포인터에서 WeakRef 개체를 초기화합니다. 세 번째 생성자는 ComPtr에 대 한 참조에서 WeakRef 개체를 초기화 합니다.\<IWeakReference > 개체입니다. 네 번째와 다섯 번째 생성자는 다른 WeakRef 개체에서 WeakRef 개체를 초기화 합니다.  
+ 첫 번째 생성자는 빈 **WeakRef** 개체입니다. 두 번째 생성자는 초기화를 **WeakRef** 개체에 대 한 포인터를 `IWeakReference` 인터페이스입니다. 세 번째 생성자는 초기화를 **WeakRef** 개체에 대 한 참조를 `ComPtr<IWeakReference>` 개체입니다. 네 번째와 다섯 번째 생성자 초기화를 **WeakRef** 개체를 서로 **WeakRef** 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

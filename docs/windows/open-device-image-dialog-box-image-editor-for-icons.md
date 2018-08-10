@@ -1,5 +1,5 @@
 ---
-title: 열기 &lt;장치&gt; 이미지 대화 상자 (아이콘에 대 한 이미지 편집기) | Microsoft Docs
+title: 오픈 &lt;장치&gt; 이미지 대화 상자 (아이콘에 대 한 이미지 편집기) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fdb7fb2baf2b12105475679a237fef6b69f5728
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e3cfcf2ec4fdd5a559cf52bc84ee6e50031797c9
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881707"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013329"
 ---
-# <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>열기 &lt;장치&gt; 이미지 대화 상자 (아이콘에 대 한 이미지 편집기)
-이 대화 상자를 사용 하 여 장치 이미지를 엽니다. 현재 리소스 (현재 리소스의 일부인 이미지)에 기존 장치 이미지를 나열 합니다.  
+# <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>오픈 &lt;장치&gt; 이미지 대화 상자 (아이콘에 대 한 이미지 편집기)
+장치 이미지를 열려면이 대화 상자를 사용 합니다. 현재 리소스 (현재 리소스의 일부인 이미지)의 기존 장치 이미지를 나열 합니다.  
   
- **현재 이미지**  
+### <a name="current-images"></a>현재 이미지  
  리소스에 포함 된 이미지를 나열 합니다. 열려는 이미지 유형을 선택 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -36,4 +36,3 @@ ms.locfileid: "33881707"
 ## <a name="see-also"></a>참고 항목  
  [이미지 메뉴](../windows/image-menu-image-editor-for-icons.md)   
  [아이콘에 대한 이미지 편집기](../windows/image-editor-for-icons.md)
-

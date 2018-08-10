@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0914c6ff83e881f92963fc8a548ddeff587db75e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81f2214ef6a3e33b573a88ac4e23ae6aad64ea01
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892249"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015692"
 ---
 # <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock 메서드
-공유 리소스의 버전 제어 합니다.  
+공유 리소스의 릴리스 컨트롤입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 inline static void Unlock(  
    _In_ Type h  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `h`  
- Semaphore 개체에 대 한 핸들입니다.  
+### <a name="parameters"></a>매개 변수  
+ *h*  
+ 에 대 한 핸들을 **세마포** 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 잠금 해제 작업 실패할 경우 Unlock() 실패의 원인을 나타내는 오류를 내보냅니다.  
+ 잠금 해제 작업이 성공적 이면 **Unlock()** 실패의 원인을 나타내는 오류를 생성 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

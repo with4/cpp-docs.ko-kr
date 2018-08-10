@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57c6ed79f9ecb74533a7ffaf2861af8bee9e257a
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 9c2dbb4bcbd1b6c76d00356535a9c99d983c1096
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569757"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019880"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>방법: 고정 포인터 및 값 형식 선언
 값 형식은 암시적으로 boxing할 수 있습니다. 자체 및 사용에 다음 값 형식 개체에 대 한 고정 포인터를 선언할 수 있습니다는 **pin_ptr** boxed 값 형식입니다.  
@@ -47,8 +47,6 @@ int main() {
    System::Console::WriteLine(mv->i);  
 }  
 ```  
-  
-### <a name="output"></a>출력  
   
 ```Output  
 8  

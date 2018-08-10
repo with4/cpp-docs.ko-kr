@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eec0e3591da2417137fda3bae4ed9e7860472fb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93cd229e93c4da36004c212cef0f09463926a0e5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889825"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015958"
 ---
 # <a name="variable-argument-lists--ccli"></a>가변 인수 목록(...)(C++/CLI)
-사용 하는 방법을 보여 주는이 예제는 `...` Visual c + + 가변 개수의 인수는 함수를 구현 하는 구문입니다.  
+사용 하는 방법을 보여 주는이 예제는 `...` Visual c + + 가변 개수의 인수를 갖는 함수를 구현 하는 구문입니다.  
   
 > [!NOTE]
->  이 항목 관련 C + + /cli CLI 합니다. 사용 하는 방법에 대 한 내용은 `...` ISO 표준 c + +에서 참조 [Ellipses 및 Variadic 템플릿](../cpp/ellipses-and-variadic-templates.md) 줄임표 및 기본 인수에 및 [후 위 식](../cpp/postfix-expressions.md)합니다.  
+>  이 항목에서는 관련 된 C + + /cli CLI입니다. 사용에 관한 정보를 `...` ISO 표준 c + +에서 참조 [Ellipses 및 Variadic 템플릿](../cpp/ellipses-and-variadic-templates.md) 줄임표 및 기본 인수에 [후 위 식](../cpp/postfix-expressions.md)합니다.  
   
- 매개 변수를 사용 하 여 `...` 매개 변수 목록의 마지막 매개 변수 여야 합니다.  
+ 매개 변수를 사용 하는 `...` 매개 변수 목록의 마지막 매개 변수 여야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="code"></a>코드  
   
-```  
+```cpp  
 // mcppv2_paramarray.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -54,16 +54,14 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>출력  
-  
-```  
+```Output  
 3  
 ```  
   
 ## <a name="code-example"></a>코드 예제  
  다음 예제에서는 C#에서 가변 개수의 인수를 사용 하는 Visual c + + 함수를 호출 하는 방법을 보여 줍니다.  
   
-```  
+```cpp  
 // mcppv2_paramarray2.cpp  
 // compile with: /clr:safe /LD  
 using namespace System;  
@@ -74,11 +72,11 @@ public:
 };  
 ```  
   
- 함수 `f` 에서 호출할 수 있는 C# 또는 Visual Basic의 경우 예를 들어 가변 개수의 인수를 사용할 수 있는 함수를 것 처럼 합니다.  
+ 함수 `f` 에서 호출할 수 있는 C# 또는 Visual Basic의 경우 예를 들어 가변 개수의 인수를 사용할 수 있는 함수인 것 처럼 합니다.  
   
- C#에서에 전달 되는 인수는 `ParamArray` 가변 개수의 인수에서 매개 변수를 호출할 수 있습니다. 다음 코드 예제는 C#입니다.  
+ C#에서 전달 되는 인수를 `ParamArray` 매개 변수 인수의 변수 번호로 호출할 수 있습니다. 다음 코드 예제는 C#입니다.  
   
-```  
+```cs  
 // mcppv2_paramarray3.cs  
 // compile with: /r:mcppv2_paramarray2.dll  
 // a C# program  
@@ -95,7 +93,7 @@ public class X {
   
  에 대 한 호출 `f` Visual c + +에서는 초기화 된 배열 또는 가변 길이 배열을 전달할 수 있습니다.  
   
-```  
+```cpp  
 // mcpp_paramarray4.cpp  
 // compile with: /clr  
 using namespace System;  

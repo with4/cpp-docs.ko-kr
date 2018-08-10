@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f852f8f360be90e7d17e9aaa09e7d584ad98fc33
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 78b5039268bd122ade815ed6040a1df546e0f293
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461070"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641332"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach 메서드
 이 연결 **ComPtr** 현재 템플릿 형식 매개 변수에 의해 지정 된 인터페이스 형식을 사용 하 여 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void Attach(  
    _In_opt_ InterfaceType* other  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *other*  
  인터페이스 형식입니다.  
   

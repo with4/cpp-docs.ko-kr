@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63ff6c63702cda709f4431d9c7e5be5a4bdb8449
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 08b96712b2e66ebf527ccb1cbf408c2a7d028b60
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39602655"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012078"
 ---
 # <a name="modulegetclassobject-method"></a>Module::GetClassObject 메서드
 클래스 팩터리의 캐시를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
  HRESULT GetClassObject(  
    REFCLSID clsid,  
    REFIID riid,  

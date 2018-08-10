@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30e408d127e73b111e6ff464ea7530ba01beece3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 29b892f3e120db183082d6af97f9374f89e9e647
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570745"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643058"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>방법: WRL을 사용하여 비동기 작업 완료
 이 문서에서는 Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 사용 하 여 비동기 작업을 시작 하 고 작업 완료 시 작업을 수행 하는 방법을 보여 줍니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "39570745"
   
      [!code-cpp[wrl-consume-async#2](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_1.cpp)]  
   
-     Windows.System.Threading.h 비동기 타이머를 사용 하는 데 필요한 형식을 선언 합니다.  
+     `Windows.System.Threading.h` 비동기 타이머를 사용 하는 데 필요한 형식을 선언 합니다.  
   
      .cpp 파일의 `using namespace` 지시문을 활용하여 코드를 보다 읽기 쉽게 만드는 것이 좋습니다.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "39570745"
  [!code-cpp[wrl-consume-asyncOp#1](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_14.cpp)]  
   
 ### <a name="compiling-the-code"></a>코드 컴파일  
- 컴파일하려면 코드를 복사 하 고 다음 Visual Studio 프로젝트에 붙여 넣습니다와 라는 파일에 붙여 `wrl-consume-asyncOp.cpp` Visual Studio 명령 프롬프트 창에서 다음 명령을 실행 합니다.  
+ 컴파일하려면 코드를 복사 하 고 다음 Visual Studio 프로젝트에 붙여 넣습니다 또는 라는 파일에 붙여 넣습니다 `wrl-consume-asyncOp.cpp` 다음 명령을 실행 하 고는 **Visual Studio 명령 프롬프트** 창입니다.  
   
  `cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib`  
   

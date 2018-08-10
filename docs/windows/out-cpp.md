@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9a3d102050da84f7dcbc8714a4c04b46cf3f5a1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: f83314de19548c93afa43feced8b2a877af00738
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606126"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019055"
 ---
 # <a name="out-c"></a>out(C++)
 호출된 프로시저에서 호출하는 프로시저로 반환된(서버에서 클라이언트로 반환된) 포인터 매개 변수를 식별합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [out]  
 ```  
   

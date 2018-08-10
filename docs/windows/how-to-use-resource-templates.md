@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da0d33c51fa50c7291eaa6421e9b857cd6f82d36
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b0a123c336df3f47550f8bb825a621eff53a8cb5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569458"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015553"
 ---
 # <a name="how-to-use-resource-templates"></a>방법: 리소스 템플릿 사용
 리소스 템플릿은 .rct 파일로 저장한 사용자 지정 리소스입니다. 리소스 템플릿을 다른 리소스를 만들기 위한 시작 지점으로 사용할 수 있습니다. 리소스 템플릿을 사용하면 표준 컨트롤 및 기타 반복 요소와 같이 기능을 공유하는 추가 리소스 또는 리소스 그룹을 개발하는 시간을 절약할 수 있습니다. 예를 들어 여러 대화 상자에 도움말 단추와 회사 로고 아이콘을 포함할 수 있습니다. 이 작업을 빠르게 하려면 새 대화 상자 템플릿을 만들고 로고와 도움말 단추를 사용하여 템플릿을 사용자 지정합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "39569458"
   
 4.  이름 및 새.rct 파일의 위치를 제공 하 고 클릭 **열려**합니다.  
   
-5.  새.rct 파일이 프로젝트에 추가 되 고 솔루션 탐색기에 표시 되는 **리소스** 폴더입니다.  
+5.  새.rct 파일이 프로젝트에 추가 되 고 나타나는 **솔루션 탐색기** 아래의 합니다 **리소스** 폴더입니다.  
   
      이제 문서 창에서 열려는.rct 파일을 두 번 클릭 다음 리소스를 추가할 수 있습니다 (문서 창에서 파일을 마우스 오른쪽 단추로 클릭 하 고 선택 **리소스 추가** 바로 가기 메뉴에서). 그다음에 해당 리소스를 사용자 지정하고 .rct 파일을 저장할 수 있습니다.  
   
@@ -76,7 +76,6 @@ ms.locfileid: "39569458"
  관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다.  
   
 ## <a name="requirements"></a>요구 사항  
-  
  Win32  
   
 ## <a name="see-also"></a>참고 항목  

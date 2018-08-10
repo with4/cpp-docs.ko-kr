@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c13889c15476ff263658d7b5b4024e7a5deebe5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 790e01f1b74d7d592196bdd5a21284f8379df5c4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890215"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011701"
 ---
 # <a name="wiremarshal"></a>wire_marshal
-응용 프로그램 관련 데이터 형식이 아닌 전송을 위해 사용 될 데이터 형식을 지정 합니다.  
+응용 프로그램별 데이터 형식 대신 전송을 위해 사용 될 데이터 형식을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```cpp  
 [wire_marshal]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **wire_marshal** c + + 특성에 동일한 기능을는 [wire_marshal](http://msdn.microsoft.com/library/windows/desktop/aa367309) MIDL 특성입니다.  
+ 합니다 **wire_marshal** c + + 특성에 동일한 기능을 합니다 [wire_marshal](http://msdn.microsoft.com/library/windows/desktop/aa367309) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 다음 코드의 사용을 보여 줍니다. **wire_marshal**:  
+## <a name="example"></a>예  
+ 다음 코드는 사용 방법을 보여 줍니다 **wire_marshal**:  
   
-```  
+```cpp  
 // cpp_attr_ref_wire_marshal.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -63,7 +61,7 @@ ms.locfileid: "33890215"
   
 |||  
 |-|-|  
-|**적용 대상**|`typedef`|  
+|**적용 대상**|**typedef**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

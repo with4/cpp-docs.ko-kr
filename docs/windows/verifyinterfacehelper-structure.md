@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7f414189c60946264ce49c5d6065d91d92b8bd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2b1dd40487a9d843fb81be1e0be65d76a86e1f9c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890254"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013300"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper 구조체
-Windows 런타임 c + + 템플릿 라이브러리 인프라를 지원 하며 사용자 코드에서 직접 사용할 수 없습니다.  
+Windows Runtime c + + 템플릿 라이브러리 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template <  
    bool isWinRTInterface,  
    typename I  
@@ -42,11 +42,11 @@ template <
 struct VerifyInterfaceHelper<false, I>;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `I`  
+### <a name="parameters"></a>매개 변수  
+ *I*  
  확인 하는 인터페이스입니다.  
   
- `isWinRTInterface`  
+ *isWinRTInterface*  
   
 ## <a name="remarks"></a>설명  
  템플릿 매개 변수로 지정 된 인터페이스에 특정 요구 사항을 충족 하는지 확인 합니다.  

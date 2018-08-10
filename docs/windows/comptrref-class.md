@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f7f392df62892ea0e053e9d243f85772fa0605d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9c45aa289b4b41ddfaf141dcaf790734284af7c8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463082"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643552"
 ---
 # <a name="comptrref-class"></a>ComPtrRef 클래스
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template <  
    typename T  
 >  
@@ -55,7 +55,7 @@ class ComPtrRef : public ComPtrRefBase<T>;
   
 |이름|설명|  
 |----------|-----------------|  
-|[ComPtrRef::GetAddressOf 메서드](../windows/comptrref-getaddressof-method.md)|현재 ComPtrRef 개체에서 나타내는 인터페이스에 대 한 포인터의 주소를 검색 합니다.|  
+|[ComPtrRef::GetAddressOf 메서드](../windows/comptrref-getaddressof-method.md)|현재이 나타내는 인터페이스에 대 한 포인터의 주소를 검색 **ComPtrRef** 개체입니다.|  
 |[ComPtrRef::ReleaseAndGetAddressOf 메서드](../windows/comptrref-releaseandgetaddressof-method.md)|현재 삭제 **ComPtrRef** 개체 및 포인터-에-a-포인터를 반환에서 나타내는 인터페이스를 **ComPtrRef** 개체입니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  

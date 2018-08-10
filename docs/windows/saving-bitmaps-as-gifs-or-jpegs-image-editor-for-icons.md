@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a87087b4ef51c016a5165f0d997824f174ca06c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: debb2b1e8435cc53ec82ab1f957710850d7b5de3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608159"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010693"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>비트맵을 GIF 또는 JPEG로 저장(아이콘에 대한 이미지 편집기)
 비트맵을 만들 때 이미지 비트맵 (.bmp) 형식으로 만들어집니다. 그러나 GIF 또는 JPEG로 또는 다른 그래픽 형식의 이미지를 저장할 수 있습니다.  
@@ -51,9 +51,10 @@ ms.locfileid: "39608159"
   
 4.  열려 있는 상태에서 비트맵을 사용 하 여 합니다 **이미지** 편집기를 클릭 합니다 **저장 *filename*으로.bmp** 에 **파일** 메뉴.  
   
-5.  에 **다른 이름으로 파일 저장** 대화 상자 파일과에서 원하는 파일 형식에 맞게 확장에 지정할 이름을 입력 합니다 합니다 **파일 이름** 상자. 예를 들어 myfile.gif 합니다.  
+5.  에 **다른 이름으로 파일 저장** 대화 상자 파일과에서 원하는 파일 형식에 맞게 확장에 지정할 이름을 입력 합니다 합니다 **파일 이름** 상자. 예를 들어 *myfile.gif*합니다.  
   
-     **참고** 를 만들거나 다른 파일 형식으로 저장 하기 위해 프로젝트 외부에서 비트맵을 열면 해야 합니다. 만들거나 프로젝트 내에서 열을 **다른 이름으로 저장** 명령을 사용할 수 없게 됩니다. 자세한 내용은 [보기 리소스 (독립 실행형) 프로젝트 외부에서 리소스 스크립트 파일 열기](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)합니다.  
+     > [!NOTE]
+     > 만들거나 해야 다른 파일 형식으로 저장 하기 위해 프로젝트 외부에서 비트맵을 엽니다. 만들거나 프로젝트 내에서 열을 **다른 이름으로 저장** 명령을 사용할 수 없게 됩니다. 자세한 내용은 [보기 리소스 (독립 실행형) 프로젝트 외부에서 리소스 스크립트 파일 열기](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)합니다.  
   
 6.  **저장**을 클릭합니다.  
   

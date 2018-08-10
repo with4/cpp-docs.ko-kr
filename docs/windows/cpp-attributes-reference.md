@@ -15,17 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29c3aacf63396e96b4520fc849e082c6781e5d64
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 24ca39b307decbf88338295ba2650b935eca2d4f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460908"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645497"
 ---
 # <a name="c-attributes-reference"></a>C++ 특성 참조
 Microsoft은.NET Framework 공용 언어 런타임 개발 및 COM 프로그래밍을 단순화 하는 특성 집합을 정의 합니다. 소스 파일에서 특성을 포함 하는 경우 컴파일러는 공급자 코드를 삽입 하거나 생성 된 개체 파일의 코드를 수정 하는 Dll 사용 하 여 작동 합니다.  
   
- **참고:** c + + 표준 특성 찾고자 하는 경우 참조 [특성](../cpp/attributes.md)합니다.  
+ > [!NOTE] 
+ > C + + 표준 특성 찾고자 하는 경우 참조 [특성](../cpp/attributes.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [개념](../windows/attributed-programming-concepts.md)  

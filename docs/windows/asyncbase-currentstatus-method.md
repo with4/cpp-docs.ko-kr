@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 316dfea16aa129dcaff42424bef46305d2dd56b4
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 36c3f76e3fc137458acddacd834563d845057a24
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461431"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646577"
 ---
 # <a name="asyncbasecurrentstatus-method"></a>AsyncBase::CurrentStatus 메서드
 현재 비동기 작업의 상태를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 inline void CurrentStatus(  
    Details::AsyncStatusInternal *status  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *status*  
  이 작업의 현재 상태를 저장 하는 위치를 위치입니다.  
   

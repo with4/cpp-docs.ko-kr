@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6797c274402578cfecb522c86745fb5b257e213d
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: f374c945312e41fd54b525dc0cb7cd84ce84985d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608860"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018896"
 ---
 # <a name="implementsfillarraywithiid-method"></a>Implements::FillArrayWithIid 메서드
 현재 0 번째 템플릿 매개 변수로 지정 된 배열 요소에 지정 된 인터페이스 ID를 삽입 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 __forceinline static void FillArrayWithIid(  
    unsigned long &index,  
    _In_ IID* iids  

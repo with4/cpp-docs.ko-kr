@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8c7ab6dcfa4a085facf835343404de3ed4998a3
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4bf4f02043f3cb11a47357ff91898da23ed03c22
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603444"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014210"
 ---
 # <a name="range-c"></a>range(C++)
 인수 값은 런타임에 설정 된 필드에 허용 되는 값의 범위를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ range(  
    low,   
    high  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *low*  
  하위 범위의 값입니다.  
   

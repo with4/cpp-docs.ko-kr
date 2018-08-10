@@ -23,19 +23,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 752989b33bd0b017233ea4a105d2ad36ca2290f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f74f8fe3e5b637869af7b03bb2eaf5e13df9550
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875554"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020165"
 ---
 # <a name="microsoftwrlwrappersdetails-namespace"></a>Microsoft::WRL::Wrappers::Details 네임스페이스
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Wrappers::Details;  
 ```  
   
@@ -52,7 +52,7 @@ namespace Microsoft::WRL::Wrappers::Details;
   
 |이름|설명|  
 |----------|-----------------|  
-|[CompareStringOrdinal 메서드](../windows/comparestringordinal-method.md)|지정 된 두 `HSTRING` 개체 하 고 정렬 순서에서의 상대 위치를 나타내는 정수를 반환 합니다.|  
+|[CompareStringOrdinal 메서드](../windows/comparestringordinal-method.md)|지정 된 두 `HSTRING` 개체 및 정렬 순서에서 상대 위치를 나타내는 정수를 반환 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

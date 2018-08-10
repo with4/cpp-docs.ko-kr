@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42ec736126e2381b00542bf71afca0b9db187df7
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5b5605b68c569d4579324b51eaad42b1e9532011
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603759"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017417"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject 메서드
 다른 응용 프로그램에 연결할 수 있도록 하나 이상의 Windows 런타임 개체를 등록 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT RegisterWinRTObject(const wchar_t* serverName,  
    wchar_t** activatableClassIds,  
    WINRT_REGISTRATION_COOKIE* cookie,  

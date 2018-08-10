@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f588e67066fed690271aa7d78fcbe726c67177
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd203ee0413b60bc7aa713e7923fd4d69bde665e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860348"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642960"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy 열거형
-종료 상태를 전환 하는 비동기 작업의 시도 하는 방법을 나타냅니다 완료 또는 오류는 클라이언트 요청 취소 된 상태에 대해 작동 해야 합니다.  
+비동기 작업의 터미널 상태로 전환 하려고 하는 방법을 나타냅니다 완료 또는 오류는 클라이언트 요청 취소 상태와 관련 하 여 작동 해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 enum CancelTransitionPolicy;  
 ```  
   
@@ -41,8 +41,8 @@ enum CancelTransitionPolicy;
   
 |이름|설명|  
 |----------|-----------------|  
-|`RemainCanceled`|비동기 작업을 현재 클라이언트 요청 취소 된 상태에 있을 경우이 달리 터미널 완료 또는 오류 상태로 전환 되 고 취소 된 상태로 계속 유지 됩니다을 나타냅니다.|  
-|`TransitionFromCanceled`|취소 된 상태로 터미널 상태에 완료 된 상태로 전환 되어야 나타냅니다 비동기 작업을 현재 클라이언트 요청 취소 된 상태에 있을 경우 또는이 플래그를 활용 하는 호출에 의해 결정 된 대로 오류입니다.|  
+|`RemainCanceled`|비동기 작업에 현재 클라이언트 요청 취소 된 상태로 터미널 완료 또는 오류 상태를 전환 하는 대신 취소 된 상태로 남아 있는지 나타냅니다.|  
+|`TransitionFromCanceled`|비동기 작업을 현재 클라이언트 요청 취소 된 상태로 있는 경우 취소 된 상태로 터미널 상태에 완료 된 상태로 전환 해야 나타냅니다 또는 오류가이 플래그를 사용 하는 호출을 기준으로 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** async.h  

@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebb492d576e82c276aeb1cb464a39b558040fdc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4cad715d086cf4cca1c8ff384d8a452708231804
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890138"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019443"
 ---
 # <a name="unique-c"></a>unique(C++)
-고유한 포인터를 지정합니다.  
+고유 포인터를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```cpp  
 [unique]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **고유** c + + 특성에 동일한 기능을는 [고유](http://msdn.microsoft.com/library/windows/desktop/aa367294) MIDL 특성입니다.  
+ 합니다 **고유** c + + 특성에 동일한 기능을 합니다 [고유](http://msdn.microsoft.com/library/windows/desktop/aa367294) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 참조는 [ref](../windows/ref-cpp.md) 의 샘플 사용에 대 한 예제 **고유**합니다.  
+## <a name="example"></a>예  
+ 참조 된 [ref](../windows/ref-cpp.md) 의 샘플 사용에 대 한 예제 **고유**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -47,7 +45,7 @@ ms.locfileid: "33890138"
   
 |||  
 |-|-|  
-|**적용 대상**|`typedef``struct`, **union**, 매개 변수 인터페이스, 인터페이스 메서드|  
+|**적용 대상**|**typedef**하십시오 **구조체**, **union**인터페이스 매개 변수, 인터페이스 메서드|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

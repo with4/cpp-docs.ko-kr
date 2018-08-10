@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428004d3390b95c700c53fd157b62a1b3fbe3d0b
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4efe507011d70df689162b52f72d730f0ae99f58
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571177"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650055"
 ---
 # <a name="generic-interfaces-visual-c"></a>제네릭 인터페이스(Visual C++)
 클래스에서 형식 매개 변수에 적용 되는 제한을 인터페이스에서 형식 매개 변수에 적용 하는 것과 동일 (참조 [제네릭 클래스 (C + + /cli CLI)](../windows/generic-classes-cpp-cli.md)).  
@@ -34,14 +34,14 @@ ms.locfileid: "39571177"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [attributes] generic <class-key type-parameter-identifier[, ...]>  
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;  
 ```  
   
 ## <a name="remarks"></a>설명  
  *특성* (선택 사항)  
- 추가 선언 정보입니다. 특성 및 특성 클래스에 대한 자세한 내용은 특성을 참조하십시오.  
+ 추가 선언 정보입니다. 특성 및 특성 클래스에 대 한 자세한 내용은 참조 하세요. **특성**합니다.  
   
  *클래스 키*  
  **클래스** 또는 **typename**  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 532f3714bc48db545a33b76eb07b641b8e3e5490
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571440"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650091"
 ---
 # <a name="dbcommand"></a>db_command
 OLE DB 명령을 만듭니다.  
@@ -41,7 +41,6 @@ OLE DB 명령을 만듭니다.
 ```  
   
 ### <a name="parameters"></a>매개 변수  
-
 *command*  
 OLE DB 명령의 텍스트를 포함하는 명령 문자열입니다. 다음은 간단한 예제입니다.  
   
@@ -112,12 +111,12 @@ TCHAR m_state[3] = 'CA';
 **db_command** 는 지정된 변수가 함수 또는 전역 범위에 있도록, *source_name* 에 사용된 변수가 유효한지 확인합니다.  
   
 *hresult* (선택 사항)  
-이 데이터베이스 명령의 `HRESULT` 를 수신할 변수를 식별합니다. 변수가 없으면 특성에 의해 자동으로 삽입됩니다.  
+이 데이터베이스 명령의 HRESULT 받을 변수를 식별 합니다. 변수가 없으면 특성에 의해 자동으로 삽입됩니다.  
   
 *bindings* (선택 사항)  
 OLE DB 명령에서 바인딩 매개 변수를 구분할 수 있습니다.  
   
-에 대 한 값을 지정 하는 경우 *바인딩을*를 **db_command** 는 연결된 된 값을 구문 분석 하 고 구문 분석 하지 것입니다는 \[ *bindtype*] 매개 변수입니다. 이 방법에서는 OLE DB 공급자 구문을 사용할 수 있습니다. 구문 분석을 사용하지 않도록 설정하려면 바인딩 매개 변수 없이 **Bindings=""** 를 지정합니다.  
+에 대 한 값을 지정 하는 경우 *바인딩을*를 **db_command** 는 연결된 된 값을 구문 분석 하 고 구문 분석 하지 것입니다는 \[ *bindtype*] 매개 변수입니다. 이 방법에서는 OLE DB 공급자 구문을 사용할 수 있습니다. 바인딩 매개 변수 없이 구문 분석을 사용 하지 않도록 설정 하려면 지정 `Bindings=""`합니다.  
   
 에 대 한 값을 지정 하지 않으면 *바인딩을*를 **db_command** 찾고자 하는 바인딩 매개 변수 블록을 구문 분석 됩니다 '**(**' 뒤 **\[** _bindtype_**]** 뒤에 하나 이상의 이전에 선언 된 c + + 멤버 변수를 대괄호로 뒤에 '**)**'. 괄호 안의 모든 텍스트는 결과 명령에서 제거되며, 이 명령에 대한 열 및 매개 변수 바인딩을 구성하는 데 이러한 매개 변수가 사용됩니다.  
   
@@ -133,7 +132,7 @@ OLE DB 명령에서 바인딩 매개 변수를 구분할 수 있습니다.
 ## <a name="remarks"></a>설명  
 **db_command** 는 [CCommand](../data/oledb/ccommand-class.md) 개체를 만들고, OLE DB 소비자는 이 개체를 사용하여 명령을 실행합니다.  
   
-**db_command** 는 클래스 또는 함수 범위와 함께 사용할 수 있습니다. 주요 차이점은 `CCommand` 개체의 범위입니다. 함수 범위를 사용하는 경우 바인딩 같은 데이터는 함수 끝에서 종료됩니다. OLE DB 소비자 템플릿 클래스를 포함 하는 클래스 및 함수 범위 사용 `CCommand<>`, 함수 및 클래스 사례에 대 한 템플릿 인수 다릅니다. 함수의 경우 로컬 변수를 포함하는 **Accessor** 에 대해 바인딩이 이루어지지만, 클래스 사용의 경우 `CAccessor`파생 클래스를 인수로 유추합니다. 클래스 특성으로 사용하는 경우 **db_command** 는 **db_column**과 함께 작동합니다.  
+**db_command** 는 클래스 또는 함수 범위와 함께 사용할 수 있습니다. 주요 차이점은 `CCommand` 개체의 범위입니다. 함수 범위를 사용하는 경우 바인딩 같은 데이터는 함수 끝에서 종료됩니다. OLE DB 소비자 템플릿 클래스를 포함 하는 클래스 및 함수 범위 사용 `CCommand<>`, 함수 및 클래스 사례에 대 한 템플릿 인수 다릅니다. 함수의 경우 바인딩을 적용 될를 `Accessor` 유추 클래스를 사용 하는 동안 로컬 변수를 포함 하는 `CAccessor`-인수로 클래스를 파생 합니다. 클래스 특성으로 사용하는 경우 **db_command** 는 **db_column**과 함께 작동합니다.  
   
 **db_command** 는 결과 집합을 반환하지 않는 명령을 실행하는 데 사용할 수 있습니다.  
   

@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cbb36012d9a249669e3029c79dcf9c35bcdfc7a4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606516"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011580"
 ---
 # <a name="idlquote"></a>idl_quote
 Visual c + +의 현재 버전에서 지원 되지 않는 IDL 구문을 사용할 수 있습니다 하 고 생성된 된.idl 파일을 통과 하도록 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ idl_quote(  
    text  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *텍스트*  
  컴파일러 오류를 반환 하지 않고 생성된 된.idl 파일을 통과 하도록 Visual c + + 컴파일러는 특성 이름입니다.  
   
@@ -78,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- 이 코드는 MYFLOT 및 MYDUB 및 *텍스트* 생성된 된.idl 파일에 배치 될 항목입니다. 합니다 *이름을* 매개 변수 *텍스트* 참조 하는 것 보다 먼저 배치할 *이름* 생성된 된.idl 파일에서. 합니다 *종속성* 매개 변수 앞에 배치 해야 하는 종속성 목록 정의가 강제로 *텍스트* 생성된 된.idl 파일에 있습니다.  
+ 이 코드를 사용 하면 `MYFLOT` 하 고 `MYDUB` 하며 *텍스트* 생성된 된.idl 파일에 배치할 항목. 합니다 *이름을* 매개 변수 *텍스트* 참조 하는 것 보다 먼저 배치할 *이름* 생성된 된.idl 파일에서. 합니다 *종속성* 매개 변수 앞에 배치 해야 하는 종속성 목록 정의가 강제로 *텍스트* 생성된 된.idl 파일에 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

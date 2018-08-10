@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 984731d85bafe3c0e6bb0d8f6092800019b40663
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: aebc183bb8f74e3cd1710912c053bca46bef84a5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608188"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014070"
 ---
 # <a name="odl"></a>odl
 개체 설명 언어 (ODL) 인터페이스는 인터페이스를 식별합니다. MIDL 컴파일러 않아도 합니다 **odl** ; 특성 이전.odl 파일을 사용 하 여 호환성을 위해서만 인식 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [odl]  
 ```  
   

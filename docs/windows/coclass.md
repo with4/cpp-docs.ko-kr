@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a8924776249a3a919a03ca76b4562c39994d4f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2043ca568f36d7fc0eaaffbf940cabb423de5620
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463119"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647842"
 ---
 # <a name="coclass"></a>coclass
 COM 인터페이스를 구현할 수 있는 COM 개체를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [coclass]  
 ```  
   
@@ -78,7 +78,7 @@ COM 인터페이스를 구현할 수 있는 COM 개체를 만듭니다.
   
 -   [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto) COM 맵에 매크로가 삽입 됩니다.
   
- 클래스에 대 한.idl 파일에서 생성 된 coclass의 이름 클래스와 동일한 이름을 갖습니다.  예를 들어 다음 샘플에서는 참조 MIDL에서 생성 된 헤더 파일을 통해 클라이언트에서 CMyClass, coclass의 클래스 ID에 액세스 하려면 CLSID_CMyClass를 사용 합니다.  
+ 클래스에 대 한.idl 파일에서 생성 된 coclass의 이름 클래스와 동일한 이름을 갖습니다.  예를 들어와 coclass의 클래스 ID에 액세스 하려면 다음 샘플에서는 참조 `CMyClass`, MIDL에서 생성 된 헤더 파일을 통해 클라이언트에서 사용 하 여 `CLSID_CMyClass`입니다.  
   
 ## <a name="example"></a>예  
  다음 코드에서는 사용 하 여 **coclass** 특성:  
@@ -99,7 +99,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};  
 ```  
   
- 다음 예제에서 삽입 된 코드에 표시 되는 함수의 기본 구현을 재정의 하는 방법을 설명 합니다 **coclass** 특성입니다. 삽입된 코드 보기에 대한 자세한 정보는 [/Fx](../build/reference/fx-merge-injected-code.md) 를 참조하세요. 모든 기본 클래스 또는 인터페이스 클래스를 사용 하는 삽입된 된 코드에 나타납니다.   또한 클래스는 삽입된 된 코드에 기본적으로 포함 하 고 명시적으로 해당 클래스를 기준으로 프로그램 coclass에 대 한를 지정 하는 경우 특성 공급자 코드에서 지정 된 형식을 사용 합니다.  
+ 다음 예제에서 삽입 된 코드에 표시 되는 함수의 기본 구현을 재정의 하는 방법을 설명 합니다 **coclass** 특성입니다. 삽입된 코드 보기에 대한 자세한 정보는 [/Fx](../build/reference/fx-merge-injected-code.md) 를 참조하세요. 모든 기본 클래스 또는 인터페이스 클래스를 사용 하는 삽입된 된 코드에 나타납니다. 또한 클래스는 삽입된 된 코드에 기본적으로 포함 하 고 명시적으로 해당 클래스를 기준으로 프로그램 coclass에 대 한를 지정 하는 경우 특성 공급자 코드에서 지정 된 형식을 사용 합니다.  
   
 ```cpp  
 // cpp_attr_ref_coclass2.cpp  

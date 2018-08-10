@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0c4d5fc3101e7eb0e09f33c95cb0f73dd0d2b3d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ec69b663b2a866701c2587d3913d23310aaf997
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890414"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013264"
 ---
 # <a name="transmitas"></a>transmit_as
-전송된 유형 클라이언트와 서버 응용 프로그램에서 조작 하는 제공 된 형식 연결 컴파일러에 지시 합니다.  
+전송된 형식을 사용 하 여 클라이언트 및 서버 응용 프로그램을 조작 하는 제공 된 형식을 연결 하는 컴파일러에 지시 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
-      [ transmit_as(  
+```cpp  
+[ transmit_as(  
    type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `type`  
+### <a name="parameters"></a>매개 변수  
+ *type*  
  클라이언트와 서버 간에 전송 되는 데이터 형식을 지정 합니다.  
   
 ## <a name="remarks"></a>설명  
- **transmit_as** c + + 특성에 동일한 기능을는 [transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) MIDL 특성입니다.  
+ 합니다 **transmit_as** c + + 특성에 동일한 기능을 합니다 [transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 사용 하 여 **transmit_as** 특성:  
   
-```  
+```cpp  
 // cpp_attr_ref_transmit_as.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -80,7 +79,7 @@ struct _TREE_NODE_TYPE * right;
   
 |||  
 |-|-|  
-|**적용 대상**|`typedef`|  
+|**적용 대상**|**typedef**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

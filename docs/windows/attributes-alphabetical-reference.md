@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bbb461fe4e8cdabf7da9925323d9271a1047440
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cb7c8dc889a37ca52c527a65f68a84d81e9553cc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464891"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648180"
 ---
 # <a name="attributes-alphabetical-reference"></a>특성 사전순 참조
 다음 특성은 Visual c + +에서 사용할 수 있습니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "39464891"
 |[satype](../windows/satype.md)|데이터 형식을 지정 합니다 `SAFEARRAY`합니다.|  
 |[size_is](../windows/size-is.md)|메모리 크기의 할당 크기의 포인터에 대 한, 큰 크기의 포인터 및 단일 또는 다차원 배열에 대 한 포인터를 지정 합니다.|  
 |[source](../windows/source-cpp.md)|클래스, 속성 또는 메서드 멤버 이벤트의 소스 임을 나타냅니다.|  
-|[string](../windows/string-cpp.md)|나타내는 1 차원 **char**, **wchar_t**합니다 **바이트**, 또는 해당 하는 배열 또는 이러한 배열에 대 한 포인터를 문자열로 간주 해야 합니다.|  
+|[string](../windows/string-cpp.md)|나타내는 1 차원 **char**를 **wchar_t**, `byte`, 또는 해당 하는 배열 또는 이러한 배열에 대 한 포인터를 문자열로 간주 해야 합니다.|  
 |[support_error_info](../windows/support-error-info.md)|대상 개체에 대해 오류 보고를 지원 합니다.|  
 |[switch_is](../windows/switch-is.md)|식 또는 공용 구조체 멤버를 선택 하는 공용 구조체 판별 역할을 하는 식별자를 지정 합니다.|  
 |[switch_type](../windows/switch-type.md)|Union 판별으로 사용 된 변수의 형식을 식별 합니다.|  

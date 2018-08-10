@@ -17,33 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 966066be4dbbce5586860dd3bb6c99893094b6ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 579a74e24f0abb2af13f96a0e5171dada249c0cf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879622"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019288"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>새 &lt;장치&gt; 이미지 형식 대화 상자 (아이콘에 대 한 이미지 편집기)
-지정 된 형식의 새 장치 이미지를 만들 수 있습니다. 열려는 **새로 \<장치 > 이미지** 대화 상자에서 클릭 **새 이미지 형식** 에 **이미지** 메뉴.  
+지정 된 형식의 새 장치 이미지를 만들 수 있습니다. 열려는 합니다 **새로 만들기 \<장치 > 이미지** 대화 상자에서 클릭 **새 이미지 형식** 에 **이미지** 메뉴.  
   
- **대상 이미지 형식**  
- 사용 가능한 이미지 목록을 표시 합니다. 열려는 이미지 형식을 선택 합니다.  
+### <a name="target-image-type"></a>대상 이미지 형식  
+ 사용 가능한 이미지 목록을 표시 합니다. 열려는 이미지 형식 선택:  
   
 ||||  
 |-|-|-|  
-|-16 x 16 16 색|-48 x 48 16 색|-96 x 96 16 색|  
-|-16 x 16, 256 색|-48 x 48 256 색|-96 x 96 256 색|  
-|-16 x 16, 단색|-단색 48 x 48|-단색 96 x 96|  
-|-32 x 32, 16 색|-64 x 64 16 색||  
+|-16x16, 16 가지 색|-48 x 48 16 색|-96 x 96 16 색|  
+|-16x16, 256 색|-48 x 48 256 색|-96 x 96 256 색|  
+|-16x16, 단색|-48 x 48, 단색|-96 x 96, 단색|  
+|-32 x 32 16 색|-64 x 64 16 색||  
 |-32 x 32 256 색|-64 x 64 256 색||  
-|-32 x 32, 단색|-64 x 64 단색||  
+|부터 단색 32 x 32|-단색 64 x 64||  
   
 > [!NOTE]
->  기존의 이미지는이 목록에 표시 되지 않습니다.  
+>  기존 이미지가이 목록에 나타나지 않습니다.  
   
- **사용자 지정**  
- 열립니다는 [사용자 지정 이미지 대화 상자](custom-image-dialog-box-image-editor-for-icons.md) 에서 만들 수 있는 새 이미지를 사용자 지정 크기 및 색상 수 있습니다.  
+### <a name="custom"></a>사용자 지정  
+ 열립니다는 [사용자 지정 이미지 대화 상자](custom-image-dialog-box-image-editor-for-icons.md) 만들 수 있는 새 이미지를 사용자 지정 크기와 색상 수에 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  없음  

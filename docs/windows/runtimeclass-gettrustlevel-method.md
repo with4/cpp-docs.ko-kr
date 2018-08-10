@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98bd73d2c067e6d5bbb4425782de594bbaa47bc1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: adcec3f4a531a6c48e0995468994900124746e4b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606626"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015133"
 ---
 # <a name="runtimeclassgettrustlevel-method"></a>RuntimeClass::GetTrustLevel 메서드
 
@@ -37,7 +37,6 @@ STDMETHOD(GetTrustLevel)(
 ```
 
 ### <a name="parameters"></a>매개 변수
-
 *trustLvl*  
 이 작업이 완료 되 면, 현재 신뢰 수준 **RuntimeClass** 개체입니다.
 
@@ -47,7 +46,7 @@ STDMETHOD(GetTrustLevel)(
 
 ## <a name="remarks"></a>설명
 
-어설션 오류가 발생 하는 경우에 내보내집니다 &#95; &#95;WRL_STRICT&#95; &#95; 또는 &#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95; 정의 되어 있지 않습니다.
+어설션 오류가 발생 하는 경우에 내보내집니다 `__WRL_STRICT__` 또는 `__WRL_FORCE_INSPECTABLE_CLASS_MACRO__` 정의 되어 있지 않습니다.
 
 ## <a name="requirements"></a>요구 사항
 

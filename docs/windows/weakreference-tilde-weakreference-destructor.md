@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c29316305983ac09714292bce20e992970cca4f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87fba12df4c41a49408ecfe6f0f251394dc4663a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890735"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011180"
 ---
 # <a name="weakreferenceweakreference-destructor"></a>WeakReference::~WeakReference 소멸자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 virtual ~WeakReference();  
 ```  
   
 ## <a name="return-value"></a>반환 값  
   
 ## <a name="remarks"></a>설명  
- WeakReference 클래스의 현재 인스턴스 초기화를 취소 합니다.  
+ 현재 인스턴스 초기화를 해제 합니다 **WeakReference** 클래스입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  

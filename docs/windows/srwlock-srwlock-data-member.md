@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77b6d10e4343fd17c8bd65e232d29923214eff0c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cffbcde4196f37bd97dac0f67ecefa6615d6b2ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889110"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014928"
 ---
 # <a name="srwlocksrwlock-data-member"></a>SRWLock::SRWLock_ 데이터 멤버
-현재 SRWLock 개체에 대한 기본 잠금 변수를 포함합니다.  
+현재 기본 잠금 변수를 포함 **SRWLock** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 SRWLOCK SRWLock_;  
 ```  
   

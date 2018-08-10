@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87c3e84c0547751b03fba616df7c3f9bdd4dc06e
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cb077a2a12e93c5d54d7f1f992edf88c794c6762
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604332"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014652"
 ---
 # <a name="ptr"></a>ptr
 전체 포인터에 대 한 포인터를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ptr]  
 ```  
   

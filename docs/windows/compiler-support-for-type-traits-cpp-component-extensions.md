@@ -71,18 +71,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe1173b122e64f9b75af2f8186bf52b50003e5ab
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a88994133b65432566254fb77ddc35d5f2aab47b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463618"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644871"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>형식 특성에 대한 컴파일러 지원(C++ 구성 요소 확장명)
 컴파일러에서 지 원하는 *형식 특성*, 컴파일 시간에 형식의 다양 한 특성을 나타내는입니다.  
   
 ## <a name="all-runtimes"></a>모든 런타임  
- **주의**  
+### <a name="remarks"></a>설명  
   
  형식 특성은 라이브러리를 작성하는 프로그래머에게 특히 유용합니다.  
   
@@ -92,9 +92,9 @@ ms.locfileid: "39463618"
   
 -   `__has_assign(` `type` `)`  
   
-     플랫폼 또는 네이티브 형식에 복사 할당 연산자가 있으면 true를 반환합니다.  
+     반환 **true** 플랫폼 또는 네이티브 형식에 복사 할당 연산자입니다.  
   
-    ```  
+    ```cpp  
     ref struct R {  
     void operator=(R% r) {}  
     };  
@@ -106,9 +106,9 @@ ms.locfileid: "39463618"
   
 -   `__has_copy(` `type` `)`  
   
-     플랫폼 또는 네이티브 형식에 복사 생성자가 있으면 true를 반환합니다.  
+     반환 **true** 플랫폼 또는 네이티브 형식에는 복사 생성자가 하는 경우.  
   
-    ```  
+    ```cpp  
     ref struct R {  
     R(R% r) {}  
     };  
@@ -120,9 +120,9 @@ ms.locfileid: "39463618"
   
 -   `__has_finalizer(` `type` `)`  
   
-     ([!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)]에서는 지원되지 않음) CLR 형식에 종료자가 있으면 true를 반환합니다. 참조 [방법의 소멸자 및 종료자: 클래스 및 구조체 정의 및 사용 (C + + /cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) 자세한 내용은 합니다.  
+     ([!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)]에서는 지원되지 않음) 반환 **true** CLR 형식에 종료 자가 있으면 됩니다. 참조 [방법의 소멸자 및 종료자: 클래스 및 구조체 정의 및 사용 (C + + /cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) 자세한 내용은 합니다.  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref struct R {  
     ~R() {}  
@@ -137,9 +137,9 @@ ms.locfileid: "39463618"
   
 -   `__has_nothrow_assign(` `type` `)`  
   
-     복사 할당 연산자에 빈 예외 사양이 있으면 true를 반환합니다.  
+     반환 **true** 복사 할당 연산자에 빈 예외 사양이 있으면 됩니다.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     void operator=(S& r) throw() {}  
@@ -153,9 +153,9 @@ ms.locfileid: "39463618"
   
 -   `__has_nothrow_constructor(` `type` `)`  
   
-     기본 생성자에 빈 예외 사양이 있으면 true를 반환합니다.  
+     반환 **true** 기본 생성자에 빈 예외 사양이 있으면 됩니다.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     S() throw() {}  
@@ -169,9 +169,9 @@ ms.locfileid: "39463618"
   
 -   `__has_nothrow_copy(` `type` `)`  
   
-     복사 생성자에 빈 예외 사양이 있으면 true를 반환합니다.  
+     반환 **true** 복사 생성자에 빈 예외 사양이 있으면 됩니다.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     S(S& r) throw() {}  
@@ -185,9 +185,9 @@ ms.locfileid: "39463618"
   
 -   `__has_trivial_assign(` `type` `)`  
   
-     형식에 컴파일러에서 생성된 trivial 할당 연산자가 있으면 true를 반환합니다.  
+     반환 **true** 형식에 trivial, 컴파일러에서 생성 된 할당 연산자를 사용 하면 됩니다.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -199,9 +199,9 @@ ms.locfileid: "39463618"
   
 -   `__has_trivial_constructor(` `type` `)`  
   
-     형식에 컴파일러에서 생성된 trivial 생성자가 있으면 true를 반환합니다.  
+     반환 **true** 형식에 컴파일러에서 생성 된 trivial 생성자가 있습니다.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -213,9 +213,9 @@ ms.locfileid: "39463618"
   
 -   `__has_trivial_copy(` `type` `)`  
   
-     형식에 컴파일러에서 생성된 trivial 복사 생성자가 있으면 true를 반환합니다.  
+     반환 **true** 형식에 있는 경우, 컴파일러에서 생성 된 trivial 복사 생성자입니다.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -227,7 +227,7 @@ ms.locfileid: "39463618"
   
 -   `__has_trivial_destructor(` `type` `)`  
   
-     형식에 컴파일러에서 생성된 trivial 소멸자가 있으면 true를 반환합니다.  
+     반환 **true** 형식에 trivial, 컴파일러에서 생성 된 소멸자가 있습니다.  
   
     ``` cpp 
     // has_trivial_destructor.cpp  
@@ -242,7 +242,7 @@ ms.locfileid: "39463618"
   
 -   `__has_user_destructor(` `type` `)`  
   
-     플랫폼 또는 네이티브 형식에 사용자가 선언한 소멸자가 있으면 true를 반환합니다.  
+     반환 **true** 플랫폼 또는 네이티브 형식에는 사용자가 선언한 소멸자가 있으면 됩니다.  
   
     ```cpp
     // has_user_destructor.cpp  
@@ -259,7 +259,7 @@ ms.locfileid: "39463618"
   
 -   `__has_virtual_destructor(` `type` `)`  
   
-     형식에 가상 소멸자가 있으면 true를 반환합니다.  
+     반환 **true** 형식에 가상 소멸자가 있습니다.  
   
      `__has_virtual_destructor`는 플랫폼 형식에 대해서도 작동하며, 플랫폼 형식의 모든 사용자 정의 소멸자는 가상 소멸자입니다.  
   
@@ -278,7 +278,7 @@ ms.locfileid: "39463618"
   
 -   `__is_abstract(` `type` `)`  
   
-     형식이 추상 형식이면 true를 반환합니다. 네이티브 추상 형식에 대 한 자세한 내용은 참조 하세요. [추상](../windows/abstract-cpp-component-extensions.md)합니다.  
+     반환 **true** 형식이 추상 형식입니다. 네이티브 추상 형식에 대 한 자세한 내용은 참조 하세요. [추상](../windows/abstract-cpp-component-extensions.md)합니다.  
   
      `__is_abstract`는 플랫폼 형식에 대해서도 작동합니다. 하나 이상의 멤버가 있는 인터페이스는 하나 이상의 추상 멤버가 있는 참조 형식과 마찬가지로 추상 형식입니다. 추상 플랫폼 형식에 대 한 자세한 내용은 참조 하세요. [추상 클래스](../cpp/abstract-classes-cpp.md)  
   
@@ -297,9 +297,9 @@ ms.locfileid: "39463618"
   
 -   `__is_base_of(` `base` `,` `derived` `)`  
   
-     첫 번째 형식이 두 번째 형식의 기본 클래스이거나 두 형식이 같으면 true를 반환합니다.  
+     반환 **true** 첫 번째 형식이 두 번째 형식의 기본 클래스 이면 경우 두 형식이 동일 합니다.  
   
-     `__is_base_of`는 플랫폼 형식에 대해서도 작동합니다. 예를 들어, 첫 번째 형식이 면 true 반환 합니다는 [인터페이스 클래스](../windows/interface-class-cpp-component-extensions.md) 및 두 번째 형식이 인터페이스를 구현 합니다.  
+     `__is_base_of`는 플랫폼 형식에 대해서도 작동합니다. 돌아갑니다 예를 들어 **true** 첫 번째 형식이 [인터페이스 클래스](../windows/interface-class-cpp-component-extensions.md) 및 두 번째 형식이 인터페이스를 구현 합니다.  
   
     ```cpp
     // is_base_of.cpp  
@@ -318,9 +318,9 @@ ms.locfileid: "39463618"
   
 -   `__is_class(` `type` `)`  
   
-     형식이 네이티브 클래스 또는 구조체이면 true를 반환합니다.  
+     반환 **true** 형식이 네이티브 클래스 또는 구조체입니다.  
   
-    ```
+    ```cpp
     #include <stdio.h>  
     struct S {};  
   
@@ -332,9 +332,9 @@ ms.locfileid: "39463618"
   
 -   `__is_convertible_to(` `from` `,`  `to` `)`  
   
-     첫 번째 형식을 두 번째 형식으로 변환할 수 있으면 true를 반환합니다.  
+     반환 **true** 첫 번째 형식이 두 번째 형식으로 변환할 수 있는 경우.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
     struct T : public S {};  
@@ -350,9 +350,9 @@ ms.locfileid: "39463618"
   
 -   `__is_delegate(` `type` `)`  
   
-     `type`이 대리자이면 true를 반환합니다. 자세한 내용은 [delegate (c + + 구성 요소 확장)](../windows/delegate-cpp-component-extensions.md)합니다.  
+     반환 **true** 경우 `type` 는 대리자입니다. 자세한 내용은 [delegate (c + + 구성 요소 확장)](../windows/delegate-cpp-component-extensions.md)합니다.  
   
-    ```  
+    ```cpp  
     delegate void MyDel();  
     int main() {  
     System::Console::WriteLine(__is_delegate(MyDel));  
@@ -361,9 +361,9 @@ ms.locfileid: "39463618"
   
 -   `__is_empty(` `type` `)`  
   
-     형식에 인스턴스 데이터 멤버가 없으면 true를 반환합니다.  
+     반환 **true** 형식 인스턴스 데이터 멤버가 있으면 됩니다.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     int Test() {}  
@@ -377,7 +377,7 @@ ms.locfileid: "39463618"
   
 -   `__is_enum(` `type` `)`  
   
-     형식이 네이티브 열거형이면 true를 반환합니다.  
+     반환 **true** 형식이 네이티브 열거형입니다.  
   
     ```cpp
     // is_enum.cpp  
@@ -399,7 +399,7 @@ ms.locfileid: "39463618"
   
 -   `__is_interface_class(` `type` `)`  
   
-     플랫폼 인터페이스가 전달되면 true를 반환합니다. 자세한 내용은 [인터페이스 클래스](../windows/interface-class-cpp-component-extensions.md)합니다.  
+     반환 **true** 플랫폼 인터페이스가 전달 하는 경우. 자세한 내용은 [인터페이스 클래스](../windows/interface-class-cpp-component-extensions.md)합니다.  
   
     ```cpp
     // is_interface_class.cpp  
@@ -413,11 +413,11 @@ ms.locfileid: "39463618"
   
 -   `__is_pod(` `type` `)`  
   
-     형식이 생성자가 없거나 전용 또는 보호된 비정적 멤버이고, 기본 클래스가 없고, 가상 함수가 없는 클래스 또는 공용 구조체이면 true를 반환합니다. POD에 대한 자세한 내용은 C++ 표준, 섹션 8.5.1/1, 9/4 및 3.9/10을 참조하세요.  
+     반환 **true** 형식은 클래스 또는 생성자를 사용 하 여 공용 구조체 또는 전용 또는 보호 된 비정적 멤버, 기본 클래스가 없고, 및 가상 함수가 없는 경우. POD에 대한 자세한 내용은 C++ 표준, 섹션 8.5.1/1, 9/4 및 3.9/10을 참조하세요.  
   
      `__is_pod`는 기본 형식에 대해 false를 반환합니다.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -429,9 +429,9 @@ ms.locfileid: "39463618"
   
 -   `__is_polymorphic(` `type` `)`  
   
-     네이티브 형식에 가상 함수가 있으면 true를 반환합니다.  
+     반환 **true** 네이티브 형식에 있는 경우 가상 함수입니다.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     virtual void Test(){}  
@@ -445,9 +445,9 @@ ms.locfileid: "39463618"
   
 -   `__is_ref_array(` `type` `)`  
   
-     플랫폼 배열이 전달되면 true를 반환합니다. 자세한 내용은 [배열](../windows/arrays-cpp-component-extensions.md)합니다.  
+     반환 **true** 플랫폼 배열이 전달 하는 경우. 자세한 내용은 [배열](../windows/arrays-cpp-component-extensions.md)합니다.  
   
-    ```  
+    ```cpp  
     using namespace System;  
     int main() {  
     array<int>^ x = gcnew array<int>(10);  
@@ -457,9 +457,9 @@ ms.locfileid: "39463618"
   
 -   `__is_ref_class(` `type` `)`  
   
-     참조 클래스가 전달되면 true를 반환합니다. 사용자 정의 참조 형식에 대 한 자세한 내용은 참조 하세요. [클래스 및 구조체](../windows/classes-and-structs-cpp-component-extensions.md)합니다.  
+     반환 **true** 참조 클래스를 전달 하는 경우. 사용자 정의 참조 형식에 대 한 자세한 내용은 참조 하세요. [클래스 및 구조체](../windows/classes-and-structs-cpp-component-extensions.md)합니다.  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref class R {};  
     int main() {  
@@ -470,9 +470,9 @@ ms.locfileid: "39463618"
   
 -   `__is_sealed(` `type` `)`  
   
-     sealed로 표시된 플랫폼 또는 네이티브 형식이 전달되면 true를 반환합니다. 자세한 내용은 [봉인](../windows/sealed-cpp-component-extensions.md)합니다.  
+     반환 **true** 플랫폼 또는 sealed로 표시 된 네이티브 형식에 전달 하는 경우. 자세한 내용은 [봉인](../windows/sealed-cpp-component-extensions.md)합니다.  
   
-    ```  
+    ```cpp  
     ref class R sealed{};  
     int main() {  
     System::Console::WriteLine(__is_sealed(R));  
@@ -481,9 +481,9 @@ ms.locfileid: "39463618"
   
 -   `__is_simple_value_class(` `type` `)`  
   
-     가비지 수집 힙에 대한 참조가 없는 값 형식이 전달되면 true를 반환합니다. 사용자 정의 값 형식에 대 한 자세한 내용은 참조 하세요. [클래스 및 구조체](../windows/classes-and-structs-cpp-component-extensions.md)합니다.  
+     반환 **true** 가비지 수집 힙이에 대 한 참조를 포함 하는 값 형식이 전달 되는 경우. 사용자 정의 값 형식에 대 한 자세한 내용은 참조 하세요. [클래스 및 구조체](../windows/classes-and-structs-cpp-component-extensions.md)합니다.  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref class R {};  
     value struct V {};  
@@ -499,9 +499,9 @@ ms.locfileid: "39463618"
   
 -   `__is_union(` `type` `)`  
   
-     형식이 공용 구조체이면 true를 반환합니다.  
+     반환 **true** 형식이 공용 구조체 인지 합니다.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     union A {  
     int i;  
@@ -516,9 +516,9 @@ ms.locfileid: "39463618"
   
 -   `__is_value_class(` `type` `)`  
   
-     값 형식이 전달되면 true를 반환합니다. 사용자 정의 값 형식에 대 한 자세한 내용은 참조 하세요. [클래스 및 구조체](../windows/classes-and-structs-cpp-component-extensions.md)합니다.  
+     반환 **true** 값 형식이 전달 되는 경우. 사용자 정의 값 형식에 대 한 자세한 내용은 참조 하세요. [클래스 및 구조체](../windows/classes-and-structs-cpp-component-extensions.md)합니다.  
   
-    ```  
+    ```cpp  
     value struct V {};  
   
     int main() {  
@@ -527,25 +527,25 @@ ms.locfileid: "39463618"
     ```  
   
 ## <a name="windows-runtime"></a>Windows 런타임  
- **주의**  
+### <a name="remarks"></a>설명  
   
  합니다 `__has_finalizer(` *형식을* `)` 형식 특성 (trait)이이 플랫폼에서 종료자를 지원 하지 않으므로 지원 되지 않습니다.  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/ZW**  
+ 컴파일러 옵션: `/ZW`  
   
 ## <a name="common-language-runtime"></a>공용 언어 런타임 
- **주의**  
+### <a name="remarks"></a>설명  
   
  (이 기능에는 플랫폼별 설명이 없습니다.)  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/clr**  
+ 컴파일러 옵션: `/clr`  
   
 ### <a name="examples"></a>예제  
  **예제**  
   
- 다음 코드 예제에서는 클래스 템플릿을 사용 하 여에 대 한 컴파일러 형식 특성을 노출 하는 방법을 보여 줍니다.는 **/clr** 컴파일. 자세한 내용은 [Windows 런타임 및 관리 되는 템플릿](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)합니다.  
+ 다음 코드 예제에서는 클래스 템플릿을 사용하여 `/clr` 컴파일에 대한 컴파일러 형식 특성을 노출하는 방법을 보여 줍니다. 자세한 내용은 [Windows 런타임 및 관리 되는 템플릿](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)합니다.  
   
 ```cpp  
 // compiler_type_traits.cpp  
@@ -566,8 +566,6 @@ int main () {
       Console::WriteLine("R is not a ref class");  
 }  
 ```  
-  
- **출력**  
   
 ```Output  
 R is a ref class  

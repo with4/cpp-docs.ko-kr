@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eab14d842935e99f8e5f8a96b24b5675d61e418d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30386120492bcabd7ec1fc07f82e5e1ffd9c1821
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33886092"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653107"
 ---
 # <a name="eventtargetarraylength-method"></a>EventTargetArray::Length 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 size_t Length();  
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 이벤트 처리기의 내부 배열에 있는 요소의 현재 수입니다.  
+ 현재 이벤트 처리기의 내부 배열의 요소 개수입니다.  
   
 ## <a name="remarks"></a>설명  
- 이벤트 처리기의 내부 배열에 있는 현재 요소 수를 가져옵니다.  
+ 이벤트 처리기의 내부 배열에 현재 요소 수를 가져옵니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** event.h  

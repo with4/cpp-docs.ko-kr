@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb477b2d5c0a6eabf1e3304c0cadcb34d3910fe5
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c46fad71a42f9f947f020709cdf7851d079edd81
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607442"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014028"
 ---
 # <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects 메서드
 다른 응용 프로그램에서 지정된 모듈의 개체에 연결할 수 없도록 이 개체의 등록을 취소합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT UnregisterObjects(  
    ModuleBase* module,  
    const wchar_t* serverName);  

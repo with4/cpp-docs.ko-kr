@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 287fe57868f1550e2f778bd9122d0d350011084e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: eada53c74c967c4df093e094a611a726ef79d99d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570635"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012536"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>방법: WRL을 사용하여 이벤트 처리
 이 문서에는 Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 사용 하 여 구독 하 고 Windows 런타임 개체의 이벤트를 처리 하는 방법을 보여 줍니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "39570635"
   
      [!code-cpp[wrl-consume-event#2](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]  
   
-     Windows.Devices.Enumeration.h 장치를 열거 하는 데 필요한 형식을 선언 합니다.  
+     `Windows.Devices.Enumeration.h` 장치를 열거 하는 데 필요한 형식을 선언 합니다.  
   
      .cpp 파일의 `using namespace` 지시문을 활용하여 코드를 보다 읽기 쉽게 만드는 것이 좋습니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "39570635"
  [!code-cpp[wrl-consume-event#1](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_10.cpp)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 컴파일하려면 코드를 복사 하 고 다음 Visual Studio 프로젝트에 붙여 넣습니다와 라는 파일에 붙여 `wrl-consume-events.cpp` Visual Studio 명령 프롬프트 창에서 다음 명령을 실행 합니다.  
+ 컴파일하려면 코드를 복사 하 고 다음 Visual Studio 프로젝트에 붙여 넣습니다 또는 라는 파일에 붙여 넣습니다 `wrl-consume-events.cpp` 다음 명령을 실행 하 고는 **Visual Studio 명령 프롬프트** 창입니다.  
   
  `cl.exe wrl-consume-events.cpp runtimeobject.lib`  
   

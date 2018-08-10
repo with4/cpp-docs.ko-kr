@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ff41dd0aad30382eb5229679054a74526652737
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8393988bf6d831c8b9718d6685785d523303f3fa
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605021"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016407"
 ---
 # <a name="previewing-resources"></a>리소스 미리 보기
 리소스 미리 보기를 사용 하면 그래픽 리소스를 열지 않고 볼 수 있습니다. 리소스 식별자를 숫자로 변경 되므로 컴파일된 한 후에 미리 보기는 실행 파일에 대 한 유용 합니다. 종종 이러한 숫자 식별자는 충분 한 정보를 제공 하지 않습니다, 이후 리소스를 미리 보기 사용 하면 신속 하 게 식별할 수 있습니다.  
@@ -48,9 +48,10 @@ ms.locfileid: "39605021"
   
 ### <a name="to-preview-resources"></a>리소스를 미리 보려면  
   
-1.  [리소스 뷰](../windows/resource-view-window.md) 또는 문서 창에 예를 들어 IDD_ABOUTBOX 리소스를 선택 합니다.  
+1.  [리소스 뷰](../windows/resource-view-window.md) 또는 문서 창에 예를 들어, 리소스 선택 **IDD_ABOUTBOX**합니다.  
   
-     **참고** 프로젝트에 .rc 파일이 아직 없는 경우 [새 리소스 스크립트 파일 만들기](../windows/how-to-create-a-resource-script-file.md)를 참조하세요.  
+     > [!NOTE]
+     > 프로젝트에 .rc 파일이 아직 없는 경우 [새 리소스 스크립트 파일 만들기](../windows/how-to-create-a-resource-script-file.md)를 참조하세요.  
   
 2.  에 [속성 창](/visualstudio/ide/reference/properties-window)를 클릭 합니다 **속성 페이지** 단추입니다.  
   
@@ -58,12 +59,11 @@ ms.locfileid: "39605021"
   
 3.  에 **뷰** 메뉴에서 클릭 **속성 페이지**합니다.  
   
-     해당 리소스의 미리 보기를 표시 된 리소스에 대 한 속성 페이지가 열립니다. 그런 다음 사용 하 여 하 고 리소스 뷰 또는 문서 창에서 트리 컨트롤을 탐색 하려면 화살표 키를 축소할 수 있습니다. 속성 페이지는 개방를 포커스가 미리 볼 수 있는 모든 리소스를 표시 합니다.  
+     합니다 **속성 페이지** 열리고 리소스에 대 한 해당 리소스의 미리 보기를 표시 합니다. 사용할 수 있습니다 합니다 **위로** 및 **아래로** 에서 트리를 탐색 하려면 화살표 키를 제어할 **리소스 뷰** 나 문서 창을 합니다. 합니다 **속성 페이지** 개방 하며에 포커스가 생기 며 미리 볼 수 있는 모든 리소스를 표시 합니다.  
   
  관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다. 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 내용은 참조 하세요 [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화 관리 되는 앱의 리소스에 대 한 내용은 참조 하세요 [Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)합니다.  
   
 ## <a name="requirements"></a>요구 사항 
-  
  Win32  
   
 ## <a name="see-also"></a>참고 항목  

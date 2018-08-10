@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49256b556eddb1feadbfd01b298aba62ad1a51ee
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9effc65b150c68a5191712b364c80ad42dd276ad
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604228"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012130"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details 네임스페이스
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Details;  
 ```  
   
@@ -50,7 +50,7 @@ namespace Microsoft::WRL::Details;
 |----------|-----------------|  
 |[ArgTraits 구조체](../windows/argtraits-structure.md)|인터페이스 및 지정 된 개수의 매개 변수를 가진 익명 멤버 함수는 지정 된 대리자를 선언 합니다.|  
 |[ArgTraitsHelper 구조체](../windows/argtraitshelper-structure.md)|대리자 인수의 공통 된 특징을 정의할 수 있습니다.|  
-|[BoolStruct 구조체](../windows/boolstruct-structure.md)|ComPtr 인터페이스의 개체 수명을 관리 하 고 있는지 여부를 정의 합니다. BoolStruct에서 내부적으로 사용 되는 [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) 연산자입니다.|  
+|[BoolStruct 구조체](../windows/boolstruct-structure.md)|정의 여부는 `ComPtr` 인터페이스의 개체 수명을 관리 하는 합니다. `BoolStruct` 내부적으로 사용 되는 [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) 연산자입니다.|  
 |[CreatorMap 구조체](../windows/creatormap-structure.md)|초기화, 등록 및 개체의 등록을 취소 하는 방법에 대 한 정보를 포함 합니다.|  
 |[DerefHelper 구조체](../windows/derefhelper-structure.md)|에 대 한 역참조 포인터를 나타내는 `T*` 템플릿 매개 변수입니다.|  
 |[EnableIf 구조체](../windows/enableif-structure.md)|첫 번째 템플릿 매개 변수를 평가 하는 경우 두 번째 템플릿 매개 변수로 지정 된 형식의 데이터 멤버를 정의 **true**합니다.|  

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428c62db8f1444f497d6fede7affea34560b4b0e
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 26d1b0ae8923835b0ce06c7312fa185693c6586e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605957"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014509"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>바이너리 편집을 위해 리소스 열기
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>이진 편집을 위해 Windows 데스크톱 리소스를 열려면  
@@ -36,7 +36,7 @@ ms.locfileid: "39605957"
 2.  리소스를 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **이진 데이터 열기** 를 클릭합니다.  
   
     > [!NOTE]
-    >  [리소스 뷰](../windows/resource-view-window.md) 창을 사용하여 Visual Studio에서 인식되지 않는 형식의 리소스를 열면(예: RCDATA 또는 사용자 지정 리소스) 리소스가 바이너리 편집기에서 자동으로 열립니다.  
+    >  사용 하는 경우는 [리소스 뷰](../windows/resource-view-window.md) 는 Visual Studio는 인식 되지 않는 형식의 (예: RCDATA 또는 사용자 지정 리소스)에 리소스를 사용 하 여 리소스를 열려면 창에서 자동으로 열릴 합니다 **이진** 편집기.  
   
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>이진 편집을 위해 관리되는 리소스를 열려면  
   
@@ -58,10 +58,9 @@ ms.locfileid: "39605957"
  바이너리 편집기에는 특정 ASCII 값만 표시됩니다(0x20 ~ 0x7E). 확장 문자는 바이너리 편집기의 ASCII 값 섹션(오른쪽 패널)에 마침표로 표시됩니다. "인쇄 가능" 문자는 ASCII 값 32 ~ 126입니다.  
   
 > [!NOTE]
->  다른 편집기 창에서 편집 중인 리소스에서 바이너리 편집기를 사용하려면 먼저 다른 편집기 창을 닫습니다.  
+>  사용 하려는 경우는 **이진** 편집기 이미 다른 편집기 창에서 편집 중인 리소스에 먼저 다른 편집기 창을 닫아야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
-  
  없음  
   
 ## <a name="see-also"></a>참고 항목  

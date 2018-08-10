@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd0d02edc586697e42e4733df478a7ae394e0f
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 937afdb400fff6f0944d8690412257cb66a9c25c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034782"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017999"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>방법: Windows 데스크톱 응용 프로그램에서 Windows 10 SDK 사용
 Visual Studio 2017에 클래식 Windows 데스크톱 프로젝트를 만들 때 설정은 기본적으로 C++ 데스크톱 작업 설치 또는 마지막으로 업데이트되었을 때 설치된 Windows 10 SDK의 버전으로 만들 수 있습니다. 이 버전의 Windows SDK는 Windows 7 이상과 호환입니다. 참조 [Windows 헤더를 사용 하 여](/windows/desktop/WinProg/using-the-windows-headers) Windows의 특정 버전을 대상으로 하는 방법에 대 한 자세한 내용은 합니다.
@@ -31,7 +31,6 @@ Visual Studio 2017에 클래식 Windows 데스크톱 프로젝트를 만들 때 
   
 1.  Windows 10 SDK가 설치되었는지 확인합니다. Windows 10 SDK의 일부로 설치 합니다 **c + +를 사용한 데스크톱 개발** 워크 로드. 독립 실행형 버전에서 제공 됩니다 [다운로드 하 고 Windows 10 용 도구](https://developer.microsoft.com/windows/downloads)합니다.
 
-  
 2.  프로젝트 노드에 대한 바로 가기 메뉴를 열고 **SDK 버전 대상 다시 지정**을 선택합니다.  
   
      ![SDK 버전 대상 다시 지정](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
@@ -52,7 +51,7 @@ Visual Studio 2017에 클래식 Windows 데스크톱 프로젝트를 만들 때 
   
      ![대상 플랫폼 버전](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     이 작업은 헤더 파일 및 라이브러리 파일에 대한 경로가 포함된 프로젝트 매크로의 값을 변경합니다. 변경 내용을 확인하기 위해 프로젝트 속성 대화 상자의 Visual C++ 디렉터리 섹션의 포함 디렉터리와 같은 속성 중 하나를 선택, 선택 드롭다운 목록에서 \<편집>을 선택합니다. **포함 디렉터리** 대화 상자가 나타납니다. 
+     이 작업은 헤더 파일 및 라이브러리 파일에 대한 경로가 포함된 프로젝트 매크로의 값을 변경합니다. 에 변경 내용을 확인 하려면를 **Visual c + + 디렉터리** 부분을 **프로젝트 속성** 대화 상자에서와 같은 속성 중 하나를 선택 합니다 **포함 디렉터리**, 하기로 드롭다운 목록을 열고 \<편집 >. **포함 디렉터리** 대화 상자가 나타납니다.  
   
      ![포함 디렉터리 대화 상자](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
@@ -66,7 +65,7 @@ Visual Studio 2017에 클래식 Windows 데스크톱 프로젝트를 만들 때 
   
 1.  프로젝트 노드에 대한 바로 가기 메뉴를 열고 **SDK 버전 대상 다시 지정**을 선택합니다.  
   
-2.  대상 플랫폼 버전 드롭다운 목록에서 8.1을 선택합니다.  
+2.  에 **대상 플랫폼 버전** 드롭다운 목록에서 선택 **8.1**합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Windows 데스크톱 응용 프로그램 (Visual C++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)

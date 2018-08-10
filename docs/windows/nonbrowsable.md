@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a7bdd285ed74c7792a34cfe99e0a900d42d6bc26
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: db563fb7e140aece589c4f13bfcfe82cf490c966
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604592"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016725"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 인터페이스 멤버를 속성 브라우저에 표시 되지 해야 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [nonbrowsable]  
 ```  
   

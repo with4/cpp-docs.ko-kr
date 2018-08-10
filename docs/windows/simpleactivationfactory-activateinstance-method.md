@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5af4bfd22302b7694b9bafbc1452d636b19cb3c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 260d7e2993bd92297167c23458d37ba80919306f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889425"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013387"
 ---
 # <a name="simpleactivationfactoryactivateinstance-method"></a>SimpleActivationFactory::ActivateInstance 메서드
 
@@ -37,9 +37,8 @@ STDMETHOD( ActivateInstance )(
 ```
 
 ### <a name="parameters"></a>매개 변수
-
 *ppvObject*  
-이 작업이 완료 될 때, 지정 된 개체의 인스턴스로에 대 한 포인터는 `Base` 클래스 템플릿 매개 변수입니다.
+이 작업이 완료 될 때, 지정 된 개체의 인스턴스에 대 한 포인터를 `Base` 클래스 템플릿 매개 변수입니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -47,7 +46,7 @@ STDMETHOD( ActivateInstance )(
 
 ## <a name="remarks"></a>설명
 
-경우 &#95; &#95;WRL_STRICT&#95; &#95; 은 정의 assert 오류가 면 내보내집니다 클래스 템플릿 매개 변수에서 지정 된 기본 클래스에서 파생 되지 않습니다 [RuntimeClass](../windows/runtimeclass-class.md)는 WinRt를 사용 하 여 구성 되지 않았습니다 또는 또는 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거형 값입니다.
+경우 `__WRL_STRICT__` 가 정의 된 assert 오류가 내보내집니다 클래스 템플릿 매개 변수에서 지정 된 기본 클래스에서 파생 되지 않습니다 [RuntimeClass](../windows/runtimeclass-class.md), 또는 WinRt 또는 WinRtClassicComMix를 사용 하 여 구성 되지 않았습니다 [ RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거형 값입니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -56,5 +55,4 @@ STDMETHOD( ActivateInstance )(
 **네임스페이스:** Microsoft::WRL
 
 ## <a name="see-also"></a>참고 항목
-
-[SimpleActivationFactory 클래스](../windows/simpleactivationfactory-class.md)
+ [SimpleActivationFactory 클래스](../windows/simpleactivationfactory-class.md)

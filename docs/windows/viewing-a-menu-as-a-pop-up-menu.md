@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c97eef61917fec0e068b25116b96b8dd7db41eb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef77de72a9120a774e3676d649adb267074e1a72
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891033"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015613"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>메뉴를 팝업 메뉴로 보기
-일반적으로 메뉴 편집기에서 작업하면 메뉴 리소스가 메뉴 모음으로 표시됩니다. 그러나 프로그램이 실행되는 동안 응용 프로그램의 메뉴 모음에 메뉴 리소스가 추가될 수 있습니다.  
+일반적으로 작업 하는 경우는 **메뉴** 편집기 메뉴 리소스 메뉴 모음으로 표시 됩니다. 그러나 프로그램이 실행되는 동안 응용 프로그램의 메뉴 모음에 메뉴 리소스가 추가될 수 있습니다.  
   
 ### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>메뉴 리소스를 팝업 메뉴로 보려면  
   
@@ -33,12 +33,9 @@ ms.locfileid: "33891033"
      이 옵션은 유일한 보기 기본 설정이며 메뉴를 수정하지 않습니다.  
   
     > [!NOTE]
-    >  메뉴 모음 보기로 다시 변경 하려면 **팝업으로 보기** 다시 (확인 표시를 제거에 반환 하는 메뉴 모음 보기로).  
+    >  메뉴 모음 보기로 다시 변경 하려면 **팝업으로 보기** 다시 (확인 표시를 제거 하며 메뉴 모음 보기를 반환 합니다).  
   
-
-  
- **요구 사항**  
-  
+## <a name="requirements"></a>요구 사항  
  Win32  
   
 ## <a name="see-also"></a>참고 항목  

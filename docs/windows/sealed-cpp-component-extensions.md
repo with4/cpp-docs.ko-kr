@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47efadb89786b7be54f33678d2f71d2474e4deb4
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fe50fed4fd701ba171620d2c0cd0cde6e8da2bbc
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604553"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020228"
 ---
 # <a name="sealed--c-component-extensions"></a>sealed(C++ 구성 요소 확장)
 **봉인 된** 는 가상 멤버를 재정의할 수 있는지 여부를 나타내는 ref 클래스에 대 한 상황에 맞는 키워드 또는 형식을 기본 형식으로 사용할 수 없습니다.  
@@ -35,13 +35,12 @@ ms.locfileid: "39604553"
   
 ## <a name="syntax"></a>구문
   
-```  
+```cpp  
 ref class identifier sealed {...};  
 virtual return-type identifier() sealed {...};  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
-  
  *identifier*  
  함수나 클래스의 이름입니다.  
   

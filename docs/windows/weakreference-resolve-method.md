@@ -17,43 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dccdf7554f8d102230bedc18231feb74625d621b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93df4ebf46b187cab63fbfaed2e273c55e7c0d84
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890476"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013251"
 ---
 # <a name="weakreferenceresolve-method"></a>WeakReference::Resolve 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```cpp  
 STDMETHOD(Resolve)  
    (REFIID riid,   
    _Deref_out_opt_ IInspectable **ppvObject  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `riid`  
+### <a name="parameters"></a>매개 변수  
+ *riid*  
  인터페이스 ID입니다.  
   
- `ppvObject`  
- 이 작업이 완료 될 때, 강력한 참조 횟수가 0이 아니면 현재 강한 참조의 복사본입니다.  
+ *ppvObject*  
+ 이 작업이 완료 될 때 강력한 참조 횟수가 0이 아닌 경우 현재 강력한 참조의 복사본입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
--   이 작업은 성공 하면 s_ok이 고와 강력한 참조 횟수는 0입니다. `ppvObject` 매개 변수가 `nullptr`로 설정된 경우  
+-   이 작업에 성공 하면 S_OK와 강력한 참조 횟수는 0입니다. 합니다 *ppvObject* 매개 변수는 설정 **nullptr**합니다.  
   
--   이 작업은 성공 하면 s_ok이 고와 강력한 참조 횟수가 0이 아닌 합니다. `ppvObject` 매개 변수는 강력한 참조로 설정 됩니다.  
+-   이 작업은 성공 하 고 강력한 참조 횟수가 0이 아닌 경우 S_OK입니다. 합니다 *ppvObject* 매개 변수는 강력한 참조를 설정 합니다.  
   
 -   그렇지 않은 경우 이유를 나타내는 HRESULT이이 작업이 실패 했습니다.  
   
 ## <a name="remarks"></a>설명  
- 강력한 참조 개수가 0이 아닌 경우 현재 강력한 참조 값으로 지정된 된 포인터를 설정 합니다.  
+ 강력한 참조 횟수가 0이 아닌 경우 현재 강력한 참조 값으로 지정된 된 포인터를 설정 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  
@@ -61,5 +60,5 @@ STDMETHOD(Resolve)
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>참고 항목  
- [WeakReference Class1](../windows/weakreference-class1.md)   
+ [WeakReference 클래스 1](../windows/weakreference-class1.md)   
  [Microsoft::WRL::Details 네임스페이스](../windows/microsoft-wrl-details-namespace.md)

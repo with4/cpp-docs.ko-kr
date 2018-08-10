@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47752b861ab5974b60f62cdfaba620e60288d09a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ae538b66e4e8de7611f7b2f276c354a87dad2ef
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889890"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017896"
 ---
 # <a name="weakrefweakref-destructor"></a>WeakRef::~WeakRef 소멸자
-WeakRef 클래스의 현재 인스턴스 초기화를 취소합니다.  
+현재 인스턴스 초기화를 해제 합니다 **WeakRef** 클래스입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 ~WeakRef();  
 ```  
   

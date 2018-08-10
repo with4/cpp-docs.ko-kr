@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21503e38bb612f935e26f6eaaa93df2097e10445
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7e4866df2d948d02a53b2532b0832f161d07ff8c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465339"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647562"
 ---
 # <a name="comptr-class"></a>ComPtr 클래스
 템플릿 매개 변수로 지정된 인터페이스를 나타내는 *스마트 포인터* 형식을 만듭니다. **ComPtr** 자동으로 기본 인터페이스 포인터에 대 한 참조 횟수를 유지 관리 하 고 참조 횟수가 0이 되 면 인터페이스를 해제 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template <typename T>  
 class ComPtr;  
   
@@ -37,7 +37,7 @@ template<class T>
 friend class ComPtr;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *T*  
  인터페이스는 합니다 **ComPtr** 나타냅니다.  
   

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fbf0b3c9db19e839d6832415cfd8ed6eb9b93a2
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a1a90f0d72c824f3f4840728e34c01667e4aa026
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604120"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011606"
 ---
 # <a name="property--c-component-extensions"></a>속성(C++ 구성 요소 확장)
 선언 된 *속성*, 동작 및 데이터 멤버 또는 배열 요소 처럼 액세스 되는 멤버 함수는 합니다.  
@@ -209,8 +209,6 @@ int main() {
    Console::WriteLine(MyC->Property_Block);  
 }  
 ```  
-  
- **출력**  
   
 ```Output  
 test  

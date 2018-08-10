@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6567650d719b56bb320f1b40eae285322bcab364
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ddccbc1fcecafe5ac924098a344cfb7592ce2116
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464313"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647829"
 ---
 # <a name="case-c"></a>case(C++)
 사용 된 [switch_type](../windows/switch-type.md) 특성을 **union**합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 [ case(  
    value  
 ) ]  

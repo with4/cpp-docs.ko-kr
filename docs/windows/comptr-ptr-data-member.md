@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d22112e3478e17e8ed9688749c83cf1c3997d7e3
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4ef8c54b2336ebae5e6f9b81aa33d977bd6199e7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465102"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651936"
 ---
 # <a name="comptrptr-data-member"></a>ComPtr::ptr_ 데이터 멤버
 연결 되 고이 관리 되는 인터페이스에 대 한 포인터를 포함 **ComPtr**합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 InterfaceType *ptr_;  
 ```  
   

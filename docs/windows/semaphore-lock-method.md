@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80b4db212236da6c9fb320ff5a5e04f4e9f4a4c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be7a2b7bbac8affd0bc668113cac30f4bed96a6b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892477"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017297"
 ---
 # <a name="semaphorelock-method"></a>Semaphore::Lock 메서드
-현재 개체 또는 지정된 핸들에 연결된 Semaphore 개체가 신호가 있는 상태가 되거나 지정된 제한 시간 간격이 경과할 때까지 기다립니다.  
+현재 개체를 때까지 대기 또는 **세마포** 개체와 연결 된 지정된 된 핸들에 신호를 받은 상태 이거나 지정한 시간 제한 간격이 경과 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 SyncLock Lock(  
    DWORD milliseconds = INFINITE  
 );  
@@ -40,15 +40,15 @@ static SyncLock Lock(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `milliseconds`  
+### <a name="parameters"></a>매개 변수  
+ *시간 (밀리초)*  
  제한 시간 간격(밀리초)입니다. 기본값은 INFINITE으로, 무제한 대기합니다.  
   
- `h`  
- Semaphore 개체에 대한 핸들입니다.  
+ *h*  
+ 에 대 한 핸들을 **세마포** 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- Details::SyncLockWithStatusT\<HandleTraits::SemaphoreTraits >  
+ `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  
@@ -56,5 +56,4 @@ static SyncLock Lock(
  **Namespace:** Microsoft::WRL::Wrappers  
   
 ## <a name="see-also"></a>참고 항목  
-[Semaphore 클래스](../windows/semaphore-class.md)
- 
+ [Semaphore 클래스](../windows/semaphore-class.md)

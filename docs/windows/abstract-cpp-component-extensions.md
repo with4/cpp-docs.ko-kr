@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac043a76ab70c77bd8cdb3a2dd0c66498e409171
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 6474b659070793ddfa4e21d15e65be30f16a49bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463244"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641810"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract(C++ 구성 요소 확장)
 합니다 **추상** 키워드 하나를 선언 합니다.  
@@ -33,16 +33,16 @@ ms.locfileid: "39463244"
 -   형식 멤버 함수는 파생된 형식에서만 정의될 수 있습니다.  
   
 ## <a name="all-platforms"></a>모든 플랫폼  
- **구문**  
+### <a name="syntax"></a>구문 
   
-```  
+```cpp  
       class-declaration  
       class-identifier  
       abstract {}  
 virtualreturn-typemember-function-identifier() abstract ;  
 ```  
   
- **주의**  
+### <a name="remarks"></a>설명
   
  첫 번째 예제 구문에서는 클래스를 추상으로 선언합니다. 합니다 *클래스-선언* 구성 요소는 네이티브 c + + 선언 될 수 있습니다 (**클래스** 하거나 **구조체**), 또는 c + + 확장명 선언 (**ref클래스** 하거나 **ref 구조체**) 하는 경우는 `/ZW` 또는 `/clr` 컴파일러 옵션을 지정 합니다.  
   
@@ -58,17 +58,16 @@ virtualreturn-typemember-function-identifier() abstract ;
  자세한 내용은 [Ref 클래스 및 구조체](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/ZW**  
+ 컴파일러 옵션: `/ZW`  
   
 ## <a name="common-language-runtime"></a>공용 언어 런타임 
   
 ### <a name="requirements"></a>요구 사항  
- 컴파일러 옵션: **/clr**  
+ 컴파일러 옵션: `/clr`  
   
 ### <a name="examples"></a>예제  
- **예제**  
   
- 다음 코드 예제에서는 `X` 클래스가 `abstract`로 표시되기 때문에 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 코드 예제에서는 오류가 발생 하기 때문에 클래스 `X` 표시 됩니다 **추상**합니다.  
   
 ```cpp  
 // abstract_keyword.cpp  
@@ -83,9 +82,7 @@ int main() {
 }  
 ```  
   
- **예제**  
-  
- 다음 코드 예제에서는 `abstract`로 표시된 네이티브 클래스를 인스턴스화하기 때문에 오류가 발생하는 경우를 보여 줍니다. 이 오류는 `/clr` 컴파일러 옵션 사용 여부와 관계없이 발생합니다.  
+ 다음 코드 예제는 때문에 오류가 표시 되는 기본 클래스를 인스턴스화할 **추상**합니다. 이 오류는 `/clr` 컴파일러 옵션 사용 여부와 관계없이 발생합니다.  
   
 ```cpp  
 // abstract_keyword_2.cpp  
@@ -99,9 +96,7 @@ int main() {
                     // cannot be instantiated. See declaration of 'X'}  
 ```  
   
- **예제**  
-  
- 다음 예제에서는 `f` 함수가 정의를 포함하지만 `abstract`로 표시되기 때문에 오류가 발생하는 경우를 보여 줍니다. 예제의 마지막 문에서는 추상 가상 함수를 선언하는 것이 순수 가상 함수를 선언하는 것과 일치함을 보여 줍니다.  
+ 다음 코드 예제에서는 오류가 발생 하기 때문에 함수 `f` 정의 포함 하지만 표시 됩니다 **추상**합니다. 예제의 마지막 문에서는 추상 가상 함수를 선언하는 것이 순수 가상 함수를 선언하는 것과 일치함을 보여 줍니다.  
   
 ```cpp  
 // abstract_keyword_3.cpp  

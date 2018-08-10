@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3353df1a73821a2009aeba2367f1892b06aba5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6d4ff3393e30e72bc3378837ff11c41927249d1f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889845"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014197"
 ---
 # <a name="synclocktsynclockt-constructor"></a>SyncLockT::SyncLockT 생성자
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 SyncLockT(  
    _Inout_ SyncLockT&& other  
 );  
@@ -39,17 +39,17 @@ explicit SyncLockT(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `other`  
- 다른 SyncLockT 개체를 rvalue 참조입니다.  
+### <a name="parameters"></a>매개 변수  
+ *other*  
+ 다른 rvalue 참조 **SyncLockT** 개체입니다.  
   
- `sync`  
- 다른 SyncLockWithStatusT 개체에 대 한 참조입니다.  
+ *sync*  
+ 다른 참조 `SyncLockWithStatusT` 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- SyncLockT 클래스의 새 인스턴스를 초기화합니다.  
+ 새 인스턴스를 초기화 합니다 **SyncLockT** 클래스입니다.  
   
- 첫 번째 생성자는 매개 변수에서 지정한 다른 SyncLockT 개체에서 현재 SyncLockT 개체 `other`, 되 고 다음 다른 SyncLockT 개체를 무효화 합니다. 두 번째 생성자는 `protected`, 유효 하지 않은 상태로 현재 SyncLockT 개체를 초기화 합니다.  
+ 첫 번째 생성자는 현재 초기화 **SyncLockT** 개체에서 다른 **SyncLockT** 매개 변수로 지정 된 개체 *다른*, 기타 무효화한다음 **SyncLockT** 개체입니다. 두 번째 생성자는 **보호**, 및 현재 초기화 **SyncLockT** 유효 하지 않은 상태로 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 413bf73d5aeaef2c210be89f3c6f4ca3a4254ba4
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 93b1c8fa12e06984a2bffdd90419c481d8897b94
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461973"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646243"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 함수
 등록 하 고 ID가 지정 된 클래스에 정의 된 지정 된 형식의 인스턴스를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 template<typename T>  
 inline HRESULT ActivateInstance(  
    _In_ HSTRING activatableClassId,  
@@ -38,7 +38,7 @@ inline HRESULT ActivateInstance(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *T*  
  활성화 하는 형식입니다.  
   

@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25287e642bd368470b207ed237f44ca70773064e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49405cda5ff7a9d3313ebafbda35b5fb6182febe
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892529"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015509"
 ---
 # <a name="semaphoreoperator-operator"></a>Semaphore::operator= 연산자
-Semaphore 개체에서 현재 Semaphore 개체에 지정된 된 핸들을 이동합니다.  
+지정 된 핸들을 이동 하는 **세마포** 개체를 현재 **세마포** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 Semaphore& operator=(  
    _Inout_ Semaphore&& h  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- `h`  
- Semaphore 개체에 Rvalue 참조입니다.  
+### <a name="parameters"></a>매개 변수  
+ *h*  
+ 대 한 Rvalue 참조를 **세마포** 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 현재 Semaphore 개체에 대 한 참조입니다.  
+ 현재에 대 한 참조가 **세마포** 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

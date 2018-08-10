@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e1f20e6e50fad1f77e495fb47c62b162524cc72
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 761a5eefb80d47da0194e9c718f67bfe2d7b69de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872941"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641536"
 ---
 # <a name="editing-accelerator-tables"></a>액셀러레이터 키 테이블 편집
-Visual c + +에서 액셀러레이터 키 편집기에서 내부 편집으로 직접 액셀러레이터 키 테이블을 편집할 수 있습니다.  
+Visual c + +에서는 직접 사용 하 여 현재 위치에서 편집 액셀러레이터 키 테이블을 편집할 수는 **가속기** 편집기입니다.  
   
- 그러나 아래 절차 참조 표준 속성 페이지를 사용 하 고, 내부 편집 및 방법 동일한 결과 합니다. 변경 내용을 속성 페이지를 사용 하 여 또는 내부 편집을 사용 하 여 액셀러레이터 키 테이블에 즉시 반영 됩니다.  
+ 표준 속성 페이지를 사용 하려면 아래 절차 참조, 바로 편집 기능 및 방법 모두 결과가 동일 합니다. 변경 내용을 속성 페이지를 사용 하 여 또는 내부 편집을 사용 하 여 액셀러레이터 키 테이블에 즉시 반영 됩니다.  
   
 -   [액셀러레이터 키 테이블 편집](../windows/editing-in-an-accelerator-table.md)  
   
@@ -38,11 +38,11 @@ Visual c + +에서 액셀러레이터 키 편집기에서 내부 편집으로 �
   
 -   [액셀러레이터 키 테이블에서 항목 삭제](../windows/deleting-an-entry-from-an-accelerator-table.md)  
   
--   [액셀러레이터 키 테이블 항목 이동 / 복사](../windows/moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file.md)  
+-   [액셀러레이터 키 테이블 항목을 복사 또는 이동](../windows/moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file.md)  
   
--   [여러 액셀러레이터 키의 속성 변경](../windows/changing-the-properties-of-multiple-accelerator-keys.md)  
+-   [여러 액셀러레이터 키 속성 변경](../windows/changing-the-properties-of-multiple-accelerator-keys.md)  
   
- 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
+ 관리 되는 프로젝트에 리소스를 추가 하는 방법에 대 한 정보를 참조 하세요 [데스크톱 앱의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework Developer's Guide*합니다. 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 내용은 참조 하세요 [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화 관리 되는 앱의 리소스에 대 한 내용은 참조 하세요 [Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  Win32  

@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7308651726abd03f9bd4c9a32550644bec156432
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dfa3b7222a25ed56d014cc90dbffa5f57a2c9436
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859903"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651910"
 ---
 # <a name="asyncbasecheckvalidstateforresultscall-method"></a>AsyncBase::CheckValidStateForResultsCall 메서드
 현재 비동기 상태에서 비동기 작업의 결과 수집할 수 있는지 테스트 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 inline HRESULT CheckValidStateForResultsCall();  
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 결과 수집할 수 있습니다; 하면 s_ok이 고 그렇지 않으면 E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL 합니다.  
+ S_OK 결과 수집할 수 있습니다. 그렇지 않으면 E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** async.h  

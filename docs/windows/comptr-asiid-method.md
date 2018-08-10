@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1de2bedf9a582d0adbb5b99c9e719327f3b8b90a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 32f75c838ea178b1313ab0bf9f005ff2a4c5d75b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465996"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652564"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID 메서드
 반환 된 **ComPtr** 지정 된 인터페이스 ID로 식별 된 인터페이스를 나타내는 개체  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 WRL_NOTHROW HRESULT AsIID(  
    REFIID riid,  
    _Out_ ComPtr<IUnknown>* p  
 ) const;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  *riid*  
  인터페이스 ID입니다.  
   

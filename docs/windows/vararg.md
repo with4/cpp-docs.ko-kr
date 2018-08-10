@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2de377bc31898c91bb6db63e160b536428ae8d0e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cad2cc52c7c785a715caa96913f2a1c1bf3630b2
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890969"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010911"
 ---
 # <a name="vararg"></a>vararg
-함수 가변 개수의 인수를 지정 합니다.  
+함수는 가변 개수의 인수를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```cpp  
 [vararg]  
-  
 ```  
   
 ## <a name="remarks"></a>설명  
- **vararg** c + + 특성에 동일한 기능을는 [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) MIDL 특성입니다.  
+ 합니다 **vararg** c + + 특성에 동일한 기능을 합니다 [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
- 다음 코드의 사용을 보여 줍니다. **vararg**:  
+## <a name="example"></a>예  
+ 다음 코드는 사용 방법을 보여 줍니다 **vararg**:  
   
-```  
+```cpp  
 // cpp_attr_ref_vararg.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

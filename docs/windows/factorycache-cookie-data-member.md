@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27daf229da4c6707afcbf97f7ab8ce08cd8ce900
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f3636cdb2c30d08547fd9085141aa9283bdc85c7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874449"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652385"
 ---
 # <a name="factorycachecookie-data-member"></a>FactoryCache::cookie 데이터 멤버
-Windows 런타임 c + + 템플릿 라이브러리 인프라를 지원 하며 사용자 코드에서 직접 사용할 수 없습니다.  
+Windows Runtime c + + 템플릿 라이브러리 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 union {   
    WINRT_REGISTRATION_COOKIE winrt;  
    DWORD com;   
@@ -37,7 +37,7 @@ union {
 ```  
   
 ## <a name="remarks"></a>설명  
- 등록된 된 Windows 런타임 또는 COM 클래스 개체를 식별 하 고 나중에 개체를 등록 취소를 사용 하는 값을 포함 합니다.  
+ 등록된 된 Windows 런타임 또는 COM 클래스 개체를 식별 하 고 개체 등록을 취소 하려면 나중에 사용 되는 값을 포함 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** module.h  
